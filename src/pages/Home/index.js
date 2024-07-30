@@ -171,9 +171,9 @@ function Home() {
             <Grid item>
               <div style={{ height: 10 }} />
             </Grid>
-            <Grid item>
+            {/* <Grid item>
               <LoginButton auth={auth} />
-            </Grid>
+            </Grid> */}
             <Grid item>
               <div style={{ height: 10 }} />
             </Grid>
