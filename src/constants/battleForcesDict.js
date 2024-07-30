@@ -9,8 +9,7 @@ const battleForcesDict = {
       support: ['an', 'he',   'xj'],
       heavy: ['ap', 'xn'],
       allowedUniqueUpgrades: ['fk'],
-
-      rules: { 
+      rules:{
         noFieldComm: true
       },
       ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2022/10/StarWarsLegionBFRulesSheetEBD.pdf',

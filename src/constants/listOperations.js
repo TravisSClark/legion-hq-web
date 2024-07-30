@@ -1725,11 +1725,17 @@ function battleForceValidation(currentList){
   const validationIssues = [];
   // TODO TODO Should destroy this in favor of adding a 'rule' to apply for BzF in the object, e.g.
   // rules:[... {type:'unitLimit', min:0, max:1, types:['ay', 'sr']}]
-  if(currentList.battleForce === "Blizzard Force") {
-      const stormsCount = currentList.units.filter((unit)=>unit.unitId === "ay" || unit.unitId === "sr").reduce((count,u)=>count+=u.count, 0);
-      
-      if(stormsCount > 2){
-        validationIssues.push({level:2, text:"Maximum 2 Stormtroopers (Regular or HRU in any combo)"});
+
+  switch(currentList.battleForce){
+
+    case "Blizzard Force":
+      {
+        const stormsCount = currentList.units.filter((unit)=>unit.unitId === "ay" || unit.unitId === "sr").reduce((count,u)=>count+=u.count, 0);
+        
+        if(stormsCount > 2){
+          validationIssues.push({level:2, text:"Maximum 2 Stormtroopers (Regular or HRU in any combo)"});
+        }
+        break;
       }
   }
 
@@ -1806,6 +1812,7 @@ function rankValidation(currentList, ranks, mercs, rankReqs){
   // TODO this is ugly - probably should be a BF flag
   const battleForce = battleForcesDict[currentList.battleForce];
   const countMercs = battleForce?.rules?.countMercs; // currentList.battleForce === "Shadow Collective" || currentList.battleForce == "Bright Tree Village"
+
   // const countMercs = currentList.battleForce.countsMercsForMin;
 
 
@@ -1831,6 +1838,7 @@ function rankValidation(currentList, ranks, mercs, rankReqs){
 
   // Warn user if it looks like they're trying to use a Field Comm on incompatible army
   // level 1 since the Comm miss itself is a level 2 already
+
   if(ranks['commander'] < rankReqs['commander'][0] && currentList.hasFieldCommander && battleForce?.rules?.noFieldComm)
   {
     validationIssues.push({level:1, text:"This battleforce can't use the Field Commander keyword"});
