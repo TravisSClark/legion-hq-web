@@ -13,7 +13,7 @@ const legionModes = {
   },
   'standard mode': {
     name: 'Standard Format',
-    maxPoints: 800,
+    maxPoints: 1000,
     unitCounts: {
       commander: [1, 2],
       operative: [0, 2],

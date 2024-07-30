@@ -10,7 +10,7 @@ import {
   DialogContentText
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Clear as ClearIcon, Info as InfoIcon, Warning as WarningIcon } from '@material-ui/icons';
+import { Info as InfoIcon, Warning as WarningIcon } from '@material-ui/icons';
 
 import ListContext from 'context/ListContext';
 import legionModes from 'constants/legionModes';
@@ -19,9 +19,6 @@ import ModeButton from './ModeButton';
 import TitleField from './TitleField';
 import KillPointsField from './KillPointsField';
 import FactionButton from './FactionButton';
-
-import cards from 'constants/cards';
-
 
 const useStyles = makeStyles({
   container: {
@@ -72,7 +69,7 @@ function ListHeader() {
     return num;
   }, 0);
 
-  const validBattleForces = Object.values(battleForcesDict).filter(bf => bf.faction == currentList.faction);
+  const validBattleForces = Object.values(battleForcesDict).filter(bf => bf.faction === currentList.faction);
 
   var minValidationError = validationIssues.reduce((highest, e)=>{
     return e.level > highest ? e.level : highest;
@@ -88,7 +85,7 @@ function ListHeader() {
           open={Boolean(anchorEl)}
           onClose={handleFactionMenuClose}
         >
-          {currentList.faction !== 'fringe' && (
+          {currentList.faction !== 'mercenary' && (
             <MenuItem
               key="none"
               selected={!currentList.battleForce || currentList.battleForce === ''}
@@ -150,13 +147,9 @@ function ListHeader() {
             <Dialog open={isValidationDialogOpen} onClose={() => setValidationDialogOpen(false)}>
               <DialogTitle>List Errors</DialogTitle>
               <DialogContent>
-                <div className={classes.valError}>
-                  <WarningIcon className={classes.item} style={{color: 'yellow'}}/>
-                  <DialogContentText>Work in progress... double-check your army rules and unit cards!</DialogContentText>
-                </div>
                 {validationIssues.map((el, i) =>
                 <div key={i} className={classes.valError}>
-                  <WarningIcon className={classes.item} style={{color: el.level == 1 ?'yellow':'red'}}/>
+                  <WarningIcon className={classes.item} style={{color: el.level === 1 ? 'yellow' : 'red'}}/>
                   <DialogContentText>{el.text}</DialogContentText>
                 </div>
                 )}

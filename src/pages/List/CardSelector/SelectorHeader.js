@@ -12,7 +12,7 @@ function SelectorHeader({ headerContent, cardPaneFilter, setCardPaneFilter }) {
     padding: '8px 16px',
     justifyContent: 'space-between',
     position: '-webkit-sticky',
-    position: 'sticky'
+    //position: 'sticky'
   };
   return (
     <Paper style={sticky}>

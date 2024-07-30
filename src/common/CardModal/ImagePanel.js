@@ -12,6 +12,11 @@ import urls from 'constants/urls';
 function ImagePanel({ card, usingOriginalImage = false }) {
   if (!card) return null;
   const { cardType, imageName } = card;
+
+  let url =`${urls.cdn}/${cardType}Cards/${usingOriginalImage ? `original-${imageName}` : imageName}`;
+  if(card.newUrl){
+    url = `${urls.cdn2}/${cardType}Cards/${imageName}`;
+  }
   return (
     <React.Fragment>
       <ExpansionPanel defaultExpanded={!usingOriginalImage}>
@@ -20,7 +25,7 @@ function ImagePanel({ card, usingOriginalImage = false }) {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails style={{ padding: '0px 24px 24px' }}>
           <Img
-            src={`${urls.cdn}/${cardType}Cards/${usingOriginalImage ? `original-${imageName}` : imageName}`}
+            src={url}
             style={{ width: '100%' }}
           />
         </ExpansionPanelDetails>

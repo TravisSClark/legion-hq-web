@@ -17,18 +17,6 @@ function checkUpgradeType(upgrade, value) {
 }
 
 const interactions = {
-  entourages: {
-    bc: {
-      // IRGs + Emperor Palpatine
-      isConditionMet: (list, unit) => list.uniques.includes('as'),
-      boundaryDelta: 1
-    },
-    bd: {
-      // IDTs + Director Krennic
-      isConditionMet: (list, unit) => list.uniques.includes('av'),
-      boundaryDelta: 1
-    }
-  },
   upgradePoints: {
     lk: {
       // JT-12 Jetpack + Captain Rex

@@ -16,11 +16,16 @@ const useStyles = makeStyles(theme => ({
 
 function CardIcon({
   size = 'large',
-  cardName,
-  cardType,
-  imageName,
-  handleClick
+  handleClick,
+  card
 }) {
+  
+
+  let url = `${urls.cdn}/${card.cardType}Icons/${card.imageName}`;
+  if(card.newUrl){
+    url = `${urls.cdn2}/${card.cardType}Cards/${card.imageName}`;
+    console.log('url: ' + url);
+  }
   const classes = useStyles();
   const placeholder = (
     <Skeleton
@@ -32,8 +37,8 @@ function CardIcon({
   return (
     <Img
       decode={false}
-      alt={cardName}
-      src={`${urls.cdn}/${cardType}Icons/${imageName}`}
+      alt={card.cardName}
+      src={url}
       loader={placeholder}
       className={clsx(classes.image, classes[size], {
         [classes.imageHover]: handleClick !== undefined

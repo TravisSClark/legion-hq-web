@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Pages from './Pages';
 import DataContext from 'context/DataContext';
-import ThemeWrapper from 'utility/ThemeWrapper';
+import ThemeWrapper from './utility/ThemeWrapper';
 import ActionBar from 'common/ActionBar';
 import NavigationDrawer from 'common/NavigationDrawer';
 

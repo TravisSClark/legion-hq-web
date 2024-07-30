@@ -2,15 +2,14 @@ const battleForcesDict = {
   'Echo Base Defenders': {
       name: 'Echo Base Defenders',
       faction: 'rebels',
-      commander: ['ab', 'ad', 'ac', 'bi'],
-      operative: ['jg', 'ji', 'af'],
-      corps: ['gv', 'if'],
+      commander: ['ab', 'ad', 'ac', 'bi',  'xd', 'xe','xg'],
+      operative: ['jg', 'ji', 'af',  'xf'],
+      corps: ['gv', 'if',   'xk'],
       special: [],
-      support: ['an', 'he'],
-      heavy: ['ap'],
+      support: ['an', 'he',   'xj'],
+      heavy: ['ap', 'xn'],
       allowedUniqueUpgrades: ['fk'],
-
-      rules: { 
+      rules:{
         noFieldComm: true
       },
       ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2022/10/StarWarsLegionBFRulesSheetEBD.pdf',
@@ -36,12 +35,12 @@ const battleForcesDict = {
     'Bright Tree Village': {
       name: 'Bright Tree Village',
       faction: 'rebels',
-      commander: ['vv', 'ac', 'ab', 've', 'wd'],
+      commander: ['vv', 'ac', 'ab', 've', 'wd', 'xd'],
       operative: ['af'],
-      corps: ['vk', 'ah'],
-      special: ['vu', 'ak'],
+      corps: ['vk', 'ah', 'zh', 'xh'],
+      special: ['vu', 'ak', 'zg'],
       support: [],
-      heavy: ['vj'],
+      heavy: ['vj', 'zf'],
       allowedUniqueUpgrades: ['vq', 'wa', 'wb', 'wc'],
       rules: {
         countMercs: true
@@ -283,7 +282,7 @@ const battleForcesDict = {
       corps: ['rb', 'qz'],
       special: ['re'],
       support: ['sq'],
-      heavy: ['sm'],
+      heavy: ['sm', 'zi'],
       rules: {
         countMercs: true
       },

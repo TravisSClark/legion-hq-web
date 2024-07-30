@@ -2,11 +2,6 @@ import React, { useState, useEffect } from 'react';
 import {
   useMediaQuery,
   Chip,
-  AppBar,
-  Tabs,
-  Tab,
-  Box,
-  Typography,
   TextField
 } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';

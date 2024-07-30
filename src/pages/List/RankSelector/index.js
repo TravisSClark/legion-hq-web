@@ -18,12 +18,7 @@ const useStyles = makeStyles({
 function RankSelector() {
   const classes = useStyles();
   const { currentList, setCardPaneFilter, rankLimits } = useContext(ListContext);
-  let rankInteractions = 0;
-  if (currentList.rankInteractions) {
-    Object.keys(currentList.rankInteractions).forEach(key => {
-      rankInteractions += currentList.rankInteractions[key];
-    });
-  }
+  
 
   const currentUnitCounts = { ...currentList.unitCounts };
 
@@ -48,7 +43,6 @@ function RankSelector() {
   //     if (key === 'commander' && currentList.hasFieldCommander) {
   //       leftBoundary = 0;
   //     }
-  //     if (key === 'special') rightBoundary += rankInteractions;
   //     if (count >= leftBoundary && count <= rightBoundary) {
   //       rankValidities[key] = true;
   //     }
@@ -112,7 +106,6 @@ function RankSelector() {
   //     if (key === 'commander' && currentList.hasFieldCommander) {
   //       leftBoundary = 0;
   //     }
-  //     if (key === 'special') rightBoundary += rankInteractions;
   //     if (count >= leftBoundary && count <= rightBoundary) {
   //       rankValidities[key] = true;
   //     }
