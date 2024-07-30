@@ -13,7 +13,6 @@ import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import CardChip from 'common/CardChip';
-import HelpChip from 'common/HelpChip';
 import KeywordChips from 'common/KeywordChips';
 import urls from 'constants/urls';
 
@@ -75,9 +74,6 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
         </CardActionArea>
         <CardActions disableSpacing>
           {(cost || cost === 0) && <CardChip type="points" value={cost} size={chipSize} />}
-          {cardName === 'Storm Tide Commander' && (
-            <HelpChip size={chipSize} />
-          )}
           <IconButton
             size="small"
             aria-expanded={isExpanded}
