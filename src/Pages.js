@@ -17,7 +17,7 @@ function Pages() {
     empire: { ...listTemplate, faction: 'empire' },
     republic: { ...listTemplate, faction: 'republic' },
     separatists: { ...listTemplate, faction: 'separatists' },
-    fringe: { ...listTemplate, faction: 'fringe', battleForce: 'Shadow Collective' }
+    mercenary: { ...listTemplate, faction: 'mercenary', battleForce: 'Shadow Collective' }
   };
   const [storedLists, setStoredLists] = useState(() => initialLists);
   const updateStoredList = (newList) => {

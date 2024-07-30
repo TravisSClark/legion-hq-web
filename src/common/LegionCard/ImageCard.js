@@ -46,6 +46,11 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
   const isDoubleSided = cardType === 'upgrade' && keywords.includes('Reconfigure');
   const isSkirmish = card.keywords.includes('Skirmish');
 
+  let url =  `${urls.cdn}/${cardType}Cards/${imageName}`;
+  if(card.newUrl){
+    url = `${urls.cdn2}/${cardType}Cards/${imageName}`;
+  }
+
   return (
     <Grow unmountOnExit in={true}>
       <Card
@@ -62,7 +67,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
         <CardActionArea onClick={handleClick}>
           <CardMedia
             title={displayName ? displayName : cardName}
-            image={`${urls.cdn}/${cardType}Cards/${imageName}`}
+            image={url}
             className={clsx(
               { [classes.unitImage]: cardType === 'unit' || cardType === 'counterpart' },
               { [classes.unitImage]: cardType === 'battle' && !isSkirmish },

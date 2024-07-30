@@ -343,6 +343,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "aa"
 	},
 	"ab": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "white",
 		"surges": ["crit", "block"],
@@ -411,6 +412,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ac"
 	},
 	"ad": {
+		"isOld": true,
 		"cardType": "unit",
 		"defense": "red",
 		"surges": ["crit"],
@@ -546,6 +548,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ag"
 	},
 	"ah": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "white",
 		"surges": ["block"],
@@ -569,6 +572,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ah"
 	},
 	"ai": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "white",
 		"surges": ["hit", "block"],
@@ -674,6 +678,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ak"
 	},
 	"al": {
+		"isOld":true,
 		"cardType": "unit",
 		"displayName": "Commando Strike Team",
 		"defense": "white",
@@ -748,6 +753,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "am"
 	},
 	"an": {
+		"isOld":true,
 		"cardType": "unit",
 		"displayName": "Laser Cannon Team",
 		"defense": "white",
@@ -780,6 +786,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "an"
 	},
 	"ao": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "white",
 		"surges": ["crit"],
@@ -804,6 +811,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ao"
 	},
 	"ap": {
+		"isOld":true,
 		"cardType": "unit",
 		"displayName": "Airspeeder",
 		"defense": "white",
@@ -842,6 +850,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ap"
 	},
 	"aq": {
+		"isOld":true,
 		"cardType": "unit",
 		"displayName": "Landspeeder",
 		"defense": "white",
@@ -879,6 +888,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "aq"
 	},
 	"ar": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "white",
 		"surges": ["hit", "block"],
@@ -947,7 +957,7 @@ const cards = JSON.parse(JSON.stringify({
 			}
 		],
 		"cardType": "unit",
-    "entourage": {"name":'Imperial Royal Guards', "type":'special'}
+    "entourage": {"name":"Imperial Royal Guards", "type":"special"}
 	},
 	"at": {
 		"cardType": "unit",
@@ -991,6 +1001,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "at"
 	},
 	"au": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "red",
 		"surges": ["crit"],
@@ -1031,6 +1042,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "au"
 	},
 	"av": {
+		"isOld":true,
 		"cardName": "Director Orson Krennic",
 		"displayName": "Director Krennic",
 		"title": "Architect of Terror",
@@ -1055,7 +1067,7 @@ const cards = JSON.parse(JSON.stringify({
 		"upgradeBar": ["command", "command", "gear"],
 		"id": "av",
 		"cardType": "unit",
-    "entourage": {"name":'Imperial Death Troopers', "type":'special'},
+    "entourage": {"name":"Imperial Death Troopers", "type":"special"},
 		"history": [
 			{
 				"date": "27 October 2021",
@@ -1077,7 +1089,7 @@ const cards = JSON.parse(JSON.stringify({
 		"rank": "operative",
 		"cost": 130,
 		"prevCost": 120,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"subfaction": "bounty hunters",
 		"affiliations": ["empire"],
 		"imageName": "Boba Fett.jpeg",
@@ -1121,7 +1133,7 @@ const cards = JSON.parse(JSON.stringify({
 		"isUnique": true,
 		"rank": "operative",
 		"cost": 105,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"subfaction": "bounty hunters",
 		"affiliations": ["empire", "separatists"],
 		"imageName": "Bossk.jpeg",
@@ -1144,6 +1156,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"ay": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "red",
 		"surges": ["hit"],
@@ -1167,6 +1180,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ay"
 	},
 	"az": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "red",
 		"surges": ["hit"],
@@ -1226,6 +1240,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ba"
 	},
 	"bb": {
+		"isOld":true,
 		"cardType": "unit",
 		"displayName": "Strike Team",
 		"defense": "white",
@@ -1324,6 +1339,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "bd"
 	},
 	"be": {
+		"isOld":true,
 		"cardType": "unit",
 		"displayName": "E-Web Team",
 		"defense": "red",
@@ -1392,6 +1408,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "bf"
 	},
 	"bg": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "white",
 		"surges": ["block"],
@@ -1437,6 +1454,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "bg"
 	},
 	"bh": {
+		"isOld":true,
 		"cardType": "unit",
 		"displayName": "Occupier Tank",
 		"defense": "red",
@@ -1480,6 +1498,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "bh"
 	},
 	"bi": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "white",
 		"surges": ["hit", "block"],
@@ -1801,6 +1820,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "cl"
 	},
 	"cm": {
+		"isOld":true,
 		"cardSubtype": "2",
 		"cardName": "Reckless Diversion",
 		"cardType": "command",
@@ -2132,6 +2152,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "dj"
 	},
 	"dk": {
+		"isOld":true,
 		"cardSubtype": "grenades",
 		"cardName": "Impact Grenades",
 		"isUnique": false,
@@ -2294,7 +2315,7 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Force Push",
 		"isUnique": false,
 		"cardType": "upgrade",
-		"cost": 10,
+		"cost": 40,
 		"imageName": "Force Push.jpeg",
 		"keywords": [],
 		"requirements": [],
@@ -2438,6 +2459,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "eb"
 	},
 	"ec": {
+		"isOld":true,
 		"cardSubtype": "heavy weapon",
 		"cardName": "MPL-57 Ion Trooper",
 		"isUnique": false,
@@ -2497,6 +2519,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ee"
 	},
 	"ef": {
+		"isOld":true,
 		"cardSubtype": "heavy weapon",
 		"cardName": "Proton Charge Saboteur",
 		"isUnique": false,
@@ -2544,6 +2567,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "eh"
 	},
 	"ei": {
+		"isOld":true,
 		"displayName": "Barrage Trooper",
 		"cardSubtype": "heavy weapon",
 		"cardName": "MPL-57 Barrage Trooper",
@@ -2591,6 +2615,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ej"
 	},
 	"ek": {
+		"isOld":true,
 		"cardSubtype": "heavy weapon",
 		"cardName": "HH-12 Stormtrooper",
 		"isUnique": false,
@@ -2648,6 +2673,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "em"
 	},
 	"en": {
+		"isOld":true,
 		"cardSubtype": "heavy weapon",
 		"cardName": "Sonic Charge Saboteur",
 		"isUnique": false,
@@ -2668,6 +2694,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "en"
 	},
 	"eo": {
+		"isOld":true,
 		"displayName": "Ion Snowtrooper",
 		"cardSubtype": "heavy weapon",
 		"cardName": "T-7 Ion Snowtrooper",
@@ -2694,6 +2721,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "eo"
 	},
 	"ep": {
+		"isOld":true,
 		"cardSubtype": "heavy weapon",
 		"cardName": "Flametrooper",
 		"isUnique": false,
@@ -2913,6 +2941,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "fc"
 	},
 	"fd": {
+		"isOld":true,
 		"displayName": "Flamethrower",
 		"cardSubtype": "hardpoint",
 		"cardName": "AT-RT Flamethrower",
@@ -3196,6 +3225,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "fp"
 	},
 	"fq": {
+		"isOld":true,
 		"cardSubtype": "3",
 		"cardName": "Darkness Descends",
 		"commander": "Darth Vader",
@@ -3206,6 +3236,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "fq"
 	},
 	"fr": {
+		"isOld":true,
 		"requirements": [{"cardName": "BARC Speeder"}],
 		"cardSubtype": "crew",
 		"cardName": "BARC Ion Gunner",
@@ -3326,6 +3357,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "fv"
 	},
 	"fw": {
+		"isOld":true,
 		"requirements": [{"cardName": "Dewback Rider"}],
 		"cardName": "CR-24 Flame Rifle",
 		"cardSubtype": "armament",
@@ -3348,6 +3380,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "fw"
 	},
 	"fx": {
+		"isOld": true,
 		"cardType": "unit",
 		"cardSubtype": "trooper",
 		"faction": "separatists",
@@ -3428,6 +3461,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "fy"
 	},
 	"fz": {
+		"isOld":true,
 		"cardType": "unit",
 		"faction": "republic",
 		"cardSubtype": "clone trooper",
@@ -3462,6 +3496,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "fz"
 	},
 	"ga": {
+		"isOld": true,
 		"displayName": "Super Battle Droids",
 		"cardName": "B2 Super Battle Droids",
 		"faction": "separatists",
@@ -3487,6 +3522,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ga"
 	},
 	"gb": {
+		"isOld":true,
 		"cardType": "unit",
 		"displayName": "Saber Fighter Tank",
 		"cardSubtype": "repulsor vehicle",
@@ -3522,6 +3558,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "gb"
 	},
 	"gc": {
+		"isOld": true,
 		"defense": "red",
 		"surges": [],
 		"speed": 1,
@@ -3558,6 +3595,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "gc"
 	},
 	"gd": {
+		"isOld":true,
 		"cardSubtype": "3",
 		"cardName": "Annihilation Looms",
 		"cardType": "command",
@@ -3778,6 +3816,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "gr"
 	},
 	"gs": {
+		"isOld":true,
 		"cardSubtype": "heavy weapon",
 		"cardName": "Bistan",
 		"isUnique": true,
@@ -3833,6 +3872,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "gu"
 	},
 	"gv": {
+		"isOld":true,
 		"cardType": "unit",
 		"speed": 2,
 		"wounds": 1,
@@ -3857,6 +3897,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "gv"
 	},
 	"gw": {
+		"isOld":true,
 		"cardType": "unit",
 		"speed": 2,
 		"wounds": 6,
@@ -3892,6 +3933,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "gw"
 	},
 	"gx": {
+		"isOld": true,
 		"cardType": "unit",
 		"displayName": "Battle Droids",
 		"wounds": 1,
@@ -3917,6 +3959,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "gx"
 	},
 	"gy": {
+		"isOld":true,
 		"cardType": "unit",
 		"speed": 2,
 		"wounds": 1,
@@ -3968,6 +4011,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ha"
 	},
 	"hb": {
+		"isOld":true,
 		"cardSubtype": "hardpoint",
 		"cardName": "M-45 Ion Blaster",
 		"isUnique": false,
@@ -4084,6 +4128,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "hf"
 	},
 	"hg": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "red",
 		"surges": [],
@@ -4145,6 +4190,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "hj"
 	},
 	"hk": {
+		"isOld":true,
 		"cardSubtype": "2",
 		"cardName": "Supreme Commander",
 		"cardType": "command",
@@ -4222,6 +4268,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ho"
 	},
 	"hp": {
+		"isOld":true,
 		"displayName": "Z-6 Trooper",
 		"cardSubtype": "heavy weapon",
 		"cardName": "Z-6 Phase I Trooper",
@@ -4270,6 +4317,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "hq"
 	},
 	"hr": {
+		"isOld":true,
 		"displayName": "E-60R Trooper",
 		"cardSubtype": "heavy weapon",
 		"cardName": "E-60R B1 Trooper",
@@ -4366,6 +4414,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "hz"
 	},
 	"ia": {
+		"isOld": true,
 		"cardType": "unit",
 		"defense": "red",
 		"surges": [],
@@ -4542,7 +4591,7 @@ const cards = JSON.parse(JSON.stringify({
 		"cost": 38,
 		"faction": "rebels",
 		"imageName": "Mark II Medium Blaster Trooper.jpeg",
-		"detachment": "gv",
+		"detachment": "xk", //"gv" TODO
 		"keywords": [
 			"Emplacement Trooper",
 			"Detachment",
@@ -4775,6 +4824,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "iu"
 	},
 	"iv": {
+		"isOld":true,
 		"requirements": [{"cardName": "Phase I Clone Troopers"}],
 		"cardSubtype": "heavy weapon",
 		"cardName": "DP-23 Phase I Trooper",
@@ -4819,6 +4869,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "iw"
 	},
 	"ix": {
+		"isOld":true,
 		"requirements": [{"cardName": "Phase I Clone Troopers"}],
 		"cardSubtype": "heavy weapon",
 		"cardName": "RPS-6 Phase I Trooper",
@@ -4939,6 +4990,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "jd"
 	},
 	"je": {
+		"isOld":true,
 		"cardSubtype": "2",
 		"cardName": "Fear and Dead Men",
 		"commander": "Darth Vader",
@@ -4959,6 +5011,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "jf"
 	},
 	"jg": {
+		"isOld": true,
 		"surges": ["hit", "block"],
 		"speed": 1,
 		"courage": 2,
@@ -4995,6 +5048,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "jg"
 	},
 	"jh": {
+		"isOld":true,
 		"cardType": "unit",
 		"faction": "republic",
 		"cardSubtype": "droid trooper",
@@ -5201,6 +5255,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": []
 	},
 	"jt": {
+		"isOld":true,
 		"id": "jt",
 		"displayName": "Call Me Captain",
 		"cardSubtype": "1",
@@ -5259,6 +5314,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "jw"
 	},
 	"jx": {
+		"isOld":true,
 		"cardSubtype": "personnel",
 		"cardName": "Phase I Clone Captain",
 		"isUnique": false,
@@ -5281,6 +5337,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "jx"
 	},
 	"jy": {
+		"isOld":true,
 		"cardSubtype": "personnel",
 		"cardName": "Phase I Clone Specialist",
 		"isUnique": false,
@@ -5512,6 +5569,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "kn"
 	},
 	"ko": {
+		"isOld":true,
 		"cardSubtype": "heavy weapon",
 		"cardName": "Phase II Mortar Trooper",
 		"isUnique": false,
@@ -5623,6 +5681,7 @@ const cards = JSON.parse(JSON.stringify({
 		"history": []
 	},
 	"kw": {
+		"isOld":true,
 		"cardType": "unit",
 		"displayName": "Padmé Amidala",
 		"faction": "republic",
@@ -5658,7 +5717,7 @@ const cards = JSON.parse(JSON.stringify({
 	},
 	"kx": {
 		"cardType": "unit",
-		"faction": "fringe",
+		"faction": "mercenary",
 		"subfaction": "bounty hunters",
 		"affiliations": ["empire", "separatists"],
 		"cardSubtype": "trooper",
@@ -5703,6 +5762,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "kx"
 	},
 	"ky": {
+		"isOld":true,
 		"cardType": "unit",
 		"faction": "republic",
 		"cardSubtype": "clone trooper",
@@ -5744,6 +5804,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ky"
 	},
 	"kz": {
+		"isOld":true,
 		"cardType": "unit",
 		"faction": "republic",
 		"cardSubtype": "clone trooper",
@@ -5789,6 +5850,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "kz"
 	},
 	"la": {
+		"isOld": true,
 		"cardType": "unit",
 		"faction": "separatists",
 		"cardSubtype": "droid trooper",
@@ -5826,6 +5888,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "la"
 	},
 	"lb": {
+		"isOld": true,
 		"cardType": "unit",
 		"displayName": "BX Droid Strike Team",
 		"faction": "separatists",
@@ -5928,6 +5991,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"lg": {
+		"isOld":true,
 		"id": "lg",
 		"cardSubtype": "heavy weapon",
 		"cardName": "Fives",
@@ -5945,6 +6009,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"lh": {
+		"isOld":true,
 		"id": "lh",
 		"cardSubtype": "heavy weapon",
 		"cardName": "Echo",
@@ -6035,6 +6100,7 @@ const cards = JSON.parse(JSON.stringify({
 		"requirements": [{"cardName": "Padme Amidala"}]
 	},
 	"ln": {
+		"isOld":true,
 		"cardName": "Diplomatic Cover",
 		"cardSubtype": "3",
 		"cardType": "command",
@@ -6061,6 +6127,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "lo"
 	},
 	"lp": {
+		"isOld":true,
 		"cardName": "I Make the Rules Now",
 		"cardSubtype": "3",
 		"cardType": "command",
@@ -6210,6 +6277,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ma"
 	},
 	"mb": {
+		"isOld":true,
 		"id": "mb",
 		"cardType": "unit",
 		"cardSubtype": "ground vehicle",
@@ -6395,6 +6463,7 @@ const cards = JSON.parse(JSON.stringify({
     "id": "mi"
   },
 	"mj": {
+		"isOld":true,
 		"id": "mj",
 		"cardSubtype": "heavy weapon",
 		"cardName": "Dioxis Mine Saboteur",
@@ -6613,29 +6682,30 @@ const cards = JSON.parse(JSON.stringify({
     "keywords": []
   },
 	"mu": {
-		"id": "mu",
-    "displayName": "",
-    "cardName": "Mechanized Incursion",
-    "cardSubtype": "1",
-    "cardType": "command",
-    "commander": "",
-    "imageName": "Mechanized Incursion.jpeg",
-    "products": [],
-    "faction": "separatists",
-    "keywords": []
-  },
+			"id": "mu",
+		"displayName": "",
+		"cardName": "Mechanized Incursion",
+		"cardSubtype": "1",
+		"cardType": "command",
+		"commander": "",
+		"imageName": "Mechanized Incursion.jpeg",
+		"products": [],
+		"faction": "separatists",
+		"keywords": []
+  	},
 	"mv": {
+		"isOld":true,
 		"id": "mv",
-    "displayName": "",
-    "cardName": "Hero of the Clone Wars",
-    "cardSubtype": "3",
-    "cardType": "command",
-    "commander": "Anakin Skywalker",
-    "imageName": "Hero of the Clone Wars.jpeg",
-    "products": [],
-    "faction": "republic",
-    "keywords": ["Permanent", "Exemplar", "Reliable"]
-  },
+		"displayName": "",
+		"cardName": "Hero of the Clone Wars",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "Anakin Skywalker",
+		"imageName": "Hero of the Clone Wars.jpeg",
+		"products": [],
+		"faction": "republic",
+		"keywords": ["Permanent", "Exemplar", "Reliable"]
+}	,
 	"mw": {
 		"id": "mw",
     "displayName": "",
@@ -6723,6 +6793,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"na": {
+		"isOld":true,
 		"id": "na",
 		"cardType": "unit",
 		"displayName": "",
@@ -6827,32 +6898,34 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"nf": {
+		"isOld":true,
 		"id": "nf",
-    "displayName": "",
-    "cardName": "This is Where the Fun Begins",
-    "cardSubtype": "1",
-    "cardType": "command",
-    "commander": "Anakin Skywalker",
-    "imageName": "This is Where the Fun Begins.jpeg",
-    "products": [],
-    "faction": "republic",
-    "keywords": [
+		"displayName": "",
+		"cardName": "This is Where the Fun Begins",
+		"cardSubtype": "1",
+		"cardType": "command",
+		"commander": "Anakin Skywalker",
+		"imageName": "This is Where the Fun Begins.jpeg",
+		"products": [],
+		"faction": "republic",
+		"keywords": [
 			"Permanent",
 			"Outmaneuver",
 			"Relentless"
 		]
   },
 	"ng": {
+		"isOld":true,
 		"id": "ng",
-    "displayName": "",
-    "cardName": "You Underestimate My Power",
-    "cardSubtype": "2",
-    "cardType": "command",
-    "commander": "Anakin Skywalker",
-    "imageName": "You Underestimate My Power.jpeg",
-    "products": [],
-    "faction": "republic",
-    "keywords": [
+		"displayName": "",
+		"cardName": "You Underestimate My Power",
+		"cardSubtype": "2",
+		"cardType": "command",
+		"commander": "Anakin Skywalker",
+		"imageName": "You Underestimate My Power.jpeg",
+		"products": [],
+		"faction": "republic",
+		"keywords": [
 			"Permanent",
 			"Master of the Force"
 		]
@@ -6868,6 +6941,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": []
 	},
 	"ni": {
+		"isOld":true,
 		"id": "ni",
     "displayName": "",
     "cardName": "The Phantom Menace",
@@ -7046,6 +7120,7 @@ const cards = JSON.parse(JSON.stringify({
 		"requirements": []
 	},
 	"nr": {
+		"isOld": true,
 		"cardType": "unit",
 		"cardSubtype": "droid trooper",
 		"cardName": "T-Series Tactical Droid",
@@ -7203,6 +7278,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"oa": {
+		"isOld":true,
 		"id": "oa",
 		"displayName": "",
 		"cardSubtype": "personnel",
@@ -7222,6 +7298,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"ob": {
+		"isOld":true,
 		"id": "ob",
 		"displayName": "",
 		"cardSubtype": "personnel",
@@ -7240,6 +7317,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"oc": {
+		"isOld":true,
 		"id": "oc",
 		"displayName": "",
 		"cardSubtype": "personnel",
@@ -7258,6 +7336,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"od": {
+		"isOld":true,
 		"id": "od",
 		"displayName": "",
 		"cardSubtype": "personnel",
@@ -7387,6 +7466,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": []
 	},
 	"ol": {
+		"isOld":true,
 		"cardType": "unit",
 		"cardSubtype": "trooper",
 		"cardName": "Yoda",
@@ -7421,6 +7501,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ol"
 	},
 	"om": {
+		"isOld":true,
 		"cardType": "unit",
 		"cardSubtype": "repulsor vehicle",
 		"cardName": "A-A5 Speeder Truck",
@@ -7452,6 +7533,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "om"
 	},
 	"on": {
+		"isOld":true,
 		"cardType": "unit",
 		"cardSubtype": "repulsor vehicle",
 		"cardName": "LAAT Patrol Transport",
@@ -7489,6 +7571,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "on"
 	},
 	"oo": {
+		"isOld":true,
 		"cardType": "unit",
 		"cardSubtype": "repulsor vehicle",
 		"cardName": "LAAT Patrol Transport",
@@ -7545,6 +7628,7 @@ const cards = JSON.parse(JSON.stringify({
 		"requirements": [{"cardName": "A-A5 Speeder Truck"}]
 	},
 	"oq": {
+		"isOld":true,
 		"id": "oq",
 		"displayName": "",
 		"cardSubtype": "pilot",
@@ -7563,6 +7647,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"or": {
+		"isOld":true,
 		"id": "or",
 		"displayName": "",
 		"cardSubtype": "pilot",
@@ -7587,6 +7672,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"os": {
+		"isOld":true,
 		"id": "os",
 		"displayName": "",
 		"cardSubtype": "pilot",
@@ -7605,6 +7691,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"ot": {
+		"isOld":true,
 		"id": "ot",
 		"displayName": "",
 		"cardSubtype": "comms",
@@ -7660,6 +7747,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"ow": {
+		"isOld":true,
 		"id": "ow",
 		"displayName": "",
 		"cardSubtype": "pilot",
@@ -7678,6 +7766,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"ox": {
+		"isOld":true,
 		"id": "ox",
 		"displayName": "",
 		"cardSubtype": "crew",
@@ -7696,7 +7785,7 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Refurbished \"Gonk\" Droid",
 		"isUnique": false,
 		"cardType": "upgrade",
-		"cost": 14,
+		"cost": 20,
 		"imageName": "Refurbished %22Gonk%22 Droid.jpeg",
 		"keywords": ["Shielded", "Shield Token"],
 		"requirements": [
@@ -7728,6 +7817,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"pa": {
+		"isOld":true,
 		"id": "pa",
 		"displayName": "",
 		"cardSubtype": "crew",
@@ -7800,6 +7890,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"pe": {
+		"isOld":true,
 		"id": "pe",
 		"displayName": "",
 		"cardSubtype": "pilot",
@@ -8027,6 +8118,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "po"
 	},
 	"pp": {
+		"isOld":true,
 		"id": "pp",
 		"displayName": "",
 		"cardName": "Size Matters Sometimes",
@@ -8155,6 +8247,7 @@ const cards = JSON.parse(JSON.stringify({
 		"history": []
 	},
 	"py": {
+		"isOld": true,
 		"id": "py",
 		"cardType": "unit",
 		"defense": "red",
@@ -8186,6 +8279,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"pz": {
+		"isOld": true,
 		"id": "pz",
 		"cardType": "unit",
 		"defense": "red",
@@ -8214,6 +8308,7 @@ const cards = JSON.parse(JSON.stringify({
 		"history": []
 	},
 	"qa": {
+		"isOld": true,
 		"id": "qa",
 		"cardType": "unit",
 		"defense": "red",
@@ -8446,6 +8541,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": ["AI", "Disengage", "Impervious"]
 	},
 	"qg": {
+		"isOld":true,
 		"id": "qg",
 		"cardName": "Do Not Underestimate Our Means",
 		"cardSubtype": "3",
@@ -8576,6 +8672,7 @@ const cards = JSON.parse(JSON.stringify({
 		"requirements": [{ "cardSubtype": "ground vehicle" }]
 	},
 	"qo": {
+		"isOld":true,
 		"id": "qo",
 		"displayName": "",
 		"cardSubtype": "hardpoint",
@@ -8600,6 +8697,7 @@ const cards = JSON.parse(JSON.stringify({
 		"requirements": [{ "cardName": "Raddaugh Gnasp Fluttercraft" }]
 	},
 	"qq": {
+		"isOld":true,
 		"id": "qq",
 		"displayName": "",
 		"cardSubtype": "hardpoint",
@@ -8655,6 +8753,7 @@ const cards = JSON.parse(JSON.stringify({
 		"history": []
 	},
 	"qt": {
+		"isOld": true,
 		"id": "qt",
 		"cardType": "unit",
 		"defense": "white",
@@ -8682,6 +8781,7 @@ const cards = JSON.parse(JSON.stringify({
 		"history": []
 	},
 	"qu": {
+		"isOld":true,
 		"id": "qu",
 		"displayName": "Elite Armor Pilots",
 		"cardSubtype": "pilot",
@@ -8763,7 +8863,7 @@ const cards = JSON.parse(JSON.stringify({
 		"isUnique": false,
 		"rank": "commander",
 		"cost": 48,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"subfaction": "pyke syndicate",
 		"affiliations": ["rebels", "republic", "empire", "separatists"],
 		"imageName": "Pyke Syndicate Capo.jpeg",
@@ -8793,7 +8893,7 @@ const cards = JSON.parse(JSON.stringify({
 		"isUnique": false,
 		"rank": "corps",
 		"cost": 44,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"subfaction": "pyke syndicate",
 		"affiliations": ["rebels", "republic", "empire", "separatists"],
 		"imageName": "Pyke Syndicate Foot Soldiers.jpeg",
@@ -8824,7 +8924,7 @@ const cards = JSON.parse(JSON.stringify({
 		"isUnique": false,
 		"rank": "commander",
 		"cost": 50,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"subfaction": "black sun",
 		"affiliations": ["empire", "separatists"],
 		"imageName": "Black Sun Vigo.jpeg",
@@ -8846,7 +8946,7 @@ const cards = JSON.parse(JSON.stringify({
 		"rank": "corps",
 		"cost": 50,
 		"prevCost": 48,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"subfaction": "black sun",
 		"affiliations": ["empire", "separatists"],
 		"imageName": "Black Sun Enforcers.jpeg",
@@ -8877,8 +8977,8 @@ const cards = JSON.parse(JSON.stringify({
 		"title": "A Rival",
 		"isUnique": true,
 		"rank": "operative",
-		"cost": 170,
-		"faction": "fringe",
+		"cost": 150,
+		"faction": "mercenary",
 		"subfaction": "shadow collective",
 		"imageName": "Maul2.jpeg",
 		"keywords": [
@@ -8915,7 +9015,7 @@ const cards = JSON.parse(JSON.stringify({
 		"rank": "commander",
 		"cost": 100,
 		"prevCost": 105,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"subfaction": "shadow collective",
 		"imageName": "Gar Saxon.jpeg",
 		"keywords": ["Jump", "Allies of Convenience", "Compel", "Impervious", "Sharpshooter", "Pierce"],
@@ -8941,7 +9041,7 @@ const cards = JSON.parse(JSON.stringify({
 		"rank": "special",
 		"cost": 70,
 		"prevCost": 75,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"imageName": "Mandalorian Super Commandos.jpeg",
 		"keywords": ["Jump", "Defend", "Impervious", "Independent"],
 		"upgradeBar": [
@@ -9130,7 +9230,7 @@ const cards = JSON.parse(JSON.stringify({
 		"commander": "Maul",
 		"imageName": "Witch Magick.jpeg",
 		"products": [],
-		"faction": "fringe",
+		"faction": "mercenary",
 		"keywords": []
 	},
 	"rs": {
@@ -9141,7 +9241,7 @@ const cards = JSON.parse(JSON.stringify({
 		"commander": "Maul",
 		"imageName": "His Emminence.jpeg",
 		"products": [],
-		"faction": "fringe",
+		"faction": "mercenary",
 		"keywords": []
 	},
 	"rt": {
@@ -9152,7 +9252,7 @@ const cards = JSON.parse(JSON.stringify({
 		"commander": "Maul",
 		"imageName": "Seize What Power We Can.jpeg",
 		"products": [],
-		"faction": "fringe",
+		"faction": "mercenary",
 		"keywords": []
 	},
 	"ru": {
@@ -9360,7 +9460,7 @@ const cards = JSON.parse(JSON.stringify({
 		"commander": "Gar Saxon",
 		"imageName": "Marked For Elimination.jpeg",
 		"products": [],
-		"faction": "fringe",
+		"faction": "mercenary",
 		"keywords": []
 	},
 	"sk": {
@@ -9371,7 +9471,7 @@ const cards = JSON.parse(JSON.stringify({
 		"commander": "Gar Saxon",
 		"imageName": "Fight Another Day.jpeg",
 		"products": [],
-		"faction": "fringe",
+		"faction": "mercenary",
 		"keywords": ["Outmaneuver"]
 	},
 	"sl": {
@@ -9382,17 +9482,18 @@ const cards = JSON.parse(JSON.stringify({
 		"commander": "Gar Saxon",
 		"imageName": "Victory or Death!.jpeg",
 		"products": [],
-		"faction": "fringe",
+		"faction": "mercenary",
 		"keywords": ["Outmaneuver"]
 	},
 	"sm": {
+		"isOld":true,
 		"cardType": "unit",
 		"cardSubtype": "repulsor vehicle",
 		"cardName": "A-A5 Speeder Truck",
 		"isUnique": false,
 		"rank": "heavy",
 		"cost": 75,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"subfaction": "raiders",
 		"defense": "white",
 		"surges": ["block"],
@@ -9425,13 +9526,13 @@ const cards = JSON.parse(JSON.stringify({
 		"isUnique": false,
 		"cardType": "upgrade",
 		"cost": 5,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"imageName": "Frenzied Gunner.jpeg",
 		"keywords": [],
 		"requirements": [
 			"AND",
 			{ "rank": "heavy" },
-			{ "faction" : "fringe" }
+			{ "faction" : "mercenary" }
 		]
 	},
 	"so": {
@@ -9447,7 +9548,7 @@ const cards = JSON.parse(JSON.stringify({
 		"requirements": [
 			"AND",
 			{ "rank": "heavy" },
-			{ "faction" : "fringe" }
+			{ "faction" : "mercenary" }
 		]
 	},
 	"sp": {
@@ -9470,9 +9571,9 @@ const cards = JSON.parse(JSON.stringify({
 		"cardName": "Swoop Bike Riders",
 		"isUnique": false,
 		"rank": "support",
-		"cost": 65,
+		"cost": 70,
 		"prevCost": 70,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"subfaction": "raiders",
 		"affiliations": ["rebels", "republic"],
 		"defense": "white",
@@ -9501,6 +9602,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "sq"
 	},
 	"sr": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "red",
 		"surges": ["hit"],
@@ -9561,6 +9663,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": []
 	},
 	"su": {
+		"isOld":true,
 		"id": "su",
 		"cardName": "Hold at Any Cost",
 		"cardSubtype": "3",
@@ -9573,6 +9676,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": []
 	},
 	"sv": {
+		"isOld":true,
 		"id": "sv",
 		"cardName": "Unrelenting Fire",
 		"cardSubtype": "1",
@@ -9585,6 +9689,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": []
 	},
 	"sw": {
+		"isOld":true,
 		"id": "sw",
 		"cardName": "Overwhelming Barrage",
 		"cardSubtype": "2",
@@ -9597,6 +9702,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": []
 	},
 	"sx": {
+		"isOld":true,
 		"id": "sx",
 		"cardName": "Debark for Ground Assault",
 		"cardSubtype": "3",
@@ -9609,6 +9715,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": ["Spur", "Suppressive"]
 	},
 	"sy": {
+		"isOld":true,
 		"id": "sy",
 		"cardName": "Lead From the Front",
 		"cardSubtype": "2",
@@ -9621,6 +9728,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": []
 	},
 	"sz": {
+		"isOld":true,
 		"id": "sz",
 		"cardName": "Tactical Planning",
 		"cardSubtype": "2",
@@ -9633,6 +9741,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": []
 	},
 	"ta": {
+		"isOld":true,
 		"id": "ta",
 		"cardName": "Leaders of the 501st",
 		"cardSubtype": "3",
@@ -9741,7 +9850,7 @@ const cards = JSON.parse(JSON.stringify({
 		"isUnique": true,
 		"rank": "operative",
 		"cost": 110,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"affiliations": ["empire"],
 		"imageName": "IG-88.jpeg",
 		"title": "Notorious Assassin Droid",
@@ -9773,7 +9882,7 @@ const cards = JSON.parse(JSON.stringify({
 		"isUnique": true,
 		"rank": "operative",
 		"cost": 105,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"subfaction": "bounty hunters",
 		"affiliations": ["rebels", "empire"],
 		"imageName": "IG-11.jpeg",
@@ -9802,7 +9911,7 @@ const cards = JSON.parse(JSON.stringify({
 		"isUnique": true,
 		"rank": "operative",
 		"cost": 105,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"subfaction": "bounty hunters",
 		"affiliations": ["rebels", "empire"],
 		"imageName": "Din Djarin.jpeg",
@@ -9841,7 +9950,7 @@ const cards = JSON.parse(JSON.stringify({
 		"isUnique": true,
 		"rank": "operative",
 		"cost": 120,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"subfaction": "bounty hunters",
 		"affiliations": ["rebels"],
 		"imageName": "Boba Fett2.jpeg",
@@ -9864,6 +9973,7 @@ const cards = JSON.parse(JSON.stringify({
 		"history": []
 	},
 	"tm": {
+		"isOld":true,
 		"id": "tm",
 		"cardType": "unit",
 		"defense": "red",
@@ -9895,7 +10005,7 @@ const cards = JSON.parse(JSON.stringify({
 	"tn": {
 		"id": "tn",
 		"cardName": "Grogu",
-		"faction": "fringe",
+		"faction": "mercenary",
 		"affiliations": ["rebels"],
 		"subfaction": "bounty hunters",
 		"isUnique": true,
@@ -10154,6 +10264,7 @@ const cards = JSON.parse(JSON.stringify({
 		"history": []
 	},
 	"uf": {
+		"isOld":true,
 		"id": "uf",
 		"displayName": "",
 		"cardSubtype": "personnel",
@@ -10171,6 +10282,7 @@ const cards = JSON.parse(JSON.stringify({
 		]
 	},
 	"ug": {
+		"isOld":true,
 		"id": "ug",
 		"displayName": "",
 		"cardSubtype": "personnel",
@@ -10270,6 +10382,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": []
 	},
 	"um": {
+		"isOld":true,
 		"id": "um",
 		"cardName": "Moment of Consideration",
 		"cardSubtype": "3",
@@ -10423,6 +10536,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": ["Suppressive", "Spray"]
 	},
 	"uw": {
+		"isOld":true,
 		"id": "uw",
 		"cardName": "Yes, My Master",
 		"cardSubtype": "3",
@@ -10592,6 +10706,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "ve"
 	},
 	"vf": {
+		"isOld":true,
 		"id": "vf",
 		"cardName": "I Am No Jedi",
 		"cardSubtype": "1",
@@ -10614,6 +10729,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": ["Teamwork"]
 	},
 	"vh": {
+		"isOld":true,
 		"id": "vh",
 		"cardName": "Swift Protector",
 		"cardSubtype": "2",
@@ -10625,6 +10741,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": ["Guardian"]
 	},
 	"vi": {
+		"isOld":true,
 		"id": "vi",
 		"cardName": "A New Beginning",
 		"cardSubtype": "3",
@@ -10636,6 +10753,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": ["Inspire"]
 	},
 	"vj": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "white",
 		"surges": ["crit", "block"],
@@ -10648,7 +10766,7 @@ const cards = JSON.parse(JSON.stringify({
 		"isUnique": true,
 		"rank": "heavy",
 		"cost": 190,
-		"faction": "fringe",
+		"faction": "mercenary",
     "affiliations":[],
 		"imageName": "Chewbacca3.jpeg",
 		"keywords": [
@@ -10666,6 +10784,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "vj"
 	},
 	"vk": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "white",
 		"surges": [],
@@ -10677,8 +10796,8 @@ const cards = JSON.parse(JSON.stringify({
 		"isUnique": false,
 		"rank": "corps",
 		"cost": 40,
-		"faction": "fringe",
-    "affiliations":['rebels'],
+		"faction": "mercenary",
+    "affiliations":["rebels"],
 		"imageName": "Ewok Skirmishers.jpeg",
 		"keywords": [
 			"Low Profile",
@@ -10834,6 +10953,7 @@ const cards = JSON.parse(JSON.stringify({
 		"history": []
 	},
 	"vu": {
+		"isOld":true,
 		"cardType": "unit",
 		"defense": "white",
 		"surges": [],
@@ -10845,8 +10965,8 @@ const cards = JSON.parse(JSON.stringify({
 		"isUnique": false,
 		"rank": "special",
 		"cost": 35,
-		"faction": "fringe",
-    "affiliations":['rebels'],
+		"faction": "mercenary",
+    "affiliations":["rebels"],
 		"imageName": "Ewok Slingers.jpeg",
 		"keywords": [
 			"Independent",
@@ -10866,7 +10986,7 @@ const cards = JSON.parse(JSON.stringify({
 	"vv": {
 		"cardName": "C-3P0",
 		"title": "Golden God",
-		"faction": "fringe",
+		"faction": "mercenary",
 		"isUnique": true,
 		"upgradeBar": [],
 		"cardType": "unit",
@@ -10983,7 +11103,7 @@ const cards = JSON.parse(JSON.stringify({
 		"isUnique": true,
 		"rank": "commander",
 		"cost": 45,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"imageName": "Logray.jpeg",
 		"keywords": [
 			"Aid",
@@ -11017,6 +11137,7 @@ const cards = JSON.parse(JSON.stringify({
 		"cost": 190,
 		"faction": "empire",
 		"imageName": "Major Marquand.jpeg",
+		"specialIssue": "Tempest Force",
 		"keywords": [
 			"Vehicle",
 			"Armor",
@@ -11032,6 +11153,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "we"
 	},
 	"wf": {
+		"isOld":true,
 		"id": "wf",
 		"cardName": "Drive Them Out",
 		"cardSubtype": "1",
@@ -11044,6 +11166,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": ["Demoralize"]
 	},
 	"wg": {
+		"isOld":true,
 		"id": "wg",
 		"cardName": "We Need Reinforcements",
 		"cardSubtype": "2",
@@ -11056,6 +11179,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": ["Disengage"]
 	},
 	"wh": {
+		"isOld":true,
 		"id": "wh",
 		"cardName": "Constantly Alert",
 		"cardSubtype": "3",
@@ -11068,6 +11192,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": []
 	},
 	"wi": {
+		"isOld":true,
 		"id": "wi",
 		"cardName": "Gunner, Infantry!",
 		"cardSubtype": "1",
@@ -11079,6 +11204,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": ["Tactical", "Suppressive"]
 	},
 	"wj": {
+		"isOld":true,
 		"id": "wj",
 		"cardName": "Squadron, On Me",
 		"cardSubtype": "2",
@@ -11090,6 +11216,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": []
 	},
 	"wk": {
+		"isOld":true,
 		"id": "wk",
 		"cardName": "Armored Cavalry",
 		"cardSubtype": "3",
@@ -11147,6 +11274,7 @@ const cards = JSON.parse(JSON.stringify({
 		"cost": 110,
 		"faction": "empire",
 		"imageName": "Seventh Sister.jpeg",
+    "associate": "wl",
 		"keywords": [
 			"Associate",
 			"Block",
@@ -11165,6 +11293,7 @@ const cards = JSON.parse(JSON.stringify({
 		"id": "wm"
 	},
 	"wn": {
+		"isOld": true,
 		"cardType": "unit",
 		"defense": "red",
 		"surges": ["hit"],
@@ -11193,7 +11322,9 @@ const cards = JSON.parse(JSON.stringify({
 			"gear"
 		],
 		"history": [],
-		"id": "wn"
+		"id": "wn",
+    "entourage": {"name":"B2 Super Battle Droids"},
+
 	},
 	"wo": {
 		"cardType": "unit",
@@ -11327,6 +11458,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": ["Permanent"]
 	},
 	"wv": {
+		"isOld":true,
 		"id": "wv",
 		"cardName": "I Care Not For Your Struggles",
 		"cardSubtype": "3",
@@ -11382,6 +11514,7 @@ const cards = JSON.parse(JSON.stringify({
 		"keywords": ["Jump", "Demoralize"]
 	},
 	"xa": {
+		"isOld":true,
 		"id": "xa",
 		"cardName": "Let the Executions Begin!",
 		"cardSubtype": "1",
@@ -11413,13 +11546,3332 @@ const cards = JSON.parse(JSON.stringify({
 		"products": [],
 		"faction": "separatists",
 		"keywords": []
-	}
+	},
+
+	// New cards start here 
+
+	"xd": {
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["crit", "block"],
+		"speed": 2,
+		"wounds": 6,
+		"courage": 2,
+		"cardSubtype": "trooper",
+		"cardName": "Leia Organa",
+		"title": "Fearless and Inventive",
+		"isUnique": true,
+		"rank": "commander",
+		"cost": 75,
+		"faction": "rebels",
+		"imageName": "Leia_Organa.png",
+		"newUrl":true,
+		"keywords": [
+			"Take Cover",
+			"Exemplar",
+			"Inspire",
+			"Nimble",
+			"Sharpshooter",
+		],
+		"upgradeBar": ["command", "command", "training", "gear"],
+		"history": [
+			{
+				"date": "27 October 2021",
+				"description": "Cost reduced from 90 to 80 points."
+			},
+			{
+				"date": "5 June 2023",
+				"description": "Cost reduced from 80 to 75 points."
+			},
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		],
+		"id": "xd"
+	},
+	"xe": {
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["crit"],
+		"speed": 2,
+		"wounds": 6,
+		"courage": 3,
+		"cardSubtype": "trooper",
+		"cardName": "Luke Skywalker",
+		"title": "Hero of the Rebellion",
+		"isUnique": true,
+		"rank": "commander",
+		"cost": 120,
+		"faction": "rebels",
+		"imageName": "Luke_Skywalker.png",
+		"newUrl":true,
+		"keywords": [
+			"Jump",
+			"Block",
+			"Charge",
+			"Immune:Pierce",
+			"Inspire",
+			"Sharpshooter"
+		],
+		"upgradeBar": ["command", "command", "training", "gear"],
+		"history": [
+			
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		],
+		"id": "xe"
+	},
+	"xf": {
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit","block"],
+		"speed": 1,
+		"wounds": 4,
+		"courage": 2,
+		"cardSubtype": "droid trooper",
+		"cardName": "R2-D2",
+		"title": "Hero of a Thousand Devices",
+		"isUnique": true,
+		"rank": "operative",
+		"cost": 55,
+		"faction": "rebels",
+		"imageName": "R2-D2.png",
+		"newUrl":true,
+		"keywords": [
+			"Repair",
+			"Inconspicuous",
+			"Infiltrate",
+			"Secret Mission"
+		],
+		"upgradeBar": ["comms"],
+		"history": [
+			
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		],
+		"id": "xf"
+	},
+	"xg": {
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit","block"],
+		"speed": 2,
+		"wounds": 4,
+		"courage": 2,
+		"cardSubtype": "trooper",
+		"cardName": "Rebel Officer",
+		"title": "Resolute Commander",
+		"isUnique": false,
+		"rank": "commander",
+		"cost": 50,
+		"faction": "rebels",
+		"imageName": "Rebel_Officer.png",
+		"newUrl":true,
+		"keywords": [
+			"Take Cover",
+			"Exemplar",
+			"Inspire"
+		],
+		"upgradeBar": ["command","gear"],
+		"history": [
+			
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		],
+		"id": "xg"
+	},
+	"xh": {
+		"id": "xh",
+		"cardName": "Rebel Troopers",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["block"],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 1,
+		"cardSubtype": "trooper",
+		"title": "",
+		"isUnique": false,
+		"rank": "corps",
+		"cost": 40,
+		"faction": "rebels",
+		"imageName": "Rebel_Troopers.png",
+		"newUrl":true,
+		"keywords": [
+			"Agile",
+			"Nimble"
+		],
+		"upgradeBar": ["heavy weapon", "personnel", "gear", "grenades"],
+		"history": [
+			
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xi": {
+		"id": "xi",
+		"cardName": "Fleet Troopers",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit", "block"],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 1,
+		"cardSubtype": "trooper",
+		"title": "",
+		"isUnique": false,
+		"rank": "corps",
+		"cost": 40,
+		"faction": "rebels",
+		"imageName": "Fleet_Troopers.png",
+		"newUrl":true,
+		"keywords": [
+			"Charge"
+		],
+		"upgradeBar": ["heavy weapon", "personnel", "gear", "grenades"],
+		"history": [
+			
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xj": {
+		"id": "xj",
+		"cardName": "1.4 FD Laser Cannon Team",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit", "block"],
+		"speed": 0,
+		"wounds": 6,
+		"courage": 2,
+		"cardSubtype": "emplacement trooper",
+		"title": "",
+		"isUnique": false,
+		"rank": "support",
+		"cost": 65,
+		"faction": "rebels",
+		"imageName": "1.4_FD_Laser_Cannon_Team.png",
+		"newUrl":true,
+		"keywords": [
+			"Full Pivot",
+			"Prepared Position",
+			"Sentinel",
+			"Stationary",
+			"Impact",
+			"Fixed Front"
+		],
+		"upgradeBar": ["comms","generator"],
+		"history": [
+			
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xk": {
+		"id": "xk",
+		"cardName": "Rebel Veterans",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit", "block"],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 2,
+		"cardSubtype": "trooper",
+		"title": "",
+		"isUnique": false,
+		"rank": "corps",
+		"cost": 48,
+		"faction": "rebels",
+		"imageName": "Rebel_Veterans.png",
+		"newUrl":true,
+		"keywords": [
+			"Coordinate",
+			"Low Profile",
+			"Prepared Position"
+		],
+		"upgradeBar": ["heavy weapon", "personnel", "training", "gear", "grenades"],
+		"history": [
+			
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xl": {
+		"id": "xl",
+		"cardName": "Rebel Commandos Strike Team",
+		"displayName": "Commando Strike Team",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit", "block"],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 2,
+		"cardSubtype": "trooper",
+		"title": "",
+		"isUnique": false,
+		"rank": "special",
+		"cost": 20,
+		"faction": "rebels",
+		"imageName": "Rebel_Commandos_Strike_Team.png",
+		"newUrl":true,
+		"keywords": [
+			"Detachment",
+			"Heavy Weapon Team",
+			"Low Profile",
+			"Scout",
+			"Sharpshooter"
+		],
+		"upgradeBar": ["heavy weapon", "training", "comms", "gear", "grenades"],
+		"history": [
+			
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xm": {
+		"id": "xm",
+		"cardName": "AT-RT",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["crit", "block"],
+		"speed": 2,
+		"wounds": 6,
+		"resilience": 2,
+		"cardSubtype": "ground vehicle",
+		"isUnique": false,
+		"rank": "support",
+		"cost": 50,
+		"faction": "rebels",
+		"imageName": "AT-RT.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor",
+			"Climbing Vehicle",
+			"Expert Climber",
+			"Scout",
+			"Impact"
+		],
+		"upgradeBar": ["hardpoint","comms"],
+		"history": [
+			
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xn": {
+		"id": "xn",
+		"cardName": "T-47 Airspeeder",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["crit", "block"],
+		"speed": 3,
+		"wounds": 7,
+		"resilience": 5,
+		"cardSubtype": "repulsor vehicle",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 125,
+		"faction": "rebels",
+		"imageName": "T-47_Airspeeder.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor",
+			"Arsenal",
+			"Cover",
+			"Immune",
+			"Speeder",
+			"Impact",
+			"Fixed"
+		],
+		"upgradeBar": ["pilot", "hardpoint","comms"],
+		"history": [
+			
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xo": {
+		"id": "xo",
+		"cardName": "X-34 Landspeeder",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit", "block"],
+		"speed": 2,
+		"wounds": 6,
+		"resilience": 4,
+		"cardSubtype": "repulsor vehicle",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 55,
+		"faction": "rebels",
+		"imageName": "X-34_Landspeeder.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor",
+			"Arsenal",
+			"Cover",
+			"Speeder",
+		],
+		"upgradeBar": ["pilot", "crew", "crew", "hardpoint","comms"],
+		"history": [
+			
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xp": {
+		"id": "xp",
+		"cardName": "A-A5 Speeder Truck",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["block"],
+		"speed": 1,
+		"wounds": 8,
+		"resilience": 6,
+		"cardSubtype": "repulsor vehicle",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 65,
+		"faction": "rebels",
+		"imageName": "A-A5_Speeder_Truck.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor",
+			"Hover: Ground",
+			"Reposition",
+			"Transport",
+			"Weak Point: Rear"
+		],
+		"upgradeBar": ["pilot", "crew", "crew", "hardpoint","comms"],
+		"history": [
+			
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+
+	"xq": {
+		"id": "xq",
+		"cardName": "Director Orson Krennic",
+		"displayName": "Director Krennic",
+		"title":"Architect of Terror",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit","block"],
+		"speed": 2,
+		"wounds": 6,
+		"courage":2,
+		"cardSubtype": "trooper",
+		"isUnique": true,
+		"rank": "commander",
+		"cost": 65,
+		"faction": "empire",
+		"imageName": "Director_Orson_Krennic.png",
+		"newUrl":true,
+		"keywords": [
+			"Spotter",
+			"Compel",
+			"Cunning",
+			"Entourage",
+			"Exemplar"
+		],
+		"upgradeBar": ["command", "command","gear"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xr": {
+		"id": "xr",
+		"cardName": "General Veers",
+		"title":"Master Tactician",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["crit"],
+		"speed": 2,
+		"wounds": 5,
+		"courage":2,
+		"cardSubtype": "trooper",
+		"isUnique": true,
+		"rank": "commander",
+		"cost": 75,
+		"faction": "empire",
+		"imageName": "General_Veers.png",
+		"newUrl":true,
+		"keywords": [
+			"Guidance",
+			"Spotter",
+			"Exemplar",
+			"Inspire",
+			"Sharpshooter"
+		],
+		"upgradeBar": ["command", "command","gear"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+
+	"xs": {
+		"id": "xs",
+		"cardName": "Imperial Officer",
+		"title":"Ruthless Commander",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit", "block"],
+		"speed": 2,
+		"wounds": 4,
+		"courage":2,
+		"cardSubtype": "trooper",
+		"isUnique": false,
+		"rank": "commander",
+		"cost": 55,
+		"faction": "empire",
+		"imageName": "Imperial_Officer.png",
+		"newUrl":true,
+		"keywords": [
+			"Spotter",
+			"Exemplar",
+			"Inspire",
+		],
+		"upgradeBar": ["command", "gear"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xt": {
+		"id": "xt",
+		"cardName": "TX-225 GAVw Occupier Tank",
+		"displayName":"Occupier Tank",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": [],
+		"speed": 1,
+		"wounds": 8,
+		"resilience":6,
+		"cardSubtype": "ground vehicle",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 125,
+		"faction": "empire",
+		"imageName": "TX-225_GAVw_Occupier_Tank.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor",
+			"Arsenal",
+			"Reposition",
+			"Transport",
+			"Weak Point: Sides"
+		],
+		"upgradeBar": ["pilot", "hardpoint","comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xu": {
+		"id": "xu",
+		"cardName": "Shoretroopers",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": [],
+		"speed": 1,
+		"wounds": 1,
+		"courage":1,
+		"cardSubtype": "trooper",
+		"isUnique": false,
+		"rank": "corps",
+		"cost": 52,
+		"faction": "empire",
+		"imageName": "Shoretroopers.png",
+		"newUrl":true,
+		"keywords": [
+			"Coordinate",
+			"Prepared Position",
+			"Long Shot"
+		],
+		"upgradeBar": ["heavy weapon", "personnel", "training", "gear", "grenades"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xv": {
+		"id": "xv",
+		"cardName": "Stormtroopers",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["hit"],
+		"speed": 2,
+		"wounds": 1,
+		"courage":1,
+		"cardSubtype": "trooper",
+		"isUnique": false,
+		"rank": "corps",
+		"cost": 42,
+		"faction": "empire",
+		"imageName": "Stormtroopers.png",
+		"newUrl":true,
+		"keywords": [
+			"Precise",
+		],
+		"upgradeBar": ["heavy weapon", "personnel", "gear", "grenades"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xw": {
+		"id": "xw",
+		"cardName": "Snowtroopers",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["hit"],
+		"speed": 1,
+		"wounds": 1,
+		"courage":1,
+		"cardSubtype": "trooper",
+		"isUnique": false,
+		"rank": "corps",
+		"cost": 42,
+		"faction": "empire",
+		"imageName": "Snowtroopers.png",
+		"newUrl":true,
+		"keywords": [
+			"Steady",
+		],
+		"upgradeBar": ["heavy weapon", "personnel", "gear", "grenades"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+
+	"xx": {
+		"id": "xx",
+		"cardName": "Stormtroopers",
+		"displayName": "Stormtroopers Heavy Response Unit",
+		"title":"Heavy Response Unit",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["hit"],
+		"speed": 2,
+		"wounds": 1,
+		"courage":1,
+		"cardSubtype": "trooper",
+		"isUnique": false,
+		"rank": "corps",
+		"cost": 36,
+		"faction": "empire",
+		"imageName": "Stormtroopers_HRU.png",
+		"newUrl":true,
+		"keywords": [
+			"Flexible Reponse",
+			"Precise",
+			"Speicial Issue",
+			"Unhindered"
+		],
+		"specialIssue": "Blizzard Force",
+		"upgradeBar": ["heavy weapon", "heavy weapon"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+
+	"xy": {
+		"id": "xy",
+		"cardName": "E-Web Heavy Blaster Team",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["crit"],
+		"speed": 1,
+		"wounds": 4,
+		"courage": 2,
+		"cardSubtype": "emplacement trooper",
+		"isUnique": false,
+		"rank": "support",
+		"cost": 60,
+		"faction": "empire",
+		"imageName": "E-Web_Heavy_Blaster_Team.png",
+		"newUrl":true,
+		"keywords": [
+			"Prepared Position",
+			"Reposition",
+			"Sentinel",
+
+			"Cumbersome",
+			"Fixed: Front",
+			"Impact"
+		],
+		"upgradeBar": ["comms", "generator"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"xz": {
+		"id": "xz",
+		"cardName": "Scout Troopers",
+		"displayName": "Scout Troopers Strike Team",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["block"],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 2,
+		"cardSubtype": "trooper",
+		"isUnique": false,
+		"rank": "special",
+		"cost": 20,
+		"faction": "empire",
+		"imageName": "Scout_Troopers_Strike_Team.png",
+		"newUrl":true,
+		"keywords": [
+			"Detachment",
+			"Heavy Weapon Team",
+			"Low Profile",
+			"Scout",
+			"Sharpshooter"
+		],
+		"upgradeBar": ["heavy weapon", "training","gear", "grenades", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"ya": {
+		"id": "ya",
+		"cardName": "Imperial Dark Troopers",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": [],
+		"speed": 1,
+		"wounds": 2,
+		"courage": -1,
+		"cardSubtype": "droid trooper",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 95,
+		"faction": "empire",
+		"imageName": "Imperial_Dark_Troopers.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor",
+			"Plodding",
+			"Unconcerned",
+			"Unstoppable"
+		],
+		"upgradeBar": ["heavy weapon", "heavy weapon", "personnel", "protocol"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yb": {
+		"id": "yb",
+		"cardName": "LAAT/le Patrol Transport",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["block"],
+		"speed": 2,
+		"wounds": 8,
+		"resilience": 6,
+		"cardSubtype": "repulsor vehicle",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 100,
+		"faction": "empire",
+		"imageName": "LAAT-LE_Patrol_Transport.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor",
+			"Arsenal",
+			"Cover",
+			"Hover: Air",
+			"Immune",
+			"Transport"
+		],
+		"upgradeBar": ["pilot", "ordnance", "ordnance", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yc": {
+		"id": "yc",
+		"cardName": "Major Marquand",
+		"title":"Tempest Scout 2",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit", "block"],
+		"speed": 2,
+		"wounds": 11,
+		"resilience": 8,
+		"cardSubtype": "ground vehicle",
+		"isUnique": true,
+		"rank": "heavy",
+		"cost": 180,
+		"faction": "empire",
+		"imageName": "Major_Marquand.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor",
+			"Arsenal",
+			"Direct",
+			"Field Commander",
+			"Weak Point: Rear",
+			"Special Issue: Tempest Force",
+
+			"Fixed: Front", "Blast", "Impact"
+		],
+		"specialIssue":"Tempest Force",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yd": {
+		"id": "yd",
+		"cardName": "AT-ST",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["block"],
+		"speed": 2,
+		"wounds": 11,
+		"resilience": 8,
+		"cardSubtype": "ground vehicle",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 180,
+		"faction": "empire",
+		"imageName": "AT-ST.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor",
+			"Arsenal",
+			"Weak Point: Rear",
+			"Fixed: Front", "Impact"
+		],
+		"upgradeBar": ["pilot", "hardpoint", "hardpoint", "hardpoint","comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"ye": {
+		"id": "ye",
+		"cardName": "Padme Amidala",
+		"displayName": "Padmé Amidala",
+		"title": "Spirited Senator",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["crit", "block"],
+		"speed": 2,
+		"wounds": 6,
+		"courage": 3,
+		"cardSubtype": "trooper",
+		"isUnique": true,
+		"rank": "operative",
+		"cost": 60,
+		"faction": "republic",
+		"imageName": "Padme_Amidala.png",
+		"newUrl":true,
+		"keywords": [
+			"Bolster",
+			"Agile",
+			"Inspire",
+			"Nimble",
+			"Sharpshooter"
+		],
+		"upgradeBar": ["command", "training", "gear", "armament"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yf": {
+		"id": "yf",
+		"cardName": "Yoda",
+		"title": "Grand Master of the Jedi Order",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["crit", "block"],
+		"speed": 1,
+		"wounds": 5,
+		"courage": 4,
+		"cardSubtype": "trooper",
+		"isUnique": true,
+		"rank": "commander",
+		"cost": 180,
+		"faction": "republic",
+		"imageName": "Yoda.png",
+		"newUrl":true,
+		"keywords": [
+			"Guidance",
+			"Ataru Mastery",
+			"Deflect",
+			"Immune",
+			"Master of the Force",
+			"Impact",
+			"Pierce",
+			"Blast",
+			"Suppressive"
+		],
+		"upgradeBar": ["force", "force", "force", "command"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yg": {
+		"id": "yg",
+		"cardName": "Anakin Skywalker",
+		"title": "The Chosen One",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["crit"],
+		"speed": 2,
+		"wounds": 6,
+		"courage": 3,
+		"cardSubtype": "trooper",
+		"isUnique": true,
+		"rank": "commander",
+		"cost": 155,
+		"faction": "republic",
+		"imageName": "Anakin_Skywalker.png",
+		"newUrl":true,
+		"keywords": [
+			"Jump",
+			"Charge",
+			"Deflect",
+			"Djem So Mastery",
+			"Immune: Pierce",
+			"Master of the Force",
+			"Impact",
+			"Pierce"
+		],
+		"upgradeBar": ["force", "force","training","training"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yh": {
+		"id": "yh",
+		"cardName": "Obi-Wan Kenobi",
+		"title": "Civilized Warrior",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": [],
+		"speed": 2,
+		"wounds": 6,
+		"courage": 3,
+		"cardSubtype": "trooper",
+		"isUnique": true,
+		"rank": "commander",
+		"cost": 150,
+		"faction": "republic",
+		"imageName": "Obi-Wan_Kenobi.png",
+		"newUrl":true,
+		"keywords": [
+			"Jump",
+			"Charge",
+			"Deflect",
+			"Guardian",
+			"Immune: Pierce",
+			"Master of the Force",
+			"Soresu Mastery",
+			"Critical",
+			"Impact",
+			"Pierce"
+		],
+		"upgradeBar": ["force", "force", "command","training"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yi": {
+		"id": "yi",
+		"cardName": "R2-D2",
+		"title": "Hero of a Thousand Devices",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit", "block"],
+		"speed": 1,
+		"wounds": 4,
+		"courage": 2,
+		"cardSubtype": "droid trooper",
+		"isUnique": true,
+		"rank": "operative",
+		"cost": 55,
+		"faction": "republic",
+		"imageName": "R2-D2.png",
+		"newUrl":true,
+		"keywords": [
+			"Repair",
+			"Inconspicuous",
+			"Infiltrate",
+			"Secret Mission",
+			"Suppressive"
+		],
+		"upgradeBar": ["comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yj": {
+		"id": "yj",
+		"cardName": "Clone Trooper Infantry",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": [],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 2,
+		"cardSubtype": "clone trooper",
+		"isUnique": false,
+		"rank": "corps",
+		"cost": 56,
+		"faction": "republic",
+		"imageName": "Clone_Trooper_Infantry.png",
+		"newUrl":true,
+		"keywords": [
+			"Reliable"
+		],
+		"upgradeBar": ["leader", "heavy weapon", "personnel", "training","gear", "grenades"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yk": {
+		"id": "yk",
+		"cardName": "ARC Troopers",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": [],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 2,
+		"cardSubtype": "clone trooper",
+		"isUnique": false,
+		"rank": "special",
+		"cost": 58,
+		"faction": "republic",
+		"imageName": "ARC_Troopers.png",
+		"newUrl":true,
+		"keywords": [
+			"Charge",
+			"Impervious",
+			"Scale",
+			"Scout",
+			"Sharpshooter",
+			"Tactical"
+		],
+		"upgradeBar": ["leader", "heavy weapon", "training", "gear", "gear", "grenades","comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yl": {
+		"id": "yl",
+		"cardName": "ARC Troopers Strike Team",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": [],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 2,
+		"cardSubtype": "clone trooper",
+		"isUnique": false,
+		"rank": "special",
+		"cost": 24,
+		"faction": "republic",
+		"imageName": "ARC_Troopers_Strike_Team.png",
+		"newUrl":true,
+		"keywords": [
+			"Charge",
+			"Detachment",
+			"Heavy Weapon Team",
+			"Impervious",
+			"Scale",
+			"Scout",
+			"Sharpshooter",
+			"Tactical"
+		],
+		"upgradeBar": ["heavy weapon", "training", "gear", "gear", "grenades","comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"ym": {
+		"id": "ym",
+		"cardName": "Saber-Class Tank",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["hit"],
+		"speed": 2,
+		"wounds": 9,
+		"resiliency": 6,
+		"cardSubtype": "repulsor vehicle",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 155,
+		"faction": "republic",
+		"imageName": "Saber-Class Tank.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor",
+			"Arsenal",
+			"Hover: Ground",
+			"Outmaneuver",
+			"Weak Point: Rear, Sides"
+		],
+		"upgradeBar": ["pilot", "hardpoint", "ordnance","ordnance","comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yn": {
+		"id": "yn",
+		"cardName": "LAAT/le Patrol Transport",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["block"],
+		"speed": 2,
+		"wounds": 8,
+		"resiliency": 6,
+		"cardSubtype": "repulsor vehicle",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 100,
+		"faction": "republic",
+		"imageName": "LAAT-LE_Patrol_Transport.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor",
+			"Arsenal",
+			"Hover: Air",
+			"Immune",
+			"Transport",
+			"Fixed: Front", "Impact"
+		],
+		"upgradeBar": ["pilot", "ordnance", "ordnance", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yo": {
+		"id": "yo",
+		"cardName": "Raddaugh Gnasp Fluttercraft",
+		"displayName": "Raddaugh Gnasp Attack Craft",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit","block"],
+		"speed": 2,
+		"wounds": 6,
+		"resiliency": 3,
+		"cardSubtype": "repulsor vehicle",
+		"isUnique": false,
+		"rank": "support",
+		"cost": 57,
+		"faction": "republic",
+		"imageName": "Raddaugh_Gnasp_Attack_Craft.png",
+		"newUrl":true,
+		"specialIssue":"Wookiee Defenders",
+		"keywords": [
+			"Attack Run",
+			"Cover",
+			"Immune",
+			"Reposition",
+			"Speeder",
+			"Special Issue: Wookiee Defenders"
+		],
+		"upgradeBar": ["pilot", "ordnance", "ordnance", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yp": {
+		"id": "yp",
+		"cardName": "AT-RT",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit"],
+		"speed": 2,
+		"wounds": 6,
+		"resiliency": 4,
+		"cardSubtype": "ground vehicle",
+		"isUnique": false,
+		"rank": "support",
+		"cost": 60,
+		"faction": "republic",
+		"imageName": "AT-RT.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor",
+			"Climbing Vehicle",
+			"Expert Climber",
+			"Scout",
+			"Impact",
+			"Critical"
+		],
+		"upgradeBar": ["hardpoint", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+
+	"yq": {
+		"id": "yq",
+		"cardName": "T-Series Tactical Droid",
+		"title": "Programmed for Strategy",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["block"],
+		"speed": 2,
+		"wounds": 4,
+		"courage": 2,
+		"cardSubtype": "droid trooper",
+		"isUnique": false,
+		"rank": "commander",
+		"cost": 60,
+		"faction": "separatists",
+		"imageName": "Tactical_Droid.png",
+		"newUrl":true,
+		"keywords": [
+			"Bolster",
+			"Direct",
+			"Exemplar",
+		],
+		"upgradeBar": ["command", "gear", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yr": {
+		"id": "yr",
+		"cardName": "Super Tactical Droid",
+		"displayName": "Super Tactical Droid",
+		"title":"Commanding Controller",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["crit"],
+		"speed": 2,
+		"wounds": 5,
+		"courage": 2,
+		"cardSubtype": "droid trooper",
+		"isUnique": true,
+		"rank": "commander",
+		"cost": 75,
+		"faction": "separatists",
+		"imageName": "Super_Tactical_Droid.png",
+		"newUrl":true,
+		"keywords": [
+			"Strategize",
+			"Direct",
+			"Exemplar",
+			"Override",
+			"Sharpshooter",
+			"Lethal"
+		],
+		"upgradeBar": ["command", "command", "gear", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"ys": {
+		"id": "ys",
+		"cardName": "Super Tactical Droid",
+		"displayName": "Kalani",
+		"title":"Kalani",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["hit"],
+		"speed": 2,
+		"wounds": 5,
+		"courage": 2,
+		"cardSubtype": "droid trooper",
+		"isUnique": true,
+		"rank": "commander",
+		"cost": 85,
+		"faction": "separatists",
+		"imageName": "Kalani.png",
+		"newUrl":true,
+		"keywords": [
+			"Strategize",
+			"Direct",
+			"Exemplar",
+			"Reinforcements",
+			"Sharpshooter",
+			"Lethal"
+		],
+		"upgradeBar": ["command", "command", "gear", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yt": {
+		"id": "yt",
+		"cardName": "Super Tactical Droid",
+		"displayName": "Kraken",
+		"title":"Kraken",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["crit"],
+		"speed": 2,
+		"wounds": 5,
+		"courage": 2,
+		"cardSubtype": "droid trooper",
+		"isUnique": true,
+		"rank": "commander",
+		"cost": 80,
+		"faction": "separatists",
+		"imageName": "Kraken.png",
+		"newUrl":true,
+		"keywords": [
+			"Strategize",
+			"Charge",
+			"Exemplar",
+			"Override",
+			"Sharpshooter",
+			"Lethal"
+		],
+		"upgradeBar": ["command", "command", "training", "gear", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yu": {
+		"id": "yu",
+		"cardName": "Poggle the Lesser",
+		"title": "Public Leader of the Geonosians",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["hit"],
+		"speed": 1,
+		"wounds": 4,
+		"courage": 3,
+		"cardSubtype": "trooper",
+		"isUnique": true,
+		"rank": "commander",
+		"cost": 80,
+		"faction": "separatists",
+		"imageName": "Poggle_the_Lesser.png",
+		"newUrl":true,
+		"keywords": [
+			"Jump",
+			"Compel",
+			"Entourage",
+			"Override",
+			"Weighed Down"
+		],
+		"upgradeBar": ["command", "command", "gear", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yv": {
+		"id": "yv",
+		"cardName": "Count Dooku",
+		"title": "Darth Tyranus",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["crit", "block"],
+		"speed": 2,
+		"wounds": 6,
+		"courage": 3,
+		"cardSubtype": "trooper",
+		"isUnique": true,
+		"rank": "commander",
+		"cost": 165,
+		"faction": "separatists",
+		"imageName": "Count_Dooku.png",
+		"newUrl":true,
+		"keywords": [
+			"Cunning",
+			"Deflect",
+			"Direct",
+			"Immune",
+			"Makashi Mastery",
+			"Master of the Force"
+		],
+		"upgradeBar": ["force", "force", "force", "command"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yw": {
+		"id": "yw",
+		"cardName": "General Grievous",
+		"title": "Sinister Cyborg",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": [],
+		"speed": 2,
+		"wounds": 8,
+		"courage": 2,
+		"cardSubtype": "trooper",
+		"isUnique": true,
+		"rank": "commander",
+		"cost": 130,
+		"faction": "separatists",
+		"imageName": "Gregg.png",
+		"newUrl":true,
+		"keywords": [
+			"Block",
+			"Entourage",
+			"Immune",
+			"Jedi Hunter",
+			"Relentless",
+			"Scale",
+			"Critical", "Impact", "Pierce", "Versatile"
+		],
+		"upgradeBar": ["command", "command", "training", "gear"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yx": {
+		"id": "yx",
+		"cardName": "B1 Battle Droids",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": [],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 1,
+		"cardSubtype": "droid trooper",
+		"isUnique": false,
+		"rank": "corps",
+		"cost": 38,
+		"faction": "separatists",
+		"imageName": "B1_Battle_Droids.png",
+		"newUrl":true,
+		"keywords": [
+			"AI: Attack",
+			"Coordinate: Droid Trooper"
+		],
+		"upgradeBar": ["heavy weapon", "personnel", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yy": {
+		"id": "yy",
+		"cardName": "B2 Super Battle Droids",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": [],
+		"speed": 2,
+		"wounds": 2,
+		"courage": 2,
+		"cardSubtype": "droid trooper",
+		"isUnique": false,
+		"rank": "corps",
+		"cost": 64,
+		"faction": "separatists",
+		"imageName": "B2_Battle_Droids.png",
+		"newUrl":true,
+		"keywords": [
+			"AI: Attack",
+			"Impact"
+		],
+		"upgradeBar": ["heavy weapon", "personnel", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"yz": {
+		"id": "yz",
+		"cardName": "BX-Series Droid Commandos",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["hit"],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 2,
+		"cardSubtype": "droid trooper",
+		"isUnique": false,
+		"rank": "special",
+		"cost": 64,
+		"faction": "separatists",
+		"imageName": "Droid_Commandos.png",
+		"newUrl":true,
+		"keywords": [
+			"Jump",
+			"AI: Dodge, Move",
+			"Impervious",
+			"Scale",
+			"Scout 3",
+			"Sharpshooter 1"
+		],
+		"upgradeBar": ["heavy weapon", "training", "grenades", "armamment", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"za": {
+		"id": "za",
+		"cardName": "BX-Series Droid Commandos",
+		"title":"Strike Team",
+		"displayName": "BX Droid Strike Team",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["hit"],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 2,
+		"cardSubtype": "droid trooper",
+		"isUnique": false,
+		"rank": "special",
+		"cost": 20,
+		"faction": "separatists",
+		"imageName": "Droid_Commandos_Strike_Team.png",
+		"newUrl":true,
+		"keywords": [
+			"Jump",
+			"AI: Dodge, Move",
+			"Detachment: BX-Series Droid Commandos",
+			"Heavy Weapon Team",
+			"Impervious",
+			"Scale",
+			"Scout 3",
+			"Sharpshooter 1"
+		],
+		"upgradeBar": ["heavy weapon", "training", "grenades", "armamment", "comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"zb": {
+		"id": "zb",
+		"cardName": "IG-100 MagnaGuard",
+		"title":"Prototype Assassin Droids",
+		"displayName": "IG-100 MagnaGuard Prototype",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": [],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 1,
+		"cardSubtype": "droid trooper",
+		"isUnique": false,
+		"rank": "special",
+		"cost": 56,
+		"faction": "separatists",
+		"imageName": "MagnaGuard_Prototype.png",
+		"newUrl":true,
+		"keywords": [
+			"AI: Dodge, Move",
+			"Charge",
+			"Immune: Melee Pierce",
+			"Special Issue: Experimental Droids",
+			"Unhindered",
+		],
+		"specialIssue":"Experimental Droids",
+		"upgradeBar": ["heavy weapon", "training", "grenades"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"zc": {
+		"id": "zc",
+		"cardName": "AAT Battle Tank",
+		"cardType": "unit",
+		"defense": "red",
+		"surges": ["hit"],
+		"speed": 1,
+		"wounds": 9,
+		"resilience": 6,
+		"cardSubtype": "repulsor vehicle",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 165,
+		"faction": "separatists",
+		"imageName": "AAT.png",
+		"newUrl":true,
+		"keywords": [
+			"AI: Attack",
+			"Armor: 5",
+			"Arsenal: 2",
+			"Barrage",
+			"Hover: Ground",
+			"Weak Point: Rear",
+			"Fixed: Front", "Critical", "High Velocity", "Impact"
+		],
+		"upgradeBar": ["pilot","ordnance","ordnance","comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"zd": {
+		"id": "zd",
+		"cardName": "Persuader-Class Tank Droid",
+		"title": "Prototype Tank Droid",
+		"displayName":"Persuader Tank Prototype",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["block"],
+		"speed": 1,
+		"wounds": 11,
+		"resilience": 7,
+		"cardSubtype": "ground vehicle",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 130,
+		"faction": "separatists",
+		"imageName": "Persuader_Prototype.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor: 5",
+			"Arsenal 3",
+			"Direct: Corps Trooper Unit",
+			"Programmed",
+			"Reposition",
+			"Special Issue: Experimental Droids",
+			"Weak Point 1: Sides",
+
+			"Fixed: Front", "Impact", "Ion", "Critical"
+		],
+		"specialIssue":"Experimental Droids",
+		"upgradeBar": ["pilot","ordnance","ordnance","comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"ze": {
+		"id": "ze",
+		"cardName": "Persuader-Class Tank Droid",
+		"displayName":"Persuader Tank",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit", "block"],
+		"speed": 1,
+		"wounds": 11,
+		"resilience": 7,
+		"cardSubtype": "ground vehicle",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 130,
+		"faction": "separatists",
+		"imageName": "Persuader.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor: 5",
+			"Arsenal 2",
+			"Programmed",
+			"Reposition",
+			"Transport",
+			"Weak Point 1: Sides",
+
+			"Fixed: Front", "Impact", "Ion", "Critical"
+		],
+		"upgradeBar": ["pilot","ordnance","ordnance","comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"acq": {
+		"id": "acq",
+		"cardName": "Persuader-Class Tank Droid",
+		"displayName":"Persuader Tank",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["hit", "block"],
+		"speed": 1,
+		"wounds": 11,
+		"resilience": 7,
+		"cardSubtype": "ground vehicle",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 130,
+		"faction": "separatists",
+		"imageName": "Persuader.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor: 5",
+			"Arsenal 2",
+			"Programmed",
+			"Reposition",
+			"Transport",
+			"Weak Point 1: Sides",
+
+			"Fixed: Front", "Impact", "Ion", "Critical"
+		],
+		"upgradeBar": ["pilot","ordnance","ordnance","comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+
+	"zf": {
+		"id": "zf",
+		"cardName": "Chewbacca",
+		"displayName":"Chewbacca (AT-ST)",
+		"title":"Let the Wookiee Win",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["crit", "block"],
+		"speed": 2,
+		"wounds": 11,
+		"resilience": 8,
+		"cardSubtype": "ground vehicle",
+		"isUnique": true,
+		"rank": "heavy",
+		"cost": 180,
+		"faction": "mercenary",
+		"affiliation":[],
+		"imageName": "Chewbacca_AT-ST.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor: 5",
+			"Arsenal 2",
+			"Inspire 3",
+			"Incognito",
+			"Weak Point 1: Rear",
+
+			"Fixed: Front", "Blast", "Impact"
+		],
+		"upgradeBar": [],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"zg": {
+		"id": "zg",
+		"cardName": "Ewok Slingers",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": [],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 1,
+		"cardSubtype": "trooper",
+		"isUnique": false,
+		"rank": "special",
+		"cost": 35,
+		"faction": "mercenary",
+		"affiliation":["rebels"],
+		"imageName": "Ewok_Slingers.png",
+		"newUrl":true,
+		"keywords": [
+			"Mercenary: Rebels",
+			"Independent: Surge 1",
+			"Low Profile",
+			"Target 1",
+			"Unhindered",
+
+			"Primitive"
+		],
+		"upgradeBar": ["heavy weapon", "personnel", "personnel", "training"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"zh": {
+		"id": "zh",
+		"cardName": "Ewok Skirmishers",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": [],
+		"speed": 2,
+		"wounds": 1,
+		"courage": 1,
+		"cardSubtype": "trooper",
+		"isUnique": false,
+		"rank": "corps",
+		"cost": 40,
+		"faction": "mercenary",
+		"affiliation":["rebels"],
+		"imageName": "Ewok_Skirmishers.png",
+		"newUrl":true,
+		"keywords": [
+			"Mercenary: Rebels",
+			"Low Profile",
+			"Unhindered",
+		],
+		"upgradeBar": ["heavy weapon", "personnel", "personnel", "training"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"zi": {
+		"id": "zi",
+		"cardName": "A-A5 Speeder Truck",
+		"cardType": "unit",
+		"defense": "white",
+		"surges": ["block"],
+		"speed": 1,
+		"wounds": 8,
+		"resilience": 6,
+		"cardSubtype": "repulsor vehicle",
+		"isUnique": false,
+		"rank": "heavy",
+		"cost": 65,
+		"faction": "mercenary",
+		"affiliation":[],
+		"imageName": "A-A5_Speeder_Truck_Raider.png",
+		"newUrl":true,
+		"keywords": [
+			"Armor 5",
+			"Hover: Ground",
+			"Reposition",
+			"Transport",
+			"Weak Point 2: Rear"
+		],
+		"upgradeBar": ["pilot","crew","crew","hardpoint","comms"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+
+	"zj": {
+		"id": "zj",
+		"cardName": "Lead From the Front",
+		"cardSubtype": "2",
+		"cardType": "command",
+		"commander": "",
+		"imageName": "501st_1.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "republic",
+		"battleForce": "501st Legion",
+		"keywords": []
+	},
+	"zk": {
+		"id": "zk",
+		"cardName": "Tactical Planning",
+		"cardSubtype": "2",
+		"cardType": "command",
+		"commander": "",
+		"imageName": "501st_2.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "republic",
+		"battleForce": "501st Legion",
+		"keywords": []
+	},
+	"zl": {
+		"id": "zl",
+		"cardName": "Leaders of the 501st",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "",
+		"imageName": "501st_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "republic",
+		"battleForce": "501st Legion",
+		"keywords": []
+	},
+	"zm": {
+		"id": "zm",
+		"cardName": "I Am No Jedi",
+		"cardSubtype": "1",
+		"cardType": "command",
+		"commander": "Ahsoka Tano",
+		"imageName": "Ahsoka_1.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "rebels",
+		"keywords": ["Agile"]
+	},
+	"zn": {
+		"id": "zn",
+		"cardName": "Family Reunion",
+		"cardSubtype": "2",
+		"cardType": "command",
+		"commander": "Ahsoka Tano",
+		"imageName": "Ahsoka_2.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "rebels",
+		"keywords": ["Teamwork"]
+	},
+	"zo": {
+		"id": "zo",
+		"cardName": "A New Beginning",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "Ahsoka Tano",
+		"imageName": "Ahsoka_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "rebels",
+		"keywords": ["Guardian"]
+	},
+
+	"zp": {
+		"id": "zp",
+		"cardName": "This is Where the Fun Begins",
+		"cardSubtype": "1",
+		"cardType": "command",
+		"commander": "Anakin Skywalker",
+		"imageName": "Anakin_1.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "republic",
+		"keywords": ["Jump", "Divulge"]
+	},
+	"zq": {
+		"id": "zq",
+		"cardName": "You Underestimate My Power",
+		"cardSubtype": "2",
+		"cardType": "command",
+		"commander": "Anakin Skywalker",
+		"imageName": "Anakin_2.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "republic",
+		"keywords": []
+	},
+	"zr": {
+		"id": "zr",
+		"cardName": "General Skywalker",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "Anakin Skywalker",
+		"imageName": "Anakin_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "republic",
+		"keywords": ["Inspire"]
+	},
+	"zs": {
+		"id": "zs",
+		"cardName": "Call Me Captain",
+		"cardSubtype": "1",
+		"cardType": "command",
+		"commander": "Clone Captain Rex",
+		"imageName": "Rex_1.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "republic",
+		"keywords": []
+	},
+	"zt": {
+		"id": "zt",
+		"cardName": "Size Matters Sometimes",
+		"cardSubtype": "2",
+		"cardType": "command",
+		"commander": "Chewbacca",
+		"imageName": "Chewbacca_2.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "republic",
+		"keywords": ["Deflect","Guardian"]
+	},
+	"zu": {
+		"id": "zu",
+		"cardName": "Diplomatic Cover",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "Padme Amidala",
+		"imageName": "Padme_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "republic",
+		"keywords": ["Secret Mission", "Inspire", "Divulge", "Infiltrate"]
+	},
+	"zv": {
+		"id": "zv",
+		"cardName": "Do Not Underestimate Our Means",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "Super Tactical Droid",
+		"imageName": "Super_Tactical_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "separatists",
+		"keywords": ["Divulge", "Reinforcements", "AI"]
+	},
+	"zw": {
+		"id": "zw",
+		"cardName": "Yes, My Master",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "Asajj Ventress",
+		"imageName": "Asajj_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "separatists",
+		"keywords": ["Divulge", "Bounty", "Reinforcements", "Demoralize", "Makashi Mastery", "Outmaneuver"]
+	},
+	"zx": {
+		"id": "zx",
+		"cardName": "The Phantom Menace",
+		"cardSubtype": "2",
+		"cardType": "command",
+		"commander": "Maul",
+		"imageName": "Maul_2_1.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "",
+		"keywords": ["Divulge", "Infiltrate"]
+	},
+	"zy": {
+		"id": "zy",
+		"cardName": "I Make the Rules Now",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "Cad Bane",
+		"imageName": "Cad_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "separatists",
+		"keywords": ["Divulge", "Bane Token"]
+	},
+	"zz": {
+		"id": "zz",
+		"cardName": "Let the Executions Begin!",
+		"cardSubtype": "1",
+		"cardType": "command",
+		"commander": "Poggle the Lesser",
+		"imageName": "Poggle_1.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "separatists",
+		"keywords": []
+	},
+	"aaa": {
+		"id": "aaa",
+		"cardName": "Supreme Commander",
+		"cardSubtype": "2",
+		"cardType": "command",
+		"commander": "General Grievous",
+		"imageName": "Gregg_2.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "separatists",
+		"keywords": []
+	},
+	"aab": {
+		"id": "aab",
+		"cardName": "Reckless Diversion",
+		"cardSubtype": "2",
+		"cardType": "command",
+		"commander": "Han Solo",
+		"imageName": "Han_Solo_2.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "rebels",
+		"keywords": []
+	},
+	"aac": {
+		"id": "aac",
+		"cardName": "Hold at Any Cost",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "",
+		"battleForce": "Echo Base Defenders",
+		"imageName": "Echo_Base_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "rebels",
+		"keywords": []
+	},
+	"aad": {
+		"id": "aad",
+		"cardName": "Fear and Dead Men",
+		"cardSubtype": "2",
+		"cardType": "command",
+		"commander": "Darth Vader",
+		"imageName": "Darth_Vader_2.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": []
+	},
+	"aae": {
+		"id": "aae",
+		"cardName": "Darkness Descends",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "Darth Vader",
+		"imageName": "Darth_Vader_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": []
+	},
+	"aaf": {
+		"id": "aaf",
+		"cardName": "Annihilation Looms",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "Director Orson Krennic",
+		"imageName": "Krennic_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": []
+	},
+	"aag": {
+		"id": "aag",
+		"cardName": "Moment of Consideration",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "Moff Gideon",
+		"imageName": "Gideon_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": []
+	},
+	"aah": {
+		"id": "aah",
+		"cardName": "Unrelenting Fire",
+		"cardSubtype": "1",
+		"cardType": "command",
+		"commander": "",
+		"battleForce":"Blizzard Force",
+		"imageName": "Blizzard_1.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": []
+	},
+	"aai": {
+		"id": "aai",
+		"cardName": "Overwhelming Barrage",
+		"cardSubtype": "2",
+		"cardType": "command",
+		"commander": "",
+		"battleForce":"Blizzard Force",
+		"imageName": "Blizzard_2.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": []
+	},
+	"aaj": {
+		"id": "aaj",
+		"cardName": "Debark for Ground Assault",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "",
+		"battleForce":"Blizzard Force",
+		"imageName": "Blizzard_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": ["Spur","Suppressive"]
+	},
+	"aak": {
+		"id": "aak",
+		"cardName": "Drive Them Out",
+		"cardSubtype": "1",
+		"cardType": "command",
+		"commander": "",
+		"battleForce":"Tempest Force",
+		"imageName": "Tempest_1.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": ["Demoralize"]
+	},
+	"aal": {
+		"id": "aal",
+		"cardName": "We Need Reinforcements",
+		"cardSubtype": "2",
+		"cardType": "command",
+		"commander": "",
+		"battleForce":"Tempest Force",
+		"imageName": "Tempest_2.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": ["Disengage"]
+	},
+	"aam": {
+		"id": "aam",
+		"cardName": "Constantly Alert",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "",
+		"battleForce":"Tempest Force",
+		"imageName": "Tempest_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": ["Demoralize"]
+	},
+	"aan": {
+		"id": "aan",
+		"cardName": "Gunner, Infantry!",
+		"cardSubtype": "1",
+		"cardType": "command",
+		"commander": "Major Marquand",
+		"imageName": "Marquand_1.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": ["Tactical", "Suppressive"]
+	},
+	"aao": {
+		"id": "aao",
+		"cardName": "Squadron, on me",
+		"cardSubtype": "2",
+		"cardType": "command",
+		"commander": "Major Marquand",
+		"imageName": "Marquand_2.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": []
+	},
+	"aap": {
+		"id": "aap",
+		"cardName": "Armored Cavalry",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "Major Marquand",
+		"imageName": "Marquand_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": []
+	},
+	"aaq": {
+		"id": "aaq",
+		"cardName": "I Care Not for Your Struggles",
+		"cardSubtype": "3",
+		"cardType": "command",
+		"commander": "Fifth Brother",
+		"imageName": "Brother_3.png",
+		"newUrl":true,
+		"products": [],
+		"faction": "empire",
+		"keywords": []
+	},
+
+	"aar": {
+		"id": "aar",
+		"cardSubtype": "pilot",
+		"cardName": "327th Star Corps Pilot",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 8,
+		"imageName": "327th_Star_Corps_Pilot.png",
+		"newUrl":true,
+		"keywords": [],
+		"requirements": [{"cardName":"Infantry Support Platform"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"aas": {
+		"id": "aas",
+		"cardSubtype": "hardpoint",
+		"cardName": "AT-RT Flamethrower",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 15,
+		"imageName": "AT-RT_Flamethrower.png",
+		"keywords": [],
+		"requirements": [{"cardName":"AT-RT"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"aat": {
+		"id": "aat",
+		"cardSubtype": "personnel",
+		"cardName": "B1 Battle Droid Squad",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 38,
+		"imageName": "B1_Battle_Droid_Squad.png",
+		"newUrl":true,
+		"keywords": ["Indomitable","Transport"],
+		"requirements": [{"cardName":"B1 Battle Droids"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"aau": {
+		"id": "aau",
+		"cardName": "B2 Super Battle Droid Squad",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 77,
+		"imageName": "B2_Super_Battle_Droid_Squad.png",
+		"newUrl":true,
+		"keywords": ["Indomitable","Transport"],
+		"requirements": [{"cardName":"B2 Super Battle Droids"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"aav": {
+		"id": "aav",
+		"cardName": "Backworld Medic",
+		"cardSubtype": "crew",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 12,
+		"imageName": "Backworld_Medic.png",
+		"newUrl":true,
+		"keywords": ["Restore"],
+		"requirements": [{"cardName":"A-A5 Speeder Truck"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"aaw": {
+		"id": "aaw",
+		"cardName": "BARC Ion Gunner",
+		"cardSubtype": "crew",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 28,
+		"imageName": "BARC_Ion_Gunner.png",
+		"newUrl":true,
+		"keywords": ["Critical","Fixed: Front, Rear", "Impact","Ion"],
+		"requirements": [{"cardName":""}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+
+	"aax": {
+		"id": "aax",
+		"cardName": "Bistan",
+		"cardSubtype": "heavy weapon",
+		"isUnique": true,
+		"cardType": "upgrade",
+		"cost": 33,
+		"imageName": "Bistan.png",
+		"newUrl":true,
+		"keywords": ["Critical","Impact","Ion"],
+		"requirements": [{"cardName":"Rebel Pathfinders"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"aay": {
+		"id": "aay",
+		"cardName": "Boil",
+		"cardSubtype": "leader",
+		"isUnique": true,
+		"cardType": "upgrade",
+		"cost": 20,
+		"imageName": "Boil.png",
+		"newUrl":true,
+		"keywords": ["Leader","Guardian","Scout"],
+		"requirements": [
+			"AND",
+			{ "cardSubtype": "clone trooper" },
+			{ "rank": "corps" }
+		],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"aaz": {
+		"id": "aaz",
+		"cardName": "Clone Captain",
+		"cardSubtype": "leader",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 22,
+		"imageName": "Clone_Captain.png",
+		"newUrl":true,
+		"keywords": ["Leader","Outmaneuver","Defend 1"],
+		"requirements": [{"cardSubtype":"clone trooper"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"aba": {
+		"id": "aba",
+		"cardName": "Clone Commander",
+		"cardSubtype": "leader",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 22,
+		"imageName": "Clone_Commander.png",
+		"newUrl":true,
+		"keywords": ["Leader","Inspire 1","Reliable 1"],
+		"requirements": [{"cardSubtype":"clone trooper"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abb": {
+		"id": "abb",
+		"cardName": "Clone Commander Fox",
+		"cardSubtype": "pilot",
+		"isUnique": true,
+		"cardType": "upgrade",
+		"cost": 10,
+		"imageName": "Clone_Commander_Fox.png",
+		"newUrl":true,
+		"keywords": ["Field Commander"],
+		"requirements": ["AND",{"cardName":"LAAT/le Patrol Transport"},{"faction":"republic"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abc": {
+		"id": "abc",
+		"cardName": "Clone Comms Technician",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 30,
+		"imageName": "Clone_Comms_Technician.png",
+		"newUrl":true,
+		"keywords": ["Fire Support"],
+		"requirements": ["AND",{"cardSubtype":"clone trooper"},{"rank":"corps"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abd": {
+		"id": "abd",
+		"cardName": "Clone Engineer",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 17,
+		"imageName": "Clone_Engineer.png",
+		"newUrl":true,
+		"keywords": ["Repair"],
+		"requirements": ["AND",{"cardSubtype":"clone trooper"},{"rank":"corps"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abe": {
+		"id": "abe",
+		"cardName": "Clone Medic",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 17,
+		"imageName": "Clone_Medic.png",
+		"newUrl":true,
+		"keywords": ["Treat"],
+		"requirements": ["AND",{"cardSubtype":"clone trooper"},{"rank":"corps"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abf": {
+		"id": "abf",
+		"cardName": "Clone Shock Trooper Pilot",
+		"cardSubtype": "pilot",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 4,
+		"imageName": "Clone_Shock_Trooper_Pilot.png",
+		"newUrl":true,
+		"keywords": [],
+		"requirements": ["AND",{"cardName":"LAAT/le Patrol Transport"},{"faction":"republic"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abg": {
+		"id": "abg",
+		"cardName": "Clone Specialist",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 17,
+		"imageName": "Clone_Specialist.png",
+		"newUrl":true,
+		"keywords": [],
+		"requirements": ["AND",{"cardSubtype":"clone trooper"},{"rank":"corps"}],
+		"additionalUpgradeSlots": ["gear"],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abh": {
+		"id": "abh",
+		"cardName": "Clone Trooper Infantry Squad",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 56,
+		"imageName": "Clone_Trooper_Infantry_Squad.png",
+		"newUrl":true,
+		"keywords": ["Indomitable","Transport"],
+		"requirements": [{"cardName":"Clone Trooper Infantry"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abi": {
+		"id": "abi",
+		"cardName": "CR-24 Flame Rifle",
+		"cardSubtype": "armament",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 10,
+		"imageName": "CR-24_Flame_Rifle.png",
+		"newUrl":true,
+		"keywords": ["Blast","Spray"],
+		"requirements": [{"cardName":"Dewback Rider"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abj": {
+		"id": "abj",
+		"cardName": "Dioxis Mine Saboteur",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 28,
+		"imageName": "Dioxis_Mine_Saboteur.png",
+		"newUrl":true,
+		"keywords": ["Blast","Poison"],
+		"requirements": [{"cardName":"BX-Series Droid Commandos"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abk": {
+		"id": "abk",
+		"cardName": "DP-23 Clone Trooper",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 22,
+		"imageName": "DP-23_Clone_Trooper.png",
+		"newUrl":true,
+		"keywords": ["Pierce"],
+		"requirements": [{"cardName":"Clone Trooper Infantry"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abl": {
+		"id": "abl",
+		"cardName": "E-60R B1 Trooper",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 18,
+		"imageName": "E-60R_B1_Trooper.png",
+		"newUrl":true,
+		"keywords": ["Cumbersome","Impact"],
+		"requirements": [{"cardName":"B1 Battle Droids"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abm": {
+		"id": "abm",
+		"cardName": "Echo",
+		"title":"ARC Marksman",
+		"cardSubtype": "heavy weapon",
+		"isUnique": true,
+		"cardType": "upgrade",
+		"cost": 52,
+		"imageName": "Echo_ARC_Marksman.png",
+		"newUrl":true,
+		"keywords": ["Leader"],
+		"requirements": [{"cardSubtype":"clone trooper"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abn": {
+		"id": "abn",
+		"cardName": "Ewok Skirmisher Squad",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 28,
+		"imageName": "Ewok_Skirmisher_Squad.png",
+		"newUrl":true,
+		"keywords": ["Indomitable","Transport"],
+		"requirements": [{"cardName":"Ewok Skirmishers"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abo": {
+		"id": "abo",
+		"cardName": "Ewok Slinger Squad",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 23,
+		"imageName": "Ewok_Slinger_Squad.png",
+		"newUrl":true,
+		"keywords": ["Indomitable","Transport"],
+		"requirements": [{"cardName":"Ewok Slingers"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abp": {
+		"id": "abp",
+		"cardName": "Fives",
+		"cardSubtype": "leader",
+		"isUnique": true,
+		"cardType": "upgrade",
+		"cost": 40,
+		"imageName": "Fives.png",
+		"newUrl":true,
+		"keywords": ["Leader", "Charge","Coordinate"],
+		"requirements": [{"cardSubtype":"clone trooper"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abq": {
+		"id": "abq",
+		"cardName": "Flametrooper",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 20,
+		"imageName": "Flametrooper.png",
+		"newUrl":true,
+		"keywords": ["Blast","Spray"],
+		"requirements": [{"cardName":"Snowtroopers"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abr": {
+		"id": "abr",
+		"cardName": "Fleet Trooper Squad",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 45,
+		"imageName": "Fleet_Trooper_Squad.png",
+		"newUrl":true,
+		"keywords": ["Indomitable","Transport"],
+		"requirements": [{"cardName":"Fleet Troopers"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abs": {
+		"id": "abs",
+		"cardName": "Geonosian Warrior Squad",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 51,
+		"imageName": "Geonosian_Warrior_Squad.png",
+		"newUrl":true,
+		"keywords": ["Indomitable","Transport"],
+		"requirements": [{"cardName":"Geonosian Warriors"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abt": {
+		"id": "abt",
+		"cardName": "Governor Pryce",
+		"cardSubtype": "pilot",
+		"isUnique": true,
+		"cardType": "upgrade",
+		"cost": 5,
+		"imageName": "Governor_Pryce.png",
+		"newUrl":true,
+		"keywords": ["Field Commander"],
+		"requirements": ["AND",{"faction":"empire"},{"rank":"heavy"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abu": {
+		"id": "abu",
+		"cardName": "HH-12 Stormtrooper",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 22,
+		"imageName": "HH-12_Stormtrooper.png",
+		"newUrl":true,
+		"keywords": ["Cumbersome","Impact"],
+		"requirements": [{"cardName":"Stormtroopers"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abv": {
+		"id": "abv",
+		"cardName": "Impact Grenades",
+		"cardSubtype": "grenades",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 3,
+		"imageName": "Impact_Grenades.png",
+		"newUrl":true,
+		"keywords": ["Impact"],
+		"requirements": [],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abw": {
+		"id": "abw",
+		"cardName": "M-45 Ion Blaster",
+		"cardSubtype": "hardpoint",
+		"isUnique": false,
+		"cost": 28,
+		"imageName": "M-45_Ion_Blaster.png",
+		"newUrl":true,
+		"keywords": ["Critical","Fixed: Front","Impact","Ion"],
+		"requirements": [{"cardName":"X-34 Landspeeder"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abx": {
+		"id": "abx",
+		"cardName": "Mortar Clone Trooper",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cost": 20,
+		"imageName": "Mortar_Clone_Trooper.png",
+		"newUrl":true,
+		"keywords": ["Critical","Suppressive","Cumbersome"],
+		"requirements": ["OR",{"cardName":"Clone Trooper Infantry"},{"cardName":"Clone Marksmen"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"aby": {
+		"id": "aby",
+		"cardName": "MPL-57 Ion Trooper",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cost": 27,
+		"imageName": "MPL-57_Ion_Trooper.png",
+		"newUrl":true,
+		"keywords": ["Critical","Impact","Ion"],
+		"requirements": [{"cardName":"Rebel Troopers"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"abz": {
+		"id": "abz",
+		"cardName": "MPL-57 Barrage Trooper",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cost": 22,
+		"imageName": "MPL-57_Barrage_Trooper.png",
+		"newUrl":true,
+		"keywords": ["Blast","Impact"],
+		"requirements": [{"cardName":"Fleet Troopers"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"aca": {
+		"id": "aca",
+		"cardName": "Nose-Mounted Flamethrower",
+		"displayName":"Flamethrower",
+		"cardSubtype": "hardpoint",
+		"isUnique": false,
+		"cost": 15,
+		"imageName": "Nose-Mounted_Flamethrower.png",
+		"newUrl":true,
+		"keywords": ["Blast","Fixed: Front", "Spray"],
+		"requirements": [{"cardName":"DSD1 Dwarf Spider"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"acb": {
+		"id": "acb",
+		"cardName": "Nose-Mounted Ion Blaster",
+		"displayName":"Ion Blaster",
+		"cardSubtype": "hardpoint",
+		"isUnique": false,
+		"cost": 30,
+		"imageName": "Nose-Mounted_Ion_Blaster.png",
+		"newUrl":true,
+		"keywords": ["Critical","Fixed: Front", "Impact", "Ion"],
+		"requirements": [{"cardName":"DSD1 Dwarf Spider"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"acc": {
+		"id": "acc",
+		"cardName": "Onboard Comms Channel",
+		"cardSubtype": "comms",
+		"isUnique": false,
+		"cost": 10,
+		"imageName": "Onboard_Comms_Channel.png",
+		"newUrl":true,
+		"keywords": ["Coordinate: Trooper"],
+		"requirements": ["OR",{"cardSubtype":"ground vehicle"},{"cardSubtype":"repulsor vehicle"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"acd": {
+		"id": "acd",
+		"cardName": "Proton Charge Saboteur",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cost": 20,
+		"imageName": "Proton_Charge_Saboteur.png",
+		"newUrl":true,
+		"keywords": ["Blast","Critical","Impact"],
+		"requirements": [{"cardName":"Rebel Commandos"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"ace": {
+		"id": "ace",
+		"cardName": "Rebel Trooper Squad",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cost": 45,
+		"imageName": "Rebel_Trooper_Squad.png",
+		"newUrl":true,
+		"keywords": ["Indomitable","Transport"],
+		"requirements": [{"cardName":"Rebel Troopers"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"acf": {
+		"id": "acf",
+		"cardName": "Rebel Veterans Squad",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cost": 63,
+		"imageName": "Rebel_Veterans_Squad.png",
+		"newUrl":true,
+		"keywords": ["Indomitable","Transport"],
+		"requirements": [{"cardName":"Rebel Veterans"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"acg": {
+		"id": "acg",
+		"cardName": "RPS-6 Clone Trooper",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cost": 23,
+		"imageName": "RPS-6_Clone_Trooper.png",
+		"newUrl":true,
+		"keywords": ["Cumbersome","Impact"],
+		"requirements": ["OR",{"cardName":"Clone Trooper Infantry"},{"cardName":"Clone Marksmen"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"ach": {
+		"isOld":true,
+		"id": "ach",
+		"cardName": "Scatter Gun Trooper",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cost": 22,
+		"imageName": "Scatter_Gun_Trooper.png",
+		"newUrl":true,
+		"keywords": ["Pierce"],
+		"requirements": [{"cardName":"Fleet Troopers"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"aci": {
+		"id": "aci",
+		"cardName": "Shoretrooper Squad",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cost": 70,
+		"imageName": "Shoretrooper_Squad.png",
+		"newUrl":true,
+		"keywords": ["Indomitable","Transport"],
+		"requirements": [{"cardName":"Shoretroopers"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"acj": {
+		"id": "acj",
+		"cardName": "Shriv Suurgav",
+		"cardSubtype": "pilot",
+		"isUnique": true,
+		"cost": 10,
+		"imageName": "Shriv_Suurgav.png",
+		"newUrl":true,
+		"keywords": ["Field Commander"],
+		"requirements": ["AND",{"faction":"rebels"},{"rank":"heavy"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"ack": {
+		"id": "ack",
+		"cardName": "Snowtrooper Squad",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cost": 46,
+		"imageName": "Snowtrooper_Squad.png",
+		"newUrl":true,
+		"keywords": ["Indomitable","Transport"],
+		"requirements": [{"cardName":"Snowtroopers"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"acl": {
+		"id": "acl",
+		"cardName": "Sonic Charge Saboteur",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cost": 23,
+		"imageName": "Sonic_Charge_Saboteur.png",
+		"newUrl":true,
+		"keywords": ["Blast","Impact","Suppressive"],
+		"requirements": [{"cardName":"Scout Troopers"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"acm": {
+		"id": "acm",
+		"cardName": "Stormtrooper Squad",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cost": 46,
+		"imageName": "Stormtrooper_Squad.png",
+		"newUrl":true,
+		"keywords": ["Indomitable","Transport"],
+		"requirements": [{"cardName":"Stormtroopers"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"acn": {
+		"id": "acn",
+		"cardName": "T-7 Ion Snowtrooper",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cost": 24,
+		"imageName": "T-7_Ion_Snowtrooper.png",
+		"newUrl": true,
+		"newUrl":true,
+		"keywords": ["Critical","Impact","Ion"],
+		"requirements": [{"cardName":"Snowtroopers"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"aco": {
+		"id": "aco",
+		"cardName": "Unorthodox Tactician",
+		"cardSubtype": "crew",
+		"isUnique": false,
+		"cost": 16,
+		"imageName": "Unorthodox_Tactician.png",
+		"newUrl": true,
+		"newUrl":true,
+		"keywords": [],
+		"requirements": [{"cardName":"A-A5 Speeder Truck"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"acp": {
+		"id": "acp",
+		"cardName": "Waxer",
+		"cardSubtype": "leader",
+		"isUnique": true,
+		"cost": 20,
+		"imageName": "Waxer.png",
+		"newUrl": true,
+		"newUrl":true,
+		"keywords": ["Leader", "Disciplined","Scout"],
+		"requirements": ["AND",{"rank":"corps"},{"cardSubtype":"clone trooper"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"acr": {
+		"id": "acr",
+		"cardName": "Z-6 Clone Trooper",
+		"cardSubtype": "heavy weapon",
+		"isUnique": false,
+		"cost": 22,
+		"imageName": "Z-6_Clone_Trooper.png",
+		"newUrl": true,
+		"keywords": [],
+		"requirements": [{"cardName":"Clone Trooper Infantry"}],
+		"cardType": "upgrade",
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+	"acs": {
+		"id": "acs",
+		"cardName": "Clone Trooper Infantry",
+		"cardSubtype": "personnel",
+		"isUnique": false,
+		"cardType": "upgrade",
+		"cost": 13,
+		"imageName": "Clone_Trooper_Infantry.png",
+		"newUrl":true,
+		"keywords": ["Indomitable","Transport"],
+		"requirements": [{"cardName":"Clone Trooper Infantry"}],
+		"history": [
+			{
+				"date": "X July 2024",
+				"description": "card_refresh"
+			}
+		]
+	},
+
+
+
+
+
+
+
+
+
 }));
 
 
-const cardIdsByType = {
-};
-
+const cardIdsByType = {};
 
 Object.keys(cards).forEach(id=>{
   const type = cards[id].cardType;
@@ -11429,6 +14881,6 @@ Object.keys(cards).forEach(id=>{
   cardIdsByType[type].push(id);
 });
 
-export {cardIdsByType as cardsIdsByType};
+export {cardIdsByType};
 export default cards;
 

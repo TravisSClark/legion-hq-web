@@ -59,7 +59,7 @@ const factions = {
       light: separatistsBlack
     }
   },
-  fringe: {
+  mercenary: {
     name: 'Shadow Collective',
     singular: 'Shadow Collective',
     longName: 'Shadow Collective',

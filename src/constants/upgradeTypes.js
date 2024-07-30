@@ -13,6 +13,7 @@ import armament from 'assets/upgradeTypes/armament.png';
 import crew from 'assets/upgradeTypes/crew.png';
 import ordnance from 'assets/upgradeTypes/ordnance.png';
 import programming from 'assets/upgradeTypes/programming.png';
+import leader from 'assets/upgradeTypes/leader.png';
 
 const upgradeTypes = {
   'heavy weapon': {
@@ -74,6 +75,10 @@ const upgradeTypes = {
   programming: {
     name: 'Programming',
     icon: programming
+  },
+  leader: {
+    name:"Leader",
+    icon: leader
   }
 };
 

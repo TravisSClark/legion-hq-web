@@ -24,11 +24,15 @@ const useStyles = makeStyles(theme => ({
 function CardImage({ id, size, handleClick }) {
   const card = cards[id];
   const classes = useStyles();
+  let url =`${urls.cdn}/${card.cardType}Cards/${card.imageName}`;
+  if(card.newUrl){
+    url = `${urls.cdn2}/${cardType}Cards/${card.imageName}`;
+  }
   return (
     <div className={classes.container}>
       <Img
         alt={card.cardName}
-        src={`${urls.cdn}/${card.cardType}Cards/${card.imageName}`}
+        src={url}
         loader={<Skeleton className={classes[card.cardType]} />}
         className={classes[card.cardType]}
         onClick={handleClick}

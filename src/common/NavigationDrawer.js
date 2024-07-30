@@ -113,11 +113,11 @@ function NavigationDrawer() {
           />
           <NavDrawerLink
             text="Shadow Collective"
-            selected={pathname === '/list/fringe' || faction === 'fringe'}
-            icon={routes['/list/fringe'].icon}
+            selected={pathname === '/list/mercenary' || faction === 'mercenary'}
+            icon={routes['/list/mercenary'].icon}
             handleClick={() => {
               setIsDrawerOpen(false);
-              goToPage('/list/fringe');
+              goToPage('/list/mercenary');
             }}
           />
         </List>

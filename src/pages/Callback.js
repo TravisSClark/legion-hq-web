@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import auth0Client from 'utility/Auth';
+import auth0Client from './utility/Auth';
 import LoadingWidget from 'common/LoadingWidget';
 
 class Callback extends React.Component {

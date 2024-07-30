@@ -31,7 +31,7 @@ function ModeButton({ currentMode, points, maxPoints, tooltip, handleChangeMode 
             handleCloseMenu();
           }}
         >
-          Standard (800 pts)
+          Standard (1000 pts)
         </MenuItem>
         <MenuItem
           selected={currentMode === 'grand army mode'}
@@ -84,7 +84,7 @@ function ModeButton({ currentMode, points, maxPoints, tooltip, handleChangeMode 
 };
 
 ModeButton.defaultProps = {
-  tooltip: 'Toggle between Skirmish (500), Standard (800), and Grand Army (1600) formats.'
+  tooltip: 'Toggle between Skirmish (500), Standard (1000), and Grand Army (1600) formats.'
 };
 
 ModeButton.propTypes = {

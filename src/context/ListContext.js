@@ -33,7 +33,8 @@ import {
   getEligibleBattlesToAdd,
   toggleUsingOldPoints, 
   validateList,
-  getRankLimits
+  getRankLimits,
+  checkBattleforceUnits
 } from 'constants/listOperations';
 import listTemplate from 'constants/listTemplate';
 
@@ -64,6 +65,7 @@ export function ListProvider({
   const [isKillPointMode, setIsKillPointMode] = useState(false);
   const [currentKillPoints, setCurrentKillPoints] = useState(0);
   const [validationIssues, setValidationIssues] = useState([]);
+  const [invalidUnits, setInvalidUnits] = useState([]);
   const [rankLimits, setRankLimits] = useState();
 
 
@@ -72,9 +74,13 @@ export function ListProvider({
     if (slug in factions) {
       if (listHash) {
         const convertedList = convertHashToList(slug, listHash);
-        if (convertedList) updateThenValidateList({ ...convertedList });
-        else updateThenValidateList(JSON.parse(JSON.stringify(storedLists[slug])));
-      } else updateThenValidateList(JSON.parse(JSON.stringify(storedLists[slug])));
+        if (convertedList) 
+          updateThenValidateList({ ...convertedList });
+        else 
+          updateThenValidateList(JSON.parse(JSON.stringify(storedLists[slug])));
+      } else { 
+          updateThenValidateList(JSON.parse(JSON.stringify(storedLists[slug])));
+      }
     }
     // route '/list/1234' fetches list 1234 from database
     else if (slug !== '' && isValidListId(slug)) {
@@ -138,6 +144,13 @@ export function ListProvider({
     setRankLimits(rankLimits);
   }
 
+  const validateBattleforceSelection = (list, battleForce) => {
+    // TODO somewhere/somehow around here we need to confirm user didn't pick units
+    // illegal for a battleforce then swap to it. Ideally, only do this if/after a bf swap.
+    // may need to re-examine how validation issues are opened/closed
+    setInvalidUnits(checkBattleforceUnits(list, battleForce));
+  }
+
   const reorderUnits = (startIndex, endIndex) => {
     function reorder(arr) {
       const result = Array.from(arr);
@@ -167,7 +180,7 @@ export function ListProvider({
   const handleClearList = () => {
     setCardPaneFilter({ action: 'DISPLAY' });
     const newList = JSON.parse(JSON.stringify(listTemplate));
-    if (currentList.faction === 'fringe') newList.battleForce = 'Shadow Collective';
+    if (currentList.faction === 'mercenary') newList.battleForce = 'Shadow Collective';
     updateThenValidateList({ ...newList, faction: currentList.faction });
   }
   const handleChangeTitle = title => setCurrentList({ ...changeListTitle(currentList, title) });
@@ -352,6 +365,7 @@ export function ListProvider({
 
   const handleSetBattleForce = (battleForce) => {
     updateThenValidateList({ ...currentList, battleForce });
+    validateBattleforceSelection(currentList, battleForce);
   }
 
   // Maybe there should be a 'units only' flag, but lists will be something like 50-100 entities max anyhow...

@@ -17,7 +17,6 @@ import {
   generateTournamentText,
   generateHTMLText
 } from 'constants/listOperations';
-import HtmlListText from './HtmlListText';
 import DialogModal from './DialogModal';
 import ClipboardButton from './ClipboardButton';
 

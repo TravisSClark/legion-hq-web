@@ -151,7 +151,7 @@ const keywords = {
 	"Suppressive": "After you perform an attack, the defender that this weapon was used against gains 1 suppression token.",
 	"Surge Token": "Spending one or more surge tokens will convert the same number of surges to blocks while defending or using using GUARDIAN, and to hits while attacking.",
 	"Tactical": "After you perform a standard move, gain X aim tokens.",
-	"Take Cover": "Choose X friendly trooper units at range 1. Each unit gains a dodge token.",
+	"Take Cover": "Choose X friendly units at range 1. Each unit gains a dodge token.",
 	"Target": "After you are issued an order, gain X aim tokens.",
 	"Teamwork": "While you are at range 1-2 of X, when you or X gains an aim or dodge token, the other unit gains a token of the same type.",
 	"Tempted": "You can equip force upgrades of any alignment.",
