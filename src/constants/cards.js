@@ -958,7 +958,6 @@ const cards = JSON.parse(JSON.stringify({
 		],
 		"cardType": "unit",
     "entourage": {"name":"Imperial Royal Guards", "type":"special"}
-    "entourage": {"name":"Imperial Royal Guards", "type":"special"}
 	},
 	"at": {
 		"cardType": "unit",
