@@ -1222,7 +1222,6 @@
         "isUnique": true,
         "rank": "operative",
         "cost": 130,
-        "prevCost": 120,
         "faction": "fringe",
         "subfaction": "bounty hunters",
         "affiliations": [
@@ -2648,7 +2647,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "prevCost": 5,
         "imageName": "Force Choke.jpeg",
         "keywords": [],
         "requirements": [
@@ -2864,7 +2862,7 @@
         ],
         "history": [
             {
-                "date": "27 October 2021",
+                "date": "19 July 2024",
                 "description": "Cost increased from 28 to 38 points."
             }
         ],
@@ -3931,7 +3929,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "prevCost": 15,
         "imageName": "CR-24 Flame Rifle.jpeg",
         "keywords": [],
         "history": [
@@ -3955,7 +3952,6 @@
         "isUnique": true,
         "rank": "commander",
         "cost": 185,
-        "prevCost": 195,
         "defense": "red",
         "surges": [
             "crit"
@@ -4011,7 +4007,6 @@
         "isUnique": true,
         "rank": "commander",
         "cardType": "unit",
-        "prevCost": 100,
         "cost": 95,
         "faction": "republic",
         "imageName": "Clone Captain Rex.jpeg",
@@ -4119,7 +4114,6 @@
         "isUnique": false,
         "rank": "heavy",
         "cost": 160,
-        "prevCost": 170,
         "speed": 2,
         "wounds": 9,
         "resilience": 6,
@@ -4427,7 +4421,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 21,
-        "prevCost": 31,
         "imageName": "RPS-6 Rocket Gunner.jpeg",
         "keywords": [
             "Impact"
@@ -4697,7 +4690,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 21,
-        "prevCost": 26,
         "imageName": "Mark II Medium Blaster.jpeg",
         "keywords": [
             "Fixed"
@@ -4725,7 +4717,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 25,
-        "prevCost": 31,
         "imageName": "M-45 Ion Blaster.jpeg",
         "keywords": [
             "Fixed",
@@ -5229,7 +5220,6 @@
         "title": "Sinister Cyborg",
         "isUnique": true,
         "rank": "commander",
-        "prevCost": 155,
         "cost": 150,
         "faction": "separatists",
         "imageName": "General Grievous.jpeg",
@@ -5553,7 +5543,6 @@
         "cardType": "upgrade",
         "isUnique": true,
         "cost": 0,
-        "prevCost": 8,
         "imageName": "DT-57 %22Annihilator%22.jpeg",
         "keywords": [
             "Critical",
@@ -5850,7 +5839,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 13,
-        "prevCost": 15,
         "imageName": "SX-21 Trooper.jpeg",
         "keywords": [
             "Impact"
@@ -6561,7 +6549,6 @@
         "cardName": "A280-CFE Config",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 10,
         "cost": 0,
         "imageName": "A280-CFE Configuration.jpeg",
         "keywords": [
@@ -6646,7 +6633,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 15,
-        "prevCost": 30,
         "imageName": "TX-130 Beam Cannon Turret.jpeg",
         "keywords": [
             "Beam"
@@ -6851,7 +6837,6 @@
         "isUnique": true,
         "rank": "operative",
         "cost": 85,
-        "prevCost": 90,
         "defense": "white",
         "surges": [
             "hit",
@@ -6984,7 +6969,6 @@
         "isUnique": false,
         "rank": "special",
         "cost": 66,
-        "prevCost": 72,
         "defense": "red",
         "surges": [],
         "speed": 2,
@@ -7029,7 +7013,6 @@
         "isUnique": false,
         "rank": "special",
         "cost": 64,
-        "prevCost": 68,
         "defense": "red",
         "surges": [],
         "speed": 2,
@@ -7883,7 +7866,6 @@
         "cardName": "Jetpack Rockets",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 8,
         "cost": 5,
         "imageName": "Jetpack Rockets.jpeg",
         "keywords": [
@@ -7913,7 +7895,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 24,
-        "prevCost": 28,
         "imageName": "Beskad Duelist.jpeg",
         "keywords": [
             "Duelist",
@@ -7939,7 +7920,6 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 34,
-        "prevCost": 38,
         "imageName": "Ursa Wren.jpeg",
         "keywords": [
             "Dauntless",
@@ -7969,7 +7949,6 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 34,
-        "prevCost": 38,
         "imageName": "Tristan Wren.jpeg",
         "keywords": [
             "Lethal",
@@ -9011,7 +8990,6 @@
         "cardName": "LAAT Patrol Transport",
         "isUnique": false,
         "rank": "heavy",
-        "prevCost": 105,
         "cost": 100,
         "faction": "republic",
         "defense": "white",
@@ -9822,7 +9800,6 @@
         "isUnique": true,
         "rank": "commander",
         "cost": 90,
-        "prevCost": 95,
         "faction": "separatists",
         "imageName": "Super Tactical Droid.jpeg",
         "keywords": [
@@ -10057,7 +10034,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 15,
-        "prevCost": 25,
         "imageName": "Gnasp Gunner.jpeg",
         "keywords": [
             "Fixed",
@@ -10364,7 +10340,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 25,
-        "prevCost": 40,
         "imageName": "Twin Blaster Cannons.jpeg",
         "keywords": [
             "Gunslinger",
@@ -10421,7 +10396,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 25,
-        "prevCost": 40,
         "imageName": "Twin Missile Pods.jpeg",
         "keywords": [
             "Gunslinger",
@@ -10567,7 +10541,6 @@
         "isUnique": false,
         "rank": "corps",
         "cost": 50,
-        "prevCost": 48,
         "faction": "fringe",
         "subfaction": "black sun",
         "affiliations": [
@@ -10700,7 +10673,6 @@
         "isUnique": false,
         "rank": "special",
         "cost": 70,
-        "prevCost": 75,
         "faction": "fringe",
         "imageName": "Mandalorian Super Commandos.jpeg",
         "keywords": [
@@ -10869,7 +10841,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 16,
-        "prevCost": 14,
         "history": [
             {
                 "date": "5 June 2023",
@@ -11109,7 +11080,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 28,
-        "prevCost": 30,
         "imageName": "Super Commando Gunslinger.jpeg",
         "keywords": [
             "Lethal"
@@ -11134,7 +11104,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 28,
-        "prevCost": 30,
         "imageName": "Super Commando Marksman.jpeg",
         "keywords": [
             "Precise"
@@ -11434,7 +11403,6 @@
         "displayName": "Stormtroopers Heavy Response Unit",
         "isUnique": false,
         "rank": "corps",
-        "prevCost": 30,
         "cost": 40,
         "faction": "empire",
         "imageName": "Stormtroopers2.jpeg",
