@@ -9,6 +9,7 @@ export default function GameChangeButton() {
 
     const handleOpenMenu = event => setAnchorEl(event.currentTarget);
     const handleCloseMenu = () => setAnchorEl();
+    const { userSettings } = useContext(DataContext);
 
     return (
         <React.Fragment>
@@ -25,7 +26,7 @@ export default function GameChangeButton() {
                 >
                     Legion
                 </MenuItem>
-                <MenuItem
+                <MenuItem 
                   onClick={() => {
                     handleSetGame('Storm Tide: Special Forces Division');
                     handleCloseMenu();

@@ -37,14 +37,15 @@ function CardSelector() {
     handleAddCounterpart,
     handleIncrementStackSize,
     handleDecrementStackSize,
-    handleToggleIsApplyToAll
+    handleToggleIsApplyToAll,
+    userSettings
   } = React.useContext(ListContext);
   let header; let clickHandler;
   let validIds = [];
   let invalidIds = [];
   const { action } = cardPaneFilter;
   if (action === 'UNIT') {
-    validIds = getEligibleUnitsToAdd(currentList, cardPaneFilter.rank);
+    validIds = getEligibleUnitsToAdd(currentList, cardPaneFilter.rank, userSettings);
     clickHandler = (unitId) => handleAddUnit(unitId);
     header = (
       <StackController

@@ -13,13 +13,13 @@ function LinkButton({ currentList }) {
       <Chip
         clickable
         variant="outlined"
-        label="Legion HQ Link"
+        label="Legion List Builder Link"
         icon={<LinkIcon />}
         onClick={() => setIsOpen(true)}
       />
       <DialogModal
         isOpen={isOpen}
-        title="Legion HQ Link"
+        title="Legion List Builder Link"
         content={<TextField value={listLink} />}
         actions={<ClipboardButton content={listLink} />}
         handleClose={() => setIsOpen(false)}

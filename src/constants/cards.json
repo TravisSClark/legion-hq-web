@@ -1220,7 +1220,7 @@
         "rank": "operative",
         "cost": 130,
         "prevCost": 120,
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "bounty hunters",
         "affiliations": [
             "empire"
@@ -1274,7 +1274,7 @@
         "isUnique": true,
         "rank": "operative",
         "cost": 105,
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "bounty hunters",
         "affiliations": [
             "empire",
@@ -6821,7 +6821,7 @@
     },
     "kx": {
         "cardType": "unit",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "bounty hunters",
         "affiliations": [
             "empire",
@@ -10010,7 +10010,7 @@
         "isUnique": true,
         "rank": "commander",
         "cost": 0,
-        "faction": "",
+        "faction": "stormtide",
         "imageName": "Storm Tide Commander1.jpeg",
         "keywords": [
             "Inspire"
@@ -10549,7 +10549,7 @@
         "isUnique": false,
         "rank": "commander",
         "cost": 48,
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "pyke syndicate",
         "affiliations": [
             "rebels",
@@ -10589,7 +10589,7 @@
         "isUnique": false,
         "rank": "corps",
         "cost": 44,
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "pyke syndicate",
         "affiliations": [
             "rebels",
@@ -10630,7 +10630,7 @@
         "isUnique": false,
         "rank": "commander",
         "cost": 50,
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "black sun",
         "affiliations": [
             "empire",
@@ -10662,7 +10662,7 @@
         "rank": "corps",
         "cost": 50,
         "prevCost": 48,
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "black sun",
         "affiliations": [
             "empire",
@@ -10702,7 +10702,7 @@
         "isUnique": true,
         "rank": "operative",
         "cost": 170,
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "shadow collective",
         "imageName": "Maul2.jpeg",
         "keywords": [
@@ -10742,7 +10742,7 @@
         "rank": "commander",
         "cost": 100,
         "prevCost": 105,
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "shadow collective",
         "imageName": "Gar Saxon.jpeg",
         "keywords": [
@@ -10785,7 +10785,7 @@
         "rank": "special",
         "cost": 70,
         "prevCost": 75,
-        "faction": "fringe",
+        "faction": "mercenary",
         "imageName": "Mandalorian Super Commandos.jpeg",
         "keywords": [
             "Jump",
@@ -11047,7 +11047,7 @@
         "commander": "Maul",
         "imageName": "Witch Magick.jpeg",
         "products": [],
-        "faction": "fringe",
+        "faction": "mercenary",
         "keywords": []
     },
     "rs": {
@@ -11058,7 +11058,7 @@
         "commander": "Maul",
         "imageName": "His Emminence.jpeg",
         "products": [],
-        "faction": "fringe",
+        "faction": "mercenary",
         "keywords": []
     },
     "rt": {
@@ -11069,7 +11069,7 @@
         "commander": "Maul",
         "imageName": "Seize What Power We Can.jpeg",
         "products": [],
-        "faction": "fringe",
+        "faction": "mercenary",
         "keywords": []
     },
     "ru": {
@@ -11340,7 +11340,7 @@
         "commander": "Gar Saxon",
         "imageName": "Marked For Elimination.jpeg",
         "products": [],
-        "faction": "fringe",
+        "faction": "mercenary",
         "keywords": []
     },
     "sk": {
@@ -11351,7 +11351,7 @@
         "commander": "Gar Saxon",
         "imageName": "Fight Another Day.jpeg",
         "products": [],
-        "faction": "fringe",
+        "faction": "mercenary",
         "keywords": [
             "Outmaneuver"
         ]
@@ -11364,7 +11364,7 @@
         "commander": "Gar Saxon",
         "imageName": "Victory or Death!.jpeg",
         "products": [],
-        "faction": "fringe",
+        "faction": "mercenary",
         "keywords": [
             "Outmaneuver"
         ]
@@ -11376,7 +11376,7 @@
         "isUnique": false,
         "rank": "heavy",
         "cost": 75,
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "raiders",
         "defense": "white",
         "surges": [
@@ -11411,7 +11411,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "faction": "fringe",
+        "faction": "mercenary",
         "imageName": "Frenzied Gunner.jpeg",
         "keywords": [],
         "requirements": [
@@ -11420,7 +11420,7 @@
                 "rank": "heavy"
             },
             {
-                "faction": "fringe"
+                "faction": "mercenary"
             }
         ]
     },
@@ -11444,7 +11444,7 @@
                 "rank": "heavy"
             },
             {
-                "faction": "fringe"
+                "faction": "mercenary"
             }
         ]
     },
@@ -11475,7 +11475,7 @@
         "rank": "support",
         "cost": 65,
         "prevCost": 70,
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "raiders",
         "affiliations": [
             "rebels",
@@ -11766,7 +11766,7 @@
         "isUnique": true,
         "rank": "operative",
         "cost": 110,
-        "faction": "fringe",
+        "faction": "mercenary",
         "affiliations": [
             "empire"
         ],
@@ -11802,7 +11802,7 @@
         "isUnique": true,
         "rank": "operative",
         "cost": 105,
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "bounty hunters",
         "affiliations": [
             "rebels",
@@ -11842,7 +11842,7 @@
         "isUnique": true,
         "rank": "operative",
         "cost": 105,
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "bounty hunters",
         "affiliations": [
             "rebels",
@@ -11887,7 +11887,7 @@
         "isUnique": true,
         "rank": "operative",
         "cost": 120,
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "bounty hunters",
         "affiliations": [
             "rebels"
@@ -11943,7 +11943,7 @@
     "tn": {
         "id": "tn",
         "cardName": "Grogu",
-        "faction": "fringe",
+        "faction": "mercenary",
         "affiliations": [
             "rebels"
         ],
@@ -12875,7 +12875,7 @@
         "isUnique": true,
         "rank": "heavy",
         "cost": 190,
-        "faction": "fringe",
+        "faction": "mercenary",
         "affiliations": [],
         "imageName": "Chewbacca3.jpeg",
         "keywords": [
@@ -12904,7 +12904,7 @@
         "isUnique": false,
         "rank": "corps",
         "cost": 40,
-        "faction": "fringe",
+        "faction": "mercenary",
         "affiliations": [
             "rebels"
         ],
@@ -13116,7 +13116,7 @@
         "isUnique": false,
         "rank": "special",
         "cost": 35,
-        "faction": "fringe",
+        "faction": "mercenary",
         "affiliations": [
             "rebels"
         ],
@@ -13139,7 +13139,7 @@
     "vv": {
         "cardName": "C-3P0",
         "title": "Golden God",
-        "faction": "fringe",
+        "faction": "mercenary",
         "isUnique": true,
         "upgradeBar": [],
         "cardType": "unit",
@@ -13281,7 +13281,7 @@
         "isUnique": true,
         "rank": "commander",
         "cost": 45,
-        "faction": "fringe",
+        "faction": "mercenary",
         "imageName": "Logray.jpeg",
         "keywords": [
             "Aid",
@@ -14168,7 +14168,7 @@
 		"rank": "operative",
 		"cardType": "unit",
 		"cost": 140,
-		"faction": "fringe",
+		"faction": "mercenary",
 		"affiliations": ["rebels"],
 		"counterpartId": "xw",
 		"imageName": "The Bad Batch2.jpeg",
@@ -14188,7 +14188,7 @@
 	"xw": {
 		"cardName": "Omega",
 		"title": "Mascot of the 99th",
-		"faction": "fringe",
+		"faction": "mercenary",
 		"affiliations": ["rebels"],
 		"isUnique": true,
 		"upgradeBar": [],

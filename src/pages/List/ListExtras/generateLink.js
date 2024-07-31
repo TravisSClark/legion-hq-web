@@ -1,4 +1,5 @@
 import urls from 'constants/urls';
+import battleForcesDict from 'constants/battleForcesDict';
 
 function generateLink(list) {
   const urlStrings = [];
@@ -41,17 +42,9 @@ function generateLink(list) {
   list.deploymentCards.forEach(deploymentId => urlStrings.push(deploymentId));
   list.conditionCards.forEach(conditionId => urlStrings.push(conditionId));
   if (list.battleForce) {
-    let bf = 'ebd';
-    if (list.battleForce === 'Echo Base Defenders') bf = 'ebd';
-    else if (list.battleForce === 'Blizzard Force') bf = 'bf';
-    else if (list.battleForce === '501st Legion') bf = '5l';
-    else if (list.battleForce === 'Separatist Invasion') bf = 'si';
-    else if (list.battleForce === 'Shadow Collective') bf = 'sc';
-    else if (list.battleForce === 'Bright Tree Village') bf = 'btv';
-    else if (list.battleForce === 'Tempest Force') bf = 'tf';
-    else if (list.battleForce === 'Imperial Remnant') bf = 'ir';
+    let bf = battleForcesDict[list.battleForce];
 
-    return `${urls.listPath}/${list.faction}/${bf}:${urlStrings.join(',')}`;
+    return `${urls.listPath}/${list.faction}/${bf.linkId}:${urlStrings.join(',')}`;
   }
   return `${urls.listPath}/${list.faction}/${urlStrings.join(',')}`;
 }

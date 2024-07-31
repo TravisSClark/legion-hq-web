@@ -1006,25 +1006,30 @@ function killUnit(list, index) {
   return list;
 }
 
-function getEligibleUnitsToAdd(list, rank) {
+function getEligibleUnitsToAdd(list, rank, userSettings) {
   const validUnitIds = [];
   const cardsById = cardIdsByType.unit; // Object.keys(cards);
   for (let i = 0; i < cardsById.length; i++) {
     const id = cardsById[i];
     const card = cards[id];
 
-    //TODO
-    const useNewCards = true; // TODO
-    if(card.isOld && useNewCards) continue;
+    // TODO - make this a func, use bool instead of string
+    if(card.isOld && userSettings.useOldCards=='no') continue;
+
+    if(card.oldCard && userSettings.useOldCards=='yes')continue;
 
     // if (card.cardType !== 'unit') continue;
     if (card.rank !== rank) continue;
+
+    if((id === 'AA' || id === 'AK') && userSettings.showStormTide != 'yes')
+      continue;
 
     if (list.mode.includes('storm tide') && id === 'AA') {
       continue;
     } else if (!list.mode.includes('storm tide') && id === 'AK') {
       continue;
     }
+
 
 
     if(!list.battleForce)
