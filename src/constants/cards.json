@@ -366,6 +366,7 @@
         "id": "aa"
     },
     "ab": {
+        "id": "ab",
         "cardType": "unit",
         "defense": "white",
         "surges": [
@@ -385,14 +386,15 @@
         "imageName": "Leia Organa.jpeg",
         "keywords": [
             "Take Cover",
+            "Exemplar",
             "Inspire",
             "Nimble",
-            "Sharpshooter",
-            "Pierce"
+            "Sharpshooter"
         ],
         "upgradeBar": [
             "command",
             "command",
+            "training",
             "gear"
         ],
         "history": [
@@ -403,9 +405,12 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 80 to 75 points."
-            }
-        ],
-        "id": "ab"
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Gained Exemplar keyword and blaster changed to 3 red."
+			}
+        ]
     },
     "ac": {
         "cardType": "unit",
@@ -447,6 +452,7 @@
         "id": "ac"
     },
     "ad": {
+        "id": "ad",
         "cardType": "unit",
         "defense": "red",
         "surges": [
@@ -460,29 +466,37 @@
         "title": "Hero of the Rebellion",
         "isUnique": true,
         "rank": "commander",
-        "cost": 150,
+        "prevCost": 150,
+        "cost": 120,
         "faction": "rebels",
         "imageName": "Luke Skywalker.jpeg",
         "keywords": [
             "Jump",
+            "Block",
             "Charge",
-            "Deflect",
             "Immune",
+            "Inspire",
+            "Sharpshooter",
             "Impact",
+            "Long Shot",
             "Pierce"
         ],
         "upgradeBar": [
             "force",
-            "force",
+            "command",
+            "training",
             "gear"
         ],
         "history": [
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 160 to 150 points."
-            }
-        ],
-        "id": "ad"
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 150 to 120 point. Gained Inspire and Sharpshooter keywords, and changed Deflect to Block. Blaster gained Long Shot."
+			}
+        ]
     },
     "ae": {
         "cardType": "unit",
@@ -576,6 +590,7 @@
         "id": "af"
     },
     "ag": {
+        "id": "ag",
         "cardType": "unit",
         "defense": "red",
         "surges": [
@@ -605,10 +620,10 @@
             "gear",
             "gear",
             "armament"
-        ],
-        "id": "ag"
+        ]
     },
     "ah": {
+        "id": "ah",
         "cardType": "unit",
         "defense": "white",
         "surges": [
@@ -625,6 +640,7 @@
         "faction": "rebels",
         "imageName": "Rebel Troopers.jpeg",
         "keywords": [
+            "Agile",
             "Nimble"
         ],
         "upgradeBar": [
@@ -632,10 +648,17 @@
             "personnel",
             "gear",
             "grenades"
-        ],
-        "id": "ah"
+        ]
+        ,
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Gained Agile keyword."
+			}
+        ]
     },
     "ai": {
+        "id": "ai",
         "cardType": "unit",
         "defense": "white",
         "surges": [
@@ -653,7 +676,7 @@
         "faction": "rebels",
         "imageName": "Fleet Troopers.jpeg",
         "keywords": [
-            "Ready"
+            "Charge"
         ],
         "upgradeBar": [
             "heavy weapon",
@@ -665,9 +688,13 @@
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 44 to 40 points."
-            }
-        ],
-        "id": "ai"
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Gained Charge and lost Ready keywords. Blaster can now be used in melee."
+			}
+            
+        ]
     },
     "aj": {
         "cardType": "unit",
@@ -829,6 +856,7 @@
         "id": "am"
     },
     "an": {
+        "id": "an",
         "cardType": "unit",
         "displayName": "Laser Cannon Team",
         "defense": "white",
@@ -849,6 +877,7 @@
         "keywords": [
             "Emplacement Trooper",
             "Full Pivot",
+            "Prepared Position",
             "Sentinel",
             "Stationary",
             "Impact",
@@ -862,9 +891,12 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 70 to 65 points."
-            }
-        ],
-        "id": "an"
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Gained Prepared Position keyword."
+			}
+        ]
     },
     "ao": {
         "cardType": "unit",
@@ -1685,6 +1717,7 @@
         "id": "bh"
     },
     "bi": {
+        "id": "bi",
         "cardType": "unit",
         "defense": "white",
         "surges": [
@@ -1699,13 +1732,14 @@
         "title": "Resolute Commander",
         "isUnique": false,
         "rank": "commander",
-        "cost": 45,
+        "prevCost": 45,
+        "cost": 50,
         "faction": "rebels",
         "imageName": "Rebel Officer.jpeg",
         "keywords": [
             "Take Cover",
             "Inspire",
-            "Sharpshooter"
+            "Exemplar"
         ],
         "upgradeBar": [
             "command",
@@ -1715,9 +1749,12 @@
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 50 to 45 points."
-            }
-        ],
-        "id": "bi"
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 45 to 50 points. Gained Exemplar and lost Sharpshooter keywords."
+			}
+        ]
     },
     "bj": {
         "cardSubtype": "3",
@@ -4539,8 +4576,9 @@
         "id": "gu"
     },
     "gv": {
+        "id": "gv",
         "cardType": "unit",
-        "speed": 2,
+        "speed": 1,
         "wounds": 1,
         "courage": 1,
         "defense": "white",
@@ -4556,7 +4594,8 @@
         "cost": 48,
         "imageName": "Rebel Veterans.jpeg",
         "keywords": [
-            "Defend",
+            "Low Profile",
+            "Prepared Position",
             "Coordinate"
         ],
         "upgradeBar": [
@@ -4566,7 +4605,12 @@
             "gear",
             "grenades"
         ],
-        "id": "gv"
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Gained Low Profile and Prepared Position, and lost Defend keywords."
+			}
+        ]
     },
     "gw": {
         "cardType": "unit",
@@ -5951,6 +5995,7 @@
         "id": "jf"
     },
     "jg": {
+        "id": "jg",
         "surges": [
             "hit",
             "block"
@@ -5972,7 +6017,7 @@
         "keywords": [
             "Repair",
             "Secret Mission",
-            "Grounded",
+            "Infiltrate",
             "Inconspicuous",
             "Suppressive"
         ],
@@ -5987,9 +6032,12 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost increased from 45 to 55 points."
-            }
-        ],
-        "id": "jg"
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Removed Grounded and added Infiltrate."
+			}
+        ]
     },
     "jh": {
         "cardType": "unit",
@@ -7792,6 +7840,7 @@
         ]
     },
     "mk": {
+        "id": "mk",
         "cardType": "unit",
         "displayName": "",
         "cardSubtype": "trooper",
@@ -7814,7 +7863,6 @@
             "armament",
             "grenades"
         ],
-        "id": "mk",
         "history": [
             {
                 "date": "5 June 2023",
@@ -7823,6 +7871,7 @@
         ]
     },
     "ml": {
+        "id": "ml",
         "cardType": "unit",
         "displayName": "Clan Wren",
         "cardSubtype": "trooper",
@@ -7857,8 +7906,7 @@
                 "date": "5 June 2023",
                 "description": "Cost reduced from 34 to 30 points."
             }
-        ],
-        "id": "ml"
+        ]
     },
     "mm": {
         "id": "mm",
