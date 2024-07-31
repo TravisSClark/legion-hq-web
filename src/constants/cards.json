@@ -381,7 +381,6 @@
         "isUnique": true,
         "rank": "commander",
         "cost": 75,
-        "prevCost": 80,
         "faction": "rebels",
         "imageName": "Leia Organa.jpeg",
         "keywords": [
@@ -461,7 +460,6 @@
         "title": "Hero of the Rebellion",
         "isUnique": true,
         "rank": "commander",
-        "prevCost": 160,
         "cost": 150,
         "faction": "rebels",
         "imageName": "Luke Skywalker.jpeg",
@@ -2841,7 +2839,8 @@
         "cardName": "DH-447 Sniper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 28,
+        "prevCost": 28,
+        "cost": 38,
         "imageName": "DH-447 Sniper.jpeg",
         "keywords": [
             "High Velocity",
@@ -2854,6 +2853,12 @@
             },
             {
                 "cardName": "Rebel Commandos Strike Team"
+            }
+        ],
+        "history": [
+            {
+                "date": "27 October 2021",
+                "description": "Cost increased from 28 to 38 points."
             }
         ],
         "id": "eg"
@@ -3641,7 +3646,8 @@
         "isUnique": true,
         "rank": "operative",
         "cardType": "unit",
-        "cost": 195,
+        "prevCost": 195,
+        "cost": 175,
         "faction": "rebels",
         "imageName": "Luke Skywalker2.jpeg",
         "keywords": [
@@ -3664,6 +3670,10 @@
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 200 to 195 points."
+            },
+            {
+                "date": "19 July 2024",
+                "description": "Cost reduced from 195 to 175 points."
             }
         ],
         "id": "fm"
@@ -4779,8 +4789,8 @@
         "cardName": "Tauntaun Riders",
         "isUnique": false,
         "rank": "support",
-        "prevCost": 95,
-        "cost": 90,
+        "prevCost": 90,
+        "cost": 95,
         "faction": "rebels",
         "imageName": "Tauntaun Riders.jpeg",
         "keywords": [
@@ -4803,6 +4813,10 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 95 to 90 points."
+            },
+            {
+                "date": "19 July 2024",
+                "description": "Cost increased from 90 to 95 points."
             }
         ],
         "id": "he"
@@ -7764,7 +7778,6 @@
         "rank": "special",
         "imageName": "Mandalorian Resistance.jpeg",
         "cost": 68,
-        "prevCost": 72,
         "faction": "rebels",
         "keywords": [
             "Jump",
@@ -7796,7 +7809,6 @@
         "rank": "special",
         "imageName": "Mandalorian Resistance Clan Wren.jpeg",
         "cost": 30,
-        "prevCost": 34,
         "faction": "rebels",
         "keywords": [
             "Equip",
@@ -8336,7 +8348,6 @@
         "title": "Smooth Operator",
         "isUnique": true,
         "rank": "commander",
-        "prevCost": 105,
         "cost": 95,
         "faction": "rebels",
         "defense": "white",
