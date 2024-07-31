@@ -5365,8 +5365,8 @@
         "cardName": "Droidekas",
         "isUnique": false,
         "rank": "support",
-        "prevCost": 75,
-        "cost": 70,
+        "prevCost": 70,
+        "cost": 60,
         "faction": "separatists",
         "imageName": "Droidekas.jpeg",
         "keywords": [
@@ -5395,6 +5395,10 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 75 to 70 points."
+            },
+            {
+                "date": "19 July 2024",
+                "description": "Cost reduced from 70 to 60 points."
             }
         ],
         "id": "ie"
@@ -5597,7 +5601,8 @@
         "cardSubtype": "personnel",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 13,
+        "prevCost": 13,
+        "cost": 18,
         "imageName": "B2 Super Battle Droid.jpeg",
         "keywords": [],
         "requirements": [
@@ -5610,7 +5615,11 @@
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 16 to 13 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 13 to 18 points."
+			}
         ],
         "id": "io"
     },
@@ -7108,7 +7117,8 @@
         "cardName": "BX-Series Droid Sniper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 30,
+        "prevCost": 30,
+        "cost": 40,
         "imageName": "BX-Series Droid Sniper.jpeg",
         "keywords": [
             "Lethal",
@@ -7124,6 +7134,12 @@
             {
                 "cardName": "BX-Series Droid Commandos Strike Team"
             }
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 30 to 40 points."
+			}
         ]
     },
     "le": {
@@ -7567,7 +7583,8 @@
         "isUnique": false,
         "rank": "support",
         "imageName": "STAP Riders.jpeg",
-        "cost": 75,
+        "prevCost": 75,
+        "cost": 80,
         "faction": "separatists",
         "keywords": [
             "Agile",
@@ -7585,7 +7602,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost increased from 73 to 75 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 75 to 80 points."
+			}
         ],
         "id": "mc"
     },
@@ -8193,7 +8214,8 @@
         "isUnique": true,
         "rank": "operative",
         "imageName": "Maul.jpeg",
-        "cost": 160,
+        "prevCost": 160,
+        "cost": 130,
         "faction": "separatists",
         "keywords": [
             "Jump",
@@ -8208,6 +8230,12 @@
             "force",
             "training",
             "training"
+        ],
+        "history": [
+            {
+                "date": "19 July 2024",
+                "description": "Cost reduced from 160 to 130 points."
+            }
         ]
     },
     "nc": {
@@ -9907,7 +9935,8 @@
         "cardName": "RPS-6 MagnaGuard",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 34,
+        "prevCost": 34,
+        "cost": 40,
         "imageName": "RPS-6 MagnaGuard.jpeg",
         "keywords": [
             "Critical",
@@ -9922,7 +9951,11 @@
             {
                 "date": "8 December 2022",
                 "description": "Cost increased from 28 to 34 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 34 to 40 points."
+			}
         ]
     },
     "qe": {
@@ -10048,7 +10081,8 @@
         "cardName": "DSD1 Dwarf Spider Droid",
         "isUnique": false,
         "rank": "support",
-        "cost": 55,
+        "prevCost": 55,
+        "cost": 50,
         "faction": "separatists",
         "imageName": "DSD1 Dwarf Spider Droid.jpeg",
         "keywords": [
@@ -10065,7 +10099,12 @@
             "hardpoint",
             "comms"
         ],
-        "history": []
+        "history": [
+            {
+                "date": "19 July 2024",
+                "description": "Cost reduced from 55 to 50 points."
+            }
+        ]
     },
     "ql": {
         "id": "ql",
@@ -12349,7 +12388,8 @@
         "title": "Separatist Assassin",
         "isUnique": true,
         "rank": "operative",
-        "cost": 150,
+        "prevCost": 150,
+        "cost": 130,
         "faction": "separatists",
         "imageName": "Asajj Ventress.jpeg",
         "keywords": [
@@ -12367,7 +12407,12 @@
             "training",
             "training"
         ],
-        "history": []
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 150 to 130 points."
+			}
+        ]
     },
     "uu": {
         "id": "uu",
@@ -13303,7 +13348,8 @@
         "title": "Ruthless Lieutenant",
         "isUnique": true,
         "rank": "operative",
-        "cost": 90,
+        "prevCost": 90,
+        "cost": 80,
         "faction": "separatists",
         "imageName": "Sun Fac.jpeg",
         "keywords": [
@@ -13322,7 +13368,12 @@
             "comms",
             "gear"
         ],
-        "history": [],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 90 to 80 points."
+			}
+        ],
         "id": "wo"
     },
     "wp": {
