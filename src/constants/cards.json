@@ -10584,7 +10584,8 @@
         "title": "A Rival",
         "isUnique": true,
         "rank": "operative",
-        "cost": 170,
+        "prevCost": 170,
+        "cost": 150,
         "faction": "fringe",
         "subfaction": "shadow collective",
         "imageName": "Maul2.jpeg",
@@ -10605,7 +10606,12 @@
             "training",
             "armament"
         ],
-        "history": []
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 170 to 150 points."
+			}
+        ]
     },
     "rd": {
         "id": "rd",
@@ -10623,8 +10629,8 @@
         "title": "Militant Commando",
         "isUnique": true,
         "rank": "commander",
-        "cost": 100,
-        "prevCost": 105,
+        "prevCost": 100,
+        "cost": 95,
         "faction": "fringe",
         "subfaction": "shadow collective",
         "imageName": "Gar Saxon.jpeg",
@@ -10649,7 +10655,11 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 105 to 100 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 100 to 95 points."
+			}
         ]
     },
     "re": {
@@ -11347,8 +11357,8 @@
         "cardName": "Swoop Bike Riders",
         "isUnique": false,
         "rank": "support",
-        "cost": 65,
-        "prevCost": 70,
+        "prevCost": 65,
+        "cost": 70,
         "faction": "fringe",
         "subfaction": "raiders",
         "affiliations": [
@@ -11379,7 +11389,11 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 70 to 65 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 65 to 70 points."
+			}
         ],
         "id": "sq"
     },
@@ -11699,7 +11713,8 @@
         "title": "The Mandalorian",
         "isUnique": true,
         "rank": "operative",
-        "cost": 105,
+        "prevCost": 105,
+        "cost": 95,
         "faction": "fringe",
         "subfaction": "bounty hunters",
         "affiliations": [
@@ -11726,7 +11741,12 @@
             "gear",
             "armament"
         ],
-        "history": []
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 105 to 95 points."
+			}
+        ]
     },
     "tl": {
         "id": "tl",
