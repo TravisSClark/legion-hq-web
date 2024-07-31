@@ -6959,6 +6959,7 @@
         "history": []
     },
     "kw": {
+        "id": "kw",
         "cardType": "unit",
         "displayName": "Padmé Amidala",
         "faction": "republic",
@@ -6967,37 +6968,40 @@
         "title": "Spirited Senator",
         "isUnique": true,
         "rank": "operative",
-        "cost": 85,
+        "prevCost": 85,
+        "cost": 60,
         "defense": "white",
         "surges": [
-            "hit",
+            "crit",
             "block"
         ],
         "speed": 2,
-        "courage": 2,
+        "courage": 3,
         "wounds": 6,
         "imageName": "Padme Amidala.jpeg",
         "keywords": [
-            "Quick Thinking",
-            "Authoritative",
-            "Exemplar",
+            "Bolster",
+            "Agile",
+            "Inspire",
             "Nimble",
-            "Sharpshooter",
-            "Pierce"
+            "Sharpshooter"
         ],
         "history": [
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 90 to 85 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 85 to 60 points. Gained Bolster 2, Agile 1, and Inspire 2, and lost Quick Thinking, Authoritative, and Exemplar keywords. Blaster changed from 3 black to 3 red and lost Pierce keyword."
+			}
         ],
         "upgradeBar": [
             "command",
             "training",
             "gear",
             "armament"
-        ],
-        "id": "kw"
+        ]
     },
     "kx": {
         "id": "kx",
@@ -8298,12 +8302,12 @@
         "imageName": "Anakin Skywalker.jpeg",
         "cost": 155,
         "faction": "republic",
-        "flaw": "nh",
         "keywords": [
             "Jump",
+            "Charge",
             "Djem So Mastery",
-            "Flawed",
             "Immune",
+            "Master of the Force",
             "Tempted",
             "Impact",
             "Pierce"
@@ -8318,7 +8322,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 160 to 155 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Gained Charge and Master of the Force 1, and lost Flawed keywords."
+			}
         ]
     },
     "nb": {
@@ -8433,15 +8441,6 @@
             "Permanent",
             "Master of the Force"
         ]
-    },
-    "nh": {
-        "id": "nh",
-        "displayName": "",
-        "cardName": "Not a Story the Jedi Would Tell",
-        "cardType": "flaw",
-        "commander": "Anakin Skywalker",
-        "imageName": "Not a Story the Jedi Would Tell.jpeg",
-        "keywords": []
     },
     "ni": {
         "id": "ni",
@@ -9007,13 +9006,15 @@
         "keywords": []
     },
     "ol": {
+        "id": "ol",
         "cardType": "unit",
         "cardSubtype": "trooper",
         "cardName": "Yoda",
         "title": "Grand Master of the Jedi Order",
         "isUnique": true,
         "rank": "commander",
-        "cost": 200,
+        "prevCost": 200,
+        "cost": 180,
         "faction": "republic",
         "defense": "red",
         "surges": [
@@ -9028,6 +9029,7 @@
         "keywords": [
             "Guidance",
             "Ataru Mastery",
+            "Deflect",
             "Immune",
             "Master of the Force",
             "Impact",
@@ -9041,7 +9043,12 @@
             "force",
             "command"
         ],
-        "id": "ol"
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 200 to 180 points. Gained Deflect keyword and Guidance keyword was changed to Trooper."
+			}
+        ]
     },
     "om": {
         "id": "om",
@@ -13326,7 +13333,8 @@
 				"date": "19 July 2024",
 				"description": "Cost reduced from 190 to 180 points. Armor reduced to 5."
 			}
-        ]
+        ],
+        "specialIssue": "Tempest Force"
     },
     "wf": {
         "id": "wf",
