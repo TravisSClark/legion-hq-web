@@ -1262,6 +1262,7 @@
         "id": "aw"
     },
     "ax": {
+        "id": "ax",
         "cardType": "unit",
         "defense": "white",
         "surges": [
@@ -1297,7 +1298,6 @@
             "training",
             "gear"
         ],
-        "id": "ax",
         "history": [
             {
                 "date": "31 May 2022",
@@ -3944,6 +3944,7 @@
         "id": "fw"
     },
     "fx": {
+        "id": "fx",
         "cardType": "unit",
         "cardSubtype": "trooper",
         "faction": "separatists",
@@ -3989,10 +3990,10 @@
                 "date": "5 June 2023",
                 "description": "Cost reduced from 195 to 185 points."
             }
-        ],
-        "id": "fx"
+        ]
     },
     "fy": {
+        "id": "fy",
         "surges": [
             "crit"
         ],
@@ -4033,10 +4034,10 @@
             "gear",
             "gear",
             "grenades"
-        ],
-        "id": "fy"
+        ]
     },
     "fz": {
+        "id": "fz",
         "cardType": "unit",
         "faction": "republic",
         "cardSubtype": "clone trooper",
@@ -4070,8 +4071,7 @@
                 "date": "8 December 2022",
                 "description": "Cost decreased from 62 to 60 points."
             }
-        ],
-        "id": "fz"
+        ]
     },
     "ga": {
         "displayName": "Super Battle Droids",
@@ -4145,6 +4145,7 @@
         "id": "gb"
     },
     "gc": {
+        "id": "gc",
         "defense": "red",
         "surges": [],
         "speed": 1,
@@ -4182,8 +4183,7 @@
                 "date": "27 October 2021",
                 "description": "Cost increased from 170 to 175 points."
             }
-        ],
-        "id": "gc"
+        ]
     },
     "gd": {
         "cardSubtype": "3",
@@ -4609,6 +4609,7 @@
         "id": "gw"
     },
     "gx": {
+        "id": "gx",
         "cardType": "unit",
         "displayName": "Battle Droids",
         "wounds": 1,
@@ -4639,8 +4640,7 @@
                 "date": "27 October 2021",
                 "description": "Cost increased from 36 to 38 points."
             }
-        ],
-        "id": "gx"
+        ]
     },
     "gy": {
         "cardType": "unit",
@@ -5209,6 +5209,7 @@
         "id": "hz"
     },
     "ia": {
+        "id": "ia",
         "cardType": "unit",
         "defense": "red",
         "surges": [],
@@ -5252,8 +5253,7 @@
                 "date": "5 June 2023",
                 "description": "Cost reduced from 155 to 150 points."
             }
-        ],
-        "id": "ia"
+        ]
     },
     "ib": {
         "cardSubtype": "grenades",
@@ -5350,6 +5350,7 @@
         "id": "id"
     },
     "ie": {
+        "id": "ie",
         "cardType": "unit",
         "defense": "white",
         "surges": [
@@ -5397,8 +5398,7 @@
                 "date": "19 July 2024",
                 "description": "Cost reduced from 70 to 60 points."
             }
-        ],
-        "id": "ie"
+        ]
     },
     "if": {
         "cardType": "unit",
@@ -6869,6 +6869,7 @@
         "id": "kw"
     },
     "kx": {
+        "id": "kx",
         "cardType": "unit",
         "faction": "fringe",
         "subfaction": "bounty hunters",
@@ -6917,10 +6918,10 @@
                 "date": "31 May 2022",
                 "description": "Cost reduced from 120 to 105 points."
             }
-        ],
-        "id": "kx"
+        ]
     },
     "ky": {
+        "id": "ky",
         "cardType": "unit",
         "faction": "republic",
         "cardSubtype": "clone trooper",
@@ -6958,10 +6959,10 @@
                 "date": "8 December 2022",
                 "description": "Cost decreased from 27 to 24."
             }
-        ],
-        "id": "ky"
+        ]
     },
     "kz": {
+        "id": "kz",
         "cardType": "unit",
         "faction": "republic",
         "cardSubtype": "clone trooper",
@@ -7002,8 +7003,7 @@
                 "date": "5 June 2023",
                 "description": "Cost reduced from 72 to 66 points."
             }
-        ],
-        "id": "kz"
+        ]
     },
     "la": {
         "cardType": "unit",
@@ -7566,6 +7566,7 @@
         ]
     },
     "mc": {
+        "id": "mc",
         "cardType": "unit",
         "displayName": "",
         "cardSubtype": "repulsor vehicle",
@@ -7597,8 +7598,7 @@
 				"date": "19 July 2024",
 				"description": "Cost increased from 75 to 80 points."
 			}
-        ],
-        "id": "mc"
+        ]
     },
     "md": {
         "cardSubtype": "comms",
@@ -8512,6 +8512,7 @@
         "requirements": []
     },
     "nr": {
+        "id": "nr",
         "cardType": "unit",
         "cardSubtype": "droid trooper",
         "cardName": "T-Series Tactical Droid",
@@ -8536,10 +8537,10 @@
             "command",
             "comms",
             "gear"
-        ],
-        "id": "nr"
+        ]
     },
     "ns": {
+        "id": "ns",
         "cardType": "unit",
         "cardSubtype": "clone trooper",
         "cardName": "Clone Commander",
@@ -8570,8 +8571,7 @@
                 "date": "27 October 2021",
                 "description": "Cost increased from 55 to 60 points."
             }
-        ],
-        "id": "ns"
+        ]
     },
     "nt": {
         "id": "nt",
@@ -11344,6 +11344,7 @@
         ]
     },
     "sq": {
+        "id": "sq",
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
         "cardName": "Swoop Bike Riders",
@@ -11386,8 +11387,7 @@
 				"date": "19 July 2024",
 				"description": "Cost increased from 65 to 70 points."
 			}
-        ],
-        "id": "sq"
+        ]
     },
     "sr": {
         "cardType": "unit",
