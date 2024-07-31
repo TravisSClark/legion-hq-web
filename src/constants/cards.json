@@ -5294,7 +5294,8 @@
         "cardName": "BARC Speeder",
         "isUnique": false,
         "rank": "support",
-        "cost": 55,
+        "prevCost": 55,
+        "cost": 65,
         "faction": "republic",
         "imageName": "BARC Speeder.jpeg",
         "keywords": [
@@ -5316,6 +5317,10 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 60 to 55 points."
+            },
+            {
+                "date": "19 July 2024",
+                "description": "Cost increased from 55 to 65 points."
             }
         ],
         "id": "ic"
@@ -7076,7 +7081,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "prevCosts": 18,
         "imageName": "Deflector Shields.jpeg",
         "keywords": [
             "Shields",
@@ -7142,7 +7146,8 @@
         "cardName": "DC-15x ARC Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 31,
+        "prevCost": 31,
+        "cost": 37,
         "imageName": "DC-15x ARC Trooper.jpeg",
         "keywords": [
             "Critical",
@@ -7158,6 +7163,12 @@
             },
             {
                 "cardName": "ARC Troopers Strike Team"
+            }
+        ],
+        "history": [
+            {
+                "date": "19 July 2024",
+                "description": "Cost increased from 31 to 37 points."
             }
         ]
     },
@@ -10317,8 +10328,8 @@
         "cardName": "Twin Beam Cannons",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 25,
-        "prevCost": 40,
+        "cost": 30,
+        "prevCost": 25,
         "imageName": "Twin Beam Cannons.jpeg",
         "keywords": [
             "Beam",
@@ -10333,6 +10344,10 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 40 to 25 points."
+            },
+            {
+                "date": "19 July 2024",
+                "description": "Cost increased from 25 to 30 points."
             }
         ]
     },
