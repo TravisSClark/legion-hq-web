@@ -408,7 +408,7 @@
             },
             {
 				"date": "19 July 2024",
-				"description": "Gained Exemplar keyword and blaster changed to 3 red."
+				"description": "Gained Exemplar and lost Pierce keywords. Blaster changed from 3 black to 3 red."
 			}
         ]
     },
@@ -494,7 +494,7 @@
             },
             {
 				"date": "19 July 2024",
-				"description": "Cost reduced from 150 to 120 point. Gained Inspire and Sharpshooter keywords, and changed Deflect to Block. Blaster gained Long Shot."
+				"description": "Cost reduced from 150 to 120 point. Gained Inspire and Sharpshooter keywords, and changed Deflect to Block. Blaster gained Long Shot, changed from Pierce 2 to Pierce 1, and changed from 2 red to 1 red and 3 black. Changed lightsaber from 6 black to 2 red and 3 black."
 			}
         ]
     },
@@ -816,7 +816,7 @@
             },
             {
 				"date": "19 July 2024",
-				"description": "Gained Detachment and Heavy Weapon Team keywords."
+				"description": "Gained Detachment."
 			}
         ]
     },
@@ -1038,6 +1038,7 @@
         ]
     },
     "ar": {
+        "id": "ar",
         "cardType": "unit",
         "defense": "white",
         "surges": [
@@ -1052,13 +1053,14 @@
         "title": "Ruthless Commander",
         "isUnique": false,
         "rank": "commander",
-        "cost": 50,
+        "prevCost": 50,
+        "cost": 55,
         "faction": "empire",
         "imageName": "Imperial Officer.jpeg",
         "keywords": [
             "Spotter",
-            "Inspire",
-            "Sharpshooter"
+            "Exemplar",
+            "Inspire"
         ],
         "history": [
             {
@@ -1068,15 +1070,19 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost increased from 45 to 50 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 50 to 55 points. Lost Sharpshooter and gained Exemplar keywords. Blaster pistol changed from 1 black and 1 white to 2 black."
+			}
         ],
         "upgradeBar": [
             "command",
             "gear"
-        ],
-        "id": "ar"
+        ]
     },
     "as": {
+        "id": "as",
         "cardName": "Emperor Palpatine",
         "title": "Ruler of the Galactic Empire",
         "cardSubtype": "trooper",
@@ -1108,7 +1114,6 @@
             "force",
             "command"
         ],
-        "id": "as",
         "history": [
             {
                 "date": "19 November 2020",
@@ -1181,6 +1186,7 @@
         "id": "at"
     },
     "au": {
+        "id": "au",
         "cardType": "unit",
         "defense": "red",
         "surges": [
@@ -1194,15 +1200,16 @@
         "title": "Master Tactician",
         "isUnique": true,
         "rank": "commander",
-        "cost": 70,
+        "prevCost": 70,
+        "cost": 75,
         "faction": "empire",
         "imageName": "General Veers.jpeg",
         "keywords": [
+            "Guidance",
             "Spotter",
+            "Exemplar",
             "Inspire",
-            "Precise",
-            "Sharpshooter",
-            "Pierce"
+            "Sharpshooter"
         ],
         "upgradeBar": [
             "command",
@@ -1217,9 +1224,12 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 75 to 70 points."
-            }
-        ],
-        "id": "au"
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost incresed from 70 to 75 points. Lost Precise and Pierce, and gained Guidance: Ground Vehicle and Exemplar keywords. Blaster Rifle changed from 3 white to 3 red."
+			}
+        ]
     },
     "av": {
         "cardName": "Director Orson Krennic",
@@ -1229,7 +1239,8 @@
         "faction": "empire",
         "isUnique": true,
         "rank": "commander",
-        "cost": 75,
+        "prevCost": 75,
+        "cost": 65,
         "defense": "white",
         "surges": [
             "crit",
@@ -1240,11 +1251,11 @@
         "courage": 2,
         "imageName": "Director Orson Krennic.jpeg",
         "keywords": [
+            "Spotter",
             "Compel",
             "Cunning",
             "Entourage",
-            "Sharpshooter",
-            "Pierce"
+            "Exemplar"
         ],
         "upgradeBar": [
             "command",
@@ -1261,7 +1272,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 90 to 75 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 75 to 65 points. Lost Sharpshooter and Pierce, and gained Spotter and Exemplar keywords. Blaster changed from rainbow to 3 red."
+			}
         ]
     },
     "aw": {
@@ -1364,6 +1379,7 @@
         ]
     },
     "ay": {
+        "id": "ay",
         "cardType": "unit",
         "defense": "red",
         "surges": [
@@ -1376,7 +1392,8 @@
         "cardName": "Stormtroopers",
         "isUnique": false,
         "rank": "corps",
-        "cost": 44,
+        "prevCost": 44,
+        "cost": 42,
         "faction": "empire",
         "imageName": "Stormtroopers.jpeg",
         "keywords": [
@@ -1388,7 +1405,12 @@
             "gear",
             "grenades"
         ],
-        "id": "ay"
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 44 to 42 points. Unarmed reduced from 1 black to 1 white."
+			}
+        ]
     },
     "az": {
         "cardType": "unit",
@@ -1403,7 +1425,8 @@
         "cardName": "Snowtroopers",
         "isUnique": false,
         "rank": "corps",
-        "cost": 44,
+        "prevCost": 44,
+        "cost": 42,
         "faction": "empire",
         "imageName": "Snowtroopers.jpeg",
         "keywords": [
@@ -1419,7 +1442,11 @@
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 48 to 44 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 44 to 42 points. Unarmed is reduced from 1 black to 1 white."
+			}
         ],
         "id": "az"
     },
@@ -1460,6 +1487,7 @@
         "id": "ba"
     },
     "bb": {
+        "id": "bb",
         "cardType": "unit",
         "displayName": "Strike Team",
         "defense": "white",
@@ -1476,7 +1504,10 @@
         "cost": 20,
         "faction": "empire",
         "imageName": "Scout Troopers Strike Team.jpeg",
+        "detachment": "uz",
         "keywords": [
+            "Detachment",
+            "Heavy Weapon Team",
             "Low Profile",
             "Scout",
             "Sharpshooter"
@@ -1492,9 +1523,12 @@
             {
                 "date": "12 September 2019",
                 "description": "Cost increased from 16 to 20 points."
-            }
-        ],
-        "id": "bb"
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Gained Detachment keyword."
+			}
+        ]
     },
     "bc": {
         "cardType": "unit",
@@ -1584,22 +1618,28 @@
         "cardName": "E-Web Heavy Blaster Team",
         "isUnique": false,
         "rank": "support",
-        "cost": 50,
+        "prevCost": 50,
+        "cost": 60,
         "faction": "empire",
         "imageName": "E-Web Heavy Blaster Team.jpeg",
         "keywords": [
             "Emplacement Trooper",
-            "Full Pivot",
+            "Prepared Position",
             "Reposition",
             "Sentinel",
             "Cumbersome",
-            "Fixed"
+            "Fixed",
+            "Impact"
         ],
         "history": [
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 55 to 50 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 50 to 60 points. Gained Prepared Position and lost Full Pivot keywords. Blaster gained impact 1 and range increased from range 3 to 4."
+			}
         ],
         "upgradeBar": [
             "comms",
@@ -1653,6 +1693,7 @@
         "id": "bf"
     },
     "bg": {
+        "id": "bg",
         "cardType": "unit",
         "defense": "white",
         "surges": [
@@ -1665,7 +1706,8 @@
         "cardName": "AT-ST",
         "isUnique": false,
         "rank": "heavy",
-        "cost": 155,
+        "prevCost": 155,
+        "cost": 145,
         "faction": "empire",
         "imageName": "AT-ST.jpeg",
         "keywords": [
@@ -1695,11 +1737,15 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 160 to 155 points."
-            }
-        ],
-        "id": "bg"
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 155 to 145 points. Armor reduced to 5."
+			}
+        ]
     },
     "bh": {
+        "id": "bh",
         "cardType": "unit",
         "displayName": "Occupier Tank",
         "defense": "red",
@@ -1711,7 +1757,8 @@
         "cardName": "Occupier Combat Assault Tank",
         "isUnique": false,
         "rank": "heavy",
-        "cost": 140,
+        "prevCost": 140,
+        "cost": 125,
         "faction": "empire",
         "imageName": "Occupier Combat Assault Tank.jpeg",
         "keywords": [
@@ -1719,7 +1766,7 @@
             "Armor",
             "Arsenal",
             "Reposition",
-            "Transport: Open",
+            "Transport",
             "Weak Point",
             "Suppressive",
             "Fixed",
@@ -1738,9 +1785,12 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 145 to 140 points."
-            }
-        ],
-        "id": "bh"
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 140 to 125 points. Armor reduced to 5."
+			}
+        ]
     },
     "bi": {
         "id": "bi",
@@ -1778,7 +1828,7 @@
             },
             {
 				"date": "19 July 2024",
-				"description": "Cost increased from 45 to 50 points. Gained Exemplar and lost Sharpshooter keywords."
+				"description": "Cost increased from 45 to 50 points. Gained Exemplar and lost Sharpshooter keywords. Blaster changed from 1 black and 1 white to 2 black."
 			}
         ]
     },
@@ -4634,7 +4684,7 @@
         "history": [
             {
 				"date": "19 July 2024",
-				"description": "Gained Low Profile and Prepared Position, and lost Defend keywords."
+				"description": "Speed reduced from 2 to 1. Gained Low Profile and Prepared Position, and lost Defend keywords."
 			}
         ]
     },
@@ -4932,12 +4982,13 @@
         "id": "hf"
     },
     "hg": {
+        "id": "hg",
         "cardType": "unit",
         "defense": "red",
         "surges": [],
         "wounds": 1,
         "courage": 1,
-        "speed": 2,
+        "speed": 1,
         "cardSubtype": "trooper",
         "cardName": "Shoretroopers",
         "isUnique": false,
@@ -4947,7 +4998,8 @@
         "imageName": "Shoretroopers.jpeg",
         "keywords": [
             "Coordinate",
-            "Target"
+            "Prepared Position",
+            "Long Shot"
         ],
         "upgradeBar": [
             "heavy weapon",
@@ -4956,7 +5008,12 @@
             "gear",
             "grenades"
         ],
-        "id": "hg"
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Speed reduced from 2 to 1. Lost Target, and gained Prepared Position and Long Shot keywords."
+			}
+        ]
     },
     "hh": {
         "cardSubtype": "personnel",
@@ -9027,12 +9084,14 @@
         ]
     },
     "on": {
+        "id": "on",
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
         "cardName": "LAAT Patrol Transport",
         "isUnique": false,
         "rank": "heavy",
-        "cost": 105,
+        "prevCost": 105,
+        "cost": 100,
         "faction": "empire",
         "defense": "white",
         "surges": [
@@ -9040,7 +9099,7 @@
         ],
         "speed": 2,
         "wounds": 8,
-        "resilience": 4,
+        "resilience": 6,
         "imageName": "LAAT Patrol Transport E.jpeg",
         "flaw": "",
         "keywords": [
@@ -9049,7 +9108,8 @@
             "Cover",
             "Hover: Air",
             "Immune",
-            "Transport: Closed",
+            "Transport",
+            "Impact",
             "Fixed"
         ],
         "upgradeBar": [
@@ -9061,9 +9121,12 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 120 to 105 points."
-            }
-        ],
-        "id": "on"
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 105 to 100 points. Armor reduced to 5. Laser cannons gained Impact 1 and changed from 1 red and 3 black to 2 red and 2 black."
+			}
+        ]
     },
     "oo": {
         "cardType": "unit",
@@ -11888,7 +11951,12 @@
             "personnel",
             "programming"
         ],
-        "history": []
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Armor reduced to 3."
+			}
+        ]
     },
     "tn": {
         "id": "tn",
@@ -12602,6 +12670,7 @@
         "specialIssue": "Imperial Remnant"
     },
     "uz": {
+        "id": "uz",
         "cardType": "unit",
         "defense": "white",
         "surges": [
@@ -12635,7 +12704,6 @@
                 "description": "Cost reduced from 60 to 48 points."
             }
         ],
-        "id": "uz",
         "specialIssue": "Imperial Remnant"
     },
     "va": {
@@ -13223,6 +13291,7 @@
         "id": "wd"
     },
     "we": {
+        "id": "we",
         "cardType": "unit",
         "defense": "white",
         "surges": [
@@ -13237,7 +13306,8 @@
         "title": "Tempest Scout 2",
         "isUnique": true,
         "rank": "heavy",
-        "cost": 190,
+        "prevCost": 190,
+        "cost": 180,
         "faction": "empire",
         "imageName": "Major Marquand.jpeg",
         "keywords": [
@@ -13251,8 +13321,12 @@
             "Impact"
         ],
         "upgradeBar": [],
-        "history": [],
-        "id": "we"
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 190 to 180 points. Armor reduced to 5."
+			}
+        ]
     },
     "wf": {
         "id": "wf",
