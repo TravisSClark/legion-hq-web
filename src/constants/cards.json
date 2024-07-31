@@ -2549,10 +2549,17 @@
         "cardName": "Force Push",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 10,
+        "prevCost": 10,
+        "cost": 40,
         "imageName": "Force Push.jpeg",
         "keywords": [],
         "requirements": [],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 10 to 40 points."
+			}
+        ],
         "id": "dt"
     },
     "du": {
@@ -9049,7 +9056,8 @@
         "cardName": "Heavy Laser Retrofit",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 16,
+        "prevCost": 16,
+        "cost": 12,
         "imageName": "Heavy Laser Retrofit.jpeg",
         "keywords": [
             "Critical"
@@ -9058,6 +9066,12 @@
             {
                 "cardName": "A-A5 Speeder Truck"
             }
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 16 to 12 points."
+			}
         ]
     },
     "oq": {
@@ -9159,8 +9173,8 @@
         "cardName": "AG-2G Quad Laser",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 25,
-        "prevCost": 28,
+        "prevCost": 25,
+        "cost": 20,
         "imageName": "AG-2G Quad Laser.jpeg",
         "keywords": [
             "Impact"
@@ -9178,7 +9192,11 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 28 to 25 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 25 to 20 points."
+			}
         ]
     },
     "ov": {
@@ -9248,7 +9266,8 @@
         "cardName": "Refurbished \"Gonk\" Droid",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 14,
+        "prevCost": 14,
+        "cost": 20,
         "imageName": "Refurbished %22Gonk%22 Droid.jpeg",
         "keywords": [
             "Shielded",
@@ -9267,7 +9286,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost increased from 10 to 14 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 14 to 20 points."
+			}
         ]
     },
     "oz": {
