@@ -170,8 +170,21 @@ function getNumActivations(list) {
   }, 0);
 }
 
+function printMissionCards(missionArray, label){
+  
+  if (missionArray.length > 0) {
+    let objectives = label + ':\n';
+    missionArray.forEach((id, i) => {
+        const card = cards[id];
+        objectives += ` - ${card.cardName}\n`;
+    });
+    return objectives;
+  }
+  return '';
+}
+
 function generateTournamentText(
-  list, showPoints = true, showCommands = false, showBattles = false
+  list, userSettings
 ) {
   let header = `${list.title ? list.title : 'Untitled'}\n`;
   header += `${list.pointTotal}/${legionModes[list.mode].maxPoints}\n`;
@@ -252,33 +265,38 @@ function generateTournamentText(
       contingencies += `${pips}${commandCard.cardName}\n`;
     });
   }
-  let objectives = '';
-  let deployments = '';
-  let conditions = '';
-  if (list.objectiveCards.length > 0) {
-    objectives += 'Objectives:\n';
-    list.objectiveCards.forEach((id, i) => {
-      const card = cards[id];
-      objectives += ` - ${card.cardName}\n`;
-    });
+
+  let battleDeck = '';
+
+  if(list.userSettings.useOldCards){
+    battleDeck += printMissionCards(list.objectiveCards, "Objectives");
+    battleDeck += printMissionCards(list.deploymentCards, "Deployments");
+    battleDeck += printMissionCards(list.conditionCards, "Conditions");
   }
-  if (list.deploymentCards.length > 0) {
-    deployments += 'Deployments:\n';
-    list.deploymentCards.forEach((id, i) => {
-      const card = cards[id];
-      deployments += ` - ${card.cardName}\n`;
-    });
+  else{
+    battleDeck += printMissionCards(list.primaryCards, "Objectives");
+    battleDeck += printMissionCards(list.secondaryCards, "Secondaries");
+    battleDeck += printMissionCards(list.advantageCards, "Advantages");
   }
-  if (list.conditionCards.length > 0) {
-    conditions += 'Conditions:\n';
-    list.conditionCards.forEach((id, i) => {
-      const card = cards[id];
-      conditions += ` - ${card.cardName}\n`;
-    });
+
+  if(battleDeck.length > 0){
+    battleDeck = `\nBattle Deck\n` + battleDeck;
   }
-  let battle = '';
-  if (objectives + deployments + conditions !== '') battle = `\nBattle Deck\n`;
-  return header + units + commands + contingencies + battle + objectives + deployments + conditions;
+  
+  return header + units + commands + contingencies + battleDeck;
+}
+
+function generateMissionCardHTML(cardList, label){
+  if (cardList.length > 0) {
+    let objectives = label + ':<br>';
+    cardList.forEach((id, i) => {
+      objectives += ` - ${cards[id].cardName}<br>`;
+      return objectives;
+    });
+  }else{
+    return '';
+  }
+  
 }
 
 function generateHTMLText(
@@ -363,33 +381,23 @@ function generateHTMLText(
       contingencies += `${pips}${commandCard.cardName}<br>`;
     });
   }
-  let objectives = '';
-  let deployments = '';
-  let conditions = '';
-  if (list.objectiveCards.length > 0) {
-    objectives += 'Objectives:<br>';
-    list.objectiveCards.forEach((id, i) => {
-      const card = cards[id];
-      objectives += ` - ${card.cardName}<br>`;
-    });
-  }
-  if (list.deploymentCards.length > 0) {
-    deployments += 'Deployments:<br>';
-    list.deploymentCards.forEach((id, i) => {
-      const card = cards[id];
-      deployments += ` - ${card.cardName}<br>`;
-    });
-  }
-  if (list.conditionCards.length > 0) {
-    conditions += 'Conditions:<br>';
-    list.conditionCards.forEach((id, i) => {
-      const card = cards[id];
-      conditions += ` - ${card.cardName}<br>`;
-    });
+
+  let battleDeck = '';
+  if(list.userSettings.useOldCards){
+    battleDeck += generateMissionCardHTML(list.objectiveCards, "Objectives");
+    battleDeck += generateMissionCardHTML(list.deploymentCards, "Deployments");
+    battleDeck += generateMissionCardHTML(list.conditionCards, "Conditions");
+  }else{
+    battleDeck += generateMissionCardHTML(list.primaryCards, "Objectives");
+    battleDeck += generateMissionCardHTML(list.secondaryCards, "Secondaries");
+    battleDeck += generateMissionCardHTML(list.advantageCards, "Advantages");
+
   }
   let battle = '';
-  if (objectives + deployments + conditions !== '') battle = `<br>Battle Deck<br>`;
-  return '<html><p>' + header + units + commands + contingencies + battle + objectives + deployments + conditions + '</p></html>';
+  if(battleDeck.length > 0){
+    battleDeck =  `<br>Battle Deck<br>` + battleDeck;
+  }
+  return '<html><p>' + header + units + commands + contingencies + battleDeck + '</p></html>';
 }
 
 
@@ -479,34 +487,47 @@ function generateStandardText(list) {
   return header + points + units + commands + contingencies;
 }
 
-function generateTTSJSONText(list) {
-  const ttsJSON = { author: 'Legion HQ' };
+const idToName = {
+  "nc": "Offensive Stance",
+  "dz": "A-180 Config",
+  "ea": "A-300 Config",
+  "kh": "A-280-CFE Config",
+  "gn": "E-11D Config",
+  "np": "J-19 Bo-rifle",
+  "Ci": "Clear Conditions",
+  "Cl": "War Weary",
+  "Dj": "Battle Lines",
+  "ff": "Ax-108 \"Ground Buzzer\"",
+  "fg": "Mo/Dk Power Harpoon",
+  "bh": "TX-225 GAVw Occupier Combat Assault Tank",
+  "on": "LAAT/le Patrol Transport",
+  "oo": "LAAT/le Patrol Transport",
+  "ig": "CM-0/93 Trooper",
+  "kd": "Z-6 Phase II Trooper",
+  "kt": "\"Bunker Buster\" Shells",
+  "le": "EMP \"Droid Poppers\"",
+  "lw": "Iden's ID10 Seeker Droid",
+  "sr": "Stormtroopers Heavy Response Unit",
+  "uj": "The Darksaber (Gideon)",
+  "rq": "The Darksaber (Maul)",
+  "xw": "Echo (The Bad Batch)"
+};
 
-  const idToName = {
-    "nc": "Offensive Stance",
-    "dz": "A-180 Config",
-    "ea": "A-300 Config",
-    "kh": "A-280-CFE Config",
-    "gn": "E-11D Config",
-    "np": "J-19 Bo-rifle",
-    "Ci": "Clear Conditions",
-    "Cl": "War Weary",
-    "Dj": "Battle Lines",
-    "ff": "Ax-108 \"Ground Buzzer\"",
-    "fg": "Mo/Dk Power Harpoon",
-    "bh": "TX-225 GAVw Occupier Combat Assault Tank",
-    "on": "LAAT/le Patrol Transport",
-    "oo": "LAAT/le Patrol Transport",
-    "ig": "CM-0/93 Trooper",
-    "kd": "Z-6 Phase II Trooper",
-    "kt": "\"Bunker Buster\" Shells",
-    "le": "EMP \"Droid Poppers\"",
-    "lw": "Iden's ID10 Seeker Droid",
-    "sr": "Stormtroopers Heavy Response Unit",
-    "uj": "The Darksaber (Gideon)",
-    "rq": "The Darksaber (Maul)",
-    "xw": "Echo (The Bad Batch)"
-  };
+function appendMissionTTSJSON(cardList, ttsArray){
+
+  for (let i = 0; i < cardList.length; i++) {
+    if (idToName[cardList[i]]) {
+      ttsArray.push(idToName[cardList[i]]);
+    } else {
+      const battlefieldCard = cards[cardList[i]];
+      ttsArray.push(battlefieldCard.cardName);
+    }
+  }
+
+}
+
+function generateTTSJSONText(list, userSettings) {
+  const ttsJSON = { author: 'Legion HQ' };
 
   ttsJSON.listname = list.title;
 
@@ -600,7 +621,12 @@ function generateTTSJSONText(list) {
     }
   }
 
-  ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };
+  if(list.userSettings.useOldCards){
+    ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };
+  } else{
+      // TODO - check new TTS standard
+    ttsJSON.battlefieldDeck = { objective: [], secondary: [], advantage: [] };
+  }
   if (list.mode === "500-point mode") {
     ttsJSON.battlefieldDeck.scenario =  "skirmish";
   } else if (list.mode.includes("storm tide")) {
@@ -608,29 +634,16 @@ function generateTTSJSONText(list) {
   } else {
     ttsJSON.battlefieldDeck.scenario =  "standard";
   }
-  for (let i = 0; i < list.objectiveCards.length; i++) {
-    if (idToName[list.objectiveCards[i]]) {
-      ttsJSON.battlefieldDeck.objective.push(idToName[list.objectiveCards[i]]);
-    } else {
-      const battlefieldCard = cards[list.objectiveCards[i]];
-      ttsJSON.battlefieldDeck.objective.push(battlefieldCard.cardName);
-    }
-  }
-  for (let i = 0; i < list.deploymentCards.length; i++) {
-    if (idToName[list.deploymentCards[i]]) {
-      ttsJSON.battlefieldDeck.deployment.push(idToName[list.deploymentCards[i]]);
-    } else {
-      const battlefieldCard = cards[list.deploymentCards[i]];
-      ttsJSON.battlefieldDeck.deployment.push(battlefieldCard.cardName);
-    }
-  }
-  for (let i = 0; i < list.conditionCards.length; i++) {
-    if (idToName[list.conditionCards[i]]) {
-      ttsJSON.battlefieldDeck.conditions.push(idToName[list.conditionCards[i]]);
-    } else {
-      const battlefieldCard = cards[list.conditionCards[i]];
-      ttsJSON.battlefieldDeck.conditions.push(battlefieldCard.cardName);
-    }
+
+  if(list.userSettings.useOldCards){
+    appendMissionTTSJSON(list.objectiveCards, ttsJSON.battlefieldDeck.objective);
+    appendMissionTTSJSON(list.deploymentCards, ttsJSON.battlefieldDeck.deployment);
+    appendMissionTTSJSON(list.conditionCards, ttsJSON.battlefieldDeck.conditions);
+  } else{
+    // TODO - probably need new TTS map entries
+    appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
+    appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.secondary);
+    appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.advantage);
   }
 
   return JSON.stringify(ttsJSON, null, 4);
@@ -728,34 +741,6 @@ function generateMinimalText(list) {
       contingencies += `${commandCard.cardName}, `;
     });
   }
-  // let objectives = '';
-  // let deployments = '';
-  // let conditions = '';
-  // if (list.objectiveCards.length > 0) {
-  //   objectives += '\nObjectives: ';
-  //   list.objectiveCards.forEach((id, i) => {
-  //     const card = cards[id];
-  //     objectives += `${card.cardName}, `;
-  //   });
-  //   objectives = objectives.substring(0, objectives.length - 2);
-  // }
-  // if (list.deploymentCards.length > 0) {
-  //   deployments += '\nDeployments: ';
-  //   list.deploymentCards.forEach((id, i) => {
-  //     const card = cards[id];
-  //     deployments += `${card.cardName}, `;
-  //   });
-  //   deployments = deployments.substring(0, deployments.length - 2);
-  // }
-  // if (list.conditionCards.length > 0) {
-  //   conditions += '\nConditions: ';
-  //   list.conditionCards.forEach((id, i) => {
-  //     const card = cards[id];
-  //     conditions += `${card.cardName}, `;
-  //   });
-  //   conditions = conditions.substring(0, conditions.length - 2);
-  // }
-  // + objectives + deployments + conditions;
   return header + units + commands + contingencies;
 }
 
@@ -1014,9 +999,9 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     const card = cards[id];
 
     // TODO - make this a func, use bool instead of string
-    if(card.isOld && userSettings.useOldCards=='no') continue;
+    if(card.isOld && !userSettings.useOldCards) continue;
 
-    if(card.oldCard && userSettings.useOldCards=='yes')continue;
+    if(card.oldCard && userSettings.useOldCards) continue;
 
     // if (card.cardType !== 'unit') continue;
     if (card.rank !== rank) continue;
@@ -1151,6 +1136,14 @@ function addBattle(list, type, id) {
   } else if (type === 'condition') {
     list.conditionCards.push(id);
   }
+
+  else if (type === 'primary') {
+    list.primaryCards.push(id);
+  } else if (type === 'secondary') {
+    list.secondaryCards.push(id);
+  } else if (type === 'advantage') {
+    list.advantageCards.push(id);
+  }
   return list;
 }
 
@@ -1161,7 +1154,15 @@ function removeBattle(list, type, index) {
     list.deploymentCards = deleteItem(list.deploymentCards, index);
   } else if (type === 'condition') {
     list.conditionCards = deleteItem(list.conditionCards, index);
-  } else return;
+  }else if (type === 'primary') {
+    list.primaryCards = deleteItem(list.primaryCards, index);
+  } else if (type === 'secondary') {
+    list.secondaryCards = deleteItem(list.secondaryCards, index);
+  } else if (type === 'advantage') {
+    list.advantageCards = deleteItem(list.advantageCards, index);
+  } 
+  else return;
+
   return list;
 }
 
@@ -1194,6 +1195,9 @@ function getEligibleBattlesToAdd(list, type) {
   if (type === 'objective') currentCards = list.objectiveCards;
   else if (type === 'deployment') currentCards = list.deploymentCards;
   else if (type === 'condition') currentCards = list.conditionCards;
+  else if (type === 'primary') currentCards = list.primaryCards;
+  else if (type === 'secondary') currentCards = list.secondaryCards;
+  else if (type === 'advantage') currentCards = list.advantageCards;
   else return;
   cardIdsByType['battle'].forEach(id => {
     const card = cards[id];
@@ -1693,6 +1697,12 @@ function convertHashToList(faction, url) {
         list.deploymentCards.push(cardId);
       } else if (card.cardSubtype === 'condition') {
         list.conditionCards.push(cardId);
+      }else if (card.cardSubtype === 'primary') {
+        list.primaryCards.push(cardId);
+      }else if (card.cardSubtype === 'secondary') {
+        list.secondaryCards.push(cardId);
+      }else if (card.cardSubtype === 'advantage') {
+        list.advantageCards.push(cardId);
       }
     });
   } catch (e) {

@@ -14,9 +14,6 @@ function ImagePanel({ card, usingOriginalImage = false }) {
   const { cardType, imageName } = card;
 
   let url =`${urls.cdn}/${cardType}Cards/${usingOriginalImage ? `original-${imageName}` : imageName}`;
-  if(card.newUrl){
-    url = `${urls.cdn2}/${cardType}Cards/${imageName}`;
-  }
   return (
     <React.Fragment>
       <ExpansionPanel defaultExpanded={!usingOriginalImage}>

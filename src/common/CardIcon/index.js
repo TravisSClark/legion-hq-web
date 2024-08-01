@@ -22,8 +22,8 @@ function CardIcon({
   
 
   let url = `${urls.cdn}/${card.cardType}Icons/${card.imageName}`;
-  if(card.newUrl){
-    url = `${urls.cdn2}/${card.cardType}Cards/${card.imageName}`;
+  if(card.isNew){
+    url = `${urls.cdn}/${card.cardType}Cards/${card.imageName}`;
     console.log('url: ' + url);
   }
   const classes = useStyles();

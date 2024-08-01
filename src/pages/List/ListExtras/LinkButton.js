@@ -5,9 +5,9 @@ import ClipboardButton from './ClipboardButton';
 import DialogModal from './DialogModal';
 import generateLink from './generateLink';
 
-function LinkButton({ currentList }) {
+function LinkButton({ currentList, userSettings }) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const listLink = generateLink(currentList);
+  const listLink = isOpen ? generateLink(currentList, userSettings) : '';
   return (
     <div style={{ marginRight: 4, marginBottom: 4 }}>
       <Chip

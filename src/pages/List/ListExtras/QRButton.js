@@ -5,9 +5,9 @@ import { CropFree as QRCodeIcon } from '@material-ui/icons';
 import generateLink from './generateLink';
 import DialogModal from './DialogModal';
 
-function QRButton({ currentList }) {
+function QRButton({ currentList, userSettings }) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const listLink = generateLink(currentList);
+  const listLink = isOpen ? generateLink(currentList, userSettings) : "";
   return (
     <div style={{ marginRight: 4, marginBottom: 4 }}>
       <Chip

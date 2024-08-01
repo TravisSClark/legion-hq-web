@@ -11570,7 +11570,7 @@ const cards = JSON.parse(JSON.stringify({
         "speed": 1,
         "wounds": 8,
         "resilience": 4,
-        "imageName": "A-A5 Speeder Truck2.jpeg",
+        "imageName": "A-A5 Speeder Truck.jpeg",
         "flaw": "",
         "keywords": [
             "Armor",
@@ -14555,7 +14555,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 75,
         "faction": "rebels",
         "imageName": "Leia_Organa.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Take Cover",
             "Exemplar",
@@ -14603,7 +14603,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 120,
         "faction": "rebels",
         "imageName": "Luke_Skywalker.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Jump",
             "Block",
@@ -14645,7 +14645,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 55,
         "faction": "rebels",
         "imageName": "R2-D2.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Repair",
             "Inconspicuous",
@@ -14682,7 +14682,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 50,
         "faction": "rebels",
         "imageName": "Rebel_Officer.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Take Cover",
             "Exemplar",
@@ -14719,7 +14719,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 40,
         "faction": "rebels",
         "imageName": "Rebel_Troopers.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Agile",
             "Nimble"
@@ -14757,7 +14757,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 40,
         "faction": "rebels",
         "imageName": "Fleet_Troopers.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Charge"
         ],
@@ -14794,7 +14794,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 65,
         "faction": "rebels",
         "imageName": "1.4_FD_Laser_Cannon_Team.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Full Pivot",
             "Prepared Position",
@@ -14833,7 +14833,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 48,
         "faction": "rebels",
         "imageName": "Rebel_Veterans.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Coordinate",
             "Low Profile",
@@ -14874,7 +14874,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 20,
         "faction": "rebels",
         "imageName": "Rebel_Commandos_Strike_Team.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Detachment",
             "Heavy Weapon Team",
@@ -14915,7 +14915,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 50,
         "faction": "rebels",
         "imageName": "AT-RT.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor",
             "Climbing Vehicle",
@@ -14953,7 +14953,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 125,
         "faction": "rebels",
         "imageName": "T-47_Airspeeder.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor",
             "Arsenal",
@@ -14994,7 +14994,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 55,
         "faction": "rebels",
         "imageName": "X-34_Landspeeder.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor",
             "Arsenal",
@@ -15033,7 +15033,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 65,
         "faction": "rebels",
         "imageName": "A-A5_Speeder_Truck.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor",
             "Hover: Ground",
@@ -15076,7 +15076,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 65,
         "faction": "empire",
         "imageName": "Director_Orson_Krennic.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Spotter",
             "Compel",
@@ -15115,7 +15115,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 75,
         "faction": "empire",
         "imageName": "General_Veers.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Guidance",
             "Spotter",
@@ -15155,7 +15155,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 55,
         "faction": "empire",
         "imageName": "Imperial_Officer.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Spotter",
             "Exemplar",
@@ -15190,7 +15190,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 125,
         "faction": "empire",
         "imageName": "TX-225_GAVw_Occupier_Tank.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor",
             "Arsenal",
@@ -15225,7 +15225,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 52,
         "faction": "empire",
         "imageName": "Shoretroopers.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Coordinate",
             "Prepared Position",
@@ -15263,7 +15263,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 42,
         "faction": "empire",
         "imageName": "Stormtroopers.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Precise"
         ],
@@ -15298,7 +15298,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 42,
         "faction": "empire",
         "imageName": "Snowtroopers.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Steady"
         ],
@@ -15335,7 +15335,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 36,
         "faction": "empire",
         "imageName": "Stormtroopers_HRU.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Flexible Reponse",
             "Precise",
@@ -15371,7 +15371,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 60,
         "faction": "empire",
         "imageName": "E-Web_Heavy_Blaster_Team.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Prepared Position",
             "Reposition",
@@ -15410,7 +15410,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 20,
         "faction": "empire",
         "imageName": "Scout_Troopers_Strike_Team.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Detachment",
             "Heavy Weapon Team",
@@ -15447,7 +15447,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 95,
         "faction": "empire",
         "imageName": "Imperial_Dark_Troopers.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor",
             "Plodding",
@@ -15485,7 +15485,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 100,
         "faction": "empire",
         "imageName": "LAAT-LE_Patrol_Transport.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor",
             "Arsenal",
@@ -15526,7 +15526,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 180,
         "faction": "empire",
         "imageName": "Major_Marquand.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor",
             "Arsenal",
@@ -15563,7 +15563,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 180,
         "faction": "empire",
         "imageName": "AT-ST.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor",
             "Arsenal",
@@ -15606,7 +15606,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 60,
         "faction": "republic",
         "imageName": "Padme_Amidala.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Bolster",
             "Agile",
@@ -15647,7 +15647,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 180,
         "faction": "republic",
         "imageName": "Yoda.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Guidance",
             "Ataru Mastery",
@@ -15691,7 +15691,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 155,
         "faction": "republic",
         "imageName": "Anakin_Skywalker.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Jump",
             "Charge",
@@ -15732,7 +15732,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 150,
         "faction": "republic",
         "imageName": "Obi-Wan_Kenobi.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Jump",
             "Charge",
@@ -15778,7 +15778,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 55,
         "faction": "republic",
         "imageName": "R2-D2.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Repair",
             "Inconspicuous",
@@ -15811,7 +15811,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 56,
         "faction": "republic",
         "imageName": "Clone_Trooper_Infantry.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Reliable"
         ],
@@ -15845,7 +15845,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 58,
         "faction": "republic",
         "imageName": "ARC_Troopers.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Charge",
             "Impervious",
@@ -15886,7 +15886,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 24,
         "faction": "republic",
         "imageName": "ARC_Troopers_Strike_Team.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Charge",
             "Detachment",
@@ -15931,7 +15931,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 155,
         "faction": "republic",
         "imageName": "Saber-Class Tank.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor",
             "Arsenal",
@@ -15970,7 +15970,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 100,
         "faction": "republic",
         "imageName": "LAAT-LE_Patrol_Transport.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor",
             "Arsenal",
@@ -16012,7 +16012,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 57,
         "faction": "republic",
         "imageName": "Raddaugh_Gnasp_Attack_Craft.png",
-        "newUrl": true,
+        "isNew": true,
         "specialIssue": "Wookiee Defenders",
         "keywords": [
             "Attack Run",
@@ -16052,7 +16052,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 60,
         "faction": "republic",
         "imageName": "AT-RT.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor",
             "Climbing Vehicle",
@@ -16090,7 +16090,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 60,
         "faction": "separatists",
         "imageName": "Tactical_Droid.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Bolster",
             "Direct",
@@ -16127,7 +16127,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 75,
         "faction": "separatists",
         "imageName": "Super_Tactical_Droid.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Strategize",
             "Direct",
@@ -16168,7 +16168,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 85,
         "faction": "separatists",
         "imageName": "Kalani.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Strategize",
             "Direct",
@@ -16210,7 +16210,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 80,
         "faction": "separatists",
         "imageName": "Kraken.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Strategize",
             "Charge",
@@ -16252,7 +16252,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 80,
         "faction": "separatists",
         "imageName": "Poggle_the_Lesser.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Jump",
             "Compel",
@@ -16293,7 +16293,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 165,
         "faction": "separatists",
         "imageName": "Count_Dooku.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Cunning",
             "Deflect",
@@ -16332,7 +16332,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 130,
         "faction": "separatists",
         "imageName": "Gregg.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Block",
             "Entourage",
@@ -16374,7 +16374,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 38,
         "faction": "separatists",
         "imageName": "B1_Battle_Droids.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "AI: Attack",
             "Coordinate: Droid Trooper"
@@ -16407,7 +16407,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 64,
         "faction": "separatists",
         "imageName": "B2_Battle_Droids.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "AI: Attack",
             "Impact"
@@ -16442,7 +16442,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 64,
         "faction": "separatists",
         "imageName": "Droid_Commandos.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Jump",
             "AI: Dodge, Move",
@@ -16485,7 +16485,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 20,
         "faction": "separatists",
         "imageName": "Droid_Commandos_Strike_Team.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Jump",
             "AI: Dodge, Move",
@@ -16527,7 +16527,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 56,
         "faction": "separatists",
         "imageName": "MagnaGuard_Prototype.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "AI: Dodge, Move",
             "Charge",
@@ -16567,7 +16567,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 165,
         "faction": "separatists",
         "imageName": "AAT.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "AI: Attack",
             "Armor: 5",
@@ -16612,7 +16612,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 130,
         "faction": "separatists",
         "imageName": "Persuader_Prototype.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor: 5",
             "Arsenal 3",
@@ -16659,7 +16659,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 130,
         "faction": "separatists",
         "imageName": "Persuader.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor: 5",
             "Arsenal 2",
@@ -16704,7 +16704,7 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 130,
         "faction": "separatists",
         "imageName": "Persuader.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor: 5",
             "Arsenal 2",
@@ -16751,7 +16751,7 @@ const cards = JSON.parse(JSON.stringify({
         "faction": "mercenary",
         "affiliation": [],
         "imageName": "Chewbacca_AT-ST.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor: 5",
             "Arsenal 2",
@@ -16789,7 +16789,7 @@ const cards = JSON.parse(JSON.stringify({
             "rebels"
         ],
         "imageName": "Ewok_Slingers.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Mercenary: Rebels",
             "Independent: Surge 1",
@@ -16830,7 +16830,7 @@ const cards = JSON.parse(JSON.stringify({
             "rebels"
         ],
         "imageName": "Ewok_Skirmishers.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Mercenary: Rebels",
             "Low Profile",
@@ -16868,7 +16868,7 @@ const cards = JSON.parse(JSON.stringify({
         "faction": "mercenary",
         "affiliation": [],
         "imageName": "A-A5_Speeder_Truck_Raider.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Armor 5",
             "Hover: Ground",
@@ -16897,7 +16897,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "",
         "imageName": "501st_1.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "republic",
         "battleForce": "501st Legion",
@@ -16911,7 +16911,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "",
         "imageName": "501st_2.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "republic",
         "battleForce": "501st Legion",
@@ -16925,7 +16925,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "",
         "imageName": "501st_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "republic",
         "battleForce": "501st Legion",
@@ -16939,7 +16939,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Ahsoka Tano",
         "imageName": "Ahsoka_1.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "rebels",
         "keywords": [
@@ -16954,7 +16954,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Ahsoka Tano",
         "imageName": "Ahsoka_2.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "rebels",
         "keywords": [
@@ -16968,7 +16968,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Ahsoka Tano",
         "imageName": "Ahsoka_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "rebels",
         "keywords": [
@@ -16983,7 +16983,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Anakin Skywalker",
         "imageName": "Anakin_1.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "republic",
         "keywords": [
@@ -16999,7 +16999,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Anakin Skywalker",
         "imageName": "Anakin_2.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "republic",
         "keywords": [],
@@ -17012,7 +17012,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Anakin Skywalker",
         "imageName": "Anakin_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "republic",
         "keywords": [
@@ -17026,7 +17026,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Clone Captain Rex",
         "imageName": "Rex_1.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "republic",
         "keywords": [],
@@ -17039,7 +17039,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Chewbacca",
         "imageName": "Chewbacca_2.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "republic",
         "keywords": [
@@ -17055,7 +17055,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Padme Amidala",
         "imageName": "Padme_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "republic",
         "keywords": [
@@ -17073,7 +17073,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Super Tactical Droid",
         "imageName": "Super_Tactical_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "separatists",
         "keywords": [
@@ -17090,7 +17090,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Asajj Ventress",
         "imageName": "Asajj_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "separatists",
         "keywords": [
@@ -17110,7 +17110,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Maul",
         "imageName": "Maul_2_1.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "",
         "keywords": [
@@ -17126,7 +17126,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Cad Bane",
         "imageName": "Cad_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "separatists",
         "keywords": [
@@ -17142,7 +17142,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Poggle the Lesser",
         "imageName": "Poggle_1.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "separatists",
         "keywords": [],
@@ -17155,7 +17155,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "General Grievous",
         "imageName": "Gregg_2.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "separatists",
         "keywords": [],
@@ -17168,7 +17168,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Han Solo",
         "imageName": "Han_Solo_2.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "rebels",
         "keywords": [],
@@ -17182,7 +17182,7 @@ const cards = JSON.parse(JSON.stringify({
         "commander": "",
         "battleForce": "Echo Base Defenders",
         "imageName": "Echo_Base_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "rebels",
         "keywords": [],
@@ -17195,7 +17195,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Darth Vader",
         "imageName": "Darth_Vader_2.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": [],
@@ -17208,7 +17208,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Darth Vader",
         "imageName": "Darth_Vader_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": [],
@@ -17221,7 +17221,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Director Orson Krennic",
         "imageName": "Krennic_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": [],
@@ -17234,7 +17234,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Moff Gideon",
         "imageName": "Gideon_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": [],
@@ -17248,7 +17248,7 @@ const cards = JSON.parse(JSON.stringify({
         "commander": "",
         "battleForce": "Blizzard Force",
         "imageName": "Blizzard_1.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": [],
@@ -17262,7 +17262,7 @@ const cards = JSON.parse(JSON.stringify({
         "commander": "",
         "battleForce": "Blizzard Force",
         "imageName": "Blizzard_2.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": [],
@@ -17276,7 +17276,7 @@ const cards = JSON.parse(JSON.stringify({
         "commander": "",
         "battleForce": "Blizzard Force",
         "imageName": "Blizzard_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": [
@@ -17293,7 +17293,7 @@ const cards = JSON.parse(JSON.stringify({
         "commander": "",
         "battleForce": "Tempest Force",
         "imageName": "Tempest_1.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": [
@@ -17309,7 +17309,7 @@ const cards = JSON.parse(JSON.stringify({
         "commander": "",
         "battleForce": "Tempest Force",
         "imageName": "Tempest_2.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": [
@@ -17325,7 +17325,7 @@ const cards = JSON.parse(JSON.stringify({
         "commander": "",
         "battleForce": "Tempest Force",
         "imageName": "Tempest_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": [
@@ -17340,7 +17340,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Major Marquand",
         "imageName": "Marquand_1.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": [
@@ -17356,7 +17356,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Major Marquand",
         "imageName": "Marquand_2.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": []
@@ -17368,7 +17368,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Major Marquand",
         "imageName": "Marquand_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": [],
@@ -17381,7 +17381,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "command",
         "commander": "Fifth Brother",
         "imageName": "Brother_3.png",
-        "newUrl": true,
+        "isNew": true,
         "products": [],
         "faction": "empire",
         "keywords": []
@@ -17394,7 +17394,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 8,
         "imageName": "327th_Star_Corps_Pilot.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [],
         "requirements": [
             {
@@ -17438,7 +17438,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 38,
         "imageName": "B1_Battle_Droid_Squad.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Indomitable",
             "Transport"
@@ -17463,7 +17463,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 77,
         "imageName": "B2_Super_Battle_Droid_Squad.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Indomitable",
             "Transport"
@@ -17488,7 +17488,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 12,
         "imageName": "Backworld_Medic.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Restore"
         ],
@@ -17513,7 +17513,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 28,
         "imageName": "BARC_Ion_Gunner.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Critical",
             "Fixed: Front, Rear",
@@ -17541,7 +17541,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 33,
         "imageName": "Bistan.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Critical",
             "Impact",
@@ -17568,7 +17568,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 20,
         "imageName": "Boil.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Leader",
             "Guardian",
@@ -17599,7 +17599,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 22,
         "imageName": "Clone_Captain.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Leader",
             "Outmaneuver",
@@ -17625,7 +17625,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 22,
         "imageName": "Clone_Commander.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Leader",
             "Inspire 1",
@@ -17652,7 +17652,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 10,
         "imageName": "Clone_Commander_Fox.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Field Commander"
         ],
@@ -17681,7 +17681,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 30,
         "imageName": "Clone_Comms_Technician.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Fire Support"
         ],
@@ -17710,7 +17710,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 17,
         "imageName": "Clone_Engineer.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Repair"
         ],
@@ -17739,7 +17739,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 17,
         "imageName": "Clone_Medic.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Treat"
         ],
@@ -17768,7 +17768,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 4,
         "imageName": "Clone_Shock_Trooper_Pilot.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [],
         "requirements": [
             "AND",
@@ -17795,7 +17795,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 17,
         "imageName": "Clone_Specialist.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [],
         "requirements": [
             "AND",
@@ -17824,7 +17824,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 56,
         "imageName": "Clone_Trooper_Infantry_Squad.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Indomitable",
             "Transport"
@@ -17849,7 +17849,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 10,
         "imageName": "CR-24_Flame_Rifle.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Blast",
             "Spray"
@@ -17875,7 +17875,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 28,
         "imageName": "Dioxis_Mine_Saboteur.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Blast",
             "Poison"
@@ -17901,7 +17901,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 22,
         "imageName": "DP-23_Clone_Trooper.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Pierce"
         ],
@@ -17925,7 +17925,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 18,
         "imageName": "E-60R_B1_Trooper.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Cumbersome",
             "Impact"
@@ -17952,7 +17952,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 52,
         "imageName": "Echo_ARC_Marksman.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Leader"
         ],
@@ -17976,7 +17976,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 28,
         "imageName": "Ewok_Skirmisher_Squad.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Indomitable",
             "Transport"
@@ -18001,7 +18001,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 23,
         "imageName": "Ewok_Slinger_Squad.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Indomitable",
             "Transport"
@@ -18026,7 +18026,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 40,
         "imageName": "Fives.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Leader",
             "Charge",
@@ -18053,7 +18053,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 20,
         "imageName": "Flametrooper.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Blast",
             "Spray"
@@ -18079,7 +18079,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 45,
         "imageName": "Fleet_Trooper_Squad.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Indomitable",
             "Transport"
@@ -18104,7 +18104,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 51,
         "imageName": "Geonosian_Warrior_Squad.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Indomitable",
             "Transport"
@@ -18129,7 +18129,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 5,
         "imageName": "Governor_Pryce.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Field Commander"
         ],
@@ -18158,7 +18158,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 22,
         "imageName": "HH-12_Stormtrooper.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Cumbersome",
             "Impact"
@@ -18184,7 +18184,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 3,
         "imageName": "Impact_Grenades.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Impact"
         ],
@@ -18204,7 +18204,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 28,
         "imageName": "M-45_Ion_Blaster.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Critical",
             "Fixed: Front",
@@ -18232,7 +18232,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 20,
         "imageName": "Mortar_Clone_Trooper.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Critical",
             "Suppressive",
@@ -18262,7 +18262,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 27,
         "imageName": "MPL-57_Ion_Trooper.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Critical",
             "Impact",
@@ -18288,7 +18288,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 22,
         "imageName": "MPL-57_Barrage_Trooper.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Blast",
             "Impact"
@@ -18314,7 +18314,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 15,
         "imageName": "Nose-Mounted_Flamethrower.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Blast",
             "Fixed: Front",
@@ -18342,7 +18342,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 30,
         "imageName": "Nose-Mounted_Ion_Blaster.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Critical",
             "Fixed: Front",
@@ -18370,7 +18370,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 10,
         "imageName": "Onboard_Comms_Channel.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Coordinate: Trooper"
         ],
@@ -18399,7 +18399,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 20,
         "imageName": "Proton_Charge_Saboteur.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Blast",
             "Critical",
@@ -18426,7 +18426,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 45,
         "imageName": "Rebel_Trooper_Squad.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Indomitable",
             "Transport"
@@ -18451,7 +18451,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 63,
         "imageName": "Rebel_Veterans_Squad.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Indomitable",
             "Transport"
@@ -18476,7 +18476,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 23,
         "imageName": "RPS-6_Clone_Trooper.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Cumbersome",
             "Impact"
@@ -18506,7 +18506,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 22,
         "imageName": "Scatter_Gun_Trooper.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Pierce"
         ],
@@ -18530,7 +18530,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 70,
         "imageName": "Shoretrooper_Squad.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Indomitable",
             "Transport"
@@ -18555,7 +18555,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": true,
         "cost": 10,
         "imageName": "Shriv_Suurgav.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Field Commander"
         ],
@@ -18584,7 +18584,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 46,
         "imageName": "Snowtrooper_Squad.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Indomitable",
             "Transport"
@@ -18609,7 +18609,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 23,
         "imageName": "Sonic_Charge_Saboteur.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Blast",
             "Impact",
@@ -18636,7 +18636,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 46,
         "imageName": "Stormtrooper_Squad.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Indomitable",
             "Transport"
@@ -18661,7 +18661,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 24,
         "imageName": "T-7_Ion_Snowtrooper.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Critical",
             "Impact",
@@ -18688,7 +18688,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 16,
         "imageName": "Unorthodox_Tactician.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [],
         "requirements": [
             {
@@ -18711,7 +18711,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": true,
         "cost": 20,
         "imageName": "Waxer.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Leader",
             "Disciplined",
@@ -18742,7 +18742,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cost": 22,
         "imageName": "Z-6_Clone_Trooper.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [],
         "requirements": [
             {
@@ -18765,7 +18765,7 @@ const cards = JSON.parse(JSON.stringify({
         "cardType": "upgrade",
         "cost": 13,
         "imageName": "Clone_Trooper_Infantry.png",
-        "newUrl": true,
+        "isNew": true,
         "keywords": [
             "Indomitable",
             "Transport"
@@ -18781,7 +18781,163 @@ const cards = JSON.parse(JSON.stringify({
                 "description": "card_refresh"
             }
         ]
-    }
+    },
+
+
+    "Gt": {
+        "id": "Gt",
+        "cardName": "Breakthrough",
+        "imageName": "Breakthrough_Text.png",
+        "mapName": "Breakthrough_Map.png",
+        "cardType": "battle",
+        "cardSubtype": "primary",
+        "keywords": []
+    },
+    "Gu": {
+        "id": "Gu",
+        "cardName": "Bunker Assault",
+        "imageName": "Bunker_Assault_Text.png",
+        "mapName": "Bunker_Assault_Map.png",
+        "cardType": "battle",
+        "cardSubtype": "primary",
+        "keywords": []
+    },
+    "Gv": {
+        "id": "Gv",
+        "cardName": "Close the Pocket",
+        "imageName": "Close_the_Pocket_Text.png",
+        "mapName": "Close_the_Pocket_Map.png",
+        "cardType": "battle",
+        "cardSubtype": "primary",
+        "keywords": []
+    },
+    "Gw": {
+        "id": "Gw",
+        "cardName": "Intercept Signals",
+        "imageName": "Intercept_Signals_Text.png",
+        "mapName": "Intercept_Signals_Map.png",
+        "cardType": "battle",
+        "cardSubtype": "primary",
+        "keywords": []
+    },
+    "Gx": {
+        "id": "Gx",
+        "cardName": "Recover the Research",
+        "imageName": "Recover_the_Research_Text.png",
+        "mapName": "Recover_the_Research_Map.png",
+        "cardType": "battle",
+        "cardSubtype": "primary",
+        "keywords": []
+    },
+    "Gy": {
+        "id": "Gy",
+        "cardName": "Shifting Priorities",
+        "imageName": "Shifting_Priorities_Text.png",
+        "mapName": "Shifting_Priorities_Map.png",
+        "cardType": "battle",
+        "cardSubtype": "primary",
+        "keywords": []
+    },
+
+    "Gz": {
+        "id": "Gz",
+        "cardName": "Bring Them to Heel",
+        "imageName": "Bring_Them_to_Heel.png",
+        "cardType": "battle",
+        "cardSubtype": "secondary",
+        "keywords": []
+    },
+    "Ha": {
+        "id": "Ha",
+        "cardName": "Destroy Enemy Base",
+        "imageName": "Destroy_Enemy_Base.png",
+        "cardType": "battle",
+        "cardSubtype": "secondary",
+        "keywords": []
+    },
+    "Hb": {
+        "id": "Hb",
+        "cardName": "Marked Targets",
+        "imageName": "Marked_Targets.png",
+        "cardType": "battle",
+        "cardSubtype": "secondary",
+        "keywords": []
+    },
+    "Hc": {
+        "id": "Hc",
+        "cardName": "Recon Mission",
+        "imageName": "Recon_Mission.png",
+        "cardType": "battle",
+        "cardSubtype": "secondary",
+        "keywords": []
+    },
+    "Hd": {
+        "id": "Hd",
+        "cardName": "Surface Scan",
+        "imageName": "Surface_Scan.png",
+        "cardType": "battle",
+        "cardSubtype": "secondary",
+        "keywords": []
+    },
+    "He": {
+        "id": "He",
+        "cardName": "Sweep and Clear",
+        "imageName": "Sweep_and_Clear.png",
+        "cardType": "battle",
+        "cardSubtype": "secondary",
+        "keywords": []
+    },
+
+    "Hf": {
+        "id": "Hf",
+        "cardName": "Advanced Intel",
+        "imageName": "Advanced_Intel.png",
+        "cardType": "battle",
+        "cardSubtype": "advantage",
+        "keywords": []
+    },
+    "Hg": {
+        "id": "Hg",
+        "cardName": "Cunning Deployment",
+        "imageName": "Cunning_Deployment.png",
+        "cardType": "battle",
+        "cardSubtype": "advantage",
+        "keywords": []
+    },
+    "Hh": {
+        "id": "Hh",
+        "cardName": "Fortified Position",
+        "imageName": "Fortified_Position.png",
+        "cardType": "battle",
+        "cardSubtype": "advantage",
+        "keywords": []
+    },
+    "Hi": {
+        "id": "Hi",
+        "cardName": "Garrison",
+        "imageName": "Garrison.png",
+        "cardType": "battle",
+        "cardSubtype": "advantage",
+        "keywords": []
+    },
+    "Hj": {
+        "id": "Hj",
+        "cardName": "Ordnance",
+        "imageName": "Ordnance.png",
+        "cardType": "battle",
+        "cardSubtype": "advantage",
+        "keywords": []
+    },
+    "Hk": {
+        "id": "Hk",
+        "cardName": "Strafing Run",
+        "imageName": "Strafing_Run.png",
+        "cardType": "battle",
+        "cardSubtype": "advantage",
+        "keywords": []
+    },
+    
+
 }));
 
 

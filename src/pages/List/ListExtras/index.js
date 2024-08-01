@@ -27,7 +27,8 @@ function ListExtras() {
     handleListSave,
     handleListFork,
     handleToggleUsingOldPoints,
-    handleToggleIsKillPointMode
+    handleToggleIsKillPointMode,
+    userSettings
   } = useContext(ListContext);
 
   return (
@@ -39,12 +40,13 @@ function ListExtras() {
       }}
     >
       <TemplateButton />
-      <LinkButton currentList={currentList} />
-      <QRButton currentList={currentList} />
+      {/* TODO TODO TODO  - lots of these are calculating their list exports on their render, should be done on the click */}
+      <LinkButton currentList={currentList}  userSettings={userSettings}/>
+      <QRButton currentList={currentList} userSettings={userSettings} />
       <ImageExportButton currentList={currentList} />
       <TextExportButton currentList={currentList} />
-      <TTSTextExportButton currentList={currentList} />
-      <PrintExportButton currentList={currentList} />
+      <TTSTextExportButton currentList={currentList} userSettings={userSettings} />
+      <PrintExportButton currentList={currentList} userSettings={userSettings} />
       <SimpleButton
         timeout={3000}
         timeoutMessage={listSaveMessage ? listSaveMessage : 'Saving...'}

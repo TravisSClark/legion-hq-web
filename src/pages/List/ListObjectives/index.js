@@ -13,46 +13,65 @@ function ListObjectives() {
     currentList,
     setCardPaneFilter,
     handleRemoveBattle,
-    handleCardZoom
+    handleCardZoom,
+    userSettings
   } = React.useContext(ListContext);
   const chipStyle = { marginRight: 4, marginBottom: 4 };
-  const objectiveTheme = createMuiTheme({
-    palette: { primary: { main: '#274c82' } }
-  });
-  const deploymentTheme = createMuiTheme({
-    palette: { primary: { main: '#38643A' } }
-  });
-  const conditionTheme = createMuiTheme({
-    palette: { primary: { main: '#963233' } }
-  });
-  const objectives = currentList.objectiveCards.map((id, i) => (
+
+  let decks = [];
+  let cardsPerDeck = 3;
+  if(userSettings.useOldCards){
+    cardsPerDeck = 4;
+    decks[0] = {type:'objective', label:"Objective", cards: currentList.objectiveCards, theme:createMuiTheme({
+      palette: { primary: { main: '#274c82' } }
+    })};
+    decks[1] = {type:'condition', label:"Condition", cards:currentList.deploymentCards, theme:createMuiTheme({
+      palette: { primary: { main: '#38643A' } }
+    })};
+    decks[2] = {type:'deployment', label:"Deployment", cards:currentList.conditionCards, theme:createMuiTheme({
+      palette: { primary: { main: '#963233' } }
+    })};
+  }else{
+    cardsPerDeck = 3;
+    decks[0] = {type:'primary', label:"Objective", cards:currentList.primaryCards, theme:createMuiTheme({
+      palette: { primary: { main: '#963233' } }
+    })};
+    decks[1] = {type:'secondary', label:"Secondary", cards:currentList.secondaryCards, theme:createMuiTheme({
+      palette: { primary: { main: '#E68646' } }
+    })};
+    decks[2] = {type:'advantage', label:"Advantage", cards:currentList.advantageCards, theme:createMuiTheme({
+      palette: { primary: { main: '#306036' } }
+    })};
+  }
+
+  const objectives = decks[0].cards.map((id, i) => (
     <Chip
       color="primary"
       key={id}
       label={cards[id].cardName}
       style={chipStyle}
       onClick={() => handleCardZoom(id)}
-      onDelete={() => handleRemoveBattle('objective', i)}
+      onDelete={() => handleRemoveBattle(decks[0].type, i)}
     />
   ));
-  const deployments = currentList.deploymentCards.map((id, i) => (
+  const deployments = decks[1].cards.map((id, i) => (
     <Chip
       color="primary"
       key={id}
       label={cards[id].cardName}
       style={chipStyle}
       onClick={() => handleCardZoom(id)}
-      onDelete={() => handleRemoveBattle('deployment', i)}
+      onDelete={() => handleRemoveBattle(decks[1].type, i)}
     />
   ));
-  const conditions = currentList.conditionCards.map((id, i) => (
+  const conditions = decks[2].cards.map((id, i) => (
     <Chip
       color="primary"
       key={id}
       label={cards[id].cardName}
       style={chipStyle}
       onClick={() => handleCardZoom(id)}
-      onDelete={() => handleRemoveBattle('condition', i)}
+      onDelete={() => handleRemoveBattle(decks[2].type, i)}
     />
   ));
   return (
@@ -65,48 +84,48 @@ function ListObjectives() {
       }}
     >
       <div style={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'center' }}>
-        <ThemeProvider theme={objectiveTheme}>
+        <ThemeProvider theme={decks[0].theme}>
           {objectives.length < 4 && <Chip
             clickable
             size={chipSize}
             color="primary"
-            label="Objective"
+            label= {decks[0].label}
             icon={<AddIcon />}
             style={{ marginBottom: 4, marginRight: 4 }}
             onClick={() => setCardPaneFilter({
-              action: 'BATTLE', type: 'objective'
+              action: 'BATTLE', type: decks[0].type
             })}
           />}
           {objectives}
         </ThemeProvider>
       </div>
       <div style={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'center' }}>
-        <ThemeProvider theme={conditionTheme}>
+        <ThemeProvider theme={decks[1].theme}>
           {deployments.length < 4 && <Chip
             clickable
             size={chipSize}
             color="primary"
-            label="Deployment"
+            label={decks[1].label}
             icon={<AddIcon />}
             style={{ marginBottom: 4, marginRight: 4 }}
             onClick={() => setCardPaneFilter({
-              action: 'BATTLE', type: 'deployment'
+              action: 'BATTLE', type: decks[1].type
             })}
           />}
           {deployments}
         </ThemeProvider>
       </div>
       <div style={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'center' }}>
-        <ThemeProvider theme={deploymentTheme}>
+        <ThemeProvider theme={decks[2].theme}>
           {conditions.length < 4 && <Chip
             clickable
             size={chipSize}
             color="primary"
-            label="Condition"
+            label={decks[2].label}
             icon={<AddIcon />}
             style={{ marginBottom: 4, marginRight: 4 }}
             onClick={() => setCardPaneFilter({
-              action: 'BATTLE', type: 'condition'
+              action: 'BATTLE', type: decks[2].type
             })}
           />}
           {conditions}

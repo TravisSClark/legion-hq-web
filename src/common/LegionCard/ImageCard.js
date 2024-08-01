@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   Grow,
   IconButton,
@@ -16,6 +16,7 @@ import CardChip from 'common/CardChip';
 import HelpChip from 'common/HelpChip';
 import KeywordChips from 'common/KeywordChips';
 import urls from 'constants/urls';
+import ListContext from 'context/ListContext';
 
 const useStyles = makeStyles(theme => ({
   expand: {
@@ -46,10 +47,11 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
   const isDoubleSided = cardType === 'upgrade' && keywords.includes('Reconfigure');
   const isSkirmish = card.keywords.includes('Skirmish');
 
+  const listContext = useContext(ListContext);
+
+  let oldCards = listContext.userSettings.useOldCards;
+
   let url =  `${urls.cdn}/${cardType}Cards/${imageName}`;
-  if(card.newUrl){
-    url = `${urls.cdn2}/${cardType}Cards/${imageName}`;
-  }
 
   return (
     <Grow unmountOnExit in={true}>
@@ -57,8 +59,8 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
         className={clsx(classes.card,
           { [classes.selected]: isSelected },
           { [classes.unitCard]: cardType === 'unit' },
-          { [classes.unitCard]: cardType === 'battle' && !isSkirmish },
-          { [classes.commandCard]: cardType === 'battle' && isSkirmish },
+          { [classes.unitCard]: cardType === 'battle' && (!isSkirmish && oldCards) },
+          { [classes.commandCard]: cardType === 'battle' && (isSkirmish || !oldCards) },
           { [classes.upgradeCard]: cardType === 'upgrade' && ! isDoubleSided },
           { [classes.doubleUpgrade]: isDoubleSided },
           { [classes.commandCard]: cardType === 'command' },

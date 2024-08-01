@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import QRCode from 'qrcode.react';
 import { useReactToPrint } from 'react-to-print';
 import { Chip, Menu, MenuItem } from '@material-ui/core';
@@ -7,15 +7,17 @@ import { generateTournamentText } from 'constants/listOperations';
 import generateLink from './generateLink';
 import cards from 'constants/cards';
 import urls from 'constants/urls'
+import ListContext from 'context/ListContext';
 
 class PrintList extends React.Component {
   render() {
-    const { currentList, showBattlesAndCommands = false, showBattlesNoCommands = false } = this.props;
-    const listLink = generateLink(currentList);
+    const { currentList, userSettings, showBattlesAndCommands = false, showBattlesNoCommands = false, } = this.props;
+    const listLink = generateLink(currentList, userSettings);
     const units = []; let printingUnits = true;
     const commands = []; let printingCommands = false;
     const battles = []; let printingBattles = false;
-    const lines = generateTournamentText(currentList).split('\n');
+    // TODO
+    const lines = []; // generateTournamentText(currentList).split('\n');
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       if (printingUnits) units.push(line);
@@ -84,7 +86,7 @@ class PrintList extends React.Component {
   }
 }
 
-function PrintExportButton({ currentList }) {
+function PrintExportButton({ currentList, userSettings }) {
   const componentRef = React.useRef();
   const componentRefNoBattlesCommands = React.useRef();
   const componentRefBattlesButNoCommands = React.useRef();
@@ -150,16 +152,21 @@ function PrintExportButton({ currentList }) {
           showBattlesAndCommands={true}
           ref={componentRef}
           currentList={currentList}
+          userSettings={userSettings}
         />
         <PrintList
           showBattlesAndCommands={false}
           ref={componentRefNoBattlesCommands}
           currentList={currentList}
+          userSettings={userSettings}
+
         />
         <PrintList
           showBattlesNoCommands={true}
           ref={componentRefBattlesButNoCommands}
           currentList={currentList}
+          userSettings={userSettings}
+
         />
       </div>
     </React.Fragment>

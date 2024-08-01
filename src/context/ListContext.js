@@ -273,6 +273,7 @@ export function ListProvider({
     setCurrentList({ ...newList });
   }
   const handleAddBattle = (type, battleId) => {
+    // TODO limit battle overflow from here
     const newList = addBattle(currentList, type, battleId);
     setCurrentList({ ...newList });
   }

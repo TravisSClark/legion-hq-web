@@ -1,7 +1,7 @@
 import urls from 'constants/urls';
 import battleForcesDict from 'constants/battleForcesDict';
 
-function generateLink(list) {
+function generateLink(list, userSettings) {
   const urlStrings = [];
   list.units.forEach(unit => {
     let urlString = `${unit.count}${unit.unitId}`;
@@ -38,9 +38,16 @@ function generateLink(list) {
   }
   if (list.contingencies)
     list.contingencies.forEach(commandId => urlStrings.push(commandId));
-  list.objectiveCards.forEach(objectiveId => urlStrings.push(objectiveId));
-  list.deploymentCards.forEach(deploymentId => urlStrings.push(deploymentId));
-  list.conditionCards.forEach(conditionId => urlStrings.push(conditionId));
+
+  if(userSettings.useOldCards){
+    list.objectiveCards.forEach(i => urlStrings.push(i));
+    list.deploymentCards.forEach(i => urlStrings.push(i));
+    list.conditionCards.forEach(i => urlStrings.push(i));
+  }else{
+    list.primaryCards.forEach(i => urlStrings.push(i));
+    list.secondaryCards.forEach(i => urlStrings.push(i));
+    list.advantageCards.forEach(i => urlStrings.push(i));
+  }
   if (list.battleForce) {
     let bf = battleForcesDict[list.battleForce];
 

@@ -38,9 +38,6 @@ function CardImage({ id, handleClick, isLoadout = false }) {
   const classes = useStyles();
 
   let url = `${urls.cdn}/${card.cardType}Cards/${card.imageName}`;
-  if(card.newUrl){
-    url  =`${urls.cdn2}/${card.cardType}Cards/${card.imageName}`;
-  }
   return (
     <div className={isLoadout ? classes.loadoutContainer : classes.container}>
       <Img

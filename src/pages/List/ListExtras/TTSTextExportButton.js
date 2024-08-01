@@ -26,11 +26,11 @@ function DialogContent({
   );
 }
 
-function TTSTextExportButton({ currentList }) {
+function TTSTextExportButton({ currentList, userSettings }) {
   const theme = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [textType, setTextType] = useState(0);
-  const ttsJSON = generateTTSJSONText(currentList);
+  const ttsJSON = isOpen ? generateTTSJSONText(currentList, userSettings) : null;
 
   const isFullscreen = useMediaQuery(theme.breakpoints.down('sm'));
   return (
@@ -40,7 +40,7 @@ function TTSTextExportButton({ currentList }) {
         variant="outlined"
         label="Export TTS JSON"
         icon={<TextIcon />}
-        onClick={() => setIsOpen(true)}
+        onClick={() =>setIsOpen(true)}
       />
       <DialogModal
         isFullWidth={true}
