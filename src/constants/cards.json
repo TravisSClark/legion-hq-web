@@ -989,7 +989,7 @@
             },
             {
 				"date": "19 July 2024",
-				"description": "Cost reduced from 130 to 125 points. Gained surge to crit. Armor reduced to 3."
+				"description": "Cost reduced from 130 to 125 points. Armor reduced to 3."
 			}
         ]
     },
@@ -4154,21 +4154,22 @@
         "cardType": "unit",
         "faction": "republic",
         "cardSubtype": "clone trooper",
-        "cardName": "Phase II Clone Troopers",
+        "cardName": "Clone Trooper Infantry",
         "isUnique": false,
         "rank": "corps",
-        "cost": 60,
+        "prevCost": 60,
+        "cost": 56,
         "defense": "red",
         "surges": [],
         "speed": 2,
         "wounds": 1,
         "courage": 2,
-        "imageName": "Phase II Clone Troopers.jpeg",
+        "imageName": "Clone Trooper Infantry.jpeg",
         "keywords": [
-            "Fire Support",
             "Reliable"
         ],
         "upgradeBar": [
+            "squad leader",
             "heavy weapon",
             "personnel",
             "training",
@@ -4183,7 +4184,11 @@
             {
                 "date": "8 December 2022",
                 "description": "Cost decreased from 62 to 60 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Combined Phase Is and IIs to Clone Trooper Infantry. Cost reduced from 60 to 56 points. Gained Squad Leader upgrade. Lost Fire Support keyword."
+			}
         ]
     },
     "ga": {
@@ -4219,6 +4224,7 @@
         "id": "ga"
     },
     "gb": {
+        "id": "gb",
         "cardType": "unit",
         "displayName": "Saber Fighter Tank",
         "cardSubtype": "repulsor vehicle",
@@ -4226,12 +4232,15 @@
         "cardName": "TX-130 Saber-Class Fighter Tank",
         "isUnique": false,
         "rank": "heavy",
-        "cost": 160,
+        "prevCost": 160,
+        "cost": 155,
         "speed": 2,
         "wounds": 9,
         "resilience": 6,
         "defense": "red",
-        "surges": [],
+        "surges": [
+            "hit"
+        ],
         "imageName": "TX-130 Saber-Class Fighter Tank.jpeg",
         "keywords": [
             "Armor",
@@ -4240,22 +4249,26 @@
             "Outmaneuver",
             "Weak Point",
             "Critical",
-            "Impact",
-            "Fixed"
+            "Fixed",
+            "Impact"
         ],
         "history": [
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 170 to 160 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 160 to 155 points. Armor reduced to 5. Gained surge to hit. Gained a second Ordance upgrade."
+			}
         ],
         "upgradeBar": [
             "pilot",
             "hardpoint",
             "ordnance",
+            "ordnance",
             "comms"
-        ],
-        "id": "gb"
+        ]
     },
     "gc": {
         "id": "gc",
@@ -4700,12 +4713,14 @@
         "title": "Civilized Warrior",
         "isUnique": true,
         "rank": "commander",
-        "cost": 170,
+        "prevCost": 170,
+        "cost": 150,
         "faction": "republic",
         "imageName": "Obi-Wan Kenobi.jpeg",
         "keywords": [
             "Jump",
             "Charge",
+            "Deflect",
             "Guardian",
             "Immune",
             "Master of the Force",
@@ -4724,7 +4739,11 @@
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 175 to 170 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 170 to 150 points. Gained Deflect keyword."
+			}
         ],
         "id": "gw"
     },
@@ -4761,31 +4780,6 @@
                 "description": "Cost increased from 36 to 38 points."
             }
         ]
-    },
-    "gy": {
-        "cardType": "unit",
-        "speed": 2,
-        "wounds": 1,
-        "courage": 1,
-        "defense": "red",
-        "surges": [],
-        "cardSubtype": "clone trooper",
-        "cardName": "Phase I Clone Troopers",
-        "isUnique": false,
-        "rank": "corps",
-        "cost": 52,
-        "faction": "republic",
-        "imageName": "Phase I Clone Troopers.jpeg",
-        "keywords": [
-            "Fire Support"
-        ],
-        "upgradeBar": [
-            "heavy weapon",
-            "personnel",
-            "gear",
-            "grenades"
-        ],
-        "id": "gy"
     },
     "gz": {
         "cardSubtype": "pilot",
@@ -6118,11 +6112,12 @@
             },
             {
 				"date": "19 July 2024",
-				"description": "Removed Grounded and added Infiltrate."
+				"description": "Removed Grounded and gained Infiltrate keywords."
 			}
         ]
     },
     "jh": {
+        "id": "jh",
         "cardType": "unit",
         "faction": "republic",
         "cardSubtype": "droid trooper",
@@ -6144,7 +6139,6 @@
         "keywords": [
             "Repair",
             "Secret Mission",
-            "Grounded",
             "Inconspicuous",
             "Suppressive"
         ],
@@ -6159,9 +6153,12 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost increased from 45 to 55 points."
+            },
+            {
+                "date": "19 July 2024",
+                "description": "Removed Grounded and gained Infiltrate keywords."
             }
-        ],
-        "id": "jh"
+        ]
     },
     "ji": {
         "cardName": "C-3P0",
@@ -7070,9 +7067,13 @@
         "courage": 2,
         "speed": 2,
         "imageName": "ARC Troopers Strike Team.jpeg",
+        "detachment": "kz",
         "keywords": [
+            "Charge",
+            "Detachment",
             "Heavy Weapon Team",
             "Impervious",
+            "Scale",
             "Scout",
             "Sharpshooter",
             "Tactical"
@@ -7093,7 +7094,11 @@
             {
                 "date": "8 December 2022",
                 "description": "Cost decreased from 27 to 24."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Gained Charge, Detachment: ARC Troopers, and Scale keywords. Blaster changed from 1 black and 1 white to 2 black, and can be used in melee. Lost unarmed and range 3 gun."
+			}
         ]
     },
     "kz": {
@@ -7104,7 +7109,8 @@
         "cardName": "ARC Troopers",
         "isUnique": false,
         "rank": "special",
-        "cost": 66,
+        "prevCost": 66,
+        "cost": 58,
         "defense": "red",
         "surges": [],
         "speed": 2,
@@ -7112,12 +7118,15 @@
         "courage": 2,
         "imageName": "ARC Troopers.jpeg",
         "keywords": [
+            "Charge",
             "Impervious",
+            "Scale",
             "Scout",
             "Sharpshooter",
             "Tactical"
         ],
         "upgradeBar": [
+            "squad leader",
             "heavy weapon",
             "training",
             "comms",
@@ -7137,7 +7146,11 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 72 to 66 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 66 to 58 points. Gained Squad Leader upgrade. Gained Charge and Scale keywords. Blaster changed from 1 black and 1 white to 2 black, and can be used in melee. Lost unarmed and range 3 gun."
+			}
         ]
     },
     "la": {
@@ -7686,6 +7699,7 @@
             "Armor",
             "Climbing Vehicle",
             "Expert Climber",
+            "Scout",
             "Impact",
             "Critical"
         ],
@@ -7697,7 +7711,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 65 to 60 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Armor reduced to 2. Defense changed from white to red. Lost surge to block."
+			}
         ]
     },
     "mc": {
@@ -9108,7 +9126,6 @@
         "wounds": 8,
         "resilience": 6,
         "imageName": "LAAT Patrol Transport E.jpeg",
-        "flaw": "",
         "keywords": [
             "Armor",
             "Arsenal",
@@ -9122,6 +9139,7 @@
         "upgradeBar": [
             "pilot",
             "ordnance",
+            "ordnance",
             "comms"
         ],
         "history": [
@@ -9131,11 +9149,12 @@
             },
             {
 				"date": "19 July 2024",
-				"description": "Cost reduced from 105 to 100 points. Armor reduced to 5. Laser cannons gained Impact 1 and changed from 1 red and 3 black to 2 red and 2 black."
+				"description": "Cost reduced from 105 to 100 points. Armor reduced to 5. Gained a second Ordance upgrade. Laser cannons gained Impact 1 and changed from 1 red and 3 black to 2 red and 2 black."
 			}
         ]
     },
     "oo": {
+        "id": "oo",
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
         "cardName": "LAAT Patrol Transport",
@@ -9149,20 +9168,21 @@
         ],
         "speed": 2,
         "wounds": 8,
-        "resilience": 4,
+        "resilience": 6,
         "imageName": "LAAT Patrol Transport R.jpeg",
-        "flaw": "",
         "keywords": [
             "Armor",
             "Arsenal",
             "Cover",
             "Hover: Air",
             "Immune",
-            "Transport: Closed",
-            "Fixed"
+            "Transport",
+            "Fixed",
+            "Impact"
         ],
         "upgradeBar": [
             "pilot",
+            "ordnance",
             "ordnance",
             "comms"
         ],
@@ -9174,9 +9194,12 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 105 to 100 points."
-            }
-        ],
-        "id": "oo"
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Armor reduced to 5. Gained a second Ordance upgrade. Laser cannons gained Impact 1 and changed from 1 red and 3 black to 2 red and 2 black."
+			}
+        ]
     },
     "op": {
         "id": "op",
@@ -13859,7 +13882,6 @@
             "crew",
             "comms"
         ],
-        "history": [],
         "specialIssue": "Wookiee Defenders"
     },
     "xg": {
