@@ -4065,10 +4065,12 @@
         "title": "Darth Tyranus",
         "isUnique": true,
         "rank": "commander",
-        "cost": 185,
+        "prevCost": 185,
+        "cost": 165,
         "defense": "red",
         "surges": [
-            "crit"
+            "crit",
+            "block"
         ],
         "wounds": 6,
         "speed": 2,
@@ -4077,12 +4079,14 @@
         "keywords": [
             "Cunning",
             "Deflect",
+            "Direct",
             "Immune",
             "Makashi Mastery",
             "Master of the Force",
             "Impact",
             "Pierce",
-            "Scatter"
+            "Scatter",
+            "Suppressive"
         ],
         "upgradeBar": [
             "force",
@@ -4102,7 +4106,11 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 195 to 185 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 185 to 165 points. Gained surge to block. Gained Direct: Trooper Unit keyword. Lightning changed from 5 black to 6 black and gained Suppressive keyword."
+			}
         ]
     },
     "fy": {
@@ -4203,23 +4211,27 @@
             "comms"
         ],
         "cardType": "unit",
-        "cost": 45,
+        "prevCost": 45,
+        "cost": 64,
         "wounds": 2,
         "courage": 2,
         "speed": 2,
-        "defense": "white",
+        "defense": "red",
         "surges": [],
         "imageName": "B2 Super Battle Droids.jpeg",
         "keywords": [
-            "AI",
-            "Armor"
+            "AI"
         ],
         "cardSubtype": "droid trooper",
         "history": [
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 48 to 45 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost inceased from 45 to 64 points. Defense changed from white to red. Lost Armor keyword. Gained range 1 Wrist Rockets with 1 red and Impact 1 keyword. Arm Cannons can be used in melee now and changed from 1 black and 1 white to 2 black."
+			}
         ],
         "id": "ga"
     },
@@ -4273,7 +4285,9 @@
     "gc": {
         "id": "gc",
         "defense": "red",
-        "surges": [],
+        "surges": [
+            "hit"
+        ],
         "speed": 1,
         "resilience": 6,
         "wounds": 9,
@@ -4283,7 +4297,8 @@
         "isUnique": false,
         "rank": "heavy",
         "cardType": "unit",
-        "cost": 175,
+        "prevCost": 175,
+        "cost": 165,
         "faction": "separatists",
         "imageName": "AAT Trade Federation Battle Tank.jpeg",
         "keywords": [
@@ -4308,7 +4323,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost increased from 170 to 175 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 175 to 165 points. Gained surge to hit. Armor reduced to 5. Laser Cannon Impact changed from 1 to 2."
+			}
         ]
     },
     "gd": {
@@ -5342,24 +5361,27 @@
         "title": "Sinister Cyborg",
         "isUnique": true,
         "rank": "commander",
-        "cost": 150,
+        "prevCost": 150,
+        "cost": 130,
         "faction": "separatists",
         "imageName": "General Grievous.jpeg",
         "keywords": [
-            "Arsenal",
             "Block",
-            "Impervious",
+            "Entourage",
+            "Immune",
             "Jedi Hunter",
             "Relentless",
             "Scale",
+            "Critical",
             "Impact",
-            "Pierce"
+            "Pierce",
+            "Versatile"
         ],
         "upgradeBar": [
             "command",
             "command",
             "training",
-            "armament"
+            "gear"
         ],
         "history": [
             {
@@ -5373,7 +5395,11 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 155 to 150 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 150 to 130 points. Gained Entourage: IG-100 MagnaGuard and Immune: Pierce, and lost Arsenal and Impervious keywords. Combined lightsabers and gained Critial 1. Annihilator added to card instead of upgrade. Gained Gear upgrade and lost Armament upgrade."
+			}
         ]
     },
     "ib": {
@@ -5657,35 +5683,6 @@
             }
         ],
         "id": "ik"
-    },
-    "il": {
-        "cardSubtype": "armament",
-        "cardName": "DT-57 \"Annihilator\"",
-        "cardType": "upgrade",
-        "isUnique": true,
-        "cost": 0,
-        "imageName": "DT-57 %22Annihilator%22.jpeg",
-        "keywords": [
-            "Critical",
-            "Pierce",
-            "Versatile"
-        ],
-        "requirements": [
-            {
-                "cardName": "General Grievous"
-            }
-        ],
-        "history": [
-            {
-                "date": "27 October 2021",
-                "description": "Cost reduced from 12 to 8 points."
-            },
-            {
-                "date": "5 June 2023",
-                "description": "Cost reduced from 8 to 0 points."
-            }
-        ],
-        "id": "il"
     },
     "im": {
         "cardSubtype": "1",
@@ -7154,6 +7151,7 @@
         ]
     },
     "la": {
+        "id": "la",
         "cardType": "unit",
         "faction": "separatists",
         "cardSubtype": "droid trooper",
@@ -7162,12 +7160,15 @@
         "rank": "special",
         "cost": 64,
         "defense": "red",
-        "surges": [],
+        "surges": [
+            "hit"
+        ],
         "speed": 2,
         "wounds": 1,
         "courage": 2,
         "imageName": "BX-Series Droid Commandos.jpeg",
         "keywords": [
+            "Jump",
             "AI",
             "Impervious",
             "Scale",
@@ -7177,19 +7178,23 @@
         "upgradeBar": [
             "heavy weapon",
             "training",
-            "comms",
             "armament",
-            "grenades"
+            "grenades",
+            "comms"
         ],
         "history": [
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 68 to 64 points."
-            }
-        ],
-        "id": "la"
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Gained Jump 1 keyword."
+			}
+        ]
     },
     "lb": {
+        "id": "lb",
         "cardType": "unit",
         "displayName": "BX Droid Strike Team",
         "faction": "separatists",
@@ -7199,13 +7204,17 @@
         "rank": "special",
         "cost": 20,
         "defense": "red",
-        "surges": [],
+        "surges": [
+            "hit"
+        ],
         "speed": 2,
         "wounds": 1,
         "courage": 2,
         "imageName": "BX-Series Droid Commandos Strike Team.jpeg",
         "keywords": [
+            "Jump",
             "AI",
+            "Detachment",
             "Heavy Weapon Team",
             "Impervious",
             "Scale",
@@ -7215,11 +7224,16 @@
         "upgradeBar": [
             "heavy weapon",
             "training",
-            "comms",
             "grenades",
-            "armament"
+            "armament",
+            "comms"
         ],
-        "id": "lb"
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Gained Jump 1 and Detachment: BX-Series Droid Commandos keywords."
+			}
+        ]
     },
     "lc": {
         "id": "lc",
@@ -8667,24 +8681,32 @@
         "title": "Programmed For Strategy",
         "isUnique": false,
         "rank": "commander",
+        "prevCost": 55,
         "cost": 55,
         "faction": "separatists",
         "defense": "white",
-        "surges": [],
+        "surges": [
+            "block"
+        ],
         "speed": 2,
         "wounds": 4,
         "courage": 2,
         "imageName": "T-Series Tactical Droid.jpeg",
-        "flaw": "",
         "keywords": [
             "Bolster",
             "Direct",
-            "Sharpshooter"
+            "Exemplar"
         ],
         "upgradeBar": [
             "command",
             "comms",
             "gear"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 55 to 60 points. Gained surge to block. Gained Exemplar and lost Sharpshooter keyword. Blaster rifle changed from 1 red and 1 white to 2 block."
+			}
         ]
     },
     "ns": {
@@ -9086,7 +9108,6 @@
         "wounds": 8,
         "resilience": 6,
         "imageName": "A-A5 Speeder Truck.jpeg",
-        "flaw": "",
         "keywords": [
             "Armor",
             "Hover: Ground",
@@ -9964,7 +9985,7 @@
         "cardType": "unit",
         "defense": "red",
         "surges": [
-            "hit"
+            "crit"
         ],
         "wounds": 5,
         "courage": 2,
@@ -9973,12 +9994,14 @@
         "cardName": "Super Tactical Droid",
         "isUnique": true,
         "rank": "commander",
-        "cost": 90,
+        "prevCost": 90,
+        "cost": 75,
         "faction": "separatists",
         "imageName": "Super Tactical Droid.jpeg",
         "keywords": [
             "Strategize",
             "Direct",
+            "Exemplar",
             "Override",
             "Sharpshooter",
             "Lethal"
@@ -9993,7 +10016,11 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 95 to 90 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 90 to 75 points. Surge changed from hit to crit. Gained Exemplar keyword. Blaster rifle changed from 1 red and 1 white to 2 red and 1 black."
+			}
         ]
     },
     "pz": {
@@ -10012,16 +10039,17 @@
         "title": "Kraken",
         "isUnique": true,
         "rank": "commander",
-        "cost": 100,
+        "prevCost": 100,
+        "cost": 80,
         "faction": "separatists",
         "imageName": "Super Tactical Droid (Kraken).jpeg",
         "keywords": [
             "Strategize",
             "Charge",
+            "Exemplar",
             "Override",
             "Sharpshooter",
-            "Lethal",
-            "Pierce"
+            "Lethal"
         ],
         "upgradeBar": [
             "command",
@@ -10030,7 +10058,12 @@
             "comms",
             "gear"
         ],
-        "history": []
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 100 to 80 points. Gained Exemplar keyword. Blaster rifle changed from 2 black with Pierce keyword to 3 red with Lethal 1 keyword."
+			}
+        ]
     },
     "qa": {
         "id": "qa",
@@ -10048,12 +10081,14 @@
         "displayName": "Kalani",
         "isUnique": true,
         "rank": "commander",
-        "cost": 100,
+        "prevCost": 100,
+        "cost": 85,
         "faction": "separatists",
         "imageName": "Super Tactical Droid (Kalani).jpeg",
         "keywords": [
             "Strategize",
             "Direct",
+            "Exemplar",
             "Reinforcements",
             "Sharpshooter",
             "Lethal"
@@ -10065,7 +10100,12 @@
             "comms",
             "gear"
         ],
-        "history": []
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 100 to 85 points. Gained exemplar keyword. Melee changed from 1 black and 1 white to 2 black. Blaster rifle changed from 1 black and 1 white to 3 black."
+			}
+        ]
     },
     "qb": {
         "id": "qb",
@@ -10470,7 +10510,8 @@
         "cardName": "NR-N99 Persuader-class Tank Droid",
         "isUnique": false,
         "rank": "heavy",
-        "cost": 145,
+        "prevCost": 145,
+        "cost": 130,
         "faction": "separatists",
         "imageName": "NR-N99 Persuader-class Tank Droid.jpeg",
         "keywords": [
@@ -10484,9 +10525,15 @@
         "upgradeBar": [
             "programming",
             "ordnance",
+            "ordnance",
             "comms"
         ],
-        "history": []
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 145 to 130 points. Armor reduced to 5. Gained a second Ordnance upgrade. Ion Cannons gained Critical 1 keyword."
+			}
+        ]
     },
     "qu": {
         "id": "qu",
@@ -11420,12 +11467,14 @@
         ]
     },
     "sm": {
+        "id": "sm",
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
         "cardName": "A-A5 Speeder Truck",
         "isUnique": false,
         "rank": "heavy",
-        "cost": 75,
+        "prevCost": 75,
+        "cost": 65,
         "faction": "fringe",
         "subfaction": "raiders",
         "defense": "white",
@@ -11434,14 +11483,13 @@
         ],
         "speed": 1,
         "wounds": 8,
-        "resilience": 4,
+        "resilience": 6,
         "imageName": "A-A5 Speeder Truck2.jpeg",
-        "flaw": "",
         "keywords": [
             "Armor",
             "Hover: Ground",
             "Reposition",
-            "Transport: Closed",
+            "Transport",
             "Weak Point"
         ],
         "upgradeBar": [
@@ -11451,7 +11499,12 @@
             "hardpoint",
             "comms"
         ],
-        "id": "sm"
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 75 to 65 points. Armor reduced to 5."
+			}
+        ]
     },
     "sn": {
         "id": "sn",
@@ -12888,6 +12941,7 @@
         ]
     },
     "vj": {
+        "id": "vj",
         "cardType": "unit",
         "defense": "white",
         "surges": [
@@ -12902,7 +12956,8 @@
         "title": "Let the Wookiee Win",
         "isUnique": true,
         "rank": "heavy",
-        "cost": 190,
+        "prevCost": 190,
+        "cost": 180,
         "faction": "fringe",
         "affiliations": [],
         "imageName": "Chewbacca3.jpeg",
@@ -12917,8 +12972,12 @@
             "Impact"
         ],
         "upgradeBar": [],
-        "history": [],
-        "id": "vj"
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 190 to 180 points. Armor reduced to 5."
+			}
+        ]
     },
     "vk": {
         "cardType": "unit",
@@ -12938,15 +12997,22 @@
         ],
         "imageName": "Ewok Skirmishers.jpeg",
         "keywords": [
+            "Mercenary",
             "Low Profile",
             "Unhindered"
         ],
         "upgradeBar": [
             "heavy weapon",
             "personnel",
+            "personnel",
             "training"
         ],
-        "history": [],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Gained Mercenary: Rebels keyword. Gained a second Personnel upgrade."
+			}
+        ],
         "id": "vk"
     },
     "vl": {
@@ -13129,6 +13195,7 @@
         "history": []
     },
     "vu": {
+        "id": "vu",
         "cardType": "unit",
         "defense": "white",
         "surges": [],
@@ -13146,6 +13213,7 @@
         ],
         "imageName": "Ewok Slingers.jpeg",
         "keywords": [
+            "Mercenary",
             "Independent",
             "Low Profile",
             "Target",
@@ -13155,10 +13223,15 @@
         "upgradeBar": [
             "heavy weapon",
             "personnel",
+            "personnel",
             "training"
         ],
-        "history": [],
-        "id": "vu"
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Gained Mercenary: Rebels keyword. Gained a second Personnel upgrade."
+			}
+        ]
     },
     "vv": {
         "cardName": "C-3P0",
@@ -13498,6 +13571,7 @@
         "id": "wm"
     },
     "wn": {
+        "id": "wn",
         "cardType": "unit",
         "defense": "red",
         "surges": [
@@ -13511,6 +13585,7 @@
         "title": "Public Leader of the Geonosians",
         "isUnique": true,
         "rank": "commander",
+        "prevCost": 80,
         "cost": 85,
         "faction": "separatists",
         "imageName": "Poggle the Lesser.jpeg",
@@ -13527,8 +13602,12 @@
             "comms",
             "gear"
         ],
-        "history": [],
-        "id": "wn"
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 85 to 80 points."
+			}
+        ]
     },
     "wo": {
         "cardType": "unit",
@@ -13795,22 +13874,28 @@
         "title": "Prototype Assassin Droids",
         "isUnique": false,
         "rank": "corps",
-        "cost": 60,
+        "prevCost": 60,
+        "cost": 56,
         "faction": "separatists",
         "imageName": "IG-100 MagnaGuard2.jpeg",
         "keywords": [
             "AI",
             "Charge",
-            "Guardian",
-            "Unhindered",
-            "Special Issue"
+            "Immune",
+            "Special Issue",
+            "Unhindered"
         ],
         "upgradeBar": [
             "heavy weapon",
             "training",
             "grenades"
         ],
-        "history": [],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 60 to 56 points."
+			}
+        ],
         "specialIssue": "Experimental Droids"
     },
     "xe": {
@@ -13829,13 +13914,14 @@
         "title": "Prototype Tank Droid",
         "isUnique": false,
         "rank": "heavy",
-        "cost": 145,
+        "prevCost": 145,
+        "cost": 130,
         "faction": "separatists",
         "imageName": "NR-N99 Persuader-class Tank Droid2.jpeg",
         "keywords": [
             "Armor",
             "Arsenal",
-            "Command Node",
+            "Direct",
             "Programmed",
             "Reposition",
             "Weak Point",
@@ -13846,9 +13932,15 @@
         "upgradeBar": [
             "programming",
             "ordnance",
+            "ordnance",
             "comms"
         ],
-        "history": [],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 145 to 130 points. Armor reduced to 5. Gained a second Ordnance upgrade. Ion Cannons gained Impact 1 keyword. Heavy Blasters gained Critical 1 keyword. Gained Direct: Core Trooper Unit and lost Command Node keywords."
+			}
+        ],
         "specialIssue": "Experimental Droids"
     },
     "xf": {
