@@ -21,10 +21,8 @@ import ListChipDropdown from './ListChipDropdown';
 import DataContext from 'context/DataContext';
 import ErrorFallback from 'common/ErrorFallback';
 import factions from 'constants/factions';
-import ftLogoLight from 'assets/ftLogoLight.png';
-import ftLogoDark from 'assets/ftLogoDark.png';
-import lhqLogoLight from 'assets/lhqLogoLight.png';
-import lhqLogoDark from 'assets/lhqLogoDark.png';
+import llbLogoLight from 'assets/llbLogoLight.png';
+import llbLogoDark from 'assets/llbLogoDark.png';
 
 const useStyles = makeStyles(theme => ({
   expand: {
@@ -91,15 +89,8 @@ function Home() {
           >
             <Grid item>
               <img
-                alt="Fifth Trooper Logo"
-                src={userSettings.themeColor === 'light' ? ftLogoLight : ftLogoDark}
-                style={{ width: 150, height: 'auto' }}
-              />
-            </Grid>
-            <Grid item>
-              <img
-                alt="Legion HQ Logo"
-                src={userSettings.themeColor === 'light' ? lhqLogoLight : lhqLogoDark}
+                alt="Legion Builder Logo"
+                src={userSettings.themeColor === 'light' ? llbLogoLight : llbLogoDark}
                 style={{ width: 400, height: 'auto' }}
               />
             </Grid>

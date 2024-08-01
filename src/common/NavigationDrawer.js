@@ -63,7 +63,7 @@ function NavigationDrawer() {
               goToPage('/news');
             }}
           />
-          <NavDrawerLink
+          {/* <NavDrawerLink
             text="Cards"
             selected={pathname === '/cards'}
             icon={routes['/cards'].icon}
@@ -71,7 +71,7 @@ function NavigationDrawer() {
               setIsDrawerOpen(false);
               goToPage('/cards');
             }}
-          />
+          /> */}
         </List>
         <Divider />
         <List dense={true}>

@@ -34,14 +34,27 @@ function Info() {
           All game images, character names, and game pieces are © FFG & © Disney.
         </Typography>
         <div style={{ height: 150 }} />
-        <Typography>
+        {/* <Typography>
           Want to Donate?
-        </Typography>
+        </Typography> */}
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Cookie"
         />
-        <a
+        <Typography>I'd put the link to Nick's tip jar here, but it seems to be offline.</Typography>
+        <Typography>I'll add one once I think I've earned one. Thanks for your support!</Typography>
+        <Typography></Typography>
+        <div style={{display:"flex", justifyContent:'flexStart', flexDirection:'column', alignItems:"flexStart"}}>       
+          <p>Roadmap:</p>
+          <p>+ Get the ol' LegionHQ code running</p>
+          <p>+ With all the new cards</p>
+          <p>+ ...and a 2.5 toggle</p>
+          <p>- LAUNCH!</p>
+          <p>- Finish list validation (...a year after I started it)</p>
+          <p>- Make list editing nicer for mobile devices</p>
+        </div>
+ 
+        {/* <a
           target="_blank"
           rel="noopener noreferrer"
           className="bmc-button"
@@ -56,7 +69,7 @@ function Info() {
           >
             Buy me a coffee
           </span>
-        </a>
+        </a> */}
       </div>
     </div>
   );

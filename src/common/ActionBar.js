@@ -8,10 +8,8 @@ import {
 import { fade, makeStyles } from '@material-ui/core/styles';
 import { Menu as MenuIcon, Search as SearchIcon } from '@material-ui/icons';
 import DataContext from 'context/DataContext';
-import ftLogoLight from 'assets/ftLogoLight.png';
-import ftLogoDark from 'assets/ftLogoDark.png';
-import lhqLogoLight from 'assets/lhqLogoLight.png';
-import lhqLogoDark from 'assets/lhqLogoDark.png';
+import llbLogoLight from 'assets/llbLogoLight.png';
+import llbLogoDark from 'assets/llbLogoDark.png';
 
 const useStyles = makeStyles(theme => ({
   grow: { flexGrow: 1 },
@@ -77,22 +75,10 @@ function DefaultBar() {
       </IconButton>
       <img
         alt="Legion HQ Logo"
-        src={userSettings.themeColor === 'light' ? lhqLogoLight : lhqLogoDark}
+        src={userSettings.themeColor === 'light' ? llbLogoLight : llbLogoDark}
         style={{ height: 35 }}
       />
       <div className={classes.grow} />
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://thefifthtrooper.com/"
-        style={{ marginTop: 4 }}
-      >
-        <img
-          alt="Fifth Trooper Logo"
-          src={userSettings.themeColor === 'light' ? ftLogoLight : ftLogoDark}
-          style={{ height: 35 }}
-        />
-      </a>
       {false && (
         <div className={classes.search}>
           <div className={classes.searchIcon}>

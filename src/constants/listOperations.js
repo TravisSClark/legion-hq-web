@@ -527,7 +527,7 @@ function appendMissionTTSJSON(cardList, ttsArray){
 }
 
 function generateTTSJSONText(list, userSettings) {
-  const ttsJSON = { author: 'Legion HQ' };
+  const ttsJSON = { author: 'Legion List Builder' };
 
   ttsJSON.listname = list.title;
 
