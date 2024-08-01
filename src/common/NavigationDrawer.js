@@ -41,7 +41,7 @@ function NavigationDrawer() {
       <div style={{ width: 250 }}>
         <List>
           <ListItem>
-            <ListItemText primary="Legion HQ" secondary="The Fifth Trooper" />
+            <ListItemText primary="Legion List Builder"/>
           </ListItem>
         </List>
         <List dense={true}>
