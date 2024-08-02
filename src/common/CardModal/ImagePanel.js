@@ -16,17 +16,17 @@ function ImagePanel({ card, usingOriginalImage = false }) {
   let url =`${urls.cdn}/${cardType}Cards/${usingOriginalImage ? `original-${imageName}` : imageName}`;
   return (
     <React.Fragment>
-      <ExpansionPanel defaultExpanded={!usingOriginalImage}>
+      {/* <ExpansionPanel defaultExpanded={!usingOriginalImage}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
           <Typography>{usingOriginalImage ? 'Original Card Image' : 'Current Card Image'}</Typography>
         </ExpansionPanelSummary>
-        <ExpansionPanelDetails style={{ padding: '0px 24px 24px' }}>
+        <ExpansionPanelDetails style={{ padding: '0px 24px 24px' }}> */}
           <Img
             src={url}
             style={{ width: '100%' }}
           />
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+        {/* </ExpansionPanelDetails>
+      </ExpansionPanel> */}
     </React.Fragment>
   );
 };

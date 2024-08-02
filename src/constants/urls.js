@@ -1,9 +1,8 @@
 const urls = {
-  cdn: 'https://sonoflegionhqimages.s3.us-east-2.amazonaws.com',
-  cdn2: 'https://sonoflegionhqimages.s3.us-east-2.amazonaws.com',
-  api: 'https://api.legion-hq.com:3001',
-  //listPath: 'https://legionhq.thefifthtrooper.com/list'
-  listPath: 'https://master.d116nzo4zhfobp.amplifyapp.com/list'
+  cdn: 'https://d35mqzen1fcwfi.cloudfront.net', // new
+  //cdn: 'https://d2j4aq9mja0i3a.cloudfront.net', // legionhq
+  api: 'https://api.legionlistbuilder.com:3001',
+  listPath: 'https://legionlistbuilder.com/list'
 };
 
 

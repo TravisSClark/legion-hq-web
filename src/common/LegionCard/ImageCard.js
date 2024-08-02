@@ -49,8 +49,6 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
 
   const listContext = useContext(ListContext);
 
-  let oldCards = listContext.userSettings.useOldCards;
-
   let url =  `${urls.cdn}/${cardType}Cards/${imageName}`;
 
   return (
@@ -59,8 +57,8 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
         className={clsx(classes.card,
           { [classes.selected]: isSelected },
           { [classes.unitCard]: cardType === 'unit' },
-          { [classes.unitCard]: cardType === 'battle' && (!isSkirmish && oldCards) },
-          { [classes.commandCard]: cardType === 'battle' && (isSkirmish || !oldCards) },
+          { [classes.unitCard]: cardType === 'battle' && !isSkirmish },
+          { [classes.commandCard]: cardType === 'battle' && isSkirmish },
           { [classes.upgradeCard]: cardType === 'upgrade' && ! isDoubleSided },
           { [classes.doubleUpgrade]: isDoubleSided },
           { [classes.commandCard]: cardType === 'command' },

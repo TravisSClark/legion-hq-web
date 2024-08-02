@@ -45,7 +45,7 @@ const settings = {
     },
     {
       key: 'useOldCards',
-      name: 'Use Old (2.5) Cards',
+      name: 'Use 2.5 Cards ("Old" cards and pts)',
       values: [
         { key: true, name: 'Yes' },
         { key: false, name: 'No' }

@@ -3,17 +3,17 @@ const battleForcesDict = {
       name: 'Echo Base Defenders',
       faction: 'rebels',
       linkId: 'ebd',
-      commander: ['ab', 'ad', 'ac', 'bi',  'xd', 'xe','xg'],
-      operative: ['jg', 'ji', 'af',  'xf'],
-      corps: ['gv', 'if',   'xk'],
+      commander: ['ab', 'ad', 'ac', 'bi',  'Ba', 'Bb','Bd'],
+      operative: ['jg', 'ji', 'af',  'Bc'],
+      corps: ['gv', 'if',   'Bh'],
       special: [],
-      support: ['an', 'he',   'xj'],
+      support: ['an', 'he',   'Bg'],
       heavy: ['ap', 'xn'],
       allowedUniqueUpgrades: ['fk'],
       rules:{
         noFieldComm: true
       },
-      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2022/10/StarWarsLegionBFRulesSheetEBD.pdf',
+      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_EchoBaseDefenders.pdf',
       'standard mode': {
         commander: [1, 4],
         operative: [0, 3],
@@ -37,17 +37,21 @@ const battleForcesDict = {
       name: 'Bright Tree Village',
       faction: 'rebels',
       linkId:'btv',
-      commander: ['vv', 'ac', 'ab', 've', 'wd', 'xd'],
+      commander: ['vv', 'ac', 'ab', 've', 'wd', 'xd', 'Ba'],
       operative: ['af'],
-      corps: ['vk', 'ah', 'zh', 'xh'],
+      corps: ['vk', 'ah', 'zh', 'xh', 'Be'],
       special: ['vu', 'ak', 'zg'],
       support: [],
       heavy: ['vj', 'zf'],
       allowedUniqueUpgrades: ['vq', 'wa', 'wb', 'wc'],
       rules: {
-        countMercs: true
+        countMercs: true,
+        // TODO minimum 2 non-wok rebels
+        // TODO maxes for commandos and troopers
+        // TODO - more generally, add validation/checks for max Call to Arms eta al
+
       },
-      ruleUrl: 'https://static1.squarespace.com/static/5ce432b1f9d2be000134d8ae/t/6480bd67c7a4c84f6c1bf2af/1686158697261/Star+Wars+Legion+BF+Rules+Sheet+Bright+Tree+Village+%281%29.pdf',
+      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2023/07/StarWarsLegionBFRulesSheetBrightTreeVillage1.pdf',
       'standard mode': {
         commander: [1, 5],
         operative: [0, 4],
@@ -71,16 +75,16 @@ const battleForcesDict = {
       name: 'Blizzard Force',
       faction: 'empire',
       linkId: 'bf',
-      commander: ['at', 'au', 'ar'],
+      commander: ['at', 'au', 'ar', 'Bp', 'Bq'],
       operative: [],
-      corps: ['ay', 'az', 'sr'],
+      corps: ['ay', 'az', 'sr', 'Bt','Bu','Bv'],
       special: [],
-      support: ['bf', 'be'],
-      heavy: ['bg'],
+      support: ['bf', 'be', 'xy'],
+      heavy: ['bg', 'yd'],
       rules: {
-        noFieldComm: true
+        noFieldComm: true,
       },
-      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2023/09/Star-Wars-Legion-BF-Rules-Sheet-BF2.1.pdf',
+      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_BlizzardForce.pdf',
       allowedUniqueUpgrades: ['fl'],
       'standard mode': {
         commander: [1, 2],
@@ -103,13 +107,17 @@ const battleForcesDict = {
     name: 'Imperial Remnant',
     faction: 'empire',
     linkId: 'ir',
-    commander: ['ui', 'ar'],
+    commander: ['ui', 'ar', 'Bq'],
     operative: [],
-    corps: ['ay', 'hg', 'uy', 'uz'],
+    corps: ['ay', 'hg', 'uy', 'uz',  'Bt','Bs'],
     special: [],
-    support: ['bf', 'be'],
-    heavy: ['tm'],
-    ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2023/09/ImperialRemnantRulesSheet.pdf',
+    support: ['bf', 'be','xy'],
+    heavy: ['tm', 'ya'],
+    rules:[
+      // TODO: 1-of rule for corps
+      // TODO sf-as-corps
+    ],
+    ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ImperialRemnant-1.pdf',
     allowedUniqueUpgrades: ['uj', 'gm'],
     'standard mode': {
       commander: [1, 2],
@@ -134,13 +142,13 @@ const battleForcesDict = {
     name: 'Tempest Force',
     faction: 'empire',
     linkId: 'tf',
-    commander: ['ar'],
+    commander: ['ar', 'Bq'],
     operative: [],
-    corps: ['ay'],
+    corps: ['ay', 'Bt'],
     special: ['ba'],
     support: ['bf'],
-    heavy: ['we', 'bg'],
-    ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2023/07/SWL_TempestForce.pdf',
+    heavy: ['we', 'bg', 'yd', 'yc'],
+    ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_TempestForce-1.pdf',
     allowedUniqueUpgrades: [],
     'standard mode': {
       commander: [1, 2],
@@ -163,14 +171,14 @@ const battleForcesDict = {
       name: '501st Legion',
       faction: 'republic',
       linkId: '5l',
-      commander: ['na', 'fy', 'ns'],
+      commander: ['na', 'fy', 'ns',  'yg', ],
       operative: [],
-      corps: ['fz'],
-      special: ['kz', 'ky'],
-      support: ['mb', 'ic'],
-      heavy: ['oo'],
-      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2022/10/StarWarsLegionBFRulesSheet501.pdf',
-      allowedUniqueUpgrades: ['lh', 'lg'],
+      corps: ['fz',  'yj'],
+      special: ['kz', 'ky', 'yk', 'yl'],
+      support: ['mb', 'ic', 'yp', 'xj', 'xp'],
+      heavy: ['oo', 'yn'],
+      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_501st.pdf',
+      allowedUniqueUpgrades: ['lh', 'lg', 'Fm', 'Fp'],
       'standard mode': {
         commander: [1, 2],
         operative: [0, 1],
@@ -193,13 +201,18 @@ const battleForcesDict = {
       name: 'Wookiee Defenders',
       faction: 'republic',
       linkId: 'wd',
-      commander: ['ol', 'po', 'ph'],
+      commander: ['ol', 'po', 'ph', 'yf'],
       operative: [],
-      corps: ['fz', 'xg'],
+      corps: ['fz', 'xg', 'yj',],
       special: ['kz', 'pg'],
-      support: ['xf', 'ic'],
-      heavy: ['gb', 'qs'],
-      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2023/09/SWL_WookieesDefenders-1.pdf',
+      support: ['qh', 'xf', 'ic', 'yo', ],
+      heavy: ['gb', 'qs', 'ym'],
+      rules:[
+        // TODO, 0-1 arc, 0-2 clones, 0-1 barc, 0-1 saber?, 0-1 isp?
+        // TODO: wookiee warriors (noble fighters) sf-as-corps
+        // TODO min 3 wookiee troopers
+      ],
+      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_WookieesDefenders.pdf',
       allowedUniqueUpgrades: ['lh', 'lg'],
       'standard mode': {
         commander: [1, 2],
@@ -222,12 +235,12 @@ const battleForcesDict = {
       name: 'Separatist Invasion',
       faction: 'separatists',
       linkId: 'si',
-      commander: ['fx', 'ia', 'nr'],
+      commander: ['fx', 'ia', 'nr', 'yv','yw','yq'],
       operative: ['nb'],
-      corps: ['gx'],
+      corps: ['gx',  'yx'],
       special: ['px'],
       support: ['ie', 'mc'],
-      heavy: ['gc'],
+      heavy: ['gc','zc'],
       rules: {
         noFieldComm: true
       },
@@ -257,13 +270,18 @@ const battleForcesDict = {
       name: 'Experimental Droids',
       faction: 'separatists',
       linkId: 'ed',
-      commander: ['py', 'nr', 'pz', 'qa'],
+      commander: ['py', 'nr', 'pz', 'qa',  'yr', 'ys', 'yt', 'yq'],
       operative: [],
-      corps: ['gx', 'ga', 'xd'],
-      special: ['la'],
+      corps: ['gx', 'ga', 'xd', 'yx', 'yy' ],
+      special: ['la','yz', 'zb'],
       support: ['ie'],
-      heavy: ['xe'],
-      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2023/09/SWL_ExperimentalDroids-1.pdf',
+      heavy: ['qt', 'xe', 'zd', 'ze'],
+      rules:[
+        // TODO proto maganas as corps
+        // TODO 0-2 b1s, 0-2 b2s, 0-2 commandos
+
+      ],
+      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ExperimentalDroids.pdf',
       allowedUniqueUpgrades: [],
       'standard mode': {
         commander: [1, 2],
@@ -293,6 +311,7 @@ const battleForcesDict = {
       special: ['re'],
       support: ['sq'],
       heavy: ['sm', 'zi'],
+      forceAffinity: 'dark side',
       rules: {
         countMercs: true
       },

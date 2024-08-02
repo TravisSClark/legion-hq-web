@@ -33,7 +33,7 @@ function CardModal({ id, isOpen, handleClose }) {
         <ImagePanel card={card} />
         <KeywordsPanel cardKeywords={card.keywords} />
         <HistoryPanel history={card.history} />
-        <ImagePanel card={card} usingOriginalImage={true} />
+        {/* <ImagePanel card={card} usingOriginalImage={true} /> */}
       </DialogContent>
       {isFullscreen && (
         <DialogActions>

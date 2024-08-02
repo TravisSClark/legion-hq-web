@@ -45,6 +45,7 @@ function CardSelector() {
   let invalidIds = [];
   const { action } = cardPaneFilter;
   if (action === 'UNIT') {
+    console.log(userSettings.useOldCards);
     validIds = getEligibleUnitsToAdd(currentList, cardPaneFilter.rank, userSettings);
     clickHandler = (unitId) => handleAddUnit(unitId);
     header = (
@@ -67,7 +68,8 @@ function CardSelector() {
       cardPaneFilter.upgradeType,
       cardPaneFilter.unitId,
       cardPaneFilter.upgradesEquipped,
-      cardPaneFilter.additionalUpgradeSlots
+      cardPaneFilter.additionalUpgradeSlots, 
+      userSettings
     );
     validIds = upgradeIds.validIds;
     invalidIds = upgradeIds.invalidIds
@@ -93,7 +95,8 @@ function CardSelector() {
       cardPaneFilter.upgradeType,
       cardPaneFilter.counterpartId,
       cardPaneFilter.upgradesEquipped,
-      cardPaneFilter.additionalUpgradeSlots
+      cardPaneFilter.additionalUpgradeSlots, 
+      userSettings
     );
     validIds = upgradeIds.validIds;
     invalidIds = upgradeIds.invalidIds;
@@ -111,7 +114,7 @@ function CardSelector() {
       cardPaneFilter.unitId,
       cardPaneFilter.upgradeIndex,
       cardPaneFilter.upgradesEquipped,
-      cardPaneFilter.additionalUpgradeSlots
+      cardPaneFilter.additionalUpgradeSlots, userSettings
     );
     validIds = upgradeIds.validIds;
     invalidIds = upgradeIds.invalidIds;
@@ -136,7 +139,7 @@ function CardSelector() {
       counterpartId,
       upgradeIndex,
       upgradesEquipped,
-      additionalUpgradeSlots
+      additionalUpgradeSlots, userSettings
     );
     validIds = upgradeIds.validIds;
     invalidIds = upgradeIds.invalidIds;
@@ -148,7 +151,7 @@ function CardSelector() {
     );
     header = <Title title="Add loadout upgrade" />;
   } else if (action === 'COMMAND') {
-    const commandIds = getEligibleCommandsToAdd(currentList);
+    const commandIds = getEligibleCommandsToAdd(currentList,userSettings);
     validIds = commandIds.validIds;
     invalidIds = commandIds.invalidIds;
     clickHandler = (commandId) => handleAddCommand(commandId)
@@ -172,7 +175,7 @@ function CardSelector() {
       );
     }
   } else if (action === 'CONTINGENCY') {
-    const commandIds = getEligibleContingenciesToAdd(currentList);
+    const commandIds = getEligibleContingenciesToAdd(currentList, userSettings);
     validIds = commandIds.validIds;
     invalidIds = commandIds.invalidIds;
     clickHandler = (commandId) => handleAddContingency(commandId);

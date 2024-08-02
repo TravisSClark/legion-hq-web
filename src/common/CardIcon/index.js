@@ -22,7 +22,7 @@ function CardIcon({
   
 
   let url = `${urls.cdn}/${card.cardType}Icons/${card.imageName}`;
-  if(card.isNew){
+  if(card.oldCard || card.isNew){ // TODO
     url = `${urls.cdn}/${card.cardType}Cards/${card.imageName}`;
     console.log('url: ' + url);
   }
