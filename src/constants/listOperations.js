@@ -268,7 +268,7 @@ function generateTournamentText(
 
   let battleDeck = '';
 
-  if(list.userSettings.useOldCards){
+  if(list.isUsingOldPoints){
     battleDeck += printMissionCards(list.objectiveCards, "Objectives");
     battleDeck += printMissionCards(list.deploymentCards, "Deployments");
     battleDeck += printMissionCards(list.conditionCards, "Conditions");
@@ -383,7 +383,7 @@ function generateHTMLText(
   }
 
   let battleDeck = '';
-  if(list.userSettings.useOldCards){
+  if(list.isUsingOldPoints){
     battleDeck += generateMissionCardHTML(list.objectiveCards, "Objectives");
     battleDeck += generateMissionCardHTML(list.deploymentCards, "Deployments");
     battleDeck += generateMissionCardHTML(list.conditionCards, "Conditions");
@@ -621,7 +621,7 @@ function generateTTSJSONText(list, userSettings) {
     }
   }
 
-  if(list.userSettings.useOldCards){
+  if(list.isUsingOldPoints){
     ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };
   } else{
       // TODO - check new TTS standard
@@ -635,7 +635,7 @@ function generateTTSJSONText(list, userSettings) {
     ttsJSON.battlefieldDeck.scenario =  "standard";
   }
 
-  if(list.userSettings.useOldCards){
+  if(list.isUsingOldPoints){
     appendMissionTTSJSON(list.objectiveCards, ttsJSON.battlefieldDeck.objective);
     appendMissionTTSJSON(list.deploymentCards, ttsJSON.battlefieldDeck.deployment);
     appendMissionTTSJSON(list.conditionCards, ttsJSON.battlefieldDeck.conditions);
@@ -991,13 +991,12 @@ function killUnit(list, index) {
   return list;
 }
 
-function isGoodForAgeMode(card, userSettings){
+function isGoodForAgeMode(card, list){
   // TODO - make this a func, use bool instead of string
 
 
-  let invalid = (((card.isOld || card.newCard) && !userSettings.useOldCards) ||
-    ((card.isNew || card.oldCard) && userSettings.useOldCards));
-  console.log(card.cardName + " " + userSettings.useOldCards + " " + invalid);
+  let invalid = (((card.isOld || card.newCard) && !list.isUsingOldPoints) ||
+    ((card.isNew || card.oldCard) && list.isUsingOldPoints));
   return !invalid;
 }
 
@@ -1008,10 +1007,8 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     const id = cardsById[i];
     const card = cards[id];
 
-    // TODO - make this a func, use bool instead of string
-    if(!isGoodForAgeMode(card, userSettings)) continue;
+    if(!isGoodForAgeMode(card, list)) continue;
 
-    // if (card.cardType !== 'unit') continue;
     if (card.rank !== rank) continue;
 
     if((id === 'AA' || id === 'AK') && userSettings.showStormTide != 'yes')
@@ -1022,8 +1019,6 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     } else if (!list.mode.includes('storm tide') && id === 'AK') {
       continue;
     }
-
-
 
     if(!list.battleForce)
     {
@@ -1037,17 +1032,18 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     if (card.specialIssue && card.specialIssue !== list.battleForce)continue;
 
     // TODO allow the add, ping user for bad list afterwards...
-    if (card.detachment) {
-      for (let i = 0; i < list.units.length; i++) {
-        const unit = list.units[i];
-        if (unit.unitId === card.detachment) {
-          validUnitIds.push(id);
-          break;
-        }
-      }
-    } else {
+    // if (card.detachment) {
+    //   for (let i = 0; i < list.units.length; i++) {
+    //     const unit = list.units[i];
+    //     if (unit.unitId === card.detachment) {
+    //       validUnitIds.push(id);
+    //       break;
+    //     }
+    //   }
+    // } 
+    // else {
       validUnitIds.push(id);
-    }
+    // }
   }
   return sortIds(validUnitIds);
 }
@@ -1225,7 +1221,7 @@ function getEligibleBattlesToAdd(list, type) {
   return { validIds, invalidIds };
 }
 
-function getEligibleContingenciesToAdd(list, userSettings) {
+function getEligibleContingenciesToAdd(list) {
   if (!list.contingencies) list.contingencies = [];
   const validCommandIds = [];
   const invalidCommandIds = [];
@@ -1239,7 +1235,7 @@ function getEligibleContingenciesToAdd(list, userSettings) {
   cardIdsByType['command'].forEach(id => {
     const card = cards[id];
     const useNewCards = true; // TODO
-    if(!isGoodForAgeMode(card, userSettings)) return;
+    if(!isGoodForAgeMode(card, list)) return;
     // if (card.cardType !== 'command') return;
     if (list.commandCards.includes(id)) return;
     if (list.contingencies.includes(id)) return;
@@ -1261,7 +1257,7 @@ function getEligibleContingenciesToAdd(list, userSettings) {
   };
   }
 
-function getEligibleCommandsToAdd(list, userSettings) {
+function getEligibleCommandsToAdd(list) {
   const stormTideCommands = {
     '500-point mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
     'standard mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
@@ -1281,7 +1277,7 @@ function getEligibleCommandsToAdd(list, userSettings) {
   });
   cardIdsByType['command'].forEach(id => {
     const card = cards[id];
-    if(!isGoodForAgeMode(card, userSettings)) return;
+    if(!isGoodForAgeMode(card, list)) return;
     // if (card.cardType !== 'command') return;
     if (list.commandCards.includes(id)) return;
     if (list.contingencies && list.contingencies.includes(id)) return;
@@ -1326,7 +1322,7 @@ function getEligibleCommandsToAdd(list, userSettings) {
 }
 
 function getEquippableUpgrades(
-  list, upgradeType, id, upgradesEquipped, additionalUpgradeSlots, userSettings
+  list, upgradeType, id, upgradesEquipped, additionalUpgradeSlots
 ) {
   const impRemnantUpgrades = ['ej', 'ek', 'fv', 'iy', 'fu', 'gm', 'gl', 'em', 'en', 'ja'];
   const validUpgradeIds = [];
@@ -1338,7 +1334,7 @@ function getEquippableUpgrades(
     const id = cardIdsByType['upgrade'][i];
     const card = cards[id];
 
-    if(!isGoodForAgeMode(card, userSettings)) continue;
+    if(!isGoodForAgeMode(card, list)) continue;
 
     if (id === 'nc') continue; // duplicate card
 
@@ -1356,7 +1352,7 @@ function getEquippableUpgrades(
     if (faction === 'rebels' || faction === 'republic') unitCard['light side'] = true;
     else if (faction === 'separatists' || faction === 'empire' || faction === 'mercenary') unitCard['dark side'] = true;
 
-    if (unitCard.keywords.includes('Tempted') && userSettings.useOldCards) {
+    if (unitCard.keywords.includes('Tempted') && list.isUsingOldPoints) {
       unitCard['light side'] = true;
       unitCard['dark side'] = true;
     }

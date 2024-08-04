@@ -75,7 +75,7 @@ function ListExtras() {
         timeout={1000}
         timeoutMessage="Changing Points..."
         icon={<UsePrevIcon />}
-        label={currentList.isUsingOldPoints ? "Using Old Points" : "Using New Points"}
+        label={currentList.isUsingOldPoints ? "Using 2.5 Cards/Points" : "Using New Points"}
         handleClick={handleToggleUsingOldPoints}
       />
     </div>

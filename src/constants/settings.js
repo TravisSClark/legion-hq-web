@@ -6,7 +6,6 @@ const settings = {
     chipSize: 'medium',
     builderOrientation: 'right',
     cascadeUpgradeSelection: 'yes',
-    useOldCards:false,
     showStormTide:false
   },
   list: [
@@ -41,14 +40,6 @@ const settings = {
       values: [
         { key: 'yes', name: 'Yes' },
         { key: 'no', name: 'No' }
-      ]
-    },
-    {
-      key: 'useOldCards',
-      name: 'Use 2.5 Cards ("Old" cards and pts)',
-      values: [
-        { key: true, name: 'Yes' },
-        { key: false, name: 'No' }
       ]
     },
     {

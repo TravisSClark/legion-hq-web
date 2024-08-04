@@ -86,8 +86,8 @@ const routes = {
 const newsPosts = [
   {
     "title": "New Edition(?) New(?) Listbuilder",
-    "date": "X August 2024",
-    "body": "LegionHQ is to be sunset, huge thanks to Nick for all the hard work he's done to make LegionHQ what it was.\n"
+    "date": "4 August 2024",
+    "body": "LegionHQ is to be sunset, enter Legion List Builder. Currently using ~99% of the old LHQ codebase, got some plans to make new features and improve the user experience! Huge thanks to Nick for all the hard work he's done to make LegionHQ and keep it going for so many years.\n"
     
   },
 ];

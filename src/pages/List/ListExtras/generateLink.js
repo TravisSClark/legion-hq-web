@@ -39,7 +39,7 @@ function generateLink(list, userSettings) {
   if (list.contingencies)
     list.contingencies.forEach(commandId => urlStrings.push(commandId));
 
-  if(userSettings.useOldCards){
+  if(list.isUsingOldPoints){
     list.objectiveCards.forEach(i => urlStrings.push(i));
     list.deploymentCards.forEach(i => urlStrings.push(i));
     list.conditionCards.forEach(i => urlStrings.push(i));

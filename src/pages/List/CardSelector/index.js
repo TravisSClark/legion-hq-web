@@ -45,7 +45,6 @@ function CardSelector() {
   let invalidIds = [];
   const { action } = cardPaneFilter;
   if (action === 'UNIT') {
-    console.log(userSettings.useOldCards);
     validIds = getEligibleUnitsToAdd(currentList, cardPaneFilter.rank, userSettings);
     clickHandler = (unitId) => handleAddUnit(unitId);
     header = (

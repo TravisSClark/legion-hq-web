@@ -25,16 +25,16 @@ function KeywordsPanel({ cardKeywords }) {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails style={columnContainerStyles}>
           {cardKeywords.map(keyword => (
-            <div key={keyword}>
-              <Typography variant="caption" color="textSecondary">
-                {keyword}
-              </Typography>
-              <div style={{ flexGrow: 1 }} />
-              <Typography variant="body2">
-                {keyword in keywords ? keywords[keyword] : 'No definition found.'}
-              </Typography>
-              <Divider />
-            </div>
+            <ExpansionPanel>
+              <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography variant="caption" color="textSecondary">{keyword}</Typography>
+              </ExpansionPanelSummary>
+              <div key={keyword}>
+                <Typography variant="body2">
+                  {keyword in keywords ? keywords[keyword].full : 'No definition found.'}
+                </Typography>
+              </div>
+            </ExpansionPanel>
           ))}
         </ExpansionPanelDetails>
       </ExpansionPanel>

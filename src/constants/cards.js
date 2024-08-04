@@ -1041,7 +1041,8 @@ const cards = JSON.parse(JSON.stringify({
         "faction": "empire",
         "isUnique": true,
         "rank": "commander",
-        "cost": 190,
+        "cost":170,
+        "oldCost": 190,
         "defense": "red",
         "surges": [
             "crit",
@@ -1094,7 +1095,8 @@ const cards = JSON.parse(JSON.stringify({
         "title": "Dark Lord of the Sith",
         "isUnique": true,
         "rank": "commander",
-        "cost": 190,
+        "cost": 170,
+        "oldCost":190,
         "faction": "empire",
         "imageName": "Darth Vader.jpeg",
         "keywords": [
@@ -1581,7 +1583,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "74-Z Speeder Bikes",
         "isUnique": false,
         "rank": "support",
-        "cost": 70,
+        "oldCost": 70,
+        "cost":80,
         "faction": "empire",
         "imageName": "74-Z Speeder Bikes.jpeg",
         "keywords": [
@@ -2231,7 +2234,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "Recon Intel",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 2,
+        "oldCost": 2,
+        "cost":5,
         "imageName": "Recon Intel.jpeg",
         "keywords": [
             "Scout"
@@ -2568,6 +2572,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 40,
+        "oldCost": 10,
         "imageName": "Force Push.jpeg",
         "keywords": [],
         "requirements": [],
@@ -2755,7 +2760,6 @@ const cards = JSON.parse(JSON.stringify({
         "keywords": [
             "Impact",
             "Ion",
-            "Ion Token"
         ],
         "requirements": [
             {
@@ -2859,7 +2863,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "DH-447 Sniper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 28,
+        "cost":38,
+        "oldCost": 28,
         "imageName": "DH-447 Sniper.jpeg",
         "keywords": [
             "High Velocity",
@@ -3017,7 +3022,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "DLT-19x Sniper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 28,
+        "cost": 38,
+        "oldCost":28,
         "imageName": "DLT-19x Sniper.jpeg",
         "keywords": [
             "High Velocity",
@@ -3062,7 +3068,6 @@ const cards = JSON.parse(JSON.stringify({
         "keywords": [
             "Impact",
             "Ion",
-            "Ion Token"
         ],
         "requirements": [
             {
@@ -3651,7 +3656,8 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": true,
         "rank": "operative",
         "cardType": "unit",
-        "cost": 195,
+        "oldCost": 195,
+        "cost":175,
         "faction": "rebels",
         "imageName": "Luke Skywalker2.jpeg",
         "keywords": [
@@ -3686,7 +3692,8 @@ const cards = JSON.parse(JSON.stringify({
         "title": "The Emperor's Apprentice",
         "isUnique": true,
         "rank": "operative",
-        "cost": 175,
+        "cost": 155,
+        "oldCost":175,
         "defense": "red",
         "surges": [],
         "wounds": 7,
@@ -3781,7 +3788,6 @@ const cards = JSON.parse(JSON.stringify({
             "Fixed",
             "Impact",
             "Ion",
-            "Ion Token"
         ],
         "history": [
             {
@@ -4488,7 +4494,6 @@ const cards = JSON.parse(JSON.stringify({
         "keywords": [
             "Impact",
             "Ion",
-            "Ion Token"
         ],
         "requirements": [
             {
@@ -4747,7 +4752,6 @@ const cards = JSON.parse(JSON.stringify({
             "Fixed",
             "Impact",
             "Ion",
-            "Ion Token"
         ],
         "requirements": [
             {
@@ -4821,8 +4825,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "Tauntaun Riders",
         "isUnique": false,
         "rank": "support",
-        "prevCost": 95,
-        "cost": 90,
+        "cost": 95,
+        "oldCost":90,
         "faction": "rebels",
         "imageName": "Tauntaun Riders.jpeg",
         "keywords": [
@@ -4960,7 +4964,6 @@ const cards = JSON.parse(JSON.stringify({
         "imageName": "Hello There!.jpeg",
         "keywords": [
             "Nimble",
-            "Surge Token"
         ],
         "id": "hj"
     },
@@ -5196,7 +5199,6 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 5,
         "imageName": "Force Guidance.jpeg",
         "keywords": [
-            "Surge Token"
         ],
         "requirements": [],
         "history": [
@@ -5302,7 +5304,8 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 3,
         "imageName": "Smoke Grenades.jpeg",
         "keywords": [
-            "Smoke"
+            "Smoke",
+            "Smoke Tokens"
         ],
         "requirements": [],
         "history": [
@@ -5330,7 +5333,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "BARC Speeder",
         "isUnique": false,
         "rank": "support",
-        "cost": 55,
+        "cost": 65,
+        "oldCost": 55,
         "faction": "republic",
         "imageName": "BARC Speeder.jpeg",
         "keywords": [
@@ -5396,8 +5400,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "Droidekas",
         "isUnique": false,
         "rank": "support",
-        "prevCost": 75,
-        "cost": 70,
+        "cost": 60,
+        "oldCost": 70,
         "faction": "separatists",
         "imageName": "Droidekas.jpeg",
         "keywords": [
@@ -5629,7 +5633,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardSubtype": "personnel",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 13,
+        "cost": 18,
+        "oldCost": 13,
         "imageName": "B2 Super Battle Droid.jpeg",
         "keywords": [],
         "requirements": [
@@ -5691,7 +5696,6 @@ const cards = JSON.parse(JSON.stringify({
         "imageName": "We're Not Programmed.jpeg",
         "keywords": [
             "Inspire",
-            "Surge Token"
         ],
         "id": "ir"
     },
@@ -5841,7 +5845,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardSubtype": "heavy weapon",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 24,
+        "cost": 22,
+        "oldCost":24,
         "imageName": "RT-97C Stormtrooper.jpeg",
         "keywords": [],
         "history": [
@@ -5895,7 +5900,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardSubtype": "heavy weapon",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 22,
+        "cost": 20,
+        "oldCost":22,
         "imageName": "T-21 Stormtrooper.jpeg",
         "keywords": [
             "Critical"
@@ -6206,7 +6212,6 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 8,
         "imageName": "Rebel Trooper Specialist.jpeg",
         "keywords": [
-            "Surge Token"
         ],
         "requirements": [
             {
@@ -6236,7 +6241,6 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 9,
         "imageName": "Stormtrooper Specialist.jpeg",
         "keywords": [
-            "Surge Token"
         ],
         "requirements": [
             {
@@ -6396,7 +6400,6 @@ const cards = JSON.parse(JSON.stringify({
         "cost": 11,
         "imageName": "Phase I Clone Specialist.jpeg",
         "keywords": [
-            "Surge Token"
         ],
         "requirements": [
             {
@@ -7121,8 +7124,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "Deflector Shields",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 10,
-        "prevCosts": 18,
+        "cost": 18,
+        "oldCost": 10,
         "imageName": "Deflector Shields.jpeg",
         "keywords": [
             "Shields",
@@ -7147,7 +7150,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "BX-Series Droid Sniper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 30,
+        "cost": 40,
+        "oldCost": 30,
         "imageName": "BX-Series Droid Sniper.jpeg",
         "keywords": [
             "Lethal",
@@ -7182,7 +7186,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "DC-15x ARC Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 31,
+        "cost": 37,
+        "oldCost":31,
         "imageName": "DC-15x ARC Trooper.jpeg",
         "keywords": [
             "Critical",
@@ -7623,7 +7628,8 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "rank": "support",
         "imageName": "STAP Riders.jpeg",
-        "cost": 75,
+        "cost": 80,
+        "oldCost": 75,
         "products": [],
         "faction": "separatists",
         "keywords": [
@@ -7723,7 +7729,8 @@ const cards = JSON.parse(JSON.stringify({
         "imageName": "Del Meeko.jpeg",
         "isUnique": true,
         "cardType": "upgrade",
-        "cost": 25,
+        "cost":35,
+        "oldCost": 25,
         "products": [],
         "keywords": [
             "Repair",
@@ -8262,7 +8269,8 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": true,
         "rank": "operative",
         "imageName": "Maul.jpeg",
-        "cost": 160,
+        "cost": 130,
+        "oldCost": 160,
         "products": [],
         "faction": "separatists",
         "keywords": [
@@ -8480,7 +8488,6 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": true,
         "rank": "commander",
         "cost": 85,
-        "prevCost": 90,
         "faction": "empire",
         "defense": "red",
         "surges": [],
@@ -9132,6 +9139,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 16,
+        "oldCost": 12,
         "imageName": "Heavy Laser Retrofit.jpeg",
         "keywords": [
             "Critical"
@@ -9249,8 +9257,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "AG-2G Quad Laser",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 25,
-        "prevCost": 28,
+        "cost": 20,
+        "oldCost": 25,
         "imageName": "AG-2G Quad Laser.jpeg",
         "keywords": [
             "Impact"
@@ -9342,6 +9350,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 20,
+        "oldCost": 14,
         "imageName": "Refurbished %22Gonk%22 Droid.jpeg",
         "keywords": [
             "Shielded",
@@ -10216,7 +10225,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "RPS-6 MagnaGuard",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 34,
+        "cost": 40,
+        "oldCost": 34,
         "imageName": "RPS-6 MagnaGuard.jpeg",
         "keywords": [
             "Critical",
@@ -10362,7 +10372,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "DSD1 Dwarf Spider Droid",
         "isUnique": false,
         "rank": "support",
-        "cost": 55,
+        "cost": 50,
+        "oldCost": 55,
         "faction": "separatists",
         "imageName": "DSD1 Dwarf Spider Droid.jpeg",
         "keywords": [
@@ -10648,8 +10659,8 @@ const cards = JSON.parse(JSON.stringify({
         "cardName": "Twin Beam Cannons",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 25,
-        "prevCost": 40,
+        "cost": 30,
+        "oldCost": 25,
         "imageName": "Twin Beam Cannons.jpeg",
         "keywords": [
             "Beam",
@@ -10862,6 +10873,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": true,
         "rank": "operative",
         "cost": 150,
+        "oldCost": 170,
         "faction": "mercenary",
         "subfaction": "shadow collective",
         "imageName": "Maul2.jpeg",
@@ -10900,8 +10912,8 @@ const cards = JSON.parse(JSON.stringify({
         "title": "Militant Commando",
         "isUnique": true,
         "rank": "commander",
-        "cost": 100,
-        "prevCost": 105,
+        "cost": 95,
+        "oldCost": 100,
         "faction": "mercenary",
         "subfaction": "shadow collective",
         "imageName": "Gar Saxon.jpeg",
@@ -11635,7 +11647,7 @@ const cards = JSON.parse(JSON.stringify({
         "isUnique": false,
         "rank": "support",
         "cost": 70,
-        "prevCost": 70,
+        "oldCost": 65,
         "faction": "mercenary",
         "subfaction": "raiders",
         "affiliations": [
@@ -12017,7 +12029,8 @@ const cards = JSON.parse(JSON.stringify({
         "title": "The Mandalorian",
         "isUnique": true,
         "rank": "operative",
-        "cost": 105,
+        "cost": 95,
+        "oldCost": 105,
         "faction": "mercenary",
         "subfaction": "bounty hunters",
         "affiliations": [
@@ -12729,7 +12742,8 @@ const cards = JSON.parse(JSON.stringify({
         "title": "Separatist Assassin",
         "isUnique": true,
         "rank": "operative",
-        "cost": 150,
+        "cost": 130,
+        "oldCost": 150,
         "faction": "separatists",
         "imageName": "Asajj Ventress.jpeg",
         "keywords": [
@@ -12934,7 +12948,8 @@ const cards = JSON.parse(JSON.stringify({
         "title": "Fulcrum",
         "isUnique": true,
         "rank": "operative",
-        "cost": 165,
+        "cost":145,
+        "oldCost": 165,
         "faction": "rebels",
         "imageName": "Ahsoka Tano.jpeg",
         "keywords": [
@@ -13741,7 +13756,8 @@ const cards = JSON.parse(JSON.stringify({
         "title": "Ruthless Lieutenant",
         "isUnique": true,
         "rank": "operative",
-        "cost": 90,
+        "cost": 80,
+        "oldCost": 90,
         "faction": "separatists",
         "imageName": "Sun Fac.jpeg",
         "keywords": [

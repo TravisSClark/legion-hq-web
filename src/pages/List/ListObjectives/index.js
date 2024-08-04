@@ -20,7 +20,7 @@ function ListObjectives() {
 
   let decks = [];
   let cardsPerDeck = 3;
-  if(userSettings.useOldCards){
+  if(currentList.isUsingOldPoints){
     cardsPerDeck = 4;
     decks[0] = {type:'objective', label:"Objective", cards: currentList.objectiveCards, theme:createMuiTheme({
       palette: { primary: { main: '#274c82' } }
