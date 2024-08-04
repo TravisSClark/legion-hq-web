@@ -367,22 +367,14 @@
     },
     "ab": {
         "id": "ab",
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "crit",
-            "block"
-        ],
-        "speed": 2,
-        "wounds": 6,
-        "courage": 2,
-        "cardSubtype": "trooper",
         "cardName": "Leia Organa",
         "title": "Fearless and Inventive",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "commander",
-        "cost": 75,
         "faction": "rebels",
+        "isUnique": true,
+        "cost": 75,
         "imageName": "Leia Organa.jpeg",
         "keywords": [
             "Take Cover",
@@ -397,6 +389,14 @@
             "training",
             "gear"
         ],
+        "defense": "white",
+        "surges": [
+            "crit",
+            "block"
+        ],
+        "wounds": 6,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "27 October 2021",
@@ -413,22 +413,15 @@
         ]
     },
     "ac": {
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "crit",
-            "block"
-        ],
-        "wounds": 6,
-        "courage": 2,
-        "speed": 2,
-        "cardSubtype": "trooper",
+        "id": "ac",
         "cardName": "Han Solo",
         "title": "Unorthodox General",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "commander",
-        "cost": 100,
         "faction": "rebels",
+        "isUnique": true,
+        "cost": 100,
         "imageName": "Han Solo.jpeg",
         "keywords": [
             "Steady",
@@ -438,37 +431,37 @@
             "Uncanny Luck",
             "Pierce"
         ],
-        "history": [
-            {
-                "date": "19 November 2020",
-                "description": "Cost reduced from 120 to 100 points."
-            }
-        ],
         "upgradeBar": [
             "command",
             "training",
             "gear"
         ],
-        "id": "ac"
+        "defense": "white",
+        "surges": [
+            "crit",
+            "block"
+        ],
+        "wounds": 6,
+        "courage": 2,
+        "speed": 2,
+        "history": [
+            {
+                "date": "19 November 2020",
+                "description": "Cost reduced from 120 to 100 points."
+            }
+        ]
     },
     "ad": {
         "id": "ad",
-        "cardType": "unit",
-        "defense": "red",
-        "surges": [
-            "crit"
-        ],
-        "wounds": 6,
-        "courage": 3,
-        "speed": 2,
-        "cardSubtype": "trooper",
         "cardName": "Luke Skywalker",
         "title": "Hero of the Rebellion",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "commander",
+        "faction": "rebels",
+        "isUnique": true,
         "prevCost": 150,
         "cost": 120,
-        "faction": "rebels",
         "imageName": "Luke Skywalker.jpeg",
         "keywords": [
             "Jump",
@@ -487,6 +480,13 @@
             "training",
             "gear"
         ],
+        "defense": "red",
+        "surges": [
+            "crit"
+        ],
+        "wounds": 6,
+        "courage": 3,
+        "speed": 2,
         "history": [
             {
                 "date": "5 June 2023",
@@ -499,22 +499,15 @@
         ]
     },
     "ae": {
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "crit",
-            "block"
-        ],
-        "wounds": 6,
-        "courage": 3,
-        "speed": 2,
-        "cardSubtype": "trooper",
+        "id": "ae",
         "cardName": "Jyn Erso",
         "title": "Stardust",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "commander",
-        "cost": 90,
         "faction": "rebels",
+        "isUnique": true,
+        "cost": 90,
         "imageName": "Jyn Erso.jpeg",
         "keywords": [
             "Quick Thinking",
@@ -530,6 +523,14 @@
             "gear",
             "armament"
         ],
+        "defense": "white",
+        "surges": [
+            "crit",
+            "block"
+        ],
+        "wounds": 6,
+        "courage": 3,
+        "speed": 2,
         "history": [
             {
                 "date": "12 September 2019",
@@ -543,25 +544,18 @@
                 "date": "27 October 2021",
                 "description": "Cost reduced from 100 to 90 points."
             }
-        ],
-        "id": "ae"
+        ]
     },
     "af": {
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "crit"
-        ],
-        "wounds": 9,
-        "courage": 2,
-        "speed": 2,
-        "cardSubtype": "wookiee trooper",
+        "id": "af",
         "cardName": "Chewbacca",
         "title": "Walking Carpet",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "wookiee trooper",
         "rank": "operative",
-        "cost": 90,
         "faction": "rebels",
+        "isUnique": true,
+        "cost": 90,
         "imageName": "Chewbacca.jpeg",
         "keywords": [
             "Enrage",
@@ -577,6 +571,13 @@
             "training",
             "gear"
         ],
+        "defense": "white",
+        "surges": [
+            "crit"
+        ],
+        "wounds": 9,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "12 September 2019",
@@ -586,27 +587,18 @@
                 "date": "19 November 2020",
                 "description": "Cost reduced from 95 to 90 points. Gained Wookiee Warrior tag and Scale keyword. Weapon gained Lethal keyword. Lost Expert Climber and Unhindered keywords."
             }
-        ],
-        "id": "af"
+        ]
     },
     "ag": {
         "id": "ag",
-        "cardType": "unit",
-        "defense": "red",
-        "surges": [
-            "crit",
-            "block"
-        ],
-        "wounds": 5,
-        "courage": 2,
-        "speed": 3,
-        "cardSubtype": "trooper",
         "cardName": "Sabine Wren",
         "title": "Explosive Artist",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "operative",
-        "cost": 125,
         "faction": "rebels",
+        "isUnique": true,
+        "cost": 125,
         "imageName": "Sabine Wren.jpeg",
         "keywords": [
             "Jump",
@@ -620,24 +612,25 @@
             "gear",
             "gear",
             "armament"
-        ]
+        ],
+        "defense": "red",
+        "surges": [
+            "crit",
+            "block"
+        ],
+        "wounds": 5,
+        "courage": 2,
+        "speed": 3
     },
     "ah": {
         "id": "ah",
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "block"
-        ],
-        "speed": 2,
-        "wounds": 1,
-        "courage": 1,
-        "cardSubtype": "trooper",
         "cardName": "Rebel Troopers",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "corps",
-        "cost": 40,
         "faction": "rebels",
+        "isUnique": false,
+        "cost": 40,
         "imageName": "Rebel Troopers.jpeg",
         "keywords": [
             "Agile",
@@ -648,8 +641,14 @@
             "personnel",
             "gear",
             "grenades"
-        ]
-        ,
+        ],
+        "defense": "white",
+        "surges": [
+            "block"
+        ],
+        "wounds": 1,
+        "courage": 1,
+        "speed": 2,
         "history": [
             {
 				"date": "19 July 2024",
@@ -659,21 +658,13 @@
     },
     "ai": {
         "id": "ai",
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "hit",
-            "block"
-        ],
-        "speed": 2,
-        "courage": 1,
-        "wounds": 1,
-        "cardSubtype": "trooper",
         "cardName": "Fleet Troopers",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "corps",
-        "cost": 40,
         "faction": "rebels",
+        "isUnique": false,
+        "cost": 40,
         "imageName": "Fleet Troopers.jpeg",
         "keywords": [
             "Charge"
@@ -684,6 +675,14 @@
             "gear",
             "grenades"
         ],
+        "defense": "white",
+        "surges": [
+            "hit",
+            "block"
+        ],
+        "courage": 1,
+        "wounds": 1,
+        "speed": 2,
         "history": [
             {
                 "date": "19 November 2020",
@@ -697,20 +696,14 @@
         ]
     },
     "aj": {
-        "cardType": "unit",
-        "wounds": 3,
-        "courage": 2,
-        "speed": 2,
-        "defense": "white",
-        "surges": [
-            "hit"
-        ],
-        "cardSubtype": "wookiee trooper",
+        "id": "aj",
         "cardName": "Wookiee Warriors",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "wookiee trooper",
         "rank": "special",
-        "cost": 69,
         "faction": "rebels",
+        "isUnique": false,
+        "cost": 69,
         "imageName": "Wookiee Warriors.jpeg",
         "keywords": [
             "Charge",
@@ -725,32 +718,30 @@
             "gear",
             "grenades"
         ],
+        "defense": "white",
+        "surges": [
+            "hit"
+        ],
+        "wounds": 3,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 75 to 69 points. Gained Wookiee Warrior tag and Scale keyword. Lost Expert Climber and Unhindered keywords."
             }
-        ],
-        "id": "aj"
+        ]
     },
     "ak": {
         "id": "ak",
-        "cardType": "unit",
-        "displayName": "Commandos",
-        "defense": "white",
-        "surges": [
-            "hit",
-            "block"
-        ],
-        "speed": 2,
-        "wounds": 1,
-        "courage": 2,
-        "cardSubtype": "trooper",
         "cardName": "Rebel Commandos",
-        "isUnique": false,
+        "displayName": "Commandos",
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "special",
-        "cost": 48,
         "faction": "rebels",
+        "isUnique": false,
+        "cost": 48,
         "imageName": "Rebel Commandos.jpeg",
         "keywords": [
             "Low Profile",
@@ -764,6 +755,14 @@
             "gear",
             "grenades"
         ],
+        "defense": "white",
+        "surges": [
+            "hit",
+            "block"
+        ],
+        "wounds": 1,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "19 November 2020",
@@ -777,24 +776,15 @@
     },
     "al": {
         "id": "al",
-        "cardType": "unit",
-        "displayName": "Commando Strike Team",
-        "defense": "white",
-        "surges": [
-            "hit",
-            "block"
-        ],
-        "speed": 2,
-        "wounds": 1,
-        "courage": 2,
-        "cardSubtype": "trooper",
         "cardName": "Rebel Commandos Strike Team",
-        "isUnique": false,
+        "displayName": "Commando Strike Team",
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "special",
-        "cost": 20,
         "faction": "rebels",
+        "isUnique": false,
+        "cost": 20,
         "imageName": "Rebel Commandos Strike Team.jpeg",
-        "detachment": "ak",
         "keywords": [
             "Detachment",
             "Heavy Weapon Team",
@@ -809,6 +799,14 @@
             "gear",
             "grenades"
         ],
+        "defense": "white",
+        "surges": [
+            "hit",
+            "block"
+        ],
+        "wounds": 1,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "12 September 2019",
@@ -816,26 +814,20 @@
             },
             {
 				"date": "19 July 2024",
-				"description": "Gained Detachment."
+				"description": "Gained Detachment keyword."
 			}
-        ]
+        ],
+        "detachment": "ak"
     },
     "am": {
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "crit",
-            "block"
-        ],
-        "speed": 2,
-        "wounds": 1,
-        "courage": 2,
-        "cardSubtype": "trooper",
+        "id": "am",
         "cardName": "Rebel Pathfinders",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "special",
-        "cost": 56,
         "faction": "rebels",
+        "isUnique": false,
+        "cost": 56,
         "imageName": "Rebel Pathfinders.jpeg",
         "keywords": [
             "Danger Sense",
@@ -850,6 +842,14 @@
             "armament",
             "grenades"
         ],
+        "defense": "white",
+        "surges": [
+            "crit",
+            "block"
+        ],
+        "wounds": 1,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "19 November 2020",
@@ -859,27 +859,18 @@
                 "date": "27 October 2021",
                 "description": "Cost reduced from 58 to 56 points."
             }
-        ],
-        "id": "am"
+        ]
     },
     "an": {
         "id": "an",
-        "cardType": "unit",
-        "displayName": "Laser Cannon Team",
-        "defense": "white",
-        "surges": [
-            "hit",
-            "block"
-        ],
-        "wounds": 6,
-        "courage": 2,
-        "speed": 0,
-        "cardSubtype": "emplacement trooper",
         "cardName": "1.4 FD Laser Cannon Team",
-        "isUnique": false,
+        "displayName": "Laser Cannon Team",
+        "cardType": "unit",
+        "cardSubtype": "emplacement trooper",
         "rank": "support",
-        "cost": 65,
         "faction": "rebels",
+        "isUnique": false,
+        "cost": 65,
         "imageName": "1.4 FD Laser Cannon Team.jpeg",
         "keywords": [
             "Emplacement Trooper",
@@ -894,6 +885,14 @@
             "comms",
             "generator"
         ],
+        "defense": "white",
+        "surges": [
+            "hit",
+            "block"
+        ],
+        "wounds": 6,
+        "courage": 2,
+        "speed": 0,
         "history": [
             {
                 "date": "27 October 2021",
@@ -907,22 +906,14 @@
     },
     "ao": {
         "id": "ao",
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "crit",
-            "block"
-        ],
-        "speed": 2,
-        "wounds": 6,
-        "resilience": 4,
-        "cardSubtype": "ground vehicle",
         "cardName": "AT-RT",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "ground vehicle",
         "rank": "support",
+        "faction": "rebels",
+        "isUnique": false,
         "prevCost": 55,
         "cost": 50,
-        "faction": "rebels",
         "imageName": "AT-RT.jpeg",
         "keywords": [
             "Vehicle",
@@ -936,6 +927,14 @@
             "hardpoint",
             "comms"
         ],
+        "defense": "white",
+        "surges": [
+            "crit",
+            "block"
+        ],
+        "wounds": 6,
+        "resilience": 4,
+        "speed": 2,
         "history": [
             {
 				"date": "19 July 2024",
@@ -945,23 +944,15 @@
     },
     "ap": {
         "id": "ap",
-        "cardType": "unit",
-        "displayName": "Airspeeder",
-        "defense": "white",
-        "surges": [
-            "crit",
-            "block"
-        ],
-        "speed": 3,
-        "wounds": 7,
-        "resilience": 5,
-        "cardSubtype": "repulsor vehicle",
         "cardName": "T-47 Airspeeder",
-        "isUnique": false,
+        "displayName": "Airspeeder",
+        "cardType": "unit",
+        "cardSubtype": "repulsor vehicle",
         "rank": "heavy",
+        "faction": "rebels",
+        "isUnique": false,
         "prevCost": 130,
         "cost": 125,
-        "faction": "rebels",
         "imageName": "T-47 Airspeeder.jpeg",
         "keywords": [
             "Vehicle",
@@ -978,6 +969,14 @@
             "hardpoint",
             "comms"
         ],
+        "defense": "white",
+        "surges": [
+            "crit",
+            "block"
+        ],
+        "wounds": 7,
+        "resilience": 5,
+        "speed": 3,
         "history": [
             {
                 "date": "12 September 2019",
@@ -995,23 +994,15 @@
     },
     "aq": {
         "id": "aq",
-        "cardType": "unit",
-        "displayName": "Landspeeder",
-        "defense": "white",
-        "surges": [
-            "hit",
-            "block"
-        ],
-        "wounds": 6,
-        "resilience": 4,
-        "speed": 2,
-        "cardSubtype": "repulsor vehicle",
         "cardName": "X-34 Landspeeder",
-        "isUnique": false,
+        "displayName": "Landspeeder",
+        "cardType": "unit",
+        "cardSubtype": "repulsor vehicle",
         "rank": "heavy",
+        "faction": "rebels",
+        "isUnique": false,
         "prevCost": 60,
         "cost": 55,
-        "faction": "rebels",
         "imageName": "X-34 Landspeeder.jpeg",
         "keywords": [
             "Vehicle",
@@ -1026,6 +1017,14 @@
             "hardpoint",
             "comms"
         ],
+        "defense": "white",
+        "surges": [
+            "hit",
+            "block"
+        ],
+        "wounds": 6,
+        "resilience": 4,
+        "speed": 2,
         "history": [
             {
                 "date": "19 November 2020",
@@ -1039,7 +1038,25 @@
     },
     "ar": {
         "id": "ar",
+        "cardName": "Imperial Officer",
+        "title": "Ruthless Commander",
         "cardType": "unit",
+        "cardSubtype": "trooper",
+        "rank": "commander",
+        "faction": "empire",
+        "isUnique": false,
+        "prevCost": 50,
+        "cost": 55,
+        "imageName": "Imperial Officer.jpeg",
+        "keywords": [
+            "Spotter",
+            "Exemplar",
+            "Inspire"
+        ],
+        "upgradeBar": [
+            "command",
+            "gear"
+        ],
         "defense": "white",
         "surges": [
             "hit",
@@ -1048,20 +1065,6 @@
         "wounds": 4,
         "courage": 2,
         "speed": 2,
-        "cardSubtype": "trooper",
-        "cardName": "Imperial Officer",
-        "title": "Ruthless Commander",
-        "isUnique": false,
-        "rank": "commander",
-        "prevCost": 50,
-        "cost": 55,
-        "faction": "empire",
-        "imageName": "Imperial Officer.jpeg",
-        "keywords": [
-            "Spotter",
-            "Exemplar",
-            "Inspire"
-        ],
         "history": [
             {
                 "date": "19 November 2020",
@@ -1075,30 +1078,19 @@
 				"date": "19 July 2024",
 				"description": "Cost increased from 50 to 55 points. Lost Sharpshooter and gained Exemplar keywords. Blaster pistol changed from 1 black and 1 white to 2 black."
 			}
-        ],
-        "upgradeBar": [
-            "command",
-            "gear"
         ]
     },
     "as": {
         "id": "as",
         "cardName": "Emperor Palpatine",
         "title": "Ruler of the Galactic Empire",
+        "cardType": "unit",
         "cardSubtype": "trooper",
+        "rank": "commander",
         "faction": "empire",
         "isUnique": true,
-        "rank": "commander",
         "prevCost": 190,
         "cost": 170,
-        "defense": "red",
-        "surges": [
-            "crit",
-            "block"
-        ],
-        "speed": 1,
-        "wounds": 5,
-        "courage": 4,
         "imageName": "Emperor Palpatine.jpeg",
         "keywords": [
             "Pulling the Strings",
@@ -1114,6 +1106,14 @@
             "force",
             "command"
         ],
+        "defense": "red",
+        "surges": [
+            "crit",
+            "block"
+        ],
+        "wounds": 5,
+        "courage": 4,
+        "speed": 1,
         "history": [
             {
                 "date": "19 November 2020",
@@ -1128,27 +1128,22 @@
 				"description": "Cost reduced from 190 to 170 points."
 			}
         ],
-        "cardType": "unit",
         "entourage": {
             "name": "Imperial Royal Guards",
             "type": "special"
         }
     },
     "at": {
-        "cardType": "unit",
-        "defense": "red",
-        "surges": [],
-        "speed": 1,
-        "wounds": 8,
-        "courage": -1,
-        "cardSubtype": "trooper",
+        "id": "at",
         "cardName": "Darth Vader",
         "title": "Dark Lord of the Sith",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "commander",
+        "faction": "empire",
+        "isUnique": true,
         "prevCost": 190,
         "cost": 170,
-        "faction": "empire",
         "imageName": "Darth Vader.jpeg",
         "keywords": [
             "Deflect",
@@ -1165,6 +1160,11 @@
             "force",
             "force"
         ],
+        "defense": "red",
+        "surges": [],
+        "wounds": 8,
+        "courage": -1,
+        "speed": 1,
         "history": [
             {
                 "date": "12 September 2019",
@@ -1182,27 +1182,19 @@
 				"date": "19 July 2024",
 				"description": "Cost reduced from 190 to 170 points."
 			}
-        ],
-        "id": "at"
+        ]
     },
     "au": {
         "id": "au",
-        "cardType": "unit",
-        "defense": "red",
-        "surges": [
-            "crit"
-        ],
-        "speed": 2,
-        "wounds": 5,
-        "courage": 2,
-        "cardSubtype": "trooper",
         "cardName": "General Veers",
         "title": "Master Tactician",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "commander",
+        "faction": "empire",
+        "isUnique": true,
         "prevCost": 70,
         "cost": 75,
-        "faction": "empire",
         "imageName": "General Veers.jpeg",
         "keywords": [
             "Guidance",
@@ -1216,6 +1208,13 @@
             "command",
             "gear"
         ],
+        "defense": "red",
+        "surges": [
+            "crit"
+        ],
+        "speed": 2,
+        "wounds": 5,
+        "courage": 2,
         "history": [
             {
                 "date": "27 October 2021",
@@ -1232,23 +1231,17 @@
         ]
     },
     "av": {
+        "id": "av",
         "cardName": "Director Orson Krennic",
         "displayName": "Director Krennic",
         "title": "Architect of Terror",
+        "cardType": "unit",
         "cardSubtype": "trooper",
+        "rank": "commander",
         "faction": "empire",
         "isUnique": true,
-        "rank": "commander",
         "prevCost": 75,
         "cost": 65,
-        "defense": "white",
-        "surges": [
-            "crit",
-            "block"
-        ],
-        "speed": 2,
-        "wounds": 6,
-        "courage": 2,
         "imageName": "Director Orson Krennic.jpeg",
         "keywords": [
             "Spotter",
@@ -1262,12 +1255,14 @@
             "command",
             "gear"
         ],
-        "id": "av",
-        "cardType": "unit",
-        "entourage": {
-            "name": "Imperial Death Troopers",
-            "type": "special"
-        },
+        "defense": "white",
+        "surges": [
+            "crit",
+            "block"
+        ],
+        "wounds": 6,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "27 October 2021",
@@ -1277,29 +1272,26 @@
 				"date": "19 July 2024",
 				"description": "Cost reduced from 75 to 65 points. Lost Sharpshooter and Pierce, and gained Spotter and Exemplar keywords. Blaster changed from rainbow to 3 red."
 			}
-        ]
+        ],
+        "entourage": {
+            "name": "Imperial Death Troopers",
+            "type": "special"
+        }
     },
     "aw": {
-        "cardType": "unit",
-        "defense": "red",
-        "surges": [
-            "crit",
-            "block"
-        ],
-        "speed": 3,
-        "wounds": 5,
-        "courage": 3,
-        "cardSubtype": "trooper",
+        "id": "aw",
         "cardName": "Boba Fett",
         "title": "Infamous Bounty Hunter",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "operative",
-        "cost": 130,
         "faction": "fringe",
         "subfaction": "bounty hunters",
         "affiliations": [
             "empire"
         ],
+        "isUnique": true,
+        "cost": 130,
         "imageName": "Boba Fett.jpeg",
         "keywords": [
             "Jump",
@@ -1318,6 +1310,14 @@
             "gear",
             "gear"
         ],
+        "defense": "red",
+        "surges": [
+            "crit",
+            "block"
+        ],
+        "wounds": 5,
+        "courage": 3,
+        "speed": 3,
         "history": [
             {
                 "date": "19 November 2020",
@@ -1331,31 +1331,23 @@
                 "date": "5 June 2023",
                 "description": "Cost increased from 120 to 130 points."
             }
-        ],
-        "id": "aw"
+        ]
     },
     "ax": {
         "id": "ax",
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "crit"
-        ],
-        "wounds": 7,
-        "courage": 2,
-        "speed": 2,
-        "cardSubtype": "trooper",
         "cardName": "Bossk",
         "title": "Trandoshan Terror",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "operative",
-        "cost": 105,
         "faction": "fringe",
         "subfaction": "bounty hunters",
         "affiliations": [
             "empire",
             "separatists"
         ],
+        "isUnique": true,
+        "cost": 105,
         "imageName": "Bossk.jpeg",
         "keywords": [
             "Bounty",
@@ -1371,6 +1363,13 @@
             "training",
             "gear"
         ],
+        "defense": "white",
+        "surges": [
+            "crit"
+        ],
+        "wounds": 7,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "31 May 2022",
@@ -1380,21 +1379,14 @@
     },
     "ay": {
         "id": "ay",
-        "cardType": "unit",
-        "defense": "red",
-        "surges": [
-            "hit"
-        ],
-        "wounds": 1,
-        "courage": 1,
-        "speed": 2,
-        "cardSubtype": "trooper",
         "cardName": "Stormtroopers",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "corps",
+        "faction": "empire",
+        "isUnique": false,
         "prevCost": 44,
         "cost": 42,
-        "faction": "empire",
         "imageName": "Stormtroopers.jpeg",
         "keywords": [
             "Precise"
@@ -1405,6 +1397,13 @@
             "gear",
             "grenades"
         ],
+        "defense": "red",
+        "surges": [
+            "hit"
+        ],
+        "wounds": 1,
+        "courage": 1,
+        "speed": 2,
         "history": [
             {
 				"date": "19 July 2024",
@@ -1413,21 +1412,15 @@
         ]
     },
     "az": {
-        "cardType": "unit",
-        "defense": "red",
-        "surges": [
-            "hit"
-        ],
-        "speed": 1,
-        "wounds": 1,
-        "courage": 1,
-        "cardSubtype": "trooper",
+        "id": "az",
         "cardName": "Snowtroopers",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "corps",
+        "faction": "empire",
+        "isUnique": false,
         "prevCost": 44,
         "cost": 42,
-        "faction": "empire",
         "imageName": "Snowtroopers.jpeg",
         "keywords": [
             "Steady"
@@ -1438,6 +1431,13 @@
             "gear",
             "grenades"
         ],
+        "defense": "red",
+        "surges": [
+            "hit"
+        ],
+        "wounds": 1,
+        "courage": 1,
+        "speed": 1,
         "history": [
             {
                 "date": "19 November 2020",
@@ -1447,24 +1447,17 @@
 				"date": "19 July 2024",
 				"description": "Cost reduced from 44 to 42 points. Unarmed is reduced from 1 black to 1 white."
 			}
-        ],
-        "id": "az"
+        ]
     },
     "ba": {
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "block"
-        ],
-        "wounds": 1,
-        "courage": 2,
-        "speed": 2,
-        "cardSubtype": "trooper",
+        "id": "ba",
         "cardName": "Scout Troopers",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "special",
-        "cost": 48,
         "faction": "empire",
+        "isUnique": false,
+        "cost": 48,
         "imageName": "Scout Troopers.jpeg",
         "keywords": [
             "Low Profile",
@@ -1478,18 +1471,6 @@
             "gear",
             "grenades"
         ],
-        "history": [
-            {
-                "date": "19 November 2020",
-                "description": "Cost reduced from 60 to 48 points."
-            }
-        ],
-        "id": "ba"
-    },
-    "bb": {
-        "id": "bb",
-        "cardType": "unit",
-        "displayName": "Strike Team",
         "defense": "white",
         "surges": [
             "block"
@@ -1497,14 +1478,24 @@
         "wounds": 1,
         "courage": 2,
         "speed": 2,
-        "cardSubtype": "trooper",
+        "history": [
+            {
+                "date": "19 November 2020",
+                "description": "Cost reduced from 60 to 48 points."
+            }
+        ]
+    },
+    "bb": {
+        "id": "bb",
         "cardName": "Scout Troopers Strike Team",
-        "isUnique": false,
+        "displayName": "Strike Team",
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "special",
-        "cost": 20,
         "faction": "empire",
+        "isUnique": false,
+        "cost": 20,
         "imageName": "Scout Troopers Strike Team.jpeg",
-        "detachment": "uz",
         "keywords": [
             "Detachment",
             "Heavy Weapon Team",
@@ -1519,6 +1510,13 @@
             "gear",
             "grenades"
         ],
+        "defense": "white",
+        "surges": [
+            "block"
+        ],
+        "wounds": 1,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "12 September 2019",
@@ -1528,22 +1526,19 @@
 				"date": "19 July 2024",
 				"description": "Gained Detachment keyword."
 			}
-        ]
+        ],
+        "detachment": "uz"
     },
     "bc": {
-        "cardType": "unit",
-        "displayName": "Royal Guards",
-        "defense": "red",
-        "surges": [],
-        "wounds": 2,
-        "courage": 2,
-        "speed": 2,
-        "cardSubtype": "trooper",
+        "id": "bc",
         "cardName": "Imperial Royal Guards",
-        "isUnique": false,
+        "displayName": "Royal Guards",
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "special",
-        "cost": 69,
         "faction": "empire",
+        "isUnique": false,
+        "cost": 69,
         "imageName": "Imperial Royal Guards.jpeg",
         "keywords": [
             "Charge",
@@ -1557,31 +1552,28 @@
             "gear",
             "grenades"
         ],
+        "defense": "red",
+        "surges": [],
+        "wounds": 2,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 75 to 69 points."
             }
-        ],
-        "id": "bc"
+        ]
     },
     "bd": {
-        "cardType": "unit",
-        "displayName": "Death Troopers",
-        "defense": "red",
-        "surges": [
-            "crit",
-            "block"
-        ],
-        "wounds": 1,
-        "courage": 2,
-        "speed": 2,
-        "cardSubtype": "trooper",
+        "id": "bd",
         "cardName": "Imperial Death Troopers",
-        "isUnique": false,
+        "displayName": "Death Troopers",
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "special",
-        "cost": 72,
         "faction": "empire",
+        "isUnique": false,
+        "cost": 72,
         "imageName": "Imperial Death Troopers.jpeg",
         "keywords": [
             "Disciplined",
@@ -1596,31 +1588,32 @@
             "armament",
             "grenades"
         ],
+        "defense": "red",
+        "surges": [
+            "crit",
+            "block"
+        ],
+        "wounds": 1,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 76 to 72 points."
             }
-        ],
-        "id": "bd"
+        ]
     },
     "be": {
-        "cardType": "unit",
-        "displayName": "E-Web Team",
-        "defense": "red",
-        "surges": [
-            "crit"
-        ],
-        "wounds": 4,
-        "courage": 2,
-        "speed": 1,
-        "cardSubtype": "emplacement trooper",
+        "id": "be",
         "cardName": "E-Web Heavy Blaster Team",
-        "isUnique": false,
+        "displayName": "E-Web Team",
+        "cardType": "unit",
+        "cardSubtype": "emplacement trooper",
         "rank": "support",
+        "faction": "empire",
+        "isUnique": false,
         "prevCost": 50,
         "cost": 60,
-        "faction": "empire",
         "imageName": "E-Web Heavy Blaster Team.jpeg",
         "keywords": [
             "Emplacement Trooper",
@@ -1631,6 +1624,17 @@
             "Fixed",
             "Impact"
         ],
+        "upgradeBar": [
+            "comms",
+            "generator"
+        ],
+        "defense": "red",
+        "surges": [
+            "crit"
+        ],
+        "wounds": 4,
+        "courage": 2,
+        "speed": 1,
         "history": [
             {
                 "date": "5 June 2023",
@@ -1640,31 +1644,19 @@
 				"date": "19 July 2024",
 				"description": "Cost increased from 50 to 60 points. Gained Prepared Position and lost Full Pivot keywords. Blaster gained impact 1 and range increased from range 3 to 4."
 			}
-        ],
-        "upgradeBar": [
-            "comms",
-            "generator"
-        ],
-        "id": "be"
+        ]
     },
     "bf": {
-        "cardType": "unit",
-        "displayName": "Speeder Bikes",
-        "defense": "white",
-        "surges": [
-            "hit",
-            "block"
-        ],
-        "wounds": 3,
-        "resilience": -1,
-        "speed": 3,
-        "cardSubtype": "repulsor vehicle",
+        "id": "bf",
         "cardName": "74-Z Speeder Bikes",
-        "isUnique": false,
+        "displayName": "Speeder Bikes",
+        "cardType": "unit",
+        "cardSubtype": "repulsor vehicle",
         "rank": "support",
+        "faction": "empire",
+        "isUnique": false,
         "prevCost": 70,
         "cost": 80,
-        "faction": "empire",
         "imageName": "74-Z Speeder Bikes.jpeg",
         "keywords": [
             "Vehicle",
@@ -1676,6 +1668,14 @@
         "upgradeBar": [
             "comms"
         ],
+        "defense": "white",
+        "surges": [
+            "hit",
+            "block"
+        ],
+        "wounds": 3,
+        "resilience": -1,
+        "speed": 3,
         "history": [
             {
                 "date": "12 September 2019",
@@ -1689,26 +1689,18 @@
 				"date": "19 July 2024",
 				"description": "Cost increased from 70 to 80 points."
 			}
-        ],
-        "id": "bf"
+        ]
     },
     "bg": {
         "id": "bg",
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "block"
-        ],
-        "wounds": 11,
-        "resilience": 8,
-        "speed": 2,
-        "cardSubtype": "ground vehicle",
         "cardName": "AT-ST",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "ground vehicle",
         "rank": "heavy",
+        "faction": "empire",
+        "isUnique": false,
         "prevCost": 155,
         "cost": 145,
-        "faction": "empire",
         "imageName": "AT-ST.jpeg",
         "keywords": [
             "Vehicle",
@@ -1725,6 +1717,13 @@
             "hardpoint",
             "comms"
         ],
+        "defense": "white",
+        "surges": [
+            "block"
+        ],
+        "wounds": 11,
+        "resilience": 8,
+        "speed": 2,
         "history": [
             {
                 "date": "12 September 2019",
@@ -1746,20 +1745,15 @@
     },
     "bh": {
         "id": "bh",
-        "cardType": "unit",
-        "displayName": "Occupier Tank",
-        "defense": "red",
-        "surges": [],
-        "speed": 1,
-        "wounds": 8,
-        "resilience": 6,
-        "cardSubtype": "ground vehicle",
         "cardName": "Occupier Combat Assault Tank",
-        "isUnique": false,
+        "displayName": "Occupier Tank",
+        "cardType": "unit",
+        "cardSubtype": "ground vehicle",
         "rank": "heavy",
+        "faction": "empire",
+        "isUnique": false,
         "prevCost": 140,
         "cost": 125,
-        "faction": "empire",
         "imageName": "Occupier Combat Assault Tank.jpeg",
         "keywords": [
             "Vehicle",
@@ -1777,6 +1771,11 @@
             "hardpoint",
             "comms"
         ],
+        "defense": "red",
+        "surges": [],
+        "wounds": 8,
+        "resilience": 6,
+        "speed": 1,
         "history": [
             {
                 "date": "19 November 2020",
@@ -1794,23 +1793,15 @@
     },
     "bi": {
         "id": "bi",
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "hit",
-            "block"
-        ],
-        "wounds": 1,
-        "courage": 1,
-        "speed": 2,
-        "cardSubtype": "trooper",
         "cardName": "Rebel Officer",
         "title": "Resolute Commander",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "commander",
+        "faction": "rebels",
+        "isUnique": false,
         "prevCost": 45,
         "cost": 50,
-        "faction": "rebels",
         "imageName": "Rebel Officer.jpeg",
         "keywords": [
             "Take Cover",
@@ -1821,6 +1812,14 @@
             "command",
             "gear"
         ],
+        "defense": "white",
+        "surges": [
+            "hit",
+            "block"
+        ],
+        "wounds": 1,
+        "courage": 1,
+        "speed": 2,
         "history": [
             {
                 "date": "19 November 2020",
@@ -3751,22 +3750,16 @@
         "id": "fl"
     },
     "fm": {
-        "defense": "red",
-        "surges": [
-            "crit"
-        ],
-        "speed": 2,
-        "wounds": 7,
-        "courage": 4,
+        "id": "fm",
         "cardName": "Luke Skywalker",
         "title": "Jedi Knight",
-        "cardSubtype": "trooper",
-        "isUnique": true,
-        "rank": "operative",
         "cardType": "unit",
+        "cardSubtype": "trooper",
+        "rank": "operative",
+        "faction": "rebels",
+        "isUnique": true,
         "prevCost": 195,
         "cost": 175,
-        "faction": "rebels",
         "imageName": "Luke Skywalker2.jpeg",
         "keywords": [
             "Jump",
@@ -3784,6 +3777,13 @@
             "force",
             "training"
         ],
+        "defense": "red",
+        "surges": [
+            "crit"
+        ],
+        "wounds": 7,
+        "courage": 4,
+        "speed": 2,
         "history": [
             {
                 "date": "19 November 2020",
@@ -3793,24 +3793,19 @@
                 "date": "19 July 2024",
                 "description": "Cost reduced from 195 to 175 points."
             }
-        ],
-        "id": "fm"
+        ]
     },
     "fn": {
-        "cardType": "unit",
-        "faction": "empire",
-        "cardSubtype": "trooper",
+        "id": "fn",
         "cardName": "Darth Vader",
         "title": "The Emperor's Apprentice",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "operative",
+        "faction": "empire",
+        "isUnique": true,
         "prevCost": 175,
         "cost": 155,
-        "defense": "red",
-        "surges": [],
-        "wounds": 7,
-        "courage": 3,
-        "speed": 2,
         "imageName": "Darth Vader2.jpeg",
         "keywords": [
             "Deflect",
@@ -3829,6 +3824,11 @@
             "training",
             "training"
         ],
+        "defense": "red",
+        "surges": [],
+        "wounds": 7,
+        "courage": 3,
+        "speed": 2,
         "history": [
             {
                 "date": "19 November 2020",
@@ -3842,8 +3842,7 @@
 				"date": "19 July 2024",
 				"description": "Cost reduced from 175 to 155 points."
 			}
-        ],
-        "id": "fn"
+        ]
     },
     "fo": {
         "cardName": "Fear",
@@ -3939,20 +3938,15 @@
         "id": "fs"
     },
     "ft": {
+        "id": "ft",
+        "cardName": "DF-90 Mortar Trooper",
         "cardType": "unit",
         "cardSubtype": "emplacement trooper",
-        "cardName": "DF-90 Mortar Trooper",
-        "isUnique": false,
         "rank": "corps",
-        "cost": 40,
         "faction": "empire",
-        "defense": "red",
-        "surges": [],
-        "speed": 1,
-        "wounds": 3,
-        "courage": 2,
+        "isUnique": false,
+        "cost": 40,
         "imageName": "DF-90 Mortar Trooper.jpeg",
-        "detachment": "hg",
         "keywords": [
             "Detachment",
             "Fire Support",
@@ -3967,6 +3961,11 @@
         "upgradeBar": [
             "comms"
         ],
+        "defense": "red",
+        "surges": [],
+        "speed": 1,
+        "wounds": 3,
+        "courage": 2,
         "history": [
             {
                 "date": "19 November 2020",
@@ -3977,7 +3976,7 @@
                 "description": "Cost increased from 38 to 40 points."
             }
         ],
-        "id": "ft"
+        "detachment": "hg"
     },
     "fu": {
         "requirements": [
@@ -4058,23 +4057,15 @@
     },
     "fx": {
         "id": "fx",
-        "cardType": "unit",
-        "cardSubtype": "trooper",
-        "faction": "separatists",
         "cardName": "Count Dooku",
         "title": "Darth Tyranus",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "commander",
+        "faction": "separatists",
+        "isUnique": true,
         "prevCost": 185,
         "cost": 165,
-        "defense": "red",
-        "surges": [
-            "crit",
-            "block"
-        ],
-        "wounds": 6,
-        "speed": 2,
-        "courage": 3,
         "imageName": "Count Dooku.jpeg",
         "keywords": [
             "Cunning",
@@ -4094,6 +4085,14 @@
             "force",
             "command"
         ],
+        "defense": "red",
+        "surges": [
+            "crit",
+            "block"
+        ],
+        "wounds": 6,
+        "courage": 3,
+        "speed": 2,
         "history": [
             {
                 "date": "19 November 2020",
@@ -4115,22 +4114,15 @@
     },
     "fy": {
         "id": "fy",
-        "surges": [
-            "crit"
-        ],
-        "wounds": 5,
-        "courage": 2,
-        "defense": "red",
-        "speed": 2,
-        "displayName": "Captain Rex",
         "cardName": "Clone Captain Rex",
         "title": "Honorable Soldier",
-        "cardSubtype": "clone trooper",
-        "isUnique": true,
-        "rank": "commander",
+        "displayName": "Captain Rex",
         "cardType": "unit",
-        "cost": 95,
+        "cardSubtype": "clone trooper",
+        "rank": "commander",
         "faction": "republic",
+        "isUnique": true,
+        "cost": 95,
         "imageName": "Clone Captain Rex.jpeg",
         "keywords": [
             "Gunslinger",
@@ -4139,6 +4131,20 @@
             "Sharpshooter",
             "Tactical"
         ],
+        "upgradeBar": [
+            "command",
+            "training",
+            "gear",
+            "gear",
+            "grenades"
+        ],
+        "defense": "red",
+        "surges": [
+            "crit"
+        ],
+        "wounds": 5,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "27 October 2021",
@@ -4148,30 +4154,19 @@
                 "date": "5 June 2023",
                 "description": "Cost reduced from 100 to 95 points."
             }
-        ],
-        "upgradeBar": [
-            "command",
-            "training",
-            "gear",
-            "gear",
-            "grenades"
         ]
     },
     "fz": {
         "id": "fz",
-        "cardType": "unit",
-        "faction": "republic",
-        "cardSubtype": "clone trooper",
         "cardName": "Clone Trooper Infantry",
-        "isUnique": false,
+        
+        "cardType": "unit",
+        "cardSubtype": "clone trooper",
         "rank": "corps",
+        "faction": "republic",
+        "isUnique": false,
         "prevCost": 60,
         "cost": 56,
-        "defense": "red",
-        "surges": [],
-        "speed": 2,
-        "wounds": 1,
-        "courage": 2,
         "imageName": "Clone Trooper Infantry.jpeg",
         "keywords": [
             "Reliable"
@@ -4184,6 +4179,11 @@
             "gear",
             "grenades"
         ],
+        "defense": "red",
+        "surges": [],
+        "wounds": 1,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "19 November 2020",
@@ -4200,29 +4200,30 @@
         ]
     },
     "ga": {
-        "displayName": "Super Battle Droids",
+        "id": "ga",
         "cardName": "B2 Super Battle Droids",
+        "displayName": "B2s",
+        "cardType": "unit",
+        "cardSubtype": "droid trooper",
+        "rank": "corps",
         "faction": "separatists",
         "isUnique": false,
-        "rank": "corps",
+        "prevCost": 45,
+        "cost": 64,
+        "imageName": "B2 Super Battle Droids.jpeg",
+        "keywords": [
+            "AI"
+        ],
         "upgradeBar": [
             "heavy weapon",
             "personnel",
             "comms"
         ],
-        "cardType": "unit",
-        "prevCost": 45,
-        "cost": 64,
+        "defense": "red",
+        "surges": [],
         "wounds": 2,
         "courage": 2,
         "speed": 2,
-        "defense": "red",
-        "surges": [],
-        "imageName": "B2 Super Battle Droids.jpeg",
-        "keywords": [
-            "AI"
-        ],
-        "cardSubtype": "droid trooper",
         "history": [
             {
                 "date": "19 November 2020",
@@ -4232,27 +4233,19 @@
 				"date": "19 July 2024",
 				"description": "Cost inceased from 45 to 64 points. Defense changed from white to red. Lost Armor keyword. Gained range 1 Wrist Rockets with 1 red and Impact 1 keyword. Arm Cannons can be used in melee now and changed from 1 black and 1 white to 2 black."
 			}
-        ],
-        "id": "ga"
+        ]
     },
     "gb": {
         "id": "gb",
-        "cardType": "unit",
-        "displayName": "Saber Fighter Tank",
-        "cardSubtype": "repulsor vehicle",
-        "faction": "republic",
         "cardName": "TX-130 Saber-Class Fighter Tank",
-        "isUnique": false,
+        "displayName": "Saber Fighter Tank",
+        "cardType": "unit",
+        "cardSubtype": "repulsor vehicle",
         "rank": "heavy",
+        "faction": "republic",
+        "isUnique": false,
         "prevCost": 160,
         "cost": 155,
-        "speed": 2,
-        "wounds": 9,
-        "resilience": 6,
-        "defense": "red",
-        "surges": [
-            "hit"
-        ],
         "imageName": "TX-130 Saber-Class Fighter Tank.jpeg",
         "keywords": [
             "Armor",
@@ -4264,6 +4257,20 @@
             "Fixed",
             "Impact"
         ],
+        "upgradeBar": [
+            "pilot",
+            "hardpoint",
+            "ordnance",
+            "ordnance",
+            "comms"
+        ],
+        "defense": "red",
+        "surges": [
+            "hit"
+        ],
+        "wounds": 9,
+        "resilience": 6,
+        "speed": 2,
         "history": [
             {
                 "date": "5 June 2023",
@@ -4273,33 +4280,19 @@
 				"date": "19 July 2024",
 				"description": "Cost reduced from 160 to 155 points. Armor reduced to 5. Gained surge to hit. Gained a second Ordance upgrade."
 			}
-        ],
-        "upgradeBar": [
-            "pilot",
-            "hardpoint",
-            "ordnance",
-            "ordnance",
-            "comms"
         ]
     },
     "gc": {
         "id": "gc",
-        "defense": "red",
-        "surges": [
-            "hit"
-        ],
-        "speed": 1,
-        "resilience": 6,
-        "wounds": 9,
         "displayName": "AAT Battle Tank",
         "cardName": "AAT Trade Federation Battle Tank",
-        "cardSubtype": "repulsor vehicle",
-        "isUnique": false,
-        "rank": "heavy",
         "cardType": "unit",
+        "cardSubtype": "repulsor vehicle",
+        "rank": "heavy",
+        "faction": "separatists",
+        "isUnique": false,
         "prevCost": 175,
         "cost": 165,
-        "faction": "separatists",
         "imageName": "AAT Trade Federation Battle Tank.jpeg",
         "keywords": [
             "AI",
@@ -4319,6 +4312,13 @@
             "ordnance",
             "comms"
         ],
+        "defense": "red",
+        "surges": [
+            "hit"
+        ],
+        "wounds": 9,
+        "resilience": 6,
+        "speed": 1,
         "history": [
             {
                 "date": "27 October 2021",
@@ -4685,20 +4685,12 @@
     },
     "gv": {
         "id": "gv",
-        "cardType": "unit",
-        "speed": 1,
-        "wounds": 1,
-        "courage": 1,
-        "defense": "white",
-        "surges": [
-            "block",
-            "hit"
-        ],
-        "cardSubtype": "trooper",
         "cardName": "Rebel Veterans",
+        "cardType": "unit",
+        "cardSubtype": "trooper",
+        "rank": "corps",
         "faction": "rebels",
         "isUnique": false,
-        "rank": "corps",
         "cost": 48,
         "imageName": "Rebel Veterans.jpeg",
         "keywords": [
@@ -4713,6 +4705,14 @@
             "gear",
             "grenades"
         ],
+        "defense": "white",
+        "surges": [
+            "block",
+            "hit"
+        ],
+        "wounds": 1,
+        "courage": 1,
+        "speed": 1,
         "history": [
             {
 				"date": "19 July 2024",
@@ -4721,20 +4721,16 @@
         ]
     },
     "gw": {
-        "cardType": "unit",
-        "speed": 2,
-        "wounds": 6,
-        "courage": 3,
-        "defense": "red",
-        "surges": [],
-        "cardSubtype": "trooper",
+        "id": "gw",
         "cardName": "Obi-Wan Kenobi",
         "title": "Civilized Warrior",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "commander",
+        "faction": "republic",
+        "isUnique": true,
         "prevCost": 170,
         "cost": 150,
-        "faction": "republic",
         "imageName": "Obi-Wan Kenobi.jpeg",
         "keywords": [
             "Jump",
@@ -4754,6 +4750,11 @@
             "command",
             "training"
         ],
+        "defense": "red",
+        "surges": [],
+        "wounds": 6,
+        "courage": 3,
+        "speed": 2,
         "history": [
             {
                 "date": "19 November 2020",
@@ -4763,24 +4764,18 @@
 				"date": "19 July 2024",
 				"description": "Cost reduced from 170 to 150 points. Gained Deflect keyword."
 			}
-        ],
-        "id": "gw"
+        ]
     },
     "gx": {
         "id": "gx",
-        "cardType": "unit",
-        "displayName": "Battle Droids",
-        "wounds": 1,
-        "speed": 2,
-        "courage": 1,
-        "defense": "white",
-        "surges": [],
-        "cardSubtype": "droid trooper",
         "cardName": "B1 Battle Droids",
-        "isUnique": false,
+        "displayName": "B1s",
+        "cardType": "unit",
+        "cardSubtype": "droid trooper",
         "rank": "corps",
-        "cost": 38,
         "faction": "separatists",
+        "isUnique": false,
+        "cost": 38,
         "imageName": "B1 Battle Droids.jpeg",
         "keywords": [
             "AI",
@@ -4793,6 +4788,11 @@
             "comms",
             "gear"
         ],
+        "defense": "white",
+        "surges": [],
+        "wounds": 1,
+        "courage": 1,
+        "speed": 2,
         "history": [
             {
                 "date": "27 October 2021",
@@ -4907,22 +4907,15 @@
         "id": "hd"
     },
     "he": {
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "hit",
-            "block"
-        ],
-        "speed": 2,
-        "wounds": 1,
-        "courage": 1,
-        "cardSubtype": "creature trooper",
+        "id": "he",
         "cardName": "Tauntaun Riders",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "creature trooper",
         "rank": "support",
+        "faction": "rebels",
+        "isUnique": false,
         "prevCost": 90,
         "cost": 95,
-        "faction": "rebels",
         "imageName": "Tauntaun Riders.jpeg",
         "keywords": [
             "Agile",
@@ -4936,6 +4929,14 @@
             "training",
             "comms"
         ],
+        "defense": "white",
+        "surges": [
+            "hit",
+            "block"
+        ],
+        "speed": 2,
+        "wounds": 1,
+        "courage": 1,
         "history": [
             {
                 "date": "19 November 2020",
@@ -4949,24 +4950,17 @@
                 "date": "19 July 2024",
                 "description": "Cost increased from 90 to 95 points."
             }
-        ],
-        "id": "he"
+        ]
     },
     "hf": {
-        "cardType": "unit",
-        "defense": "red",
-        "surges": [
-            "hit"
-        ],
-        "speed": 1,
-        "wounds": 6,
-        "courage": 2,
-        "cardSubtype": "creature trooper",
+        "id": "hf",
         "cardName": "Dewback Rider",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "creature trooper",
         "rank": "support",
-        "cost": 70,
         "faction": "empire",
+        "isUnique": false,
+        "cost": 70,
         "imageName": "Dewback Rider.jpeg",
         "keywords": [
             "Armor",
@@ -4982,6 +4976,13 @@
             "comms",
             "armament"
         ],
+        "defense": "red",
+        "surges": [
+            "hit"
+        ],
+        "wounds": 6,
+        "courage": 2,
+        "speed": 1,
         "history": [
             {
                 "date": "19 November 2020",
@@ -4991,23 +4992,17 @@
                 "date": "27 October 2021",
                 "description": "Cost reduced from 75 to 70 points."
             }
-        ],
-        "id": "hf"
+        ]
     },
     "hg": {
         "id": "hg",
-        "cardType": "unit",
-        "defense": "red",
-        "surges": [],
-        "wounds": 1,
-        "courage": 1,
-        "speed": 1,
-        "cardSubtype": "trooper",
         "cardName": "Shoretroopers",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "corps",
-        "cost": 52,
         "faction": "empire",
+        "isUnique": false,
+        "cost": 52,
         "imageName": "Shoretroopers.jpeg",
         "keywords": [
             "Coordinate",
@@ -5021,6 +5016,11 @@
             "gear",
             "grenades"
         ],
+        "defense": "red",
+        "surges": [],
+        "wounds": 1,
+        "courage": 1,
+        "speed": 1,
         "history": [
             {
 				"date": "19 July 2024",
@@ -5350,20 +5350,15 @@
     },
     "ia": {
         "id": "ia",
-        "cardType": "unit",
-        "defense": "red",
-        "surges": [],
-        "wounds": 8,
-        "courage": 2,
-        "speed": 2,
-        "cardSubtype": "trooper",
         "cardName": "General Grievous",
         "title": "Sinister Cyborg",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "commander",
+        "faction": "separatists",
+        "isUnique": true,
         "prevCost": 150,
         "cost": 130,
-        "faction": "separatists",
         "imageName": "General Grievous.jpeg",
         "keywords": [
             "Block",
@@ -5383,6 +5378,11 @@
             "training",
             "gear"
         ],
+        "defense": "red",
+        "surges": [],
+        "wounds": 8,
+        "courage": 2,
+        "speed": 2,
         "history": [
             {
                 "date": "19 November 2020",
@@ -5426,21 +5426,15 @@
         "id": "ib"
     },
     "ic": {
-        "cardType": "unit",
-        "defense": "red",
-        "surges": [
-            "hit"
-        ],
-        "wounds": 5,
-        "resilience": 3,
-        "speed": 3,
-        "cardSubtype": "repulsor vehicle",
+        "id": "ic",
         "cardName": "BARC Speeder",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "repulsor vehicle",
         "rank": "support",
+        "faction": "republic",
+        "isUnique": false,
         "prevCost": 55,
         "cost": 65,
-        "faction": "republic",
         "imageName": "BARC Speeder.jpeg",
         "keywords": [
             "Vehicle",
@@ -5453,6 +5447,13 @@
             "crew",
             "comms"
         ],
+        "defense": "red",
+        "surges": [
+            "hit"
+        ],
+        "wounds": 5,
+        "resilience": 3,
+        "speed": 3,
         "history": [
             {
                 "date": "19 November 2020",
@@ -5466,8 +5467,7 @@
                 "date": "19 July 2024",
                 "description": "Cost increased from 55 to 65 points."
             }
-        ],
-        "id": "ic"
+        ]
     },
     "id": {
         "cardSubtype": "crew",
@@ -5498,21 +5498,14 @@
     },
     "ie": {
         "id": "ie",
-        "cardType": "unit",
-        "defense": "white",
-        "surges": [
-            "block"
-        ],
-        "speed": 1,
-        "wounds": 3,
-        "resilience": -1,
-        "cardSubtype": "ground vehicle",
         "cardName": "Droidekas",
-        "isUnique": false,
+        "cardType": "unit",
+        "cardSubtype": "ground vehicle",
         "rank": "support",
+        "faction": "separatists",
+        "isUnique": false,
         "prevCost": 70,
         "cost": 60,
-        "faction": "separatists",
         "imageName": "Droidekas.jpeg",
         "keywords": [
             "Vehicle",
@@ -5528,6 +5521,13 @@
         "upgradeBar": [
             "comms"
         ],
+        "defense": "white",
+        "surges": [
+            "block"
+        ],
+        "wounds": 3,
+        "resilience": -1,
+        "speed": 1,
         "history": [
             {
                 "date": "19 November 2020",
@@ -5548,24 +5548,16 @@
         ]
     },
     "if": {
+        "id": "if",
         "cardType": "unit",
-        "displayName": "Medium Blaster Trooper",
-        "defense": "white",
-        "surges": [
-            "block",
-            "hit"
-        ],
-        "wounds": 4,
-        "courage": 2,
-        "speed": 1,
-        "cardSubtype": "emplacement trooper",
         "cardName": "Mark II Medium Blaster Trooper",
-        "isUnique": false,
+        "displayName": "Mark 2",
+        "cardSubtype": "emplacement trooper",
         "rank": "corps",
-        "cost": 38,
         "faction": "rebels",
+        "isUnique": false,
+        "cost": 38,
         "imageName": "Mark II Medium Blaster Trooper.jpeg",
-        "detachment": "gv",
         "keywords": [
             "Emplacement Trooper",
             "Detachment",
@@ -5580,18 +5572,26 @@
         "upgradeBar": [
             "comms"
         ],
+        "defense": "white",
+        "surges": [
+            "block",
+            "hit"
+        ],
+        "wounds": 4,
+        "courage": 2,
+        "speed": 1,
         "history": [
             {
                 "date": "19 November 2020",
                 "description": "Wound threshold increased from 3 to 4."
             }
         ],
-        "id": "if"
+        "detachment": "gv"
     },
     "ig": {
+        "cardName": "CM-O 93 Trooper",
         "displayName": "CM-0/93 Trooper",
         "cardSubtype": "heavy weapon",
-        "cardName": "CM-O 93 Trooper",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 26,
@@ -6070,23 +6070,14 @@
     },
     "jg": {
         "id": "jg",
-        "surges": [
-            "hit",
-            "block"
-        ],
-        "speed": 1,
-        "courage": 2,
-        "wounds": 4,
-        "defense": "white",
         "cardName": "R2-D2",
         "title": "Hero of a Thousand Devices",
-        "cardSubtype": "droid trooper",
-        "isUnique": true,
-        "rank": "operative",
         "cardType": "unit",
-        "cost": 55,
+        "cardSubtype": "droid trooper",
+        "rank": "operative",
         "faction": "rebels",
-        "counterpartId": "ji",
+        "isUnique": true,
+        "cost": 55,
         "imageName": "R2-D2.jpeg",
         "keywords": [
             "Repair",
@@ -6098,6 +6089,14 @@
         "upgradeBar": [
             "comms"
         ],
+        "defense": "white",
+        "surges": [
+            "hit",
+            "block"
+        ],
+        "courage": 2,
+        "wounds": 4,
+        "speed": 1,
         "history": [
             {
                 "date": "19 November 2020",
@@ -6111,27 +6110,19 @@
 				"date": "19 July 2024",
 				"description": "Removed Grounded and gained Infiltrate keywords."
 			}
-        ]
+        ],
+        "counterpartId": "ji"
     },
     "jh": {
         "id": "jh",
-        "cardType": "unit",
-        "faction": "republic",
-        "cardSubtype": "droid trooper",
         "cardName": "R2-D2",
         "title": "Independent Astromech",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "droid trooper",
         "rank": "operative",
-        "counterpartId": "jj",
+        "faction": "republic",
+        "isUnique": true,
         "cost": 55,
-        "surges": [
-            "hit",
-            "block"
-        ],
-        "speed": 1,
-        "courage": 2,
-        "wounds": 4,
-        "defense": "white",
         "imageName": "R2-D22.jpeg",
         "keywords": [
             "Repair",
@@ -6142,6 +6133,14 @@
         "upgradeBar": [
             "comms"
         ],
+        "defense": "white",
+        "surges": [
+            "hit",
+            "block"
+        ],
+        "courage": 2,
+        "wounds": 4,
+        "speed": 1,
         "history": [
             {
                 "date": "19 November 2020",
@@ -6155,7 +6154,8 @@
                 "date": "19 July 2024",
                 "description": "Removed Grounded and gained Infiltrate keywords."
             }
-        ]
+        ],
+        "counterpartId": "jj"
     },
     "ji": {
         "cardName": "C-3P0",
@@ -6604,22 +6604,15 @@
         "id": "ke"
     },
     "kf": {
-        "cardType": "unit",
-        "faction": "rebels",
-        "cardSubtype": "trooper",
+        "id": "kf",
         "cardName": "Cassian Andor",
         "title": "Capable Intelligence Agent",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "commander",
+        "faction": "rebels",
+        "isUnique": true,
         "cost": 90,
-        "defense": "white",
-        "surges": [
-            "hit",
-            "block"
-        ],
-        "speed": 2,
-        "wounds": 6,
-        "courage": 2,
         "imageName": "Cassian Andor.jpeg",
         "keywords": [
             "Covert Ops",
@@ -6634,25 +6627,25 @@
             "gear",
             "armament"
         ],
-        "id": "kf"
+        "defense": "white",
+        "surges": [
+            "hit",
+            "block"
+        ],
+        "wounds": 6,
+        "courage": 2,
+        "speed": 2
     },
     "kg": {
-        "cardType": "unit",
-        "faction": "empire",
-        "cardSubtype": "trooper",
+        "id": "kg",
         "cardName": "Iden Versio",
         "title": "Inferno Squad Leader",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "commander",
+        "faction": "empire",
+        "isUnique": true,
         "cost": 100,
-        "defense": "red",
-        "surges": [
-            "hit"
-        ],
-        "counterpartId": "lw",
-        "wounds": 6,
-        "courage": 3,
-        "speed": 2,
         "imageName": "Iden Versio.jpeg",
         "keywords": [
             "Quick Thinking",
@@ -6667,7 +6660,14 @@
             "gear",
             "armament"
         ],
-        "id": "kg"
+        "defense": "red",
+        "surges": [
+            "hit"
+        ],
+        "wounds": 6,
+        "courage": 3,
+        "speed": 2,
+        "counterpartId": "lw"
     },
     "kh": {
         "cardSubtype": "armament",
@@ -6954,24 +6954,16 @@
     },
     "kw": {
         "id": "kw",
-        "cardType": "unit",
-        "displayName": "Padmé Amidala",
-        "faction": "republic",
-        "cardSubtype": "trooper",
         "cardName": "Padme Amidala",
+        "displayName": "Padmé Amidala",
         "title": "Spirited Senator",
-        "isUnique": true,
+        "cardType": "unit",
+        "cardSubtype": "trooper",
         "rank": "operative",
+        "faction": "republic",
+        "isUnique": true,
         "prevCost": 85,
         "cost": 60,
-        "defense": "white",
-        "surges": [
-            "crit",
-            "block"
-        ],
-        "speed": 2,
-        "courage": 3,
-        "wounds": 6,
         "imageName": "Padme Amidala.jpeg",
         "keywords": [
             "Bolster",
@@ -6980,6 +6972,20 @@
             "Nimble",
             "Sharpshooter"
         ],
+        "upgradeBar": [
+            "command",
+            "training",
+            "gear",
+            "armament"
+        ],
+        "defense": "white",
+        "surges": [
+            "crit",
+            "block"
+        ],
+        "wounds": 6,
+        "speed": 2,
+        "courage": 3,
         "history": [
             {
                 "date": "5 June 2023",
@@ -6989,37 +6995,23 @@
 				"date": "19 July 2024",
 				"description": "Cost reduced from 85 to 60 points. Gained Bolster 2, Agile 1, and Inspire 2, and lost Quick Thinking, Authoritative, and Exemplar keywords. Blaster changed from 3 black to 3 red and lost Pierce keyword."
 			}
-        ],
-        "upgradeBar": [
-            "command",
-            "training",
-            "gear",
-            "armament"
         ]
     },
     "kx": {
         "id": "kx",
+        "cardName": "Cad Bane",
+        "title": "Needs No Introduction",
         "cardType": "unit",
+        "cardSubtype": "trooper",
+        "rank": "operative",
         "faction": "fringe",
         "subfaction": "bounty hunters",
         "affiliations": [
             "empire",
             "separatists"
         ],
-        "cardSubtype": "trooper",
-        "cardName": "Cad Bane",
-        "title": "Needs No Introduction",
         "isUnique": true,
-        "rank": "operative",
         "cost": 105,
-        "defense": "white",
-        "surges": [
-            "hit",
-            "block"
-        ],
-        "courage": 3,
-        "wounds": 6,
-        "speed": 2,
         "imageName": "Cad Bane.jpeg",
         "keywords": [
             "Jump",
@@ -7038,6 +7030,14 @@
             "armament",
             "grenades"
         ],
+        "defense": "white",
+        "surges": [
+            "hit",
+            "block"
+        ],
+        "courage": 3,
+        "wounds": 6,
+        "speed": 2,
         "history": [
             {
                 "date": "27 October 2021",
