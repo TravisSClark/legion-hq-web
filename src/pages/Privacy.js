@@ -19,7 +19,7 @@ function Privacy() {
               <p>Effective date: March 28, 2021</p>
 
 
-              <p>Legion HQ ("us", "we", or "our") operates the https://legionhq.thefifthtrooper.com/ website (hereinafter referred to as the "Service").</p>
+              <p>Legion HQ ("us", "we", or "our") operates the https://legionlistbuilder.com/ website (hereinafter referred to as the "Service").</p>
 
               <p>This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. The Privacy Policy  for Legion HQ has been created with the help of <a href="https://www.termsfeed.com/privacy-policy-generator/">Privacy Policy Generator</a>.</p>
 
@@ -29,7 +29,7 @@ function Privacy() {
               <ul>
                 <li>
                     <p><strong>Service</strong></p>
-                            <p>Service is the https://legionhq.thefifthtrooper.com/ website operated by Legion HQ</p>
+                            <p>Service is the https://legionlistbuilder.com/ website</p>
                         </li>
                 <li>
                     <p><strong>Personal Data</strong></p>
@@ -74,7 +74,7 @@ function Privacy() {
 
               <h2>Use of Data</h2>
 
-              <p>Legion HQ uses the collected data for various purposes:</p>
+              <p>Legion List Builder uses the collected data for various purposes:</p>
               <ul>
                 <li>To provide and maintain the Service</li>
                 <li>To notify you about changes to our Service</li>
@@ -94,7 +94,7 @@ function Privacy() {
               <h2>Disclosure Of Data</h2>
 
               <h3>Legal Requirements</h3>
-              <p>Legion HQ may disclose your Personal Data in the good faith belief that such action is necessary to:</p>
+              <p>Legion List Builder may disclose your Personal Data in the good faith belief that such action is necessary to:</p>
               <ul>
                 <li>To comply with a legal obligation</li>
                 <li>To protect and defend the rights or property of Legion HQ</li>
@@ -134,7 +134,7 @@ function Privacy() {
               <h2>Contact Us</h2>
               <p>If you have any questions about this Privacy Policy, please contact us:</p>
               <ul>
-                    <li>By email: contact@legion-hq.com</li>
+                    <li>By email: legionlistbuilder@gmail.com</li>
 
                     </ul>
             </div>

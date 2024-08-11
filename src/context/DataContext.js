@@ -86,7 +86,7 @@ const routes = {
 const newsPosts = [
   {
     "title": "New Edition(?) New(?) Listbuilder",
-    "date": "4 August 2024",
+    "date": "7 August 2024",
     "body": "LegionHQ is to be sunset, enter Legion List Builder. Currently using ~99% of the old LHQ codebase, got some plans to make new features and improve the user experience! Huge thanks to Nick for all the hard work he's done to make LegionHQ and keep it going for so many years.\n"
     
   },
@@ -263,7 +263,7 @@ export function DataProvider({ children }) {
           <br />
           {message}
           <br />
-          Issues can be emailed to <a href="mailto:contact@legion-hq.com">contact@legion-hq.com</a>.
+          Issues can be emailed to <a href="mailto:legionlistbuilder@gmail.com">legionlistbuilder@gmail.com"</a>.
         </Alert>
       </Snackbar>
     </React.Fragment>

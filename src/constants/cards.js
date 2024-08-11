@@ -14560,16 +14560,8 @@ const cards = JSON.parse(JSON.stringify({
         ],
         "history": [
             {
-                "date": "27 October 2021",
-                "description": "Cost reduced from 90 to 80 points."
-            },
-            {
-                "date": "5 June 2023",
-                "description": "Cost reduced from 80 to 75 points."
-            },
-            {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "id": "Ba"
@@ -14602,7 +14594,7 @@ const cards = JSON.parse(JSON.stringify({
             "Sharpshooter"
         ],
         "upgradeBar": [
-            "command",
+            "force",
             "command",
             "training",
             "gear"
@@ -14610,7 +14602,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "id": "Bb"
@@ -14647,7 +14639,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "id": "Bc"
@@ -14684,7 +14676,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "id": "Bd"
@@ -14722,7 +14714,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -14759,7 +14751,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -14799,7 +14791,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -14838,7 +14830,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "gv"
@@ -14881,7 +14873,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "al"
@@ -14920,7 +14912,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "mb"
@@ -14962,7 +14954,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
     },
@@ -15001,7 +14993,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "aq"
@@ -15041,7 +15033,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "om"
@@ -15082,7 +15074,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "av"
@@ -15121,7 +15113,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "au"
@@ -15158,7 +15150,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "ar"
@@ -15196,7 +15188,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -15231,7 +15223,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "hg"
@@ -15267,7 +15259,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "sr"
@@ -15302,7 +15294,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "az"
@@ -15342,7 +15334,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -15379,7 +15371,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "be"
@@ -15422,7 +15414,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -15457,7 +15449,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "tm"
@@ -15498,7 +15490,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -15538,7 +15530,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -15577,7 +15569,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "bg"
@@ -15619,7 +15611,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "kw"
@@ -15664,7 +15656,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "ol"
@@ -15707,7 +15699,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "na"
@@ -15750,7 +15742,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "gw"
@@ -15789,7 +15781,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -15824,7 +15816,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -15864,7 +15856,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "kz"
@@ -15906,7 +15898,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "ky"
@@ -15947,7 +15939,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -15988,7 +15980,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -16031,7 +16023,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -16069,7 +16061,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -16106,7 +16098,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -16148,7 +16140,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -16190,7 +16182,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "qa"
@@ -16234,7 +16226,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "pz"
@@ -16274,7 +16266,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "wn"
@@ -16316,7 +16308,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "fx"
@@ -16359,7 +16351,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "ia"
@@ -16392,7 +16384,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "gx"
@@ -16425,7 +16417,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "ga"
@@ -16466,7 +16458,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "la"
@@ -16512,7 +16504,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -16550,7 +16542,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "xd"
@@ -16596,7 +16588,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -16644,7 +16636,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -16690,7 +16682,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -16730,7 +16722,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "vj"
@@ -16771,7 +16763,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "vu"
@@ -16809,7 +16801,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "vk"
@@ -16851,7 +16843,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -17374,7 +17366,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -17395,7 +17387,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "fd"
@@ -17422,7 +17414,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -17448,7 +17440,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -17472,7 +17464,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "ox"
@@ -17500,7 +17492,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "fr"
@@ -17527,7 +17519,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "gs"
@@ -17558,7 +17550,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "uf"
@@ -17586,7 +17578,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -17612,7 +17604,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "od"
@@ -17641,7 +17633,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "os"
@@ -17670,7 +17662,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "oa"
@@ -17699,7 +17691,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "ob"
@@ -17728,7 +17720,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "oc"
@@ -17755,7 +17747,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "pe"
@@ -17786,7 +17778,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -17812,7 +17804,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -17837,7 +17829,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "fw"
@@ -17863,7 +17855,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "mj"
@@ -17888,7 +17880,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -17913,7 +17905,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "hr"
@@ -17940,7 +17932,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -17966,7 +17958,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -17992,7 +17984,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18018,7 +18010,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "lg"
@@ -18044,7 +18036,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "ep"
@@ -18071,7 +18063,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18097,7 +18089,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18125,7 +18117,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "or"
@@ -18151,7 +18143,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "ek"
@@ -18172,7 +18164,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "dk"
@@ -18200,7 +18192,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "hb"
@@ -18232,7 +18224,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18259,7 +18251,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18285,7 +18277,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18312,7 +18304,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "qo"
@@ -18341,7 +18333,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "qq"
@@ -18370,7 +18362,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "ot"
@@ -18397,7 +18389,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "ef"
@@ -18424,7 +18416,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18450,7 +18442,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18480,7 +18472,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18505,7 +18497,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18531,7 +18523,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18559,7 +18551,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "oq"
@@ -18586,7 +18578,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18612,7 +18604,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "en"
@@ -18639,7 +18631,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18665,7 +18657,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "eo"
@@ -18688,7 +18680,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "pa"
@@ -18719,7 +18711,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ],
         "oldCard": "ug"
@@ -18742,7 +18734,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },
@@ -18767,7 +18759,7 @@ const cards = JSON.parse(JSON.stringify({
         "history": [
             {
                 "date": "X July 2024",
-                "description": "card_refresh"
+                "description": "Card refresh wave 1 (2.6.0)"
             }
         ]
     },

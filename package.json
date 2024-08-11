@@ -3,15 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "context": "./src/context",
-    "common": "./src/common",
-    "utility": "./src/utility",
-    "pages": "./src/pages",
-    "constants": "./src/constants",
-    "assets": "./src/assets",
-
-
-    "@auth0/auth0-react": "^1.10.2",
+    "@auth0/auth0-react": "^1.12.1",
     "@iconify/react": "^3.2.1",
     "@material-ui/core": "^4.10.0",
     "@material-ui/icons": "^4.9.1",
@@ -20,10 +12,14 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "@widgetbot/react-embed": "^1.2.2",
+    "assets": "./src/assets",
     "auth0-js": "^9.12.2",
     "axios": "^1.7.2",
     "body-parser": "^1.19.0",
     "clsx": "^1.1.0",
+    "common": "./src/common",
+    "constants": "./src/constants",
+    "context": "./src/context",
     "dom-to-image-more": "^2.8.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
@@ -31,6 +27,7 @@
     "https": "^1.0.0",
     "lodash": "^4.17.15",
     "merge-images": "^2.0.0",
+    "pages": "./src/pages",
     "path": "^0.12.7",
     "qrcode.react": "^1.0.0",
     "react": "^16.13.0",
@@ -45,7 +42,8 @@
     "react-to-print": "^2.8.0",
     "three": "^0.137.0",
     "typeface-roboto": "0.0.75",
-    "universal-cookie": "^4.0.3"
+    "universal-cookie": "^4.0.3",
+    "utility": "./src/utility"
   },
   "scripts": {
     "start": "react-scripts start",

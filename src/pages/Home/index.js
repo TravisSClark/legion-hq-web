@@ -91,7 +91,7 @@ function Home() {
               <img
                 alt="Legion Builder Logo"
                 src={userSettings.themeColor === 'light' ? llbLogoLight : llbLogoDark}
-                style={{ width: 400, height: 'auto' }}
+                style={{ width: 100, height: 'auto' }}
               />
             </Grid>
             <Grid item style={{ maxWidth: '75vw', textAlign: 'center' }}>

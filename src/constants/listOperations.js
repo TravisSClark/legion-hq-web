@@ -1941,7 +1941,10 @@ function getRankLimits(currentList){
 // iterating everything every time something's added
 function validateList(currentList, rankLimits){
   let validationIssues = [];
-  validationIssues.push( { level:1, text: "Validation is a work in progress... double-check your army rules and unit cards!" });
+  validationIssues.push( { level:1, text: "...there might still be some general teething issues here. Please hit 'About' and shoot an email if you find something wrong!" });
+
+  validationIssues.push( { level:1, text: "Validation is (...still) a work in progress... double-check your army rules and unit cards! (Including, not limited to: Detachment, BF unit limits, BFs counting all SF as Corps like they should)" });
+
 
   const battleForce = currentList.battleForce;
 
