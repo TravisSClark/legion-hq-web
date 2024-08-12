@@ -42,33 +42,6 @@ function ModeButton({ currentMode, points, maxPoints, tooltip, handleChangeMode 
         >
           Grand Army (1600 pts)
         </MenuItem>
-        <MenuItem
-          selected={currentMode === 'storm tide: infantry'}
-          onClick={() => {
-            handleChangeMode('storm tide: infantry');
-            handleCloseMenu();
-          }}
-        >
-          Storm Tide: Infantry Division
-        </MenuItem>
-        <MenuItem
-          selected={currentMode === 'storm tide: armored'}
-          onClick={() => {
-            handleChangeMode('storm tide: armored');
-            handleCloseMenu();
-          }}
-        >
-          Storm Tide: Armored Division
-        </MenuItem>
-        <MenuItem
-          selected={currentMode === 'storm tide: special forces'}
-          onClick={() => {
-            handleChangeMode('storm tide: special forces');
-            handleCloseMenu();
-          }}
-        >
-          Storm Tide: Special Forces Division
-        </MenuItem>
       </Menu>
       <LargerTooltip title={legionModes[currentMode].name}>
         <Chip

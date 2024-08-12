@@ -92,13 +92,6 @@ function Home() {
           >
             <Grid item>
               <img
-                alt="Fifth Trooper Logo"
-                src={userSettings.themeColor === 'light' ? ftLogoLight : ftLogoDark}
-                style={{ width: 150, height: 'auto' }}
-              />
-            </Grid>
-            <Grid item>
-              <img
                 alt="Legion HQ Logo"
                 src={userSettings.themeColor === 'light' ? lhqLogoLight : lhqLogoDark}
                 style={{ width: 400, height: 'auto' }}
@@ -171,9 +164,9 @@ function Home() {
             <Grid item>
               <div style={{ height: 10 }} />
             </Grid>
-            <Grid item>
+            {/* <Grid item>
               <LoginButton auth={auth} />
-            </Grid>
+            </Grid> */}
             <Grid item>
               <div style={{ height: 10 }} />
             </Grid>

@@ -599,8 +599,6 @@ function generateTTSJSONText(list) {
   ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };
   if (list.mode === "500-point mode") {
     ttsJSON.battlefieldDeck.scenario =  "skirmish";
-  } else if (list.mode.includes("storm tide")) {
-    ttsJSON.battlefieldDeck.scenario = "community"
   } else {
     ttsJSON.battlefieldDeck.scenario =  "standard";
   }
@@ -1012,13 +1010,6 @@ function getEligibleUnitsToAdd(list, rank) {
     // if (card.cardType !== 'unit') continue;
     if (card.rank !== rank) continue;
 
-    if (list.mode.includes('storm tide') && id === 'AA') {
-      continue;
-    } else if (!list.mode.includes('storm tide') && id === 'AK') {
-      continue;
-    }
-
-
     if(!list.battleForce)
     {
       if (!list.faction.includes(card.faction) && !card.affiliations) continue;
@@ -1236,15 +1227,6 @@ return {
 }
 
 function getEligibleCommandsToAdd(list) {
-  const stormTideCommands = {
-    '500-point mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
-    'standard mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
-    'grand army mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
-    'storm tide: infantry': ['AC', 'AE', 'AG'],
-    'storm tide: armored': ['AB', 'AF', 'AJ'],
-    'storm tide: special forces': ['AD', 'AH', 'AI']
-  };
-
   const validCommandIds = [];
   const invalidCommandIds = [];
   const cardsById = cardIdsByType.command; // Object.keys(cards);
@@ -1259,22 +1241,6 @@ function getEligibleCommandsToAdd(list) {
     // if (card.cardType !== 'command') return;
     if (list.commandCards.includes(id)) return;
     if (list.contingencies && list.contingencies.includes(id)) return;
-
-    if (
-      stormTideCommands[list.mode] &&
-      stormTideCommands[list.mode].length === 3 &&
-      stormTideCommands[list.mode].includes(id)
-    ) {
-      validCommandIds.push(id);
-      return;
-    } else if (
-      stormTideCommands[list.mode] &&
-      stormTideCommands[list.mode].length === 3 &&
-      stormTideCommands['standard mode'].includes(id)
-    ) {
-      invalidCommandIds.push(id);
-      return;
-    }
 
     if (!list.faction.includes(card.faction)) return;
     if (id === 'aa') return; // Standing Orders

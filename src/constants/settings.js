@@ -13,8 +13,7 @@ const settings = {
       name: 'Theme',
       values: [
         { key: 'dark', name: 'Dark Side' },
-        { key: 'light', name: 'Light Side'},
-        { key: 'blue', name: 'Fifth Trooper' }
+        { key: 'light', name: 'Light Side'}
       ]
     },
     {

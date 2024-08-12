@@ -81,18 +81,6 @@ function DefaultBar() {
         style={{ height: 35 }}
       />
       <div className={classes.grow} />
-      <a
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://thefifthtrooper.com/"
-        style={{ marginTop: 4 }}
-      >
-        <img
-          alt="Fifth Trooper Logo"
-          src={userSettings.themeColor === 'light' ? ftLogoLight : ftLogoDark}
-          style={{ height: 35 }}
-        />
-      </a>
       {false && (
         <div className={classes.search}>
           <div className={classes.searchIcon}>
