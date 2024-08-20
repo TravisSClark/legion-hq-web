@@ -88,7 +88,7 @@ function ListHeader() {
           open={Boolean(anchorEl)}
           onClose={handleFactionMenuClose}
         >
-          {currentList.faction !== 'fringe' && (
+          {currentList.faction !== 'mercenary' && (
             <MenuItem
               key="none"
               selected={!currentList.battleForce || currentList.battleForce === ''}

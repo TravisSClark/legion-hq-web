@@ -1285,7 +1285,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "operative",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "bounty hunters",
         "affiliations": [
             "empire"
@@ -1340,7 +1340,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "operative",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "bounty hunters",
         "affiliations": [
             "empire",
@@ -7004,7 +7004,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "operative",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "bounty hunters",
         "affiliations": [
             "empire",
@@ -10694,7 +10694,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "commander",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "pyke syndicate",
         "affiliations": [
             "rebels",
@@ -10734,7 +10734,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "corps",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "pyke syndicate",
         "affiliations": [
             "rebels",
@@ -10777,7 +10777,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "commander",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "black sun",
         "affiliations": [
             "empire",
@@ -10807,7 +10807,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "corps",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "black sun",
         "affiliations": [
             "empire",
@@ -10847,7 +10847,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "operative",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "shadow collective",
         "isUnique": true,
         "prevCost": 170,
@@ -10889,7 +10889,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "commander",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "shadow collective",
         "isUnique": true,
         "prevCost": 100,
@@ -10937,7 +10937,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "special",
-        "faction": "fringe",
+        "faction": "mercenary",
         "isUnique": false,
         "cost": 70,
         "imageName": "Mandalorian Super Commandos.jpeg",
@@ -11206,7 +11206,7 @@
         "cardType": "command",
         "commander": "Maul",
         "imageName": "Witch Magick.jpeg",
-        "faction": "fringe",
+        "faction": "mercenary",
         "keywords": []
     },
     "rs": {
@@ -11216,7 +11216,7 @@
         "cardType": "command",
         "commander": "Maul",
         "imageName": "His Emminence.jpeg",
-        "faction": "fringe",
+        "faction": "mercenary",
         "keywords": []
     },
     "rt": {
@@ -11226,7 +11226,7 @@
         "cardType": "command",
         "commander": "Maul",
         "imageName": "Seize What Power We Can.jpeg",
-        "faction": "fringe",
+        "faction": "mercenary",
         "keywords": []
     },
     "ru": {
@@ -11491,7 +11491,7 @@
         "cardType": "command",
         "commander": "Gar Saxon",
         "imageName": "Marked For Elimination.jpeg",
-        "faction": "fringe",
+        "faction": "mercenary",
         "keywords": []
     },
     "sk": {
@@ -11501,7 +11501,7 @@
         "cardType": "command",
         "commander": "Gar Saxon",
         "imageName": "Fight Another Day.jpeg",
-        "faction": "fringe",
+        "faction": "mercenary",
         "keywords": [
             "Outmaneuver"
         ]
@@ -11513,7 +11513,7 @@
         "cardType": "command",
         "commander": "Gar Saxon",
         "imageName": "Victory or Death!.jpeg",
-        "faction": "fringe",
+        "faction": "mercenary",
         "keywords": [
             "Outmaneuver"
         ]
@@ -11524,7 +11524,7 @@
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
         "rank": "heavy",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "raiders",
         "isUnique": false,
         "prevCost": 75,
@@ -11566,7 +11566,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "faction": "fringe",
+        "faction": "mercenary",
         "imageName": "Frenzied Gunner.jpeg",
         "keywords": [],
         "requirements": [
@@ -11575,7 +11575,7 @@
                 "rank": "heavy"
             },
             {
-                "faction": "fringe"
+                "faction": "mercenary"
             }
         ]
     },
@@ -11599,7 +11599,7 @@
                 "rank": "heavy"
             },
             {
-                "faction": "fringe"
+                "faction": "mercenary"
             }
         ]
     },
@@ -11628,7 +11628,7 @@
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
         "rank": "support",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "raiders",
         "affiliations": [
             "rebels",
@@ -11900,7 +11900,7 @@
         "cardType": "unit",
         "cardSubtype": "droid trooper",
         "rank": "operative",
-        "faction": "fringe",
+        "faction": "mercenary",
         "affiliations": [
             "empire"
         ],
@@ -11935,7 +11935,7 @@
         "cardType": "unit",
         "cardSubtype": "droid trooper",
         "rank": "operative",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "bounty hunters",
         "affiliations": [
             "rebels",
@@ -11973,7 +11973,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "operative",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "bounty hunters",
         "affiliations": [
             "rebels",
@@ -12024,7 +12024,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "operative",
-        "faction": "fringe",
+        "faction": "mercenary",
         "subfaction": "bounty hunters",
         "affiliations": [
             "rebels"
@@ -12094,7 +12094,7 @@
     "tn": {
         "id": "tn",
         "cardName": "Grogu",
-        "faction": "fringe",
+        "faction": "mercenary",
         "affiliations": [
             "rebels"
         ],
@@ -12994,7 +12994,7 @@
         "cardType": "unit",
         "cardSubtype": "ground vehicle",
         "rank": "heavy",
-        "faction": "fringe",
+        "faction": "mercenary",
         "affiliations": [],
         "isUnique": true,
         "prevCost": 190,
@@ -13032,7 +13032,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "corps",
-        "faction": "fringe",
+        "faction": "mercenary",
         "affiliations": [
             "rebels"
         ],
@@ -13247,7 +13247,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "special",
-        "faction": "fringe",
+        "faction": "mercenary",
         "affiliations": [
             "rebels"
         ],
@@ -13287,7 +13287,7 @@
         "cardType": "unit",
         "cardSubtype": "droid trooper",
         "rank": "commander",
-        "faction": "fringe",
+        "faction": "mercenary",
         "isUnique": true,
         "cost": 40,
         "imageName": "C-3PO3.jpeg",
@@ -13416,7 +13416,7 @@
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "commander",
-        "faction": "fringe",
+        "faction": "mercenary",
         "isUnique": true,
         "cost": 45,
         "imageName": "Logray.jpeg",
@@ -14313,7 +14313,7 @@
         "cardType": "unit",
 		"cardSubtype": "clone trooper",
         "rank": "operative",
-		"faction": "fringe",
+		"faction": "mercenary",
 		"affiliations": [
             "rebels"
         ],
@@ -14345,7 +14345,7 @@
 	"xw": {
 		"cardName": "Omega",
 		"title": "Mascot of the 99th",
-		"faction": "fringe",
+		"faction": "mercenary",
 		"affiliations": ["rebels"],
 		"isUnique": true,
 		"upgradeBar": [],

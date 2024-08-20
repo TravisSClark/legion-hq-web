@@ -167,7 +167,7 @@ export function ListProvider({
   const handleClearList = () => {
     setCardPaneFilter({ action: 'DISPLAY' });
     const newList = JSON.parse(JSON.stringify(listTemplate));
-    if (currentList.faction === 'fringe') newList.battleForce = 'Shadow Collective';
+    if (currentList.faction === 'mercenary') newList.battleForce = 'Shadow Collective';
     updateThenValidateList({ ...newList, faction: currentList.faction });
   }
   const handleChangeTitle = title => setCurrentList({ ...changeListTitle(currentList, title) });

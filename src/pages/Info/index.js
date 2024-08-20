@@ -23,10 +23,10 @@ function Info() {
         <Typography>
           Questions, comments, or concerns can be sent to {' '}
           <a
-            href="mailto:contact@legion-hq.com"
+            href="mailto:crit2block@gmail.com"
             style={{ textDecoration: 'none', color: 'lightblue' }}
           >
-            contact@legion-hq.com
+            crit2block@gmail.com
           </a>
           .
         </Typography>

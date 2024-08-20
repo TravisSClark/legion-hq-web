@@ -13,7 +13,7 @@ const battleForcesDict = {
       rules: { 
         noFieldComm: true
       },
-      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2022/10/StarWarsLegionBFRulesSheetEBD.pdf',
+      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_EchoBaseDefenders.pdf',
       'standard mode': {
         commander: [1, 4],
         operative: [0, 3],
@@ -46,7 +46,7 @@ const battleForcesDict = {
       rules: {
         countMercs: true
       },
-      ruleUrl: 'https://static1.squarespace.com/static/5ce432b1f9d2be000134d8ae/t/6480bd67c7a4c84f6c1bf2af/1686158697261/Star+Wars+Legion+BF+Rules+Sheet+Bright+Tree+Village+%281%29.pdf',
+      ruleUrl: 'cdn.svc.asmodee.net/production-amgcom/uploads/2023/07/StarWarsLegionBFRulesSheetBrightTreeVillage1',
       'standard mode': {
         commander: [1, 5],
         operative: [0, 4],
@@ -78,7 +78,7 @@ const battleForcesDict = {
       rules: {
         noFieldComm: true
       },
-      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2023/09/Star-Wars-Legion-BF-Rules-Sheet-BF2.1.pdf',
+      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/024/07/SWQ_BlizzardForce.pdf',
       allowedUniqueUpgrades: ['fl'],
       'standard mode': {
         commander: [1, 2],
@@ -136,7 +136,7 @@ const battleForcesDict = {
     special: ['ba'],
     support: ['bf'],
     heavy: ['we', 'bg'],
-    ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2023/07/SWL_TempestForce.pdf',
+    ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_TempestForce-1.pdf',
     allowedUniqueUpgrades: [],
     'standard mode': {
       commander: [1, 2],
@@ -164,7 +164,7 @@ const battleForcesDict = {
       special: ['kz', 'ky'],
       support: ['mb', 'ic'],
       heavy: ['oo'],
-      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2022/10/StarWarsLegionBFRulesSheet501.pdf',
+      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_501st.pdf',
       allowedUniqueUpgrades: ['lh', 'lg'],
       'standard mode': {
         commander: [1, 2],
@@ -276,7 +276,7 @@ const battleForcesDict = {
     },
   'Shadow Collective': {
       name: 'Shadow Collective',
-      faction: 'fringe',
+      faction: 'mercenary',
       countsMercsForMin: true,
       commander: ['ra', 'rd', 'qy'],
       operative: ['rc', 'kx', 'ax'],

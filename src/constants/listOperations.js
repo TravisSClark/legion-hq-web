@@ -511,7 +511,7 @@ function generateTTSJSONText(list) {
   if (list.faction === 'rebels') ttsJSON.armyFaction = 'rebel';
   else if (list.faction === 'empire') ttsJSON.armyFaction = 'imperial';
   else if (list.faction === 'republic') ttsJSON.armyFaction = 'republic';
-  else if (list.faction === 'fringe') ttsJSON.armyFaction = '';
+  else if (list.faction === 'mercenary') ttsJSON.armyFaction = '';
   else ttsJSON.armyFaction = 'separatist';
 
   ttsJSON.commandCards = [];
@@ -1292,7 +1292,7 @@ function getEquippableUpgrades(
     const { faction } = unitCard;
 
     if (faction === 'rebels' || faction === 'republic') unitCard['light side'] = true;
-    else if (faction === 'separatists' || faction === 'empire' || faction === 'fringe') unitCard['dark side'] = true;
+    else if (faction === 'separatists' || faction === 'empire' || faction === 'mercenary') unitCard['dark side'] = true;
 
     if (unitCard.keywords.includes('Tempted')) {
       unitCard['light side'] = true;
@@ -1585,15 +1585,16 @@ function convertHashToList(faction, url) {
   let segments;
   if (url.includes(':')) {
     const battleForceSegments = url.split(':');
-    if (battleForceSegments[0].includes('ebd')) list.battleForce = 'Echo Base Defenders';
-    else if (battleForceSegments[0].includes('bf')) list.battleForce = 'Blizzard Force';
-    else if (battleForceSegments[0].includes('5l')) list.battleForce = '501st Legion';
-    else if (battleForceSegments[0].includes('si')) list.battleForce = 'Separatist Invasion';
-    else if (battleForceSegments[0].includes('sif')) list.battleForce = 'Separatist Invasion';
-    else if (battleForceSegments[0].includes('sc')) list.battleForce = 'Shadow Collective';
-    else if (battleForceSegments[0].includes('btv')) list.battleForce = 'Bright Tree Village';
-    else if (battleForceSegments[0].includes('tf')) list.battleForce = 'Tempest Force';
-    else if (battleForceSegments[0].includes('ir')) list.battleForce = 'Imperial Remnant';
+    const battleForceCode = battleForceSegments[0];
+
+    let keys = Object.keys(battleForcesDict);
+    for(let i = 0; i < keys.length; i++) {
+      let bf = battleForcesDict[keys[i]];
+      if (battleForceCode == bf.linkId) {
+        list.battleForce = bf.name;
+        break;
+      }
+    }
     segments = battleForceSegments[1].split(',');
   } else {
     list.battleForce = '';
@@ -1648,7 +1649,7 @@ function convertHashToList(faction, url) {
     // console.log(e);
     return false;
   }
-  if (list.faction === 'fringe') list.battleForce = 'Shadow Collective';
+  if (list.faction === 'mercenary') list.battleForce = 'Shadow Collective';
   if (list.faction === 'separatists' && list.battleForce === 'Echo Base Defenders') {
     list.battleForce = 'Separatist Invasion';
   }
@@ -1878,7 +1879,7 @@ function validateList(currentList, rankLimits){
       validationIssues = validationIssues.concat(unit.validationIssues);
     }
 
-    if(card.faction === 'fringe'){
+    if(card.faction === 'mercenary'){
       mercs[card.rank] += unit.count;
     }
   });

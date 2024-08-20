@@ -29,6 +29,7 @@ function ListChip({ userList, deleteUserList }) {
       }
     });
     const card = cards[findFirstCommanderId(userList)];
+    // TODO: Figure out zoom
     return (
       <React.Fragment>
         <ThemeProvider theme={factionTheme}>

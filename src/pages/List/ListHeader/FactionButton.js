@@ -16,7 +16,7 @@ function FactionButton({ faction, handleFactionMenuOpen }) {
 
 FactionButton.propTypes = {
   handleClick: PropTypes.func,
-  faction: PropTypes.oneOf(['rebels', 'empire', 'republic', 'separatists', 'fringe']).isRequired
+  faction: PropTypes.oneOf(['rebels', 'empire', 'republic', 'separatists', 'mercenary']).isRequired
 };
 
 export default FactionButton;

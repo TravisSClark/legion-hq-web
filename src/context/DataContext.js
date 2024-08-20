@@ -66,10 +66,10 @@ const routes = {
     path: '/list/separatists',
     icon: <FactionIcon faction="separatists" />
   },
-  '/list/fringe': {
+  '/list/mercenary': {
     name: 'Shadow Collective',
-    path: '/list/fringe',
-    icon: <FactionIcon faction="fringe" />
+    path: '/list/mercenary',
+    icon: <FactionIcon faction="mercenary" />
   },
   '/settings': {
     name: 'Settings',
@@ -84,6 +84,11 @@ const routes = {
 };
 
 const newsPosts = [
+  {
+    "title": "Carrying on Legacy into a New Edition",
+    "date": "18 July 2024",
+    "body": "With the help of Nick and his hard work on this open source project, we are carrying into LegionHQ 2.6. There is still work to be done to make this 100%, so please feel free to reach out if you want to collaborate!"
+  },
   {
     "title": "Bad Batch cards",
     "date": "5 June 2024",
