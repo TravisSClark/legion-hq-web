@@ -3,7 +3,7 @@
         "cardSubtype": "condition",
         "cardName": "Clear Conditions",
         "cardType": "battle",
-        "imageName": "Clear Conditions.jpeg",
+        "imageName": "Clear Conditions.png",
         "keywords": [],
         "id": "Ca"
     },
@@ -11,7 +11,7 @@
         "cardSubtype": "condition",
         "cardName": "Hostile Environment",
         "cardType": "battle",
-        "imageName": "Hostile Environment.jpeg",
+        "imageName": "Hostile Environment.png",
         "keywords": [],
         "id": "Cb"
     },
@@ -19,7 +19,7 @@
         "cardSubtype": "condition",
         "cardName": "Limited Visibility",
         "cardType": "battle",
-        "imageName": "Limited Visibility.jpeg",
+        "imageName": "Limited Visibility.png",
         "keywords": [],
         "id": "Cc"
     },
@@ -27,7 +27,7 @@
         "cardSubtype": "condition",
         "cardName": "Minefield",
         "cardType": "battle",
-        "imageName": "Minefield.jpeg",
+        "imageName": "Minefield.png",
         "keywords": [
             "Blast",
             "Impact"
@@ -38,7 +38,7 @@
         "cardSubtype": "condition",
         "cardName": "Rapid Reinforcements",
         "cardType": "battle",
-        "imageName": "Rapid Reinforcements.jpeg",
+        "imageName": "Rapid Reinforcements.png",
         "keywords": [],
         "id": "Ce"
     },
@@ -46,7 +46,7 @@
         "cardSubtype": "condition",
         "cardName": "Fortified Positions",
         "cardType": "battle",
-        "imageName": "Fortified Positions.jpeg",
+        "imageName": "Fortified Positions.png",
         "keywords": [],
         "id": "Cf"
     },
@@ -54,7 +54,7 @@
         "cardSubtype": "condition",
         "cardName": "Supply Drop",
         "cardType": "battle",
-        "imageName": "Supply Drop.jpeg",
+        "imageName": "Supply Drop.png",
         "keywords": [],
         "id": "Cg"
     },
@@ -62,7 +62,7 @@
         "cardSubtype": "condition",
         "cardName": "War Weary",
         "cardType": "battle",
-        "imageName": "War Weary.jpeg",
+        "imageName": "War Weary.png",
         "keywords": [],
         "id": "Ch"
     },
@@ -71,7 +71,7 @@
         "cardSubtype": "condition",
         "cardName": "Clear Conditions2",
         "cardType": "battle",
-        "imageName": "Clear Conditions2.jpeg",
+        "imageName": "Clear Conditions2.png",
         "keywords": [
             "Skirmish"
         ],
@@ -81,7 +81,7 @@
         "cardSubtype": "condition",
         "cardName": "Dawn",
         "cardType": "battle",
-        "imageName": "Dawn.jpeg",
+        "imageName": "Dawn.png",
         "keywords": [
             "Skirmish"
         ],
@@ -91,7 +91,7 @@
         "cardSubtype": "condition",
         "cardName": "Improvised Defenses",
         "cardType": "battle",
-        "imageName": "Improvised Defenses.jpeg",
+        "imageName": "Improvised Defenses.png",
         "keywords": [
             "Skirmish"
         ],
@@ -102,7 +102,7 @@
         "displayName": "War Weary",
         "cardName": "War Weary2",
         "cardType": "battle",
-        "imageName": "War Weary2.jpeg",
+        "imageName": "War Weary2.png",
         "keywords": [
             "Skirmish"
         ],
@@ -112,7 +112,7 @@
         "cardSubtype": "deployment",
         "cardName": "Advanced Positions",
         "cardType": "battle",
-        "imageName": "Advanced Positions.jpeg",
+        "imageName": "Advanced Positions.png",
         "keywords": [
             "Scout",
             "Stationary"
@@ -123,7 +123,7 @@
         "cardSubtype": "deployment",
         "cardName": "Battle Lines",
         "cardType": "battle",
-        "imageName": "Battle Lines.jpeg",
+        "imageName": "Battle Lines.png",
         "keywords": [],
         "id": "Db"
     },
@@ -131,7 +131,7 @@
         "cardSubtype": "deployment",
         "cardName": "Disarray",
         "cardType": "battle",
-        "imageName": "Disarray.jpeg",
+        "imageName": "Disarray.png",
         "keywords": [],
         "id": "Dc"
     },
@@ -139,7 +139,7 @@
         "cardSubtype": "deployment",
         "cardName": "The Long March",
         "cardType": "battle",
-        "imageName": "The Long March.jpeg",
+        "imageName": "The Long March.png",
         "keywords": [],
         "id": "Dd"
     },
@@ -147,7 +147,7 @@
         "cardSubtype": "deployment",
         "cardName": "Major Offensive",
         "cardType": "battle",
-        "imageName": "Major Offensive.jpeg",
+        "imageName": "Major Offensive.png",
         "keywords": [],
         "id": "De"
     },
@@ -156,7 +156,7 @@
         "cardSubtype": "deployment",
         "cardName": "Forces Converge (Act 1)",
         "cardType": "battle",
-        "imageName": "Forces Converge (Act 1).jpeg",
+        "imageName": "Forces Converge (Act 1).png",
         "keywords": [],
         "id": "Df"
     },
@@ -164,7 +164,7 @@
         "cardSubtype": "deployment",
         "cardName": "Faceoff",
         "cardType": "battle",
-        "imageName": "Faceoff.jpeg",
+        "imageName": "Faceoff.png",
         "keywords": [
             "Skirmish"
         ],
@@ -174,7 +174,7 @@
         "cardSubtype": "deployment",
         "cardName": "Meeting Engagement",
         "cardType": "battle",
-        "imageName": "Meeting Engagement.jpeg",
+        "imageName": "Meeting Engagement.png",
         "keywords": [
             "Skirmish"
         ],
@@ -184,7 +184,7 @@
         "cardSubtype": "deployment",
         "cardName": "Flanking Positions",
         "cardType": "battle",
-        "imageName": "Flanking Positions.jpeg",
+        "imageName": "Flanking Positions.png",
         "keywords": [
             "Skirmish"
         ],
@@ -195,7 +195,7 @@
         "cardSubtype": "deployment",
         "cardName": "Battle Lines2",
         "cardType": "battle",
-        "imageName": "Battle Lines2.jpeg",
+        "imageName": "Battle Lines2.png",
         "keywords": [
             "Skirmish"
         ],
@@ -205,7 +205,7 @@
         "cardSubtype": "deployment",
         "cardName": "Roll Out",
         "cardType": "battle",
-        "imageName": "Roll Out.jpeg",
+        "imageName": "Roll Out.png",
         "keywords": [],
         "id": "Dk"
     },
@@ -214,7 +214,7 @@
         "cardSubtype": "deployment",
         "cardName": "Hemmed In",
         "cardType": "battle",
-        "imageName": "Hemmed In.jpeg",
+        "imageName": "Hemmed In.png",
         "keywords": [],
         "id": "Dl"
     },
@@ -223,7 +223,7 @@
         "cardSubtype": "deployment",
         "cardName": "Danger Close",
         "cardType": "battle",
-        "imageName": "Danger Close.jpeg",
+        "imageName": "Danger Close.png",
         "keywords": [],
         "id": "Dm"
     },
@@ -231,7 +231,7 @@
         "cardSubtype": "objective",
         "cardName": "Breakthrough",
         "cardType": "battle",
-        "imageName": "Breakthrough.jpeg",
+        "imageName": "Breakthrough.png",
         "keywords": [],
         "id": "Oa"
     },
@@ -240,7 +240,7 @@
         "cardSubtype": "objective",
         "cardName": "Intercept the Transmissions",
         "cardType": "battle",
-        "imageName": "Intercept the Transmissions.jpeg",
+        "imageName": "Intercept the Transmissions.png",
         "keywords": [],
         "id": "Ob"
     },
@@ -248,7 +248,7 @@
         "cardSubtype": "objective",
         "cardName": "Key Positions",
         "cardType": "battle",
-        "imageName": "Key Positions.jpeg",
+        "imageName": "Key Positions.png",
         "keywords": [],
         "id": "Oc"
     },
@@ -257,7 +257,7 @@
         "cardSubtype": "objective",
         "cardName": "Recover the Supplies",
         "cardType": "battle",
-        "imageName": "Recover the Supplies.jpeg",
+        "imageName": "Recover the Supplies.png",
         "keywords": [
             "Claim"
         ],
@@ -268,7 +268,7 @@
         "cardSubtype": "objective",
         "cardName": "Secure the Intel (Act 1)",
         "cardType": "battle",
-        "imageName": "Secure the Intel (Act 1).jpeg",
+        "imageName": "Secure the Intel (Act 1).png",
         "keywords": [
             "Extract",
             "Claim"
@@ -280,7 +280,7 @@
         "cardSubtype": "objective",
         "cardName": "Sabotage the Moisture Vaporators",
         "cardType": "battle",
-        "imageName": "Sabotage the Moisture Vaporators.jpeg",
+        "imageName": "Sabotage the Moisture Vaporators.png",
         "keywords": [
             "Sabotage/Repair"
         ],
@@ -290,7 +290,7 @@
         "cardSubtype": "objective",
         "cardName": "Hostage Exchange",
         "cardType": "battle",
-        "imageName": "Hostage Exchange.jpeg",
+        "imageName": "Hostage Exchange.png",
         "keywords": [
             "Claim"
         ],
@@ -300,7 +300,7 @@
         "cardSubtype": "objective",
         "cardName": "Elimination",
         "cardType": "battle",
-        "imageName": "Elimination.jpeg",
+        "imageName": "Elimination.png",
         "keywords": [
             "Skirmish"
         ],
@@ -310,7 +310,7 @@
         "cardSubtype": "objective",
         "cardName": "Pivotal Positions",
         "cardType": "battle",
-        "imageName": "Pivotal Positions.jpeg",
+        "imageName": "Pivotal Positions.png",
         "keywords": [
             "Skirmish"
         ],
@@ -320,7 +320,7 @@
         "cardSubtype": "objective",
         "cardName": "Breach",
         "cardType": "battle",
-        "imageName": "Breach.jpeg",
+        "imageName": "Breach.png",
         "keywords": [
             "Skirmish"
         ],
@@ -330,7 +330,7 @@
         "cardSubtype": "objective",
         "cardName": "Control",
         "cardType": "battle",
-        "imageName": "Control.jpeg",
+        "imageName": "Control.png",
         "keywords": [
             "Skirmish"
         ],
@@ -340,7 +340,7 @@
         "cardSubtype": "objective",
         "cardName": "Bombing Run",
         "cardType": "battle",
-        "imageName": "Bombing Run.jpeg",
+        "imageName": "Bombing Run.png",
         "keywords": [
             "Blast",
             "Suppressive"
@@ -351,7 +351,7 @@
         "cardSubtype": "objective",
         "cardName": "Payload",
         "cardType": "battle",
-        "imageName": "Payload.jpeg",
+        "imageName": "Payload.png",
         "keywords": [],
         "id": "Om"
     },
@@ -361,7 +361,7 @@
         "cardType": "command",
         "commander": "",
         "faction": "",
-        "imageName": "Standing Orders.jpeg",
+        "imageName": "Standing Orders.png",
         "keywords": [],
         "id": "aa"
     },
@@ -375,7 +375,7 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 75,
-        "imageName": "Leia Organa.jpeg",
+        "imageName": "Leia Organa.png",
         "keywords": [
             "Take Cover",
             "Exemplar",
@@ -422,7 +422,7 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 100,
-        "imageName": "Han Solo.jpeg",
+        "imageName": "Han Solo.png",
         "keywords": [
             "Steady",
             "Low Profile",
@@ -462,7 +462,7 @@
         "isUnique": true,
         "prevCost": 150,
         "cost": 120,
-        "imageName": "Luke Skywalker.jpeg",
+        "imageName": "Luke Skywalker Hero of the Rebellion.png",
         "keywords": [
             "Jump",
             "Block",
@@ -508,7 +508,7 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 90,
-        "imageName": "Jyn Erso.jpeg",
+        "imageName": "Jyn Erso.png",
         "keywords": [
             "Quick Thinking",
             "Danger Sense",
@@ -556,7 +556,7 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 90,
-        "imageName": "Chewbacca.jpeg",
+        "imageName": "Chewbacca Walking Carpet.png",
         "keywords": [
             "Enrage",
             "Guardian",
@@ -599,7 +599,7 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 125,
-        "imageName": "Sabine Wren.jpeg",
+        "imageName": "Sabine Wren.png",
         "keywords": [
             "Jump",
             "Gunslinger",
@@ -631,7 +631,7 @@
         "faction": "rebels",
         "isUnique": false,
         "cost": 40,
-        "imageName": "Rebel Troopers.jpeg",
+        "imageName": "Rebel Troopers.png",
         "keywords": [
             "Agile",
             "Nimble"
@@ -665,7 +665,7 @@
         "faction": "rebels",
         "isUnique": false,
         "cost": 40,
-        "imageName": "Fleet Troopers.jpeg",
+        "imageName": "Fleet Troopers.png",
         "keywords": [
             "Charge"
         ],
@@ -698,13 +698,14 @@
     "aj": {
         "id": "aj",
         "cardName": "Wookiee Warriors",
+        "title": "Freedom Fighters",
         "cardType": "unit",
         "cardSubtype": "wookiee trooper",
         "rank": "special",
         "faction": "rebels",
         "isUnique": false,
         "cost": 69,
-        "imageName": "Wookiee Warriors.jpeg",
+        "imageName": "Wookiee Warriors Freedom Fighters.png",
         "keywords": [
             "Charge",
             "Duelist",
@@ -742,7 +743,7 @@
         "faction": "rebels",
         "isUnique": false,
         "cost": 48,
-        "imageName": "Rebel Commandos.jpeg",
+        "imageName": "Rebel Commandos.png",
         "keywords": [
             "Low Profile",
             "Scout",
@@ -784,7 +785,7 @@
         "faction": "rebels",
         "isUnique": false,
         "cost": 20,
-        "imageName": "Rebel Commandos Strike Team.jpeg",
+        "imageName": "Rebel Commandos Strike Team.png",
         "keywords": [
             "Detachment",
             "Heavy Weapon Team",
@@ -828,7 +829,7 @@
         "faction": "rebels",
         "isUnique": false,
         "cost": 56,
-        "imageName": "Rebel Pathfinders.jpeg",
+        "imageName": "Rebel Pathfinders.png",
         "keywords": [
             "Danger Sense",
             "Dauntless",
@@ -871,7 +872,7 @@
         "faction": "rebels",
         "isUnique": false,
         "cost": 65,
-        "imageName": "1.4 FD Laser Cannon Team.jpeg",
+        "imageName": "1.4 FD Laser Cannon Team.png",
         "keywords": [
             "Emplacement Trooper",
             "Full Pivot",
@@ -914,7 +915,7 @@
         "isUnique": false,
         "prevCost": 55,
         "cost": 50,
-        "imageName": "AT-RT.jpeg",
+        "imageName": "AT-RT Reb.png",
         "keywords": [
             "Vehicle",
             "Armor",
@@ -953,7 +954,7 @@
         "isUnique": false,
         "prevCost": 130,
         "cost": 125,
-        "imageName": "T-47 Airspeeder.jpeg",
+        "imageName": "T-47 Airspeeder.png",
         "keywords": [
             "Vehicle",
             "Armor",
@@ -1003,7 +1004,7 @@
         "isUnique": false,
         "prevCost": 60,
         "cost": 55,
-        "imageName": "X-34 Landspeeder.jpeg",
+        "imageName": "X-34 Landspeeder.png",
         "keywords": [
             "Vehicle",
             "Arsenal",
@@ -1047,7 +1048,7 @@
         "isUnique": false,
         "prevCost": 50,
         "cost": 55,
-        "imageName": "Imperial Officer.jpeg",
+        "imageName": "Imperial Officer.png",
         "keywords": [
             "Spotter",
             "Exemplar",
@@ -1091,7 +1092,7 @@
         "isUnique": true,
         "prevCost": 190,
         "cost": 170,
-        "imageName": "Emperor Palpatine.jpeg",
+        "imageName": "Emperor Palpatine.png",
         "keywords": [
             "Pulling the Strings",
             "Entourage",
@@ -1144,7 +1145,7 @@
         "isUnique": true,
         "prevCost": 190,
         "cost": 170,
-        "imageName": "Darth Vader.jpeg",
+        "imageName": "Darth Vader Dark Lord of the Sith.png",
         "keywords": [
             "Deflect",
             "Immune",
@@ -1195,7 +1196,7 @@
         "isUnique": true,
         "prevCost": 70,
         "cost": 75,
-        "imageName": "General Veers.jpeg",
+        "imageName": "General Veers.png",
         "keywords": [
             "Guidance",
             "Spotter",
@@ -1242,7 +1243,7 @@
         "isUnique": true,
         "prevCost": 75,
         "cost": 65,
-        "imageName": "Director Orson Krennic.jpeg",
+        "imageName": "Director Orson Krennic.png",
         "keywords": [
             "Spotter",
             "Compel",
@@ -1292,7 +1293,7 @@
         ],
         "isUnique": true,
         "cost": 130,
-        "imageName": "Boba Fett.jpeg",
+        "imageName": "Boba Fett Infamous Bounty Hunter.png",
         "keywords": [
             "Jump",
             "Arsenal",
@@ -1348,7 +1349,7 @@
         ],
         "isUnique": true,
         "cost": 105,
-        "imageName": "Bossk.jpeg",
+        "imageName": "Bossk.png",
         "keywords": [
             "Bounty",
             "Enrage",
@@ -1387,7 +1388,7 @@
         "isUnique": false,
         "prevCost": 44,
         "cost": 42,
-        "imageName": "Stormtroopers.jpeg",
+        "imageName": "Stormtroopers.png",
         "keywords": [
             "Precise"
         ],
@@ -1421,7 +1422,7 @@
         "isUnique": false,
         "prevCost": 44,
         "cost": 42,
-        "imageName": "Snowtroopers.jpeg",
+        "imageName": "Snowtroopers.png",
         "keywords": [
             "Steady"
         ],
@@ -1458,7 +1459,7 @@
         "faction": "empire",
         "isUnique": false,
         "cost": 48,
-        "imageName": "Scout Troopers.jpeg",
+        "imageName": "Scout Troopers.png",
         "keywords": [
             "Low Profile",
             "Scout",
@@ -1495,7 +1496,7 @@
         "faction": "empire",
         "isUnique": false,
         "cost": 20,
-        "imageName": "Scout Troopers Strike Team.jpeg",
+        "imageName": "Scout Troopers Strike Team.png",
         "keywords": [
             "Detachment",
             "Heavy Weapon Team",
@@ -1539,7 +1540,7 @@
         "faction": "empire",
         "isUnique": false,
         "cost": 69,
-        "imageName": "Imperial Royal Guards.jpeg",
+        "imageName": "Imperial Royal Guards.png",
         "keywords": [
             "Charge",
             "Disciplined",
@@ -1574,7 +1575,7 @@
         "faction": "empire",
         "isUnique": false,
         "cost": 72,
-        "imageName": "Imperial Death Troopers.jpeg",
+        "imageName": "Imperial Death Troopers.png",
         "keywords": [
             "Disciplined",
             "Precise",
@@ -1614,7 +1615,7 @@
         "isUnique": false,
         "prevCost": 50,
         "cost": 60,
-        "imageName": "E-Web Heavy Blaster Team.jpeg",
+        "imageName": "E-Web Heavy Blaster Team.png",
         "keywords": [
             "Emplacement Trooper",
             "Prepared Position",
@@ -1657,7 +1658,7 @@
         "isUnique": false,
         "prevCost": 70,
         "cost": 80,
-        "imageName": "74-Z Speeder Bikes.jpeg",
+        "imageName": "74-Z Speeder Bikes.png",
         "keywords": [
             "Vehicle",
             "Cover",
@@ -1701,7 +1702,7 @@
         "isUnique": false,
         "prevCost": 155,
         "cost": 145,
-        "imageName": "AT-ST.jpeg",
+        "imageName": "AT-ST.png",
         "keywords": [
             "Vehicle",
             "Armor",
@@ -1745,8 +1746,8 @@
     },
     "bh": {
         "id": "bh",
-        "cardName": "Occupier Combat Assault Tank",
-        "displayName": "Occupier Tank",
+        "cardName": "TX-225 GAVw Occupier Tank",
+        "displayName": "Gav Tank",
         "cardType": "unit",
         "cardSubtype": "ground vehicle",
         "rank": "heavy",
@@ -1754,7 +1755,7 @@
         "isUnique": false,
         "prevCost": 140,
         "cost": 125,
-        "imageName": "Occupier Combat Assault Tank.jpeg",
+        "imageName": "Occupier Tank.png",
         "keywords": [
             "Vehicle",
             "Armor",
@@ -1802,7 +1803,7 @@
         "isUnique": false,
         "prevCost": 45,
         "cost": 50,
-        "imageName": "Rebel Officer.jpeg",
+        "imageName": "Rebel Officer.png",
         "keywords": [
             "Take Cover",
             "Inspire",
@@ -1837,7 +1838,7 @@
         "cardType": "command",
         "commander": "",
         "faction": "",
-        "imageName": "Assault.jpeg",
+        "imageName": "Assault.png",
         "keywords": [],
         "id": "bj"
     },
@@ -1847,7 +1848,7 @@
         "cardType": "command",
         "commander": "",
         "faction": "",
-        "imageName": "Push.jpeg",
+        "imageName": "Push.png",
         "keywords": [],
         "id": "bk"
     },
@@ -1857,7 +1858,7 @@
         "cardType": "command",
         "commander": "",
         "faction": "",
-        "imageName": "Ambush.jpeg",
+        "imageName": "Ambush.png",
         "keywords": [],
         "id": "bl"
     },
@@ -1867,7 +1868,7 @@
         "cardType": "command",
         "commander": "Darth Vader",
         "faction": "empire",
-        "imageName": "Master of Evil.jpeg",
+        "imageName": "Master of Evil.png",
         "keywords": [],
         "id": "bm"
     },
@@ -1877,7 +1878,7 @@
         "cardType": "command",
         "commander": "General Veers",
         "faction": "empire",
-        "imageName": "Imperial Discipline.jpeg",
+        "imageName": "Imperial Discipline.png",
         "keywords": [],
         "id": "bn"
     },
@@ -1887,7 +1888,7 @@
         "cardType": "command",
         "commander": "Emperor Palpatine",
         "faction": "empire",
-        "imageName": "An Entire Legion.jpeg",
+        "imageName": "An Entire Legion.png",
         "keywords": [],
         "id": "bo"
     },
@@ -1897,7 +1898,7 @@
         "cardType": "command",
         "commander": "Boba Fett",
         "faction": "",
-        "imageName": "Z-6 Jetpack Rocket.jpeg",
+        "imageName": "Z-6 Jetpack Rocket.png",
         "keywords": [
             "Blast",
             "Impact"
@@ -1910,7 +1911,7 @@
         "cardType": "command",
         "commander": "Bossk",
         "faction": "",
-        "imageName": "Lying In Wait.jpeg",
+        "imageName": "Lying In Wait.png",
         "keywords": [
             "Sharpshooter"
         ],
@@ -1922,7 +1923,7 @@
         "cardType": "command",
         "commander": "Darth Vader",
         "faction": "empire",
-        "imageName": "New Ways to Motivate Them.jpeg",
+        "imageName": "New Ways to Motivate Them.png",
         "keywords": [],
         "id": "br"
     },
@@ -1932,7 +1933,7 @@
         "cardType": "command",
         "commander": "General Veers",
         "faction": "empire",
-        "imageName": "Evasive Maneuvers.jpeg",
+        "imageName": "Evasive Maneuvers.png",
         "keywords": [],
         "id": "bs"
     },
@@ -1942,7 +1943,7 @@
         "cardType": "command",
         "commander": "Emperor Palpatine",
         "faction": "empire",
-        "imageName": "Give In To Your Anger.jpeg",
+        "imageName": "Give In To Your Anger.png",
         "keywords": [],
         "id": "bt"
     },
@@ -1952,7 +1953,7 @@
         "cardType": "command",
         "commander": "Boba Fett",
         "faction": "",
-        "imageName": "ZX Flame Projector.jpeg",
+        "imageName": "ZX Flame Projector.png",
         "keywords": [
             "Blast",
             "Spray"
@@ -1965,7 +1966,7 @@
         "cardType": "command",
         "commander": "General Veers",
         "faction": "empire",
-        "imageName": "Maximum Firepower.jpeg",
+        "imageName": "Maximum Firepower.png",
         "keywords": [
             "Impact",
             "Immune"
@@ -1978,7 +1979,7 @@
         "cardType": "command",
         "commander": "Darth Vader",
         "faction": "empire",
-        "imageName": "Implacable.jpeg",
+        "imageName": "Implacable.png",
         "keywords": [],
         "id": "bw"
     },
@@ -1988,7 +1989,7 @@
         "cardType": "command",
         "commander": "Emperor Palpatine",
         "faction": "empire",
-        "imageName": "And Now You Will Die.jpeg",
+        "imageName": "And Now You Will Die.png",
         "keywords": [],
         "id": "bx"
     },
@@ -1998,7 +1999,7 @@
         "cardType": "command",
         "commander": "Director Orson Krennic",
         "faction": "empire",
-        "imageName": "Voracious Ambition.jpeg",
+        "imageName": "Voracious Ambition.png",
         "keywords": [],
         "id": "by"
     },
@@ -2008,7 +2009,7 @@
         "cardType": "command",
         "commander": "Boba Fett",
         "faction": "",
-        "imageName": "Whipcord Launcher.jpeg",
+        "imageName": "Whipcord Launcher.png",
         "keywords": [],
         "id": "bz"
     },
@@ -2018,7 +2019,7 @@
         "cardType": "command",
         "commander": "",
         "faction": "empire",
-        "imageName": "Covert Observation.jpeg",
+        "imageName": "Covert Observation.png",
         "keywords": [],
         "history": [
             {
@@ -2034,7 +2035,7 @@
         "cardType": "command",
         "commander": "",
         "faction": "empire",
-        "imageName": "Pinned Down.jpeg",
+        "imageName": "Pinned Down.png",
         "keywords": [],
         "id": "cb"
     },
@@ -2044,7 +2045,7 @@
         "cardType": "command",
         "commander": "",
         "faction": "empire",
-        "imageName": "Coordinated Fire.jpeg",
+        "imageName": "Coordinated Fire.png",
         "keywords": [],
         "id": "cc"
     },
@@ -2054,7 +2055,7 @@
         "cardType": "command",
         "commander": "Luke Skywalker",
         "faction": "rebels",
-        "imageName": "Return of the Jedi.jpeg",
+        "imageName": "Return of the Jedi.png",
         "keywords": [],
         "id": "cd"
     },
@@ -2064,7 +2065,7 @@
         "cardType": "command",
         "commander": "Leia Organa",
         "faction": "rebels",
-        "imageName": "Somebody Has to Save Our Skins.jpeg",
+        "imageName": "Somebody Has to Save Our Skins.png",
         "keywords": [],
         "id": "ce"
     },
@@ -2074,7 +2075,7 @@
         "cardType": "command",
         "commander": "Han Solo",
         "faction": "rebels",
-        "imageName": "Change of Plans.jpeg",
+        "imageName": "Change of Plans.png",
         "keywords": [],
         "id": "cf"
     },
@@ -2084,7 +2085,7 @@
         "cardType": "command",
         "commander": "Chewbacca",
         "faction": "rebels",
-        "imageName": "Notorious Scoundrels.jpeg",
+        "imageName": "Notorious Scoundrels.png",
         "keywords": [],
         "id": "cg"
     },
@@ -2094,7 +2095,7 @@
         "cardType": "command",
         "commander": "",
         "faction": "rebels",
-        "imageName": "Covering Fire.jpeg",
+        "imageName": "Covering Fire.png",
         "keywords": [],
         "id": "ch"
     },
@@ -2104,7 +2105,7 @@
         "cardType": "command",
         "commander": "Jyn Erso",
         "faction": "rebels",
-        "imageName": "Complete the Mission.jpeg",
+        "imageName": "Complete the Mission.png",
         "keywords": [
             "Low Profile"
         ],
@@ -2116,7 +2117,7 @@
         "cardType": "command",
         "commander": "Sabine Wren",
         "faction": "rebels",
-        "imageName": "Legacy of Mandalore.jpeg",
+        "imageName": "Legacy of Mandalore.png",
         "keywords": [
             "Inspire"
         ],
@@ -2128,7 +2129,7 @@
         "cardType": "command",
         "commander": "Luke Skywalker",
         "faction": "rebels",
-        "imageName": "My Ally is the Force.jpeg",
+        "imageName": "My Ally is the Force.png",
         "keywords": [],
         "id": "ck"
     },
@@ -2138,7 +2139,7 @@
         "cardType": "command",
         "commander": "Leia Organa",
         "faction": "rebels",
-        "imageName": "No Time for Sorrows.jpeg",
+        "imageName": "No Time for Sorrows.png",
         "keywords": [],
         "id": "cl"
     },
@@ -2148,7 +2149,7 @@
         "cardType": "command",
         "commander": "Han Solo",
         "faction": "rebels",
-        "imageName": "Reckless Diversion.jpeg",
+        "imageName": "Reckless Diversion.png",
         "keywords": [],
         "id": "cm"
     },
@@ -2158,7 +2159,7 @@
         "cardType": "command",
         "commander": "Chewbacca",
         "faction": "rebels",
-        "imageName": "Brains and Brawn.jpeg",
+        "imageName": "Brains and Brawn.png",
         "keywords": [],
         "id": "cn"
     },
@@ -2168,7 +2169,7 @@
         "cardType": "command",
         "commander": "Jyn Erso",
         "faction": "rebels",
-        "imageName": "Trust Goes Both Ways.jpeg",
+        "imageName": "Trust Goes Both Ways.png",
         "keywords": [
             "Inspire",
             "Teamwork"
@@ -2181,7 +2182,7 @@
         "cardType": "command",
         "commander": "",
         "faction": "rebels",
-        "imageName": "Turning the Tide.jpeg",
+        "imageName": "Turning the Tide.png",
         "keywords": [
             "Inspire"
         ],
@@ -2193,7 +2194,7 @@
         "cardType": "command",
         "commander": "Luke Skywalker",
         "faction": "rebels",
-        "imageName": "Son of Skywalker.jpeg",
+        "imageName": "Son of Skywalker.png",
         "keywords": [],
         "history": [
             {
@@ -2209,7 +2210,7 @@
         "cardType": "command",
         "commander": "Leia Organa",
         "faction": "rebels",
-        "imageName": "Coordinated Bombardment.jpeg",
+        "imageName": "Coordinated Bombardment.png",
         "keywords": [
             "Immune"
         ],
@@ -2221,7 +2222,7 @@
         "cardType": "command",
         "commander": "Han Solo",
         "faction": "rebels",
-        "imageName": "Sorry About the Mess.jpeg",
+        "imageName": "Sorry About the Mess.png",
         "keywords": [],
         "id": "cs"
     },
@@ -2231,7 +2232,7 @@
         "cardType": "command",
         "commander": "Jyn Erso",
         "faction": "rebels",
-        "imageName": "Rebellious.jpeg",
+        "imageName": "Rebellious.png",
         "keywords": [
             "Charge"
         ],
@@ -2243,7 +2244,7 @@
         "cardType": "command",
         "commander": "Chewbacca",
         "faction": "rebels",
-        "imageName": "Common Cause.jpeg",
+        "imageName": "Common Cause.png",
         "keywords": [],
         "id": "cu"
     },
@@ -2253,7 +2254,7 @@
         "cardType": "command",
         "commander": "",
         "faction": "rebels",
-        "imageName": "Sabotaged Communications.jpeg",
+        "imageName": "Sabotaged Communications.png",
         "keywords": [],
         "history": [
             {
@@ -2269,7 +2270,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Improvised Orders.jpeg",
+        "imageName": "Improvised Orders.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -2286,7 +2287,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Commanding Presence.jpeg",
+        "imageName": "Commanding Presence.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -2303,7 +2304,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Esteemed Leader.jpeg",
+        "imageName": "Esteemed Leader.png",
         "keywords": [
             "Guardian"
         ],
@@ -2316,7 +2317,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Strict Orders.jpeg",
+        "imageName": "Strict Orders.png",
         "keywords": [],
         "requirements": [],
         "id": "cz"
@@ -2327,7 +2328,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 2,
-        "imageName": "Recon Intel.jpeg",
+        "imageName": "Recon Intel.png",
         "keywords": [
             "Scout"
         ],
@@ -2340,7 +2341,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Emergency Stims.jpeg",
+        "imageName": "Emergency Stims.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -2365,7 +2366,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 4,
-        "imageName": "Targeting Scopes.jpeg",
+        "imageName": "Targeting Scopes.png",
         "keywords": [
             "Precise"
         ],
@@ -2384,7 +2385,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 2,
-        "imageName": "Grappling Hooks.jpeg",
+        "imageName": "Grappling Hooks.png",
         "keywords": [
             "Expert Climber"
         ],
@@ -2407,7 +2408,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 2,
-        "imageName": "Environmental Gear.jpeg",
+        "imageName": "Environmental Gear.png",
         "keywords": [
             "Unhindered"
         ],
@@ -2426,7 +2427,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 6,
-        "imageName": "Tenacity.jpeg",
+        "imageName": "Tenacity.png",
         "keywords": [],
         "requirements": [],
         "id": "df",
@@ -2443,7 +2444,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 6,
-        "imageName": "Hunter.jpeg",
+        "imageName": "Hunter.png",
         "keywords": [],
         "requirements": [],
         "id": "dg"
@@ -2454,7 +2455,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 2,
-        "imageName": "Duck and Cover.jpeg",
+        "imageName": "Duck and Cover.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -2475,7 +2476,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 6,
-        "imageName": "Endurance.jpeg",
+        "imageName": "Endurance.png",
         "keywords": [],
         "requirements": [],
         "id": "di"
@@ -2486,7 +2487,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Fragmentation Grenades.jpeg",
+        "imageName": "Fragmentation Grenades.png",
         "keywords": [],
         "requirements": [],
         "id": "dj"
@@ -2497,7 +2498,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "Impact Grenades.jpeg",
+        "imageName": "Impact Grenades.png",
         "keywords": [
             "Impact"
         ],
@@ -2516,7 +2517,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "Concussion Grenades.jpeg",
+        "imageName": "Concussion Grenades.png",
         "keywords": [
             "Blast"
         ],
@@ -2535,7 +2536,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "HQ Uplink.jpeg",
+        "imageName": "HQ Uplink.png",
         "keywords": [],
         "requirements": [],
         "id": "dm"
@@ -2546,7 +2547,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Comms Jammer.jpeg",
+        "imageName": "Comms Jammer.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -2563,7 +2564,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Long-Range Comlink.jpeg",
+        "imageName": "Long-Range Comlink.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -2580,7 +2581,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Comms Relay.jpeg",
+        "imageName": "Comms Relay.png",
         "keywords": [],
         "requirements": [
             "NOT",
@@ -2596,7 +2597,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "Overcharged Generator.jpeg",
+        "imageName": "Overcharged Generator.png",
         "keywords": [
             "Fixed",
             "Impact"
@@ -2620,7 +2621,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "Barrage Generator.jpeg",
+        "imageName": "Barrage Generator.png",
         "keywords": [
             "Fixed",
             "Suppressive"
@@ -2644,7 +2645,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Battle Meditation.jpeg",
+        "imageName": "Battle Meditation.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -2662,7 +2663,7 @@
         "cardType": "upgrade",
         "prevCost": 10,
         "cost": 40,
-        "imageName": "Force Push.jpeg",
+        "imageName": "Force Push.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -2679,7 +2680,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Force Reflexes.jpeg",
+        "imageName": "Force Reflexes.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -2700,7 +2701,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Saber Throw.jpeg",
+        "imageName": "Saber Throw.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -2717,7 +2718,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Jedi Mind Trick.jpeg",
+        "imageName": "Jedi Mind Trick.png",
         "keywords": [],
         "requirements": [
             {
@@ -2738,7 +2739,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "Anger.jpeg",
+        "imageName": "Anger.png",
         "keywords": [],
         "requirements": [
             {
@@ -2759,7 +2760,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Force Choke.jpeg",
+        "imageName": "Force Choke.png",
         "keywords": [],
         "requirements": [
             {
@@ -2781,7 +2782,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 0,
-        "imageName": "A-180 Configuration.jpeg",
+        "imageName": "A-180 Configuration.png",
         "keywords": [
             "Pierce",
             "Reconfigure"
@@ -2800,7 +2801,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 0,
-        "imageName": "A-300 Configuration.jpeg",
+        "imageName": "A-300 Configuration.png",
         "keywords": [
             "Reconfigure"
         ],
@@ -2823,7 +2824,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "The Darksaber.jpeg",
+        "imageName": "The Darksaber.png",
         "keywords": [
             "Dauntless",
             "Immune",
@@ -2849,7 +2850,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 17,
-        "imageName": "MPL-57 Ion Trooper.jpeg",
+        "imageName": "MPL-57 Ion Trooper.png",
         "keywords": [
             "Impact",
             "Ion",
@@ -2882,7 +2883,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 20,
-        "imageName": "Z-6 Trooper.jpeg",
+        "imageName": "Z-6 Trooper.png",
         "keywords": [],
         "requirements": [
             {
@@ -2903,7 +2904,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 31,
-        "imageName": "Bowcaster Wookiee.jpeg",
+        "imageName": "Bowcaster Wookiee.png",
         "keywords": [
             "Impact",
             "Pierce"
@@ -2927,7 +2928,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 23,
-        "imageName": "Proton Charge Saboteur.jpeg",
+        "imageName": "Proton Charge Saboteur.png",
         "keywords": [
             "Arm",
             "Detonate",
@@ -2958,7 +2959,7 @@
         "cardType": "upgrade",
         "prevCost": 28,
         "cost": 38,
-        "imageName": "DH-447 Sniper.jpeg",
+        "imageName": "DH-447 Sniper.png",
         "keywords": [
             "High Velocity",
             "Pierce"
@@ -2986,7 +2987,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 23,
-        "imageName": "Scatter Gun Trooper.jpeg",
+        "imageName": "Scatter Gun Trooper.png",
         "keywords": [
             "Pierce"
         ],
@@ -3004,7 +3005,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 19,
-        "imageName": "MPL-57 Barrage Trooper.jpeg",
+        "imageName": "MPL-57 Barrage Trooper.png",
         "keywords": [
             "Blast",
             "Impact"
@@ -3036,7 +3037,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 20,
-        "imageName": "DLT-19 Stormtrooper.jpeg",
+        "imageName": "DLT-19 Stormtrooper.png",
         "keywords": [
             "Impact"
         ],
@@ -3063,7 +3064,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 16,
-        "imageName": "HH-12 Stormtrooper.jpeg",
+        "imageName": "HH-12 Stormtrooper.png",
         "keywords": [
             "Cumbersome",
             "Impact"
@@ -3095,7 +3096,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 21,
-        "imageName": "Electrostaff Guard.jpeg",
+        "imageName": "Electrostaff Guard.png",
         "keywords": [
             "Sidearm",
             "Immune"
@@ -3120,7 +3121,7 @@
         "cardType": "upgrade",
         "prevCost": 28,
         "cost": 38,
-        "imageName": "DLT-19x Sniper.jpeg",
+        "imageName": "DLT-19x Sniper.png",
         "keywords": [
             "High Velocity",
             "Pierce"
@@ -3148,7 +3149,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 26,
-        "imageName": "Sonic Charge Saboteur.jpeg",
+        "imageName": "Sonic Charge Saboteur.png",
         "keywords": [
             "Arm",
             "Detonate",
@@ -3173,7 +3174,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 18,
-        "imageName": "T-7 Ion Snowtrooper.jpeg",
+        "imageName": "T-7 Ion Snowtrooper.png",
         "keywords": [
             "Impact",
             "Ion",
@@ -3206,7 +3207,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 20,
-        "imageName": "Flametrooper.jpeg",
+        "imageName": "Flametrooper.png",
         "keywords": [
             "Blast",
             "Spray"
@@ -3225,7 +3226,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 9,
-        "imageName": "Rebel Comms Technician.jpeg",
+        "imageName": "Rebel Comms Technician.png",
         "keywords": [],
         "requirements": [
             {
@@ -3243,7 +3244,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 16,
-        "imageName": "Rebel Officer.jpeg",
+        "imageName": "Rebel Officer.png",
         "keywords": [
             "Inspire",
             "Leader"
@@ -3267,7 +3268,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 7,
-        "imageName": "Rebel Trooper.jpeg",
+        "imageName": "Rebel Trooper.png",
         "keywords": [],
         "requirements": [
             {
@@ -3288,7 +3289,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "R5 Astromech Droid.jpeg",
+        "imageName": "R5 Astromech Droid.png",
         "keywords": [
             "Repair",
             "Noncombatant"
@@ -3307,7 +3308,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 18,
-        "imageName": "2-1B Medical Droid.jpeg",
+        "imageName": "2-1B Medical Droid.png",
         "keywords": [
             "Treat",
             "Noncombatant"
@@ -3325,7 +3326,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 7,
-        "imageName": "Fleet Trooper.jpeg",
+        "imageName": "Fleet Trooper.png",
         "keywords": [],
         "requirements": [
             {
@@ -3346,7 +3347,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 17,
-        "imageName": "Imperial Officer.jpeg",
+        "imageName": "Imperial Officer.png",
         "keywords": [
             "Inspire",
             "Leader"
@@ -3374,7 +3375,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Stormtrooper.jpeg",
+        "imageName": "Stormtrooper.png",
         "keywords": [],
         "requirements": [
             {
@@ -3396,7 +3397,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Imperial Comms Technician.jpeg",
+        "imageName": "Imperial Comms Technician.png",
         "keywords": [],
         "requirements": [
             "AND",
@@ -3419,7 +3420,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 19,
-        "imageName": "FX-9 Medical Droid.jpeg",
+        "imageName": "FX-9 Medical Droid.png",
         "keywords": [
             "Treat",
             "Noncombatant"
@@ -3441,7 +3442,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 9,
-        "imageName": "R4 Astromech Droid.jpeg",
+        "imageName": "R4 Astromech Droid.png",
         "keywords": [
             "Repair",
             "Noncombatant"
@@ -3463,7 +3464,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Snowtrooper.jpeg",
+        "imageName": "Snowtrooper.png",
         "keywords": [],
         "requirements": [
             {
@@ -3485,7 +3486,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 20,
-        "imageName": "AT-RT Rotary Blaster.jpeg",
+        "imageName": "AT-RT Rotary Blaster.png",
         "keywords": [
             "Fixed"
         ],
@@ -3509,7 +3510,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "AT-RT Flamethrower.jpeg",
+        "imageName": "AT-RT Flamethrower.png",
         "keywords": [
             "Blast",
             "Fixed",
@@ -3539,7 +3540,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "AT-RT Laser Cannon.jpeg",
+        "imageName": "AT-RT Laser Cannon.png",
         "keywords": [
             "Impact",
             "Fixed"
@@ -3568,7 +3569,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Ax-108 Ground Buzzer.jpeg",
+        "imageName": "Ax-108 Ground Buzzer.png",
         "keywords": [
             "Fixed"
         ],
@@ -3592,7 +3593,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 0,
-        "imageName": "MoDk Power Harpoon.jpeg",
+        "imageName": "MoDk Power Harpoon.png",
         "keywords": [
             "Fixed",
             "Tow Cable"
@@ -3621,7 +3622,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "88 Twin Light Blaster Cannon.jpeg",
+        "imageName": "88 Twin Light Blaster Cannon.png",
         "keywords": [
             "Impact",
             "Fixed"
@@ -3646,7 +3647,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "AT-ST Mortar Launcher.jpeg",
+        "imageName": "AT-ST Mortar Launcher.png",
         "keywords": [
             "Fixed",
             "Suppressive"
@@ -3671,7 +3672,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "DW-3 Concussion Grenade Launcher.jpeg",
+        "imageName": "DW-3 Concussion Grenade Launcher.png",
         "keywords": [
             "Fixed",
             "Blast"
@@ -3695,7 +3696,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Wedge Antilles.jpeg",
+        "imageName": "Wedge Antilles.png",
         "keywords": [
             "Full Pivot",
             "Field Commander"
@@ -3727,7 +3728,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "General Weiss.jpeg",
+        "imageName": "General Weiss.png",
         "keywords": [
             "Arsenal",
             "Field Commander"
@@ -3760,7 +3761,7 @@
         "isUnique": true,
         "prevCost": 195,
         "cost": 175,
-        "imageName": "Luke Skywalker2.jpeg",
+        "imageName": "Luke Skywalker Jedi Knight.png",
         "keywords": [
             "Jump",
             "Charge",
@@ -3806,7 +3807,7 @@
         "isUnique": true,
         "prevCost": 175,
         "cost": 155,
-        "imageName": "Darth Vader2.jpeg",
+        "imageName": "Darth Vader The Emperor_s Apprentice.png",
         "keywords": [
             "Deflect",
             "Immune",
@@ -3850,7 +3851,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "Fear.jpeg",
+        "imageName": "Fear.png",
         "keywords": [
             "Demoralize"
         ],
@@ -3867,7 +3868,7 @@
         "cardType": "command",
         "commander": "Luke Skywalker",
         "faction": "rebels",
-        "imageName": "I am a Jedi.jpeg",
+        "imageName": "I am a Jedi.png",
         "keywords": [],
         "id": "fp"
     },
@@ -3877,7 +3878,7 @@
         "commander": "Darth Vader",
         "cardType": "command",
         "faction": "empire",
-        "imageName": "Darkness Descends.jpeg",
+        "imageName": "Darkness Descends.png",
         "keywords": [
             "Infiltrate",
             "Scout"
@@ -3895,7 +3896,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 24,
-        "imageName": "BARC Ion Gunner.jpeg",
+        "imageName": "BARC Ion Gunner.png",
         "keywords": [
             "Fixed",
             "Impact",
@@ -3925,7 +3926,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 21,
-        "imageName": "BARC RPS-6 Gunner.jpeg",
+        "imageName": "BARC RPS-6 Gunner.png",
         "keywords": [
             "Impact"
         ],
@@ -3946,7 +3947,7 @@
         "faction": "empire",
         "isUnique": false,
         "cost": 40,
-        "imageName": "DF-90 Mortar Trooper.jpeg",
+        "imageName": "DF-90 Mortar Trooper.png",
         "keywords": [
             "Detachment",
             "Fire Support",
@@ -3989,7 +3990,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 32,
-        "imageName": "T-21B Trooper.jpeg",
+        "imageName": "T-21B Trooper.png",
         "keywords": [
             "Critical"
         ],
@@ -4016,7 +4017,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "RT-97C Blaster Rifle.jpeg",
+        "imageName": "RT-97C Blaster Rifle.png",
         "keywords": [],
         "history": [
             {
@@ -4041,7 +4042,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "CR-24 Flame Rifle.jpeg",
+        "imageName": "CR-24 Flame Rifle.png",
         "keywords": [],
         "history": [
             {
@@ -4066,7 +4067,7 @@
         "isUnique": true,
         "prevCost": 185,
         "cost": 165,
-        "imageName": "Count Dooku.jpeg",
+        "imageName": "Count Dooku.png",
         "keywords": [
             "Cunning",
             "Deflect",
@@ -4123,7 +4124,7 @@
         "faction": "republic",
         "isUnique": true,
         "cost": 95,
-        "imageName": "Clone Captain Rex.jpeg",
+        "imageName": "Clone Captain Rex.png",
         "keywords": [
             "Gunslinger",
             "Scout",
@@ -4167,7 +4168,7 @@
         "isUnique": false,
         "prevCost": 60,
         "cost": 56,
-        "imageName": "Clone Trooper Infantry.jpeg",
+        "imageName": "Clone Trooper Infantry.png",
         "keywords": [
             "Reliable"
         ],
@@ -4210,7 +4211,7 @@
         "isUnique": false,
         "prevCost": 45,
         "cost": 64,
-        "imageName": "B2 Super Battle Droids.jpeg",
+        "imageName": "B2 Super Battle Droids.png",
         "keywords": [
             "AI"
         ],
@@ -4246,7 +4247,7 @@
         "isUnique": false,
         "prevCost": 160,
         "cost": 155,
-        "imageName": "TX-130 Saber-Class Fighter Tank.jpeg",
+        "imageName": "Saber-Class Tank.png",
         "keywords": [
             "Armor",
             "Arsenal",
@@ -4293,7 +4294,7 @@
         "isUnique": false,
         "prevCost": 175,
         "cost": 165,
-        "imageName": "AAT Trade Federation Battle Tank.jpeg",
+        "imageName": "AAT Battle Tank.png",
         "keywords": [
             "AI",
             "Armor",
@@ -4336,7 +4337,7 @@
         "cardType": "command",
         "commander": "Director Orson Krennic",
         "faction": "empire",
-        "imageName": "Annihilation Looms.jpeg",
+        "imageName": "Annihilation Looms.png",
         "keywords": [],
         "id": "gd"
     },
@@ -4346,7 +4347,7 @@
         "cardType": "command",
         "commander": "Director Orson Krennic",
         "faction": "empire",
-        "imageName": "Deploy the Garrison.jpeg",
+        "imageName": "Deploy the Garrison.png",
         "keywords": [],
         "id": "ge"
     },
@@ -4356,7 +4357,7 @@
         "cardType": "command",
         "commander": "Bossk",
         "faction": "",
-        "imageName": "Merciless Munitions.jpeg",
+        "imageName": "Merciless Munitions.png",
         "keywords": [
             "Arm",
             "Detonate",
@@ -4370,7 +4371,7 @@
         "cardType": "command",
         "commander": "Bossk",
         "faction": "",
-        "imageName": "Reptilian Rampage.jpeg",
+        "imageName": "Reptilian Rampage.png",
         "keywords": [],
         "id": "gg"
     },
@@ -4380,7 +4381,7 @@
         "cardType": "command",
         "commander": "Sabine Wren",
         "faction": "rebels",
-        "imageName": "Explosions!.jpeg",
+        "imageName": "Explosions!.png",
         "keywords": [
             "Arm",
             "Detonate"
@@ -4393,7 +4394,7 @@
         "cardType": "command",
         "commander": "Sabine Wren",
         "faction": "rebels",
-        "imageName": "Symbol of Rebellion.jpeg",
+        "imageName": "Symbol of Rebellion.png",
         "keywords": [
             "Graffiti Token"
         ],
@@ -4405,7 +4406,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 4,
-        "imageName": "Overwatch.jpeg",
+        "imageName": "Overwatch.png",
         "keywords": [
             "Sentinel"
         ],
@@ -4418,7 +4419,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Personal Combat Shield.jpeg",
+        "imageName": "Personal Combat Shield.png",
         "keywords": [
             "Shield Token",
             "Shielded",
@@ -4443,7 +4444,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "DT-F16.jpeg",
+        "imageName": "DT-F16.png",
         "keywords": [
             "Compel",
             "Leader"
@@ -4471,7 +4472,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 30,
-        "imageName": "DLT-19D Trooper.jpeg",
+        "imageName": "DLT-19D Trooper.png",
         "keywords": [
             "Impact"
         ],
@@ -4503,7 +4504,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 0,
-        "imageName": "E-11D Configuration.jpeg",
+        "imageName": "E-11D Configuration.png",
         "keywords": [
             "Blast",
             "Suppressive",
@@ -4529,7 +4530,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Imperial Hammers Elite Armor Pilot.jpeg",
+        "imageName": "Imperial Hammers Elite Armor Pilot.png",
         "keywords": [],
         "requirements": [
             {
@@ -4544,7 +4545,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Outer Rim Speeder Jockey.jpeg",
+        "imageName": "Outer Rim Speeder Jockey.png",
         "keywords": [
             "Cover"
         ],
@@ -4566,7 +4567,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 21,
-        "imageName": "RPS-6 Rocket Gunner.jpeg",
+        "imageName": "RPS-6 Rocket Gunner.png",
         "keywords": [
             "Impact"
         ],
@@ -4594,7 +4595,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 1,
-        "imageName": "A-300 Rifle Gunner.jpeg",
+        "imageName": "A-300 Rifle Gunner.png",
         "keywords": [],
         "requirements": [
             {
@@ -4615,7 +4616,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 28,
-        "imageName": "Bistan.jpeg",
+        "imageName": "Bistan.png",
         "keywords": [
             "Impact",
             "Ion",
@@ -4640,7 +4641,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 20,
-        "imageName": "Pao.jpeg",
+        "imageName": "Pao.png",
         "keywords": [
             "Inspire",
             "Leader"
@@ -4668,7 +4669,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 9,
-        "imageName": "Rebel Veteran.jpeg",
+        "imageName": "Rebel Veteran.png",
         "keywords": [],
         "requirements": [
             {
@@ -4692,7 +4693,7 @@
         "faction": "rebels",
         "isUnique": false,
         "cost": 48,
-        "imageName": "Rebel Veterans.jpeg",
+        "imageName": "Rebel Veterans.png",
         "keywords": [
             "Low Profile",
             "Prepared Position",
@@ -4731,7 +4732,7 @@
         "isUnique": true,
         "prevCost": 170,
         "cost": 150,
-        "imageName": "Obi-Wan Kenobi.jpeg",
+        "imageName": "Obi-Wan Kenobi.png",
         "keywords": [
             "Jump",
             "Charge",
@@ -4776,7 +4777,7 @@
         "faction": "separatists",
         "isUnique": false,
         "cost": 38,
-        "imageName": "B1 Battle Droids.jpeg",
+        "imageName": "B1 Battle Droids.png",
         "keywords": [
             "AI",
             "Coordinate",
@@ -4806,7 +4807,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "First Sergeant Arbmab.jpeg",
+        "imageName": "First Sergeant Arbmab.png",
         "keywords": [
             "Tactical"
         ],
@@ -4823,7 +4824,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 21,
-        "imageName": "Mark II Medium Blaster.jpeg",
+        "imageName": "Mark II Medium Blaster.png",
         "keywords": [
             "Fixed"
         ],
@@ -4850,7 +4851,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 25,
-        "imageName": "M-45 Ion Blaster.jpeg",
+        "imageName": "M-45 Ion Blaster.png",
         "keywords": [
             "Fixed",
             "Impact",
@@ -4880,13 +4881,13 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 18,
-        "imageName": "DLT-19 Rifle Pintle.jpeg",
+        "imageName": "DLT-19 Rifle Pintle.png",
         "keywords": [
             "Impact"
         ],
         "requirements": [
             {
-                "cardName": "Occupier Combat Assault Tank"
+                "cardName": "TX-225 GAVw Occupier Tank"
             }
         ],
         "id": "hc"
@@ -4897,11 +4898,11 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 14,
-        "imageName": "RT-97C Rifle Pintle.jpeg",
+        "imageName": "RT-97C Rifle Pintle.png",
         "keywords": [],
         "requirements": [
             {
-                "cardName": "Occupier Combat Assault Tank"
+                "cardName": "TX-225 GAVw Occupier Tank"
             }
         ],
         "id": "hd"
@@ -4916,7 +4917,7 @@
         "isUnique": false,
         "prevCost": 90,
         "cost": 95,
-        "imageName": "Tauntaun Riders.jpeg",
+        "imageName": "Tauntaun Riders.png",
         "keywords": [
             "Agile",
             "Relentless",
@@ -4961,7 +4962,7 @@
         "faction": "empire",
         "isUnique": false,
         "cost": 70,
-        "imageName": "Dewback Rider.jpeg",
+        "imageName": "Dewback Rider.png",
         "keywords": [
             "Armor",
             "Relentless",
@@ -5003,7 +5004,7 @@
         "faction": "empire",
         "isUnique": false,
         "cost": 52,
-        "imageName": "Shoretroopers.jpeg",
+        "imageName": "Shoretroopers.png",
         "keywords": [
             "Coordinate",
             "Prepared Position",
@@ -5034,7 +5035,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Shoretrooper.jpeg",
+        "imageName": "Shoretrooper.png",
         "keywords": [],
         "requirements": [
             {
@@ -5055,7 +5056,7 @@
         "cardType": "command",
         "commander": "Obi-Wan Kenobi",
         "faction": "republic",
-        "imageName": "General Kenobi.jpeg",
+        "imageName": "General Kenobi.png",
         "keywords": [],
         "id": "hi"
     },
@@ -5065,7 +5066,7 @@
         "cardType": "command",
         "commander": "Obi-Wan Kenobi",
         "faction": "republic",
-        "imageName": "Hello There!.jpeg",
+        "imageName": "Hello There!.png",
         "keywords": [
             "Nimble",
             "Surge Token"
@@ -5078,7 +5079,7 @@
         "cardType": "command",
         "commander": "General Grievous",
         "faction": "separatists",
-        "imageName": "Supreme Commander.jpeg",
+        "imageName": "Supreme Commander.png",
         "keywords": [
             "Guardian"
         ],
@@ -5090,7 +5091,7 @@
         "cardType": "command",
         "commander": "General Grievous",
         "faction": "separatists",
-        "imageName": "Crush Them!.jpeg",
+        "imageName": "Crush Them!.png",
         "keywords": [],
         "id": "hl"
     },
@@ -5100,7 +5101,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Phase I Clone Trooper.jpeg",
+        "imageName": "Phase I Clone Trooper.png",
         "keywords": [],
         "requirements": [
             {
@@ -5122,7 +5123,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 4,
-        "imageName": "B1 Battle Droid.jpeg",
+        "imageName": "B1 Battle Droid.png",
         "keywords": [],
         "requirements": [
             {
@@ -5148,7 +5149,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 16,
-        "imageName": "E-5C B1 Trooper.jpeg",
+        "imageName": "E-5C B1 Trooper.png",
         "keywords": [],
         "requirements": [
             {
@@ -5170,7 +5171,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 22,
-        "imageName": "Z-6 Phase I Clone Trooper.jpeg",
+        "imageName": "Z-6 Phase I Clone Trooper.png",
         "keywords": [],
         "requirements": [
             {
@@ -5196,7 +5197,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 24,
-        "imageName": "DC-15 Phase I Clone Trooper.jpeg",
+        "imageName": "DC-15 Phase I Clone Trooper.png",
         "keywords": [
             "Critical"
         ],
@@ -5228,7 +5229,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 18,
-        "imageName": "E-60R B1 Trooper.jpeg",
+        "imageName": "E-60R B1 Trooper.png",
         "keywords": [
             "Impact"
         ],
@@ -5251,7 +5252,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "T-21 Blaster Rifle.jpeg",
+        "imageName": "T-21 Blaster Rifle.png",
         "keywords": [
             "Critical"
         ],
@@ -5279,7 +5280,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 13,
-        "imageName": "Phase II Clone Trooper.jpeg",
+        "imageName": "Phase II Clone Trooper.png",
         "keywords": [],
         "history": [
             {
@@ -5295,7 +5296,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Force Guidance.jpeg",
+        "imageName": "Force Guidance.png",
         "keywords": [
             "Surge Token"
         ],
@@ -5314,7 +5315,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Electrobinoculars.jpeg",
+        "imageName": "Electrobinoculars.png",
         "keywords": [
             "Spotter"
         ],
@@ -5327,7 +5328,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Linked Targeting Array.jpeg",
+        "imageName": "Linked Targeting Array.png",
         "keywords": [
             "Target"
         ],
@@ -5359,7 +5360,7 @@
         "isUnique": true,
         "prevCost": 150,
         "cost": 130,
-        "imageName": "General Grievous.jpeg",
+        "imageName": "General Grievous Sinister Cyborg.png",
         "keywords": [
             "Block",
             "Entourage",
@@ -5408,7 +5409,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "Smoke Grenades.jpeg",
+        "imageName": "Smoke Grenades.png",
         "keywords": [
             "Smoke"
         ],
@@ -5435,7 +5436,7 @@
         "isUnique": false,
         "prevCost": 55,
         "cost": 65,
-        "imageName": "BARC Speeder.jpeg",
+        "imageName": "BARC Speeder.png",
         "keywords": [
             "Vehicle",
             "Arsenal",
@@ -5475,7 +5476,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 18,
-        "imageName": "BARC Twin Laser Gunner.jpeg",
+        "imageName": "BARC Twin Laser Gunner.png",
         "keywords": [
             "Fixed"
         ],
@@ -5506,7 +5507,7 @@
         "isUnique": false,
         "prevCost": 70,
         "cost": 60,
-        "imageName": "Droidekas.jpeg",
+        "imageName": "Droidekas.png",
         "keywords": [
             "Vehicle",
             "AI",
@@ -5557,7 +5558,7 @@
         "faction": "rebels",
         "isUnique": false,
         "cost": 38,
-        "imageName": "Mark II Medium Blaster Trooper.jpeg",
+        "imageName": "Mark II Medium Blaster Trooper.png",
         "keywords": [
             "Emplacement Trooper",
             "Detachment",
@@ -5595,7 +5596,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 26,
-        "imageName": "CM-O 93 Trooper.jpeg",
+        "imageName": "CM-O 93 Trooper.png",
         "keywords": [
             "Critical"
         ],
@@ -5622,7 +5623,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Electro Grappling Line.jpeg",
+        "imageName": "Electro Grappling Line.png",
         "keywords": [],
         "requirements": [
             {
@@ -5637,7 +5638,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Ryder Azadi.jpeg",
+        "imageName": "Ryder Azadi.png",
         "keywords": [],
         "requirements": [
             "AND",
@@ -5656,7 +5657,7 @@
         "cardType": "upgrade",
         "isUnique": false,
         "cost": 3,
-        "imageName": "Hope.jpeg",
+        "imageName": "Hope.png",
         "keywords": [
             "Inspire"
         ],
@@ -5673,7 +5674,7 @@
         "cardType": "upgrade",
         "isUnique": false,
         "cost": 15,
-        "imageName": "Aggressive Tactics.jpeg",
+        "imageName": "Aggressive Tactics.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -5690,7 +5691,7 @@
         "cardType": "command",
         "commander": "General Grievous",
         "faction": "separatists",
-        "imageName": "Trained In Your Jedi Arts.jpeg",
+        "imageName": "Trained In Your Jedi Arts.png",
         "keywords": [
             "Disengage",
             "Suppressive",
@@ -5704,7 +5705,7 @@
         "cardType": "command",
         "commander": "Obi-Wan Kenobi",
         "faction": "republic",
-        "imageName": "Knowledge and Defense.jpeg",
+        "imageName": "Knowledge and Defense.png",
         "keywords": [
             "Guardian"
         ],
@@ -5717,7 +5718,7 @@
         "cardType": "upgrade",
         "prevCost": 13,
         "cost": 18,
-        "imageName": "B2 Super Battle Droid.jpeg",
+        "imageName": "B2 Super Battle Droid.png",
         "keywords": [],
         "requirements": [
             {
@@ -5748,7 +5749,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Aayla Secura.jpeg",
+        "imageName": "Aayla Secura.png",
         "keywords": [
             "Inspire",
             "Field Commander"
@@ -5766,7 +5767,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "T-Series Tactical Droid Pilot.jpeg",
+        "imageName": "T-Series Tactical Droid Pilot.png",
         "keywords": [
             "AI",
             "Field Commander"
@@ -5779,7 +5780,7 @@
         "cardType": "command",
         "commander": "Clone Captain Rex",
         "faction": "republic",
-        "imageName": "We're Not Programmed.jpeg",
+        "imageName": "We're Not Programmed.png",
         "keywords": [
             "Inspire",
             "Surge Token"
@@ -5792,7 +5793,7 @@
         "commander": "Count Dooku",
         "cardType": "command",
         "faction": "separatists",
-        "imageName": "You Disappoint Me.jpeg",
+        "imageName": "You Disappoint Me.png",
         "keywords": [],
         "id": "is"
     },
@@ -5807,7 +5808,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 6,
-        "imageName": "B1 Security Droid.jpeg",
+        "imageName": "B1 Security Droid.png",
         "keywords": [],
         "displayName": "Security Droid",
         "history": [
@@ -5833,7 +5834,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 26,
-        "imageName": "DLT-20A Trooper.jpeg",
+        "imageName": "DLT-20A Trooper.png",
         "keywords": [
             "Critical"
         ],
@@ -5850,7 +5851,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 20,
-        "imageName": "DP-23 Phase I Trooper.jpeg",
+        "imageName": "DP-23 Phase I Trooper.png",
         "keywords": [
             "Pierce"
         ],
@@ -5882,7 +5883,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 18,
-        "imageName": "E-5s B1 Trooper.jpeg",
+        "imageName": "E-5s B1 Trooper.png",
         "keywords": [
             "Critical"
         ],
@@ -5906,7 +5907,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 21,
-        "imageName": "RPS-6 Phase I Trooper.jpeg",
+        "imageName": "RPS-6 Phase I Trooper.png",
         "keywords": [
             "Cumbersome",
             "Impact"
@@ -5932,7 +5933,7 @@
         "cardType": "upgrade",
         "prevCost": 24,
         "cost": 22,
-        "imageName": "RT-97C Stormtrooper.jpeg",
+        "imageName": "RT-97C Stormtrooper.png",
         "keywords": [],
         "history": [
             {
@@ -5957,7 +5958,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 13,
-        "imageName": "SX-21 Trooper.jpeg",
+        "imageName": "SX-21 Trooper.png",
         "keywords": [
             "Impact"
         ],
@@ -5989,7 +5990,7 @@
         "cardType": "upgrade",
         "prevCost": 22,
         "cost": 20,
-        "imageName": "T-21 Stormtrooper.jpeg",
+        "imageName": "T-21 Stormtrooper.png",
         "keywords": [
             "Critical"
         ],
@@ -6016,7 +6017,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 6,
-        "imageName": "Offensive Push.jpeg",
+        "imageName": "Offensive Push.png",
         "keywords": [
             "Tactical"
         ],
@@ -6034,7 +6035,7 @@
         "commander": "Darth Vader",
         "cardType": "command",
         "faction": "empire",
-        "imageName": "Vader's Might.jpeg",
+        "imageName": "Vader's Might.png",
         "keywords": [],
         "id": "jc"
     },
@@ -6044,7 +6045,7 @@
         "cardType": "command",
         "commander": "Luke Skywalker",
         "faction": "rebels",
-        "imageName": "You Serve Your Master Well.jpeg",
+        "imageName": "You Serve Your Master Well.png",
         "keywords": [],
         "id": "jd"
     },
@@ -6054,7 +6055,7 @@
         "commander": "Darth Vader",
         "cardType": "command",
         "faction": "empire",
-        "imageName": "Fear and Dead Men.jpeg",
+        "imageName": "Fear and Dead Men.png",
         "keywords": [],
         "id": "je"
     },
@@ -6064,7 +6065,7 @@
         "cardType": "command",
         "commander": "Luke Skywalker",
         "faction": "rebels",
-        "imageName": "Full of Surprises.jpeg",
+        "imageName": "Full of Surprises.png",
         "keywords": [],
         "id": "jf"
     },
@@ -6078,7 +6079,7 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 55,
-        "imageName": "R2-D2.jpeg",
+        "imageName": "R2-D2.png",
         "keywords": [
             "Repair",
             "Secret Mission",
@@ -6123,7 +6124,7 @@
         "faction": "republic",
         "isUnique": true,
         "cost": 55,
-        "imageName": "R2-D22.jpeg",
+        "imageName": "R2-D2 Independent Astromech.png",
         "keywords": [
             "Repair",
             "Secret Mission",
@@ -6167,7 +6168,7 @@
         "cost": 15,
         "surges": [],
         "wounds": 2,
-        "imageName": "C-3PO.jpeg",
+        "imageName": "C-3PO.png",
         "keywords": [
             "Calculate Odds",
             "Distract",
@@ -6186,7 +6187,7 @@
         "cost": 15,
         "surges": [],
         "wounds": 2,
-        "imageName": "C-3PO2.jpeg",
+        "imageName": "C-3PO2.png",
         "keywords": [
             "Calculate Odds",
             "Distract",
@@ -6206,7 +6207,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "Integrated Comms Antenna.jpeg",
+        "imageName": "Integrated Comms Antenna.png",
         "keywords": [],
         "displayName": "Comms Antenna",
         "id": "jk"
@@ -6217,7 +6218,7 @@
         "cardType": "command",
         "commander": "R2-D2",
         "faction": "",
-        "imageName": "Blast Off!.jpeg",
+        "imageName": "Blast Off!.png",
         "keywords": [
             "Disengage",
             "Jump"
@@ -6230,7 +6231,7 @@
         "commander": "R2-D2",
         "cardType": "command",
         "faction": "",
-        "imageName": "Blast Off!.jpeg",
+        "imageName": "Blast Off!.png",
         "keywords": [
             "Disengage",
             "Jump"
@@ -6243,7 +6244,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Stormtrooper Captain.jpeg",
+        "imageName": "Stormtrooper Captain.png",
         "keywords": [
             "Leader"
         ],
@@ -6273,7 +6274,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 9,
-        "imageName": "Rebel Trooper Captain.jpeg",
+        "imageName": "Rebel Trooper Captain.png",
         "keywords": [
             "Leader"
         ],
@@ -6303,7 +6304,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Rebel Trooper Specialist.jpeg",
+        "imageName": "Rebel Trooper Specialist.png",
         "keywords": [
             "Surge Token"
         ],
@@ -6333,7 +6334,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 9,
-        "imageName": "Stormtrooper Specialist.jpeg",
+        "imageName": "Stormtrooper Specialist.png",
         "keywords": [
             "Surge Token"
         ],
@@ -6364,7 +6365,7 @@
         "cardType": "command",
         "commander": "Count Dooku",
         "faction": "separatists",
-        "imageName": "Fear, Surprise, Intimidation.jpeg",
+        "imageName": "Fear, Surprise, Intimidation.png",
         "keywords": [
             "Arsenal",
             "Relentless",
@@ -6378,7 +6379,7 @@
         "cardType": "command",
         "commander": "Count Dooku",
         "faction": "separatists",
-        "imageName": "Double the Fall.jpeg",
+        "imageName": "Double the Fall.png",
         "keywords": []
     },
     "jt": {
@@ -6389,7 +6390,7 @@
         "cardType": "command",
         "commander": "Clone Captain Rex",
         "faction": "republic",
-        "imageName": "You Can Call Me Captain.jpeg",
+        "imageName": "You Can Call Me Captain.png",
         "keywords": [
             "Fire Support"
         ]
@@ -6402,7 +6403,7 @@
         "cardType": "command",
         "commander": "Clone Captain Rex",
         "faction": "republic",
-        "imageName": "Eat This, Clankers!.jpeg",
+        "imageName": "Eat This, Clankers!.png",
         "keywords": []
     },
     "jv": {
@@ -6412,7 +6413,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "OOM-Series Battle Droid.jpeg",
+        "imageName": "OOM-Series Battle Droid.png",
         "keywords": [
             "Coordinate",
             "Leader"
@@ -6437,7 +6438,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 16,
-        "imageName": "Radiation Cannon B1 Trooper.jpeg",
+        "imageName": "Radiation Cannon B1 Trooper.png",
         "keywords": [
             "Poison Token"
         ],
@@ -6460,7 +6461,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 12,
-        "imageName": "Phase I Clone Captain.jpeg",
+        "imageName": "Phase I Clone Captain.png",
         "keywords": [
             "Leader"
         ],
@@ -6490,7 +6491,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 11,
-        "imageName": "Phase I Clone Specialist.jpeg",
+        "imageName": "Phase I Clone Specialist.png",
         "keywords": [
             "Surge Token"
         ],
@@ -6520,7 +6521,7 @@
         "cardType": "command",
         "commander": "R2-D2",
         "faction": "",
-        "imageName": "Smoke Screen.jpeg",
+        "imageName": "Smoke Screen.png",
         "keywords": [
             "Smoke"
         ],
@@ -6532,7 +6533,7 @@
         "cardType": "command",
         "commander": "R2-D2",
         "faction": "",
-        "imageName": "Impromptu Immolation.jpeg",
+        "imageName": "Impromptu Immolation.png",
         "keywords": [
             "Blast",
             "Spray",
@@ -6546,7 +6547,7 @@
         "cardType": "command",
         "commander": "R2-D2",
         "faction": "",
-        "imageName": "Smoke Screen.jpeg",
+        "imageName": "Smoke Screen.png",
         "keywords": [
             "Smoke"
         ],
@@ -6558,7 +6559,7 @@
         "cardType": "command",
         "commander": "R2-D2",
         "faction": "",
-        "imageName": "Impromptu Immolation.jpeg",
+        "imageName": "Impromptu Immolation.png",
         "keywords": [
             "Blast",
             "Spray",
@@ -6573,7 +6574,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 27,
-        "imageName": "Z-6 Phase II Clone Trooper.jpeg",
+        "imageName": "Z-6 Phase II Clone Trooper.png",
         "keywords": [],
         "requirements": [
             {
@@ -6588,7 +6589,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 24,
-        "imageName": "B2-ACM Trooper.jpeg",
+        "imageName": "B2-ACM Trooper.png",
         "keywords": [],
         "requirements": [
             {
@@ -6613,7 +6614,7 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 90,
-        "imageName": "Cassian Andor.jpeg",
+        "imageName": "Cassian Andor.png",
         "keywords": [
             "Covert Ops",
             "Danger Sense",
@@ -6646,7 +6647,7 @@
         "faction": "empire",
         "isUnique": true,
         "cost": 100,
-        "imageName": "Iden Versio.jpeg",
+        "imageName": "Iden Versio.png",
         "keywords": [
             "Quick Thinking",
             "Covert Ops",
@@ -6675,7 +6676,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 0,
-        "imageName": "A280-CFE Configuration.jpeg",
+        "imageName": "A280-CFE Configuration.png",
         "keywords": [
             "Cumbersome",
             "High Velocity",
@@ -6701,7 +6702,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "Iden's DLT-20A Rifle.jpeg",
+        "imageName": "Iden's DLT-20A Rifle.png",
         "keywords": [
             "High Velocity",
             "Pierce"
@@ -6719,7 +6720,7 @@
         "cardType": "command",
         "commander": "Cassian Andor",
         "faction": "rebels",
-        "imageName": "Crack Shot.jpeg",
+        "imageName": "Crack Shot.png",
         "keywords": [
             "Gunslinger"
         ],
@@ -6731,7 +6732,7 @@
         "cardType": "command",
         "commander": "Iden Versio",
         "faction": "empire",
-        "imageName": "Pulse Scan.jpeg",
+        "imageName": "Pulse Scan.png",
         "keywords": [
             "Sharpshooter"
         ],
@@ -6743,7 +6744,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 7,
-        "imageName": "Veteran Clone Pilot.jpeg",
+        "imageName": "Veteran Clone Pilot.png",
         "keywords": [],
         "requirements": [
             {
@@ -6758,7 +6759,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "TX-130 Beam Cannon Turret.jpeg",
+        "imageName": "TX-130 Beam Cannon Turret.png",
         "keywords": [
             "Beam"
         ],
@@ -6781,7 +6782,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Armor-Piercing Shells.jpeg",
+        "imageName": "Armor-Piercing Shells.png",
         "keywords": [
             "Cycle",
             "Fixed",
@@ -6796,7 +6797,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 18,
-        "imageName": "Phase II Mortar Trooper.jpeg",
+        "imageName": "Phase II Mortar Trooper.png",
         "keywords": [
             "Critical",
             "Suppressive",
@@ -6825,7 +6826,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 32,
-        "imageName": "B2-HA Trooper.jpeg",
+        "imageName": "B2-HA Trooper.png",
         "keywords": [
             "Blast",
             "Cycle",
@@ -6855,7 +6856,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 9,
-        "imageName": "Lok Durd.jpeg",
+        "imageName": "Lok Durd.png",
         "keywords": [
             "AI",
             "Suppressive"
@@ -6873,7 +6874,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 14,
-        "imageName": "TX-130 Twin Laser Turret.jpeg",
+        "imageName": "TX-130 Twin Laser Turret.png",
         "keywords": [
             "Critical"
         ],
@@ -6890,7 +6891,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 9,
-        "imageName": "Plo Koon.jpeg",
+        "imageName": "Plo Koon.png",
         "keywords": [
             "Agile"
         ],
@@ -6909,7 +6910,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 12,
-        "imageName": "Bunker Buster Shells.jpeg",
+        "imageName": "Bunker Buster Shells.png",
         "keywords": [
             "Blast",
             "Cycle",
@@ -6925,7 +6926,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "High-Energy Shells.jpeg",
+        "imageName": "High-Energy Shells.png",
         "keywords": [
             "Critical",
             "Cycle",
@@ -6941,7 +6942,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 7,
-        "imageName": "OOM-Series Droid Pilot.jpeg",
+        "imageName": "OOM-Series Droid Pilot.png",
         "keywords": [
             "Coordinate"
         ],
@@ -6964,7 +6965,7 @@
         "isUnique": true,
         "prevCost": 85,
         "cost": 60,
-        "imageName": "Padme Amidala.jpeg",
+        "imageName": "Padme Amidala.png",
         "keywords": [
             "Bolster",
             "Agile",
@@ -7012,7 +7013,7 @@
         ],
         "isUnique": true,
         "cost": 105,
-        "imageName": "Cad Bane.jpeg",
+        "imageName": "Cad Bane.png",
         "keywords": [
             "Jump",
             "Bounty",
@@ -7051,14 +7052,14 @@
     },
     "ky": {
         "id": "ky",
-        "cardName": "ARC Troopers Strike Team",
+        "cardName": "ARC Trooper Strike Team",
         "cardType": "unit",
         "cardSubtype": "clone trooper",
         "rank": "special",
         "faction": "republic",
         "isUnique": false,
         "cost": 24,
-        "imageName": "ARC Troopers Strike Team.jpeg",
+        "imageName": "ARC Trooper Strike Team.png",
         "keywords": [
             "Charge",
             "Detachment",
@@ -7108,7 +7109,7 @@
         "isUnique": false,
         "prevCost": 66,
         "cost": 58,
-        "imageName": "ARC Troopers.jpeg",
+        "imageName": "ARC Troopers.png",
         "keywords": [
             "Charge",
             "Impervious",
@@ -7159,7 +7160,7 @@
         "faction": "separatists",
         "isUnique": false,
         "cost": 64,
-        "imageName": "BX-Series Droid Commandos.jpeg",
+        "imageName": "BX-Series Droid Commandos.png",
         "keywords": [
             "Jump",
             "AI",
@@ -7203,7 +7204,7 @@
         "faction": "separatists",
         "isUnique": false,
         "cost": 20,
-        "imageName": "BX-Series Droid Commandos Strike Team.jpeg",
+        "imageName": "BX-Series Droid Commandos Strike Team.png",
         "keywords": [
             "Jump",
             "AI",
@@ -7242,7 +7243,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Deflector Shields.jpeg",
+        "imageName": "Deflector Shields.png",
         "keywords": [
             "Shields",
             "Recharge"
@@ -7271,7 +7272,7 @@
         "cardType": "upgrade",
         "prevCost": 30,
         "cost": 40,
-        "imageName": "BX-Series Droid Sniper.jpeg",
+        "imageName": "BX-Series Droid Sniper.png",
         "keywords": [
             "Lethal",
             "Pierce",
@@ -7302,7 +7303,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "EMP Droid Poppers.jpeg",
+        "imageName": "EMP Droid Poppers.png",
         "keywords": [
             "Ion"
         ],
@@ -7316,7 +7317,7 @@
         "cardType": "upgrade",
         "prevCost": 31,
         "cost": 37,
-        "imageName": "DC-15x ARC Trooper.jpeg",
+        "imageName": "DC-15x ARC Trooper.png",
         "keywords": [
             "Critical",
             "Immune",
@@ -7347,7 +7348,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 40,
-        "imageName": "Fives.jpeg",
+        "imageName": "Fives.png",
         "keywords": [],
         "requirements": [
             {
@@ -7368,7 +7369,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 42,
-        "imageName": "Echo.jpeg",
+        "imageName": "Echo.png",
         "keywords": [],
         "requirements": [
             {
@@ -7389,7 +7390,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 4,
-        "imageName": "Situational Awareness.jpeg",
+        "imageName": "Situational Awareness.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -7406,7 +7407,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 6,
-        "imageName": "Vibroswords.jpeg",
+        "imageName": "Vibroswords.png",
         "keywords": [
             "Charge"
         ],
@@ -7427,7 +7428,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "JT-12 Jetpacks.jpeg",
+        "imageName": "JT-12 Jetpacks.png",
         "keywords": [
             "Jump"
         ],
@@ -7454,7 +7455,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Electro Gauntlets.jpeg",
+        "imageName": "Electro Gauntlets.png",
         "keywords": [
             "Immobilize",
             "Suppressive"
@@ -7472,7 +7473,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Looted E-5 Blaster.jpeg",
+        "imageName": "Looted E-5 Blaster.png",
         "keywords": [
             "Pierce"
         ],
@@ -7488,7 +7489,7 @@
         "cardType": "command",
         "commander": "Padme Amidala",
         "faction": "republic",
-        "imageName": "Diplomatic Cover.jpeg",
+        "imageName": "Diplomatic Cover.png",
         "keywords": [
             "Permanent",
             "Secret Mission",
@@ -7504,7 +7505,7 @@
         "cardType": "command",
         "commander": "Cad Bane",
         "faction": "",
-        "imageName": "I'm in Control.jpeg",
+        "imageName": "I'm in Control.png",
         "keywords": [],
         "id": "lo"
     },
@@ -7514,7 +7515,7 @@
         "cardType": "command",
         "commander": "Cad Bane",
         "faction": "",
-        "imageName": "I Make the Rules Now.jpeg",
+        "imageName": "I Make the Rules Now.png",
         "keywords": [
             "Divulge",
             "Bane Token",
@@ -7530,7 +7531,7 @@
         "cardType": "command",
         "commander": "Padme Amidala",
         "faction": "republic",
-        "imageName": "Our Fate is in Your Hands.jpeg",
+        "imageName": "Our Fate is in Your Hands.png",
         "keywords": [
             "Danger Sense"
         ],
@@ -7542,7 +7543,7 @@
         "cardType": "command",
         "commander": "Cassian Andor",
         "faction": "rebels",
-        "imageName": "Volunteer Mission.jpeg",
+        "imageName": "Volunteer Mission.png",
         "keywords": [
             "Danger Sense"
         ],
@@ -7554,7 +7555,7 @@
         "cardType": "command",
         "commander": "Cassian Andor",
         "faction": "rebels",
-        "imageName": "Last Stand.jpeg",
+        "imageName": "Last Stand.png",
         "keywords": [
             "Indomitable"
         ],
@@ -7566,7 +7567,7 @@
         "cardType": "command",
         "commander": "K-2SO",
         "faction": "rebels",
-        "imageName": "Sacrifice.jpeg",
+        "imageName": "Sacrifice.png",
         "keywords": [
             "Guardian"
         ],
@@ -7579,7 +7580,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Jyn's SE-14 Blaster.jpeg",
+        "imageName": "Jyn's SE-14 Blaster.png",
         "keywords": [
             "Suppressive",
             "Pierce"
@@ -7604,7 +7605,7 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 70,
-        "imageName": "K-2SO.jpeg",
+        "imageName": "K-2SO.png",
         "keywords": [
             "Calculate Odds",
             "Armor",
@@ -7637,7 +7638,7 @@
         "cardType": "counterpart",
         "cost": 15,
         "additionalTags": [],
-        "imageName": "Iden's ID10 Seeker Droid.jpeg",
+        "imageName": "Iden's ID10 Seeker Droid.png",
         "keywords": [
             "Counterpart",
             "Recharge",
@@ -7652,11 +7653,11 @@
         "displayName": "TL-50 Repeater",
         "cardSubtype": "armament",
         "cardName": "Iden's TL-50 Repeater",
-        "iconLocation": "Iden's TL-50 Repeater.jpeg",
+        "iconLocation": "Iden's TL-50 Repeater.png",
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "Iden's TL-50 Repeater.jpeg",
+        "imageName": "Iden's TL-50 Repeater.png",
         "keywords": [
             "Critical",
             "Impact"
@@ -7673,7 +7674,7 @@
         "cardType": "command",
         "commander": "Iden Versio",
         "faction": "empire",
-        "imageName": "Incapacitate.jpeg",
+        "imageName": "Incapacitate.png",
         "keywords": [],
         "id": "ly"
     },
@@ -7683,7 +7684,7 @@
         "cardType": "command",
         "commander": "Iden Versio",
         "faction": "empire",
-        "imageName": "Concussive Blast.jpeg",
+        "imageName": "Concussive Blast.png",
         "keywords": [
             "Blast",
             "Scatter",
@@ -7697,7 +7698,7 @@
         "cardType": "command",
         "commander": "Iden Versio",
         "faction": "empire",
-        "imageName": "Tactical Strike.jpeg",
+        "imageName": "Tactical Strike.png",
         "keywords": [
             "Steady",
             "Tactical"
@@ -7713,7 +7714,7 @@
         "faction": "republic",
         "isUnique": false,
         "cost": 60,
-        "imageName": "AT-RT2.jpeg",
+        "imageName": "AT-RT Rep.png",
         "keywords": [
             "Vehicle",
             "Armor",
@@ -7755,7 +7756,7 @@
         "isUnique": false,
         "prevCost": 75,
         "cost": 80,
-        "imageName": "STAP Riders.jpeg",
+        "imageName": "STAP Riders.png",
         "keywords": [
             "Agile",
             "AI",
@@ -7790,7 +7791,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 2,
-        "imageName": "Command Control Array.jpeg",
+        "imageName": "Command Control Array.png",
         "keywords": [
             "Coordinate"
         ],
@@ -7813,7 +7814,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 29,
-        "imageName": "Gideon Hask.jpeg",
+        "imageName": "Gideon Hask.png",
         "keywords": [
             "Coordinate",
             "Leader"
@@ -7857,7 +7858,7 @@
         "displayName": "",
         "cardSubtype": "heavy weapon",
         "cardName": "Del Meeko",
-        "imageName": "Del Meeko.jpeg",
+        "imageName": "Del Meeko.png",
         "isUnique": true,
         "cardType": "upgrade",
         "prevCost": 25,
@@ -7913,7 +7914,7 @@
         "cardType": "command",
         "commander": "Cad Bane",
         "faction": "",
-        "imageName": "I'm Your Worst Nightmare.jpeg",
+        "imageName": "I'm Your Worst Nightmare.png",
         "keywords": [
             "Uncanny Luck"
         ],
@@ -7924,7 +7925,7 @@
         "displayName": "",
         "cardSubtype": "gear",
         "cardName": "Ascension Cables",
-        "imageName": "Ascension Cables.jpeg",
+        "imageName": "Ascension Cables.png",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 4,
@@ -7939,7 +7940,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Padme Amidala",
-        "imageName": "Aggressive Negotiations.jpeg",
+        "imageName": "Aggressive Negotiations.png",
         "faction": "republic",
         "keywords": [
             "Permanent",
@@ -7957,7 +7958,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 28,
-        "imageName": "Dioxis Mine Saboteur.jpeg",
+        "imageName": "Dioxis Mine Saboteur.png",
         "keywords": [
             "Arm",
             "Detonate",
@@ -7984,7 +7985,7 @@
         "faction": "rebels",
         "isUnique": false,
         "cost": 68,
-        "imageName": "Mandalorian Resistance.jpeg",
+        "imageName": "Mandalorian Resistance.png",
         "keywords": [
             "Jump",
             "Impervious",
@@ -8024,7 +8025,7 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 30,
-        "imageName": "Mandalorian Resistance Clan Wren.jpeg",
+        "imageName": "Mandalorian Resistance Clan Wren.png",
         "keywords": [
             "Jump",
             "Equip",
@@ -8067,7 +8068,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Jetpack Rockets.jpeg",
+        "imageName": "Jetpack Rockets.png",
         "keywords": [
             "Blast",
             "Impact"
@@ -8095,7 +8096,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 24,
-        "imageName": "Beskad Duelist.jpeg",
+        "imageName": "Beskad Duelist.png",
         "keywords": [
             "Duelist",
             "Pierce",
@@ -8120,7 +8121,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 34,
-        "imageName": "Ursa Wren.jpeg",
+        "imageName": "Ursa Wren.png",
         "keywords": [
             "Dauntless",
             "Leader",
@@ -8149,7 +8150,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 34,
-        "imageName": "Tristan Wren.jpeg",
+        "imageName": "Tristan Wren.png",
         "keywords": [
             "Lethal",
             "Suppressive"
@@ -8177,7 +8178,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 18,
-        "imageName": "T-Series Tactical Droid.jpeg",
+        "imageName": "T-Series Tactical Droid.png",
         "keywords": [
             "AI",
             "Reliable",
@@ -8201,7 +8202,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 6,
-        "imageName": "Portable Scanner.jpeg",
+        "imageName": "Portable Scanner.png",
         "keywords": [
             "Take Cover"
         ],
@@ -8214,7 +8215,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Defensive Stance.jpeg",
+        "imageName": "Defensive Stance.png",
         "keywords": [
             "Reconfigure"
         ],
@@ -8231,7 +8232,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "",
-        "imageName": "Synchronized Offensive.jpeg",
+        "imageName": "Synchronized Offensive.png",
         "faction": "republic",
         "keywords": []
     },
@@ -8242,7 +8243,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "",
-        "imageName": "Mechanized Incursion.jpeg",
+        "imageName": "Mechanized Incursion.png",
         "faction": "separatists",
         "keywords": []
     },
@@ -8253,7 +8254,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Anakin Skywalker",
-        "imageName": "Hero of the Clone Wars.jpeg",
+        "imageName": "Hero of the Clone Wars.png",
         "faction": "republic",
         "keywords": [
             "Permanent",
@@ -8268,7 +8269,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Maul",
-        "imageName": "Duel of the Fates.jpeg",
+        "imageName": "Duel of the Fates.png",
         "faction": "",
         "keywords": [
             "Disengage"
@@ -8283,7 +8284,7 @@
         "faction": "empire",
         "isUnique": false,
         "cost": 68,
-        "imageName": "Imperial Special Forces.jpeg",
+        "imageName": "Imperial Special Forces.png",
         "keywords": [
             "Infiltrate",
             "Marksman",
@@ -8316,7 +8317,7 @@
         "faction": "empire",
         "isUnique": true,
         "cost": 34,
-        "imageName": "Imperial Special Forces Inferno Squad.jpeg",
+        "imageName": "Imperial Special Forces Inferno Squad.png",
         "keywords": [
             "Equip",
             "Infiltrate",
@@ -8353,7 +8354,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 27,
-        "imageName": "T-21 Special Forces Trooper.jpeg",
+        "imageName": "T-21 Special Forces Trooper.png",
         "keywords": [
             "Critical"
         ],
@@ -8379,7 +8380,7 @@
         "faction": "republic",
         "isUnique": true,
         "cost": 155,
-        "imageName": "Anakin Skywalker.jpeg",
+        "imageName": "Anakin Skywalker.png",
         "keywords": [
             "Jump",
             "Charge",
@@ -8425,7 +8426,7 @@
         "isUnique": true,
         "prevCost": 160,
         "cost": 130,
-        "imageName": "Maul.jpeg",
+        "imageName": "Maul Impatient Apprentice.png",
         "keywords": [
             "Jump",
             "Deflect",
@@ -8460,7 +8461,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Defensive Stance.jpeg",
+        "imageName": "Defensive Stance.png",
         "keywords": [
             "Reconfigure"
         ],
@@ -8478,7 +8479,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Force Barrier.jpeg",
+        "imageName": "Force Barrier.png",
         "keywords": [],
         "requirements": []
     },
@@ -8490,7 +8491,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Seize the Initiative.jpeg",
+        "imageName": "Seize the Initiative.png",
         "keywords": [],
         "requirements": [
             "OR",
@@ -8509,7 +8510,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Anakin Skywalker",
-        "imageName": "This is Where the Fun Begins.jpeg",
+        "imageName": "This is Where the Fun Begins.png",
         "faction": "republic",
         "keywords": [
             "Permanent",
@@ -8524,7 +8525,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Anakin Skywalker",
-        "imageName": "You Underestimate My Power.jpeg",
+        "imageName": "You Underestimate My Power.png",
         "faction": "republic",
         "keywords": [
             "Permanent",
@@ -8538,7 +8539,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Maul",
-        "imageName": "The Phantom Menace.jpeg",
+        "imageName": "The Phantom Menace.png",
         "faction": "",
         "keywords": [
             "Divulge",
@@ -8552,7 +8553,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Maul",
-        "imageName": "At Last.jpeg",
+        "imageName": "At Last.png",
         "faction": "",
         "keywords": [
             "Jedi Hunter"
@@ -8567,7 +8568,7 @@
         "faction": "separatists",
         "isUnique": true,
         "cost": 35,
-        "imageName": "DRK-1 Sith Probe Droids.jpeg",
+        "imageName": "DRK-1 Sith Probe Droids.png",
         "keywords": [
             "Detachment",
             "Observe",
@@ -8595,7 +8596,7 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 95,
-        "imageName": "Lando Calrissian.jpeg",
+        "imageName": "Lando Calrissian.png",
         "keywords": [
             "Contingencies",
             "Covert Ops",
@@ -8636,7 +8637,7 @@
         "faction": "empire",
         "isUnique": true,
         "cost": 85,
-        "imageName": "Agent Kallus.jpeg",
+        "imageName": "Agent Kallus.png",
         "keywords": [
             "Contingencies",
             "Cunning",
@@ -8674,7 +8675,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Lando Calrissian",
-        "imageName": "Ace Up His Sleeve.jpeg",
+        "imageName": "Ace Up His Sleeve.png",
         "faction": "rebels",
         "keywords": []
     },
@@ -8685,7 +8686,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Agent Kallus",
-        "imageName": "Face Me!.jpeg",
+        "imageName": "Face Me!.png",
         "faction": "empire",
         "keywords": [
             "Agile",
@@ -8700,7 +8701,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "J-19 Bo-Rifle Staff.jpeg",
+        "imageName": "J-19 Bo-Rifle Staff.png",
         "keywords": [
             "Charge",
             "Immune",
@@ -8731,7 +8732,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Inspiring Presence.jpeg",
+        "imageName": "Inspiring Presence.png",
         "keywords": [],
         "requirements": []
     },
@@ -8746,7 +8747,7 @@
         "isUnique": false,
         "prevCost": 55,
         "cost": 60,
-        "imageName": "T-Series Tactical Droid.jpeg",
+        "imageName": "T-Series Tactical Droid.png",
         "keywords": [
             "Bolster",
             "Direct",
@@ -8781,7 +8782,7 @@
         "faction": "republic",
         "isUnique": false,
         "cost": 60,
-        "imageName": "Clone Commander.jpeg",
+        "imageName": "Clone Commander.png",
         "keywords": [
             "Bolster",
             "Direct",
@@ -8811,7 +8812,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Lando Calrissian",
-        "imageName": "All In.jpeg",
+        "imageName": "All In.png",
         "faction": "rebels",
         "keywords": []
     },
@@ -8822,7 +8823,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "",
-        "imageName": "Orbital Strike.jpeg",
+        "imageName": "Orbital Strike.png",
         "faction": "separatists",
         "keywords": []
     },
@@ -8833,7 +8834,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "",
-        "imageName": "Roger, Roger!.jpeg",
+        "imageName": "Roger, Roger!.png",
         "faction": "separatists",
         "keywords": []
     },
@@ -8844,7 +8845,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Lando Calrissian",
-        "imageName": "Idiot's Array.jpeg",
+        "imageName": "Idiot's Array.png",
         "faction": "rebels",
         "keywords": []
     },
@@ -8855,7 +8856,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "",
-        "imageName": "Air Support.jpeg",
+        "imageName": "Air Support.png",
         "faction": "republic",
         "keywords": [
             "Field Commander",
@@ -8870,7 +8871,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "",
-        "imageName": "Attack of the Clones.jpeg",
+        "imageName": "Attack of the Clones.png",
         "faction": "republic",
         "keywords": []
     },
@@ -8882,7 +8883,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 12,
-        "imageName": "Vigilance.jpeg",
+        "imageName": "Vigilance.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -8900,7 +8901,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 11,
-        "imageName": "Clone Comms Technician.jpeg",
+        "imageName": "Clone Comms Technician.png",
         "keywords": [],
         "requirements": [
             {
@@ -8925,7 +8926,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 14,
-        "imageName": "Clone Engineer.jpeg",
+        "imageName": "Clone Engineer.png",
         "keywords": [
             "Repair"
         ],
@@ -8949,7 +8950,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "Clone Medic.jpeg",
+        "imageName": "Clone Medic.png",
         "keywords": [
             "Treat"
         ],
@@ -8973,7 +8974,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 18,
-        "imageName": "Clone Commander.jpeg",
+        "imageName": "Clone Commander.png",
         "keywords": [
             "Inspire",
             "Reliable",
@@ -8999,7 +9000,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 6,
-        "imageName": "Viper Recon Droid.jpeg",
+        "imageName": "Viper Recon Droid.png",
         "keywords": [
             "Observe",
             "Sidearm"
@@ -9028,7 +9029,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 12,
-        "imageName": "PK-Series Worker Droid.jpeg",
+        "imageName": "PK-Series Worker Droid.png",
         "keywords": [
             "Repair",
             "Noncombatant"
@@ -9051,7 +9052,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 14,
-        "imageName": "EV-Series Medical Droid.jpeg",
+        "imageName": "EV-Series Medical Droid.png",
         "keywords": [
             "Treat",
             "Noncombatant"
@@ -9072,7 +9073,7 @@
         "cardName": "I've Altered the Deal",
         "cardType": "flaw",
         "commander": "Lando Calrissian",
-        "imageName": "I've Altered the Deal.jpeg",
+        "imageName": "I've Altered the Deal.png",
         "keywords": []
     },
     "oi": {
@@ -9081,7 +9082,7 @@
         "cardName": "Developing Sympathies",
         "cardType": "flaw",
         "commander": "Agent Kallus",
-        "imageName": "Developing Sympathies.jpeg",
+        "imageName": "Developing Sympathies.png",
         "keywords": []
     },
     "oj": {
@@ -9091,7 +9092,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Agent Kallus",
-        "imageName": "ISB Investigation.jpeg",
+        "imageName": "ISB Investigation.png",
         "faction": "empire",
         "keywords": []
     },
@@ -9102,7 +9103,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Agent Kallus",
-        "imageName": "Ruthless Tactics.jpeg",
+        "imageName": "Ruthless Tactics.png",
         "faction": "empire",
         "keywords": []
     },
@@ -9117,7 +9118,7 @@
         "isUnique": true,
         "prevCost": 200,
         "cost": 180,
-        "imageName": "Yoda.jpeg",
+        "imageName": "Yoda.png",
         "keywords": [
             "Guidance",
             "Ataru Mastery",
@@ -9160,7 +9161,7 @@
         "isUnique": false,
         "prevCost": 75,
         "cost": 65,
-        "imageName": "A-A5 Speeder Truck.jpeg",
+        "imageName": "A-A5 Speeder Truck R.png",
         "keywords": [
             "Armor",
             "Hover: Ground",
@@ -9199,7 +9200,7 @@
         "isUnique": false,
         "prevCost": 105,
         "cost": 100,
-        "imageName": "LAAT Patrol Transport E.jpeg",
+        "imageName": "LAAT Patrol Transport E.png",
         "keywords": [
             "Armor",
             "Arsenal",
@@ -9243,7 +9244,7 @@
         "faction": "republic",
         "isUnique": false,
         "cost": 100,
-        "imageName": "LAAT Patrol Transport R.jpeg",
+        "imageName": "LAAT Patrol Transport R.png",
         "keywords": [
             "Armor",
             "Arsenal",
@@ -9291,7 +9292,7 @@
         "cardType": "upgrade",
         "prevCost": 16,
         "cost": 12,
-        "imageName": "Heavy Laser Retrofit.jpeg",
+        "imageName": "Heavy Laser Retrofit.png",
         "keywords": [
             "Critical"
         ],
@@ -9315,7 +9316,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Shriv Suurgav.jpeg",
+        "imageName": "Shriv Suurgav.png",
         "keywords": [
             "Field Commander"
         ],
@@ -9337,7 +9338,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Governor Pryce.jpeg",
+        "imageName": "Governor Pryce.png",
         "keywords": [
             "Field Commander"
         ],
@@ -9365,7 +9366,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Clone Commander Fox.jpeg",
+        "imageName": "Clone Commander Fox.png",
         "keywords": [
             "Field Commander"
         ],
@@ -9387,7 +9388,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "Onboard Comms Channel.jpeg",
+        "imageName": "Onboard Comms Channel.png",
         "keywords": [],
         "requirements": [
             "OR",
@@ -9408,7 +9409,7 @@
         "cardType": "upgrade",
         "prevCost": 25,
         "cost": 20,
-        "imageName": "AG-2G Quad Laser.jpeg",
+        "imageName": "AG-2G Quad Laser.png",
         "keywords": [
             "Impact"
         ],
@@ -9440,7 +9441,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Hotshot Pilot.jpeg",
+        "imageName": "Hotshot Pilot.png",
         "keywords": [
             "Sharpshooter"
         ],
@@ -9462,7 +9463,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 12,
-        "imageName": "Reckless Driver.jpeg",
+        "imageName": "Reckless Driver.png",
         "keywords": [],
         "requirements": [
             {
@@ -9484,7 +9485,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 12,
-        "imageName": "Backworld Medic.jpeg",
+        "imageName": "Backworld Medic.png",
         "keywords": [],
         "requirements": [
             {
@@ -9501,7 +9502,7 @@
         "cardType": "upgrade",
         "prevCost": 14,
         "cost": 20,
-        "imageName": "Refurbished %22Gonk%22 Droid.jpeg",
+        "imageName": "Refurbished %22Gonk%22 Droid.png",
         "keywords": [
             "Shielded",
             "Shield Token"
@@ -9534,7 +9535,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 6,
-        "imageName": "Unstable R5 Astromech.jpeg",
+        "imageName": "Unstable R5 Astromech.png",
         "keywords": [],
         "requirements": [
             "OR",
@@ -9554,7 +9555,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 16,
-        "imageName": "Unorthodox Tactician.jpeg",
+        "imageName": "Unorthodox Tactician.png",
         "keywords": [],
         "requirements": [
             {
@@ -9576,7 +9577,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Baron Rudor.jpeg",
+        "imageName": "Baron Rudor.png",
         "keywords": [
             "Marksman"
         ],
@@ -9604,7 +9605,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Hound & Grizzer.jpeg",
+        "imageName": "Hound & Grizzer.png",
         "keywords": [
             "Observe"
         ],
@@ -9626,7 +9627,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Imperial TIE Pilot.jpeg",
+        "imageName": "Imperial TIE Pilot.png",
         "keywords": [],
         "requirements": [
             "AND",
@@ -9646,7 +9647,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 4,
-        "imageName": "Clone Shock Trooper Pilot.jpeg",
+        "imageName": "Clone Shock Trooper Pilot.png",
         "keywords": [],
         "requirements": [
             "AND",
@@ -9666,7 +9667,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 26,
-        "imageName": "Battle Shield Wookiee.jpeg",
+        "imageName": "Battle Shield Wookiee.png",
         "keywords": [
             "Armor",
             "Reconfigure"
@@ -9681,14 +9682,14 @@
         "id": "pg",
         "cardName": "Wookiee Warriors",
         "title": "Kashyyyk Defenders",
-        "displayName": "Wookiee Warriors (Kashyyyk Defenders)",
+        "displayName": "Wookiee Warriors Kashyyyk Defenders",
         "cardType": "unit",
         "cardSubtype": "wookiee trooper",
         "rank": "special",
         "faction": "republic",
         "isUnique": false,
         "cost": 72,
-        "imageName": "Wookiee Warriors2.jpeg",
+        "imageName": "Wookiee Warriors Kashyyyk Defenders.png",
         "keywords": [
             "Indomitable",
             "Scale",
@@ -9719,7 +9720,7 @@
         "faction": "republic",
         "isUnique": true,
         "cost": 100,
-        "imageName": "Wookiee Chieftain.jpeg",
+        "imageName": "Wookiee Chieftain.png",
         "keywords": [
             "Agile",
             "Charge",
@@ -9751,7 +9752,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Yoda",
-        "imageName": "Size Matters Not.jpeg",
+        "imageName": "Size Matters Not.png",
         "faction": "republic",
         "keywords": [
             "Jump",
@@ -9766,7 +9767,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Yoda",
-        "imageName": "There Is No Try.jpeg",
+        "imageName": "There Is No Try.png",
         "faction": "republic",
         "keywords": [
             "Outmaneuver",
@@ -9780,7 +9781,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Yoda",
-        "imageName": "Luminous Beings Are We.jpeg",
+        "imageName": "Luminous Beings Are We.png",
         "faction": "republic",
         "keywords": []
     },
@@ -9788,14 +9789,14 @@
         "id": "pl",
         "cardName": "Wookiee Warriors",
         "title": "Kashyyyk Resistance",
-        "displayName": "Wookiee Warriors (Kashyyyk Resistance)",
+        "displayName": "Wookiee Warriors Kashyyyk Resistance",
         "cardType": "unit",
         "cardSubtype": "wookiee trooper",
         "rank": "special",
         "faction": "rebels",
         "isUnique": false,
         "cost": 72,
-        "imageName": "Wookiee Warriors3.jpeg",
+        "imageName": "Wookiee Warriors Kashyyyk Resistance.png",
         "keywords": [
             "Indomitable",
             "Scale",
@@ -9816,15 +9817,15 @@
         "courage": 2
     },
     "pm": {
-         "id": "pm",
-         "cardName": "Wookiee Warriors",
+        "id": "pm",
+        "cardName": "Wookiee Warriors",
         "cardType": "unit",
         "cardSubtype": "wookiee trooper",
         "rank": "special",
         "faction": "republic",
         "isUnique": false,
         "cost": 69,
-        "imageName": "Wookiee Warriors4.jpeg",
+        "imageName": "Wookiee Warriors4.png",
         "keywords": [
             "Charge",
             "Duelist",
@@ -9855,7 +9856,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 26,
-        "imageName": "Long Gun Wookiee.jpeg",
+        "imageName": "Long Gun Wookiee.png",
         "keywords": [
             "Suppressive"
         ],
@@ -9875,7 +9876,7 @@
         "faction": "republic",
         "isUnique": true,
         "cost": 90,
-        "imageName": "Chewbacca2.jpeg",
+        "imageName": "Chewbacca Hero of Kashyyyk.png",
         "keywords": [
             "Enrage",
             "Guardian",
@@ -9906,7 +9907,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Chewbacca",
-        "imageName": "Size Matters Sometimes.jpeg",
+        "imageName": "Size Matters Sometimes.png",
         "faction": "republic",
         "keywords": [
             "Deflect",
@@ -9921,7 +9922,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Burst of Speed.jpeg",
+        "imageName": "Burst of Speed.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -9939,7 +9940,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Force Lift.jpeg",
+        "imageName": "Force Lift.png",
         "keywords": [],
         "requirements": []
     },
@@ -9951,7 +9952,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 4,
-        "imageName": "Into the Fray.jpeg",
+        "imageName": "Into the Fray.png",
         "keywords": [],
         "requirements": []
     },
@@ -9963,7 +9964,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Protector.jpeg",
+        "imageName": "Protector.png",
         "keywords": [],
         "requirements": []
     },
@@ -9974,7 +9975,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "",
-        "imageName": "Grroooogrrraaaawrrrrrrrrmph.jpeg",
+        "imageName": "Grroooogrrraaaawrrrrrrrrmph.png",
         "faction": "republic",
         "keywords": []
     },
@@ -9985,7 +9986,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "",
-        "imageName": "MROWGH GHRRMROWRIG!.jpeg",
+        "imageName": "MROWGH GHRRMROWRIG!.png",
         "faction": "republic",
         "keywords": [
             "Agile"
@@ -9998,7 +9999,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "",
-        "imageName": "YHWARGGHHHHHHHHHH!.jpeg",
+        "imageName": "YHWARGGHHHHHHHHHH!.png",
         "faction": "republic",
         "keywords": [
             "Demoralize"
@@ -10013,7 +10014,7 @@
         "faction": "separatists",
         "isUnique": false,
         "cost": 72,
-        "imageName": "IG-100 MagnaGuard.jpeg",
+        "imageName": "IG-100 MagnaGuard.png",
         "keywords": [
             "AI",
             "Charge",
@@ -10047,7 +10048,7 @@
         "isUnique": true,
         "prevCost": 90,
         "cost": 75,
-        "imageName": "Super Tactical Droid.jpeg",
+        "imageName": "Super Tactical Droid.png",
         "keywords": [
             "Strategize",
             "Direct",
@@ -10092,7 +10093,7 @@
         "isUnique": true,
         "prevCost": 100,
         "cost": 80,
-        "imageName": "Super Tactical Droid (Kraken).jpeg",
+        "imageName": "Super Tactical Droid Kraken.png",
         "keywords": [
             "Strategize",
             "Charge",
@@ -10134,7 +10135,7 @@
         "isUnique": true,
         "prevCost": 100,
         "cost": 85,
-        "imageName": "Super Tactical Droid (Kalani).jpeg",
+        "imageName": "Super Tactical Droid Kalani.png",
         "keywords": [
             "Strategize",
             "Direct",
@@ -10172,7 +10173,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 28,
-        "imageName": "Electro-whip MagnaGuard.jpeg",
+        "imageName": "Electro-whip MagnaGuard.png",
         "keywords": [
             "Immobilize",
             "Versatile"
@@ -10191,7 +10192,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 22,
-        "imageName": "IG-100 MagnaGuard.jpeg",
+        "imageName": "IG-100 MagnaGuard.png",
         "keywords": [],
         "requirements": [
             {
@@ -10208,7 +10209,7 @@
         "cardType": "upgrade",
         "prevCost": 34,
         "cost": 40,
-        "imageName": "RPS-6 MagnaGuard.jpeg",
+        "imageName": "RPS-6 MagnaGuard.png",
         "keywords": [
             "Critical",
             "Impact"
@@ -10235,7 +10236,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Super Tactical Droid",
-        "imageName": "They Too Will Suffer.jpeg",
+        "imageName": "They Too Will Suffer.png",
         "faction": "separatists",
         "keywords": []
     },
@@ -10245,7 +10246,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Super Tactical Droid",
-        "imageName": "Preservation Protocols.jpeg",
+        "imageName": "Preservation Protocols.png",
         "faction": "separatists",
         "keywords": [
             "AI",
@@ -10259,7 +10260,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Super Tactical Droid",
-        "imageName": "Do Not Underestimate Our Means.jpeg",
+        "imageName": "Do Not Underestimate Our Means.png",
         "faction": "separatists",
         "keywords": [
             "Divulge",
@@ -10276,7 +10277,7 @@
         "faction": "republic",
         "isUnique": false,
         "cost": 55,
-        "imageName": "Raddaugh Gnasp Fluttercraft.jpeg",
+        "imageName": "Raddaugh Gnasp Fluttercraft.png",
         "keywords": [
             "Cover",
             "Immune",
@@ -10304,7 +10305,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "Gnasp Gunner.jpeg",
+        "imageName": "Gnasp Gunner.png",
         "keywords": [
             "Fixed",
             "Impact",
@@ -10330,7 +10331,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Hacked Comms Unit.jpeg",
+        "imageName": "Hacked Comms Unit.png",
         "keywords": [],
         "requirements": []
     },
@@ -10345,7 +10346,7 @@
         "isUnique": false,
         "prevCost": 55,
         "cost": 50,
-        "imageName": "DSD1 Dwarf Spider Droid.jpeg",
+        "imageName": "DSD1 Dwarf Spider Droid.png",
         "keywords": [
             "Self-Destruct",
             "Armor X",
@@ -10356,7 +10357,7 @@
             "Impact"
         ],
         "upgradeBar": [
-            "programming",
+            "protocol",
             "hardpoint",
             "comms"
         ],
@@ -10377,12 +10378,12 @@
     },
     "ql": {
         "id": "ql",
-        "cardSubtype": "programming",
+        "cardSubtype": "protocol",
         "cardName": "Engagement Protocols",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Engagement Protocols.jpeg",
+        "imageName": "Engagement Protocols.png",
         "keywords": [
             "AI"
         ],
@@ -10395,12 +10396,12 @@
     "qm": {
         "id": "qm",
         "displayName": "",
-        "cardSubtype": "programming",
+        "cardSubtype": "protocol",
         "cardName": "Defense Protocols",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "Defense Protocols.jpeg",
+        "imageName": "Defense Protocols.png",
         "keywords": [
             "AI",
             "Dodge",
@@ -10416,12 +10417,12 @@
     "qn": {
         "id": "qn",
         "displayName": "",
-        "cardSubtype": "programming",
+        "cardSubtype": "protocol",
         "cardName": "Attack Protocols",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "Attack Protocols.jpeg",
+        "imageName": "Attack Protocols.png",
         "keywords": [
             "AI",
             "Precise"
@@ -10440,7 +10441,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "Nose-Mounted Flamethrower.jpeg",
+        "imageName": "Nose-Mounted Flamethrower.png",
         "keywords": [
             "Blast",
             "Fixed",
@@ -10460,7 +10461,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 20,
-        "imageName": "Gnasp Bombardier.jpeg",
+        "imageName": "Gnasp Bombardier.png",
         "keywords": [
             "Overrun",
             "Suppressive"
@@ -10479,7 +10480,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 25,
-        "imageName": "Nose-Mounted Ion Blaster.jpeg",
+        "imageName": "Nose-Mounted Ion Blaster.png",
         "keywords": [
             "Cycle",
             "Fixed",
@@ -10506,7 +10507,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "Nose-Mounted Laser Cannon.jpeg",
+        "imageName": "Nose-Mounted Laser Cannon.png",
         "keywords": [
             "Critical",
             "Fixed"
@@ -10526,7 +10527,7 @@
         "faction": "republic",
         "isUnique": false,
         "cost": 65,
-        "imageName": "Infantry Support Platform.jpeg",
+        "imageName": "Infantry Support Platform.png",
         "keywords": [
             "Armor",
             "Cover",
@@ -10558,7 +10559,7 @@
         "isUnique": false,
         "prevCost": 145,
         "cost": 130,
-        "imageName": "NR-N99 Persuader-class Tank Droid.jpeg",
+        "imageName": "Persuader-class Tank Droid.png",
         "keywords": [
             "Armor",
             "Arsenal",
@@ -10568,7 +10569,7 @@
             "Weak Point"
         ],
         "upgradeBar": [
-            "programming",
+            "protocol",
             "ordnance",
             "ordnance",
             "comms"
@@ -10596,7 +10597,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "327th Star Corps Elite Armor Pilots.jpeg",
+        "imageName": "327th Star Corps Elite Armor Pilots.png",
         "keywords": [
             "Fire Support"
         ],
@@ -10614,7 +10615,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 25,
-        "imageName": "Twin Blaster Cannons.jpeg",
+        "imageName": "Twin Blaster Cannons.png",
         "keywords": [
             "Gunslinger",
             "Critical",
@@ -10641,7 +10642,7 @@
         "cardType": "upgrade",
         "cost": 30,
         "prevCost": 25,
-        "imageName": "Twin Beam Cannons.jpeg",
+        "imageName": "Twin Beam Cannons.png",
         "keywords": [
             "Beam",
             "Fixed"
@@ -10670,7 +10671,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 25,
-        "imageName": "Twin Missile Pods.jpeg",
+        "imageName": "Twin Missile Pods.png",
         "keywords": [
             "Gunslinger",
             "Impact",
@@ -10704,7 +10705,7 @@
         ],
         "isUnique": false,
         "cost": 48,
-        "imageName": "Pyke Syndicate Capo.jpeg",
+        "imageName": "Pyke Syndicate Capo.png",
         "keywords": [
             "Aid",
             "Independent",
@@ -10744,7 +10745,7 @@
         ],
         "isUnique": false,
         "cost": 44,
-        "imageName": "Pyke Syndicate Foot Soldiers.jpeg",
+        "imageName": "Pyke Syndicate Foot Soldiers.png",
         "keywords": [
             "Self-Preservation",
             "Danger Sense",
@@ -10785,7 +10786,7 @@
         ],
         "cost": 50,
         "isUnique": false,
-        "imageName": "Black Sun Vigo.jpeg",
+        "imageName": "Black Sun Vigo.png",
         "keywords": [
             "Aid",
             "Dauntless",
@@ -10815,7 +10816,7 @@
         ],
         "isUnique": false,
         "cost": 50,
-        "imageName": "Black Sun Enforcers.jpeg",
+        "imageName": "Black Sun Enforcers.png",
         "keywords": [
             "Dauntless",
             "Precise",
@@ -10852,7 +10853,7 @@
         "isUnique": true,
         "prevCost": 170,
         "cost": 150,
-        "imageName": "Maul2.jpeg",
+        "imageName": "Maul A Rival.png",
         "keywords": [
             "Jump",
             "Allies of Convenience",
@@ -10894,7 +10895,7 @@
         "isUnique": true,
         "prevCost": 100,
         "cost": 95,
-        "imageName": "Gar Saxon.jpeg",
+        "imageName": "Gar Saxon.png",
         "keywords": [
             "Jump",
             "Allies of Convenience",
@@ -10940,7 +10941,7 @@
         "faction": "mercenary",
         "isUnique": false,
         "cost": 70,
-        "imageName": "Mandalorian Super Commandos.jpeg",
+        "imageName": "Mandalorian Super Commandos.png",
         "keywords": [
             "Jump",
             "Defend",
@@ -10977,7 +10978,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Underworld Connections.jpeg",
+        "imageName": "Underworld Connections.png",
         "keywords": [
             "Allies of Convenience"
         ],
@@ -10991,7 +10992,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 24,
-        "imageName": "P13-M Disruptor Soldier.jpeg",
+        "imageName": "P13-M Disruptor Soldier.png",
         "keywords": [
             "Impact"
         ],
@@ -11009,7 +11010,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Electro-Whip Soldier.jpeg",
+        "imageName": "Electro-Whip Soldier.png",
         "keywords": [
             "Immobilize",
             "Suppressive"
@@ -11028,7 +11029,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 9,
-        "imageName": "Pyke Syndicate Foot Soldier.jpeg",
+        "imageName": "Pyke Syndicate Foot Soldier.png",
         "keywords": [
             "Cache"
         ],
@@ -11046,7 +11047,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 18,
-        "imageName": "Pyke Syndicate Capo.jpeg",
+        "imageName": "Pyke Syndicate Capo.png",
         "keywords": [
             "Independent",
             "Leader"
@@ -11071,7 +11072,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 11,
-        "imageName": "Black Sun Enforcer.jpeg",
+        "imageName": "Black Sun Enforcer.png",
         "keywords": [
             "Cache"
         ],
@@ -11089,7 +11090,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 20,
-        "imageName": "Black Sun Vigo.jpeg",
+        "imageName": "Black Sun Vigo.png",
         "keywords": [
             "Independent",
             "Leader"
@@ -11120,7 +11121,7 @@
                 "description": "Cost increased from 14 to 16 points."
             }
         ],
-        "imageName": "Mag-Det Enforcer.jpeg",
+        "imageName": "Mag-Det Enforcer.png",
         "keywords": [
             "Blast",
             "Impact"
@@ -11139,7 +11140,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 28,
-        "imageName": "Scatter Gun Enforcer.jpeg",
+        "imageName": "Scatter Gun Enforcer.png",
         "keywords": [
             "Pierce"
         ],
@@ -11157,7 +11158,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Prepared Supplies.jpeg",
+        "imageName": "Prepared Supplies.png",
         "keywords": [
             "Cache"
         ],
@@ -11171,7 +11172,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "Sonic Imploders.jpeg",
+        "imageName": "Sonic Imploders.png",
         "keywords": [
             "Suppressive"
         ],
@@ -11185,7 +11186,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "The Darksaber2.jpeg",
+        "imageName": "The Darksaber2.png",
         "keywords": [
             "Cunning",
             "Sidearm",
@@ -11195,7 +11196,7 @@
         ],
         "requirements": [
             {
-                "imageName": "Maul2.jpeg"
+                "imageName": "Maul2.png"
             }
         ]
     },
@@ -11205,7 +11206,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Maul",
-        "imageName": "Witch Magick.jpeg",
+        "imageName": "Witch Magick.png",
         "faction": "mercenary",
         "keywords": []
     },
@@ -11215,7 +11216,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Maul",
-        "imageName": "His Emminence.jpeg",
+        "imageName": "His Emminence.png",
         "faction": "mercenary",
         "keywords": []
     },
@@ -11225,7 +11226,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Maul",
-        "imageName": "Seize What Power We Can.jpeg",
+        "imageName": "Seize What Power We Can.png",
         "faction": "mercenary",
         "keywords": []
     },
@@ -11237,7 +11238,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Up Close and Personal.jpeg",
+        "imageName": "Up Close and Personal.png",
         "keywords": [],
         "requirements": [],
         "history": [
@@ -11255,7 +11256,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Lead By Example.jpeg",
+        "imageName": "Lead By Example.png",
         "keywords": [],
         "requirements": []
     },
@@ -11265,7 +11266,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "",
-        "imageName": "Ploy.jpeg",
+        "imageName": "Ploy.png",
         "faction": "",
         "keywords": []
     },
@@ -11275,7 +11276,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "",
-        "imageName": "Aggression.jpeg",
+        "imageName": "Aggression.png",
         "faction": "",
         "keywords": []
     },
@@ -11285,7 +11286,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "",
-        "imageName": "Discretion.jpeg",
+        "imageName": "Discretion.png",
         "faction": "",
         "keywords": []
     },
@@ -11297,7 +11298,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Super Commando Combat Shields.jpeg",
+        "imageName": "Super Commando Combat Shields.png",
         "keywords": [
             "Shielded"
         ],
@@ -11315,7 +11316,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Super Commando Jetpack Rockets.jpeg",
+        "imageName": "Super Commando Jetpack Rockets.png",
         "keywords": [
             "Blast",
             "Critical",
@@ -11335,7 +11336,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 24,
-        "imageName": "Mandalorian Super Commando.jpeg",
+        "imageName": "Mandalorian Super Commando.png",
         "keywords": [
             "Cache"
         ],
@@ -11353,7 +11354,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 28,
-        "imageName": "Super Commando Gunslinger.jpeg",
+        "imageName": "Super Commando Gunslinger.png",
         "keywords": [
             "Lethal"
         ],
@@ -11377,7 +11378,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 28,
-        "imageName": "Super Commando Marksman.jpeg",
+        "imageName": "Super Commando Marksman.png",
         "keywords": [
             "Precise"
         ],
@@ -11401,7 +11402,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 35,
-        "imageName": "Rook Kast.jpeg",
+        "imageName": "Rook Kast.png",
         "keywords": [
             "Retinue",
             "Leader"
@@ -11420,7 +11421,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 4,
-        "imageName": "Emergency Transponder.jpeg",
+        "imageName": "Emergency Transponder.png",
         "keywords": [],
         "requirements": []
     },
@@ -11432,7 +11433,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "Saxon's Galar-90 Rifle.jpeg",
+        "imageName": "Saxon's Galar-90 Rifle.png",
         "keywords": [
             "High Velocity",
             "Lethal",
@@ -11452,7 +11453,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Saxon's Z-3X Jetpack Rockets.jpeg",
+        "imageName": "Saxon's Z-3X Jetpack Rockets.png",
         "keywords": [
             "Blast",
             "Cycle",
@@ -11472,7 +11473,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Saxon's ZX Flame Projector.jpeg",
+        "imageName": "Saxon's ZX Flame Projector.png",
         "keywords": [
             "Blast",
             "Spray",
@@ -11490,7 +11491,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Gar Saxon",
-        "imageName": "Marked For Elimination.jpeg",
+        "imageName": "Marked For Elimination.png",
         "faction": "mercenary",
         "keywords": []
     },
@@ -11500,7 +11501,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Gar Saxon",
-        "imageName": "Fight Another Day.jpeg",
+        "imageName": "Fight Another Day.png",
         "faction": "mercenary",
         "keywords": [
             "Outmaneuver"
@@ -11512,7 +11513,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Gar Saxon",
-        "imageName": "Victory or Death!.jpeg",
+        "imageName": "Victory or Death!.png",
         "faction": "mercenary",
         "keywords": [
             "Outmaneuver"
@@ -11529,7 +11530,7 @@
         "isUnique": false,
         "prevCost": 75,
         "cost": 65,
-        "imageName": "A-A5 Speeder Truck2.jpeg",
+        "imageName": "A-A5 Speeder Truck M.png",
         "keywords": [
             "Armor",
             "Hover: Ground",
@@ -11567,7 +11568,7 @@
         "cardType": "upgrade",
         "cost": 5,
         "faction": "mercenary",
-        "imageName": "Frenzied Gunner.jpeg",
+        "imageName": "Frenzied Gunner.png",
         "keywords": [],
         "requirements": [
             "AND",
@@ -11587,7 +11588,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Raiding Party Leader.jpeg",
+        "imageName": "Raiding Party Leader.png",
         "keywords": [
             "Allies of Convenience",
             "Field Commander",
@@ -11611,7 +11612,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Saxon's Combat Shield.jpeg",
+        "imageName": "Saxon's Combat Shield.png",
         "keywords": [
             "Shielded",
             "Recharge"
@@ -11637,7 +11638,7 @@
         "isUnique": false,
         "prevCost": 65,
         "cost": 70,
-        "imageName": "Swoop Bike Riders.jpeg",
+        "imageName": "Swoop Bike Riders.png",
         "keywords": [
             "Cover",
             "Independent",
@@ -11677,7 +11678,7 @@
         "faction": "empire",
         "isUnique": false,
         "cost": 40,
-        "imageName": "Stormtroopers2.jpeg",
+        "imageName": "Stormtroopers Heavy Response Unit.png",
         "keywords": [
             "Flexible Response",
             "Precise",
@@ -11711,7 +11712,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "",
-        "imageName": "Delaying Tactics.jpeg",
+        "imageName": "Delaying Tactics.png",
         "faction": "rebels",
         "battleForce": "Echo Base Defenders",
         "keywords": []
@@ -11722,7 +11723,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "",
-        "imageName": "Courage of the Rebellion.jpeg",
+        "imageName": "Courage of the Rebellion.png",
         "faction": "rebels",
         "battleForce": "Echo Base Defenders",
         "keywords": []
@@ -11733,7 +11734,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "",
-        "imageName": "Hold at Any Cost.jpeg",
+        "imageName": "Hold at Any Cost.png",
         "faction": "rebels",
         "battleForce": "Echo Base Defenders",
         "keywords": []
@@ -11744,7 +11745,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "",
-        "imageName": "Unrelenting Fire.jpeg",
+        "imageName": "Unrelenting Fire.png",
         "faction": "empire",
         "battleForce": "Blizzard Force",
         "keywords": []
@@ -11755,7 +11756,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "",
-        "imageName": "Overwhelming Barrage.jpeg",
+        "imageName": "Overwhelming Barrage.png",
         "faction": "empire",
         "battleForce": "Blizzard Force",
         "keywords": []
@@ -11766,7 +11767,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "",
-        "imageName": "Debark for Ground Assault.jpeg",
+        "imageName": "Debark for Ground Assault.png",
         "faction": "empire",
         "battleForce": "Blizzard Force",
         "keywords": [
@@ -11780,7 +11781,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "",
-        "imageName": "Lead From the Front.jpeg",
+        "imageName": "Lead From the Front.png",
         "faction": "republic",
         "battleForce": "501st Legion",
         "keywords": []
@@ -11791,7 +11792,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "",
-        "imageName": "Tactical Planning.jpeg",
+        "imageName": "Tactical Planning.png",
         "faction": "republic",
         "battleForce": "501st Legion",
         "keywords": []
@@ -11802,7 +11803,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "",
-        "imageName": "Leader of the 501st.jpeg",
+        "imageName": "Leader of the 501st.png",
         "faction": "republic",
         "battleForce": "501st Legion",
         "keywords": [
@@ -11816,8 +11817,8 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "",
-        "imageName": "AI Coordination.jpeg",
-        "faction": "separatist",
+        "imageName": "AI Coordination.png",
+        "faction": "separatists",
         "battleForce": "Separatist Invasion",
         "keywords": []
     },
@@ -11827,8 +11828,8 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "",
-        "imageName": "Unrelenting Assault.jpeg",
-        "faction": "separatist",
+        "imageName": "Unrelenting Assault.png",
+        "faction": "separatists",
         "battleForce": "Separatist Invasion",
         "keywords": []
     },
@@ -11838,8 +11839,8 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "",
-        "imageName": "Unstoppable Advance.jpeg",
-        "faction": "separatist",
+        "imageName": "Unstoppable Advance.png",
+        "faction": "separatists",
         "battleForce": "Separatist Invasion",
         "keywords": []
     },
@@ -11849,7 +11850,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Boba Fett",
-        "imageName": "A Simple Man.jpeg",
+        "imageName": "A Simple Man.png",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -11862,7 +11863,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Boba Fett",
-        "imageName": "Making His Way in the Galaxy.jpeg",
+        "imageName": "Making His Way in the Galaxy.png",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -11877,7 +11878,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Boba Fett",
-        "imageName": "Rule With Respect.jpeg",
+        "imageName": "Rule With Respect.png",
         "faction": "",
         "battleForce": "",
         "keywords": []
@@ -11888,7 +11889,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Din Djarin",
-        "imageName": "Whistling Birds.jpeg",
+        "imageName": "Whistling Birds.png",
         "faction": "",
         "battleForce": "",
         "keywords": []
@@ -11906,7 +11907,7 @@
         ],
         "isUnique": true,
         "cost": 110,
-        "imageName": "IG-88.jpeg",
+        "imageName": "IG-88.png",
         "keywords": [
             "Armor X",
             "Bounty",
@@ -11943,7 +11944,7 @@
         ],
         "isUnique": true,
         "cost": 105,
-        "imageName": "IG-11.jpeg",
+        "imageName": "IG-11.png",
         "keywords": [
             "Armor X",
             "Gunslinger",
@@ -11955,7 +11956,7 @@
             "training",
             "comms",
             "gear",
-            "programming"
+            "protocol"
         ],
         "defense": "red",
         "surges": [
@@ -11982,7 +11983,7 @@
         "isUnique": true,
         "prevCost": 105,
         "cost": 95,
-        "imageName": "Din Djarin.jpeg",
+        "imageName": "Din Djarin.png",
         "counterpartId": "tn",
         "keywords": [
             "Arsenal",
@@ -12031,7 +12032,7 @@
         ],
         "isUnique": true,
         "cost": 120,
-        "imageName": "Boba Fett2.jpeg",
+        "imageName": "Boba Fett Daimyo of Mos Espa.png",
         "keywords": [
             "Jump",
             "Arsenal",
@@ -12066,7 +12067,7 @@
         "rank": "heavy",
         "faction": "empire",
         "cost": 95,
-        "imageName": "Imperial Dark Troopers.jpeg",
+        "imageName": "Imperial Dark Troopers.png",
         "keywords": [
             "Armor",
             "Plodding",
@@ -12077,7 +12078,7 @@
             "heavy weapon",
             "heavy weapon",
             "personnel",
-            "programming"
+            "protocol"
         ],
         "defense": "red",
         "surges": [],
@@ -12105,7 +12106,7 @@
         "cardType": "counterpart",
         "cost": 17,
         "additionalTags": [],
-        "imageName": "Grogu.jpeg",
+        "imageName": "Grogu.png",
         "keywords": [
             "Hunted",
             "Latent Power",
@@ -12123,7 +12124,7 @@
         "cardType": "upgrade",
         "cost": 10,
         "faction": "",
-        "imageName": "Din's Amban Rifle.jpeg",
+        "imageName": "Din's Amban Rifle.png",
         "keywords": [
             "Immobilize",
             "Suppressive"
@@ -12137,13 +12138,13 @@
     "tp": {
         "id": "tp",
         "displayName": "",
-        "cardSubtype": "programming",
+        "cardSubtype": "protocol",
         "cardName": "\"Nanny\" Programming",
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 0,
         "faction": "rebels",
-        "imageName": "%22Nanny%22 Programming.jpeg",
+        "imageName": "%22Nanny%22 Programming.png",
         "keywords": [
             "Counterpart",
             "AI"
@@ -12163,7 +12164,7 @@
         "cardType": "upgrade",
         "cost": 8,
         "faction": "",
-        "imageName": "Din's Flame Projector.jpeg",
+        "imageName": "Din's Flame Projector.png",
         "keywords": [
             "Blast",
             "Spray",
@@ -12184,7 +12185,7 @@
         "cardType": "upgrade",
         "cost": 15,
         "faction": "",
-        "imageName": "The Mando's Jetpack.jpeg",
+        "imageName": "The Mando's Jetpack.png",
         "keywords": [
             "Jump"
         ],
@@ -12203,7 +12204,7 @@
         "cardType": "upgrade",
         "cost": 15,
         "faction": "",
-        "imageName": "Beskar Spear.jpeg",
+        "imageName": "Beskar Spear.png",
         "keywords": [
             "Duelist",
             "Pierce"
@@ -12220,7 +12221,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Din Djarin",
-        "imageName": "I Like Those Odds.jpeg",
+        "imageName": "I Like Those Odds.png",
         "faction": "",
         "battleForce": "",
         "keywords": []
@@ -12231,7 +12232,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Din Djarin",
-        "imageName": "This is the Way.jpeg",
+        "imageName": "This is the Way.png",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -12244,7 +12245,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Din Djarin",
-        "imageName": "The Hand Thing.jpeg",
+        "imageName": "The Hand Thing.png",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -12257,7 +12258,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "IG-11",
-        "imageName": "A Machine Made For Killing.jpeg",
+        "imageName": "A Machine Made For Killing.png",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -12271,7 +12272,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "IG-11",
-        "imageName": "Anti-Capture Protocols.jpeg",
+        "imageName": "Anti-Capture Protocols.png",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -12286,7 +12287,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "IG-88",
-        "imageName": "Focused on the Kill.jpeg",
+        "imageName": "Focused on the Kill.png",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -12300,7 +12301,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "IG-88",
-        "imageName": "Independent Programming.jpeg",
+        "imageName": "Independent Programming.png",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -12314,7 +12315,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "IG-11",
-        "imageName": "Mechanical Carnage.jpeg",
+        "imageName": "Mechanical Carnage.png",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -12324,13 +12325,13 @@
     "ub": {
         "id": "ub",
         "displayName": "",
-        "cardSubtype": "programming",
+        "cardSubtype": "protocol",
         "cardName": "\"Bounty\" Programming",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
         "faction": "",
-        "imageName": "%22Bounty%22 Programming.jpeg",
+        "imageName": "%22Bounty%22 Programming.png",
         "keywords": [
             "Bounty",
             "AI",
@@ -12349,7 +12350,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "IG-88",
-        "imageName": "A Machine Made For Killing.jpeg",
+        "imageName": "A Machine Made For Killing.png",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -12363,7 +12364,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "IG-11",
-        "imageName": "The Hand Thing.jpeg",
+        "imageName": "The Hand Thing.png",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -12380,7 +12381,7 @@
         "faction": "republic",
         "isUnique": true,
         "cost": 105,
-        "imageName": "Clone Commander Cody.jpeg",
+        "imageName": "Clone Commander Cody.png",
         "keywords": [
             "Observe",
             "Jump",
@@ -12410,7 +12411,7 @@
         "cardType": "upgrade",
         "cost": 15,
         "faction": "republic",
-        "imageName": "Boil.jpeg",
+        "imageName": "Boil.png",
         "keywords": [
             "Guardian",
             "Scout",
@@ -12435,7 +12436,7 @@
         "cardType": "upgrade",
         "cost": 15,
         "faction": "republic",
-        "imageName": "Waxer.jpeg",
+        "imageName": "Waxer.png",
         "keywords": [
             "Disciplined",
             "Scout",
@@ -12459,7 +12460,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Boba's Flame Projector.jpeg",
+        "imageName": "Boba's Flame Projector.png",
         "keywords": [
             "Blast",
             "Spray",
@@ -12481,7 +12482,7 @@
         "faction": "empire",
         "isUnique": true,
         "cost": 100,
-        "imageName": "Moff Gideon.jpeg",
+        "imageName": "Moff Gideon.png",
         "keywords": [
             "Observe",
             "Entourage",
@@ -12516,7 +12517,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "The Darksaber3.jpeg",
+        "imageName": "The Darksaber3.png",
         "keywords": [
             "Demoralize",
             "Immune",
@@ -12537,7 +12538,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Moff Gideon",
-        "imageName": "Die at My Hand.jpeg",
+        "imageName": "Die at My Hand.png",
         "faction": "empire",
         "battleForce": "",
         "keywords": [
@@ -12550,7 +12551,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Moff Gideon",
-        "imageName": "You Have Something I Want.jpeg",
+        "imageName": "You Have Something I Want.png",
         "faction": "empire",
         "battleForce": "",
         "keywords": []
@@ -12561,7 +12562,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Moff Gideon",
-        "imageName": "Moment of Consideration.jpeg",
+        "imageName": "Moment of Consideration.png",
         "faction": "empire",
         "battleForce": "",
         "keywords": [
@@ -12575,7 +12576,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 55,
-        "imageName": "XS-IV Assault Cannon.jpeg",
+        "imageName": "XS-IV Assault Cannon.png",
         "keywords": [
             "Critical"
         ],
@@ -12598,7 +12599,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 45,
-        "imageName": "SM-9 Frag Launcher.jpeg",
+        "imageName": "SM-9 Frag Launcher.png",
         "keywords": [
             "Blast",
             "Impact",
@@ -12623,7 +12624,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 36,
-        "imageName": "Mertalizer.jpeg",
+        "imageName": "Mertalizer.png",
         "keywords": [
             "Suppressive"
         ],
@@ -12641,7 +12642,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 32,
-        "imageName": "Imperial Dark Trooper.jpeg",
+        "imageName": "Imperial Dark Trooper.png",
         "keywords": [],
         "requirements": [
             {
@@ -12652,12 +12653,12 @@
     },
     "us": {
         "id": "us",
-        "cardSubtype": "programming",
+        "cardSubtype": "protocol",
         "cardName": "Programmed Loyalty",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Programmed Loyalty.jpeg",
+        "imageName": "Programmed Loyalty.png",
         "keywords": [],
         "requirements": [
             {
@@ -12677,7 +12678,7 @@
         "isUnique": true,
         "prevCost": 150,
         "cost": 130,
-        "imageName": "Asajj Ventress.jpeg",
+        "imageName": "Asajj Ventress.png",
         "keywords": [
             "Jump",
             "Deflect",
@@ -12711,7 +12712,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Count Dooku",
-        "imageName": "The Sith Will Rule.jpeg",
+        "imageName": "The Sith Will Rule.png",
         "faction": "separatists",
         "battleForce": "",
         "keywords": []
@@ -12722,7 +12723,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Asajj Ventress",
-        "imageName": "The Jedi Shall Fall.jpeg",
+        "imageName": "The Jedi Shall Fall.png",
         "faction": "separatists",
         "battleForce": "",
         "keywords": [
@@ -12735,7 +12736,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Asajj Ventress",
-        "imageName": "I Am Fear.jpeg",
+        "imageName": "I Am Fear.png",
         "faction": "separatists",
         "battleForce": "",
         "keywords": [
@@ -12749,7 +12750,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Asajj Ventress",
-        "imageName": "Yes, My Master.jpeg",
+        "imageName": "Yes, My Master.png",
         "faction": "separatists",
         "battleForce": "",
         "keywords": [
@@ -12770,7 +12771,7 @@
         "faction": "empire",
         "isUnique": false,
         "cost": 72,
-        "imageName": "Imperial Death Troopers.jpeg",
+        "imageName": "Imperial Death Troopers.png",
         "keywords": [
             "Disciplined",
             "Precise",
@@ -12810,7 +12811,7 @@
         "faction": "empire",
         "isUnique": false,
         "cost": 48,
-        "imageName": "Scout Troopers.jpeg",
+        "imageName": "Scout Troopers.png",
         "keywords": [
             "Low Profile",
             "Scout",
@@ -12844,7 +12845,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Clone Commander Cody",
-        "imageName": "Bring It Down!.jpeg",
+        "imageName": "Bring It Down!.png",
         "faction": "republic",
         "keywords": []
     },
@@ -12854,7 +12855,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Clone Commander Cody",
-        "imageName": "Have I Ever Let You Down.jpeg",
+        "imageName": "Have I Ever Let You Down.png",
         "faction": "republic",
         "keywords": []
     },
@@ -12864,7 +12865,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Clone Commander Cody",
-        "imageName": "Combined Arms.jpeg",
+        "imageName": "Combined Arms.png",
         "faction": "republic",
         "keywords": []
     },
@@ -12878,7 +12879,7 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 165,
-        "imageName": "Ahsoka Tano.jpeg",
+        "imageName": "Ahsoka Tano Fulcrum.png",
         "keywords": [
             "Jump",
             "Charge",
@@ -12913,7 +12914,7 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 70,
-        "imageName": "Wicket.jpeg",
+        "imageName": "Wicket.png",
         "keywords": [
             "Independent",
             "Low Profile",
@@ -12945,7 +12946,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Ahsoka Tano",
-        "imageName": "I Am No Jedi.jpeg",
+        "imageName": "I Am No Jedi.png",
         "faction": "rebels",
         "keywords": [
             "Agile"
@@ -12957,7 +12958,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Ahsoka Tano",
-        "imageName": "Family Reunion.jpeg",
+        "imageName": "Family Reunion.png",
         "faction": "rebels",
         "keywords": [
             "Teamwork"
@@ -12969,7 +12970,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Ahsoka Tano",
-        "imageName": "Swift Protector.jpeg",
+        "imageName": "Swift Protector.png",
         "faction": "rebels",
         "keywords": [
             "Guardian"
@@ -12981,7 +12982,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Ahsoka Tano",
-        "imageName": "A New Beginning.jpeg",
+        "imageName": "A New Beginning.png",
         "faction": "rebels",
         "keywords": [
             "Inspire"
@@ -12999,7 +13000,7 @@
         "isUnique": true,
         "prevCost": 190,
         "cost": 180,
-        "imageName": "Chewbacca3.jpeg",
+        "imageName": "Chewbacca Let the Wookiee Win.png",
         "keywords": [
             "Armor",
             "Arsenal",
@@ -13038,7 +13039,7 @@
         ],
         "isUnique": false,
         "cost": 40,
-        "imageName": "Ewok Skirmishers.jpeg",
+        "imageName": "Ewok Skirmishers.png",
         "keywords": [
             "Mercenary",
             "Low Profile",
@@ -13068,7 +13069,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Wicket",
-        "imageName": "Close Call.jpeg",
+        "imageName": "Close Call.png",
         "faction": "rebels",
         "keywords": [
             "Outmaneuver"
@@ -13080,7 +13081,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Wicket",
-        "imageName": "Sneaky Scouting.jpeg",
+        "imageName": "Sneaky Scouting.png",
         "faction": "rebels",
         "keywords": []
     },
@@ -13090,7 +13091,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Wicket",
-        "imageName": "Courageous Counterattack.jpeg",
+        "imageName": "Courageous Counterattack.png",
         "faction": "rebels",
         "keywords": []
     },
@@ -13100,7 +13101,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Leia Organa",
-        "imageName": "A Beautiful Friendship.jpeg",
+        "imageName": "A Beautiful Friendship.png",
         "faction": "rebels",
         "keywords": [
             "Permanent",
@@ -13114,7 +13115,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
-        "imageName": "Forest Dwellers.jpeg",
+        "imageName": "Forest Dwellers.png",
         "keywords": [
             "Scout"
         ],
@@ -13148,7 +13149,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Call To Arms.jpeg",
+        "imageName": "Call To Arms.png",
         "keywords": [
             "Charge"
         ],
@@ -13182,7 +13183,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "Axe Ewok.jpeg",
+        "imageName": "Axe Ewok.png",
         "keywords": [
             "Pierce",
             "Impact"
@@ -13205,7 +13206,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Insatiable Curiosity.jpeg",
+        "imageName": "Insatiable Curiosity.png",
         "keywords": [],
         "requirements": [
             "OR",
@@ -13225,7 +13226,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Ewok Trapper.jpeg",
+        "imageName": "Ewok Trapper.png",
         "keywords": [],
         "requirements": [
             "OR",
@@ -13253,7 +13254,7 @@
         ],
         "isUnique": false,
         "cost": 35,
-        "imageName": "Ewok Slingers.jpeg",
+        "imageName": "Ewok Slingers.png",
         "keywords": [
             "Mercenary",
             "Independent",
@@ -13290,7 +13291,7 @@
         "faction": "mercenary",
         "isUnique": true,
         "cost": 40,
-        "imageName": "C-3PO3.jpeg",
+        "imageName": "C-3PO Golden God.png",
         "keywords": [
             "Master Storyteller",
             "Compel",
@@ -13310,7 +13311,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "",
-        "imageName": "Arboreal Assault.jpeg",
+        "imageName": "Arboreal Assault.png",
         "faction": "rebels",
         "battleForce": "Bright Tree Village",
         "keywords": [
@@ -13324,7 +13325,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "",
-        "imageName": "Log Traps.jpeg",
+        "imageName": "Log Traps.png",
         "faction": "rebels",
         "battleForce": "Bright Tree Village",
         "keywords": [
@@ -13338,7 +13339,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "",
-        "imageName": "Hiding in Plain Sight.jpeg",
+        "imageName": "Hiding in Plain Sight.png",
         "faction": "rebels",
         "battleForce": "Bright Tree Village",
         "keywords": [
@@ -13351,7 +13352,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "",
-        "imageName": "For the Tribe.jpeg",
+        "imageName": "For the Tribe.png",
         "faction": "rebels",
         "battleForce": "Bright Tree Village",
         "keywords": [
@@ -13366,7 +13367,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Secret Ingredients.jpeg",
+        "imageName": "Secret Ingredients.png",
         "keywords": [
             "Aid"
         ],
@@ -13384,7 +13385,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Herbal Medicine.jpeg",
+        "imageName": "Herbal Medicine.png",
         "keywords": [],
         "requirements": [
             {
@@ -13400,7 +13401,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Onward to Victory.jpeg",
+        "imageName": "Onward to Victory.png",
         "keywords": [],
         "requirements": [
             {
@@ -13419,7 +13420,7 @@
         "faction": "mercenary",
         "isUnique": true,
         "cost": 45,
-        "imageName": "Logray.jpeg",
+        "imageName": "Logray.png",
         "keywords": [
             "Aid",
             "Independent",
@@ -13453,7 +13454,7 @@
         "isUnique": true,
         "prevCost": 190,
         "cost": 180,
-        "imageName": "Major Marquand.jpeg",
+        "imageName": "Major Marquand.png",
         "keywords": [
             "Vehicle",
             "Armor",
@@ -13487,7 +13488,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "",
-        "imageName": "Drive Them Out.jpeg",
+        "imageName": "Drive Them Out.png",
         "faction": "empire",
         "battleForce": "Tempest Force",
         "keywords": [
@@ -13500,7 +13501,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "",
-        "imageName": "We Need Reinforcements.jpeg",
+        "imageName": "We Need Reinforcements.png",
         "faction": "empire",
         "battleForce": "Tempest Force",
         "keywords": [
@@ -13513,7 +13514,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "",
-        "imageName": "Constantly Alert.jpeg",
+        "imageName": "Constantly Alert.png",
         "faction": "empire",
         "battleForce": "Tempest Force",
         "keywords": []
@@ -13524,7 +13525,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Major Marquand",
-        "imageName": "Gunner, Infantry!.jpeg",
+        "imageName": "Gunner, Infantry!.png",
         "faction": "empire",
         "keywords": [
             "Tactical",
@@ -13537,7 +13538,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Major Marquand",
-        "imageName": "Squadron, On Me.jpeg",
+        "imageName": "Squadron, On Me.png",
         "faction": "empire",
         "keywords": []
     },
@@ -13547,7 +13548,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Major Marquand",
-        "imageName": "Armored Cavalry.jpeg",
+        "imageName": "Armored Cavalry.png",
         "faction": "empire",
         "keywords": []
     },
@@ -13561,7 +13562,7 @@
         "faction": "empire",
         "isUnique": true,
         "cost": 105,
-        "imageName": "Fifth Brother.jpeg",
+        "imageName": "Fifth Brother.png",
         "keywords": [
             "Dauntless",
             "Block",
@@ -13594,7 +13595,7 @@
         "faction": "empire",
         "isUnique": true,
         "cost": 110,
-        "imageName": "Seventh Sister.jpeg",
+        "imageName": "Seventh Sister.png",
         "keywords": [
             "Associate",
             "Block",
@@ -13628,7 +13629,7 @@
         "isUnique": true,
         "prevCost": 80,
         "cost": 85,
-        "imageName": "Poggle the Lesser.jpeg",
+        "imageName": "Poggle the Lesser.png",
         "keywords": [
             "Jump",
             "Compel",
@@ -13667,7 +13668,7 @@
         "isUnique": true,
         "prevCost": 90,
         "cost": 80,
-        "imageName": "Sun Fac.jpeg",
+        "imageName": "Sun Fac.png",
         "keywords": [
             "Jump",
             "Cover",
@@ -13709,7 +13710,7 @@
         "faction": "separatists",
         "isUnique": false,
         "cost": 45,
-        "imageName": "Geonosian Warriors.jpeg",
+        "imageName": "Geonosian Warriors.png",
         "keywords": [
             "Jump",
             "Scale",
@@ -13735,7 +13736,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Inquisitorius Training.jpeg",
+        "imageName": "Inquisitorius Training.png",
         "keywords": [],
         "requirements": [
             "OR",
@@ -13755,7 +13756,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "Force Pike Warrior.jpeg",
+        "imageName": "Force Pike Warrior.png",
         "keywords": [
             "Suppressive"
         ],
@@ -13773,7 +13774,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 25,
-        "imageName": "Sonic Cannon Warrior.jpeg",
+        "imageName": "Sonic Cannon Warrior.png",
         "keywords": [
             "Scatter",
             "Impact"
@@ -13792,7 +13793,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 11,
-        "imageName": "Geonosian Warrior.jpeg",
+        "imageName": "Geonosian Warrior.png",
         "keywords": [],
         "requirements": [
             {
@@ -13807,7 +13808,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Fifth Brother",
-        "imageName": "You Would Question Me%3F.jpeg",
+        "imageName": "You Would Question Me%3F.png",
         "faction": "empire",
         "keywords": [
             "Permanent"
@@ -13819,7 +13820,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Fifth Brother",
-        "imageName": "I Care Not For Your Struggles.jpeg",
+        "imageName": "I Care Not For Your Struggles.png",
         "faction": "empire",
         "keywords": [
             "Dauntless"
@@ -13831,7 +13832,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Seventh Sister",
-        "imageName": "Come and Prove It.jpeg",
+        "imageName": "Come and Prove It.png",
         "faction": "empire",
         "keywords": [
             "Indomitable"
@@ -13843,7 +13844,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Seventh Sister",
-        "imageName": "Unexpected, But Not Unwelcome.jpeg",
+        "imageName": "Unexpected, But Not Unwelcome.png",
         "faction": "empire",
         "keywords": []
     },
@@ -13853,7 +13854,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Seventh Sister",
-        "imageName": "You Hide Your Fear Well.jpeg",
+        "imageName": "You Hide Your Fear Well.png",
         "faction": "empire",
         "keywords": []
     },
@@ -13863,7 +13864,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Sun Fac",
-        "imageName": "Brutal Enforcer.jpeg",
+        "imageName": "Brutal Enforcer.png",
         "faction": "separatists",
         "keywords": [
             "Jump",
@@ -13876,7 +13877,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Poggle the Lesser",
-        "imageName": "Let the Executions Begin!.jpeg",
+        "imageName": "Let the Executions Begin!.png",
         "faction": "separatists",
         "keywords": [
             "Fire Support"
@@ -13888,7 +13889,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Poggle the Lesser",
-        "imageName": "We Serve the Queen.jpeg",
+        "imageName": "We Serve the Queen.png",
         "faction": "separatists",
         "keywords": [
             "Direct",
@@ -13901,7 +13902,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Poggle the Lesser",
-        "imageName": "We Make Weapons.jpeg",
+        "imageName": "We Make Weapons.png",
         "faction": "separatists",
         "keywords": []
     },
@@ -13916,7 +13917,7 @@
         "isUnique": false,
         "prevCost": 60,
         "cost": 56,
-        "imageName": "IG-100 MagnaGuard2.jpeg",
+        "imageName": "IG-100 MagnaGuard Prototype Assassin Droids.png",
         "keywords": [
             "AI",
             "Charge",
@@ -13956,7 +13957,7 @@
         "isUnique": false,
         "prevCost": 145,
         "cost": 130,
-        "imageName": "NR-N99 Persuader-class Tank Droid2.jpeg",
+        "imageName": "Persuader-Class Tank Droid Prototype Tank Droid.png",
         "keywords": [
             "Armor",
             "Arsenal",
@@ -13969,7 +13970,7 @@
             "Special Issue"
         ],
         "upgradeBar": [
-            "programming",
+            "protocol",
             "ordnance",
             "ordnance",
             "comms"
@@ -13999,7 +14000,7 @@
         "faction": "republic",
         "isUnique": false,
         "cost": 57,
-        "imageName": "Raddaugh Gnasp Fluttercraft2.jpeg",
+        "imageName": "Raddaugh Gnasp Fluttercraft Attack Craft.png",
         "keywords": [
             "Attack Run",
             "Cover",
@@ -14032,7 +14033,7 @@
         "faction": "republic",
         "isUnique": false,
         "cost": 69,
-        "imageName": "Wookiee Warriors4.jpeg",
+        "imageName": "Wookiee Warriors Noble Fighters.png",
         "keywords": [
             "Charge",
             "Duelist",
@@ -14064,7 +14065,7 @@
         "faction": "empire",
         "isUnique": false,
         "cost": 60,
-        "imageName": "Range Troopers.jpeg",
+        "imageName": "Range Troopers.png",
         "keywords": [
             "Advanced Targeting",
             "Armor",
@@ -14093,7 +14094,7 @@
         "faction": "republic",
         "isUnique": true,
         "cost": 160,
-        "imageName": "The Bad Batch.jpeg",
+        "imageName": "The Bad Batch Rep.png",
         "keywords": [
             "Equip",
             "Impervious",
@@ -14124,7 +14125,7 @@
         "faction": "republic",
         "isUnique": false,
         "cost": 75,
-        "imageName": "Clone Commandos.jpeg",
+        "imageName": "Clone Commandos.png",
         "keywords": [
             "Complete the Mission",
             "Equip",
@@ -14153,7 +14154,7 @@
 		"isUnique": false,
 		"cardType": "upgrade",
 		"cost": 0,
-		"imageName": "DC-17m ICWS Config.jpeg",
+		"imageName": "DC-17m ICWS Config.png",
 		"keywords": ["Impact", "Scatter", "Lethal", "High Velocity", "Reconfigure"],
 		"requirements": [
 			"OR",
@@ -14168,7 +14169,7 @@
 		"isUnique": false,
 		"cardType": "upgrade",
 		"cost": 0,
-		"imageName": "Katarn Pattern Armor.jpeg",
+		"imageName": "Katarn Pattern Armor.png",
 		"keywords": [],
 		"requirements": [
 			"OR",
@@ -14183,7 +14184,7 @@
 		"isUnique": false,
 		"cardType": "upgrade",
 		"cost": 15,
-		"imageName": "Range Trooper.jpeg",
+		"imageName": "Range Trooper.png",
 		"keywords": [],
 		"requirements": [{"cardName": "Range Troopers"}],
 		"id": "xm"
@@ -14194,7 +14195,7 @@
 		"isUnique": false,
 		"cardType": "upgrade",
 		"cost": 25,
-		"imageName": "DLT-20A Range Trooper.jpeg",
+		"imageName": "DLT-20A Range Trooper.png",
 		"keywords": [],
 		"requirements": [{"cardName": "Range Troopers"}],
 		"id": "xn"
@@ -14205,7 +14206,7 @@
 		"isUnique": false,
 		"cardType": "upgrade",
 		"cost": 28,
-		"imageName": "T-21A Range Trooper.jpeg",
+		"imageName": "T-21A Range Trooper.png",
 		"keywords": ["Suppressive"],
 		"requirements": [{"cardName": "Range Troopers"}],
 		"id": "xo"
@@ -14221,7 +14222,7 @@
         "faction": "republic",
         "isUnique": true,
         "cost": 100,
-        "imageName": "Delta Squad.jpeg",
+        "imageName": "Delta Squad.png",
         "keywords": [
             "Complete the Mission",
             "Equip",
@@ -14252,7 +14253,7 @@
 		"isUnique": true,
 		"cardType": "upgrade",
 		"cost": 0,
-		"imageName": "Echo2.jpeg",
+		"imageName": "Echo2.png",
 		"keywords": ["Reliable"],
 		"requirements": [{"cardName": "The Bad Batch"}],
 		"history": []
@@ -14264,7 +14265,7 @@
 		"isUnique": true,
 		"cardType": "upgrade",
 		"cost": 0,
-		"imageName": "Hunter2.jpeg",
+		"imageName": "Hunter2.png",
 		"keywords": ["Leader"],
 		"requirements": [{"cardName": "The Bad Batch"}],
 		"history": []
@@ -14276,7 +14277,7 @@
 		"isUnique": true,
 		"cardType": "upgrade",
 		"cost": 0,
-		"imageName": "Wrecker.jpeg",
+		"imageName": "Wrecker.png",
 		"keywords": [],
 		"requirements": [{"cardName": "The Bad Batch"}],
 		"history": []
@@ -14288,7 +14289,7 @@
 		"isUnique": true,
 		"cardType": "upgrade",
 		"cost": 0,
-		"imageName": "Tech.jpeg",
+		"imageName": "Tech.png",
 		"keywords": ["Cache", "Tactical"],
 		"requirements": [{"cardName": "The Bad Batch"}],
 		"history": []
@@ -14301,7 +14302,7 @@
         "faction": "republic",
 		"cardType": "upgrade",
 		"cost": 0,
-		"imageName": "Crosshair.jpeg",
+		"imageName": "Crosshair.png",
 		"keywords": ["Critical", "High Velocity", "Pierce", "Precise"],
 		"requirements": [{"cardName": "The Bad Batch"}],
 		"history": []
@@ -14319,7 +14320,7 @@
         ],
         "isUnique": true,
 		"cost": 140,
-		"imageName": "The Bad Batch2.jpeg",
+		"imageName": "The Bad Batch Reb.png",
 		"keywords": [
 			"Equip",
 			"Impervious",
@@ -14353,7 +14354,7 @@
 		"cost": 10,
 		"surges": [],
 		"wounds": 1,
-		"imageName": "Omega.jpeg",
+		"imageName": "Omega.png",
 		"keywords": ["Counterpart", "I'm Part of the Squad Too"],
 		"cardSubtype": "trooper",
 		"id": "xw"
@@ -14364,9 +14365,102 @@
 		"cardSubtype": "3",
 		"cardType": "command",
 		"commander": "The Bad Batch",
-		"imageName": "We Do What We Do.jpeg",
+		"imageName": "We Do What We Do.png",
 		"products": [],
 		"faction": "",
 		"keywords": ["Tactical", "Reliable", "Precise", "Inspire", "Suppressive"]
-	}
+	},
+    "xy": {
+        "id": "xy",
+        "cardName": "Rebel Sleeper Cell",
+        "title": "Ready to Strike",
+        "cardType": "unit",
+        "cardSubtype": "trooper",
+        "rank": "special",
+        "faction": "rebels",
+        "cost": 70,
+        "imageName": "Rebel Sleeper Cell.png",
+        "keywords": [
+            "Nimble",
+            "Scout",
+            "Tactical",
+            "Impact",
+            "Suppressive"
+        ],
+        "upgradeBar": [
+            "heavy weapon",
+            "personnel",
+            "gear",
+            "comms",
+            "training"
+        ],
+        "defense": "white",
+        "surges": [
+            "hit",
+            "block"
+        ],
+        "wounds": 1,
+        "courage": 2,
+        "speed": 2
+    },
+    "xz": {
+        "id": "xz",
+        "cardName": "Riot Control Squad",
+        "cardType": "unit",
+        "cardSubtype": "trooper",
+        "rank": "core",
+        "faction": "empire",
+        "cost": 50,
+        "imageName": "Riot Control Squad.png",
+        "keywords": [
+            "Charge",
+            "Hold the Line",
+            "Suppressive"
+        ],
+        "upgradeBar": [
+            "heavy weapon",
+            "personnel",
+            "gear",
+            "training"
+        ],
+        "defense": "red",
+        "surges": [],
+        "wounds": 1,
+        "courage": 1,
+        "speed": 2
+    },
+    "ya": {
+        "id": "ya",
+        "cardName": "LM-432 Crab Droid",
+        "displayName": "Crab Droid",
+        "cardType": "unit",
+        "cardSubtype": "ground vehicle",
+        "rank": "support",
+        "faction": "separatists",
+        "cost": 70,
+        "imageName": "LM-432 Crab Droid.png",
+        "keywords": [
+            "Armor",
+            "Climbing Vehicle",
+            "Programmed",
+            "Reposition",
+            "Scale",
+            "Scout",
+            "Scouting Party",
+            "Impact",
+            "Pierce"
+        ],
+        "upgradeBar": [
+            "protocol",
+            "hardpoint",
+            "comms"
+        ],
+        "defense": "red",
+        "surges": [
+            "hit"
+        ],
+        "wounds": 5,
+        "resistence": 3,
+        "speed": 2
+    }
 }

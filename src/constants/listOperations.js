@@ -1416,12 +1416,12 @@ function validateUpgrades(list, unitIndex){
       if(id == null)
         return;
       const equipCard = cards[id];
-      if(equipCard.cardSubtype == 'programming'){
+      if(equipCard.cardSubtype == 'protocol'){
         hasProto = true;
       }
     });
     if(!hasProto){
-      unit.validationIssues.push( { level:2, text: card.cardName + " is missing a Programming upgrade (Programmed)" });
+      unit.validationIssues.push( { level:2, text: card.cardName + " is missing a protocol upgrade (Programmed)" });
     }
   }
 

@@ -59,7 +59,7 @@ function ListCommands() {
             <CardIcon
               size="small"
               cardType="command"
-              imageName="Standing Orders.jpeg"
+              imageName="Standing Orders.png"
               card={cards['aa']}
               handleClick={() => handleCardZoom('aa')}
             />

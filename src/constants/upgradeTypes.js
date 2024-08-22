@@ -12,7 +12,7 @@ import generator from 'assets/upgradeTypes/generator.png';
 import armament from 'assets/upgradeTypes/armament.png';
 import crew from 'assets/upgradeTypes/crew.png';
 import ordnance from 'assets/upgradeTypes/ordnance.png';
-import programming from 'assets/upgradeTypes/programming.png';
+import protocol from 'assets/upgradeTypes/protocol.png';
 
 const upgradeTypes = {
   'heavy weapon': {
@@ -71,9 +71,9 @@ const upgradeTypes = {
     name: 'Ordnance',
     icon: ordnance
   },
-  programming: {
-    name: 'Programming',
-    icon: programming
+  protocol: {
+    name: 'Protocol',
+    icon: protocol
   }
 };
 
