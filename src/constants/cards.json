@@ -2784,7 +2784,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 0,
-        "imageName": "A-180 Configuration.png",
+        "imageName": "A-180.png",
         "keywords": [
             "Pierce",
             "Reconfigure"
@@ -2826,7 +2826,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "The Darksaber.png",
+        "imageName": "Sabine The Darksaber.png",
         "keywords": [
             "Dauntless",
             "Immune",
@@ -2851,9 +2851,11 @@
         "cardName": "MPL-57 Ion Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 17,
+        "prevCost": 17,
+        "cost": 27,
         "imageName": "MPL-57 Ion Trooper.png",
         "keywords": [
+            "Critical",
             "Impact",
             "Ion",
             "Ion Token"
@@ -2875,7 +2877,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 18 to 17 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 17 to 27 points. No longer exhausts. Gained Critical 1 keyword. Dice changed from 2 red to 2 black and 1 white."
+			}
         ],
         "id": "ec"
     },
@@ -2929,12 +2935,12 @@
         "cardName": "Proton Charge Saboteur",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 23,
+        "prevCost": 23,
+        "cost": 20,
         "imageName": "Proton Charge Saboteur.png",
         "keywords": [
-            "Arm",
-            "Detonate",
             "Blast",
+            "Critical",
             "Impact"
         ],
         "requirements": [
@@ -2946,7 +2952,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 26 to 23 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost reduced from 23 to 20 points. Now can be used in melee. Lost Surge to Crit. Gained Critical 2, lost Arm and Detonate, and Impact keyword value changed from 1 to 3. Dice changed from 1 red and 2 white to a single rainbow."
+			}
         ],
         "id": "ef"
     },
@@ -2980,7 +2990,8 @@
         "cardName": "Scatter Gun Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 23,
+        "prevCost": 23,
+        "cost": 22,
         "imageName": "Scatter Gun Trooper.png",
         "keywords": [
             "Pierce"
@@ -2988,6 +2999,12 @@
         "requirements": [
             {
                 "cardName": "Fleet Troopers"
+            }
+        ],
+        "history": [
+            {
+                "date": "19 July 2024",
+                "description": "Cost decreased from 23 to 22 points. Now can be used in melee."
             }
         ],
         "id": "eh"
@@ -2998,11 +3015,13 @@
         "cardName": "MPL-57 Barrage Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 19,
+        "prevCost": 19,
+        "cost": 22,
         "imageName": "MPL-57 Barrage Trooper.png",
         "keywords": [
             "Blast",
-            "Impact"
+            "Impact",
+            "Cycle"
         ],
         "requirements": [
             {
@@ -3021,7 +3040,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 22 to 19 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 19 to 22 points. Now cycles."
+			}
         ],
         "id": "ei"
     },
@@ -3538,7 +3561,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 20 to 15 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Now can be used in melee."
+			}
         ],
         "id": "fd"
     },
@@ -4624,9 +4651,11 @@
         "cardName": "Bistan",
         "isUnique": true,
         "cardType": "upgrade",
-        "cost": 28,
+        "prevCost": 28,
+        "cost": 33,
         "imageName": "Bistan.png",
         "keywords": [
+            "Critical",
             "Impact",
             "Ion",
             "Ion Token"
@@ -4640,7 +4669,11 @@
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 32 to 28 points. Wound threshold increased from 1 to 2."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 28 to 33 points. No longer exhausts. Gained Critical 1 keyword."
+			}
         ],
         "id": "gs"
     },
@@ -4859,9 +4892,11 @@
         "cardName": "M-45 Ion Blaster",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 25,
+        "prevCost": 25,
+        "cost": 28,
         "imageName": "M-45 Ion Blaster.png",
         "keywords": [
+            "Critical",
             "Fixed",
             "Impact",
             "Ion",
@@ -4880,7 +4915,11 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 31 to 25 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 25 to 28 points. No longer exhausts. Gained Critcal 1 keyword. Dice changed from 1 black and 4 white to 2 black and 2 white."
+			}
         ],
         "id": "hb"
     },
@@ -6685,7 +6724,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 0,
-        "imageName": "A280-CFE Configuration.png",
+        "imageName": "A280-CFE.png",
         "keywords": [
             "Cumbersome",
             "High Velocity",
@@ -7570,7 +7609,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Jyn's SE-14 Blaster.png",
+        "imageName": "Jyn_s SE-14 Blaster.png",
         "keywords": [
             "Suppressive",
             "Pierce"
@@ -9314,6 +9353,12 @@
             {
                 "rank": "heavy"
             }
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Can no longer give a dodge to a unit you are transporting."
+			}
         ]
     },
     "or": {
@@ -9481,6 +9526,12 @@
             {
                 "cardName": "A-A5 Speeder Truck"
             }
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Removed ability to remove a wound from a transported unit."
+			}
         ]
     },
     "oy": {
@@ -9492,7 +9543,7 @@
         "cardType": "upgrade",
         "prevCost": 14,
         "cost": 20,
-        "imageName": "Refurbished %22Gonk%22 Droid.png",
+        "imageName": "Refurbished Gonk Droid.png",
         "keywords": [
             "Shielded",
             "Shield Token"
@@ -9556,7 +9607,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost increased from 10 to 16 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Can no longer give an aim to a unit you are transporting."
+			}
         ]
     },
     "pb": {
@@ -14221,7 +14276,7 @@
 		"isUnique": true,
 		"cardType": "upgrade",
 		"cost": 0,
-		"imageName": "Hunter2.png",
+		"imageName": "Hunter BB.png",
 		"keywords": ["Leader"],
 		"requirements": [{"cardName": "The Bad Batch"}],
 		"history": []
@@ -14502,6 +14557,128 @@
         "requirements": [
             {
                 "cardName": "Stormtroopers"
+            }
+        ]
+    },
+    "yg": {
+        "id": "yg",
+        "cardSubtype": "personnel",
+        "cardName": "Astromech",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 5,
+        "imageName": "Astromech.png",
+        "keywords": [
+            "Noncombatant"
+        ],
+        "requirements": [
+            {
+                "cardName": "Rebel Sleeper Cell"
+            }
+        ]
+    },
+    "yh": {
+        "id": "yh",
+        "cardSubtype": "personnel",
+        "cardName": "Ewok Skirmisher Squad",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 28,
+        "imageName": "Ewok Skirmisher Squad.png",
+        "keywords": [
+            "Indomitable",
+            "Transport"
+        ],
+        "requirements": [
+            {
+                "cardName": "Ewok Skirmishers"
+            }
+        ]
+    },
+    "yi": {
+        "id": "yi",
+        "cardSubtype": "personnel",
+        "cardName": "Ewok Slinger Squad",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 23,
+        "imageName": "Ewok Slinger Squad.png",
+        "keywords": [
+            "Indomitable",
+            "Transport"
+        ],
+        "requirements": [
+            {
+                "cardName": "Ewok Slingers"
+            }
+        ]
+    },
+    "yj": {
+        "id": "yj",
+        "cardSubtype": "personnel",
+        "cardName": "Fleet Trooper Squad",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 45,
+        "imageName": "Fleet Trooper Squad.png",
+        "keywords": [
+            "Indomitable",
+            "Transport"
+        ],
+        "requirements": [
+            {
+                "cardName": "Fleet Troopers"
+            }
+        ]
+    },
+    "yk": {
+        "id": "yk",
+        "cardSubtype": "heavy weapon",
+        "cardName": "Rebel Marksman",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 28,
+        "imageName": "Rebel Marksman.png",
+        "keywords": [],
+        "requirements": [
+            {
+                "cardName": "Rebel Sleeper Cell"
+            }
+        ]
+    },
+    "yl": {
+        "id": "yl",
+        "cardSubtype": "personnel",
+        "cardName": "Rebel Trooper Squad",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 45,
+        "imageName": "Rebel Trooper Squad.png",
+        "keywords": [
+            "Indomitable",
+            "Transport"
+        ],
+        "requirements": [
+            {
+                "cardName": "Rebel Troopers"
+            }
+        ]
+    },
+    "ym": {
+        "id": "ym",
+        "cardSubtype": "personnel",
+        "cardName": "Rebel Veteran Squad",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 63,
+        "imageName": "Rebel Veteran Squad.png",
+        "keywords": [
+            "Indomitable",
+            "Transport"
+        ],
+        "requirements": [
+            {
+                "cardName": "Rebel Veterans"
             }
         ]
     }
