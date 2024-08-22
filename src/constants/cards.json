@@ -3057,7 +3057,8 @@
         "cardName": "HH-12 Stormtrooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 16,
+        "prevCost": 16,
+        "cost": 22,
         "imageName": "HH-12 Stormtrooper.png",
         "keywords": [
             "Cumbersome",
@@ -3080,7 +3081,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 20 to 16 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 16 to 22 points, but no longer exhausts."
+			}
         ],
         "id": "ek"
     },
@@ -3120,7 +3125,8 @@
             "High Velocity",
             "Pierce"
         ],
-        "requirements": [{
+        "requirements": [
+            {
                 "cardName": "Scout Troopers"
             }
         ],
@@ -3137,18 +3143,24 @@
         "cardName": "Sonic Charge Saboteur",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 26,
+        "prevCost": 26,
+        "cost": 23,
         "imageName": "Sonic Charge Saboteur.png",
         "keywords": [
-            "Arm",
-            "Detonate",
             "Blast",
+            "Impact",
             "Suppressive"
         ],
         "requirements": [
             {
                 "cardName": "Scout Troopers"
             }
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost decreased from 26 to 23 points. No longer surges to crit. Now works in melee. Dice increased from a red and a black to a red, 2 black, and a white. Gained Impact 2 and lost Arm and Detonate keywords."
+			}
         ],
         "id": "en"
     },
@@ -3158,9 +3170,11 @@
         "cardName": "T-7 Ion Snowtrooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 18,
+        "prevCost": 18,
+        "cost": 24,
         "imageName": "T-7 Ion Snowtrooper.png",
         "keywords": [
+            "Critical",
             "Impact",
             "Ion",
             "Ion Token"
@@ -3182,7 +3196,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 20 to 18 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 18 to 24 points. No longer exhausts. Dice increased from 2 white and 1 black to 1 white and 2 black. Gained Critical 1 keyword."
+			}
         ],
         "id": "eo"
     },
@@ -3201,6 +3219,12 @@
             {
                 "cardName": "Snowtroopers"
             }
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Now can be used in melee."
+			}
         ],
         "id": "ep"
     },
@@ -4489,7 +4513,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 0,
-        "imageName": "E-11D Configuration.png",
+        "imageName": "E-11D.png",
         "keywords": [
             "Blast",
             "Suppressive",
@@ -6687,7 +6711,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "Iden's DLT-20A Rifle.png",
+        "imageName": "Iden_s DLT-20A Rifle.png",
         "keywords": [
             "High Velocity",
             "Pierce"
@@ -8663,7 +8687,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "J-19 Bo-Rifle Staff.png",
+        "imageName": "J-19 Bo-Rifle.png",
         "keywords": [
             "Charge",
             "Immune",
@@ -9317,7 +9341,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 10 to 5 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Removed ability to give an aim to transported unit."
+			}
         ]
     },
     "os": {
@@ -9589,7 +9617,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Imperial TIE Pilot.png",
+        "imageName": "Imperial Tie Pilot.png",
         "keywords": [],
         "requirements": [
             "AND",
@@ -11126,7 +11154,7 @@
         ],
         "requirements": [
             {
-                "imageName": "Maul2.png"
+                "imageName": "Maul A Rival.png"
             }
         ]
     },
@@ -12442,12 +12470,12 @@
     },
     "uj": {
         "cardSubtype": "armament",
-        "cardName": "The Darksaber3",
+        "cardName": "Moff Gideon The Darksaber",
         "displayName": "The Darksaber",
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "The Darksaber3.png",
+        "imageName": "Moff Gideon The Darksaber.png",
         "keywords": [
             "Demoralize",
             "Immune",
@@ -12578,8 +12606,7 @@
             {
                 "cardName": "Imperial Dark Troopers"
             }
-        ],
-        "history": []
+        ]
     },
     "us": {
         "id": "us",
@@ -12594,8 +12621,7 @@
             {
                 "cardName": "Imperial Dark Troopers"
             }
-        ],
-        "history": []
+        ]
     },
     "ut": {
         "id": "ut",
@@ -14392,5 +14418,91 @@
         "wounds": 5,
         "resistence": 3,
         "speed": 2
+    },
+    "yb": {
+        "id": "yb",
+        "cardSubtype": "heavy weapon",
+        "cardName": "KX-Series Security Droids",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 30,
+        "imageName": "KX-Series Security Droids.png",
+        "keywords": [
+            "Impact"
+        ],
+        "requirements": [
+            {
+                "cardName": "Riot Control Squad"
+            }
+        ]
+    },
+    "yc": {
+        "id": "yc",
+        "cardSubtype": "personnel",
+        "cardName": "Shoretrooper Squad",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 70,
+        "imageName": "Shoretrooper Squad.png",
+        "keywords": [
+            "Indomitable",
+            "Transport"
+        ],
+        "requirements": [
+            {
+                "cardName": "Shoretroopers"
+            }
+        ]
+    },
+    "yd": {
+        "id": "yd",
+        "cardSubtype": "personnel",
+        "cardName": "Snowtrooper Squad",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 46,
+        "imageName": "Snowtrooper Squad.png",
+        "keywords": [
+            "Indomitable",
+            "Transport"
+        ],
+        "requirements": [
+            {
+                "cardName": "Snowtroopers"
+            }
+        ]
+    },
+    "ye": {
+        "id": "ye",
+        "cardSubtype": "heavy weapon",
+        "cardName": "Stormtrooper Marksman",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 30,
+        "imageName": "Stormtrooper Marksman.png",
+        "keywords": [],
+        "requirements": [
+            {
+                "cardName": "Riot Control Squad"
+            }
+        ]
+    },
+    "yf": {
+        "id": "yf",
+        "cardSubtype": "personnel",
+        "cardName": "Stormtrooper Squad",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 46,
+        "imageName": "Stormtrooper Squad.png",
+        "keywords": [
+            "Indomitable",
+            "Transport"
+        ],
+        "requirements": [
+            {
+                "cardName": "Stormtroopers"
+            }
+        ]
     }
 }
