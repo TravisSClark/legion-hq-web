@@ -777,7 +777,8 @@
     },
     "al": {
         "id": "al",
-        "cardName": "Rebel Commandos Strike Team",
+        "cardName": "Rebel Commandos",
+        "title": "Stike Team",
         "displayName": "Commando Strike Team",
         "cardType": "unit",
         "cardSubtype": "trooper",
@@ -1488,8 +1489,9 @@
     },
     "bb": {
         "id": "bb",
-        "cardName": "Scout Troopers Strike Team",
-        "displayName": "Strike Team",
+        "cardName": "Scout Troopers",
+        "title": "Stike Team",
+        "displayName": "Scout Strike Team",
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "special",
@@ -2936,12 +2938,8 @@
             "Impact"
         ],
         "requirements": [
-            "OR",
             {
                 "cardName": "Rebel Commandos"
-            },
-            {
-                "cardName": "Rebel Commandos Strike Team"
             }
         ],
         "history": [
@@ -2965,12 +2963,8 @@
             "Pierce"
         ],
         "requirements": [
-            "OR",
             {
                 "cardName": "Rebel Commandos"
-            },
-            {
-                "cardName": "Rebel Commandos Strike Team"
             }
         ],
         "history": [
@@ -3126,13 +3120,8 @@
             "High Velocity",
             "Pierce"
         ],
-        "requirements": [
-            "OR",
-            {
+        "requirements": [{
                 "cardName": "Scout Troopers"
-            },
-            {
-                "cardName": "Scout Troopers Strike Team"
             }
         ],
         "history": [
@@ -3157,12 +3146,8 @@
             "Suppressive"
         ],
         "requirements": [
-            "OR",
             {
                 "cardName": "Scout Troopers"
-            },
-            {
-                "cardName": "Scout Troopers Strike Team"
             }
         ],
         "id": "en"
@@ -7052,7 +7037,9 @@
     },
     "ky": {
         "id": "ky",
-        "cardName": "ARC Trooper Strike Team",
+        "cardName": "ARC Troopers",
+        "title": "Stike Team",
+        "displayName": "ARC Strike Team",
         "cardType": "unit",
         "cardSubtype": "clone trooper",
         "rank": "special",
@@ -7196,7 +7183,8 @@
     },
     "lb": {
         "id": "lb",
-        "cardName": "BX-Series Droid Commandos Strike Team",
+        "cardName": "BX-Series Droid Commandos",
+        "title": "Stike Team",
         "displayName": "BX Droid Strike Team",
         "cardType": "unit",
         "cardSubtype": "droid trooper",
@@ -7249,12 +7237,8 @@
             "Recharge"
         ],
         "requirements": [
-            "OR",
             {
                 "cardName": "BX-Series Droid Commandos"
-            },
-            {
-                "cardName": "BX-Series Droid Commandos Strike Team"
             }
         ],
         "history": [
@@ -7280,12 +7264,8 @@
             "Deflect"
         ],
         "requirements": [
-            "OR",
             {
                 "cardName": "BX-Series Droid Commandos"
-            },
-            {
-                "cardName": "BX-Series Droid Commandos Strike Team"
             }
         ],
         "history": [
@@ -7326,12 +7306,8 @@
             "Pierce"
         ],
         "requirements": [
-            "OR",
             {
                 "cardName": "ARC Troopers"
-            },
-            {
-                "cardName": "ARC Troopers Strike Team"
             }
         ],
         "history": [
@@ -7412,12 +7388,8 @@
             "Charge"
         ],
         "requirements": [
-            "OR",
             {
                 "cardName": "BX-Series Droid Commandos"
-            },
-            {
-                "cardName": "BX-Series Droid Commandos Strike Team"
             }
         ]
     },
@@ -7434,15 +7406,9 @@
         ],
         "requirements": [
             "OR",
-            [
-                "OR",
-                {
-                    "cardName": "ARC Troopers"
-                },
-                {
-                    "cardName": "ARC Troopers Strike Team"
-                }
-            ],
+            {
+                "cardName": "ARC Troopers"
+            },
             {
                 "cardName": "Clone Captain Rex"
             }
@@ -7967,12 +7933,8 @@
             "Poison"
         ],
         "requirements": [
-            "OR",
             {
                 "cardName": "BX-Series Droid Commandos"
-            },
-            {
-                "cardName": "BX-Series Droid Commandos Strike Team"
             }
         ]
     },
@@ -9815,38 +9777,6 @@
         "speed": 2,
         "wounds": 3,
         "courage": 2
-    },
-    "pm": {
-        "id": "pm",
-        "cardName": "Wookiee Warriors",
-        "cardType": "unit",
-        "cardSubtype": "wookiee trooper",
-        "rank": "special",
-        "faction": "republic",
-        "isUnique": false,
-        "cost": 69,
-        "imageName": "Wookiee Warriors4.png",
-        "keywords": [
-            "Charge",
-            "Duelist",
-            "Indomitable",
-            "Scale"
-        ],
-        "upgradeBar": [
-            "heavy weapon",
-            "training",
-            "training",
-            "gear",
-            "grenades"
-        ],
-        "defense": "white",
-        "surges": [
-            "hit"
-        ],
-        "wounds": 3,
-        "courage": 2,
-        "speed": 2
-       
     },
     "pn": {
         "id": "pn",
