@@ -8,8 +8,6 @@ import {
 import { fade, makeStyles } from '@material-ui/core/styles';
 import { Menu as MenuIcon, Search as SearchIcon } from '@material-ui/icons';
 import DataContext from 'context/DataContext';
-import ftLogoLight from 'assets/ftLogoLight.png';
-import ftLogoDark from 'assets/ftLogoDark.png';
 import lhqLogoLight from 'assets/lhqLogoLight.png';
 import lhqLogoDark from 'assets/lhqLogoDark.png';
 

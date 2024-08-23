@@ -22,8 +22,6 @@ import ListChipDropdown from './ListChipDropdown';
 import DataContext from 'context/DataContext';
 import ErrorFallback from 'common/ErrorFallback';
 import factions from 'constants/factions';
-import ftLogoLight from 'assets/ftLogoLight.png';
-import ftLogoDark from 'assets/ftLogoDark.png';
 import lhqLogoLight from 'assets/lhqLogoLight.png';
 import lhqLogoDark from 'assets/lhqLogoDark.png';
 
