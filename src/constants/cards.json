@@ -2283,23 +2283,6 @@
         ],
         "id": "cw"
     },
-    "cx": {
-        "cardSubtype": "command",
-        "cardName": "Commanding Presence",
-        "isUnique": false,
-        "cardType": "upgrade",
-        "cost": 5,
-        "imageName": "Commanding Presence.png",
-        "keywords": [],
-        "requirements": [],
-        "history": [
-            {
-                "date": "12 September 2019",
-                "description": "Cost reduced from 10 to 5 points."
-            }
-        ],
-        "id": "cx"
-    },
     "cy": {
         "cardSubtype": "command",
         "cardName": "Esteemed Leader",
@@ -2570,23 +2553,6 @@
             }
         ],
         "id": "dn"
-    },
-    "do": {
-        "cardSubtype": "comms",
-        "cardName": "Long-Range Comlink",
-        "isUnique": false,
-        "cardType": "upgrade",
-        "cost": 5,
-        "imageName": "Long-Range Comlink.png",
-        "keywords": [],
-        "requirements": [],
-        "history": [
-            {
-                "date": "12 September 2019",
-                "description": "Cost reduced from 10 to 5 points."
-            }
-        ],
-        "id": "do"
     },
     "dp": {
         "cardSubtype": "comms",
@@ -6282,22 +6248,6 @@
         ],
         "upgradeBar": [],
         "id": "jj"
-    },
-    "jk": {
-        "requirements": [
-            {
-                "cardSubtype": "droid trooper"
-            }
-        ],
-        "cardName": "Integrated Comms Antenna",
-        "cardSubtype": "comms",
-        "isUnique": false,
-        "cardType": "upgrade",
-        "cost": 3,
-        "imageName": "Integrated Comms Antenna.png",
-        "keywords": [],
-        "displayName": "Comms Antenna",
-        "id": "jk"
     },
     "jl": {
         "cardName": "Blast Off!",
@@ -11407,7 +11357,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Lead By Example.png",
+        "imageName": "Lead by Example.png",
         "keywords": [],
         "requirements": []
     },
@@ -13309,7 +13259,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Call To Arms.png",
+        "imageName": "Call to Arms.png",
         "keywords": [
             "Charge"
         ],
