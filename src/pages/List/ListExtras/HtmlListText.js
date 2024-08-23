@@ -88,33 +88,33 @@ function generateHTMLText(
       contingencies += `${pips}${commandCard.cardName}<br>`;
     });
   }
-  let objectives = '';
-  let deployments = '';
-  let conditions = '';
-  if (list.objectiveCards.length > 0) {
-    objectives += 'Objectives:<br>';
-    list.objectiveCards.forEach((id, i) => {
+  let primaries = '';
+  let secondaries = '';
+  let advantages = '';
+  if (list.primaryCards.length > 0) {
+    primaries += 'Primaries:<br>';
+    list.primaryCards.forEach((id, i) => {
       const card = cards[id];
-      objectives += ` - ${card.cardName}<br>`;
+      primaries += ` - ${card.cardName}<br>`;
     });
   }
-  if (list.deploymentCards.length > 0) {
-    deployments += 'Deployments:<br>';
-    list.deploymentCards.forEach((id, i) => {
+  if (list.secondaryCards.length > 0) {
+    secondaries += 'Secondaries:<br>';
+    list.secondaryCards.forEach((id, i) => {
       const card = cards[id];
-      deployments += ` - ${card.cardName}<br>`;
+      secondaries += ` - ${card.cardName}<br>`;
     });
   }
-  if (list.conditionCards.length > 0) {
-    conditions += 'Conditions:<br>';
-    list.conditionCards.forEach((id, i) => {
+  if (list.advantageCards.length > 0) {
+    advantages += 'Advantages:<br>';
+    list.advantageCards.forEach((id, i) => {
       const card = cards[id];
-      conditions += ` - ${card.cardName}<br>`;
+      advantages += ` - ${card.cardName}<br>`;
     });
   }
   let battle = '';
-  if (objectives + deployments + conditions !== '') battle = `<br>Battle Deck<br>`;
-  return '<html><p>' + header + units + commands + contingencies + battle + objectives + deployments + conditions + '</p></html>';
+  if (primaries + secondaries + advantages !== '') battle = `<br>Battle Deck<br>`;
+  return '<html><p>' + header + units + commands + contingencies + battle + primaries + secondaries + advantages + '</p></html>';
 }
 
 function generateUnitComponent(unit, index) {

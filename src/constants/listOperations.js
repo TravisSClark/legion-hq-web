@@ -248,33 +248,33 @@ function generateTournamentText(
       contingencies += `${pips}${commandCard.cardName}\n`;
     });
   }
-  let objectives = '';
-  let deployments = '';
-  let conditions = '';
-  if (list.objectiveCards.length > 0) {
-    objectives += 'Objectives:\n';
-    list.objectiveCards.forEach((id, i) => {
+  let primary = '';
+  let secondary = '';
+  let advantages = '';
+  if (list.primaryCards.length > 0) {
+    primary += 'Primaries:\n';
+    list.primaryCards.forEach((id, i) => {
       const card = cards[id];
-      objectives += ` - ${card.cardName}\n`;
+      primary += ` - ${card.cardName}\n`;
     });
   }
-  if (list.deploymentCards.length > 0) {
-    deployments += 'Deployments:\n';
-    list.deploymentCards.forEach((id, i) => {
+  if (list.secondaryCards.length > 0) {
+    secondary += 'Secondaries:\n';
+    list.secondaryCards.forEach((id, i) => {
       const card = cards[id];
-      deployments += ` - ${card.cardName}\n`;
+      secondary += ` - ${card.cardName}\n`;
     });
   }
-  if (list.conditionCards.length > 0) {
-    conditions += 'Conditions:\n';
-    list.conditionCards.forEach((id, i) => {
+  if (list.advantageCards.length > 0) {
+    advantages += 'Advantages:\n';
+    list.advantageCards.forEach((id, i) => {
       const card = cards[id];
-      conditions += ` - ${card.cardName}\n`;
+      advantages += ` - ${card.cardName}\n`;
     });
   }
   let battle = '';
-  if (objectives + deployments + conditions !== '') battle = `\nBattle Deck\n`;
-  return header + units + commands + contingencies + battle + objectives + deployments + conditions;
+  if (primary + secondary + advantages !== '') battle = `\nBattle Deck\n`;
+  return header + units + commands + contingencies + battle + primary + secondary + advantages;
 }
 
 function generateHTMLText(
@@ -359,33 +359,33 @@ function generateHTMLText(
       contingencies += `${pips}${commandCard.cardName}<br>`;
     });
   }
-  let objectives = '';
-  let deployments = '';
-  let conditions = '';
-  if (list.objectiveCards.length > 0) {
-    objectives += 'Objectives:<br>';
-    list.objectiveCards.forEach((id, i) => {
+  let primaries = '';
+  let secondaries = '';
+  let advantages = '';
+  if (list.primaryCards.length > 0) {
+    primaries += 'Primaries:<br>';
+    list.primaryCards.forEach((id, i) => {
       const card = cards[id];
-      objectives += ` - ${card.cardName}<br>`;
+      primaries += ` - ${card.cardName}<br>`;
     });
   }
-  if (list.deploymentCards.length > 0) {
-    deployments += 'Deployments:<br>';
-    list.deploymentCards.forEach((id, i) => {
+  if (list.secondaryCards.length > 0) {
+    secondaries += 'Secondaries:<br>';
+    list.secondaryCards.forEach((id, i) => {
       const card = cards[id];
-      deployments += ` - ${card.cardName}<br>`;
+      secondaries += ` - ${card.cardName}<br>`;
     });
   }
-  if (list.conditionCards.length > 0) {
-    conditions += 'Conditions:<br>';
-    list.conditionCards.forEach((id, i) => {
+  if (list.advantageCards.length > 0) {
+    advantages += 'Advantages:<br>';
+    list.advantageCards.forEach((id, i) => {
       const card = cards[id];
-      conditions += ` - ${card.cardName}<br>`;
+      advantages += ` - ${card.cardName}<br>`;
     });
   }
   let battle = '';
-  if (objectives + deployments + conditions !== '') battle = `<br>Battle Deck<br>`;
-  return '<html><p>' + header + units + commands + contingencies + battle + objectives + deployments + conditions + '</p></html>';
+  if (primaries + secondaries + advantages !== '') battle = `<br>Battle Deck<br>`;
+  return '<html><p>' + header + units + commands + contingencies + battle + primaries + secondaries + advantages + '</p></html>';
 }
 
 
@@ -596,34 +596,34 @@ function generateTTSJSONText(list) {
     }
   }
 
-  ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };
+  ttsJSON.battlefieldDeck = { advantages: [], secondary: [], primary: [] };
   if (list.mode === "500-point mode") {
     ttsJSON.battlefieldDeck.scenario =  "skirmish";
   } else {
     ttsJSON.battlefieldDeck.scenario =  "standard";
   }
-  for (let i = 0; i < list.objectiveCards.length; i++) {
-    if (idToName[list.objectiveCards[i]]) {
-      ttsJSON.battlefieldDeck.objective.push(idToName[list.objectiveCards[i]]);
+  for (let i = 0; i < list.primaryCards.length; i++) {
+    if (idToName[list.primaryCards[i]]) {
+      ttsJSON.battlefieldDeck.primary.push(idToName[list.primaryCards[i]]);
     } else {
-      const battlefieldCard = cards[list.objectiveCards[i]];
-      ttsJSON.battlefieldDeck.objective.push(battlefieldCard.cardName);
+      const battlefieldCard = cards[list.primaryCards[i]];
+      ttsJSON.battlefieldDeck.primary.push(battlefieldCard.cardName);
     }
   }
-  for (let i = 0; i < list.deploymentCards.length; i++) {
-    if (idToName[list.deploymentCards[i]]) {
-      ttsJSON.battlefieldDeck.deployment.push(idToName[list.deploymentCards[i]]);
+  for (let i = 0; i < list.secondaryCards.length; i++) {
+    if (idToName[list.secondaryCards[i]]) {
+      ttsJSON.battlefieldDeck.secondary.push(idToName[list.secondaryCards[i]]);
     } else {
-      const battlefieldCard = cards[list.deploymentCards[i]];
-      ttsJSON.battlefieldDeck.deployment.push(battlefieldCard.cardName);
+      const battlefieldCard = cards[list.secondaryCards[i]];
+      ttsJSON.battlefieldDeck.secondary.push(battlefieldCard.cardName);
     }
   }
-  for (let i = 0; i < list.conditionCards.length; i++) {
-    if (idToName[list.conditionCards[i]]) {
-      ttsJSON.battlefieldDeck.conditions.push(idToName[list.conditionCards[i]]);
+  for (let i = 0; i < list.advantageCards.length; i++) {
+    if (idToName[list.advantageCards[i]]) {
+      ttsJSON.battlefieldDeck.advantages.push(idToName[list.advantageCards[i]]);
     } else {
-      const battlefieldCard = cards[list.conditionCards[i]];
-      ttsJSON.battlefieldDeck.conditions.push(battlefieldCard.cardName);
+      const battlefieldCard = cards[list.advantageCards[i]];
+      ttsJSON.battlefieldDeck.advantages.push(battlefieldCard.cardName);
     }
   }
 
@@ -725,25 +725,25 @@ function generateMinimalText(list) {
   // let objectives = '';
   // let deployments = '';
   // let conditions = '';
-  // if (list.objectiveCards.length > 0) {
+  // if (list.primaryCards.length > 0) {
   //   objectives += '\nObjectives: ';
-  //   list.objectiveCards.forEach((id, i) => {
+  //   list.primaryCards.forEach((id, i) => {
   //     const card = cards[id];
   //     objectives += `${card.cardName}, `;
   //   });
   //   objectives = objectives.substring(0, objectives.length - 2);
   // }
-  // if (list.deploymentCards.length > 0) {
+  // if (list.secondaryCards.length > 0) {
   //   deployments += '\nDeployments: ';
-  //   list.deploymentCards.forEach((id, i) => {
+  //   list.secondaryCards.forEach((id, i) => {
   //     const card = cards[id];
   //     deployments += `${card.cardName}, `;
   //   });
   //   deployments = deployments.substring(0, deployments.length - 2);
   // }
-  // if (list.conditionCards.length > 0) {
+  // if (list.advantageCards.length > 0) {
   //   conditions += '\nConditions: ';
-  //   list.conditionCards.forEach((id, i) => {
+  //   list.advantageCards.forEach((id, i) => {
   //     const card = cards[id];
   //     conditions += `${card.cardName}, `;
   //   });
@@ -1121,23 +1121,23 @@ function addCommand(list, commandId) {
 }
 
 function addBattle(list, type, id) {
-  if (type === 'objective') {
-    list.objectiveCards.push(id);
-  } else if (type === 'deployment') {
-    list.deploymentCards.push(id);
-  } else if (type === 'condition') {
-    list.conditionCards.push(id);
+  if (type === 'primary') {
+    list.primaryCards.push(id);
+  } else if (type === 'secondary') {
+    list.secondaryCards.push(id);
+  } else if (type === 'advantage') {
+    list.advantageCards.push(id);
   }
   return list;
 }
 
 function removeBattle(list, type, index) {
-  if (type === 'objective') {
-    list.objectiveCards = deleteItem(list.objectiveCards, index);
-  } else if (type === 'deployment') {
-    list.deploymentCards = deleteItem(list.deploymentCards, index);
-  } else if (type === 'condition') {
-    list.conditionCards = deleteItem(list.conditionCards, index);
+  if (type === 'primary') {
+    list.primaryCards = deleteItem(list.primaryCards, index);
+  } else if (type === 'secondary') {
+    list.secondaryCards = deleteItem(list.secondaryCards, index);
+  } else if (type === 'advantage') {
+    list.advantageCards = deleteItem(list.advantageCards, index);
   } else return;
   return list;
 }
@@ -1169,9 +1169,9 @@ function getEligibleBattlesToAdd(list, type) {
   const cardsById = cardIdsByType.battle; //Object.keys(cards);
 
   let currentCards;
-  if (type === 'objective') currentCards = list.objectiveCards;
-  else if (type === 'deployment') currentCards = list.deploymentCards;
-  else if (type === 'condition') currentCards = list.conditionCards;
+  if (type === 'primary') currentCards = list.primaryCards;
+  else if (type === 'secondary') currentCards = list.secondaryCards;
+  else if (type === 'advantage') currentCards = list.advantageCards;
   else return;
   cardIdsByType['battle'].forEach(id => {
     const card = cards[id];
@@ -1637,12 +1637,12 @@ function convertHashToList(faction, url) {
         } else {
           list.contingencies.push(cardId);
         }
-      } else if (card.cardSubtype === 'objective') {
-        list.objectiveCards.push(cardId);
-      } else if (card.cardSubtype === 'deployment') {
-        list.deploymentCards.push(cardId);
-      } else if (card.cardSubtype === 'condition') {
-        list.conditionCards.push(cardId);
+      } else if (card.cardSubtype === 'primary') {
+        list.primaryCards.push(cardId);
+      } else if (card.cardSubtype === 'secondary') {
+        list.secondaryCards.push(cardId);
+      } else if (card.cardSubtype === 'advantage') {
+        list.advantageCards.push(cardId);
       }
     });
   } catch (e) {

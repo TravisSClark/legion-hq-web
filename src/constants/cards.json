@@ -6221,7 +6221,7 @@
         "cost": 15,
         "surges": [],
         "wounds": 2,
-        "imageName": "C-3PO.png",
+        "imageName": "C-3PO Human-Cyborg Relations.png",
         "keywords": [
             "Calculate Odds",
             "Distract",
@@ -6240,7 +6240,7 @@
         "cost": 15,
         "surges": [],
         "wounds": 2,
-        "imageName": "C-3PO2.png",
+        "imageName": "C-3PO Made to Suffer.png",
         "keywords": [
             "Calculate Odds",
             "Distract",
@@ -7703,7 +7703,7 @@
         "cardType": "counterpart",
         "cost": 15,
         "additionalTags": [],
-        "imageName": "Iden's ID10 Seeker Droid.png",
+        "imageName": "Iden_s ID10 Seeker Droid.png",
         "keywords": [
             "Counterpart",
             "Recharge",
