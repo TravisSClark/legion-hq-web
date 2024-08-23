@@ -42,7 +42,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
   const classes = useStyles();
   const [isExpanded, setIsExpanded] = React.useState(false);
   const handleExpandClick = () => setIsExpanded(!isExpanded);
-  const isDoubleSided = cardType === 'upgrade' && keywords.includes('Reconfigure');
+  const isDoubleSided = cardType === 'upgrade' && card.isDoubleSided;
   const isSkirmish = card.keywords.includes('Skirmish');
 
   return (
@@ -64,8 +64,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
             image={`${urls.cdn}/${cardType}Cards/${imageName}`}
             className={clsx(
               { [classes.unitImage]: cardType === 'unit' || cardType === 'counterpart' },
-              { [classes.unitImage]: cardType === 'battle' && !isSkirmish },
-              { [classes.commandImage]: cardType === 'battle' && isSkirmish },
+              { [classes.commandImage]: cardType === 'battle' },
               { [classes.upgradeImage]: cardType === 'upgrade' },
               { [classes.commandImage]: cardType === 'command' },
               { [classes.doubleUpgrade]: isDoubleSided }

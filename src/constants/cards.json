@@ -2777,6 +2777,7 @@
                 "cardName": "Jyn Erso"
             }
         ],
+        "isDoubleSided": true,
         "id": "dz"
     },
     "ea": {
@@ -2801,6 +2802,7 @@
                 "description": "Cost reduced from 6 to 0 points."
             }
         ],
+        "isDoubleSided": true,
         "id": "ea"
     },
     "eb": {
@@ -4555,6 +4557,7 @@
                 "description": "Cost reduced from 8 to 0 points."
             }
         ],
+        "isDoubleSided": true,
         "id": "gn"
     },
     "go": {
@@ -6775,6 +6778,7 @@
                 "description": "Cost reduced from 10 to 0 points."
             }
         ],
+        "isDoubleSided": true,
         "id": "kh"
     },
     "ki": {
@@ -8328,6 +8332,7 @@
         "keywords": [
             "Reconfigure"
         ],
+        "isDoubleSided": true,
         "requirements": [
             {
                 "force": true
@@ -8578,6 +8583,7 @@
         "keywords": [
             "Reconfigure"
         ],
+        "isDoubleSided": true,
         "requirements": [
             {
                 "force": true
@@ -8835,6 +8841,7 @@
             "Lethal",
             "Reconfigure"
         ],
+        "isDoubleSided": true,
         "requirements": [
             {
                 "cardName": "Agent Kallus"
@@ -9844,6 +9851,7 @@
             "Armor",
             "Reconfigure"
         ],
+        "isDoubleSided": true,
         "requirements": [
             {
                 "cardName": "Wookiee Warriors"
@@ -13981,6 +13989,7 @@
                 "cardName": "Geonosian Warriors"
             }
         ],
+        "isDoubleSided": true,
         "history": []
     },
     "ws": {
