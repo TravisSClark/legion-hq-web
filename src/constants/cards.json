@@ -2153,6 +2153,12 @@
         "faction": "rebels",
         "imageName": "Reckless Diversion.png",
         "keywords": [],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Specifies that friendly troopers with a faceup order token do not benefit from backup."
+			}
+        ],
         "id": "cm"
     },
     "cn": {
@@ -3893,8 +3899,13 @@
         "faction": "empire",
         "imageName": "Darkness Descends.png",
         "keywords": [
-            "Infiltrate",
-            "Scout"
+            "Infiltrate"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Lost Scout keyword. Doesn't have to deploy at the end of setup."
+			}
         ],
         "id": "fq"
     },
@@ -4356,7 +4367,13 @@
         "faction": "empire",
         "imageName": "Annihilation Looms.png",
         "keywords": [],
-        "id": "gd"
+        "id": "gd",
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Now gives 2 suppression by default and an additional suppression on rounds 4 and 5 instead of 5 and 6."
+			}
+        ]
     },
     "ge": {
         "cardSubtype": "2",
@@ -5110,7 +5127,13 @@
         "faction": "separatists",
         "imageName": "Supreme Commander.png",
         "keywords": [
-            "Guardian"
+            "Ruthless"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Lost Guardian 2 and gained Ruthless keyword. Other friendly units gain surges close to selected unit rather than just Grievous."
+			}
         ],
         "id": "hk"
     },
@@ -5818,7 +5841,7 @@
         "cardType": "command",
         "commander": "Clone Captain Rex",
         "faction": "republic",
-        "imageName": "We're Not Programmed.png",
+        "imageName": "We_re Not Programmed.png",
         "keywords": [
             "Inspire",
             "Surge Token"
@@ -6088,7 +6111,7 @@
         "commander": "Darth Vader",
         "cardType": "command",
         "faction": "empire",
-        "imageName": "Vader's Might.png",
+        "imageName": "Vader_s Might.png",
         "keywords": [],
         "id": "jc"
     },
@@ -6110,6 +6133,12 @@
         "faction": "empire",
         "imageName": "Fear and Dead Men.png",
         "keywords": [],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Changed to whenever Vader is attacked instead of on Deflect. No longer gives a dodge."
+			}
+        ],
         "id": "je"
     },
     "jf": {
@@ -6428,8 +6457,12 @@
         "commander": "Clone Captain Rex",
         "faction": "republic",
         "imageName": "You Can Call Me Captain.png",
-        "keywords": [
-            "Fire Support"
+        "keywords": [],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Removed Fire Support keyword, instead 3 red dice are added to friendly attacks within range 2 of Rex."
+			}
         ]
     },
     "ju": {
@@ -7558,9 +7591,15 @@
         "keywords": [
             "Permanent",
             "Secret Mission",
-            "Reliable",
+            "Inspire",
             "Divulge",
             "Infiltrate"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Lost Reliable 1 and gained Inspire 1 keywords. No longer gives her a dodge. Now divulged during resolve setup effects step rather than deploy units step."
+			}
         ],
         "id": "ln"
     },
@@ -7570,7 +7609,7 @@
         "cardType": "command",
         "commander": "Cad Bane",
         "faction": "",
-        "imageName": "I'm in Control.png",
+        "imageName": "I_m in Control.png",
         "keywords": [],
         "id": "lo"
     },
@@ -7587,6 +7626,12 @@
             "Here I Am",
             "Smoke and Mirrors",
             "Kablamo!"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Can be placed in friendly territory. Cad bane cannoy deploy or perform actions until the token is revealed."
+			}
         ],
         "id": "lp"
     },
@@ -7979,7 +8024,7 @@
         "cardType": "command",
         "commander": "Cad Bane",
         "faction": "",
-        "imageName": "I'm Your Worst Nightmare.png",
+        "imageName": "I_m Your Worst Nightmare.png",
         "keywords": [
             "Uncanny Luck"
         ],
@@ -8314,16 +8359,20 @@
     "mv": {
         "id": "mv",
         "displayName": "",
-        "cardName": "Hero of the Clone Wars",
+        "cardName": "General Skywalker",
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "Anakin Skywalker",
-        "imageName": "Hero of the Clone Wars.png",
+        "imageName": "General Skywalker.png",
         "faction": "republic",
         "keywords": [
-            "Permanent",
-            "Exemplar",
-            "Reliable"
+            "Inspire"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "CChanged from Hero of the Clone Wars to General Skywalker. Loses downside. Lost Permenant, Exemplar, and Reliable and gained Inspire keywords. Grants an aim to ordered unit."
+			}
         ]
     },
     "mw": {
@@ -8577,9 +8626,14 @@
         "imageName": "This is Where the Fun Begins.png",
         "faction": "republic",
         "keywords": [
-            "Permanent",
-            "Outmaneuver",
-            "Relentless"
+            "Jump",
+            "Prepared Position"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Lost Permenant, Outmaneuver, and Relentless and gained Jump and Prepared Position keywords. Lost downside. Can attack twice now and gets a free Jump 2."
+			}
         ]
     },
     "ng": {
@@ -8591,9 +8645,12 @@
         "commander": "Anakin Skywalker",
         "imageName": "You Underestimate My Power.png",
         "faction": "republic",
-        "keywords": [
-            "Permanent",
-            "Master of the Force"
+        "keywords": [],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Lost Permenant, Master of the Force 1, and Defend keywords. Lost downside. If he attacks a unit with a facedown order token, his attack pool now gains 6 white attack dice"
+			}
         ]
     },
     "ni": {
@@ -8608,6 +8665,12 @@
         "keywords": [
             "Divulge",
             "Infiltrate"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Maul and the probe droids can perform objectives now. No longer disguarded."
+			}
         ]
     },
     "nj": {
@@ -8909,7 +8972,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Lando Calrissian",
-        "imageName": "Idiot's Array.png",
+        "imageName": "Idiot_s Array.png",
         "faction": "rebels",
         "keywords": []
     },
@@ -9876,7 +9939,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Yoda",
-        "imageName": "There Is No Try.png",
+        "imageName": "There is No Try.png",
         "faction": "republic",
         "keywords": [
             "Outmaneuver",
@@ -9989,6 +10052,12 @@
         "keywords": [
             "Deflect",
             "Guardian"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Yoda now must be on the battlefield."
+			}
         ]
     },
     "pq": {
@@ -11814,7 +11883,13 @@
         "imageName": "Hold at Any Cost.png",
         "faction": "rebels",
         "battleForce": "Echo Base Defenders",
-        "keywords": []
+        "keywords": [],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "No longer specifies tokens per type of trooper. Each friendly trooper that is issued an order now gains an aim and a standby."
+			}
+        ]
     },
     "sv": {
         "id": "sv",
@@ -11836,7 +11911,19 @@
         "imageName": "Overwhelming Barrage.png",
         "faction": "empire",
         "battleForce": "Blizzard Force",
-        "keywords": []
+        "keywords": [
+            "Blast",
+            "Beam",
+            "Critical",
+            "Immune",
+            "Suppressive"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "No longer surges to hit. Gained Critical 3 keyword."
+			}
+        ]
     },
     "sx": {
         "id": "sx",
@@ -12655,8 +12742,12 @@
         "imageName": "Moment of Consideration.png",
         "faction": "empire",
         "battleForce": "",
-        "keywords": [
-            "Fire Support"
+        "keywords": [],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Grants a standby instead of giving the Fire Support keyword."
+			}
         ]
     },
     "uo": {
@@ -12847,6 +12938,12 @@
             "Demoralize",
             "Makashi Mastery",
             "Outmaneuver"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Now divulged during resolve setup effects step rather than deploy units step."
+			}
         ]
     },
     "uy": {
@@ -13034,10 +13131,16 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Ahsoka Tano",
-        "imageName": "I Am No Jedi.png",
+        "imageName": "I Am no Jedi.png",
         "faction": "rebels",
         "keywords": [
             "Agile"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Now rebel only."
+			}
         ]
     },
     "vg": {
@@ -13062,6 +13165,12 @@
         "faction": "rebels",
         "keywords": [
             "Guardian"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Now rebel only."
+			}
         ]
     },
     "vi": {
@@ -13194,6 +13303,12 @@
         "keywords": [
             "Permanent",
             "Teamwork"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Now rebel only."
+			}
         ]
     },
     "vp": {
@@ -13581,6 +13696,12 @@
         "battleForce": "Tempest Force",
         "keywords": [
             "Demoralize"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Causes damage when within .5 range instead of displacement."
+			}
         ]
     },
     "wg": {
@@ -13638,7 +13759,13 @@
         "commander": "Major Marquand",
         "imageName": "Armored Cavalry.png",
         "faction": "empire",
-        "keywords": []
+        "keywords": [],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Can give out dodges to vehicles who are undeployed."
+			}
+        ]
     },
     "wl": {
         "id": "wl",
@@ -13897,7 +14024,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Fifth Brother",
-        "imageName": "You Would Question Me%3F.png",
+        "imageName": "You Would Question Me.png",
         "faction": "empire",
         "keywords": [
             "Permanent"
@@ -13970,6 +14097,12 @@
         "faction": "separatists",
         "keywords": [
             "Fire Support"
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Poggle no longer provides support. Friendly attacks now gain surge to crit if it is at range 2 of Poggle. No longer issues orders to other units."
+			}
         ]
     },
     "xb": {
@@ -14863,5 +14996,149 @@
                 "cardName": "Clone Trooper Infantry"
             }
         ]
+    },
+    "yu": {
+        "cardSubtype": "advantage",
+        "cardName": "Advanced Intel",
+        "cardType": "battle",
+        "imageName": "Advanced Intel.png",
+        "keywords": [],
+        "id": "yu"
+    },
+    "yv": {
+        "cardSubtype": "advantage",
+        "cardName": "Cunning Deployment",
+        "cardType": "battle",
+        "imageName": "Cunning Deployment.png",
+        "keywords": [],
+        "id": "yv"
+    },
+    "yw": {
+        "cardSubtype": "advantage",
+        "cardName": "Fortified Position",
+        "cardType": "battle",
+        "imageName": "Fortified Position.png",
+        "keywords": [],
+        "id": "yw"
+    },
+    "yx": {
+        "cardSubtype": "advantage",
+        "cardName": "Garrison",
+        "cardType": "battle",
+        "imageName": "Garrison.png",
+        "keywords": [],
+        "id": "yx"
+    },
+    "yy": {
+        "cardSubtype": "advantage",
+        "cardName": "Ordnance",
+        "cardType": "battle",
+        "imageName": "Ordnance.png",
+        "keywords": [],
+        "id": "yy"
+    },
+    "yz": {
+        "cardSubtype": "advantage",
+        "cardName": "Strafing Run",
+        "cardType": "battle",
+        "imageName": "Strafing Run.png",
+        "keywords": [],
+        "id": "yz"
+    },
+    "Aa": {
+        "cardSubtype": "secondary",
+        "cardName": "Bring Them to Heel",
+        "cardType": "battle",
+        "imageName": "Bring Them to Heel.png",
+        "keywords": [],
+        "id": "Aa"
+    },
+    "Ab": {
+        "cardSubtype": "secondary",
+        "cardName": "Destroy Enemy Base",
+        "cardType": "battle",
+        "imageName": "Destroy Enemy Base.png",
+        "keywords": [],
+        "id": "Ab"
+    },
+    "Ac": {
+        "cardSubtype": "secondary",
+        "cardName": "Marked Targets",
+        "cardType": "battle",
+        "imageName": "Marked Targets.png",
+        "keywords": [],
+        "id": "Ac"
+    },
+    "Ad": {
+        "cardSubtype": "secondary",
+        "cardName": "Recon Mission",
+        "cardType": "battle",
+        "imageName": "Recon Mission.png",
+        "keywords": [],
+        "id": "Ad"
+    },
+    "Ae": {
+        "cardSubtype": "secondary",
+        "cardName": "Surface Scan",
+        "cardType": "battle",
+        "imageName": "Surface Scan.png",
+        "keywords": [],
+        "id": "Ae"
+    },
+    "Af": {
+        "cardSubtype": "secondary",
+        "cardName": "Sweep and Clear",
+        "cardType": "battle",
+        "imageName": "Sweep and Clear.png",
+        "keywords": [],
+        "id": "Af"
+    },
+    "Ag": {
+        "cardSubtype": "primary",
+        "cardName": "Breakthrough",
+        "cardType": "battle",
+        "imageName": "Breakthrough.png",
+        "keywords": [],
+        "id": "Ag"
+    },
+    "Ah": {
+        "cardSubtype": "primary",
+        "cardName": "Bunker Assault",
+        "cardType": "battle",
+        "imageName": "Bunker Assault.png",
+        "keywords": [],
+        "id": "Ah"
+    },
+    "Ai": {
+        "cardSubtype": "primary",
+        "cardName": "Close the Pocket",
+        "cardType": "battle",
+        "imageName": "Close the Pocket.png",
+        "keywords": [],
+        "id": "Ai"
+    },
+    "Aj": {
+        "cardSubtype": "primary",
+        "cardName": "Intercept the Signals",
+        "cardType": "battle",
+        "imageName": "Intercept the Signals.png",
+        "keywords": [],
+        "id": "Aj"
+    },
+    "Ak": {
+        "cardSubtype": "primary",
+        "cardName": "Recover the Research",
+        "cardType": "battle",
+        "imageName": "Recover the Research.png",
+        "keywords": [],
+        "id": "Ak"
+    },
+    "Al": {
+        "cardSubtype": "primary",
+        "cardName": "Shifting Priorities",
+        "cardType": "battle",
+        "imageName": "Shifting Priorities.png",
+        "keywords": [],
+        "id": "Al"
     }
 }
