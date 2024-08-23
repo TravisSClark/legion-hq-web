@@ -2329,13 +2329,20 @@
         "cardName": "Recon Intel",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 2,
+        "prevCost": 2,
+        "cost": 5,
         "imageName": "Recon Intel.png",
         "keywords": [
             "Scout"
         ],
         "requirements": [],
-        "id": "da"
+        "id": "da",
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 2 to 5 points."
+			}
+        ]
     },
     "db": {
         "cardSubtype": "gear",
@@ -2446,7 +2453,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 6,
-        "imageName": "Hunter.png",
+        "imageName": "Hunter Upgrade.png",
         "keywords": [],
         "requirements": [],
         "id": "dg"
@@ -2509,7 +2516,11 @@
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 5 to 3 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Now gives a flat Impact 4 and can be used in melee."
+			}
         ],
         "id": "dk"
     },
@@ -3934,6 +3945,7 @@
         "cost": 24,
         "imageName": "BARC Ion Gunner.png",
         "keywords": [
+            "Critical",
             "Fixed",
             "Impact",
             "Ion",
@@ -3947,7 +3959,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost increased from 22 to 24 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 24 to 28 points. No longer exhausts. Gained Critical 1 keyword."
+			}
         ],
         "id": "fr"
     },
@@ -4196,7 +4212,6 @@
     "fz": {
         "id": "fz",
         "cardName": "Clone Trooper Infantry",
-        
         "cardType": "unit",
         "cardSubtype": "clone trooper",
         "rank": "corps",
@@ -5215,15 +5230,15 @@
     "hp": {
         "displayName": "Z-6 Trooper",
         "cardSubtype": "heavy weapon",
-        "cardName": "Z-6 Phase I Trooper",
+        "cardName": "Z-6 Clone Trooper",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 22,
-        "imageName": "Z-6 Phase I Clone Trooper.png",
+        "imageName": "Z-6 Clone Trooper.png",
         "keywords": [],
         "requirements": [
             {
-                "cardName": "Phase I Clone Troopers"
+                "cardName": "Clone Trooper Infantry"
             }
         ],
         "history": [
@@ -5234,7 +5249,11 @@
             {
                 "date": "8 December 2022",
                 "description": "Cost decreased from 23 to 20 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Requirement changed from Phase Is to Clone Trooper Infantry."
+			}
         ],
         "id": "hp"
     },
@@ -5279,6 +5298,7 @@
         "cost": 18,
         "imageName": "E-60R B1 Trooper.png",
         "keywords": [
+            "Cumbersome",
             "Impact"
         ],
         "requirements": [
@@ -5290,7 +5310,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 20 to 18 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "No longer exhausts. Gained Cumbersome keyword. Dice changed from 1 red and 2 black to a single rainbow."
+			}
         ],
         "id": "hr"
     },
@@ -5773,7 +5797,7 @@
                 "cardName": "B2 Super Battle Droids"
             }
         ],
-        "displayName": "Super Battle Droid",
+        "displayName": "B2s",
         "history": [
             {
                 "date": "19 November 2020",
@@ -5857,8 +5881,9 @@
         "cardType": "upgrade",
         "cost": 6,
         "imageName": "B1 Security Droid.png",
-        "keywords": [],
-        "displayName": "Security Droid",
+        "keywords": [
+            "AI"
+        ],
         "history": [
             {
                 "date": "19 November 2020",
@@ -5891,15 +5916,16 @@
     "iv": {
         "requirements": [
             {
-                "cardName": "Phase I Clone Troopers"
+                "cardName": "Clone Trooper Infantry"
             }
         ],
         "cardSubtype": "heavy weapon",
-        "cardName": "DP-23 Phase I Trooper",
+        "cardName": "DP-23 Clone Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 20,
-        "imageName": "DP-23 Phase I Trooper.png",
+        "prevCost": 20,
+        "cost": 22,
+        "imageName": "DP-23 Clone Trooper.png",
         "keywords": [
             "Pierce"
         ],
@@ -5916,7 +5942,11 @@
             {
                 "date": "8 December 2022",
                 "description": "Cost decreased from 22 to 20 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 20 to 22 points. Requirement changed from Phase Is to Clone Trooper Infantry. Can now be used in melee. Diced changed from 2 black and 1 white to 2 red."
+			}
         ],
         "id": "iv"
     },
@@ -5946,16 +5976,21 @@
     },
     "ix": {
         "requirements": [
+            "OR",
             {
-                "cardName": "Phase I Clone Troopers"
+                "cardName": "Clone Trooper Infantry"
+            },
+            {
+                "cardName": "Clone Marksmen"
             }
         ],
         "cardSubtype": "heavy weapon",
-        "cardName": "RPS-6 Phase I Trooper",
+        "cardName": "RPS-6 Clone Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 21,
-        "imageName": "RPS-6 Phase I Trooper.png",
+        "prevCost": 21,
+        "cost": 23,
+        "imageName": "RPS-6 Clone Trooper.png",
         "keywords": [
             "Cumbersome",
             "Impact"
@@ -5965,7 +6000,11 @@
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 26 to 21 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 21 to 23 points. Requirement changed from Phase Is to Clone Trooper Infantry or Clone Marksman."
+			}
         ],
         "id": "ix"
     },
@@ -6504,22 +6543,22 @@
         "id": "jw"
     },
     "jx": {
-        "cardSubtype": "personnel",
-        "cardName": "Phase I Clone Captain",
+        "cardSubtype": "squad leader",
+        "cardName": "Clone Captain",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 12,
-        "imageName": "Phase I Clone Captain.png",
+        "prevCost": 12,
+        "cost": 22,
+        "imageName": "Clone Captain.png",
         "keywords": [
-            "Leader"
+            "Leader",
+            "Outmaneuver",
+            "Defend"
         ],
         "requirements": [
             {
-                "cardName": "Phase I Clone Troopers"
+                "cardSubtype": "clone trooper"
             }
-        ],
-        "additionalUpgradeSlots": [
-            "training"
         ],
         "history": [
             {
@@ -6529,23 +6568,30 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 14 to 12 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 12 to 22 points. No longer gives a Training upgrade, exhausts, or ignores suppression. Requirements changed from Phase Is to clone troopers. Gained Outmaneuver and Defend 1 keywords. Upgrade type changed from personnel to squad leader."
+			}
         ],
         "id": "jx"
     },
     "jy": {
         "cardSubtype": "personnel",
-        "cardName": "Phase I Clone Specialist",
+        "cardName": "Clone Specialist",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 11,
-        "imageName": "Phase I Clone Specialist.png",
-        "keywords": [
-            "Surge Token"
-        ],
+        "prevCost": 11,
+        "cost": 17,
+        "imageName": "Clone Specialist.png",
+        "keywords": [],
         "requirements": [
+            "AND",
             {
-                "cardName": "Phase I Clone Troopers"
+                "cardSubtype": "clone trooper"
+            },
+            {
+                "rank": "core"
             }
         ],
         "additionalUpgradeSlots": [
@@ -6559,7 +6605,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 14 to 11 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 11 to 17 points. Requirements changed from Phase Is to clone trooper core."
+			}
         ],
         "id": "jy"
     },
@@ -6841,19 +6891,24 @@
     },
     "ko": {
         "cardSubtype": "heavy weapon",
-        "cardName": "Phase II Mortar Trooper",
+        "cardName": "Mortar Clone Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 18,
-        "imageName": "Phase II Mortar Trooper.png",
+        "prevCost": 18,
+        "cost": 20,
+        "imageName": "Mortar Clone Trooper.png",
         "keywords": [
             "Critical",
             "Suppressive",
             "Cumbersome"
         ],
         "requirements": [
+            "OR",
             {
-                "cardName": "Phase II Clone Troopers"
+                "cardName": "Clone Trooper Infantry"
+            },
+            {
+                "cardName": "Clone Marksmen"
             }
         ],
         "history": [
@@ -6864,7 +6919,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 20 to 18 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 18 to 20 points. Requirement changed from Phase IIs to Clone Trooper Infantry or Clone Marksman."
+			}
         ],
         "id": "ko"
     },
@@ -7293,7 +7352,8 @@
         "cardName": "Deflector Shields",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 10,
+        "prevCost": 10,
+        "cost": 18,
         "imageName": "Deflector Shields.png",
         "keywords": [
             "Shields",
@@ -7308,7 +7368,11 @@
             {
                 "date": "5 June 2023",
                 "description": "Cost reduced from 18 to 10 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 10 to 18 points."
+			}
         ]
     },
     "ld": {
@@ -7382,13 +7446,16 @@
     },
     "lg": {
         "id": "lg",
-        "cardSubtype": "heavy weapon",
+        "cardSubtype": "squad leader",
         "cardName": "Fives",
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 40,
         "imageName": "Fives.png",
-        "keywords": [],
+        "keywords": [
+            "Charge",
+            "Coordinate"
+        ],
         "requirements": [
             {
                 "cardSubtype": "clone trooper"
@@ -7398,7 +7465,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost increased from 36 to 40 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Now works in melee. Upgrade type changed from heavy weapon to squad leader. Gained Charge keyword."
+			}
         ]
     },
     "lh": {
@@ -7407,19 +7478,34 @@
         "cardName": "Echo",
         "isUnique": true,
         "cardType": "upgrade",
-        "cost": 42,
-        "imageName": "Echo.png",
+        "prevCost": 42,
+        "cost": 52,
+        "imageName": "Echo ARC Marksman.png",
         "keywords": [],
         "requirements": [
+            "AND",
             {
                 "cardSubtype": "clone trooper"
-            }
+            },
+            [
+                "OR",
+                {
+                    "rank": "corps"
+                },
+                {
+                    "rank": "special"
+                }
+            ]
         ],
         "history": [
             {
                 "date": "27 October 2021",
                 "description": "Cost increased from 40 to 42 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 42 to 52 points. Requirement now includes all clone trooper special forces."
+			}
         ]
     },
     "li": {
@@ -7989,9 +8075,6 @@
         "cost": 28,
         "imageName": "Dioxis Mine Saboteur.png",
         "keywords": [
-            "Arm",
-            "Detonate",
-            "Dioxis Mine",
             "Blast",
             "Poison"
         ],
@@ -7999,6 +8082,12 @@
             {
                 "cardName": "BX-Series Droid Commandos"
             }
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Can now be used in melee. Lost Arm and Detonate keywords.Card lost surge to hit. Dice changed from 1 black and 2 white to a single rainbow."
+			}
         ]
     },
     "mk": {
@@ -8920,27 +9009,34 @@
     },
     "oa": {
         "id": "oa",
-        "displayName": "",
         "cardSubtype": "personnel",
         "cardName": "Clone Comms Technician",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 11,
+        "prevCost": 11,
+        "cost": 30,
         "imageName": "Clone Comms Technician.png",
-        "keywords": [],
+        "keywords": [
+            "Fire Support"
+        ],
         "requirements": [
+            "AND",
             {
                 "cardSubtype": "clone trooper"
+            },
+            {
+                "rank": "core"
             }
-        ],
-        "additionalUpgradeSlots": [
-            "comms"
         ],
         "history": [
             {
                 "date": "8 December 2022",
                 "description": "Cost decreased from 12 to 11 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 11 to 30 points. Gained requirement for core rank only. No longer gains a comms upgrade. Gained Fire Support keyword."
+			}
         ]
     },
     "ob": {
@@ -8950,55 +9046,72 @@
         "cardName": "Clone Engineer",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 14,
+        "prevCost": 14,
+        "cost": 17,
         "imageName": "Clone Engineer.png",
         "keywords": [
             "Repair"
         ],
         "requirements": [
+            "AND",
             {
                 "cardSubtype": "clone trooper"
+            },
+            {
+                "rank": "core"
             }
         ],
         "history": [
             {
                 "date": "8 December 2022",
                 "description": "Cost decreased from 18 to 14 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 14 to 17 points. Gained requirement for core rank only."
+			}
         ]
     },
     "oc": {
         "id": "oc",
-        "displayName": "",
         "cardSubtype": "personnel",
         "cardName": "Clone Medic",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 15,
+        "prevCost": 15,
+        "cost": 17,
         "imageName": "Clone Medic.png",
         "keywords": [
             "Treat"
         ],
         "requirements": [
+            "AND",
             {
                 "cardSubtype": "clone trooper"
+            },
+            {
+                "rank": "core"
             }
         ],
         "history": [
             {
                 "date": "8 December 2022",
                 "description": "Cost decreased from 20 to 15 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 15 to 17 points. Gained requirement for core rank only."
+			}
         ]
     },
     "od": {
         "id": "od",
-        "displayName": "",
-        "cardSubtype": "personnel",
+        "cardSubtype": "squad leader",
         "cardName": "Clone Commander",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 18,
+        "prevCost": 18,
+        "cost": 22,
         "imageName": "Clone Commander.png",
         "keywords": [
             "Inspire",
@@ -9014,7 +9127,11 @@
             {
                 "date": "8 December 2022",
                 "description": "Cost decreased from 20 to 18 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 18 to 22 points. Upgrade type changed from personnel to squad leader."
+			}
         ]
     },
     "oe": {
@@ -9310,7 +9427,6 @@
     },
     "op": {
         "id": "op",
-        "displayName": "",
         "cardSubtype": "hardpoint",
         "cardName": "Heavy Laser Retrofit",
         "isUnique": false,
@@ -9413,18 +9529,26 @@
             {
                 "cardName": "LAAT Patrol Transport"
             }
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Can no longer give a surge to a unit you are transporting."
+			}
         ]
     },
     "ot": {
         "id": "ot",
-        "displayName": "",
         "cardSubtype": "comms",
         "cardName": "Onboard Comms Channel",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 3,
+        "prevCost": 3,
+        "cost": 10,
         "imageName": "Onboard Comms Channel.png",
-        "keywords": [],
+        "keywords": [
+            "Coordinate"
+        ],
         "requirements": [
             "OR",
             {
@@ -9433,6 +9557,12 @@
             {
                 "cardSubtype": "repulsor vehicle"
             }
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 3 to 10 points. Now gives Coordinate: Trooper instead of giving an order to a unit you are transporting."
+			}
         ]
     },
     "ou": {
@@ -9650,7 +9780,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Hound & Grizzer.png",
+        "imageName": "Hound and Grizzer.png",
         "keywords": [
             "Observe"
         ],
@@ -9702,6 +9832,12 @@
             {
                 "cardName": "LAAT Patrol Transport"
             }
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Now affects friendly unit nearby instead of disembarked unit and must be used after an attack."
+			}
         ]
     },
     "pf": {
@@ -9944,18 +10080,6 @@
                 "description": "Cost increased from 3 to 10 points."
             }
         ]
-    },
-    "pr": {
-        "id": "pr",
-        "displayName": "",
-        "cardSubtype": "force",
-        "cardName": "Force Lift",
-        "isUnique": false,
-        "cardType": "upgrade",
-        "cost": 5,
-        "imageName": "Force Lift.png",
-        "keywords": [],
-        "requirements": []
     },
     "ps": {
         "id": "ps",
@@ -10464,6 +10588,12 @@
             {
                 "cardName": "DSD1 Dwarf Spider Droid"
             }
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Can now be used in melee."
+			}
         ]
     },
     "qp": {
@@ -10492,13 +10622,14 @@
         "cardName": "Nose-Mounted Ion Blaster",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 25,
+        "prevCost": 25,
+        "cost": 30,
         "imageName": "Nose-Mounted Ion Blaster.png",
         "keywords": [
-            "Cycle",
+            "Critical",
             "Fixed",
-            "Ion",
-            "Impact"
+            "Impact",
+            "Ion"
         ],
         "requirements": [
             {
@@ -10509,7 +10640,11 @@
             {
                 "date": "8 December 2022",
                 "description": "Cost increased from 10 to 25 points."
-            }
+            },
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 25 to 30 points. No longer exhausts. Lost Cycle and gained Critical 1 keywords."
+			}
         ]
     },
     "qr": {
@@ -10604,20 +10739,24 @@
     },
     "qu": {
         "id": "qu",
-        "displayName": "Elite Armor Pilots",
         "cardSubtype": "pilot",
-        "cardName": "327th Star Corps Elite Armor Pilots",
+        "cardName": "327th Star Corps Pilots",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 5,
-        "imageName": "327th Star Corps Elite Armor Pilots.png",
-        "keywords": [
-            "Fire Support"
-        ],
+        "prevCost": 5,
+        "cost": 8,
+        "imageName": "327th Star Corps Pilots.png",
+        "keywords": [],
         "requirements": [
             {
                 "cardName": "Infantry Support Platform"
             }
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 5 to 8 points. Lost Surge to Crit. Lost Fire Support keyword. Gives out 1 observation token now."
+			}
         ]
     },
     "qv": {
@@ -10628,7 +10767,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 25,
-        "imageName": "Twin Blaster Cannons.png",
+        "imageName": "Twin Blaster Cannons ISP.png",
         "keywords": [
             "Gunslinger",
             "Critical",
@@ -11097,7 +11236,6 @@
     },
     "rl": {
         "id": "rl",
-        "displayName": "",
         "cardSubtype": "personnel",
         "cardName": "Black Sun Vigo",
         "isUnique": false,
@@ -11194,12 +11332,12 @@
     "rq": {
         "id": "rq",
         "cardSubtype": "armament",
-        "cardName": "The Darksaber2",
+        "cardName": "Maul The Darksaber",
         "displayName": "The Darksaber",
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "The Darksaber2.png",
+        "imageName": "Maul The Darksaber.png",
         "keywords": [
             "Cunning",
             "Sidearm",
@@ -11343,7 +11481,6 @@
     },
     "sb": {
         "id": "sb",
-        "displayName": "",
         "cardSubtype": "heavy weapon",
         "cardName": "Mandalorian Super Commando",
         "isUnique": false,
@@ -11409,7 +11546,6 @@
     },
     "se": {
         "id": "se",
-        "displayName": "",
         "cardSubtype": "heavy weapon",
         "cardName": "Rook Kast",
         "isUnique": true,
@@ -11446,7 +11582,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 15,
-        "imageName": "Saxon's Galar-90 Rifle.png",
+        "imageName": "Saxon_s Galar-90 Rifle.png",
         "keywords": [
             "High Velocity",
             "Lethal",
@@ -11466,7 +11602,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Saxon's Z-3X Jetpack Rockets.png",
+        "imageName": "Saxon_s Z-3X Jetpack Rockets.png",
         "keywords": [
             "Blast",
             "Cycle",
@@ -11486,7 +11622,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Saxon's ZX Flame Projector.png",
+        "imageName": "Saxon_s ZX Flame Projector.png",
         "keywords": [
             "Blast",
             "Spray",
@@ -11625,7 +11761,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
-        "imageName": "Saxon's Combat Shield.png",
+        "imageName": "Saxon_s Combat Shield.png",
         "keywords": [
             "Shielded",
             "Recharge"
@@ -12137,7 +12273,7 @@
         "cardType": "upgrade",
         "cost": 10,
         "faction": "",
-        "imageName": "Din's Amban Rifle.png",
+        "imageName": "Din_s Amban Rifle.png",
         "keywords": [
             "Immobilize",
             "Suppressive"
@@ -12157,7 +12293,7 @@
         "cardType": "upgrade",
         "cost": 0,
         "faction": "rebels",
-        "imageName": "%22Nanny%22 Programming.png",
+        "imageName": "Nanny Programming.png",
         "keywords": [
             "Counterpart",
             "AI"
@@ -12177,7 +12313,7 @@
         "cardType": "upgrade",
         "cost": 8,
         "faction": "",
-        "imageName": "Din's Flame Projector.png",
+        "imageName": "Din_s Flame Projector.png",
         "keywords": [
             "Blast",
             "Spray",
@@ -12198,7 +12334,7 @@
         "cardType": "upgrade",
         "cost": 15,
         "faction": "",
-        "imageName": "The Mando's Jetpack.png",
+        "imageName": "The Mando_s Jetpack.png",
         "keywords": [
             "Jump"
         ],
@@ -12344,7 +12480,7 @@
         "cardType": "upgrade",
         "cost": 5,
         "faction": "",
-        "imageName": "%22Bounty%22 Programming.png",
+        "imageName": "Bounty Programming.png",
         "keywords": [
             "Bounty",
             "AI",
@@ -12418,11 +12554,12 @@
     "uf": {
         "id": "uf",
         "displayName": "",
-        "cardSubtype": "personnel",
+        "cardSubtype": "squad leader",
         "cardName": "Boil",
         "isUnique": true,
         "cardType": "upgrade",
-        "cost": 15,
+        "prevCost": 15,
+        "cost": 20,
         "faction": "republic",
         "imageName": "Boil.png",
         "keywords": [
@@ -12438,16 +12575,22 @@
             {
                 "rank": "corps"
             }
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 15 to 20 points. Changed from personnel upgrade to squad leader upgrade."
+			}
         ]
     },
     "ug": {
         "id": "ug",
-        "displayName": "",
-        "cardSubtype": "personnel",
+        "cardSubtype": "squad leader",
         "cardName": "Waxer",
         "isUnique": true,
         "cardType": "upgrade",
-        "cost": 15,
+        "prevCost": 15,
+        "cost": 20,
         "faction": "republic",
         "imageName": "Waxer.png",
         "keywords": [
@@ -12463,7 +12606,13 @@
             {
                 "rank": "corps"
             }
-        ]
+        ],
+        "history": [
+            {
+				"date": "19 July 2024",
+				"description": "Cost increased from 15 to 20 points. Upgrade type changed from personnel to squad leader."
+			}
+        ]	
     },
     "uh": {
         "id": "uh",
@@ -12473,7 +12622,7 @@
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Boba's Flame Projector.png",
+        "imageName": "Boba_s Flame Projector.png",
         "keywords": [
             "Blast",
             "Spray",
@@ -13769,6 +13918,7 @@
         "cost": 15,
         "imageName": "Force Pike Warrior.png",
         "keywords": [
+            "Overrun",
             "Suppressive"
         ],
         "requirements": [
@@ -14264,7 +14414,7 @@
 		"isUnique": true,
 		"cardType": "upgrade",
 		"cost": 0,
-		"imageName": "Echo2.png",
+		"imageName": "Echo BB.png",
 		"keywords": ["Reliable"],
 		"requirements": [{"cardName": "The Bad Batch"}],
 		"history": []
@@ -14664,21 +14814,125 @@
             }
         ]
     },
-    "ym": {
-        "id": "ym",
+    "yn": {
+        "id": "yn",
         "cardSubtype": "personnel",
-        "cardName": "Rebel Veteran Squad",
+        "cardName": "B1 Battle Droid Squad",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 63,
-        "imageName": "Rebel Veteran Squad.png",
+        "cost": 38,
+        "imageName": "B1 Battle Droid Squad.png",
         "keywords": [
             "Indomitable",
             "Transport"
         ],
         "requirements": [
             {
-                "cardName": "Rebel Veterans"
+                "cardName": "B1 Battle Droids"
+            }
+        ]
+    },
+    "yo": {
+        "id": "yo",
+        "cardSubtype": "personnel",
+        "cardName": "B2 Super Battle Droid Squad",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 38,
+        "imageName": "B2 Super Battle Droid Squad.png",
+        "keywords": [
+            "Indomitable",
+            "Transport"
+        ],
+        "requirements": [
+            {
+                "cardName": "B2 Super Battle Droids"
+            }
+        ]
+    },
+    "yp": {
+        "id": "yp",
+        "cardSubtype": "personnel",
+        "cardName": "Geonosian Warrior Squad",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 51,
+        "imageName": "Geonosian Warrior Squad.png",
+        "keywords": [
+            "Indomitable",
+            "Transport"
+        ],
+        "requirements": [
+            {
+                "cardName": "Geonosian Warriors"
+            }
+        ]
+    },
+    "yq": {
+        "id": "yq",
+        "cardSubtype": "hardpoint",
+        "cardName": "Heavy Laser Cannon",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 10,
+        "imageName": "Heavy Laser Cannon.png",
+        "keywords": [
+            "Impact",
+            "Fixed"
+        ],
+        "requirements": [
+            {
+                "cardName": "LM-432 Crab Droid"
+            }
+        ]
+    },
+    "yr": {
+        "id": "yr",
+        "cardSubtype": "hardpoint",
+        "cardName": "Twin Blaster Cannons",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 5,
+        "imageName": "Twin Blaster Cannons Crab.png",
+        "keywords": [
+            "Fixed"
+        ],
+        "requirements": [
+            {
+                "cardName": "LM-432 Crab Droid"
+            }
+        ]
+    },
+    "ys": {
+        "id": "ys",
+        "cardSubtype": "personnel",
+        "cardName": "Clone Trooper Infantry Squad",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 56,
+        "imageName": "Clone Trooper Infantry Squad.png",
+        "keywords": [
+            "Indomitable",
+            "Transport"
+        ],
+        "requirements": [
+            {
+                "cardName": "Clone Trooper Infantry"
+            }
+        ]
+    },
+    "yt": {
+        "id": "yt",
+        "cardSubtype": "personnel",
+        "cardName": "Clone Trooper Infantry",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 13,
+        "imageName": "Clone Trooper Infantry.png",
+        "keywords": [],
+        "requirements": [
+            {
+                "cardName": "Clone Trooper Infantry"
             }
         ]
     }

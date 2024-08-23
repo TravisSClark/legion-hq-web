@@ -13,6 +13,7 @@ import armament from 'assets/upgradeTypes/armament.png';
 import crew from 'assets/upgradeTypes/crew.png';
 import ordnance from 'assets/upgradeTypes/ordnance.png';
 import protocol from 'assets/upgradeTypes/protocol.png';
+import squadLeader from 'assets/upgradeTypes/squadLeader.jpg';
 
 const upgradeTypes = {
   'heavy weapon': {
@@ -74,6 +75,10 @@ const upgradeTypes = {
   protocol: {
     name: 'Protocol',
     icon: protocol
+  },
+  squadLeader: {
+    name: 'Squad Leader',
+    icon: squadLeader
   }
 };
 
