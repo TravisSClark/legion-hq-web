@@ -866,7 +866,7 @@
     "an": {
         "id": "an",
         "cardName": "1.4 FD Laser Cannon Team",
-        "displayName": "Laser Cannon Team",
+        "displayName": "FD Turret",
         "cardType": "unit",
         "cardSubtype": "emplacement trooper",
         "rank": "support",
@@ -1757,7 +1757,7 @@
         "isUnique": false,
         "prevCost": 140,
         "cost": 125,
-        "imageName": "Occupier Tank.png",
+        "imageName": "TX-225 GAVw Occupier Tank.png",
         "keywords": [
             "Vehicle",
             "Armor",
@@ -6127,7 +6127,7 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 55,
-        "imageName": "R2-D2.png",
+        "imageName": "R2-D2 Hero of a Thousand Devices.png",
         "keywords": [
             "Repair",
             "Secret Mission",
@@ -10564,7 +10564,7 @@
     "qt": {
         "id": "qt",
         "cardName": "NR-N99 Persuader-class Tank Droid",
-        "displayName": "Snail Droid",
+        "displayName": "Snail Tank",
         "cardType": "unit",
         "cardSubtype": "ground vehicle",
         "rank": "heavy",
@@ -10572,7 +10572,7 @@
         "isUnique": false,
         "prevCost": 145,
         "cost": 130,
-        "imageName": "Persuader-class Tank Droid.png",
+        "imageName": "Persuader-Class Tank Droid.png",
         "keywords": [
             "Armor",
             "Arsenal",
