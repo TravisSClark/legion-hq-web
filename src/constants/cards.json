@@ -8279,7 +8279,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Defensive Stance.png",
+        "imageName": "Offensive defensive Stance.png",
         "keywords": [
             "Reconfigure"
         ],
@@ -8525,7 +8525,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 5,
-        "imageName": "Defensive Stance.png",
+        "imageName": "Offensive defensive stance.png",
         "keywords": [
             "Reconfigure"
         ],
@@ -9570,28 +9570,6 @@
             }
         ]
     },
-    "ow": {
-        "id": "ow",
-        "displayName": "",
-        "cardSubtype": "pilot",
-        "cardName": "Reckless Driver",
-        "isUnique": false,
-        "cardType": "upgrade",
-        "cost": 12,
-        "imageName": "Reckless Driver.png",
-        "keywords": [],
-        "requirements": [
-            {
-                "cardName": "A-A5 Speeder Truck"
-            }
-        ],
-        "history": [
-            {
-                "date": "27 October 2021",
-                "description": "Cost increased from 6 to 12 points."
-            }
-        ]
-    },
     "ox": {
         "id": "ox",
         "displayName": "",
@@ -9752,7 +9730,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 8,
-        "imageName": "Imperial Tie Pilot.png",
+        "imageName": "Imperial TIE Pilot.png",
         "keywords": [],
         "requirements": [
             "AND",
@@ -10690,12 +10668,12 @@
     "qu": {
         "id": "qu",
         "cardSubtype": "pilot",
-        "cardName": "327th Star Corps Pilots",
+        "cardName": "327th Star Corps Pilot",
         "isUnique": false,
         "cardType": "upgrade",
         "prevCost": 5,
         "cost": 8,
-        "imageName": "327th Star Corps Pilots.png",
+        "imageName": "327th Star Corps Pilot.png",
         "keywords": [],
         "requirements": [
             {

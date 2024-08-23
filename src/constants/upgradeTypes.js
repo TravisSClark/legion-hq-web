@@ -76,7 +76,7 @@ const upgradeTypes = {
     name: 'Protocol',
     icon: protocol
   },
-  squadLeader: {
+  'squad leader': {
     name: 'Squad Leader',
     icon: squadLeader
   }
