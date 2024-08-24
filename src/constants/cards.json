@@ -1530,7 +1530,7 @@
 				"description": "Gained Detachment keyword."
 			}
         ],
-        "detachment": "uz"
+        "detachment": "ba"
     },
     "bc": {
         "id": "bc",
@@ -1913,7 +1913,7 @@
         "cardType": "command",
         "commander": "Bossk",
         "faction": "",
-        "imageName": "Lying In Wait.png",
+        "imageName": "Lying in Wait.png",
         "keywords": [
             "Sharpshooter"
         ],
@@ -3889,7 +3889,7 @@
         "cardType": "command",
         "commander": "Luke Skywalker",
         "faction": "rebels",
-        "imageName": "I am a Jedi.png",
+        "imageName": "I Am a Jedi.png",
         "keywords": [],
         "id": "fp"
     },
@@ -5755,7 +5755,7 @@
         "cardType": "command",
         "commander": "General Grievous",
         "faction": "separatists",
-        "imageName": "Trained In Your Jedi Arts.png",
+        "imageName": "Trained in Your Jedi Arts.png",
         "keywords": [
             "Disengage",
             "Suppressive",
@@ -6459,7 +6459,7 @@
         "cardType": "command",
         "commander": "Clone Captain Rex",
         "faction": "republic",
-        "imageName": "You Can Call Me Captain.png",
+        "imageName": "Call Me Captain.png",
         "keywords": [],
         "history": [
             {
@@ -6476,7 +6476,7 @@
         "cardType": "command",
         "commander": "Clone Captain Rex",
         "faction": "republic",
-        "imageName": "Eat This, Clankers!.png",
+        "imageName": "Take That, Clankers!.png",
         "keywords": []
     },
     "jv": {
@@ -9947,7 +9947,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Yoda",
-        "imageName": "There is No Try.png",
+        "imageName": "There Is No Try.png",
         "faction": "republic",
         "keywords": [
             "Outmaneuver",
@@ -9995,6 +9995,39 @@
         "speed": 2,
         "wounds": 3,
         "courage": 2
+    },
+    "pm": {
+        "id": "pm",
+        "cardName": "Wookiee Warriors",
+        "title": "Noble Fighters",
+        "cardType": "unit",
+        "cardSubtype": "wookiee trooper",
+        "rank": "special",
+        "faction": "republic",
+        "isUnique": false,
+        "cost": 69,
+        "imageName": "Wookiee Warriors Noble Fighters.png",
+        "keywords": [
+            "Charge",
+            "Duelist",
+            "Indomitable",
+            "Scale"
+        ],
+        "upgradeBar": [
+            "heavy weapon",
+            "training",
+            "training",
+            "gear",
+            "grenades"
+        ],
+        "defense": "white",
+        "surges": [
+            "hit"
+        ],
+        "wounds": 3,
+        "courage": 2,
+        "speed": 2
+
     },
     "pn": {
         "id": "pn",
@@ -11372,7 +11405,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Maul",
-        "imageName": "His Emminence.png",
+        "imageName": "His Eminence.png",
         "faction": "mercenary",
         "keywords": []
     },
@@ -11645,7 +11678,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Gar Saxon",
-        "imageName": "Marked For Elimination.png",
+        "imageName": "Marked for Elimination.png",
         "faction": "mercenary",
         "keywords": []
     },
@@ -11975,7 +12008,7 @@
         "cardSubtype": "3",
         "cardType": "command",
         "commander": "",
-        "imageName": "Leader of the 501st.png",
+        "imageName": "Leaders of the 501st.png",
         "faction": "republic",
         "battleForce": "501st Legion",
         "keywords": [
@@ -12035,7 +12068,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Boba Fett",
-        "imageName": "Making His Way in the Galaxy.png",
+        "imageName": "Making His Way In the Galaxy.png",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -12430,7 +12463,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "IG-11",
-        "imageName": "A Machine Made For Killing.png",
+        "imageName": "A Machine Made for Killing.png",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -12923,7 +12956,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "Asajj Ventress",
-        "imageName": "I Am Fear.png",
+        "imageName": "I am Fear.png",
         "faction": "separatists",
         "battleForce": "",
         "keywords": [
@@ -13139,7 +13172,7 @@
         "cardSubtype": "1",
         "cardType": "command",
         "commander": "Ahsoka Tano",
-        "imageName": "I Am no Jedi.png",
+        "imageName": "I Am No Jedi.png",
         "faction": "rebels",
         "keywords": [
             "Agile"
