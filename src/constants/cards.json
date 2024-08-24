@@ -6577,7 +6577,7 @@
                 "cardSubtype": "clone trooper"
             },
             {
-                "rank": "core"
+                "rank": "corps"
             }
         ],
         "additionalUpgradeSlots": [
@@ -9045,7 +9045,7 @@
                 "cardSubtype": "clone trooper"
             },
             {
-                "rank": "core"
+                "rank": "corps"
             }
         ],
         "history": [
@@ -9078,7 +9078,7 @@
                 "cardSubtype": "clone trooper"
             },
             {
-                "rank": "core"
+                "rank": "corps"
             }
         ],
         "history": [
@@ -9110,7 +9110,7 @@
                 "cardSubtype": "clone trooper"
             },
             {
-                "rank": "core"
+                "rank": "corps"
             }
         ],
         "history": [
@@ -14639,7 +14639,7 @@
         "cardName": "Riot Control Squad",
         "cardType": "unit",
         "cardSubtype": "trooper",
-        "rank": "core",
+        "rank": "corps",
         "faction": "empire",
         "cost": 50,
         "imageName": "Riot Control Squad.png",
@@ -14994,7 +14994,7 @@
     "yt": {
         "id": "yt",
         "cardSubtype": "personnel",
-        "cardName": "Clone Trooper Infantry",
+        "cardName": "Clone Trooper Infantry Extra",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 13,
