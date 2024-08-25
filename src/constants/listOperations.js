@@ -1779,40 +1779,20 @@ function rankValidation(currentList, ranks, mercs, rankReqs){
   return validationIssues;
 }
 
-// TODO very lazy/gross implementation for now...
-function applyEntourage(currentList, rankReqs)
-{
-  // for now, only empire uses the 'entourage' keyword, and this implementation for it is kind of nasty...
-  if(currentList.faction !== "empire"){
-    return;
-  }
-
-  let entourage = [];
-  let specials = [];
-  let heavies = [];
-
+function applyRankAdjustments(currentList, rankReqs) {
+  
+  let extraRankIds = []
+  
   currentList.units.forEach((unit)=>{
     const card = cards[unit.unitId];
-
-    if(card.rank === 'special' && !specials.includes(card.cardName)){
-      specials.push(card.cardName);
-    }
-    if(card.rank === 'heavy' && !heavies.includes(card.cardName)){
-      heavies.push(card.cardName);
-    }
-
-    if(card.entourage){
-      entourage.push(card.entourage);
-    }
-  });
-
-  // this kind of check makes a really really strong argument for stratifying the list by rank, lol
-  entourage.forEach((e) =>{ 
-    if( e.type === 'special' && specials.includes(e.name)){
-      rankReqs.special[1]++; // increase the max
-    }
-    else if( e.type === 'heavy' && heavies.includes(e.name)){
-      rankReqs.heavy[1]++; // incerease the max
+    if (card.entourage) {
+      extraRankIds.push(card.entourage);
+    // } else if (card.detachment) {
+    //   extraRankIds.push(card.detachment);
+    } else if (extraRankIds.includes(card.id)) {
+      rankReqs[card.rank][1]++;
+      let idIndex = extraRankIds.indexOf(card.id)
+      extraRankIds.splice(idIndex, 1);
     }
   });
 
@@ -1846,7 +1826,7 @@ function getRankLimits(currentList){
   let rankReqs = {};
   (Object.keys(dictRankReqs)).forEach(r => rankReqs[r] = [dictRankReqs[r][0], dictRankReqs[r][1]]);
 
-  applyEntourage(currentList, rankReqs);  
+  applyRankAdjustments(currentList, rankReqs);  
   applyFieldCommander(currentList, rankReqs);
 
   return rankReqs;
@@ -1866,7 +1846,7 @@ function validateList(currentList, rankLimits){
   // Determine what our rank requirements are, warn if unknown
   // TODO need more definitive handling for the other modes...
   if(battleForce && !battleForcesDict[battleForce][currentList.mode]){
-      validationIssues.push({level:1, text:"Playing a battleforce in a mode with no defined battleforce construction rules (Defaulting to 800pt)"});
+      validationIssues.push({level:1, text:"Playing a battleforce in a mode with no defined battleforce construction rules (Defaulting to 1000pt)"});
   } 
   
   let rankReqs = rankLimits; //updateRankLimits(currentList);
