@@ -48,6 +48,8 @@ function Cards() {
   };
   const commandCards = { '1': [], '2': [], '3': [], '4': [] };
   const battleCards = { primary: [], secondary: [], advantage: [] };
+  // TODO const oldBattleCards = { objective: [], deployment: [], condition: [] };
+
   Object.keys(cards).sort((a, b) => {
     const cardA = cards[a];
     const cardB = cards[b];

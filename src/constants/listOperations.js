@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import cards, {cardsIdsByType as cardIdsByType} from 'constants/cards';
+import cards, {cardIdsByType} from 'constants/cards';
 import ranks from 'constants/ranks';
 import legionModes from 'constants/legionModes';
 import interactions from 'constants/cardInteractions';
@@ -8,18 +8,12 @@ import battleForcesDict from 'constants/battleForcesDict';
 
 function countPoints(list) {
   list.pointTotal = 0;
-  list.rankInteractions = {};
   list.units.forEach((unit, unitIndex) => {
     const unitCard = cards[unit.unitId];
     if (list.isUsingOldPoints) {
       unit.totalUnitCost = unitCard.prevCost ? unitCard.prevCost : unitCard.cost;
     } else unit.totalUnitCost = unitCard.cost;
-    if (unitCard.id in interactions.entourages) {
-      const interaction = interactions.entourages[unitCard.id];
-      if (interaction.isConditionMet(list, unit)) {
-        list.rankInteractions[unitCard.id] = interaction.boundaryDelta;
-      }
-    }
+    
     unit.upgradeInteractions = {};
     unit.upgradesEquipped.forEach((upgradeId, upgradeIndex) => {
       if (upgradeId) {
@@ -61,8 +55,7 @@ function countPoints(list) {
 }
 
 function toggleUsingOldPoints(list) {
-  if (!list.isUsingOldPoints) list.isUsingOldPoints = true;
-  else list.isUsingOldPoints = false;
+  list.isUsingOldPoints = !list.isUsingOldPoints;
   return countPoints(list);
 }
 
@@ -132,12 +125,22 @@ function consolidate(list) {
         }
       }
     }
-    list.unitCounts[unitCard.rank] += unit.count;
 
+    list.unitCounts[unitCard.rank] += unit.count;
+    
+    if (unitCard.associate){
+      if(list.units.find(u => u.unitId == unitCard.associate) != undefined){
+        list.unitCounts[unitCard.rank]--;
+      }
+    }
     if (unit.unitId === 'rc' && unit.upgradesEquipped.includes('rq')) { // Maul + Darksaber interaction
       list.unitCounts['commander']++;
       list.unitCounts['operative']--;
     }
+    if(battleForcesDict[list.battleForce]?.rules?.buildsAsCorps?.includes(unit.unitId)){
+      list.unitCounts[unitCard.rank] -= unit.count;
+      list.unitCounts['corps'] += unit.count;
+    } 
   }
   for (let i = list.commandCards.length - 1; i > -1 ; i--) {
     const { commander } = cards[list.commandCards[i]];
@@ -166,8 +169,21 @@ function getNumActivations(list) {
   }, 0);
 }
 
+function printMissionCards(missionArray, label){
+  
+  if (missionArray.length > 0) {
+    let objectives = label + ':\n';
+    missionArray.forEach((id, i) => {
+        const card = cards[id];
+        objectives += ` - ${card.cardName}\n`;
+    });
+    return objectives;
+  }
+  return '';
+}
+
 function generateTournamentText(
-  list, showPoints = true, showCommands = false, showBattles = false
+  list, userSettings
 ) {
   let header = `${list.title ? list.title : 'Untitled'}\n`;
   header += `${list.pointTotal}/${legionModes[list.mode].maxPoints}\n`;
@@ -248,33 +264,38 @@ function generateTournamentText(
       contingencies += `${pips}${commandCard.cardName}\n`;
     });
   }
-  let primary = '';
-  let secondary = '';
-  let advantages = '';
-  if (list.primaryCards.length > 0) {
-    primary += 'Primaries:\n';
-    list.primaryCards.forEach((id, i) => {
-      const card = cards[id];
-      primary += ` - ${card.cardName}\n`;
-    });
+
+  let battleDeck = '';
+
+  if(list.isUsingOldPoints){
+    battleDeck += printMissionCards(list.objectiveCards, "Objectives");
+    battleDeck += printMissionCards(list.deploymentCards, "Deployments");
+    battleDeck += printMissionCards(list.conditionCards, "Conditions");
   }
-  if (list.secondaryCards.length > 0) {
-    secondary += 'Secondaries:\n';
-    list.secondaryCards.forEach((id, i) => {
-      const card = cards[id];
-      secondary += ` - ${card.cardName}\n`;
-    });
+  else{
+    battleDeck += printMissionCards(list.primaryCards, "Objectives");
+    battleDeck += printMissionCards(list.secondaryCards, "Secondaries");
+    battleDeck += printMissionCards(list.advantageCards, "Advantages");
   }
-  if (list.advantageCards.length > 0) {
-    advantages += 'Advantages:\n';
-    list.advantageCards.forEach((id, i) => {
-      const card = cards[id];
-      advantages += ` - ${card.cardName}\n`;
-    });
+
+  if(battleDeck.length > 0){
+    battleDeck = `\nBattle Deck\n` + battleDeck;
   }
-  let battle = '';
-  if (primary + secondary + advantages !== '') battle = `\nBattle Deck\n`;
-  return header + units + commands + contingencies + battle + primary + secondary + advantages;
+  
+  return header + units + commands + contingencies + battleDeck;
+}
+
+function generateMissionCardHTML(cardList, label){
+  if (cardList.length > 0) {
+    let objectives = label + ':<br>';
+    cardList.forEach((id, i) => {
+      objectives += ` - ${cards[id].cardName}<br>`;
+      return objectives;
+    });
+  }else{
+    return '';
+  }
+  
 }
 
 function generateHTMLText(
@@ -359,33 +380,23 @@ function generateHTMLText(
       contingencies += `${pips}${commandCard.cardName}<br>`;
     });
   }
-  let primaries = '';
-  let secondaries = '';
-  let advantages = '';
-  if (list.primaryCards.length > 0) {
-    primaries += 'Primaries:<br>';
-    list.primaryCards.forEach((id, i) => {
-      const card = cards[id];
-      primaries += ` - ${card.cardName}<br>`;
-    });
-  }
-  if (list.secondaryCards.length > 0) {
-    secondaries += 'Secondaries:<br>';
-    list.secondaryCards.forEach((id, i) => {
-      const card = cards[id];
-      secondaries += ` - ${card.cardName}<br>`;
-    });
-  }
-  if (list.advantageCards.length > 0) {
-    advantages += 'Advantages:<br>';
-    list.advantageCards.forEach((id, i) => {
-      const card = cards[id];
-      advantages += ` - ${card.cardName}<br>`;
-    });
+
+  let battleDeck = '';
+  if(list.isUsingOldPoints){
+    battleDeck += generateMissionCardHTML(list.objectiveCards, "Objectives");
+    battleDeck += generateMissionCardHTML(list.deploymentCards, "Deployments");
+    battleDeck += generateMissionCardHTML(list.conditionCards, "Conditions");
+  }else{
+    battleDeck += generateMissionCardHTML(list.primaryCards, "Objectives");
+    battleDeck += generateMissionCardHTML(list.secondaryCards, "Secondaries");
+    battleDeck += generateMissionCardHTML(list.advantageCards, "Advantages");
+
   }
   let battle = '';
-  if (primaries + secondaries + advantages !== '') battle = `<br>Battle Deck<br>`;
-  return '<html><p>' + header + units + commands + contingencies + battle + primaries + secondaries + advantages + '</p></html>';
+  if(battleDeck.length > 0){
+    battleDeck =  `<br>Battle Deck<br>` + battleDeck;
+  }
+  return '<html><p>' + header + units + commands + contingencies + battleDeck + '</p></html>';
 }
 
 
@@ -475,34 +486,47 @@ function generateStandardText(list) {
   return header + points + units + commands + contingencies;
 }
 
-function generateTTSJSONText(list) {
-  const ttsJSON = { author: 'Legion HQ' };
+const idToName = {
+  "nc": "Offensive Stance",
+  "dz": "A-180 Config",
+  "ea": "A-300 Config",
+  "kh": "A-280-CFE Config",
+  "gn": "E-11D Config",
+  "np": "J-19 Bo-rifle",
+  "Ci": "Clear Conditions",
+  "Cl": "War Weary",
+  "Dj": "Battle Lines",
+  "ff": "Ax-108 \"Ground Buzzer\"",
+  "fg": "Mo/Dk Power Harpoon",
+  "bh": "TX-225 GAVw Occupier Combat Assault Tank",
+  "on": "LAAT/le Patrol Transport",
+  "oo": "LAAT/le Patrol Transport",
+  "ig": "CM-0/93 Trooper",
+  "kd": "Z-6 Phase II Trooper",
+  "kt": "\"Bunker Buster\" Shells",
+  "le": "EMP \"Droid Poppers\"",
+  "lw": "Iden's ID10 Seeker Droid",
+  "sr": "Stormtroopers Heavy Response Unit",
+  "uj": "The Darksaber (Gideon)",
+  "rq": "The Darksaber (Maul)",
+  "xw": "Echo (The Bad Batch)"
+};
 
-  const idToName = {
-    "nc": "Offensive Stance",
-    "dz": "A-180 Config",
-    "ea": "A-300 Config",
-    "kh": "A-280-CFE Config",
-    "gn": "E-11D Config",
-    "np": "J-19 Bo-rifle",
-    "Ci": "Clear Conditions",
-    "Cl": "War Weary",
-    "Dj": "Battle Lines",
-    "ff": "Ax-108 \"Ground Buzzer\"",
-    "fg": "Mo/Dk Power Harpoon",
-    "bh": "TX-225 GAVw Occupier Combat Assault Tank",
-    "on": "LAAT/le Patrol Transport",
-    "oo": "LAAT/le Patrol Transport",
-    "ig": "CM-0/93 Trooper",
-    "kd": "Z-6 Phase II Trooper",
-    "kt": "\"Bunker Buster\" Shells",
-    "le": "EMP \"Droid Poppers\"",
-    "lw": "Iden's ID10 Seeker Droid",
-    "sr": "Stormtroopers Heavy Response Unit",
-    "uj": "The Darksaber (Gideon)",
-    "rq": "The Darksaber (Maul)",
-    "xw": "Echo (The Bad Batch)"
-  };
+function appendMissionTTSJSON(cardList, ttsArray){
+
+  for (let i = 0; i < cardList.length; i++) {
+    if (idToName[cardList[i]]) {
+      ttsArray.push(idToName[cardList[i]]);
+    } else {
+      const battlefieldCard = cards[cardList[i]];
+      ttsArray.push(battlefieldCard.cardName);
+    }
+  }
+
+}
+
+function generateTTSJSONText(list, userSettings) {
+  const ttsJSON = { author: 'Legion List Builder' };
 
   ttsJSON.listname = list.title;
 
@@ -596,35 +620,29 @@ function generateTTSJSONText(list) {
     }
   }
 
-  ttsJSON.battlefieldDeck = { advantages: [], secondary: [], primary: [] };
+  if(list.isUsingOldPoints){
+    ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };
+  } else{
+      // TODO - check new TTS standard
+    ttsJSON.battlefieldDeck = { objective: [], secondary: [], advantage: [] };
+  }
   if (list.mode === "500-point mode") {
     ttsJSON.battlefieldDeck.scenario =  "skirmish";
+  } else if (list.mode.includes("storm tide")) {
+    ttsJSON.battlefieldDeck.scenario = "community"
   } else {
     ttsJSON.battlefieldDeck.scenario =  "standard";
   }
-  for (let i = 0; i < list.primaryCards.length; i++) {
-    if (idToName[list.primaryCards[i]]) {
-      ttsJSON.battlefieldDeck.primary.push(idToName[list.primaryCards[i]]);
-    } else {
-      const battlefieldCard = cards[list.primaryCards[i]];
-      ttsJSON.battlefieldDeck.primary.push(battlefieldCard.cardName);
-    }
-  }
-  for (let i = 0; i < list.secondaryCards.length; i++) {
-    if (idToName[list.secondaryCards[i]]) {
-      ttsJSON.battlefieldDeck.secondary.push(idToName[list.secondaryCards[i]]);
-    } else {
-      const battlefieldCard = cards[list.secondaryCards[i]];
-      ttsJSON.battlefieldDeck.secondary.push(battlefieldCard.cardName);
-    }
-  }
-  for (let i = 0; i < list.advantageCards.length; i++) {
-    if (idToName[list.advantageCards[i]]) {
-      ttsJSON.battlefieldDeck.advantages.push(idToName[list.advantageCards[i]]);
-    } else {
-      const battlefieldCard = cards[list.advantageCards[i]];
-      ttsJSON.battlefieldDeck.advantages.push(battlefieldCard.cardName);
-    }
+
+  if(list.isUsingOldPoints){
+    appendMissionTTSJSON(list.objectiveCards, ttsJSON.battlefieldDeck.objective);
+    appendMissionTTSJSON(list.deploymentCards, ttsJSON.battlefieldDeck.deployment);
+    appendMissionTTSJSON(list.conditionCards, ttsJSON.battlefieldDeck.conditions);
+  } else{
+    // TODO - probably need new TTS map entries
+    appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
+    appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.secondary);
+    appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.advantage);
   }
 
   return JSON.stringify(ttsJSON, null, 4);
@@ -722,34 +740,6 @@ function generateMinimalText(list) {
       contingencies += `${commandCard.cardName}, `;
     });
   }
-  // let objectives = '';
-  // let deployments = '';
-  // let conditions = '';
-  // if (list.primaryCards.length > 0) {
-  //   objectives += '\nObjectives: ';
-  //   list.primaryCards.forEach((id, i) => {
-  //     const card = cards[id];
-  //     objectives += `${card.cardName}, `;
-  //   });
-  //   objectives = objectives.substring(0, objectives.length - 2);
-  // }
-  // if (list.secondaryCards.length > 0) {
-  //   deployments += '\nDeployments: ';
-  //   list.secondaryCards.forEach((id, i) => {
-  //     const card = cards[id];
-  //     deployments += `${card.cardName}, `;
-  //   });
-  //   deployments = deployments.substring(0, deployments.length - 2);
-  // }
-  // if (list.advantageCards.length > 0) {
-  //   conditions += '\nConditions: ';
-  //   list.advantageCards.forEach((id, i) => {
-  //     const card = cards[id];
-  //     conditions += `${card.cardName}, `;
-  //   });
-  //   conditions = conditions.substring(0, conditions.length - 2);
-  // }
-  // + objectives + deployments + conditions;
   return header + units + commands + contingencies;
 }
 
@@ -943,7 +933,7 @@ function addUnit(list, unitId, stackSize = 1) {
     unitIndex = list.units.length - 1;
   }
 
-  validateUpgrades(list, unitIndex);
+  //validateUpgrades(list, unitIndex);
   return consolidate(list);
 }
 
@@ -1000,15 +990,34 @@ function killUnit(list, index) {
   return list;
 }
 
-function getEligibleUnitsToAdd(list, rank) {
+function isGoodForAgeMode(card, list){
+  // TODO - make this a func, use bool instead of string
+
+
+  let invalid = (((card.isOld || card.newCard) && !list.isUsingOldPoints) ||
+    ((card.isNew || card.oldCard) && list.isUsingOldPoints));
+  return !invalid;
+}
+
+function getEligibleUnitsToAdd(list, rank, userSettings) {
   const validUnitIds = [];
   const cardsById = cardIdsByType.unit; // Object.keys(cards);
   for (let i = 0; i < cardsById.length; i++) {
     const id = cardsById[i];
     const card = cards[id];
 
-    // if (card.cardType !== 'unit') continue;
+    if(!isGoodForAgeMode(card, list)) continue;
+
     if (card.rank !== rank) continue;
+
+    if((id === 'AA' || id === 'AK') && userSettings.showStormTide != 'yes')
+      continue;
+
+    if (list.mode.includes('storm tide') && id === 'AA') {
+      continue;
+    } else if (!list.mode.includes('storm tide') && id === 'AK') {
+      continue;
+    }
 
     if(!list.battleForce)
     {
@@ -1021,17 +1030,19 @@ function getEligibleUnitsToAdd(list, rank) {
     if (list.commanders.includes(card.cardName)) continue;
     if (card.specialIssue && card.specialIssue !== list.battleForce)continue;
 
-    if (card.detachment) {
-      for (let i = 0; i < list.units.length; i++) {
-        const unit = list.units[i];
-        if (unit.unitId === card.detachment) {
-          validUnitIds.push(id);
-          break;
-        }
-      }
-    } else {
+    // TODO allow the add, ping user for bad list afterwards...
+    // if (card.detachment) {
+    //   for (let i = 0; i < list.units.length; i++) {
+    //     const unit = list.units[i];
+    //     if (unit.unitId === card.detachment) {
+    //       validUnitIds.push(id);
+    //       break;
+    //     }
+    //   }
+    // } 
+    // else {
       validUnitIds.push(id);
-    }
+    // }
   }
   return sortIds(validUnitIds);
 }
@@ -1082,10 +1093,10 @@ function isRequirementsMet(requirements, unitCard) {
 }
 
 function getEquippableLoadoutUpgrades(
-  list, upgradeType, id, upgradeIndex, upgradesEquipped, additionalUpgradeSlots
+  list, upgradeType, id, upgradeIndex, upgradesEquipped, additionalUpgradeSlots, userSettings
 ) {
   const upgrades = getEquippableUpgrades(
-    list, upgradeType, id, upgradesEquipped, additionalUpgradeSlots
+    list, upgradeType, id, upgradesEquipped, additionalUpgradeSlots, userSettings
   );
   const validIds = upgrades.validIds;
   const invalidIds = upgrades.invalidIds;
@@ -1121,7 +1132,15 @@ function addCommand(list, commandId) {
 }
 
 function addBattle(list, type, id) {
-  if (type === 'primary') {
+  if (type === 'objective') {
+    list.objectiveCards.push(id);
+  } else if (type === 'deployment') {
+    list.deploymentCards.push(id);
+  } else if (type === 'condition') {
+    list.conditionCards.push(id);
+  }
+
+  else if (type === 'primary') {
     list.primaryCards.push(id);
   } else if (type === 'secondary') {
     list.secondaryCards.push(id);
@@ -1132,13 +1151,21 @@ function addBattle(list, type, id) {
 }
 
 function removeBattle(list, type, index) {
-  if (type === 'primary') {
+  if (type === 'objective') {
+    list.objectiveCards = deleteItem(list.objectiveCards, index);
+  } else if (type === 'deployment') {
+    list.deploymentCards = deleteItem(list.deploymentCards, index);
+  } else if (type === 'condition') {
+    list.conditionCards = deleteItem(list.conditionCards, index);
+  }else if (type === 'primary') {
     list.primaryCards = deleteItem(list.primaryCards, index);
   } else if (type === 'secondary') {
     list.secondaryCards = deleteItem(list.secondaryCards, index);
   } else if (type === 'advantage') {
     list.advantageCards = deleteItem(list.advantageCards, index);
-  } else return;
+  } 
+  else return;
+
   return list;
 }
 
@@ -1166,10 +1193,12 @@ function getEligibleBattlesToAdd(list, type) {
   const validIds = [];
   const invalidIds = [];
   const scenarioMissionIds = ['Df', 'Oe'];
-  const cardsById = cardIdsByType.battle; //Object.keys(cards);
 
   let currentCards;
-  if (type === 'primary') currentCards = list.primaryCards;
+  if (type === 'objective') currentCards = list.objectiveCards;
+  else if (type === 'deployment') currentCards = list.deploymentCards;
+  else if (type === 'condition') currentCards = list.conditionCards;
+  else if (type === 'primary') currentCards = list.primaryCards;
   else if (type === 'secondary') currentCards = list.secondaryCards;
   else if (type === 'advantage') currentCards = list.advantageCards;
   else return;
@@ -1192,44 +1221,53 @@ function getEligibleBattlesToAdd(list, type) {
 }
 
 function getEligibleContingenciesToAdd(list) {
-if (!list.contingencies) list.contingencies = [];
-const validCommandIds = [];
-const invalidCommandIds = [];
-const cardsById = cardIdsByType.command; // Object.keys(cards);
-
-let numContingencies = 0;
-list.units.forEach((unit) => {
-  const unitCard = cards[unit.unitId];
-  if (unitCard.contingencies && unitCard.contingencies > 0)
-    numContingencies += unitCard.contingencies
-});
-cardIdsByType['command'].forEach(id => {
-  const card = cards[id];
-  // if (card.cardType !== 'command') return;
-  if (list.commandCards.includes(id)) return;
-  if (list.contingencies.includes(id)) return;
-  if (!list.faction.includes(card.faction)) return;
-  if (id === 'aa') return;
-  if (id === 'jl' || id === 'ka' || id ==='kb') return;
-  if (
-    list.contingencies.length >= numContingencies ||
-    (card.commander && !list.commanders.includes(card.commander))
-  ) {
-    invalidCommandIds.push(id);
-    return;
-  }
-  validCommandIds.push(id);
-});
-return {
-  validIds: sortCommandIds(validCommandIds),
-  invalidIds: sortCommandIds(invalidCommandIds)
-};
-}
-
-function getEligibleCommandsToAdd(list) {
+  if (!list.contingencies) list.contingencies = [];
   const validCommandIds = [];
   const invalidCommandIds = [];
-  const cardsById = cardIdsByType.command; // Object.keys(cards);
+
+  let numContingencies = 0;
+  list.units.forEach((unit) => {
+    const unitCard = cards[unit.unitId];
+    if (unitCard.contingencies && unitCard.contingencies > 0)
+      numContingencies += unitCard.contingencies
+  });
+  cardIdsByType['command'].forEach(id => {
+    const card = cards[id];
+    const useNewCards = true; // TODO
+    if(!isGoodForAgeMode(card, list)) return;
+    // if (card.cardType !== 'command') return;
+    if (list.commandCards.includes(id)) return;
+    if (list.contingencies.includes(id)) return;
+    if (!list.faction.includes(card.faction)) return;
+    if (id === 'aa') return;
+    if (id === 'jl' || id === 'ka' || id ==='kb') return;
+    if (
+      list.contingencies.length >= numContingencies ||
+      (card.commander && !list.commanders.includes(card.commander))
+    ) {
+      invalidCommandIds.push(id);
+      return;
+    }
+    validCommandIds.push(id);
+  });
+  return {
+    validIds: sortCommandIds(validCommandIds),
+    invalidIds: sortCommandIds(invalidCommandIds)
+  };
+  }
+
+function getEligibleCommandsToAdd(list) {
+  const stormTideCommands = {
+    '500-point mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
+    'standard mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
+    'grand army mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
+    'storm tide: infantry': ['AC', 'AE', 'AG'],
+    'storm tide: armored': ['AB', 'AF', 'AJ'],
+    'storm tide: special forces': ['AD', 'AH', 'AI']
+  };
+
+  const validCommandIds = [];
+  const invalidCommandIds = [];
 
   const pipCounts = { '1': 0, '2': 0, '3': 0 };
   list.commandCards.forEach(id => {
@@ -1238,9 +1276,26 @@ function getEligibleCommandsToAdd(list) {
   });
   cardIdsByType['command'].forEach(id => {
     const card = cards[id];
+    if(!isGoodForAgeMode(card, list)) return;
     // if (card.cardType !== 'command') return;
     if (list.commandCards.includes(id)) return;
     if (list.contingencies && list.contingencies.includes(id)) return;
+
+    if (
+      stormTideCommands[list.mode] &&
+      stormTideCommands[list.mode].length === 3 &&
+      stormTideCommands[list.mode].includes(id)
+    ) {
+      validCommandIds.push(id);
+      return;
+    } else if (
+      stormTideCommands[list.mode] &&
+      stormTideCommands[list.mode].length === 3 &&
+      stormTideCommands['standard mode'].includes(id)
+    ) {
+      invalidCommandIds.push(id);
+      return;
+    }
 
     if (!list.faction.includes(card.faction)) return;
     if (id === 'aa') return; // Standing Orders
@@ -1271,13 +1326,15 @@ function getEquippableUpgrades(
   const impRemnantUpgrades = ['ej', 'ek', 'fv', 'iy', 'fu', 'gm', 'gl', 'em', 'en', 'ja'];
   const validUpgradeIds = [];
   const invalidUpgradeIds = [];
-  const cardsById = cardIdsByType.upgrade; // Object.keys(cards);
 
   if (!id) return { validUpgradeIds: [], invalidUpgradeIds: [] };
   const unitCard = cards[id];
   for (let i = 0; i < cardIdsByType['upgrade'].length; i++) {
     const id = cardIdsByType['upgrade'][i];
     const card = cards[id];
+
+    if(!isGoodForAgeMode(card, list)) continue;
+
     if (id === 'nc') continue; // duplicate card
 
     // if (card.cardType !== 'upgrade') continue;
@@ -1294,7 +1351,7 @@ function getEquippableUpgrades(
     if (faction === 'rebels' || faction === 'republic') unitCard['light side'] = true;
     else if (faction === 'separatists' || faction === 'empire' || faction === 'mercenary') unitCard['dark side'] = true;
 
-    if (unitCard.keywords.includes('Tempted')) {
+    if (unitCard.keywords.includes('Tempted') && list.isUsingOldPoints) {
       unitCard['light side'] = true;
       unitCard['dark side'] = true;
     }
@@ -1361,13 +1418,12 @@ function sortIds(ids) {
  * @param {*} upgradeId 
  */
 function validateUpgrades(list, unitIndex){
-  console.log('unit index = ' + unitIndex);
   
   const unit = list.units[unitIndex];
   const card = cards[unit.unitId];
 
   unit.validationIssues = [];
-  
+
   // Validation for each of the 'must equip' keywords (that I know of)
 
   if(card.flexResponse){
@@ -1376,7 +1432,7 @@ function validateUpgrades(list, unitIndex){
       if(id == null)
         return;
       const equipCard = cards[id];
-      if(equipCard.cardSubtype == 'heavy weapon'){
+      if(equipCard.cardSubtype === 'heavy weapon'){
         heavyCount++;
       }
     });
@@ -1401,7 +1457,7 @@ function validateUpgrades(list, unitIndex){
       if(id == null)
         return;
       const equipCard = cards[id];
-      if(equipCard.cardSubtype == 'heavy weapon'){
+      if(equipCard.cardSubtype === 'heavy weapon'){
         hasHeavy = true;
       }
     });
@@ -1416,12 +1472,12 @@ function validateUpgrades(list, unitIndex){
       if(id == null)
         return;
       const equipCard = cards[id];
-      if(equipCard.cardSubtype == 'protocol'){
+      if(equipCard.cardSubtype === 'protocol'){
         hasProto = true;
       }
     });
     if(!hasProto){
-      unit.validationIssues.push( { level:2, text: card.cardName + " is missing a protocol upgrade (Programmed)" });
+      unit.validationIssues.push( { level:2, text: card.cardName + " is missing a Programming upgrade (Programmed)" });
     }
   }
 
@@ -1442,15 +1498,13 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
     list = equipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   }
 
-  validateUpgrades(list, unitIndex);
+  //validateUpgrades(list, unitIndex);
 
   return list;
 }
 
 function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
   
-  const upgradeId = list.units[unitIndex].upgradesEquipped[upgradeIndex];
-
   if (action === 'UNIT_UPGRADE') {
     function unequip(list, unitIndex, upgradeIndex) {
       const unit = list.units[unitIndex];
@@ -1486,7 +1540,7 @@ function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
     list = unequipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex);
   }
 
-  validateUpgrades(list, unitIndex);
+  //validateUpgrades(list, unitIndex);
 
 
   return list;
@@ -1584,17 +1638,20 @@ function convertHashToList(faction, url) {
   list.contingencies = [];
   let segments;
   if (url.includes(':')) {
+
     const battleForceSegments = url.split(':');
     const battleForceCode = battleForceSegments[0];
 
     let keys = Object.keys(battleForcesDict);
-    for(let i = 0; i < keys.length; i++) {
+    for(let i=0; i<keys.length; i++){
       let bf = battleForcesDict[keys[i]];
-      if (battleForceCode == bf.linkId) {
+      if(battleForceCode == bf.linkId){
         list.battleForce = bf.name;
         break;
       }
     }
+
+    // Regardless, continue on thru
     segments = battleForceSegments[1].split(',');
   } else {
     list.battleForce = '';
@@ -1637,11 +1694,17 @@ function convertHashToList(faction, url) {
         } else {
           list.contingencies.push(cardId);
         }
-      } else if (card.cardSubtype === 'primary') {
+      } else if (card.cardSubtype === 'objective') {
+        list.objectiveCards.push(cardId);
+      } else if (card.cardSubtype === 'deployment') {
+        list.deploymentCards.push(cardId);
+      } else if (card.cardSubtype === 'condition') {
+        list.conditionCards.push(cardId);
+      }else if (card.cardSubtype === 'primary') {
         list.primaryCards.push(cardId);
-      } else if (card.cardSubtype === 'secondary') {
+      }else if (card.cardSubtype === 'secondary') {
         list.secondaryCards.push(cardId);
-      } else if (card.cardSubtype === 'advantage') {
+      }else if (card.cardSubtype === 'advantage') {
         list.advantageCards.push(cardId);
       }
     });
@@ -1678,12 +1741,11 @@ function mergeLists(primaryList, secondaryList) {
   return consolidate(primaryList);
 }
 
-// All (most...) battleForce-specific stuff (should) goes here
+// This doesn't feel great as a spot for most of these, but it's not horrible re how validation works now
 function battleForceValidation(currentList){
 
   const validationIssues = [];
-  // TODO is a switch against the code standard? ;)
-  // Should destroy this in favor of adding a 'rule' to apply for BzF in the object, e.g.
+  // TODO TODO Should destroy this in favor of adding a 'rule' to apply for BzF in the object, e.g.
   // rules:[... {type:'unitLimit', min:0, max:1, types:['ay', 'sr']}]
 
   switch(currentList.battleForce){
@@ -1697,6 +1759,34 @@ function battleForceValidation(currentList){
         }
         break;
       }
+  }
+
+  if(battleForcesDict[currentList.battleForce]?.rules?.twoRebels){
+    let rebelsCount = currentList.units.reduce((rebelsCount, unit)=>{
+      const card = cards[unit.unitId];
+      if (card.faction === "rebels")
+        return rebelsCount + unit.count;
+      else return rebelsCount;
+    }, 0);
+
+    if(rebelsCount < 2){
+      validationIssues.push({level:2, text:"List must have at least 2 REBEL (i.e. non-Ewok) units."});
+    }
+  }
+
+  if( battleForcesDict[currentList.battleForce]?.rules?.unitLimits){
+    let unitLimits = battleForcesDict[currentList.battleForce].rules.unitLimits;
+
+    unitLimits.forEach( limit =>{
+      
+      let unitCount = currentList.units.reduce((count, unit)=>{
+        return count + (unit.unitId === limit.id ? unit.count : 0)}, 0);
+      
+      if(unitCount < limit.min || unitCount > limit.max){
+        let name = cards[limit.id].cardName;
+        validationIssues.push({level:2, text:"You must have " + limit.min + "-" + limit.max + " " + name.toUpperCase()});
+      }
+    });
   }
   return validationIssues;
 }
@@ -1747,8 +1837,8 @@ function rankValidation(currentList, ranks, mercs, rankReqs){
 
   // const countMercs = currentList.battleForce.countsMercsForMin;
 
-  // Flag for a bf's combined comm/op limits, only when comm/op already overrun individually
-  if(rankReqs.commOp && (ranks.commander + ranks.commander) > rankReqs.commOp
+
+  if(rankReqs.commOp && (ranks.commander + ranks.operative) > rankReqs.commOp
     && !(ranks.commander > rankReqs.commander || ranks.operative > rankReqs.operative)){
     validationIssues.push({level:2, text:"Limit of " + rankReqs.commOp + " total COMMMANDERS and OPERATIVES"});
   }
@@ -1779,20 +1869,33 @@ function rankValidation(currentList, ranks, mercs, rankReqs){
   return validationIssues;
 }
 
-function applyRankAdjustments(currentList, rankReqs) {
-  
-  let extraRankIds = []
-  
+// TODO very lazy/gross implementation for now...
+function applyEntourage(currentList, rankReqs)
+{
+  let entourage = [];
+
   currentList.units.forEach((unit)=>{
     const card = cards[unit.unitId];
-    if (card.entourage) {
-      extraRankIds.push(card.entourage);
-    // } else if (card.detachment) {
-    //   extraRankIds.push(card.detachment);
-    } else if (extraRankIds.includes(card.id)) {
-      rankReqs[card.rank][1]++;
-      let idIndex = extraRankIds.indexOf(card.id)
-      extraRankIds.splice(idIndex, 1);
+
+    if(card.entourage){
+      entourage.push(card.entourage);
+    }
+  });
+
+  entourage.forEach((e) =>{
+    let hasUnit = false;
+    let rank = '';
+    currentList.units.forEach((unit)=>{
+      const card = cards[unit.unitId];
+
+      if(card.cardName === e.name){
+        hasUnit = true;
+        rank = card.rank;
+      }
+    });
+
+    if(hasUnit){
+      rankReqs[rank][1]++;
     }
   });
 
@@ -1826,7 +1929,7 @@ function getRankLimits(currentList){
   let rankReqs = {};
   (Object.keys(dictRankReqs)).forEach(r => rankReqs[r] = [dictRankReqs[r][0], dictRankReqs[r][1]]);
 
-  applyRankAdjustments(currentList, rankReqs);  
+  applyEntourage(currentList, rankReqs);  
   applyFieldCommander(currentList, rankReqs);
 
   return rankReqs;
@@ -1837,16 +1940,20 @@ function getRankLimits(currentList){
 // iterating everything every time something's added
 function validateList(currentList, rankLimits){
   let validationIssues = [];
+  validationIssues.push( { level:1, text: "...there might still be some general teething issues here. Please hit 'About' and shoot an email if you find something wrong!" });
+
+  validationIssues.push( { level:1, text: "Validation is (...still) a work in progress... double-check your army rules and unit cards! (Including, not limited to: Detachment, BF unit limits, BFs counting all SF as Corps like they should)" });
+
 
   const battleForce = currentList.battleForce;
 
-  let ranks = {...currentList.unitCounts} //{ commander:0, operative:0, corps:0, special:0, heavy:0, support:0 }
+  let ranks = {...currentList.unitCounts}
   let mercs = { commander:0, operative:0, corps:0, special:0, heavy:0, support:0 }
 
   // Determine what our rank requirements are, warn if unknown
   // TODO need more definitive handling for the other modes...
   if(battleForce && !battleForcesDict[battleForce][currentList.mode]){
-      validationIssues.push({level:1, text:"Playing a battleforce in a mode with no defined battleforce construction rules (Defaulting to 1000pt)"});
+      validationIssues.push({level:1, text:"Playing a battleforce in a mode with no defined battleforce construction rules (Defaulting to 800pt)"});
   } 
   
   let rankReqs = rankLimits; //updateRankLimits(currentList);
@@ -1869,6 +1976,34 @@ function validateList(currentList, rankLimits){
   validationIssues.push(...mercValidation(currentList, ranks, mercs));
 
   return validationIssues;
+}
+
+function checkBattleforceUnits(list, battleforceName){
+  if(battleforceName == ''){
+    // TODO special issue
+    return [];
+  }
+  const battleforce = battleForcesDict[battleforceName];
+  let invalidUnits = [];
+
+  console.log(JSON.stringify(list));
+  console.log(JSON.stringify(battleforce));
+
+  list.units.forEach(unit => {
+    let card = cards[unit.unitId];
+    console.log(JSON.stringify(card));
+    if(!battleforce[card.rank].includes(unit.unitId)){
+      console.log("Illegal unit! " + JSON.stringify(unit));
+      invalidUnits.push(unit);
+      
+    }
+    else if(unit.hasUniques){
+      // iterate thru upgrades, find uniques, flag unit if has unique upgrade not on bf whitelist
+    }
+
+  });
+
+  return true;
 }
 
 export {
@@ -1912,5 +2047,6 @@ export {
   generateMinimalText,
   generateHTMLText,
   validateList,
-  getRankLimits
+  getRankLimits, 
+  checkBattleforceUnits
 };

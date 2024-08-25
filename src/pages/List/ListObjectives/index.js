@@ -13,57 +13,66 @@ function ListObjectives() {
     currentList,
     setCardPaneFilter,
     handleRemoveBattle,
-    handleCardZoom
+    handleCardZoom,
+    userSettings
   } = React.useContext(ListContext);
   const chipStyle = { marginRight: 4, marginBottom: 4 };
-  // const objectiveTheme = createMuiTheme({
-  //   palette: { primary: { main: '#274c82' } }
-  // });
-  // const deploymentTheme = createMuiTheme({
-  //   palette: { primary: { main: '#38643A' } }
-  // });
-  // const conditionTheme = createMuiTheme({
-  //   palette: { primary: { main: '#963233' } }
-  // });
-  const advantageTheme = createMuiTheme({
-    palette: { primary: { main: '#316037' } }
-  });
-  const primaryTheme = createMuiTheme({
-    palette: { primary: { main: '#8e2f33' } }
-  });
-  const secondaryTheme = createMuiTheme({
-    palette: { primary: { main: '#eb9139' } }
-  });
-  const primaries = currentList.primaryCards.map((id, i) => (
-    <Chip
-      color="primary"
-      key={id}
-      label={cards[id].cardName}
-      style={chipStyle}
-      onClick={() => handleCardZoom(id)}
-      onDelete={() => handleRemoveBattle('primary', i)}
-    />
-  ));
-  const secondaries = currentList.secondaryCards.map((id, i) => (
-    <Chip
-      color="primary"
-      key={id}
-      label={cards[id].cardName}
-      style={chipStyle}
-      onClick={() => handleCardZoom(id)}
-      onDelete={() => handleRemoveBattle('secondary', i)}
-    />
-  ));
-  const advantages = currentList.advantageCards.map((id, i) => (
-    <Chip
-      color="primary"
-      key={id}
-      label={cards[id].cardName}
-      style={chipStyle}
-      onClick={() => handleCardZoom(id)}
-      onDelete={() => handleRemoveBattle('advantage', i)}
-    />
-  ));
+
+  let decks = [];
+  let cardsPerDeck = 3;
+  if(currentList.isUsingOldPoints){
+    cardsPerDeck = 4;
+    decks[0] = {type:'objective', label:"Objective", cards: currentList.objectiveCards, theme:createMuiTheme({
+      palette: { primary: { main: '#274c82' } }
+    })};
+    decks[1] = {type:'condition', label:"Condition", cards:currentList.deploymentCards, theme:createMuiTheme({
+      palette: { primary: { main: '#38643A' } }
+    })};
+    decks[2] = {type:'deployment', label:"Deployment", cards:currentList.conditionCards, theme:createMuiTheme({
+      palette: { primary: { main: '#963233' } }
+    })};
+  }else{
+    cardsPerDeck = 3;
+    decks[0] = {type:'primary', label:"Objective", cards:currentList.primaryCards, theme:createMuiTheme({
+      palette: { primary: { main: '#963233' } }
+    })};
+    decks[1] = {type:'secondary', label:"Secondary", cards:currentList.secondaryCards, theme:createMuiTheme({
+      palette: { primary: { main: '#E68646' } }
+    })};
+    decks[2] = {type:'advantage', label:"Advantage", cards:currentList.advantageCards, theme:createMuiTheme({
+      palette: { primary: { main: '#306036' } }
+    })};
+  }
+
+  const battleSelectors = decks.map(d=>
+    <div style={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'center' }}>
+        <ThemeProvider theme={d.theme}>
+          {d.cards.length < 4 && <Chip
+            clickable
+            size={chipSize}
+            color="primary"
+            label= {d.label}
+            icon={<AddIcon />}
+            style={{ marginBottom: 4, marginRight: 4 }}
+            onClick={() => setCardPaneFilter({
+              action: 'BATTLE', type: d.type
+            })}
+          />}
+          {
+            d.cards.map((id, i) => (
+              <Chip
+                color="primary"
+                key={id}
+                label={cards[id].cardName}
+                style={chipStyle}
+                onClick={() => handleCardZoom(id)}
+                onDelete={() => handleRemoveBattle(d.type, i)}
+              />
+            ))}
+        </ThemeProvider>
+      </div>
+  );
+
   return (
     <div
       id="list-objectives"
@@ -73,54 +82,7 @@ function ListObjectives() {
         alignItems: 'center'
       }}
     >
-      <div style={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'center' }}>
-        <ThemeProvider theme={primaryTheme}>
-          {primaries.length < 4 && <Chip
-            clickable
-            size={chipSize}
-            color="primary"
-            label="Primaries"
-            icon={<AddIcon />}
-            style={{ marginBottom: 4, marginRight: 4 }}
-            onClick={() => setCardPaneFilter({
-              action: 'BATTLE', type: 'primary'
-            })}
-          />}
-          {primaries}
-        </ThemeProvider>
-      </div>
-      <div style={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'center' }}>
-        <ThemeProvider theme={secondaryTheme}>
-          {secondaries.length < 4 && <Chip
-            clickable
-            size={chipSize}
-            color="primary"
-            label="Secondary"
-            icon={<AddIcon />}
-            style={{ marginBottom: 4, marginRight: 4 }}
-            onClick={() => setCardPaneFilter({
-              action: 'BATTLE', type: 'secondary'
-            })}
-          />}
-          {secondaries}
-        </ThemeProvider>
-      </div>
-      <div style={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'center' }}>
-        <ThemeProvider theme={advantageTheme}>
-          {advantages.length < 4 && <Chip
-            clickable
-            size={chipSize}
-            color="primary"
-            label="Advantage"
-            icon={<AddIcon />}
-            style={{ marginBottom: 4, marginRight: 4 }}
-            onClick={() => setCardPaneFilter({
-              action: 'BATTLE', type: 'advantage'
-            })}
-          />}
-          {advantages}
-        </ThemeProvider>
-      </div>
+      {battleSelectors}
     </div>
   );
 };

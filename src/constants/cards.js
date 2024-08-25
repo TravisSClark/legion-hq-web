@@ -13,6 +13,6 @@ Object.keys(cards).forEach(id=>{
   cardIdsByType[type].push(id);
 });
 
-export {cardIdsByType as cardsIdsByType};
+export {cardIdsByType};
 export default cards;
 

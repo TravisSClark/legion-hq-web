@@ -5,7 +5,8 @@ const settings = {
     cardStyle: 'images',
     chipSize: 'medium',
     builderOrientation: 'right',
-    cascadeUpgradeSelection: 'yes'
+    cascadeUpgradeSelection: 'yes',
+    showStormTide:false
   },
   list: [
     {
@@ -13,7 +14,7 @@ const settings = {
       name: 'Theme',
       values: [
         { key: 'dark', name: 'Dark Side' },
-        { key: 'light', name: 'Light Side'}
+        { key: 'light', name: 'Light Side'},
       ]
     },
     {
@@ -34,10 +35,18 @@ const settings = {
     },
     {
       key: 'cascadeUpgradeSelection',
-      name: 'Cascade Upgrade Selecting',
+      name: 'Cascade Upgrade Selection',
       values: [
         { key: 'yes', name: 'Yes' },
         { key: 'no', name: 'No' }
+      ]
+    },
+    {
+      key: 'showStormTide',
+      name: 'Show Storm Tide Options',
+      values: [
+        { key: true, name: 'Yes' },
+        { key: false, name: 'No' }
       ]
     }
   ]

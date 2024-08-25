@@ -46,7 +46,7 @@ function ListExtras() {
       <TTSTextExportButton currentList={currentList} />
       <PrintExportButton currentList={currentList} />
       <SimpleButton
-        timeout={3000}
+        timeout={500}
         timeoutMessage={listSaveMessage ? listSaveMessage : 'Saving...'}
         isDisabled={!Boolean(userId)}
         icon={<SaveIcon />}
@@ -70,10 +70,9 @@ function ListExtras() {
         handleClick={handleToggleIsKillPointMode}
       />
       <SimpleButton
-        timeout={1000}
         timeoutMessage="Changing Points..."
         icon={<UsePrevIcon />}
-        label={currentList.isUsingOldPoints ? "Using Old Points" : "Using New Points"}
+        label={currentList.isUsingOldPoints ? "Using 2.5 Cards/Points" : "Using New Points"}
         handleClick={handleToggleUsingOldPoints}
       />
     </div>

@@ -17,6 +17,7 @@ function checkUpgradeType(upgrade, value) {
 }
 
 const interactions = {
+  // TODO jpl - get these encoded in the cards list instead
   entourages: {
     bc: {
       // IRGs + Emperor Palpatine

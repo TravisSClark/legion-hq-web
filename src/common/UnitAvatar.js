@@ -9,9 +9,7 @@ function UnitCardAvatar({ id, count = 1, handleClick }) {
     return (
       <CardIcon
         size="medium"
-        cardType={card.cardType}
-        cardName={card.cardName}
-        imageName={card.imageName}
+        card={card}
         handleClick={handleClick}
       />
     );
@@ -22,9 +20,7 @@ function UnitCardAvatar({ id, count = 1, handleClick }) {
       rank={card.rank}
       avatar={
         <CardIcon
-          cardName={card.cardName}
-          cardType={card.cardType}
-          imageName={card.imageName}
+          card={card}
           handleClick={handleClick}
         />
       }

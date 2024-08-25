@@ -16,10 +16,8 @@ const useStyles = makeStyles(theme => ({
 
 function CardIcon({
   size = 'large',
-  cardName,
-  cardType,
-  imageName,
-  handleClick
+  handleClick,
+  card
 }) {
   const classes = useStyles();
   const placeholder = (
@@ -33,8 +31,8 @@ function CardIcon({
   return (
     <Img
       decode={false}
-      alt={cardName}
-      src={`${urls.cdn}/${cardType}Cards/${imageName}`}
+      alt={card.cardName}
+      src={`${urls.cdn}/${card.cardType}Cards/${card.imageName}`}
       style={{ scale: 5 }}
       loader={placeholder}
       className={clsx(classes.image, classes[size], {

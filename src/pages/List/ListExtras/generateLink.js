@@ -38,12 +38,16 @@ function generateLink(list) {
   }
   if (list.contingencies)
     list.contingencies.forEach(commandId => urlStrings.push(commandId));
-  // list.objectiveCards.forEach(objectiveId => urlStrings.push(objectiveId));
-  // list.deploymentCards.forEach(deploymentId => urlStrings.push(deploymentId));
-  // list.conditionCards.forEach(conditionId => urlStrings.push(conditionId));
-  list.primaryCards.forEach(primaryId => urlStrings.push(primaryId));
-  list.secondaryCards.forEach(secondaryId => urlStrings.push(secondaryId));
-  list.advantageCards.forEach(advantageId => urlStrings.push(advantageId));
+
+  if(list.isUsingOldPoints){
+    list.objectiveCards.forEach(i => urlStrings.push(i));
+    list.deploymentCards.forEach(i => urlStrings.push(i));
+    list.conditionCards.forEach(i => urlStrings.push(i));
+  }else{
+    list.primaryCards.forEach(i => urlStrings.push(i));
+    list.secondaryCards.forEach(i => urlStrings.push(i));
+    list.advantageCards.forEach(i => urlStrings.push(i));
+  }
   if (list.battleForce) {
     let bf = battleForcesDict[list.battleForce];
 
