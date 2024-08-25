@@ -14941,7 +14941,7 @@
         "cardName": "B2 Super Battle Droid Squad",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 38,
+        "cost": 77,
         "imageName": "B2 Super Battle Droid Squad.png",
         "keywords": [
             "Indomitable",
@@ -15182,5 +15182,23 @@
         "imageName": "Shifting Priorities.png",
         "keywords": [],
         "id": "Al"
+    },
+    "Am": {
+        "id": "Am",
+        "cardSubtype": "personnel",
+        "cardName": "Rebel Veteran Squad",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 63,
+        "imageName": "Rebel Veteran Squad.png",
+        "keywords": [
+            "Indomitable",
+            "Transport"
+        ],
+        "requirements": [
+            {
+                "cardName": "Rebel Veteran"
+            }
+        ]
     }
 }
