@@ -15,6 +15,7 @@ import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import CardChip from 'common/CardChip';
 import KeywordChips from 'common/KeywordChips';
 import urls from 'constants/urls';
+import PointsChip from '../CardChip/PointsChip';
 
 const useStyles = makeStyles(theme => ({
   expand: {
@@ -72,7 +73,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
           />
         </CardActionArea>
         <CardActions disableSpacing>
-          {(cost || cost === 0) && <CardChip type="points" value={cost} size={chipSize} />}
+          {(cost || cost === 0) && <PointsChip points={cost} size={chipSize} />}
           <IconButton
             size="small"
             aria-expanded={isExpanded}

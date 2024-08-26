@@ -1071,7 +1071,7 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
 
     if (card.rank !== rank) continue;
 
-    if((id === 'AA' || id === 'AK') && !userSettings.showStormTide)
+    if((id === 'AA' || id === 'AK') && userSettings.showStormTide != 'yes')
       continue;
 
     if (list.mode.includes('storm tide') && id === 'AA') {

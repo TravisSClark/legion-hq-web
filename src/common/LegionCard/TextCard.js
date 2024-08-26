@@ -22,6 +22,7 @@ import KeywordChips from 'common/KeywordChips';
 import CardIcon from 'common/CardIcon';
 import IconBadge from 'common/IconBadge';
 import UpgradeBar from 'common/UpgradeBar';
+import PointsChip from '../CardChip/PointsChip';
 
 function capitalizeFirstLetters(words) {
   const strings = words.split(' ').map(string => {
@@ -216,7 +217,7 @@ function CounterpartCardContent({ card, chipSize }) {
           Cost
         </Typography>
         <div style={{ flexGrow: 1 }} />
-        <CardChip type="points" value={cost} size={chipSize} />
+        <PointsChip points={cost} size={chipSize} />
       </ReverseWrapper>
       <Divider style={{ marginBottom: 4 }} />
       <ReverseWrapper>
@@ -273,7 +274,7 @@ function UpgradeCardContent({ card, chipSize }) {
           Cost
         </Typography>
         <div style={{ flexGrow: 1 }} />
-        <CardChip type="points" value={cost} size={chipSize} />
+        <PointsChip points={cost} size={chipSize} />
       </ReverseWrapper>
     </CardContent>
   );
@@ -295,7 +296,7 @@ function UnitCardContent({ card, chipSize }) {
       <ReverseWrapper>
         <Typography variant="body2" color="textSecondary">Cost</Typography>
         <div style={{ flexGrow: 1 }} />
-        <CardChip type="points" value={cost} size={chipSize} />
+        <PointsChip points={cost} size={chipSize} />
       </ReverseWrapper>
       <Divider style={{ marginBottom: 4 }} />
       <ReverseWrapper>

@@ -3,7 +3,7 @@ const keywords = {
 			"summary":"",
 			"full":"A compulsory move is a free move action. \
 				To perform a compulsory move, the unit performs a full move at its maximum speed. \
-				If it cannot do so, or if a full move would cause any part of the unit leader’s base  \
+				If it cannot do so, or if a full move would cause any part of the unit leaderï¿½s base  \
 				to be outside the battle?eld, it can perform a partial move instead, ending its \
 				movement as far along the movement template as possible."
 	},
@@ -23,7 +23,7 @@ of an action or free action."
 	},
 	"AI":{
 		"summary":"",
-		"full":"At the start of a unit with the AI keyword’s Perform Actions \
+		"full":"At the start of a unit with the AI keywordï¿½s Perform Actions \
 step, if it is on the battle?eld, does not have a faceup order \
 token, and is not at range 3 of a friendly p unit, it must perform \
 one of the speci?ed actions as its ?rst action that activation. \
@@ -64,7 +64,7 @@ and must always be the only weapon in an attack pool."
 		"full":"A unit that is equipped with a card that has the Arm X: Charge \
 Token Type keyword can perform the Arm X action. When a \
 unit performs the Arm X action, the unit places X charge tokens \
-of the speci?ed type and matching its controlling player’s color \
+of the speci?ed type and matching its controlling playerï¿½s color \
 within 1 and LOS of its unit leader. \
 Charge tokens cannot overlap any objective, advantage, or other \
 charge tokens and must be placed on a ?at surface completely \
@@ -105,7 +105,7 @@ of that activation."
 	},
 	"Authoritative":{
 		"summary":"",
-		"full":"When a unit with the authoritative keyword would be issued an order, that unit may issue an order to a friendly unit at range 1–2 instead."
+		"full":"When a unit with the authoritative keyword would be issued an order, that unit may issue an order to a friendly unit at range 1ï¿½2 instead."
 	},
 	"Bane Token":{
 		"summary":"",
@@ -126,7 +126,7 @@ following effects (Here I Am, Smoke and Mirrors, or Kablamo!):"
 	"Kablamo!":{
 		"summary":"",
 		"full":"The token detonates using the weapon pro?le on \
-Cad Bane’s I Make the Rules Now Command Card, then the \
+Cad Baneï¿½s I Make the Rules Now Command Card, then the \
 token is removed."
 	},
 	"Smoke and Mirrors":{
@@ -141,8 +141,8 @@ Then, Cad Bane issues himself an order. \n \
 If Cad Bane is on the battle?eld, his Here I Am token is \
 replaced by his miniature. Any tokens assigned to Cad Bane \
 remain assigned to him. \n \
-• If Cad Bane is defeated, the token is removed. \n \
-• At the start of each round, starting with the blue player, a \
+ï¿½ If Cad Bane is defeated, the token is removed. \n \
+ï¿½ At the start of each round, starting with the blue player, a \
 player may reveal a friendly Here I Am token and resolve it."
 	},
 	"Barrage":{
@@ -154,7 +154,7 @@ during its activation."
 	"Beam":{
 		"summary":"",
 		"full":"During the Declare Additional Defender step, if a weapon \
-with the Beam X keyword is in a unit’s attack pool, that unit \
+with the Beam X keyword is in a unitï¿½s attack pool, that unit \
 may declare up to X additional attacks forming attack pools \
 using only the weapon with the Beam X keyword, even though \
 the weapon has already been added to an attack pool. These \
@@ -190,7 +190,7 @@ up to X friendly units at range 2 to each gain one surge token."
 enemy o or p unit. The chosen unit gains a bounty token. \
 After a friendly unit with the Bounty keyword defeats an enemy \
 unit that has one or more bounty tokens with an attack or effect, \
-the friendly unit’s controlling player scores 1 VP."
+the friendly unitï¿½s controlling player scores 1 VP."
 	},
 	"Cache":{
 		"summary":"",
@@ -231,29 +231,29 @@ While a unit with the Complete the Mission keyword is at range 1 \
 of one or more friendly priority mission tokens, that unit gains \
 e:d. When a unit with the Complete the Mission keyword \
 attacks an enemy unit at range 1 of one or more friendly priority \
-mission tokens, the attacking unit’s attack pool gains the Critical \
+mission tokens, the attacking unitï¿½s attack pool gains the Critical \
 2 keyword."
 	},
 	"Contingencies":{
 		"summary":"",
 		"full":"When building a command hand before the game begins, \
-for each unit with the Contingencies X keyword in a player’s \
+for each unit with the Contingencies X keyword in a playerï¿½s \
 army, that player sets aside up to X additional Command \
 Cards facedown as Contingency Cards, where X is equal to \
 the combined Contingencies X value on all their units. These \
 set-aside cards may have any number of pips but must follow \
 all other rules for constructing a command hand. Set-aside \
-Contingency Cards are not considered to be in a player’s \
+Contingency Cards are not considered to be in a playerï¿½s \
 command hand and are kept secret from an opponent. A player \
 may look at their set-aside Contingency Cards at any time. \
 After a player reveals a Command Card, before any other effects \
 are resolved, that player may discard that card to reveal one of \
 their set-aside Contingency Cards with an equal number of pips \
 instead. The revealed Contingency Card is then treated as that \
-player’s selected and revealed Command Card for that turn. If \
+playerï¿½s selected and revealed Command Card for that turn. If \
 both players have set-aside Contingency Cards, the blue player \
 must decide ?rst whether or not to reveal a Contingency Card. \
-If all a player’s units with the Contingencies X keyword are \
+If all a playerï¿½s units with the Contingencies X keyword are \
 defeated, a player cannot reveal or use their Contingency Cards."
 	},
 	"Coordinate":{
@@ -278,33 +278,33 @@ has a Counterpart Card and their miniature is a counterpart \
 miniature. The combined unit has the rank, unit type, defense \
 die, courage value, surge conversion chart, and speed as shown \
 on the Unit Card. \
-• Sometimes, a Counterpart Card has a different unit type \
+ï¿½ Sometimes, a Counterpart Card has a different unit type \
 only for the purposes of equipping Upgrade Cards. \
-• A unit leader in a combined unit can be assigned wounds \
+ï¿½ A unit leader in a combined unit can be assigned wounds \
 when it is the only non-counterpart miniature in the unit. \
-• When a wound token would be assigned to a non- \
-counterpart miniature in a combined unit, that unit’s \
+ï¿½ When a wound token would be assigned to a non- \
+counterpart miniature in a combined unit, that unitï¿½s \
 controlling player may assign that wound token to an \
 undefeated counterpart miniature in that unit instead. That \
 wound token must be assigned to a counterpart miniature \
 if it would cause the last non-counterpart miniature in the \
 unit to be defeated. \
-• Upgrade Cards without weapons equipped to a counterpart \
+ï¿½ Upgrade Cards without weapons equipped to a counterpart \
 miniature are usable by the rest of the unit, unless the \
 counterpart miniature is defeated. \
-• Upgrade Cards with weapons are usable only by the \
+ï¿½ Upgrade Cards with weapons are usable only by the \
 miniature which has them equipped. \
-• The non-counterpart miniatures in the unit use the wound \
+ï¿½ The non-counterpart miniatures in the unit use the wound \
 threshold on their Unit or Upgrade Card, the counterpart \
 miniature uses the wound threshold on the Counterpart \
 Card. \
-• The combined unit has the keywords on both the Unit Card \
+ï¿½ The combined unit has the keywords on both the Unit Card \
 and the Counterpart Card. \
-• Miniatures in a combined unit may only use weapons that \
+ï¿½ Miniatures in a combined unit may only use weapons that \
 are on their respective cards. If a combined unit gains a \
 weapon from a Command Card, only the non-counterpart \
 miniature may use it. \
-• If the counterpart miniature is defeated, the unit loses any \
+ï¿½ If the counterpart miniature is defeated, the unit loses any \
 keywords, abilities, or effects on the Counterpart Card."
 	},
 	"Cover":{
@@ -320,7 +320,7 @@ number equal to X."
 its rank to o for all rules purposes for the rest of the game. If \
 it does, it gains the In?ltrate keyword that game. A unit cannot \
 change its rank to o if there are no other p units in that \
-player’s army."
+playerï¿½s army."
 	},
 	"Creature Trooper":{
 		"summary":"",
@@ -349,7 +349,7 @@ unit with the Cunning keyword, there is still a tie for priority."
 	},
 	"Cycle":{
 		"summary":"",
-		"full":"At the end of a unit’s activation, ready each of its exhausted \
+		"full":"At the end of a unitï¿½s activation, ready each of its exhausted \
 Upgrade Cards with the Cycle keyword that was not used \
 during that activation. Only using the weapon, keywords, or \
 other card text on the card counts as using that Upgrade Card."
@@ -408,9 +408,9 @@ step, add up to X total suppression tokens to enemy units at range 2."
 	"Detachment":{
 		"summary":"",
 		"full":"During Army Building, a unit with the Detachment keyword \
-doesn’t count against the maximum number of units of its rank \
+doesn't count against the maximum number of units of its rank \
 that can be included. A unit with the Detachment keyword \
-can be included in a player’s army only if another unit that \
+can be included in a player's army only if another unit that \
 has the unit name or unit type specified and does not have the \
 Detachment keyword is also included in that army. Each unit \
 with the Detachment keyword needs its own matching specified \
@@ -439,7 +439,7 @@ or performs an action, with the exception of spending a standby \
 token which can be spent by a unit before the token detonates. \
 If both players have units that could detonate charge tokens, \
 the player that does not control the unit that just performed \
-the attack, move, or action may use their unit’s Detonate X \
+the attack, move, or action may use their unitï¿½s Detonate X \
 keyword ?rst. \
 When a token detonates, perform a separate attack against each \
 unit, friendly and enemy, that has LOS to the token and is in \
@@ -505,7 +505,7 @@ pick one. These cards can be revealed at the start of the phase or \
 step indicated by the Divulge keyword. If a card is revealed in \
 this manner, resolve the text that follows the Divulge keyword. \
 A card that is revealed in this way is not played and is returned \
-to that player’s command hand at the end of the step in which \
+to that playerï¿½s command hand at the end of the step in which \
 it was divulged. Players can divulge as many Command Cards \
 as they wish. If both players have Command Cards that are \
 divulged at the same time, the blue player can reveal their \
@@ -542,7 +542,7 @@ to the normal effects of spending aim or dodge tokens."
 		"summary":"",
 		"full":"When a unit with the Enrage X keyword has wound tokens \
 greater than or equal to X, that unit gains the Charge keyword \
-and treats its courage value as “-” and loses any suppression \
+and treats its courage value as ï¿½-ï¿½ and loses any suppression \
 tokens it may have. If a unit with the Enrage X keyword has \
 wound tokens greater than or equal to X but removes wound \
 tokens through an effect so that it has fewer than X, it no longer \
@@ -596,7 +596,7 @@ climb, it may move a vertical distance up to height 2."
 		"summary":"",
 		"full":"During Army Building, an army that includes a unit with the \
 Field Commander keyword may ignore the minimum p rank \
-requirement. If a player’s army contains no p units during \
+requirement. If a playerï¿½s army contains no p units during \
 Setup but does contain a unit with the Field Commander \
 keyword, that unit gains a commander token. When a player \
 reveals a non-p or o speci?c Command Card, they may \
@@ -619,13 +619,13 @@ gains a standby token."
 		"summary":"",
 		"full":"To add a weapon that has the Fixed: Front or Fixed: Rear \
 keyword to an attack pool, the defending unit must have at least \
-one of its miniature’s bases partially inside the speci?ed ?ring \
+one of its miniatureï¿½s bases partially inside the speci?ed ?ring \
 arc of the attacking miniature."
 	},
 	"Flawed":{
 		"summary":"",
 		"full":"A unit with the Flawed keyword has a corresponding Flaw Card \
-that must be added to an opponent’s command hand during \
+that must be added to an opponentï¿½s command hand during \
 Setup. The unit the Flaw Card belongs to is indicated in the \
 top right corner of the Flaw Card. An opponent may play a \
 Flaw Card from their command hand when permitted by the \
@@ -646,7 +646,7 @@ keyword must equip X HEAVY WEAPON upgrades."
 	"Full Pivot":{
 		"summary":"",
 		"full":"When a unit with the Full Pivot keyword performs a pivot, it \
-may pivot up to 360°."
+may pivot up to 360ï¿½."
 	},
 	"Generator":{
 		"summary":"",
@@ -656,11 +656,11 @@ may ?ip up to X inactive shield tokens to their active side."
 	"Graffiti Token":{
 		"summary":"",
 		"full":"A gra?ti token represents a striking image or symbol painted \
-onto the terrain of the battle?eld. Gra?ti tokens affect a unit’s \
+onto the terrain of the battle?eld. Gra?ti tokens affect a unitï¿½s \
 morale. Gra?ti tokens have two sides. Players should place the \
 gra?ti token ?at on a surface so that the side that corresponds \
 to their player color is faceup. \
-During the Rally step of a unit’s activation, it may roll one \
+During the Rally step of a unitï¿½s activation, it may roll one \
 additional die if it has LOS to and is at range 2 of a gra?ti token \
 placed by a friendly miniature. It must roll one fewer die, to \
 a minimum of 1, if it has LOS and is at range 2 of a gra?ti token \
@@ -745,7 +745,7 @@ keyword, each unit with the Hunted keyword gains a \
 bounty token."
 	},
 	"I'm Part of the Squad Too":{
-		"full":"A unit with the I’m Part of the Squad Too keyword is contesting \
+		"full":"A unit with the Iï¿½m Part of the Squad Too keyword is contesting \
 		an objective token if its unit leader is at range 1 of that token instead \
 		of 1/2."
 	},
@@ -754,10 +754,10 @@ bounty token."
 		"full":"A unit that suffers one or more wounds after defending against \
 an attack that includes a weapon with the Immobilize X weapon \
 keyword gains X immobilize tokens. \
-A unit’s maximum speed is reduced by 1 for each immobilize \
+A unitï¿½s maximum speed is reduced by 1 for each immobilize \
 token it has. A unit whose maximum speed is 0 and has at least \
 one immobilize token cannot perform moves of any kind. At \
-the end of a unit’s activation, it removes any immobilize tokens \
+the end of a unitï¿½s activation, it removes any immobilize tokens \
 that it has."
 	},
 	"Immune":{
@@ -834,7 +834,7 @@ and cannot provide backup. \
 If a unit with the Incognito keyword ever performs an attack \
 or defends against an attack, it loses all special rules of the \
 Incognito keyword for the remainder of the game. Additionally, \
-at the beginning of a unit with the Incognito keyword’s \
+at the beginning of a unit with the Incognito keywordï¿½s \
 activation, it may choose to lose the special rules of the \
 Incognito keyword for the remainder of the game."
 	},
@@ -860,7 +860,7 @@ Rally step, it rolls red defense dice instead of white defense dice."
 	},
 	"Infiltrate":{
 		"summary":"",
-		"full":"At the start of an undeployed unit with the In?ltrate keyword’s \
+		"full":"At the start of an undeployed unit with the In?ltrate keywordï¿½s \
 activation, it may deploy by placing the unit leader of that unit \
 within friendly territory. Then the remaining miniatures in that \
 unit are placed in cohesion with their unit leader and within \
@@ -869,7 +869,7 @@ when they are placed using In?ltrate."
 	},
 	"Inspire":{
 		"summary":"",
-		"full":"At the end of a unit with the Inspire X keyword’s activation, \
+		"full":"At the end of a unit with the Inspire X keywordï¿½s activation, \
 remove up to X total suppression tokens from other friendly \
 units at 2."
 	},
@@ -885,10 +885,10 @@ priority, treat that Command Card as having one more pip."
 		"full":"A vehicle or droid trooper unit that suffers wounds after \
 defending against an attack that included a weapon with the Ion \
 X keyword gains X ion tokens. \
-At the start of a unit’s activation, roll one white defense die for \
+At the start of a unitï¿½s activation, roll one white defense die for \
 every ion token that unit has. If any blank results are rolled, that \
 unit performs one fewer action during its activation. At the end \
-of a unit’s activation, it removes any ion tokens that it has. \
+of a unitï¿½s activation, it removes any ion tokens that it has. \
 If an attack pool includes the Ion X keyword, at the start of \
 the Modify Attack Dice step of the attack sequence, before any \
 other effects, the defending unit must ?ip active shield tokens, \
@@ -920,7 +920,7 @@ equal to or lower than X. When making a move with the Jump \
 X action, a unit may place the movement template overlapping \
 impassable terrain but may not end its move overlapping it. \
 When a unit performs the Jump X action, measure height from \
-that unit’s starting position."
+that unitï¿½s starting position."
 	},
 	"Juyo Mastery":{
 		"summary":"",
@@ -931,7 +931,7 @@ move actions during its activation, including free actions."
 	},
 	"Latent Power":{
 		"summary":"",
-		"full":"At the end of a unit with the Latent Power keyword’s activation, \
+		"full":"At the end of a unit with the Latent Power keywordï¿½s activation, \
 it may gain 1 suppression token to roll 1 red defense die. If \
 it does, on a e result, choose an enemy unit at 1 of this \
 miniature. The chosen unit gains 2 suppression tokens and 2 \
@@ -941,7 +941,7 @@ this miniature."
 	},
 	"Leader":{
 		"summary":"",
-		"full":"A miniature with the Leader keyword is treated as a unit’s unit \
+		"full":"A miniature with the Leader keyword is treated as a unitï¿½s unit \
 leader for all rules purposes. \
 If a miniature with the Leader keyword and a wound threshold \
 of 2 is defeated while in a unit with a wound threshold of 1, \
@@ -1085,7 +1085,7 @@ attacks are not ranged or melee attacks. A unit may make X \
 overrun attacks during its activation. A unit with an overrun \
 weapon can perform an overrun attack after it performs a \
 standard move in which the movement tool or one of its \
-miniatures’ bases overlapped an enemy miniature’s base. \
+miniaturesï¿½ bases overlapped an enemy miniatureï¿½s base. \
 After completing the move, the unit with the overrun weapon \
 performs an attack against the unit it moved through, ignoring \
 range when making this attack. It can only form one attack pool \
@@ -1183,10 +1183,10 @@ one aim and one dodge token."
 includes a weapon with the Ram X keyword, during the Modify \
 Attack Dice step, it may change X results to b results if it meets \
 either of the following conditions: \
-• The unit leader has a notched base and the unit performed \
+ï¿½ The unit leader has a notched base and the unit performed \
 at least one full standard move at its maximum speed during \
 the same activation as an attack using Ram X. \
-• The unit leader has a small base and the unit performed at \
+ï¿½ The unit leader has a small base and the unit performed at \
 least one move during the same activation as an attack using \
 Ram X."
 	},
@@ -1212,7 +1212,7 @@ ability does not cause that Upgrade Card to be exhausted."
 	},
 	"Regenerate":{
 		"summary":"",
-		"full":"At the end of a unit’s activation, if it has the Regenerate X \
+		"full":"At the end of a unitï¿½s activation, if it has the Regenerate X \
 keyword, it rolls one white defense die for each wound token \
 it has, up to X. For each d or e result, it removes one \
 wound token."
@@ -1243,7 +1243,7 @@ miniatures to that unit. This ability cannot be used if the card \
 that has the Repair X: Capacity Y keyword has a number of \
 wound tokens on it equal to or exceeding Y. \
 Wound tokens on cards are not considered to be on units and \
-do not count toward a unit’s wound threshold, nor can they be \
+do not count toward a unitï¿½s wound threshold, nor can they be \
 removed by abilities that remove wound tokens from units. \
 If a unit has multiple Repair X: Capacity Y abilities, treat each \
 keyword as a separate ability. \
@@ -1326,7 +1326,7 @@ unit with the Secret Mission keyword is within enemy territory, \
 it gains a secret mission token. \
 When scoring VP, if a player controls a unit with one or more \
 secret mission tokens and that unit is within enemy territory, \
-that unit’s controlling player scores 1 VP. Then, remove those \
+that unitï¿½s controlling player scores 1 VP. Then, remove those \
 secret mission tokens from the game."
 	},
 	"Self-Destruct":{
@@ -1336,7 +1336,7 @@ only be used during Self-Destruct attacks. Self-Destruct attacks are \
 ranged attacks even though Self-Destruct weapons are not ranged \
 weapons. A unit can perform a Self-Destruct attack as a free action \
 during its activation if it has at least X wound tokens. Perform an \
-attack using a unit’s Self-Destruct weapon against each unit at range 1 \
+attack using a unitï¿½s Self-Destruct weapon against each unit at range 1 \
 and in LOS, even if they are engaged. Self-Destruct attacks may not \
 be made by a unit that is embarked on a transport. \
 After performing all attacks, the unit performing the Self- \
@@ -1358,7 +1358,7 @@ rather than at range 2."
 		"summary":"",
 		"full":"During the Determine Cover step, a unit with the Sharpshooter \
 X keyword subtracts X from the numerical value of the \
-defender’s cover. \n \
+defenderï¿½s cover. \n \
 For example, a unit with heavy cover and a suppression token \
 that is attacked by a unit with Sharpshooter 1 has light cover."
 	},
@@ -1427,7 +1427,7 @@ improve the numerical value of their cover by 1 during the \
 Determine Cover step. While a trooper unit is attacking, if the \
 attacking unit leader is at range 1 of a smoke token, the defending \
 unit improves the numerical value of their cover by 1. Effects \
-that improve a unit’s cover are cumulative. A unit cannot be \
+that improve a unitï¿½s cover are cumulative. A unit cannot be \
 affected by the same Smoke token more than once. Smoke \
 tokens are removed during the Remove Tokens step of the \
 End Phase. \
@@ -1455,7 +1455,7 @@ an army using the speci?ed Battle Force."
 X keyword can move over or end its movement on terrain \
 equal to or less than height X. Additionally, when a unit on \
 notched bases performs a move, it skips step 1 of notched base \
-movement, rotating the unit leader’s base. \
+movement, rotating the unit leaderï¿½s base. \
 A unit with the Speeder X keyword must perform a free \
 compulsory move action at the start or end of its Perform \
 Actions step. \
@@ -1487,8 +1487,8 @@ and an attack value of 2 black die, the ?amethrower contributes \
 controlling player may assign it one suppression token to \
 increase its maximum speed by 1 for that move, to a maximum \
 of 3. When a unit performs a move, apply any effects that \
-increase the unit’s maximum speed before applying any effects \
-that reduce that unit’s maximum speed. \
+increase the unitï¿½s maximum speed before applying any effects \
+that reduce that unitï¿½s maximum speed. \
 For example, a unit that normally has a maximum speed of 1, \
 but has 1 immobilize token, can use the Spur keyword to perform \
 a move with a total maximum speed of 1. However, a unit that \
@@ -1523,11 +1523,11 @@ can be a full strafe or a partial strafe, and can be interrupted if \
 an object prevents the stra?ng miniature from fully progressing \
 across the movement tool. \
 To perform a full strafe, place the end of a movement tool \
-into one of the side notches on the unit’s base. Keeping the \
+into one of the side notches on the unitï¿½s base. Keeping the \
 movement tool in place on the battle?eld, move the miniature \
 along the movement tool until the opposite side notch is wholly \
 in the opposite end of the movement tool. While performing a \
-strafe, a miniature’s base must not overlap terrain that it cannot \
+strafe, a miniatureï¿½s base must not overlap terrain that it cannot \
 move through."
 	},
 	"Strategize":{
@@ -1615,7 +1615,7 @@ that unit. This ability cannot be used if the card that has the \
 Treat X: Capacity Y keyword has a number of wound tokens on \
 it equal to or exceeding Y. \
 Wound tokens on cards are not considered to be on units and \
-do not count toward a unit’s wound threshold, nor can they be \
+do not count toward a unitï¿½s wound threshold, nor can they be \
 removed by abilities that remove wound tokens from units. \
 If a unit has multiple Treat X: Capacity Y abilities, treat each \
 keyword as a separate ability. \
@@ -1650,7 +1650,7 @@ during the Activation Phase while it has one or fewer facedown \
 order tokens. This unit may never have more than one faceup \
 order token. While this unit is not defeated, when creating its \
 order pool, its controlling player adds an additional order token \
-corresponding to this unit’s rank to their order pool."
+corresponding to this unitï¿½s rank to their order pool."
 	},
 	"Versatile":{
 		"summary":"",
@@ -1663,7 +1663,7 @@ be used to perform either a ranged attack or a melee attack."
 	"Weak Point":{
 		"summary":"",
 		"full":"While a unit with the Weak Point X: Front/Rear/Sides keyword \
-is defending, if the attacking unit’s unit leader is at least partially \
+is defending, if the attacking unitï¿½s unit leader is at least partially \
 inside the speci?ed ?ring arc of the defending unit, the attack \
 pool gains the Impact X keyword where X is equal to the value \
 of Weak Point X. \
@@ -1676,9 +1676,9 @@ charge or advantage token as the attacking unit leader."
 more objective tokens, it cannot use the Jump keyword."
 	},
 	"We're Not Regs":{
-		"full":"A unit with the We’re Not Regs keyword may not spend green \
+		"full":"A unit with the Weï¿½re Not Regs keyword may not spend green \
 tokens on other Clone Trooper units, and other Clone Trooper \
-units may not spend this unit’s green tokens. Additionally, this \
+units may not spend this unitï¿½s green tokens. Additionally, this \
 unit cannot bene?t from backup. \
 Players should use the ball-form Droideka miniatures only \
 when the unit uses the Wheel Mode keyword and only for the \

@@ -32,7 +32,7 @@ function CardIcon({
     <Img
       decode={false}
       alt={card.cardName}
-      src={`${urls.cdn}/${card.cardType}Cards/${card.imageName}`}
+      src={`${urls.cdn}/${card.cardType}Icons/${card.imageName}`}
       style={{ scale: 5 }}
       loader={placeholder}
       className={clsx(classes.image, classes[size], {

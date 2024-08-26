@@ -31,7 +31,7 @@ function KeywordsPanel({ cardKeywords }) {
               </Typography>
               <div style={{ flexGrow: 1 }} />
               <Typography variant="body2">
-                {keyword in keywords ? keywords[keyword] : 'No definition found.'}
+                {keyword in keywords ? keywords[keyword].full : 'No definition found.'}
               </Typography>
               <Divider />
             </div>
