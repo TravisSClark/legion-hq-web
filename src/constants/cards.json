@@ -14181,6 +14181,13 @@
         "cost": 160,
         "faction": "republic",
         "imageName": "The Bad Batch.jpeg",
+        "equip": [
+            "xq",
+            "xr",
+            "xs",
+            "xt",
+            "xu"
+        ],
         "keywords": [
             "Equip",
             "Impervious",
@@ -14483,6 +14490,7 @@
             "heavy weapon",
             "heavy weapon"
         ],
+        "equip":["xq","xr","xs","xt"],
         "history": [],
         "id": "xv"
     },
@@ -15806,7 +15814,7 @@
             "Reliable"
         ],
         "upgradeBar": [
-            "leader",
+            "squad leader",
             "heavy weapon",
             "personnel",
             "training",
@@ -15845,7 +15853,7 @@
             "Tactical"
         ],
         "upgradeBar": [
-            "leader",
+            "squad leader",
             "heavy weapon",
             "training",
             "gear",
@@ -17528,7 +17536,7 @@
     "Ey": {
         "id": "Ey",
         "cardName": "Boil",
-        "cardSubtype": "leader",
+        "cardSubtype": "squad leader",
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 20,
@@ -17560,7 +17568,7 @@
         "id": "Ez",
         "isNew":true,
         "cardName": "Clone Captain",
-        "cardSubtype": "leader",
+        "cardSubtype": "squad leader",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 22,
@@ -17586,7 +17594,7 @@
     "Fa": {
         "id": "Fa",
         "cardName": "Clone Commander",
-        "cardSubtype": "leader",
+        "cardSubtype": "squad leader",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 22,
@@ -17912,7 +17920,6 @@
         "oldCard": "hr"
     },
     "Fm": {
-        "isNew":true,
         "id": "Fm",
         "cardName": "Echo",
         "title": "ARC Marksman",
@@ -17926,6 +17933,15 @@
             "Leader"
         ],
         "requirements": [
+            "AND",
+            [   "OR",
+                {
+                    "rank": "corps"
+                },
+                {
+                    "rank": "special"
+                }
+            ],
             {
                 "cardSubtype": "clone trooper"
             }
@@ -17992,7 +18008,7 @@
     "Fp": {
         "id": "Fp",
         "cardName": "Fives",
-        "cardSubtype": "leader",
+        "cardSubtype": "squad leader",
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 40,
@@ -18689,7 +18705,7 @@
     "Gp": {
         "id": "Gp",
         "cardName": "Waxer",
-        "cardSubtype": "leader",
+        "cardSubtype": "squad leader",
         "isUnique": true,
         "cost": 20,
         "imageName": "Waxer.jpg",

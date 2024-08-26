@@ -997,7 +997,7 @@ function addUnit(list, unitId, stackSize = 1) {
     unitIndex = list.units.length - 1;
   }
 
-  //validateUpgrades(list, unitIndex);
+  validateUpgrades(list, unitIndex);
   return consolidate(list);
 }
 
@@ -1107,6 +1107,8 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
   return sortIds(validUnitIds);
 }
 
+// TODO would be nice to improve this to not need pairs, and to allow AND/OR/NOT in places other than first position
+// ...tbs, it does a pretty tough job very well for now as long as you follow its rules
 function isRequirementsMet(requirements, unitCard) {
   if (requirements instanceof Array) {
     const operator = requirements[0];
@@ -1522,7 +1524,8 @@ function validateUpgrades(list, unitIndex){
     card.equip.forEach((equipReq)=>{
       const equipCard = cards[equipReq];
       if(!unit.upgradesEquipped.includes(equipReq)){
-        unit.validationIssues.push( { level:2, text: card.displayName + " is missing " + equipCard.cardName + " (Equip)"});
+        let name = card.displayName ? card.displayName : card.cardName;
+        unit.validationIssues.push( { level:2, text: name + " is missing " + equipCard.cardName + " (Equip)"});
       }
     });
   }
@@ -1574,7 +1577,7 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
     list = equipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   }
 
-  //validateUpgrades(list, unitIndex);
+  validateUpgrades(list, unitIndex);
 
   return list;
 }
@@ -1616,7 +1619,7 @@ function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
     list = unequipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex);
   }
 
-  //validateUpgrades(list, unitIndex);
+  validateUpgrades(list, unitIndex);
 
 
   return list;
