@@ -1361,8 +1361,6 @@ function sortIds(ids) {
  * @param {*} upgradeId 
  */
 function validateUpgrades(list, unitIndex){
-  console.log('unit index = ' + unitIndex);
-  
   const unit = list.units[unitIndex];
   const card = cards[unit.unitId];
 
@@ -1787,8 +1785,9 @@ function applyRankAdjustments(currentList, rankReqs) {
     const card = cards[unit.unitId];
     if (card.entourage) {
       extraRankIds.push(card.entourage);
-    // } else if (card.detachment) {
-    //   extraRankIds.push(card.detachment);
+    } else if (card.detachment) {
+      console.log(unit)
+      rankReqs[card.rank][1] += unit.count;
     } else if (extraRankIds.includes(card.id)) {
       rankReqs[card.rank][1]++;
       let idIndex = extraRankIds.indexOf(card.id)
