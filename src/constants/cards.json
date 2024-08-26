@@ -18769,8 +18769,8 @@
     "Gt": {
         "id": "Gt",
         "cardName": "Breakthrough",
-        "imageName": "Breakthrough_Text.jpg",
-        "mapName": "Breakthrough_Map.jpg",
+        "imageName": "Breakthrough_Text.jpeg",
+        "mapName": "Breakthrough_Map.jpeg",
         "cardType": "battle",
         "cardSubtype": "primary",
         "keywords": []
@@ -18778,8 +18778,8 @@
     "Gu": {
         "id": "Gu",
         "cardName": "Bunker Assault",
-        "imageName": "Bunker_Assault_Text.jpg",
-        "mapName": "Bunker_Assault_Map.jpg",
+        "imageName": "Bunker_Assault_Text.jpeg",
+        "mapName": "Bunker_Assault_Map.jpeg",
         "cardType": "battle",
         "cardSubtype": "primary",
         "keywords": []
@@ -18787,8 +18787,8 @@
     "Gv": {
         "id": "Gv",
         "cardName": "Close the Pocket",
-        "imageName": "Close_the_Pocket_Text.jpg",
-        "mapName": "Close_the_Pocket_Map.jpg",
+        "imageName": "Close_the_Pocket_Text.jpeg",
+        "mapName": "Close_the_Pocket_Map.jpeg",
         "cardType": "battle",
         "cardSubtype": "primary",
         "keywords": []
@@ -18796,8 +18796,8 @@
     "Gw": {
         "id": "Gw",
         "cardName": "Intercept Signals",
-        "imageName": "Intercept_Signals_Text.jpg",
-        "mapName": "Intercept_Signals_Map.jpg",
+        "imageName": "Intercept_Signals_Text.jpeg",
+        "mapName": "Intercept_Signals_Map.jpeg",
         "cardType": "battle",
         "cardSubtype": "primary",
         "keywords": []
@@ -18805,8 +18805,8 @@
     "Gx": {
         "id": "Gx",
         "cardName": "Recover the Research",
-        "imageName": "Recover_the_Research_Text.jpg",
-        "mapName": "Recover_the_Research_Map.jpg",
+        "imageName": "Recover_the_Research_Text.jpeg",
+        "mapName": "Recover_the_Research_Map.jpeg",
         "cardType": "battle",
         "cardSubtype": "primary",
         "keywords": []
@@ -18814,8 +18814,8 @@
     "Gy": {
         "id": "Gy",
         "cardName": "Shifting Priorities",
-        "imageName": "Shifting_Priorities_Text.jpg",
-        "mapName": "Shifting_Priorities_Map.jpg",
+        "imageName": "Shifting_Priorities_Text.jpeg",
+        "mapName": "Shifting_Priorities_Map.jpeg",
         "cardType": "battle",
         "cardSubtype": "primary",
         "keywords": []
@@ -18824,7 +18824,7 @@
     "Gz": {
         "id": "Gz",
         "cardName": "Bring Them to Heel",
-        "imageName": "Bring_Them_to_Heel.jpg",
+        "imageName": "Bring_Them_to_Heel.jpeg",
         "cardType": "battle",
         "cardSubtype": "secondary",
         "keywords": []
@@ -18832,7 +18832,7 @@
     "Ha": {
         "id": "Ha",
         "cardName": "Destroy Enemy Base",
-        "imageName": "Destroy_Enemy_Base.jpg",
+        "imageName": "Destroy_Enemy_Base.jpeg",
         "cardType": "battle",
         "cardSubtype": "secondary",
         "keywords": []
@@ -18840,7 +18840,7 @@
     "Hb": {
         "id": "Hb",
         "cardName": "Marked Targets",
-        "imageName": "Marked_Targets.jpg",
+        "imageName": "Marked_Targets.jpeg",
         "cardType": "battle",
         "cardSubtype": "secondary",
         "keywords": []
@@ -18848,7 +18848,7 @@
     "Hc": {
         "id": "Hc",
         "cardName": "Recon Mission",
-        "imageName": "Recon_Mission.jpg",
+        "imageName": "Recon_Mission.jpeg",
         "cardType": "battle",
         "cardSubtype": "secondary",
         "keywords": []
@@ -18856,7 +18856,7 @@
     "Hd": {
         "id": "Hd",
         "cardName": "Surface Scan",
-        "imageName": "Surface_Scan.jpg",
+        "imageName": "Surface_Scan.jpeg",
         "cardType": "battle",
         "cardSubtype": "secondary",
         "keywords": []
@@ -18864,7 +18864,7 @@
     "He": {
         "id": "He",
         "cardName": "Sweep and Clear",
-        "imageName": "Sweep_and_Clear.jpg",
+        "imageName": "Sweep_and_Clear.jpeg",
         "cardType": "battle",
         "cardSubtype": "secondary",
         "keywords": []
@@ -18873,7 +18873,7 @@
     "Hf": {
         "id": "Hf",
         "cardName": "Advanced Intel",
-        "imageName": "Advanced_Intel.jpg",
+        "imageName": "Advanced_Intel.jpeg",
         "cardType": "battle",
         "cardSubtype": "advantage",
         "keywords": []
@@ -18881,7 +18881,7 @@
     "Hg": {
         "id": "Hg",
         "cardName": "Cunning Deployment",
-        "imageName": "Cunning_Deployment.jpg",
+        "imageName": "Cunning_Deployment.jpeg",
         "cardType": "battle",
         "cardSubtype": "advantage",
         "keywords": []
@@ -18889,7 +18889,7 @@
     "Hh": {
         "id": "Hh",
         "cardName": "Fortified Position",
-        "imageName": "Fortified_Position.jpg",
+        "imageName": "Fortified_Position.jpeg",
         "cardType": "battle",
         "cardSubtype": "advantage",
         "keywords": []
@@ -18897,7 +18897,7 @@
     "Hi": {
         "id": "Hi",
         "cardName": "Garrison",
-        "imageName": "Garrison.jpg",
+        "imageName": "Garrison.jpeg",
         "cardType": "battle",
         "cardSubtype": "advantage",
         "keywords": []
@@ -18905,7 +18905,7 @@
     "Hj": {
         "id": "Hj",
         "cardName": "Ordnance",
-        "imageName": "Ordnance.jpg",
+        "imageName": "Ordnance.jpeg",
         "cardType": "battle",
         "cardSubtype": "advantage",
         "keywords": []
@@ -18913,7 +18913,7 @@
     "Hk": {
         "id": "Hk",
         "cardName": "Strafing Run",
-        "imageName": "Strafing_Run.jpg",
+        "imageName": "Strafing_Run.jpeg",
         "cardType": "battle",
         "cardSubtype": "advantage",
         "keywords": []

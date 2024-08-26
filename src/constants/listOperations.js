@@ -1192,6 +1192,21 @@ function addCommand(list, commandId) {
 }
 
 function addBattle(list, type, id) {
+  
+  // TODO - use this instead, allow addBattle to change our add type, e.g. cascade battle deck
+  // when current count ==4
+  // let battleCardTypes = [
+  //   {type:'objective', cards: list.objectiveCards},
+  //   {type:'deployment', cards: list.deploymentCards},
+  //   {type:'condition', cards: list.conditionCards},
+
+  //   {type:'primary', cards: list.primaryCards},
+  //   {type:'secondary', cards: list.secondaryCards},
+  //   {type:'advantage', cards: list.advantageCards},
+  // ];
+
+
+  
   if (type === 'objective') {
     list.objectiveCards.push(id);
   } else if (type === 'deployment') {
@@ -1199,6 +1214,7 @@ function addBattle(list, type, id) {
   } else if (type === 'condition') {
     list.conditionCards.push(id);
   }
+
 
   else if (type === 'primary') {
     list.primaryCards.push(id);

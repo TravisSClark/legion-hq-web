@@ -7,7 +7,7 @@ import {
   Card,
   CardMedia,
   CardActions,
-  CardActionArea
+  CardActionArea,
 } from '@material-ui/core';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -71,7 +71,21 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
               { [classes.doubleUpgrade]: isDoubleSided }
             )}
           />
+          { card.cardSubtype == "primary" &&
+          <CardMedia
+            title={displayName ? displayName : cardName}
+            image={`${urls.cdn}/${cardType}Cards/${card.mapName}`}
+            className={clsx(
+              { [classes.unitImage]: cardType === 'unit' || cardType === 'counterpart' },
+              { [classes.commandImage]: cardType === 'battle' },
+              { [classes.upgradeImage]: cardType === 'upgrade' },
+              { [classes.commandImage]: cardType === 'command' },
+              { [classes.doubleUpgrade]: isDoubleSided }
+            )}
+          />
+        }
         </CardActionArea>
+        
         <CardActions disableSpacing>
           {(cost || cost === 0) && <PointsChip points={cost} size={chipSize} />}
           <IconButton
