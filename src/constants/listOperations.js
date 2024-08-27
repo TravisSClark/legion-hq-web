@@ -1779,19 +1779,32 @@ function rankValidation(currentList, ranks, mercs, rankReqs){
 
 function applyRankAdjustments(currentList, rankReqs) {
   
-  let extraRankIds = []
+  let extraRankCounts = {}
   
   currentList.units.forEach((unit)=>{
     const card = cards[unit.unitId];
     if (card.entourage) {
-      extraRankIds.push(card.entourage);
+      if(!extraRankCounts[card.entourage]){
+        extraRankCounts[card.entourage] = 0;
+      }
+      extraRankCounts[unit.entourage] += unit.count;
+
     } else if (card.detachment) {
-      console.log(unit)
-      rankReqs[card.rank][1] += unit.count;
-    } else if (extraRankIds.includes(card.id)) {
-      rankReqs[card.rank][1]++;
-      let idIndex = extraRankIds.indexOf(card.id)
-      extraRankIds.splice(idIndex, 1);
+      // *technically* this is backwards... but still works ;)
+      if(!extraRankCounts[card.detachment]){
+        extraRankCounts[card.detachment] = 0;
+      }
+      extraRankCounts[card.detachment] += unit.count;    } 
+  });
+
+  // Do this on a separate pass so we don't get whacked by random list order
+  currentList.units.forEach((unit)=>{
+    const card = cards[unit.unitId];
+
+    if(extraRankCounts[unit.unitId]){
+      let allowance = Math.min(unit.count, extraRankCounts[unit.unitId]);
+      rankReqs[card.rank][1] += allowance;
+      extraRankCounts[unit.unitId] -= allowance;
     }
   });
 
@@ -1850,9 +1863,15 @@ function validateList(currentList, rankLimits){
   
   let rankReqs = rankLimits; //updateRankLimits(currentList);
 
+  let unitCounts = {};
   // count up them mercs, pull in any unit-specific issues
   currentList.units.forEach((unit)=>{
     const card = cards[unit.unitId];
+
+    if(!unitCounts[unit.unitId]){
+      unitCounts[unit.unitId] = 0;
+    }
+    unitCounts[unit.unitId] += unit.count;
 
     if(unit.validationIssues?.length > 0){
       validationIssues = validationIssues.concat(unit.validationIssues);
@@ -1863,7 +1882,28 @@ function validateList(currentList, rankLimits){
     }
   });
 
-  validationIssues.push(...battleForceValidation(currentList));
+  // This map is probably a little over-complicated; don't add a Detachment issue until we know it's the last unit of that type being looked at
+  // More or less equiv to search+destroy a detachment issue if multiple are made (though... maybe more efficient(?))
+  let seenUnits = {};
+  // Check detachment or any similar keywords once we know the full list count for units
+  currentList.units.forEach((unit)=>{
+    const card = cards[unit.unitId];
+
+    if(card.detachment){
+      if(!seenUnits[unit.unitId]){
+        seenUnits[unit.unitId]  = 0;
+      }
+      seenUnits[unit.unitId] += unit.count;
+      if(unitCounts[unit.unitId] > unitCounts[card.detachment] && seenUnits[unit.unitId] == unitCounts[unit.unitId]){
+        let parent = cards[card.detachment];
+        validationIssues.push({level:2, text:"Too many " + card.displayName.toUpperCase() + " detachments. \
+          You need one " + (parent.displayName ? parent.displayName : parent.cardName).toUpperCase() + " per " + card.displayName.toUpperCase() + "." });
+      }
+    }
+  });
+
+  // TODO - now that we count units by ID, use that for BF validation
+  validationIssues.push(...battleForceValidation(currentList, unitCounts));
   validationIssues.push(...rankValidation(currentList, ranks, mercs, rankReqs));
   validationIssues.push(...mercValidation(currentList, ranks, mercs));
 
