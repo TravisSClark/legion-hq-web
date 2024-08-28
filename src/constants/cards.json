@@ -12551,7 +12551,7 @@
         "cardSubtype": "2",
         "cardType": "command",
         "commander": "IG-88",
-        "imageName": "A Machine Made For Killing.webp",
+        "imageName": "A Machine Made for Killing.webp",
         "faction": "",
         "battleForce": "",
         "keywords": [
@@ -14419,6 +14419,7 @@
 			{"cardName": "Clone Commandos"},
 			{"cardName": "Clone Commandos Delta Squad"}
 		],
+        "isDoubleSided": true,
 		"id": "xk"
 	},
 	"xl": {
