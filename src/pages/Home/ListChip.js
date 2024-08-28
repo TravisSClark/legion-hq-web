@@ -29,7 +29,6 @@ function ListChip({ userList, deleteUserList }) {
       }
     });
     const card = cards[findFirstCommanderId(userList)];
-    // TODO: Figure out zoom
     return (
       <React.Fragment>
         <ThemeProvider theme={factionTheme}>
@@ -41,7 +40,7 @@ function ListChip({ userList, deleteUserList }) {
               avatar={card ? (
                 <Img
                   alt={card.cardName}
-                  src={`${urls.cdn}/unitCards/${card.imageName}`}
+                  src={`${urls.cdn}/unitIcons/${card.imageName}`}
                   style={{
                     marginLeft: 0,
                     width: 44,

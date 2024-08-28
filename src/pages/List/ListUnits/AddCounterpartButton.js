@@ -6,13 +6,12 @@ import urls from 'constants/urls';
 function AddCounterpartButton({ counterpartId, handleClick }) {
   const { cardName, imageName } = cards[counterpartId];
   const size = 32;
-  // TODO: Figure out zoom
   return (
     <IconButton size="small" style={{ marginBottom: 4 }} onClick={handleClick}>
       <Icon style={{ height: size, width: size }}>
         <Avatar
           alt={cardName}
-          src={`${urls.cdn}/counterpartCards/${imageName}`}
+          src={`${urls.cdn}/counterpartIcons/${imageName}`}
           style={{ height: size, width: size }}
         />
       </Icon>
