@@ -29,12 +29,11 @@ function CardIcon({
       style={{ borderRadius: 25 }}
     />
   );
-  // TODO: Figure out zoom
   return (
     <Img
       decode={false}
       alt={cardName}
-      src={`${urls.cdn}/${cardType}Cards/${imageName}`}
+      src={`${urls.cdn}/${cardType}Icons/${imageName}`}
       style={{ scale: 5 }}
       loader={placeholder}
       className={clsx(classes.image, classes[size], {
