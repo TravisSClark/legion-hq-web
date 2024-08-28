@@ -31,7 +31,7 @@ function Info() {
           .
         </Typography>
         <Typography>
-          All game images, character names, and game pieces are © FFG & © Disney.
+          All game images, character names, and game pieces are © FFG & © Disney. Full art upgrade cards created by u/CptStanhope.
         </Typography>
         <div style={{ height: 150 }} />
         <Typography>

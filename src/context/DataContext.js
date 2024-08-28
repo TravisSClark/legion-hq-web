@@ -622,7 +622,7 @@ export function DataProvider({ children }) {
           <br />
           {message}
           <br />
-          Issues can be emailed to <a href="mailto:contact@legion-hq.com">contact@legion-hq.com</a>.
+          Issues can be emailed to <a href="crit2block@gmail.com">crit2block@gmail.com</a>.
         </Alert>
       </Snackbar>
     </React.Fragment>

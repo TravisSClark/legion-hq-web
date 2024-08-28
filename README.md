@@ -70,7 +70,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 TODO:
-- Get the objective cards to sit right
 - Get using old points button working and distinguish between Phase 1s and 2s for old points
 - Either upload icons or focus on top right of card
 - Add win loss per list
+- Allow attack and defense rolling

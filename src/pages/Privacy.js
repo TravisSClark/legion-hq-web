@@ -19,17 +19,17 @@ function Privacy() {
               <p>Effective date: March 28, 2021</p>
 
 
-              <p>Legion HQ ("us", "we", or "our") operates the https://legionhq.thefifthtrooper.com/ website (hereinafter referred to as the "Service").</p>
+              <p>Legion HQ ("us", "we", or "our") operates the https://legionhq2.com/ website (hereinafter referred to as the "Service").</p>
 
               <p>This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. The Privacy Policy  for Legion HQ has been created with the help of <a href="https://www.termsfeed.com/privacy-policy-generator/">Privacy Policy Generator</a>.</p>
 
-              <p>We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from https://legionhq.thefifthtrooper.com/</p>
+              <p>We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from https://legionhq2.com/</p>
 
               <h2>Definitions</h2>
               <ul>
                 <li>
                     <p><strong>Service</strong></p>
-                            <p>Service is the https://legionhq.thefifthtrooper.com/ website operated by Legion HQ</p>
+                            <p>Service is the https://legionhq2.com/ website operated by Legion HQ</p>
                         </li>
                 <li>
                     <p><strong>Personal Data</strong></p>
