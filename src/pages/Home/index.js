@@ -7,8 +7,7 @@ import {
   Container,
   Fade,
   Button,
-  Collapse,
-  Divider
+  Collapse
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import {

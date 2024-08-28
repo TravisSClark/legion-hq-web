@@ -22,24 +22,24 @@ function ListObjectives() {
   let cardsPerDeck = 3;
   if(currentList.isUsingOldPoints){
     cardsPerDeck = 4;
-    decks[0] = {type:'objective', label:"Objective", cards: currentList.objectiveCards, theme:createMuiTheme({
+    decks[0] = {type:'objective', label:"Objectives", cards: currentList.objectiveCards, theme:createMuiTheme({
       palette: { primary: { main: '#274c82' } }
     })};
-    decks[1] = {type:'condition', label:"Condition", cards:currentList.deploymentCards, theme:createMuiTheme({
+    decks[1] = {type:'condition', label:"Conditions", cards:currentList.deploymentCards, theme:createMuiTheme({
       palette: { primary: { main: '#38643A' } }
     })};
-    decks[2] = {type:'deployment', label:"Deployment", cards:currentList.conditionCards, theme:createMuiTheme({
+    decks[2] = {type:'deployment', label:"Deployments", cards:currentList.conditionCards, theme:createMuiTheme({
       palette: { primary: { main: '#963233' } }
     })};
   }else{
     cardsPerDeck = 3;
-    decks[0] = {type:'primary', label:"Objective", cards:currentList.primaryCards, theme:createMuiTheme({
+    decks[0] = {type:'primary', label:"Primaries", cards:currentList.primaryCards, theme:createMuiTheme({
       palette: { primary: { main: '#963233' } }
     })};
-    decks[1] = {type:'secondary', label:"Secondary", cards:currentList.secondaryCards, theme:createMuiTheme({
+    decks[1] = {type:'secondary', label:"Secondaries", cards:currentList.secondaryCards, theme:createMuiTheme({
       palette: { primary: { main: '#E68646' } }
     })};
-    decks[2] = {type:'advantage', label:"Advantage", cards:currentList.advantageCards, theme:createMuiTheme({
+    decks[2] = {type:'advantage', label:"Advantages", cards:currentList.advantageCards, theme:createMuiTheme({
       palette: { primary: { main: '#306036' } }
     })};
   }

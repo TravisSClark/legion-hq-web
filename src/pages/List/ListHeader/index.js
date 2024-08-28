@@ -10,7 +10,7 @@ import {
   DialogContentText
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Clear as ClearIcon, Info as InfoIcon, Warning as WarningIcon } from '@material-ui/icons';
+import { Info as InfoIcon, Warning as WarningIcon } from '@material-ui/icons';
 
 import ListContext from 'context/ListContext';
 import legionModes from 'constants/legionModes';

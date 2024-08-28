@@ -131,7 +131,7 @@ function consolidate(list) {
     list.unitCounts[unitCard.rank] += unit.count;
     
     if (unitCard.associate){
-      if(list.units.find(u => u.unitId == unitCard.associate) != undefined){
+      if(list.units.find(u => u.unitId === unitCard.associate) !== undefined){
         list.unitCounts[unitCard.rank]--;
       }
     }
@@ -386,14 +386,14 @@ function generateHTMLText(
   if(list.isUsingOldPoints){
     battleDeck += generateMissionCardHTML(list.objectiveCards, "Objectives");
     battleDeck += generateMissionCardHTML(list.deploymentCards, "Deployments");
-    battleDeck += generateMissionCardHTML(list.conditionCards, "Conditions");
+    battleDeck += generateMissionCardHTML(list.conditionsCards, "Conditions");
   }else{
-    battleDeck += generateMissionCardHTML(list.primaryCards, "Objectives");
+    battleDeck += generateMissionCardHTML(list.primaryCards, "Primaries");
     battleDeck += generateMissionCardHTML(list.secondaryCards, "Secondaries");
     battleDeck += generateMissionCardHTML(list.advantageCards, "Advantages");
 
   }
-  let battle = '';
+  
   if(battleDeck.length > 0){
     battleDeck =  `<br>Battle Deck<br>` + battleDeck;
   }
@@ -634,9 +634,9 @@ function appendMissionTTSJSON(cardList, ttsArray){
   }
 
   if(list.isUsingOldPoints){
-    appendMissionTTSJSON(list.objectiveCards, ttsJSON.battlefieldDeck.objective);
-    appendMissionTTSJSON(list.deploymentCards, ttsJSON.battlefieldDeck.deployment);
-    appendMissionTTSJSON(list.conditionCards, ttsJSON.battlefieldDeck.conditions);
+    appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
+    appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.deployment);
+    appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.conditions);
   } else{
     // TODO - probably need new TTS map entries
     appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
@@ -998,9 +998,9 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
 
     if (card.rank !== rank) continue;
 
-    if (!userSettings.showStormTide || list.mode.includes('storm tide') && id === 'AA') {
+    if (!userSettings.showStormTide || (list.mode.includes('storm tide') && id === 'AA')) {
       continue;
-    } else if (!userSettings.showStormTide || !list.mode.includes('storm tide') && id === 'AK') {
+    } else if (!userSettings.showStormTide || (!list.mode.includes('storm tide') && id === 'AK')) {
       continue;
     }
 
@@ -1174,7 +1174,7 @@ function getEligibleBattlesToAdd(list, type) {
   const validIds = [];
   const invalidIds = [];
   const scenarioMissionIds = ['Df', 'Oe'];
-  const cardsById = cardIdsByType.battle; //Object.keys(cards);
+  // const cardsById = cardIdsByType.battle; //Object.keys(cards);
 
   let currentCards;
   if (type === 'objective') currentCards = list.objectiveCards;
@@ -1206,7 +1206,7 @@ function getEligibleContingenciesToAdd(list) {
 if (!list.contingencies) list.contingencies = [];
 const validCommandIds = [];
 const invalidCommandIds = [];
-const cardsById = cardIdsByType.command; // Object.keys(cards);
+// const cardsById = cardIdsByType.command; // Object.keys(cards);
 
 let numContingencies = 0;
 list.units.forEach((unit) => {
@@ -1249,7 +1249,7 @@ function getEligibleCommandsToAdd(list) {
 
   const validCommandIds = [];
   const invalidCommandIds = [];
-  const cardsById = cardIdsByType.command; // Object.keys(cards);
+  // const cardsById = cardIdsByType.command; // Object.keys(cards);
 
   const pipCounts = { '1': 0, '2': 0, '3': 0 };
   list.commandCards.forEach(id => {
@@ -1307,7 +1307,7 @@ function getEquippableUpgrades(
   const impRemnantUpgrades = ['ej', 'ek', 'fv', 'iy', 'fu', 'gm', 'gl', 'em', 'en', 'ja'];
   const validUpgradeIds = [];
   const invalidUpgradeIds = [];
-  const cardsById = cardIdsByType.upgrade; // Object.keys(cards);
+  // const cardsById = cardIdsByType.upgrade; // Object.keys(cards);
 
   if (!id) return { validUpgradeIds: [], invalidUpgradeIds: [] };
   const unitCard = cards[id];
@@ -1483,7 +1483,7 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
 
 function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
   
-  const upgradeId = list.units[unitIndex].upgradesEquipped[upgradeIndex];
+  // const upgradeId = list.units[unitIndex].upgradesEquipped[upgradeIndex];
 
   if (action === 'UNIT_UPGRADE') {
     function unequip(list, unitIndex, upgradeIndex) {
@@ -1624,7 +1624,7 @@ function convertHashToList(faction, url) {
     let keys = Object.keys(battleForcesDict);
     for(let i = 0; i < keys.length; i++) {
       let bf = battleForcesDict[keys[i]];
-      if (battleForceCode == bf.linkId) {
+      if (battleForceCode === bf.linkId) {
         list.battleForce = bf.name;
         break;
       }
@@ -1726,17 +1726,12 @@ function battleForceValidation(currentList){
   // Should destroy this in favor of adding a 'rule' to apply for BzF in the object, e.g.
   // rules:[... {type:'unitLimit', min:0, max:1, types:['ay', 'sr']}]
 
-  switch(currentList.battleForce){
-
-    case "Blizzard Force":
-      {
+  if (currentList.battleForce === "Blizzard Force"){
         const stormsCount = currentList.units.filter((unit)=>unit.unitId === "ay" || unit.unitId === "sr").reduce((count,u)=>count+=u.count, 0);
         
         if(stormsCount > 2){
           validationIssues.push({level:2, text:"Maximum 2 Stormtroopers (Regular or HRU in any combo)"});
         }
-        break;
-      }
   }
 	
   if(battleForcesDict[currentList.battleForce]?.rules?.twoRebels){
@@ -1963,7 +1958,7 @@ function validateList(currentList, rankLimits){
         seenUnits[unit.unitId]  = 0;
       }
       seenUnits[unit.unitId] += unit.count;
-      if(unitCounts[unit.unitId] > unitCounts[card.detachment] && seenUnits[unit.unitId] == unitCounts[unit.unitId]){
+      if(unitCounts[unit.unitId] > unitCounts[card.detachment] && seenUnits[unit.unitId] === unitCounts[unit.unitId]){
         let parent = cards[card.detachment];
         validationIssues.push({level:2, text:"Too many " + card.displayName.toUpperCase() + " detachments. \
           You need one " + (parent.displayName ? parent.displayName : parent.cardName).toUpperCase() + " per " + card.displayName.toUpperCase() + "." });
