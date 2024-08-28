@@ -72,7 +72,7 @@ function ListHeader() {
     return num;
   }, 0);
 
-  const validBattleForces = Object.values(battleForcesDict).filter(bf => bf.faction == currentList.faction);
+  const validBattleForces = Object.values(battleForcesDict).filter(bf => bf.faction === currentList.faction);
 
   var minValidationError = validationIssues.reduce((highest, e)=>{
     return e.level > highest ? e.level : highest;

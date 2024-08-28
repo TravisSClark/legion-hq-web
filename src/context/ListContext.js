@@ -33,7 +33,8 @@ import {
   getEligibleBattlesToAdd,
   toggleUsingOldPoints, 
   validateList,
-  getRankLimits
+  getRankLimits,
+  checkBattleforceUnits
 } from 'constants/listOperations';
 import listTemplate from 'constants/listTemplate';
 
@@ -64,6 +65,7 @@ export function ListProvider({
   const [isKillPointMode, setIsKillPointMode] = useState(false);
   const [currentKillPoints, setCurrentKillPoints] = useState(0);
   const [validationIssues, setValidationIssues] = useState([]);
+  const [invalidUnits, setInvalidUnits] = useState([]);
   const [rankLimits, setRankLimits] = useState();
 
 
@@ -136,6 +138,13 @@ export function ListProvider({
     setCurrentList(list);
     doUnitValidation(list, rankLimits);
     setRankLimits(rankLimits);
+  }
+
+  const validateBattleforceSelection = (list, battleForce) => {
+    // TODO somewhere/somehow around here we need to confirm user didn't pick units
+    // illegal for a battleforce then swap to it. Ideally, only do this if/after a bf swap.
+    // may need to re-examine how validation issues are opened/closed
+    //setInvalidUnits(checkBattleforceUnits(list, battleForce));
   }
 
   const reorderUnits = (startIndex, endIndex) => {
@@ -260,6 +269,7 @@ export function ListProvider({
     setCurrentList({ ...newList });
   }
   const handleAddBattle = (type, battleId) => {
+    // TODO limit battle overflow from here, ie limit 4
     const newList = addBattle(currentList, type, battleId);
     setCurrentList({ ...newList });
   }
@@ -352,6 +362,7 @@ export function ListProvider({
 
   const handleSetBattleForce = (battleForce) => {
     updateThenValidateList({ ...currentList, battleForce });
+    validateBattleforceSelection(currentList, battleForce);
   }
 
   // Maybe there should be a 'units only' flag, but lists will be something like 50-100 entities max anyhow...

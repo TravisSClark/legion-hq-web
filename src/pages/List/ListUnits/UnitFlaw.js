@@ -15,9 +15,7 @@ function UnitFlaw({ flawId }) {
         avatar={
           <CardIcon
             size="small"
-            cardType="command"
             card={cards[flawId]}
-            imageName={flawCard.imageName}
             handleClick={() => handleCardZoom(flawId)}
           />
         }

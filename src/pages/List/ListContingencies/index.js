@@ -48,9 +48,7 @@ function ListContingencies() {
             avatar={
               <CardIcon
                 size="small"
-                cardType="command"
                 card={cards[cardId]}
-                imageName={cards[cardId].imageName}
                 handleClick={() => handleCardZoom(cardId)}
               />
             }

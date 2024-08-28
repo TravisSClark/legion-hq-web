@@ -8,18 +8,12 @@ import battleForcesDict from 'constants/battleForcesDict';
 
 function countPoints(list) {
   list.pointTotal = 0;
-  list.rankInteractions = {};
   list.units.forEach((unit, unitIndex) => {
     const unitCard = cards[unit.unitId];
     if (list.isUsingOldPoints) {
       unit.totalUnitCost = unitCard.prevCost ? unitCard.prevCost : unitCard.cost;
     } else unit.totalUnitCost = unitCard.cost;
-    if (unitCard.id in interactions.entourages) {
-      const interaction = interactions.entourages[unitCard.id];
-      if (interaction.isConditionMet(list, unit)) {
-        list.rankInteractions[unitCard.id] = interaction.boundaryDelta;
-      }
-    }
+    
     unit.upgradeInteractions = {};
     unit.upgradesEquipped.forEach((upgradeId, upgradeIndex) => {
       if (upgradeId) {
@@ -90,6 +84,7 @@ function rehashList(list) {
  * @param {} list 
  * @returns 
  */
+ // TODO need to specialize this; should at least be a on-upgrade and on-unit fire, not this whole big thing
 function consolidate(list) {
   let hasContingencyKeyword = false;
   list.hasFieldCommander = false;
@@ -132,12 +127,22 @@ function consolidate(list) {
         }
       }
     }
-    list.unitCounts[unitCard.rank] += unit.count;
 
+    list.unitCounts[unitCard.rank] += unit.count;
+    
+    if (unitCard.associate){
+      if(list.units.find(u => u.unitId == unitCard.associate) != undefined){
+        list.unitCounts[unitCard.rank]--;
+      }
+    }
     if (unit.unitId === 'rc' && unit.upgradesEquipped.includes('rq')) { // Maul + Darksaber interaction
       list.unitCounts['commander']++;
       list.unitCounts['operative']--;
     }
+    if(battleForcesDict[list.battleForce]?.rules?.buildsAsCorps?.includes(unit.unitId)){
+      list.unitCounts[unitCard.rank] -= unit.count;
+      list.unitCounts['corps'] += unit.count;
+    } 
   }
   for (let i = list.commandCards.length - 1; i > -1 ; i--) {
     const { commander } = cards[list.commandCards[i]];
@@ -166,6 +171,18 @@ function getNumActivations(list) {
   }, 0);
 }
 
+function printMissionCards(missionArray, label){
+  
+  if (missionArray.length > 0) {
+    let objectives = label + ':\n';
+    missionArray.forEach((id, i) => {
+        const card = cards[id];
+        objectives += ` - ${card.cardName}\n`;
+    });
+    return objectives;
+  }
+  return '';
+}
 function generateTournamentText(
   list, showPoints = true, showCommands = false, showBattles = false
 ) {
@@ -248,33 +265,38 @@ function generateTournamentText(
       contingencies += `${pips}${commandCard.cardName}\n`;
     });
   }
-  let primary = '';
-  let secondary = '';
-  let advantages = '';
-  if (list.primaryCards.length > 0) {
-    primary += 'Primaries:\n';
-    list.primaryCards.forEach((id, i) => {
-      const card = cards[id];
-      primary += ` - ${card.cardName}\n`;
-    });
+
+  let battleDeck = '';
+
+  if(list.isUsingOldPoints){
+    battleDeck += printMissionCards(list.objectiveCards, "Objectives");
+    battleDeck += printMissionCards(list.deploymentCards, "Deployments");
+    battleDeck += printMissionCards(list.conditionCards, "Conditions");
   }
-  if (list.secondaryCards.length > 0) {
-    secondary += 'Secondaries:\n';
-    list.secondaryCards.forEach((id, i) => {
-      const card = cards[id];
-      secondary += ` - ${card.cardName}\n`;
-    });
+  else{
+    battleDeck += printMissionCards(list.primaryCards, "Objectives");
+    battleDeck += printMissionCards(list.secondaryCards, "Secondaries");
+    battleDeck += printMissionCards(list.advantageCards, "Advantages");
   }
-  if (list.advantageCards.length > 0) {
-    advantages += 'Advantages:\n';
-    list.advantageCards.forEach((id, i) => {
-      const card = cards[id];
-      advantages += ` - ${card.cardName}\n`;
-    });
+
+  if(battleDeck.length > 0){
+    battleDeck = `\nBattle Deck\n` + battleDeck;
   }
-  let battle = '';
-  if (primary + secondary + advantages !== '') battle = `\nBattle Deck\n`;
-  return header + units + commands + contingencies + battle + primary + secondary + advantages;
+  
+  return header + units + commands + contingencies + battleDeck;
+}
+
+function generateMissionCardHTML(cardList, label){
+  if (cardList.length > 0) {
+    let objectives = label + ':<br>';
+    cardList.forEach((id, i) => {
+      objectives += ` - ${cards[id].cardName}<br>`;
+      return objectives;
+    });
+  }else{
+    return '';
+  }
+  
 }
 
 function generateHTMLText(
@@ -359,33 +381,23 @@ function generateHTMLText(
       contingencies += `${pips}${commandCard.cardName}<br>`;
     });
   }
-  let primaries = '';
-  let secondaries = '';
-  let advantages = '';
-  if (list.primaryCards.length > 0) {
-    primaries += 'Primaries:<br>';
-    list.primaryCards.forEach((id, i) => {
-      const card = cards[id];
-      primaries += ` - ${card.cardName}<br>`;
-    });
-  }
-  if (list.secondaryCards.length > 0) {
-    secondaries += 'Secondaries:<br>';
-    list.secondaryCards.forEach((id, i) => {
-      const card = cards[id];
-      secondaries += ` - ${card.cardName}<br>`;
-    });
-  }
-  if (list.advantageCards.length > 0) {
-    advantages += 'Advantages:<br>';
-    list.advantageCards.forEach((id, i) => {
-      const card = cards[id];
-      advantages += ` - ${card.cardName}<br>`;
-    });
+
+  let battleDeck = '';
+  if(list.isUsingOldPoints){
+    battleDeck += generateMissionCardHTML(list.objectiveCards, "Objectives");
+    battleDeck += generateMissionCardHTML(list.deploymentCards, "Deployments");
+    battleDeck += generateMissionCardHTML(list.conditionCards, "Conditions");
+  }else{
+    battleDeck += generateMissionCardHTML(list.primaryCards, "Objectives");
+    battleDeck += generateMissionCardHTML(list.secondaryCards, "Secondaries");
+    battleDeck += generateMissionCardHTML(list.advantageCards, "Advantages");
+
   }
   let battle = '';
-  if (primaries + secondaries + advantages !== '') battle = `<br>Battle Deck<br>`;
-  return '<html><p>' + header + units + commands + contingencies + battle + primaries + secondaries + advantages + '</p></html>';
+  if(battleDeck.length > 0){
+    battleDeck =  `<br>Battle Deck<br>` + battleDeck;
+  }
+  return '<html><p>' + header + units + commands + contingencies + battleDeck + '</p></html>';
 }
 
 
@@ -477,7 +489,18 @@ function generateStandardText(list) {
 
 function generateTTSJSONText(list) {
   const ttsJSON = { author: 'Legion HQ' };
+function appendMissionTTSJSON(cardList, ttsArray){
 
+  for (let i = 0; i < cardList.length; i++) {
+    if (idToName[cardList[i]]) {
+      ttsArray.push(idToName[cardList[i]]);
+    } else {
+      const battlefieldCard = cards[cardList[i]];
+      ttsArray.push(battlefieldCard.cardName);
+    }
+  }
+
+}
   const idToName = {
     "nc": "Offensive Stance",
     "dz": "A-180 Config",
@@ -596,35 +619,29 @@ function generateTTSJSONText(list) {
     }
   }
 
-  ttsJSON.battlefieldDeck = { advantages: [], secondary: [], primary: [] };
+  if(list.isUsingOldPoints){
+    ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };
+  } else{
+      // TODO - check new TTS standard
+    ttsJSON.battlefieldDeck = { objective: [], secondary: [], advantage: [] };
+  }
   if (list.mode === "500-point mode") {
     ttsJSON.battlefieldDeck.scenario =  "skirmish";
+  } else if (list.mode.includes("storm tide")) {
+    ttsJSON.battlefieldDeck.scenario = "community"
   } else {
     ttsJSON.battlefieldDeck.scenario =  "standard";
   }
-  for (let i = 0; i < list.primaryCards.length; i++) {
-    if (idToName[list.primaryCards[i]]) {
-      ttsJSON.battlefieldDeck.primary.push(idToName[list.primaryCards[i]]);
-    } else {
-      const battlefieldCard = cards[list.primaryCards[i]];
-      ttsJSON.battlefieldDeck.primary.push(battlefieldCard.cardName);
-    }
-  }
-  for (let i = 0; i < list.secondaryCards.length; i++) {
-    if (idToName[list.secondaryCards[i]]) {
-      ttsJSON.battlefieldDeck.secondary.push(idToName[list.secondaryCards[i]]);
-    } else {
-      const battlefieldCard = cards[list.secondaryCards[i]];
-      ttsJSON.battlefieldDeck.secondary.push(battlefieldCard.cardName);
-    }
-  }
-  for (let i = 0; i < list.advantageCards.length; i++) {
-    if (idToName[list.advantageCards[i]]) {
-      ttsJSON.battlefieldDeck.advantages.push(idToName[list.advantageCards[i]]);
-    } else {
-      const battlefieldCard = cards[list.advantageCards[i]];
-      ttsJSON.battlefieldDeck.advantages.push(battlefieldCard.cardName);
-    }
+
+  if(list.isUsingOldPoints){
+    appendMissionTTSJSON(list.objectiveCards, ttsJSON.battlefieldDeck.objective);
+    appendMissionTTSJSON(list.deploymentCards, ttsJSON.battlefieldDeck.deployment);
+    appendMissionTTSJSON(list.conditionCards, ttsJSON.battlefieldDeck.conditions);
+  } else{
+    // TODO - probably need new TTS map entries
+    appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
+    appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.secondary);
+    appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.advantage);
   }
 
   return JSON.stringify(ttsJSON, null, 4);
@@ -722,34 +739,6 @@ function generateMinimalText(list) {
       contingencies += `${commandCard.cardName}, `;
     });
   }
-  // let objectives = '';
-  // let deployments = '';
-  // let conditions = '';
-  // if (list.primaryCards.length > 0) {
-  //   objectives += '\nObjectives: ';
-  //   list.primaryCards.forEach((id, i) => {
-  //     const card = cards[id];
-  //     objectives += `${card.cardName}, `;
-  //   });
-  //   objectives = objectives.substring(0, objectives.length - 2);
-  // }
-  // if (list.secondaryCards.length > 0) {
-  //   deployments += '\nDeployments: ';
-  //   list.secondaryCards.forEach((id, i) => {
-  //     const card = cards[id];
-  //     deployments += `${card.cardName}, `;
-  //   });
-  //   deployments = deployments.substring(0, deployments.length - 2);
-  // }
-  // if (list.advantageCards.length > 0) {
-  //   conditions += '\nConditions: ';
-  //   list.advantageCards.forEach((id, i) => {
-  //     const card = cards[id];
-  //     conditions += `${card.cardName}, `;
-  //   });
-  //   conditions = conditions.substring(0, conditions.length - 2);
-  // }
-  // + objectives + deployments + conditions;
   return header + units + commands + contingencies;
 }
 
@@ -1000,15 +989,20 @@ function killUnit(list, index) {
   return list;
 }
 
-function getEligibleUnitsToAdd(list, rank) {
+function getEligibleUnitsToAdd(list, rank, userSettings) {
   const validUnitIds = [];
   const cardsById = cardIdsByType.unit; // Object.keys(cards);
   for (let i = 0; i < cardsById.length; i++) {
     const id = cardsById[i];
     const card = cards[id];
 
-    // if (card.cardType !== 'unit') continue;
     if (card.rank !== rank) continue;
+
+    if (!userSettings.showStormTide || list.mode.includes('storm tide') && id === 'AA') {
+      continue;
+    } else if (!userSettings.showStormTide || !list.mode.includes('storm tide') && id === 'AK') {
+      continue;
+    }
 
     if(!list.battleForce)
     {
@@ -1121,7 +1115,15 @@ function addCommand(list, commandId) {
 }
 
 function addBattle(list, type, id) {
-  if (type === 'primary') {
+  if (type === 'objective') {
+    list.objectiveCards.push(id);
+  } else if (type === 'deployment') {
+    list.deploymentCards.push(id);
+  } else if (type === 'condition') {
+    list.conditionCards.push(id);
+  }
+
+  else if (type === 'primary') {
     list.primaryCards.push(id);
   } else if (type === 'secondary') {
     list.secondaryCards.push(id);
@@ -1132,7 +1134,13 @@ function addBattle(list, type, id) {
 }
 
 function removeBattle(list, type, index) {
-  if (type === 'primary') {
+  if (type === 'objective') {
+    list.objectiveCards = deleteItem(list.objectiveCards, index);
+  } else if (type === 'deployment') {
+    list.deploymentCards = deleteItem(list.deploymentCards, index);
+  } else if (type === 'condition') {
+    list.conditionCards = deleteItem(list.conditionCards, index);
+  }else if (type === 'primary') {
     list.primaryCards = deleteItem(list.primaryCards, index);
   } else if (type === 'secondary') {
     list.secondaryCards = deleteItem(list.secondaryCards, index);
@@ -1169,7 +1177,10 @@ function getEligibleBattlesToAdd(list, type) {
   const cardsById = cardIdsByType.battle; //Object.keys(cards);
 
   let currentCards;
-  if (type === 'primary') currentCards = list.primaryCards;
+  if (type === 'objective') currentCards = list.objectiveCards;
+  else if (type === 'deployment') currentCards = list.deploymentCards;
+  else if (type === 'condition') currentCards = list.conditionCards;
+  else if (type === 'primary') currentCards = list.primaryCards;
   else if (type === 'secondary') currentCards = list.secondaryCards;
   else if (type === 'advantage') currentCards = list.advantageCards;
   else return;
@@ -1227,6 +1238,15 @@ return {
 }
 
 function getEligibleCommandsToAdd(list) {
+  const stormTideCommands = {
+    '500-point mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
+    'standard mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
+    'grand army mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
+    'storm tide: infantry': ['AC', 'AE', 'AG'],
+    'storm tide: armored': ['AB', 'AF', 'AJ'],
+    'storm tide: special forces': ['AD', 'AH', 'AI']
+  };
+
   const validCommandIds = [];
   const invalidCommandIds = [];
   const cardsById = cardIdsByType.command; // Object.keys(cards);
@@ -1241,6 +1261,22 @@ function getEligibleCommandsToAdd(list) {
     // if (card.cardType !== 'command') return;
     if (list.commandCards.includes(id)) return;
     if (list.contingencies && list.contingencies.includes(id)) return;
+
+    if (
+      stormTideCommands[list.mode] &&
+      stormTideCommands[list.mode].length === 3 &&
+      stormTideCommands[list.mode].includes(id)
+    ) {
+      validCommandIds.push(id);
+      return;
+    } else if (
+      stormTideCommands[list.mode] &&
+      stormTideCommands[list.mode].length === 3 &&
+      stormTideCommands['standard mode'].includes(id)
+    ) {
+      invalidCommandIds.push(id);
+      return;
+    }
 
     if (!list.faction.includes(card.faction)) return;
     if (id === 'aa') return; // Standing Orders
@@ -1294,7 +1330,7 @@ function getEquippableUpgrades(
     if (faction === 'rebels' || faction === 'republic') unitCard['light side'] = true;
     else if (faction === 'separatists' || faction === 'empire' || faction === 'mercenary') unitCard['dark side'] = true;
 
-    if (unitCard.keywords.includes('Tempted')) {
+    if (unitCard.keywords.includes('Tempted') && list.isUsingOldPoints) {
       unitCard['light side'] = true;
       unitCard['dark side'] = true;
     }
@@ -1374,7 +1410,7 @@ function validateUpgrades(list, unitIndex){
       if(id == null)
         return;
       const equipCard = cards[id];
-      if(equipCard.cardSubtype == 'heavy weapon'){
+      if(equipCard.cardSubtype === 'heavy weapon'){
         heavyCount++;
       }
     });
@@ -1399,7 +1435,7 @@ function validateUpgrades(list, unitIndex){
       if(id == null)
         return;
       const equipCard = cards[id];
-      if(equipCard.cardSubtype == 'heavy weapon'){
+      if(equipCard.cardSubtype === 'heavy weapon'){
         hasHeavy = true;
       }
     });
@@ -1414,12 +1450,12 @@ function validateUpgrades(list, unitIndex){
       if(id == null)
         return;
       const equipCard = cards[id];
-      if(equipCard.cardSubtype == 'protocol'){
+      if(equipCard.cardSubtype === 'protocol'){
         hasProto = true;
       }
     });
     if(!hasProto){
-      unit.validationIssues.push( { level:2, text: card.cardName + " is missing a protocol upgrade (Programmed)" });
+      unit.validationIssues.push( { level:2, text: card.cardName + " is missing a Programming upgrade (Programmed)" });
     }
   }
 
@@ -1635,11 +1671,17 @@ function convertHashToList(faction, url) {
         } else {
           list.contingencies.push(cardId);
         }
-      } else if (card.cardSubtype === 'primary') {
+      } else if (card.cardSubtype === 'objective') {
+        list.objectiveCards.push(cardId);
+      } else if (card.cardSubtype === 'deployment') {
+        list.deploymentCards.push(cardId);
+      } else if (card.cardSubtype === 'condition') {
+        list.conditionCards.push(cardId);
+      }else if (card.cardSubtype === 'primary') {
         list.primaryCards.push(cardId);
-      } else if (card.cardSubtype === 'secondary') {
+      }else if (card.cardSubtype === 'secondary') {
         list.secondaryCards.push(cardId);
-      } else if (card.cardSubtype === 'advantage') {
+      }else if (card.cardSubtype === 'advantage') {
         list.advantageCards.push(cardId);
       }
     });
@@ -1696,7 +1738,34 @@ function battleForceValidation(currentList){
         break;
       }
   }
-  return validationIssues;
+	
+  if(battleForcesDict[currentList.battleForce]?.rules?.twoRebels){
+    let rebelsCount = currentList.units.reduce((rebelsCount, unit)=>{
+      const card = cards[unit.unitId];
+      if (card.faction === "rebels")
+        return rebelsCount + unit.count;
+      else return rebelsCount;
+    }, 0);
+
+    if(rebelsCount < 2){
+      validationIssues.push({level:2, text:"List must have at least 2 REBEL (i.e. non-Ewok) units."});
+    }
+  }
+
+  if( battleForcesDict[currentList.battleForce]?.rules?.unitLimits){
+    let unitLimits = battleForcesDict[currentList.battleForce].rules.unitLimits;
+
+    unitLimits.forEach( limit =>{
+      
+      let unitCount = currentList.units.reduce((count, unit)=>{
+        return count + (unit.unitId === limit.id ? unit.count : 0)}, 0);
+      
+      if(unitCount < limit.min || unitCount > limit.max){
+        let name = cards[limit.id].cardName;
+        validationIssues.push({level:2, text:"You must have " + limit.min + "-" + limit.max + " " + name.toUpperCase()});
+      }
+    });
+  }  return validationIssues;
 }
 
 function mercValidation(currentList, rank, mercs){
@@ -1745,8 +1814,8 @@ function rankValidation(currentList, ranks, mercs, rankReqs){
 
   // const countMercs = currentList.battleForce.countsMercsForMin;
 
-  // Flag for a bf's combined comm/op limits, only when comm/op already overrun individually
-  if(rankReqs.commOp && (ranks.commander + ranks.commander) > rankReqs.commOp
+
+  if(rankReqs.commOp && (ranks.commander + ranks.operative) > rankReqs.commOp
     && !(ranks.commander > rankReqs.commander || ranks.operative > rankReqs.operative)){
     validationIssues.push({level:2, text:"Limit of " + rankReqs.commOp + " total COMMMANDERS and OPERATIVES"});
   }

@@ -97,9 +97,7 @@ function UpgradeAvatar({ card, handleClick }) {
   return (
     <CardIcon
       size="small"
-      cardType="upgrade"
-      cardName={card.cardName}
-      imageName={card.imageName}
+      card={card}
       handleClick={handleClick}
     />
   );

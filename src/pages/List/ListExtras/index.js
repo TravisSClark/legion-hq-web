@@ -70,7 +70,6 @@ function ListExtras() {
         handleClick={handleToggleIsKillPointMode}
       />
       <SimpleButton
-        timeout={1000}
         timeoutMessage="Changing Points..."
         icon={<UsePrevIcon />}
         label={currentList.isUsingOldPoints ? "Using Old Points" : "Using New Points"}

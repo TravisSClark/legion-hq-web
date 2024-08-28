@@ -24,6 +24,30 @@ export default function GameChangeButton() {
                 >
                     Legion
                 </MenuItem>
+                <MenuItem 
+                  onClick={() => {
+                    handleSetGame('Storm Tide: Special Forces Division');
+                    handleCloseMenu();
+                  }}
+                >
+                    Storm Tide: Special Forces Division
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    handleSetGame('Storm Tide: Armored Division');
+                    handleCloseMenu();
+                  }}
+                >
+                    Storm Tide: Armored Division
+                </MenuItem>
+                <MenuItem
+                  onClick={() => {
+                    handleSetGame('Storm Tide: Infantry Division');
+                    handleCloseMenu();
+                  }}
+                >
+                    Storm Tide: Infantry Division
+                </MenuItem>
             </Menu>
             <Chip
                 clickable

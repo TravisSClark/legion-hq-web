@@ -35,7 +35,7 @@ function TTSTextExportButton({ currentList }) {
   const theme = useTheme();
   const [isOpen, setIsOpen] = useState(false);
   const [textType, setTextType] = useState(0);
-  const ttsJSON = generateTTSJSONText(currentList);
+  const ttsJSON = isOpen ? generateTTSJSONText(currentList) : null;
 
   const isFullscreen = useMediaQuery(theme.breakpoints.down('sm'));
   return (

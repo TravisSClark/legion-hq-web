@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
-import { Chip, Menu, MenuItem } from '@material-ui/core';
+import { Chip, Menu, MenuItem, MenuList } from '@material-ui/core';
 import LargerTooltip from 'common/LargerTooltip';
 import legionModes from 'constants/legionModes';
+import DataContext from 'context/DataContext';
 
 function ModeButton({ currentMode, points, maxPoints, tooltip, handleChangeMode }) {
   const [anchorEl, setAnchorEl] = useState();
   const handleOpenMenu = event => setAnchorEl(event.currentTarget);
   const handleCloseMenu = () => setAnchorEl();
+  const {userSettings} = useContext(DataContext);
+
   return (
     <React.Fragment>
       <Menu
@@ -15,33 +18,25 @@ function ModeButton({ currentMode, points, maxPoints, tooltip, handleChangeMode 
         open={Boolean(anchorEl)}
         onClose={handleCloseMenu}
       >
-        <MenuItem
-          selected={currentMode === '500-point mode'}
-          onClick={() => {
-            handleChangeMode('500-point mode');
-            handleCloseMenu();
-          }}
-        >
-          Skirmish (500 pts)
-        </MenuItem>
-        <MenuItem
-          selected={currentMode === 'standard mode'}
-          onClick={() => {
-            handleChangeMode('standard mode');
-            handleCloseMenu();
-          }}
-        >
-          Standard (800 pts)
-        </MenuItem>
-        <MenuItem
-          selected={currentMode === 'grand army mode'}
-          onClick={() => {
-            handleChangeMode('grand army mode');
-            handleCloseMenu();
-          }}
-        >
-          Grand Army (1600 pts)
-        </MenuItem>
+        <MenuList>
+          { Object.getOwnPropertyNames(legionModes).map( modeName =>{
+            const mode = legionModes[modeName];
+
+            if(!userSettings.showStormTide && modeName.includes("storm tide"))
+              return null;
+
+            return(
+              <MenuItem
+              selected={currentMode === modeName}
+              onClick={() => {
+                handleChangeMode(modeName);
+                handleCloseMenu();
+              }}
+            >{mode.name} ({mode.maxPoints} pts)</MenuItem>
+            );
+          })
+        }
+        </MenuList>
       </Menu>
       <LargerTooltip title={legionModes[currentMode].name}>
         <Chip
@@ -57,7 +52,7 @@ function ModeButton({ currentMode, points, maxPoints, tooltip, handleChangeMode 
 };
 
 ModeButton.defaultProps = {
-  tooltip: 'Toggle between Skirmish (500), Standard (800), and Grand Army (1600) formats.'
+  tooltip: 'Toggle between Skirmish (500), Standard (1000), and Grand Army (1600) formats.'
 };
 
 ModeButton.propTypes = {

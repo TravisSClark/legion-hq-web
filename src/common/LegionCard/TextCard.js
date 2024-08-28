@@ -91,9 +91,7 @@ function CounterpartCardHeader({ card, handleClick }) {
   const { isUnique, displayName, cardName, imageName } = card;
   const avatar = (
     <CardIcon
-      cardName={cardName}
-      cardType="unit"
-      imageName={imageName}
+      card={card}
     />
   );
   const action = (
@@ -134,9 +132,7 @@ function CommandCardHeader({ card, handleClick }) {
   const { cardName, cardType, imageName } = card;
   const avatar = (
     <CardIcon
-      cardName={cardName}
-      cardType={cardType}
-      imageName={imageName}
+      card={card}
     />
   );
   const action = (
@@ -162,9 +158,7 @@ function UpgradeCardHeader({ card, handleClick }) {
       upgradeType={cardSubtype}
       avatar={
         <CardIcon
-          cardName={cardName}
-          cardType={cardType}
-          imageName={imageName}
+          card={card}
         />
       }
     />
@@ -192,9 +186,7 @@ function UnitCardHeader({ card, handleClick }) {
       rank={rank}
       avatar={
         <CardIcon
-          cardName={card.cardName}
-          cardType={card.cardType}
-          imageName={card.imageName}
+          card={card}
         />
       }
     />

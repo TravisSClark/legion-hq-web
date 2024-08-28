@@ -7,7 +7,7 @@ import generateLink from './generateLink';
 
 function LinkButton({ currentList }) {
   const [isOpen, setIsOpen] = React.useState(false);
-  const listLink = generateLink(currentList);
+  const listLink = isOpen ? generateLink(currentList) : '';
   return (
     <div style={{ marginRight: 4, marginBottom: 4 }}>
       <Chip
