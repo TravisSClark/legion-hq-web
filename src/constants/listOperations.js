@@ -998,9 +998,14 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
 
     if (card.rank !== rank) continue;
 
-    if (!userSettings.showStormTide || (list.mode.includes('storm tide') && id === 'AA')) {
+
+    if(!userSettings.showStormTide && (id == "AA" || id == "AK")){
       continue;
-    } else if (!userSettings.showStormTide || (!list.mode.includes('storm tide') && id === 'AK')) {
+    }
+    // TODO - idk stormtide, but it seems odd that the 0pt one is the one shown in the mode, and the 60pt one is the one outside it
+    else if (userSettings.showStormTide && (list.mode.includes('storm tide') && id === 'AA')) {
+      continue;
+    } else if (userSettings.showStormTide && (!list.mode.includes('storm tide') && id === 'AK')) {
       continue;
     }
 
