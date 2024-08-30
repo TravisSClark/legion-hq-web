@@ -1327,6 +1327,9 @@ function getEquippableUpgrades(
     // dynamically add the force affinity
     const { faction } = unitCard;
 
+    // TODO - not a big fan of modifying unitCard data - leads to unexpected stickiness esp with old points
+
+    unitCard['light side'] = unitCard['dark side'] = false;
     if (faction === 'rebels' || faction === 'republic') unitCard['light side'] = true;
     else if (faction === 'separatists' || faction === 'empire' || faction === 'mercenary') unitCard['dark side'] = true;
 
@@ -1334,8 +1337,6 @@ function getEquippableUpgrades(
       unitCard['light side'] = true;
       unitCard['dark side'] = true;
     }
-
-
 
     // dynamically add the upgrade types
     for (let j = 0; j < unitCard.upgradeBar.length; j++) {
@@ -1928,7 +1929,7 @@ function validateList(currentList, rankLimits){
   let rankReqs = rankLimits; //updateRankLimits(currentList);
 
   let unitCounts = {};
-  // count up them mercs, pull in any unit-specific issues
+  // count units, count up them mercs, pull in any unit-specific issues
   currentList.units.forEach((unit)=>{
     const card = cards[unit.unitId];
 
@@ -1946,25 +1947,28 @@ function validateList(currentList, rankLimits){
     }
   });
 
-  // This map is probably a little over-complicated; don't add a Detachment issue until we know it's the last unit of that type being looked at
-  // More or less equiv to search+destroy a detachment issue if multiple are made (though... maybe more efficient(?))
-  let seenUnits = {};
   // Check detachment or any similar keywords once we know the full list count for units
-  currentList.units.forEach((unit)=>{
-    const card = cards[unit.unitId];
+  Object.getOwnPropertyNames(unitCounts).forEach(id =>{
+    const card = cards[id];
 
     if(card.detachment){
-      if(!seenUnits[unit.unitId]){
-        seenUnits[unit.unitId]  = 0;
-      }
-      seenUnits[unit.unitId] += unit.count;
-      if(unitCounts[unit.unitId] > unitCounts[card.detachment] && seenUnits[unit.unitId] === unitCounts[unit.unitId]){
-        let parent = cards[card.detachment];
-        validationIssues.push({level:2, text:"Too many " + card.displayName.toUpperCase() + " detachments. \
-          You need one " + (parent.displayName ? parent.displayName : parent.cardName).toUpperCase() + " per " + card.displayName.toUpperCase() + "." });
+      let parent = cards[card.detachment];
+      let parentCount = unitCounts[card.detachment] ? unitCounts[card.detachment] : 0;
+
+      if(unitCounts[id] > parentCount){
+        let cardName = (card.displayName ? card.displayName : card.cardName).toUpperCase();
+        let parentName = (parent.displayName ? parent.displayName : parent.cardName).toUpperCase();
+
+        if(card.isUnique){
+          validationIssues.push({level:2, text:"In order to use " + cardName + ", you must include " + parentName + ". (DETACHMENT)" });
+        }
+        else{
+          validationIssues.push({level:2, text:"Too many " + cardName + "s  ("+ unitCounts[id] + "). \
+            You need one " + parentName + "(" + parentCount + ") per " + cardName + ". (DETACHMENT)" });
+        }
       }
     }
-  });
+  })
 
   // TODO - now that we count units by ID, use that for BF validation
   validationIssues.push(...battleForceValidation(currentList, unitCounts));

@@ -736,7 +736,7 @@
     "ak": {
         "id": "ak",
         "cardName": "Rebel Commandos",
-        "displayName": "Commandos",
+        "displayName": "Rebel Commandos",
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "special",
@@ -13097,7 +13097,8 @@
         "rank": "operative",
         "faction": "rebels",
         "isUnique": true,
-        "cost": 165,
+        "cost": 145,
+        "prevCost": 165,
         "imageName": "Ahsoka Tano Fulcrum.webp",
         "keywords": [
             "Jump",
