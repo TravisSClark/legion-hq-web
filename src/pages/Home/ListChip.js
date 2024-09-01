@@ -4,7 +4,7 @@ import { Chip, Typography, Badge, Menu, MenuItem } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import DataContext from 'context/DataContext';
-import urls from 'constants/urls';
+import urls, { getImageUrl } from 'constants/urls';
 import factions from 'constants/factions';
 import cards from 'constants/cards';
 
@@ -40,7 +40,7 @@ function ListChip({ userList, deleteUserList }) {
               avatar={card ? (
                 <Img
                   alt={card.cardName}
-                  src={`${urls.cdn}/unitIcons/${card.imageName}`}
+                  src={getImageUrl(card)}
                   style={{
                     marginLeft: 0,
                     width: 44,

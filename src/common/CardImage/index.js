@@ -3,7 +3,7 @@ import Img from 'react-image';
 import { Skeleton } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/styles';
 import cards from 'constants/cards';
-import urls from 'constants/urls';
+import urls, { getImageUrl } from 'constants/urls';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -28,7 +28,7 @@ function CardImage({ id, handleClick }) {
     <div className={classes.container}>
       <Img
         alt={card.cardName}
-        src={`${urls.cdn}/${card.cardType}Cards/${card.imageName}`}
+        src={getImageUrl(card)}
         loader={<Skeleton className={classes[card.cardType]} />}
         className={classes[card.cardType]}
         onClick={handleClick}

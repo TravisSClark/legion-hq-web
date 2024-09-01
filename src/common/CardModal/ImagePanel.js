@@ -7,7 +7,7 @@ import {
   ExpansionPanelDetails
 } from '@material-ui/core';
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
-import urls from 'constants/urls';
+import urls, { getImageUrl } from 'constants/urls';
 
 function ImagePanel({ card, usingOriginalImage = false }) {
   if (!card) return null;
@@ -20,7 +20,7 @@ function ImagePanel({ card, usingOriginalImage = false }) {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails style={{ padding: '0px 24px 24px' }}>
           <Img
-            src={`${urls.cdn}/${cardType}Cards/${usingOriginalImage ? `original-${imageName}` : imageName}`}
+            src={getImageUrl(card, null, usingOriginalImage)}
             style={{ width: '100%' }}
           />
         </ExpansionPanelDetails>

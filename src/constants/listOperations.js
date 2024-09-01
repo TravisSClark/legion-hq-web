@@ -55,8 +55,7 @@ function countPoints(list) {
 }
 
 function toggleUsingOldPoints(list) {
-  if (!list.isUsingOldPoints) list.isUsingOldPoints = true;
-  else list.isUsingOldPoints = false;
+  list.isUsingOldPoints = !list.isUsingOldPoints;
   return countPoints(list);
 }
 
@@ -999,14 +998,17 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     if (card.rank !== rank) continue;
 
 
-    if(!userSettings.showStormTide && (id == "AA" || id == "AK")){
-      continue;
-    }
-    // TODO - idk stormtide, but it seems odd that the 0pt one is the one shown in the mode, and the 60pt one is the one outside it
-    else if (userSettings.showStormTide && (list.mode.includes('storm tide') && id === 'AA')) {
-      continue;
-    } else if (userSettings.showStormTide && (!list.mode.includes('storm tide') && id === 'AK')) {
-      continue;
+    if(id == "AA" || id == "AK"){
+      if(!userSettings.showStormTide){
+        continue;
+      }
+
+      // TODO - idk stormtide, but it seems odd that the 0pt one is the one shown in the mode, and the 60pt one is the one outside it
+      else if (userSettings.showStormTide && (list.mode.includes('storm tide') && id === 'AA')) {
+        continue;
+      } else if (userSettings.showStormTide && (!list.mode.includes('storm tide') && id === 'AK')) {
+        continue;
+      }
     }
 
     if(!list.battleForce)

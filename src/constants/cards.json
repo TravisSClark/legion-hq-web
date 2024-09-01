@@ -376,6 +376,10 @@
         "isUnique": true,
         "cost": 75,
         "imageName": "Leia Organa.webp",
+        "oldCard":{
+            "cost":75,
+            "keywords":["Take Cover", "Inspire", "Nimble", "Sharpshooter"]
+        },
         "keywords": [
             "Take Cover",
             "Exemplar",
@@ -480,6 +484,16 @@
             "training",
             "gear"
         ],
+        "oldCard":{
+            "keywords": [
+                "Jump",
+                "Charge",
+                "Deflect",
+                "Immune",
+                "Impact",
+                "Pierce"
+            ]
+        },
         "defense": "red",
         "surges": [
             "crit"
@@ -636,6 +650,9 @@
             "Agile",
             "Nimble"
         ],
+        "oldCard":{
+            "keywords":["Nimble"]
+        },
         "upgradeBar": [
             "heavy weapon",
             "personnel",
@@ -669,6 +686,9 @@
         "keywords": [
             "Charge"
         ],
+        "oldCard":{
+            "keywords":"Ready"
+        },
         "upgradeBar": [
             "heavy weapon",
             "personnel",
@@ -883,6 +903,16 @@
             "Impact",
             "Fixed"
         ],
+        "oldCard":{
+            "keywords": [
+            "Emplacement Trooper",
+            "Full Pivot",
+            "Sentinel",
+            "Stationary",
+            "Impact",
+            "Fixed"
+        ]
+        },
         "upgradeBar": [
             "comms",
             "generator"
@@ -917,6 +947,13 @@
         "prevCost": 55,
         "cost": 50,
         "imageName": "AT-RT Reb.webp",
+        "oldCard":{"keywords": [
+            "Vehicle",
+            "Armor",
+            "Climbing Vehicle",
+            "Expert Climber",
+            "Impact"
+        ]},
         "keywords": [
             "Vehicle",
             "Armor",
@@ -955,6 +992,8 @@
         "isUnique": false,
         "prevCost": 130,
         "cost": 125,
+        "oldCard":{"keywords":[]},
+
         "imageName": "T-47 Airspeeder.webp",
         "keywords": [
             "Vehicle",
@@ -1005,9 +1044,12 @@
         "isUnique": false,
         "prevCost": 60,
         "cost": 55,
+        "oldCard":{"keywords":["Vehicle", "Armor", "Arsenal","Cover","Light Transport","Speeder"]},
+
         "imageName": "X-34 Landspeeder.webp",
         "keywords": [
             "Vehicle",
+            "Armor",
             "Arsenal",
             "Cover",
             "Speeder"
@@ -1055,6 +1097,13 @@
             "Exemplar",
             "Inspire"
         ],
+        "oldCard":{
+            "keywords": [
+            "Spotter",
+            "Inspire",
+            "Sharpshooter"
+        ]
+        },
         "upgradeBar": [
             "command",
             "gear"
@@ -1202,6 +1251,11 @@
             "Inspire",
             "Sharpshooter"
         ],
+        "oldCard":{ "keywords":[
+        "Spotter",
+        "Inspire",
+        "Precise",
+        "Sharpshooter"]},
         "upgradeBar": [
             "command",
             "command",
@@ -1240,6 +1294,13 @@
         "faction": "empire",
         "isUnique": true,
         "prevCost": 75,
+        "oldCard":{
+            "cost":"75",
+            "keywords":[ "Compel",
+            "Cunning",
+            "Entourage",
+            "Sharpshooter"]
+        },
         "cost": 65,
         "imageName": "Director Orson Krennic.webp",
         "keywords": [
@@ -1387,6 +1448,9 @@
         "keywords": [
             "Precise"
         ],
+        "oldCard":{
+            
+        },
         "upgradeBar": [
             "heavy weapon",
             "personnel",
@@ -1421,6 +1485,7 @@
         "keywords": [
             "Steady"
         ],
+        "oldCard":{},
         "upgradeBar": [
             "heavy weapon",
             "personnel",
@@ -1621,6 +1686,14 @@
             "Fixed",
             "Impact"
         ],
+        "oldCard":{ "keywords": [
+            "Emplacement Trooper",
+            "Full Pivot",
+            "Reposition",
+            "Sentinel",
+            "Cumbersome",
+            "Fixed"
+        ]},
         "upgradeBar": [
             "comms",
             "generator"
@@ -1699,6 +1772,14 @@
         "prevCost": 155,
         "cost": 145,
         "imageName": "AT-ST.webp",
+        "oldCard":{"keywords": [
+            "Vehicle",
+            "Armor",
+            "Arsenal",
+            "Weak Point",
+            "Fixed",
+            "Impact"
+        ]},
         "keywords": [
             "Vehicle",
             "Armor",
@@ -1752,6 +1833,17 @@
         "prevCost": 140,
         "cost": 125,
         "imageName": "TX-225 GAVw Occupier Tank.webp",
+        "oldCard":{"keywords": [
+            "Vehicle",
+            "Armor",
+            "Arsenal",
+            "Reposition",
+            "Transport",
+            "Weak Point",
+            "Suppressive",
+            "Fixed",
+            "Impact"
+        ]},
         "keywords": [
             "Vehicle",
             "Armor",
@@ -1802,9 +1894,16 @@
         "imageName": "Rebel Officer.webp",
         "keywords": [
             "Take Cover",
-            "Inspire",
-            "Exemplar"
+            "Exemplar",
+            "Inspire"
         ],
+        "oldCard":{
+            "keywords": [
+                "Take Cover",
+                "Inspire",
+                "Sharpshooter"
+            ]
+        },
         "upgradeBar": [
             "command",
             "gear"
@@ -4105,6 +4204,18 @@
             "Scatter",
             "Suppressive"
         ],
+        "oldCard":{
+            "keywords": [
+            "Cunning",
+            "Deflect",
+            "Immune",
+            "Makashi Mastery",
+            "Master of the Force",
+            "Impact",
+            "Pierce",
+            "Scatter"
+        ]
+        },
         "upgradeBar": [
             "force",
             "force",
@@ -4282,6 +4393,18 @@
             "Fixed",
             "Impact"
         ],
+        "oldCard":{
+            "keywords": [
+            "Armor",
+            "Arsenal",
+            "Hover",
+            "Outmaneuver",
+            "Weak Point",
+            "Critical",
+            "Fixed",
+            "Impact"
+        ]
+        },
         "upgradeBar": [
             "pilot",
             "hardpoint",
@@ -4736,6 +4859,9 @@
             "Prepared Position",
             "Coordinate"
         ],
+        "oldCard":{
+            "keywords":["Coordinate", "Defend"]
+        },
         "upgradeBar": [
             "heavy weapon",
             "personnel",
@@ -4782,6 +4908,18 @@
             "Impact",
             "Pierce"
         ],
+        "oldCard":{
+            "keywords": [
+                "Jump",
+                "Charge",
+                "Guardian",
+                "Immune",
+                "Master of the Force",
+                "Soresu Mastery",
+                "Critical",
+                "Impact",
+                "Pierce"
+            ]},
         "upgradeBar": [
             "force",
             "force",
@@ -5053,6 +5191,7 @@
             "Prepared Position",
             "Long Shot"
         ],
+        "oldCard":{"keywords":["Coordinate", "Target"]},
         "upgradeBar": [
             "heavy weapon",
             "personnel",
@@ -6167,6 +6306,15 @@
             "Inconspicuous",
             "Suppressive"
         ],
+        "oldCard":{
+            "keywords": [
+                "Repair",
+                "Secret Mission",
+                "Grounded",
+                "Inconspicuous",
+                "Suppressive"
+            ]
+        },
         "upgradeBar": [
             "comms"
         ],
@@ -6211,6 +6359,15 @@
             "Inconspicuous",
             "Suppressive"
         ],
+        "oldCard":{
+            "keywords": [
+            "Repair",
+            "Secret Mission",
+            "Grounded",
+            "Inconspicuous",
+            "Suppressive"
+        ]
+        },
         "upgradeBar": [
             "comms"
         ],
@@ -7062,6 +7219,16 @@
             "Nimble",
             "Sharpshooter"
         ],
+        "oldCard":{
+            "keywords": [
+                "Quick Thinking",
+                "Authoritative",
+                "Exemplar",
+                "Nimble",
+                "Sharpshooter",
+                "Pierce"
+            ]
+        },
         "upgradeBar": [
             "command",
             "training",
@@ -7161,6 +7328,13 @@
             "Sharpshooter",
             "Tactical"
         ],
+        "oldCard":{"keywords": [
+            "Heavy Weapon Team",
+            "Impervious",
+            "Scout",
+            "Sharpshooter",
+            "Tactical"
+        ]},
         "upgradeBar": [
             "heavy weapon",
             "training",
@@ -7209,6 +7383,12 @@
             "Sharpshooter",
             "Tactical"
         ],
+        "oldCard":{"keywords": [
+            "Impervious",
+            "Scout",
+            "Sharpshooter",
+            "Tactical"
+        ]},
         "upgradeBar": [
             "squad leader",
             "heavy weapon",
@@ -7834,6 +8014,15 @@
             "Impact",
             "Critical"
         ],
+        "oldCard":{"keywords": [
+            "Vehicle",
+            "Armor",
+            "Climbing Vehicle",
+            "Expert Climber",
+            "Scout",
+            "Impact",
+            "Critical"
+        ]},
         "upgradeBar": [
             "hardpoint",
             "comms"
@@ -8505,6 +8694,17 @@
             "Impact",
             "Pierce"
         ],
+        "oldCard":{
+            "keywords": [
+            "Jump",
+            "Djem So Mastery",
+            "Flawed",
+            "Immune",
+            "Tempted",
+            "Impact",
+            "Pierce"
+        ]
+        },
         "upgradeBar": [
             "force",
             "force",
@@ -9288,6 +9488,18 @@
             "Blast",
             "Suppressive"
         ],
+        "oldCard":{
+            "keywords": [
+                "Guidance",
+                "Ataru Mastery",
+                "Immune",
+                "Master of the Force",
+                "Impact",
+                "Pierce",
+                "Blast",
+                "Suppressive"
+            ]
+        },
         "upgradeBar": [
             "force",
             "force",
@@ -9319,6 +9531,7 @@
         "isUnique": false,
         "prevCost": 75,
         "cost": 65,
+        "oldCard":{"keywords":[]},
         "imageName": "A-A5 Speeder Truck R.webp",
         "keywords": [
             "Armor",
@@ -9369,6 +9582,9 @@
             "Impact",
             "Fixed"
         ],
+        "oldCard":{
+            
+        },
         "upgradeBar": [
             "pilot",
             "ordnance",
@@ -9413,6 +9629,15 @@
             "Fixed",
             "Impact"
         ],
+        "oldCard":{"keywords": [
+            "Armor",
+            "Arsenal",
+            "Cover",
+            "Hover: Air",
+            "Immune",
+            "Transport",
+            "Fixed"
+        ]},
         "upgradeBar": [
             "pilot",
             "ordnance",
@@ -11868,6 +12093,7 @@
             "Unhindered",
             "Special Issue"
         ],
+       
         "upgradeBar": [
             "heavy weapon",
             "heavy weapon"
@@ -12275,6 +12501,9 @@
             "Unconcerned",
             "Unstoppable"
         ],
+        "oldCard":{
+
+        },
         "upgradeBar": [
             "heavy weapon",
             "heavy weapon",
@@ -13277,6 +13506,9 @@
             "Low Profile",
             "Unhindered"
         ],
+        "oldCard":{
+
+        },
         "upgradeBar": [
             "heavy weapon",
             "personnel",
@@ -13493,6 +13725,7 @@
         "isUnique": false,
         "cost": 35,
         "imageName": "Ewok Slingers.webp",
+        "oldCard":{},
         "keywords": [
             "Mercenary",
             "Independent",

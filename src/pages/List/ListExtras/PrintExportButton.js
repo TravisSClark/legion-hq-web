@@ -6,7 +6,7 @@ import { Print as PrintIcon } from '@material-ui/icons';
 import { generateTournamentText } from 'constants/listOperations';
 import generateLink from './generateLink';
 import cards from 'constants/cards';
-import urls from 'constants/urls'
+import urls, { getImageUrl } from 'constants/urls'
 
 class PrintList extends React.Component {
   render() {
@@ -94,18 +94,17 @@ class PrintListImages extends React.Component {
     
     currentList.units.forEach((unit, i) => {
       const card = cards[unit.unitId];
-      const unitImage = `${urls.cdn}/${card.cardType}Cards/${card.imageName}`
       const upgradeImages = [];
       unit.upgradesEquipped.forEach((upgradeId, i) => {
         if (!upgradeId) return;
         const upgradeCard = cards[upgradeId];
-        upgradeImages.push(`${urls.cdn}/${upgradeCard.cardType}Cards/${upgradeCard.imageName}`);
+        upgradeImages.push(getImageUrl(upgradeCard));
       });
       units.push(
         <div id={`${unit}-${i}`}>
           <img
             alt={card.cardName}
-            src={unitImage}
+            src={getImageUrl(card)}
             style={{ height: '200px', width: 'auto' }}
           />
         </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {
   Grow,
   IconButton,
@@ -14,7 +14,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import CardChip from 'common/CardChip';
 import KeywordChips from 'common/KeywordChips';
-import urls from 'constants/urls';
+import urls, { getImageUrl } from 'constants/urls';
+import ListContext from 'context/ListContext';
 
 const useStyles = makeStyles(theme => ({
   expand: {
@@ -38,12 +39,16 @@ const useStyles = makeStyles(theme => ({
 
 function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
   const chipSize = 'small';
-  const { cost, cardType, cardName, displayName, keywords, imageName } = card;
+  const { cost, cardType, cardName, displayName, keywords } = card;
   const classes = useStyles();
   const [isExpanded, setIsExpanded] = React.useState(false);
   const handleExpandClick = () => setIsExpanded(!isExpanded);
   const isDoubleSided = cardType === 'upgrade' && card.isDoubleSided;
   const isSkirmish = card.keywords.includes('Skirmish');
+
+  const {
+    currentList
+  } = useContext(ListContext);
 
   return (
     <Grow unmountOnExit in={true}>
@@ -61,7 +66,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
         <CardActionArea onClick={handleClick}>
           <CardMedia
             title={displayName ? displayName : cardName}
-            image={`${urls.cdn}/${cardType}Cards/${imageName}`}
+            image={getImageUrl(card, currentList)}
             className={clsx(
               { [classes.unitImage]: cardType === 'unit' || cardType === 'counterpart' },
               { [classes.commandImage]: cardType === 'battle' },

@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Img from 'react-image';
 import { Skeleton } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/styles';
 import cards from 'constants/cards';
-import urls from 'constants/urls';
+import urls, { getImageUrl } from 'constants/urls';
+import ListContext from 'context/ListContext';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -36,11 +37,12 @@ const useStyles = makeStyles(theme => ({
 function CardImage({ id, handleClick, isLoadout = false }) {
   const card = cards[id];
   const classes = useStyles();
+  const list = useContext(ListContext);
   return (
     <div className={isLoadout ? classes.loadoutContainer : classes.container}>
       <Img
         alt={card.cardName}
-        src={`${urls.cdn}/${card.cardType}Cards/${card.imageName}`}
+        src={getImageUrl(card, list)}
         loader={<Skeleton variant="rect" className={classes[card.cardType]} />}
         className={classes[card.cardType]}
         onClick={handleClick}

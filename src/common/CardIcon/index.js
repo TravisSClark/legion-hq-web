@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import clsx from 'clsx';
 import Img from 'react-image';
 import { makeStyles } from '@material-ui/core/styles';
 import { Skeleton } from '@material-ui/lab';
-import urls from 'constants/urls';
+import urls, {getIconUrl} from 'constants/urls';
+import ListContext from 'context/ListContext';
 
 const useStyles = makeStyles(theme => ({
   card: { width: 315, marginRight: 4, marginBottom: 4 },
@@ -19,6 +20,7 @@ function CardIcon({
   handleClick,
   card
 }) {
+  const list = useContext(ListContext);
   const classes = useStyles();
   const placeholder = (
     <Skeleton
@@ -31,7 +33,7 @@ function CardIcon({
     <Img
       decode={false}
       alt={card.cardName}
-      src={`${urls.cdn}/${card.cardType}Icons/${card.imageName}`}
+      src={getIconUrl(card, list)}
       style={{ scale: 5 }}
       loader={placeholder}
       className={clsx(classes.image, classes[size], {
