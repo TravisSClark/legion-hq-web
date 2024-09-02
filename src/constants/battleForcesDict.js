@@ -78,7 +78,7 @@ const battleForcesDict = {
       rules: {
         noFieldComm: true
       },
-      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/024/07/SWQ_BlizzardForce.pdf',
+      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_BlizzardForce.pdf',
       allowedUniqueUpgrades: ['fl'],
       'standard mode': {
         commander: [1, 2],
@@ -106,7 +106,7 @@ const battleForcesDict = {
     special: [],
     support: ['bf', 'be'],
     heavy: ['tm'],
-    ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2023/09/ImperialRemnantRulesSheet.pdf',
+    ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ImperialRemnant-1.pdf',
     allowedUniqueUpgrades: ['uj', 'gm'],
     'standard mode': {
       commander: [1, 2],
@@ -193,7 +193,7 @@ const battleForcesDict = {
       special: ['kz', 'pg'],
       support: ['xf', 'ic'],
       heavy: ['gb', 'qs'],
-      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2023/09/SWL_WookieesDefenders-1.pdf',
+      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_WookieesDefenders.pdf',
       allowedUniqueUpgrades: ['lh', 'lg'],
       'standard mode': {
         commander: [1, 2],
@@ -255,7 +255,7 @@ const battleForcesDict = {
       special: ['la'],
       support: ['ie'],
       heavy: ['xe'],
-      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2023/09/SWL_ExperimentalDroids-1.pdf',
+      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ExperimentalDroids.pdf',
       allowedUniqueUpgrades: [],
       'standard mode': {
         commander: [1, 2],
@@ -287,7 +287,7 @@ const battleForcesDict = {
       rules: {
         countMercs: true
       },
-      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2022/10/StarWarsLegionBFRulesSheetSC.pdf',
+      ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ShadowCollective.pdf',
       allowedUniqueUpgrades: ['rq', 'so', 'se', 'sp', 'sg', 'sh', 'si'],
       rules:{
         countMercs: true
