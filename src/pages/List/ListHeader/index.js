@@ -328,8 +328,6 @@ function ListHeader() {
             </DialogContent>
           </Dialog>
         </div>
-      
-      
     </div>
   );
 };
