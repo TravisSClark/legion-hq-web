@@ -1725,22 +1725,14 @@ function mergeLists(primaryList, secondaryList) {
 }
 
 // All (most...) battleForce-specific stuff (should) goes here
-function battleForceValidation(currentList){
+function battleForceValidation(currentList, unitCounts){
 
   const validationIssues = [];
   // TODO is a switch against the code standard? ;)
   // Should destroy this in favor of adding a 'rule' to apply for BzF in the object, e.g.
   // rules:[... {type:'unitLimit', min:0, max:1, types:['ay', 'sr']}]
 
-  if (currentList.battleForce === "Blizzard Force"){
-        const stormsCount = currentList.units.filter((unit)=>unit.unitId === "ay" || unit.unitId === "sr").reduce((count,u)=>count+=u.count, 0);
-        
-        if(stormsCount > 2){
-          validationIssues.push({level:2, text:"Maximum 2 Stormtroopers (Regular or HRU in any combo)"});
-        }
-  }
-	
-  if(battleForcesDict[currentList.battleForce]?.rules?.twoRebels){
+  if(battleForcesDict[currentList.battleForce]?.rules?.take2NonEwokRebs){
     let rebelsCount = currentList.units.reduce((rebelsCount, unit)=>{
       const card = cards[unit.unitId];
       if (card.faction === "rebels")
@@ -1749,7 +1741,7 @@ function battleForceValidation(currentList){
     }, 0);
 
     if(rebelsCount < 2){
-      validationIssues.push({level:2, text:"List must have at least 2 REBEL (i.e. non-Ewok) units."});
+      validationIssues.push({level:2, text:"List must have at least 2 non-Ewok REBEL units."});
     }
   }
 
@@ -1757,16 +1749,52 @@ function battleForceValidation(currentList){
     let unitLimits = battleForcesDict[currentList.battleForce].rules.unitLimits;
 
     unitLimits.forEach( limit =>{
+      let unitCount = limit.ids.reduce((count, id)=>{
+        console.log(unitCounts[id])
+        return count + (unitCounts[id] ? unitCounts[id] : 0)}, 0);
       
-      let unitCount = currentList.units.reduce((count, unit)=>{
-        return count + (unit.unitId === limit.id ? unit.count : 0)}, 0);
-      
-      if(unitCount < limit.min || unitCount > limit.max){
-        let name = cards[limit.id].cardName;
-        validationIssues.push({level:2, text:"You must have " + limit.min + "-" + limit.max + " " + name.toUpperCase()});
+      if(unitCount < limit.count[0] || unitCount > limit.count[1]){
+        let name = limit.ids.map(id=> cards[id].displayName ? cards[id].displayName : cards[id].cardName).join(" OR ");
+        if(limit.count[0] == 0)
+          validationIssues.push({level:2, text:"Limit " + limit.count[1] + " " + name.toUpperCase()});
+        else
+          validationIssues.push({level:2, text:"You must have " + limit.count[0] + " - " + limit.count[1] + " " + name.toUpperCase()});
       }
     });
-  }  return validationIssues;
+  }  
+
+  if( battleForcesDict[currentList.battleForce]?.rules?.minOneOfEachCorps){
+
+    console.log('counts ' + JSON.stringify(unitCounts));
+
+    let corpsCounts = battleForcesDict[currentList.battleForce].corps.map(
+      id=>{return{id, count:(unitCounts[id] ? unitCounts[id] : 0)}}
+    )
+
+    if(battleForcesDict[currentList.battleForce]?.rules?.buildsAsCorps){
+      let moreCorps = battleForcesDict[currentList.battleForce]?.rules?.buildsAsCorps.map(
+        id=>{return{id, count:(unitCounts[id] ? unitCounts[id] : 0)}}
+      );
+      corpsCounts = corpsCounts.concat(moreCorps);
+    }
+
+    let hasNone = false;
+    let hasMoreThanOne =false;
+    corpsCounts.forEach(c=>{
+      if(c.count == 0){
+        hasNone = true;
+      } else if(c.count > 1){
+        hasMoreThanOne = true;
+      }
+    });
+
+    if(hasNone && hasMoreThanOne){
+      validationIssues.push({level:2, text:"You must have at least one of each Corps type before adding additional ones"});
+    }
+  }  
+  
+  
+  return validationIssues;
 }
 
 function mercValidation(currentList, rank, mercs){
@@ -1812,9 +1840,6 @@ function rankValidation(currentList, ranks, mercs, rankReqs){
   // TODO this is ugly - probably should be a BF flag
   const battleForce = battleForcesDict[currentList.battleForce];
   const countMercs = battleForce?.rules?.countMercs; // currentList.battleForce === "Shadow Collective" || currentList.battleForce == "Bright Tree Village"
-
-  // const countMercs = currentList.battleForce.countsMercsForMin;
-
 
   if(rankReqs.commOp && (ranks.commander + ranks.operative) > rankReqs.commOp
     && !(ranks.commander > rankReqs.commander || ranks.operative > rankReqs.operative)){
@@ -1889,8 +1914,7 @@ function applyFieldCommander(list, rankReqs){
   }
 }
 
-function getRankLimits(currentList){
-
+function getOriginalRankLimits(currentList){
   const battleForce = currentList.battleForce;
   let dictRankReqs;
 
@@ -1906,8 +1930,19 @@ function getRankLimits(currentList){
 
   // copy over so we can play with limits
   let rankReqs = {};
-  (Object.keys(dictRankReqs)).forEach(r => rankReqs[r] = [dictRankReqs[r][0], dictRankReqs[r][1]]);
+  (Object.keys(dictRankReqs)).forEach(r =>{
+    if(dictRankReqs[r].length)
+      rankReqs[r] = [dictRankReqs[r][0], dictRankReqs[r][1]]
+    else
+      rankReqs[r] = dictRankReqs[r];
+  });
+  
+  return rankReqs;
+}
 
+function getRankLimits(currentList){
+
+  let rankReqs = getOriginalRankLimits(currentList);
   applyRankAdjustments(currentList, rankReqs);  
   applyFieldCommander(currentList, rankReqs);
 
@@ -1917,7 +1952,7 @@ function getRankLimits(currentList){
 // TODO most of this was written before understanding the whole 'running total' state we have going
 // Would be better to move most of this into the proper unit/upgrade modify steps instead of 
 // iterating everything every time something's added
-function validateList(currentList, rankLimits){
+function validateList(currentList){
   let validationIssues = [];
 
   const battleForce = currentList.battleForce;
@@ -1931,7 +1966,8 @@ function validateList(currentList, rankLimits){
       validationIssues.push({level:1, text:"Playing a battleforce in a mode with no defined battleforce construction rules (Defaulting to 1000pt)"});
   } 
   
-  let rankReqs = rankLimits; //updateRankLimits(currentList);
+  let rankReqs = getRankLimits(currentList);
+
 
   let unitCounts = {};
   // count units, count up them mercs, pull in any unit-specific issues
@@ -1968,8 +2004,8 @@ function validateList(currentList, rankLimits){
           validationIssues.push({level:2, text:"In order to use " + cardName + ", you must include " + parentName + ". (DETACHMENT)" });
         }
         else{
-          validationIssues.push({level:2, text:"Too many " + cardName + "s  ("+ unitCounts[id] + "). \
-            You need one " + parentName + "(" + parentCount + ") per " + cardName + ". (DETACHMENT)" });
+          validationIssues.push({level:2, text:"Too many " + cardName + "s  ("+ unitCounts[id] + ")." +
+            "You need one " + parentName + "(" + parentCount + ") per " + cardName + ". (DETACHMENT)" });
         }
       }
     }
@@ -2024,5 +2060,6 @@ export {
   generateMinimalText,
   generateHTMLText,
   validateList,
-  getRankLimits
+  getRankLimits,
+  getOriginalRankLimits
 };

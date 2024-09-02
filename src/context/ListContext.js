@@ -133,8 +133,7 @@ export function ListProvider({
     setStackSize(1);
   }, [width, cardPaneFilter]);
 
-  const updateThenValidateList = (list) => {
-    const rankLimits = getRankLimits(list);
+  const updateThenValidateList = (list) => { const rankLimits = getRankLimits(list);
     setCurrentList(list);
     doUnitValidation(list, rankLimits);
     setRankLimits(rankLimits);
@@ -366,9 +365,9 @@ export function ListProvider({
   }
 
   // Maybe there should be a 'units only' flag, but lists will be something like 50-100 entities max anyhow...
-  const doUnitValidation = (list, rankLimits) =>{
+  const doUnitValidation = (list) =>{
     // console.log('performing list validation!');
-    setValidationIssues(validateList(list, rankLimits));
+    setValidationIssues(validateList(list));
   }
 
   const unitProps = {

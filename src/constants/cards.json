@@ -7288,7 +7288,7 @@
     "lb": {
         "id": "lb",
         "cardName": "BX-Series Droid Commandos",
-        "title": "Stike Team",
+        "title": "Strike Team",
         "displayName": "BX Droid Strike Team",
         "cardType": "unit",
         "cardSubtype": "droid trooper",
@@ -7459,6 +7459,7 @@
         "id": "lh",
         "cardSubtype": "heavy weapon",
         "cardName": "Echo",
+        "title": "ARC Marksman",
         "isUnique": true,
         "cardType": "upgrade",
         "prevCost": 42,
@@ -12980,7 +12981,7 @@
 			}
         ]
     },
-    "uy": {
+    "uy-to-be-deleted": {
         "id": "uy",
         "cardName": "Imperial Death Troopers",
         "displayName": "Death Troopers",
@@ -13021,7 +13022,7 @@
         
         "specialIssue": "Imperial Remnant"
     },
-    "uz": {
+    "uz-to-be-deleted": {
         "id": "uz",
         "cardName": "Scout Troopers",
         "cardType": "unit",
@@ -14171,7 +14172,7 @@
         "title": "Prototype Assassin Droids",
         "cardType": "unit",
         "cardSubtype": "droid trooper",
-        "rank": "corps",
+        "rank": "special",
         "faction": "separatists",
         "isUnique": false,
         "prevCost": 60,
@@ -14282,7 +14283,7 @@
         "speed": 2,
         "specialIssue": "Wookiee Defenders"
     },
-    "xg": {
+    "xg-to-be-deleted": {
         "id": "xg",
         "cardName": "Wookiee Warriors",
         "title": "Noble Fighters",

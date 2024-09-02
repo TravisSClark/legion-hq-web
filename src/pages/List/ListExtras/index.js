@@ -69,12 +69,13 @@ function ListExtras() {
         label={isKillPointMode ? "Calculating Kill Points!" : "Calculate Kill Points"}
         handleClick={handleToggleIsKillPointMode}
       />
-      <SimpleButton
+      {/* TODO - this is still kind of a mess, lol. Disabling for now */}
+      {/* <SimpleButton
         timeoutMessage="Changing Points..."
         icon={<UsePrevIcon />}
         label={currentList.isUsingOldPoints ? "Using Old Points" : "Using New Points"}
         handleClick={handleToggleUsingOldPoints}
-      />
+      /> */}
     </div>
   );
 };
