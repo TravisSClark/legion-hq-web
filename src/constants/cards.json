@@ -15195,6 +15195,7 @@
         "cardType": "battle",
         "imageName": "Shifting Priorities.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "Al"
     },
     "Am": {
