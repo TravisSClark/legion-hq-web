@@ -15042,6 +15042,7 @@
         "cardType": "battle",
         "imageName": "Advanced Intel.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "yu"
     },
     "yv": {
@@ -15050,6 +15051,7 @@
         "cardType": "battle",
         "imageName": "Cunning Deployment.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "yv"
     },
     "yw": {
@@ -15058,6 +15060,7 @@
         "cardType": "battle",
         "imageName": "Fortified Position.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "yw"
     },
     "yx": {
@@ -15066,6 +15069,7 @@
         "cardType": "battle",
         "imageName": "Garrison.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "yx"
     },
     "yy": {
@@ -15074,6 +15078,7 @@
         "cardType": "battle",
         "imageName": "Ordnance.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "yy"
     },
     "yz": {
@@ -15082,6 +15087,7 @@
         "cardType": "battle",
         "imageName": "Strafing Run.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "yz"
     },
     "Aa": {
@@ -15090,6 +15096,7 @@
         "cardType": "battle",
         "imageName": "Bring Them to Heel.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "Aa"
     },
     "Ab": {
@@ -15098,6 +15105,7 @@
         "cardType": "battle",
         "imageName": "Destroy Enemy Base.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "Ab"
     },
     "Ac": {
@@ -15106,6 +15114,7 @@
         "cardType": "battle",
         "imageName": "Marked Targets.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "Ac"
     },
     "Ad": {
@@ -15114,6 +15123,7 @@
         "cardType": "battle",
         "imageName": "Recon Mission.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "Ad"
     },
     "Ae": {
@@ -15122,6 +15132,7 @@
         "cardType": "battle",
         "imageName": "Surface Scan.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "Ae"
     },
     "Af": {
@@ -15130,6 +15141,7 @@
         "cardType": "battle",
         "imageName": "Sweep and Clear.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "Af"
     },
     "Ag": {
@@ -15138,6 +15150,7 @@
         "cardType": "battle",
         "imageName": "Breakthrough2.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "Ag"
     },
     "Ah": {
@@ -15146,6 +15159,7 @@
         "cardType": "battle",
         "imageName": "Bunker Assault.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "Ah"
     },
     "Ai": {
@@ -15154,6 +15168,7 @@
         "cardType": "battle",
         "imageName": "Close the Pocket.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "Ai"
     },
     "Aj": {
@@ -15162,6 +15177,7 @@
         "cardType": "battle",
         "imageName": "Intercept the Signals.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "Aj"
     },
     "Ak": {
@@ -15170,6 +15186,7 @@
         "cardType": "battle",
         "imageName": "Recover the Research.webp",
         "keywords": [],
+        "isNewBattleCard": true,
         "id": "Ak"
     },
     "Al": {
@@ -15198,20 +15215,6 @@
             }
         ]
     },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     "AA": {
         "id": "AA",
         "cardType": "unit",

@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
 
 function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
   const chipSize = 'small';
-  const { cost, cardType, cardName, displayName, keywords, imageName } = card;
+  const { cost, cardType, cardName, displayName, keywords, imageName, isNewBattleCard } = card;
   const classes = useStyles();
   const [isExpanded, setIsExpanded] = React.useState(false);
   const handleExpandClick = () => setIsExpanded(!isExpanded);
@@ -63,8 +63,8 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
             title={displayName ? displayName : cardName}
             image={`${urls.cdn}/${cardType}Cards/${imageName}`}
             className={clsx(
-              { [classes.unitImage]: cardType === 'unit' || cardType === 'counterpart' },
-              { [classes.commandImage]: cardType === 'battle' },
+              { [classes.unitImage]: cardType === 'unit' || cardType === 'counterpart' || (cardType === 'battle' && !isNewBattleCard)},
+              { [classes.commandImage]: cardType === 'battle' && isNewBattleCard},
               { [classes.upgradeImage]: cardType === 'upgrade' },
               { [classes.commandImage]: cardType === 'command' },
               { [classes.doubleUpgrade]: isDoubleSided }

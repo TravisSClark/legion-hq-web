@@ -47,7 +47,7 @@ function ListObjectives() {
   const battleSelectors = decks.map(d=>
     <div style={{ display: 'flex', flexFlow: 'row wrap', justifyContent: 'center' }}>
         <ThemeProvider theme={d.theme}>
-          {d.cards.length < 4 && <Chip
+          {d.cards.length < cardsPerDeck && <Chip
             clickable
             size={chipSize}
             color="primary"
