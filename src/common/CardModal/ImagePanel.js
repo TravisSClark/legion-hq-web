@@ -16,7 +16,7 @@ function ImagePanel({ card, usingOriginalImage = false }) {
     <React.Fragment>
       <ExpansionPanel defaultExpanded={!usingOriginalImage}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>{usingOriginalImage ? 'Original Card Image' : 'Current Card Image'}</Typography>
+          <Typography>{usingOriginalImage ? (card.cardType === "battle" ? 'Map': 'Original Card Image') : 'Current Card Image'}</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails style={{ padding: '0px 24px 24px' }}>
           <Img
