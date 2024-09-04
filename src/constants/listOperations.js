@@ -537,6 +537,10 @@ function appendMissionTTSJSON(cardList, ttsArray){
   else if (list.faction === 'mercenary') ttsJSON.armyFaction = '';
   else ttsJSON.armyFaction = 'separatist';
 
+  if (list.battleForce) {
+    ttsJSON.battleForce = list.battleForce;
+  }
+
   ttsJSON.commandCards = [];
   for (let i = 0; i < list.commandCards.length; i++) {
     const commandCard = cards[list.commandCards[i]];
