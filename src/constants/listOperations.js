@@ -1890,10 +1890,11 @@ function applyRankAdjustments(currentList, rankReqs) {
 
     } else if (card.detachment) {
       // *technically* this is backwards... but still works ;)
-      if(!extraRankCounts[card.detachment]){
-        extraRankCounts[card.detachment] = 0;
+      if(!extraRankCounts[card.id]) {
+        extraRankCounts[card.id] = 0;
       }
-      extraRankCounts[card.detachment] += unit.count;    } 
+      extraRankCounts[card.id] += unit.count;
+    } 
   });
 
   // Do this on a separate pass so we don't get whacked by random list order
