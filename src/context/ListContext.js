@@ -78,13 +78,13 @@ export function ListProvider({
         else updateThenValidateList(JSON.parse(JSON.stringify(storedLists[slug])));
       } else updateThenValidateList(JSON.parse(JSON.stringify(storedLists[slug])));
     }
-    // route '/list/1234' fetches list 1234 from database
-    else if (slug !== '' && isValidListId(slug)) {
+    // route '/list/1b2f34' fetches list 1b2f34 from database
+    else if (slug !== '') {
       setStatus('loading');
-      httpClient.get(`${urls.api}/lists/${slug}`)
+      httpClient.get(`${urls.api}/lists/${slug}?userId=${userId}`)
         .then(response => {
-          if (response.data.length > 0) {
-            let loadedList = response.data[0];
+          if (Object.keys(response.data).length) {
+            let loadedList = response.data;
             let oldCounterparts = ['lw', 'ji', 'jj'];
             const oldUnitCount = loadedList.units.length;
             loadedList.units = loadedList.units.filter(unit => {
@@ -317,17 +317,17 @@ export function ListProvider({
     if (!userId) return;
     const { _id, listId, ...rest } = list;
     if (listId) {
-      Axios.put(`${urls.api}/lists/${listId}`, currentList).then(response => {
+      Axios.put(`${urls.api}/lists/${listId}?userId=${userId}`, list).then(response => {
         const newList = response.data;
-        setCurrentList(newList);
+        setCurrentList(list);
         setListSaveMessage('List Updated!');
       }).catch(e => {
         setError(e);
         setMessage(`Failed to update list ${listId}`);
       });
     } else {
-      Axios.post(`${urls.api}/lists`, { ...rest, userId }).then(response => {
-        const { listId } = response.data;
+      Axios.post(`${urls.api}/lists?userId=${userId}`, { ...rest, userId }).then(response => {
+        const listId = response.data;
         setCurrentList({ ...currentList, listId });
         setListSaveMessage('List Created!')
       }).catch(e => {
@@ -341,9 +341,8 @@ export function ListProvider({
     const { _id, listId, ...rest } = list;
     if (!listId) return;
     const forkedList = { ...rest, title: list.title + ' fork' };
-    Axios.post(`${urls.api}/lists`, { ...forkedList, userId }).then(response => {
-      const newList = response.data;
-      goToPage(`/list/${newList.listId}`);
+    Axios.post(`${urls.api}/lists?userId=${userId}`, { ...forkedList }).then(response => {
+      goToPage(`/list/${response.data}`);
     }).catch(e => {
       setError(e);
       setMessage(`Failed to fork list ${listId} for user ${userId}`);
@@ -366,7 +365,6 @@ export function ListProvider({
 
   // Maybe there should be a 'units only' flag, but lists will be something like 50-100 entities max anyhow...
   const doUnitValidation = (list) =>{
-    // console.log('performing list validation!');
     setValidationIssues(validateList(list));
   }
 

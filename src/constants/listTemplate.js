@@ -1,13 +1,9 @@
 const listTemplate = {
-  version: 1,
   title: 'Untitled',
-  game: 'legion',
   mode: 'standard mode',
   faction: '',
-  notes: '',
   pointTotal: 0,
   killPoints: 0,
-  competitive: false,
   battleForce: '',
   killedUnits: [],
   units: [],

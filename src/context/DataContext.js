@@ -539,7 +539,7 @@ export function DataProvider({ children }) {
   }
   const deleteUserList = (listId) => {
     if (listId) {
-      httpClient.delete(`${urls.api}/lists/${listId}`)
+      httpClient.delete(`${urls.api}/lists/${listId}?userId=${userId}`)
         .then(response => fetchUserLists(userId))
         .catch(e => {
           setError(e);
@@ -552,13 +552,13 @@ export function DataProvider({ children }) {
     if (email) {
       httpClient.get(`${urls.api}/users?email=${email}`)
         .then(response => {
-          if (response.data.length > 0) {
-            setUserId(response.data[0].userId);
+          if (response.data.userId) {
+            setUserId(response.data.userId);
           } else {
-            httpClient.post(`${urls.api}/users`, { email })
+            httpClient.post(`${urls.api}/users`, {email})
             .then(creationResponse => {
               if (creationResponse.data.length > 0){
-                setUserId(response.data[0].userId)
+                setUserId(creationResponse.data.userId)
               } else {
                 setError('Login failure');
                 setMessage(`Tried and failed to create account with email address ${email}.`);
@@ -573,7 +573,6 @@ export function DataProvider({ children }) {
           }
         })
         .catch(e => {
-          console.log(e);
           setError(e);
           setMessage(`Can't find user with email address ${email}. Server likely down.`);
           setIsAlertOpen(true);
