@@ -318,7 +318,7 @@ export function ListProvider({
     const { _id, listId, ...rest } = list;
     if (listId) {
       httpClient.put(`${urls.api}/lists/${listId}?userId=${userId}`, list).then(response => {
-        const newList = response.data;
+        list.updatedAt = response.data.updatedAt;
         setCurrentList(list);
         setListSaveMessage('List Updated!');
       }).catch(e => {
@@ -327,8 +327,8 @@ export function ListProvider({
       });
     } else {
       httpClient.post(`${urls.api}/lists?userId=${userId}`, { ...rest, userId }).then(response => {
-        const listId = response.data;
-        setCurrentList({ ...currentList, listId });
+        const { listId, createdAt, updatedAt } = response.data;
+        setCurrentList({ ...currentList, listId, userId, createdAt, updatedAt });
         setListSaveMessage('List Created!')
       }).catch(e => {
         setError(e);
