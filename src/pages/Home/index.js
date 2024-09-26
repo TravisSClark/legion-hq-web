@@ -167,7 +167,7 @@ function Home() {
             <Grid item>
               <div style={{ height: 10 }} />
             </Grid>
-            {/* <Grid item>
+            <Grid item>
               <iframe
                 title="Legion Discord"
                 frameBorder="0"
@@ -176,7 +176,7 @@ function Home() {
                 src="https://discordapp.com/widget?id=349001242489520128&theme=dark&username="
               >
               </iframe>
-            </Grid> */}
+            </Grid>
             <Grid item>
               <div style={{ height: 10 }} />
             </Grid>

@@ -317,7 +317,7 @@ export function ListProvider({
     if (!userId) return;
     const { _id, listId, ...rest } = list;
     if (listId) {
-      Axios.put(`${urls.api}/lists/${listId}?userId=${userId}`, list).then(response => {
+      httpClient.put(`${urls.api}/lists/${listId}?userId=${userId}`, list).then(response => {
         const newList = response.data;
         setCurrentList(list);
         setListSaveMessage('List Updated!');
@@ -326,7 +326,7 @@ export function ListProvider({
         setMessage(`Failed to update list ${listId}`);
       });
     } else {
-      Axios.post(`${urls.api}/lists?userId=${userId}`, { ...rest, userId }).then(response => {
+      httpClient.post(`${urls.api}/lists?userId=${userId}`, { ...rest, userId }).then(response => {
         const listId = response.data;
         setCurrentList({ ...currentList, listId });
         setListSaveMessage('List Created!')
@@ -341,7 +341,7 @@ export function ListProvider({
     const { _id, listId, ...rest } = list;
     if (!listId) return;
     const forkedList = { ...rest, title: list.title + ' fork' };
-    Axios.post(`${urls.api}/lists?userId=${userId}`, { ...forkedList }).then(response => {
+    httpClient.post(`${urls.api}/lists?userId=${userId}`, { ...forkedList }).then(response => {
       goToPage(`/list/${response.data}`);
     }).catch(e => {
       setError(e);
