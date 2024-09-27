@@ -87,7 +87,7 @@ export function ListProvider({
     // route '/list/1b2f34' fetches list 1b2f34 from database
     else if (slug !== '') {
       setStatus('loading');
-      httpClient.get(`${urls.api}/lists/${slug}?userId=${userId}`, config)
+      httpClient.get(`${urls.api}/lists/${slug}`, config)
         .then(response => {
           if (Object.keys(response.data).length) {
             let loadedList = response.data;
