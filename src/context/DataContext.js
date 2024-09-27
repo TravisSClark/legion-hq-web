@@ -568,7 +568,7 @@ export function DataProvider({ children }) {
           } else {
             httpClient.post(`${urls.api}/users`, {email}, config)
             .then(creationResponse => {
-              if (creationResponse.data.length > 0){
+              if (creationResponse.data.userId){
                 setUserId(creationResponse.data.userId)
               } else {
                 setError('Login failure');
