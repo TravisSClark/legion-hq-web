@@ -91,6 +91,11 @@ const routes = {
 
 const newsPosts = [
   {
+    "title": "Login and More",
+    "date": "27 Sept 2024",
+    "body": "The ability to login and save lists has been added.  Maps of primaries have been added to the Show More button. Clicking the info bar with your battleforce/faction name gives a summary of listbuilding rules. Sleeper Cell, Crab Droids, Riot Troopers all added."
+  },
+  {
     "title": "Carrying on Legacy into a New Edition",
     "date": "18 July 2024",
     "body": "With the help of Nick and his hard work on this open source project, we are carrying into LegionHQ 2.6. There is still work to be done to make this 100%, so please feel free to reach out if you want to collaborate!"
