@@ -6,6 +6,7 @@ import LoadingWidget from 'common/LoadingWidget';
 import factions from 'constants/factions';
 import cards from 'constants/cards';
 import urls from 'constants/urls';
+import xapikey from 'constants/ssl';
 import {
   rehashList,
   mergeLists,
@@ -41,6 +42,11 @@ import listTemplate from 'constants/listTemplate';
 const ListContext = createContext();
 const httpClient = Axios.create();
 httpClient.defaults.timeout = 10000;
+let config = {
+  headers: {
+    "x-api-key": xapikey
+  }
+}
 
 function isValidListId(listId) {
   return Number.parseInt(listId) > 999 && Number.parseInt(listId) < 999999;
@@ -81,7 +87,7 @@ export function ListProvider({
     // route '/list/1b2f34' fetches list 1b2f34 from database
     else if (slug !== '') {
       setStatus('loading');
-      httpClient.get(`${urls.api}/lists/${slug}?userId=${userId}`)
+      httpClient.get(`${urls.api}/lists/${slug}?userId=${userId}`, config)
         .then(response => {
           if (Object.keys(response.data).length) {
             let loadedList = response.data;
@@ -317,7 +323,7 @@ export function ListProvider({
     if (!userId) return;
     const { _id, listId, ...rest } = list;
     if (listId) {
-      httpClient.put(`${urls.api}/lists/${listId}?userId=${userId}`, list).then(response => {
+      httpClient.put(`${urls.api}/lists/${listId}?userId=${userId}`, list, config).then(response => {
         list.updatedAt = response.data.updatedAt;
         setCurrentList(list);
         setListSaveMessage('List Updated!');
@@ -326,7 +332,7 @@ export function ListProvider({
         setMessage(`Failed to update list ${listId}`);
       });
     } else {
-      httpClient.post(`${urls.api}/lists?userId=${userId}`, { ...rest, userId }).then(response => {
+      httpClient.post(`${urls.api}/lists?userId=${userId}`, { ...rest, userId }, config).then(response => {
         const { listId, createdAt, updatedAt } = response.data;
         setCurrentList({ ...currentList, listId, userId, createdAt, updatedAt });
         setListSaveMessage('List Created!')
@@ -341,8 +347,8 @@ export function ListProvider({
     const { _id, listId, ...rest } = list;
     if (!listId) return;
     const forkedList = { ...rest, title: list.title + ' fork' };
-    httpClient.post(`${urls.api}/lists?userId=${userId}`, { ...forkedList }).then(response => {
-      goToPage(`/list/${response.data}`);
+    httpClient.post(`${urls.api}/lists?userId=${userId}`, { ...forkedList }, config).then(response => {
+      goToPage(`/list/${response.data.listId}`);
     }).catch(e => {
       setError(e);
       setMessage(`Failed to fork list ${listId} for user ${userId}`);

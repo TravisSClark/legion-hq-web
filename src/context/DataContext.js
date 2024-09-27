@@ -16,12 +16,18 @@ import FactionIcon from 'common/FactionIcon';
 import urls from 'constants/urls';
 import settings from 'constants/settings';
 import { useAuth0 } from '@auth0/auth0-react';
+import xapikey from 'constants/ssl';
 import auth from 'constants/auth';
 const { returnTo } = auth.prod;
 
 const DataContext = createContext();
 const httpClient = Axios.create();
 httpClient.defaults.timeout = 10000;
+let config = {
+  headers: {
+    "x-api-key": xapikey
+  }
+}
 
 const fontSize = 26;
 
@@ -527,7 +533,7 @@ export function DataProvider({ children }) {
   const goToPage = (newRoute) => history.push(newRoute);
   const fetchUserLists = (userId) => {
     if (userId) {
-      httpClient.get(`${urls.api}/lists?userId=${userId}`)
+      httpClient.get(`${urls.api}/lists?userId=${userId}`, config)
         .then(response => {
           setUserLists(response.data);
         }).catch(e => {
@@ -539,7 +545,7 @@ export function DataProvider({ children }) {
   }
   const deleteUserList = (listId) => {
     if (listId) {
-      httpClient.delete(`${urls.api}/lists/${listId}?userId=${userId}`)
+      httpClient.delete(`${urls.api}/lists/${listId}?userId=${userId}`, config)
         .then(response => fetchUserLists(userId))
         .catch(e => {
           setError(e);
@@ -550,12 +556,12 @@ export function DataProvider({ children }) {
   }
   const fetchUserId = (email) => {
     if (email) {
-      httpClient.get(`${urls.api}/users?email=${email}`)
+      httpClient.get(`${urls.api}/users?email=${email}`, config)
         .then(response => {
           if (response.data.userId) {
             setUserId(response.data.userId);
           } else {
-            httpClient.post(`${urls.api}/users`, {email})
+            httpClient.post(`${urls.api}/users`, {email}, config)
             .then(creationResponse => {
               if (creationResponse.data.length > 0){
                 setUserId(creationResponse.data.userId)
