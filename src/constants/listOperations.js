@@ -1886,7 +1886,7 @@ function applyRankAdjustments(currentList, rankReqs) {
       if(!extraRankCounts[card.entourage]){
         extraRankCounts[card.entourage] = 0;
       }
-      extraRankCounts[unit.entourage] += unit.count;
+      extraRankCounts[card.entourage] += unit.count;
 
     } else if (card.detachment) {
       // *technically* this is backwards... but still works ;)
