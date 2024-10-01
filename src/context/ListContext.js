@@ -115,7 +115,7 @@ export function ListProvider({
   }, [slug]);
   useEffect(() => {
     // Save list before unmount
-    return () => { if (currentList) updateStoredList(currentList); }
+    return () => { if (currentList && !currentList.listId) updateStoredList(currentList); }
   }, [currentList]);
   useEffect(() => {
     if (width === 'xs' || width === 'sm') {
