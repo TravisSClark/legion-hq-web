@@ -83,7 +83,7 @@ function Home() {
             container
             spacing={1}
             direction="column"
-            justify="center"
+            justifyContent="center"
             alignItems="center"
             style={{ marginTop: 5 }}
           >
@@ -132,7 +132,7 @@ function Home() {
                 container
                 spacing={1}
                 direction="row"
-                justify="center"
+                justifyContent="center"
                 alignItems="center"
               >
                 <Grid item key="factionChip">

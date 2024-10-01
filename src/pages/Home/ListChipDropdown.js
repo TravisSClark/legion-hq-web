@@ -1,7 +1,7 @@
 import React from 'react';
 import { Popover, Chip, Typography } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
-import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
+import { createTheme, makeStyles } from '@material-ui/core/styles';
 import factions from 'constants/factions';
 
 const useStyles = makeStyles((theme) => ({
@@ -18,7 +18,7 @@ function ListChipDropdown({ chips, faction }) {
   const handleClose = () => setAnchorEl(null);
   const handleClick = event => setAnchorEl(event.currentTarget);
 
-  const factionTheme = createMuiTheme({
+  const factionTheme = createTheme({
     palette: {
       primary: { main: factions[faction].primaryColor },
       secondary: { main: factions[faction].secondaryColor }

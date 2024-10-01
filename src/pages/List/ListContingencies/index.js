@@ -29,7 +29,7 @@ function ListContingencies() {
   if (numContingencies === 0) return null;
   const chipStyle = { marginRight: 4, marginBottom: 4 };
   return (
-    <Grid container id="list-contingencies" direction="row" justify="center">
+    <Grid container id="list-contingencies" direction="row" justifyContent="center">
       <Grid item>
         {currentList.contingencies.length < numContingencies && (
           <Chip

@@ -22,7 +22,7 @@ function ListCommands() {
   }
   const chipStyle = { marginRight: 4, marginBottom: 4 };
   return (
-    <Grid container id="list-commands" direction="row" justify="center">
+    <Grid container id="list-commands" direction="row" justifyContent="center">
       {currentList.commandCards.length < 6 && (
         <Grid item>
           <Chip
