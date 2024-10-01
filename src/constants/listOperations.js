@@ -1120,6 +1120,7 @@ function addContingency(list, commandId) {
 
 function addCommand(list, commandId) {
   list.commandCards.push(commandId);
+  list.commandCards = sortCommandIds(list.commandCards);
   return list;
 }
 
