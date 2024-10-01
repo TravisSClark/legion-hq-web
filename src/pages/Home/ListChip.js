@@ -2,7 +2,7 @@ import React from 'react';
 import Img from 'react-image';
 import { Chip, Typography, Badge, Menu, MenuItem } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme  } from '@material-ui/core/styles';
 import DataContext from 'context/DataContext';
 import urls from 'constants/urls';
 import factions from 'constants/factions';
@@ -22,7 +22,7 @@ function ListChip({ userList, deleteUserList }) {
   const handleOpenDeleteMenu = event => setAnchorEl(event.currentTarget);
   const handleCloseDeleteMenu = () => setAnchorEl(null);
   if (userList.faction in factions) {
-    const factionTheme = createMuiTheme({
+    const factionTheme = createTheme ({
       palette: {
         primary: { main: factions[userList.faction].primaryColor },
         secondary: { main: factions[userList.faction].secondaryColor }
