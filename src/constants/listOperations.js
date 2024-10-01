@@ -532,10 +532,10 @@ function appendMissionTTSJSON(cardList, ttsArray){
   ttsJSON.points = list.pointTotal;
 
   if (list.faction === 'rebels') ttsJSON.armyFaction = 'rebel';
-  else if (list.faction === 'empire') ttsJSON.armyFaction = 'imperial';
+  else if (list.faction === 'empire') ttsJSON.armyFaction = 'empire';
   else if (list.faction === 'republic') ttsJSON.armyFaction = 'republic';
-  else if (list.faction === 'mercenary') ttsJSON.armyFaction = '';
-  else ttsJSON.armyFaction = 'separatist';
+  else if (list.faction === 'separatists') ttsJSON.armyFaction = 'separatist';
+  else ttsJSON.armyFaction = '';
 
   if (list.battleForce) {
     ttsJSON.battleForce = list.battleForce;
