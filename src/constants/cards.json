@@ -12167,6 +12167,9 @@
         "wounds": 5,
         "courage": 2,
         "speed": 2,
+        "command": [
+            "tx"
+        ],
         "counterpartId": "tn"
     },
     "tk": {

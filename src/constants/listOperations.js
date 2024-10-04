@@ -947,6 +947,10 @@ function addUnit(list, unitId, stackSize = 1) {
         equipUpgrade(list, 'UNIT_UPGRADE', unitIndex, upgradeIndex, unitCard.equip[i]);
       }
     }
+
+    if (unitCard.command) {
+      unitCard.command.forEach((commandId) => addCommand(list, commandId));
+    }
   }
 
   validateUpgrades(list, unitIndex);
