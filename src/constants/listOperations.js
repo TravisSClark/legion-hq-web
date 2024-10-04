@@ -939,8 +939,8 @@ function addUnit(list, unitId, stackSize = 1) {
       for (let i = 0; i < unitCard.equip.length; i++) {
         let upgradeType = cards[unitCard.equip[i]].cardSubtype;
         let upgradeIndex = unitCard.upgradeBar.indexOf(upgradeType);
-        while (newUnitObject.upgradesEquipped[upgradeIndex] && upgradeIndex < unitCard.upgradeBar.length) {
-          if (newUnitObject.upgradesEquipped[upgradeIndex]) {
+        if (list.units[list.units.length - 1].upgradesEquipped[upgradeIndex]) {
+          while (list.units[list.units.length - 1].upgradesEquipped[upgradeIndex] && upgradeIndex < unitCard.upgradeBar.length - 1) {
             upgradeIndex += 1;
           }
         }
