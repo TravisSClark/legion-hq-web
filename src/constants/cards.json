@@ -6697,7 +6697,6 @@
         "keywords": [
             "Covert Ops",
             "Danger Sense",
-            "Loadout",
             "Marksman",
             "Tactical"
         ],
@@ -6714,7 +6713,10 @@
         ],
         "wounds": 6,
         "courage": 2,
-        "speed": 2
+        "speed": 2,
+        "equip": [
+            "kh"
+        ]
     },
     "kg": {
         "id": "kg",
@@ -8126,7 +8128,6 @@
     },
     "ml": {
         "id": "ml",
-        
         "cardName": "Mandalorian Resistance Clan Wren",
         "displayName": "Clan Wren",
         "cardType": "unit",
@@ -8423,7 +8424,6 @@
     },
     "my": {
         "id": "my",
-        
         "cardName": "Imperial Special Forces Inferno Squad",
         "displayName": "Inferno Squad",
         "cardType": "unit",
@@ -14374,7 +14374,14 @@
         "surges": [],
         "wounds": 2,
         "courage": 3,
-        "speed": 2
+        "speed": 2,
+        "equip": [
+            "xq",
+            "xr",
+            "xs",
+            "xt",
+            "xu"
+        ]
     },
     "xj": {
         "id": "xj",
@@ -14405,7 +14412,11 @@
         "surges": [],
         "wounds": 1,
         "courage": 2,
-        "speed": 2
+        "speed": 2,
+        "equip": [
+            "xk",
+            "xl"
+        ]
     },
 	"xk": {
 		"displayName": "DC-17m ICWS Config",
@@ -14505,7 +14516,11 @@
         "surges": [],
         "wounds": 1,
         "courage": 0,
-        "speed": 2
+        "speed": 2,
+        "equip": [
+            "xk",
+            "xl"
+        ]
     },
 	"xq": {
 		"id": "xq",
@@ -14602,6 +14617,12 @@
         "wounds": 2,
         "courage": 3,
         "speed": 2,
+        "equip": [
+            "xq",
+            "xr",
+            "xs",
+            "xt"
+        ],
         "counterpartId": "xw"
 	},
 	"xw": {

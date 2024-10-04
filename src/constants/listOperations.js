@@ -934,6 +934,19 @@ function addUnit(list, unitId, stackSize = 1) {
     list.units.push(newUnitObject);
     list.unitObjectStrings.push(unitId);
     unitIndex = list.units.length - 1;
+
+    if (unitCard.equip) {
+      for (let i = 0; i < unitCard.equip.length; i++) {
+        let upgradeType = cards[unitCard.equip[i]].cardSubtype;
+        let upgradeIndex = unitCard.upgradeBar.indexOf(upgradeType);
+        while (newUnitObject.upgradesEquipped[upgradeIndex] && upgradeIndex < unitCard.upgradeBar.length) {
+          if (newUnitObject.upgradesEquipped[upgradeIndex]) {
+            upgradeIndex += 1;
+          }
+        }
+        equipUpgrade(list, 'UNIT_UPGRADE', unitIndex, upgradeIndex, unitCard.equip[i]);
+      }
+    }
   }
 
   validateUpgrades(list, unitIndex);
@@ -1426,16 +1439,18 @@ function validateUpgrades(list, unitIndex){
       }
     });
     if(heavyCount < card.flexResponse){
-      unit.validationIssues.push( { level:2, text: card.displayName + " needs " + card.flexResponse + " Heavy Weapon upgrades (Flexible Response)" });
+      let cardName = card.displayName ? card.displayName : card.cardName;
+      unit.validationIssues.push( { level:2, text: cardName + " needs " + card.flexResponse + " Heavy Weapon upgrades (Flexible Response)" });
     }
   }
 
   // Equip
-  if(card.equip){
+  if (card.equip){
     card.equip.forEach((equipReq)=>{
       const equipCard = cards[equipReq];
       if(!unit.upgradesEquipped.includes(equipReq)){
-        unit.validationIssues.push( { level:2, text: card.displayName + " is missing " + equipCard.cardName + " (Equip)"});
+        let cardName = card.displayName ? card.displayName : card.cardName;
+        unit.validationIssues.push( { level:2, text: cardName + " is missing " + equipCard.cardName + " (Equip)"});
       }
     });
   }
@@ -1451,7 +1466,8 @@ function validateUpgrades(list, unitIndex){
       }
     });
     if(!hasHeavy){
-      unit.validationIssues.push( { level:2, text: card.displayName + " is missing a Heavy Weapon upgrade (Heavy Weapon Team)" });
+      let cardName = card.displayName ? card.displayName : card.cardName;
+      unit.validationIssues.push( { level:2, text: cardName + " is missing a Heavy Weapon upgrade (Heavy Weapon Team)" });
     }
   }
 
