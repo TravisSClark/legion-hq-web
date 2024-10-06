@@ -623,12 +623,16 @@ function appendMissionTTSJSON(cardList, ttsArray){
     }
   }
 
-  if(list.isUsingOldPoints){
+  // TODO TODO TODO - from grabnar's POV... it doesn't look like TTA imports most of the new cards
+  // we were previously breaking from not 
+
+  // TODO - TTS still uses the old names for battle cards
+  // if(list.isUsingOldPoints){
     ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };
-  } else{
-      // TODO - check new TTS standard
-    ttsJSON.battlefieldDeck = { objective: [], secondary: [], advantage: [] };
-  }
+  // } else{
+  //     // TODO - check new TTS standard
+  //   ttsJSON.battlefieldDeck = { objective: [], secondary: [], advantage: [] };
+  // }
   if (list.mode === "500-point mode") {
     ttsJSON.battlefieldDeck.scenario =  "skirmish";
   } else if (list.mode.includes("storm tide")) {
@@ -642,10 +646,14 @@ function appendMissionTTSJSON(cardList, ttsArray){
     appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.deployment);
     appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.conditions);
   } else{
-    // TODO - probably need new TTS map entries
-    appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
-    appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.secondary);
-    appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.advantage);
+    // TODO - map the 'new' obj cards to the card type names TTS wants
+    appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.deployment);
+    appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.objective);
+    appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.conditions);
+
+    // appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
+    // appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.secondary);
+    // appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.advantage);
   }
 
   return JSON.stringify(ttsJSON, null, 4);
