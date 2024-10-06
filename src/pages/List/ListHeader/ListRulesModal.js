@@ -13,6 +13,7 @@ import battleForcesDict from 'constants/battleForcesDict';
 import cards from 'constants/cards';
 import ranks from 'constants/ranks';
 import { getOriginalRankLimits } from 'constants/listOperations';
+import ListContext from 'context/ListContext';
 
 const useStyles = makeStyles({
   container: {
@@ -68,7 +69,7 @@ function BFRules({list}){
     <Typography style={{marginBottom:0}} variant="subtitle1" gutterBottom>Special Listbuilding Rules:</Typography>
     <DialogContent>
       { bfRules.noFieldComm && 
-          <Typography className={classes.bfRules}>You cannot use the Field Commander keyword (also not usable during the game).</Typography>
+          <Typography className={classes.bfRules}>You cannot use the Field Commander keyword.</Typography>
       }
       { bfRules.countMercs && 
           <div>
@@ -79,31 +80,16 @@ function BFRules({list}){
       { bfRules.take2NonEwokRebs && 
           <Typography className={classes.bfRules}>You must take at least 2 non-Ewok Rebel units.</Typography>
       }
-
-      { bfRules.unitLimits && 
-          <div>
-            <Typography>Unit Limits: </Typography>
-            <div style={{marginLeft:8}}>
-            { 
-              bfRules.unitLimits.map((limit) => {
-                return <Typography className={classes.bfRules}>{limit.count[0]} - {limit.count[1]} {limit.ids.map(id=>cards[id].displayName ? cards[id].displayName : cards[id].cardName)
-                  .join(" OR ")}</Typography>
-              })
-            }
-            </div>
-          </div>
-      }
-
       { bfRules.buildsAsCorps && 
                 <Typography className={classes.bfRules}>
                   The following count as Corps during army building: {bfRules.buildsAsCorps.map(id=>cards[id].displayName ? cards[id].displayName : cards[id].cardName)
-                  .join(" AND ")}</Typography>
+                  .join(", ")}.</Typography>
       }
       { bfRules.minOneOfEachCorps && 
-        <Typography className={classes.bfRules}>When building an army, you cannot take more than 1 of any unit with a Corps rank until at least one of each has already been taken</Typography>
+        <Typography className={classes.bfRules}>When building an army, you cannot take more than 1 of any unit with a Corps rank until at least one of each has already been taken.</Typography>
       }
       { bfRules.remnantEquipRules && 
-        <Typography className={classes.bfRules}>Any non-droid trooper unit in this army with a HEAVY WEAPON upgrade icon may equip a HEAVY WEAPON with one of the following unit requirements, ignoring that requirement: Stormtroopers only, Shoretroopers only, Scout Troopers only, or Imperial Death Troopers only</Typography>
+        <Typography className={classes.bfRules}>Your non-droid trooper units may ignore the following requirements when equipping a HEAVY WEAPON: Stormtroopers only, Shoretroopers only, Scout Troopers only, or Imperial Death Troopers only.</Typography>
       }
     </DialogContent>
     <Typography style={{marginBottom:0}} gutterBottom>See your rule doc for full battleforce rules while playing:</Typography>
@@ -116,6 +102,7 @@ function BFRules({list}){
 function RankLimits({list}){
   
   const classes = useStyles();
+  const {handleCardZoom} = React.useContext(ListContext);
 
   // maybe do parens to show what the modified limits are now, e.g. detachment and associate
   let rankReqs = getOriginalRankLimits(list);
@@ -128,13 +115,13 @@ function RankLimits({list}){
             <Avatar
               alt={'CMDR'}
               src={ranks['commander'].icon}
-              style={{ width: 32, height: 32,}}
+              style={{ width: 30, height: 30,}}
             />
             <Typography style={{fontSize:20, marginLeft:2, marginRight:2}}>/</Typography>
             <Avatar
               alt={'OP'}
               src={ranks['operative'].icon}
-              style={{ width: 32, height: 32, marginRight:10 }}
+              style={{ width: 30, height: 30, marginRight:10 }}
             />
             <DialogContentText style={{marginBottom:0}}>1 - {rankReqs.commOp} (minimum 1 Commander)</DialogContentText>
             </div>
@@ -144,46 +131,58 @@ function RankLimits({list}){
         
         let bf  = battleForcesDict[list.battleForce];
         let unitLinks = null;
-        let unitNames = [];
         if(bf){
-            unitNames = bf[r].map(id=>{
 
-        
+            let seen = [];
+
+            unitLinks = bf[r].map((id, idx)=>{
+                if(seen.includes(id)){
+                  return null;
+                }
+
                 let name = cards[id].displayName ? cards[id].displayName : cards[id].cardName;
-                let unitLimits = bf.rules.unitLimits?.find(l=>l.ids.includes(id));
+                let unitLimit = bf.rules.unitLimits?.find(l=>l.ids.includes(id));
                 let limit = "";
-                if(unitLimits)
-                    limit = unitLimits.count[0] + " - " + unitLimits.count[1];
-                console.log("l " + JSON.stringify(unitLimits) + " " + limit);
 
-                return limit + " " + name;
+                if(unitLimit){
+                  limit = unitLimit.count[0] + " - " + unitLimit.count[1];
+
+                  if(unitLimit.ids.length > 1){
+
+                    let allNames = unitLimit.ids.map(id =>  cards[id].displayName ? cards[id].displayName : cards[id].cardName);
+                    seen = seen.concat(seen, unitLimit.ids);
+                    // name = allNames;
+                    let links = allNames.map((n,idx) =>{
+                      let link = <Link component='span' style={{flexWrap:'wrap'}} onClick={()=>handleCardZoom(unitLimit.ids[idx])}>{n}</Link>;
+                      let suffix = idx < allNames.length - 1 ? " OR " : "";
+                      return <span>{link}{suffix}</span>
+                    })
+
+                    return <span style={{flexWrap:'wrap'}}>{limit} {links};</span>
+                  }
+                }
+
+                // console.log("l " + JSON.stringify(unitLimits) + " " + limit);
+
+                let display = limit + " " + name;
+
+                let suffix = idx < bf[r].length -1 ? ",": ""
+
+                return <span><Link component='span' style={{flexWrap:'wrap'}} onClick={()=>handleCardZoom(id)}>{display}</Link>{suffix}&nbsp;</span>
             })
-            unitLinks = bf[r].map(id=>{
-
-        
-                let name = cards[id].displayName ? cards[id].displayName : cards[id].cardName;
-                let unitLimits = bf.rules.unitLimits?.find(l=>l.ids.includes(id));
-                let limit = "";
-                if(unitLimits)
-                    limit = unitLimits.count[0] + " - " + unitLimits.count[1];
-                console.log("l " + JSON.stringify(unitLimits) + " " + limit);
-
-                return <a onPress={null}>{limit} {name}</a>
-            })
+            unitLinks = unitLinks.filter(l=>l!=null);
         }
 
-// 
         return <div className={classes.row} style={{marginBottom:5}}>
             <Avatar
                 alt={r.toUpperCase()}
                 src={ranks[r].icon}
                 style={{ width: 32, height: 32, marginRight:10 }}
             />
-            <DialogContentText style={{marginBottom:0}}>{rankReqs[r][0]} -  {rankReqs[r][1]}</DialogContentText>
-            <Typography style={{marginLeft:5}}>{unitNames.join(', ')}</Typography>
-            {/* <Typography className={classes.row} style={{marginBottom:5}}>
-                {unitLinks}
-            </Typography> */}
+            <DialogContentText style={{marginBottom:0, minWidth:40}}>{rankReqs[r][0]} -  {rankReqs[r][1]}</DialogContentText>
+            <div style={{display:'flex', flexDirection:'row', flexWrap:"wrap"}}>
+              {unitLinks}
+            </div>
         </div>
         } 
         return null;

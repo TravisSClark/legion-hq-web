@@ -80,7 +80,7 @@ const battleForcesDict = {
       faction: 'empire',
       commander: ['at', 'au', 'ar'],
       operative: [],
-      corps: ['ay', 'az', 'sr'],
+      corps: ['az', 'ay',  'sr'],
       special: [],
       support: ['bf', 'be'],
       heavy: ['bg'],
