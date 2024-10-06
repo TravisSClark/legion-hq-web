@@ -944,9 +944,32 @@ function addUnit(list, unitId, stackSize = 1) {
             upgradeIndex += 1;
           }
         }
-        equipUpgrade(list, 'UNIT_UPGRADE', unitIndex, upgradeIndex, unitCard.equip[i]);
+        equipUpgradeToAll(list, unitIndex, upgradeIndex, unitCard.equip[i]);
       }
     }
+
+    // find any upgrades with 0 cost that are the only eligible in slot
+    // narrow down upgrade types we check to ones that CAN be a no-cost one-of, e.g. there's always more than 1 grenade type eligible
+    let freeSoloUpgradeTypes = ["armament"];
+    
+    freeSoloUpgradeTypes.forEach(upgradeType => {
+      let upgradeIndex = unitCard.upgradeBar.indexOf(upgradeType);
+
+      if(upgradeIndex > -1){
+        let eligibleUpgrades = getEquippableUpgrades(list, upgradeType, unitId, [], []);
+        if(eligibleUpgrades.validIds.length == 1){
+          let freeSoloId = eligibleUpgrades.validIds[0];
+          if(cards[freeSoloId].cost == 0){
+            // If this card was already added via equip above, it'll break things if added again
+            // (currently a futureproof w no known case)
+            if(!(unitCard.equip?.find(u => u == freeSoloId))){
+              equipUpgradeToAll(list, unitIndex, upgradeIndex, freeSoloId);
+            }
+          }
+        }
+      }
+
+    });
 
     if (unitCard.command) {
       unitCard.command.forEach((commandId) => addCommand(list, commandId));
@@ -1329,15 +1352,15 @@ function getEligibleCommandsToAdd(list) {
 }
 
 function getEquippableUpgrades(
-  list, upgradeType, id, upgradesEquipped, additionalUpgradeSlots
+  list, upgradeType, unitId, upgradesEquipped, additionalUpgradeSlots
 ) {
   const impRemnantUpgrades = ['ej', 'ek', 'fv', 'iy', 'fu', 'gm', 'gl', 'em', 'en', 'ja'];
   const validUpgradeIds = [];
   const invalidUpgradeIds = [];
   // const cardsById = cardIdsByType.upgrade; // Object.keys(cards);
 
-  if (!id) return { validUpgradeIds: [], invalidUpgradeIds: [] };
-  const unitCard = cards[id];
+  if (!unitId) return { validUpgradeIds: [], invalidUpgradeIds: [] };
+  const unitCard = cards[unitId];
   for (let i = 0; i < cardIdsByType['upgrade'].length; i++) {
     const id = cardIdsByType['upgrade'][i];
     const card = cards[id];
@@ -1365,15 +1388,6 @@ function getEquippableUpgrades(
       unitCard['dark side'] = true;
     }
 
-    // dynamically add the upgrade types
-    for (let j = 0; j < unitCard.upgradeBar.length; j++) {
-      const upgradeType = unitCard.upgradeBar[j];
-      unitCard[upgradeType] = true;
-    }
-    for (let j = 0; j < additionalUpgradeSlots.length; j++) {
-      const upgradeType = additionalUpgradeSlots[j];
-      unitCard[upgradeType] = true;
-    }
     if (
       unitCard.id in interactions.eligibility &&
       interactions.eligibility[unitCard.id].conditionFunction(card)

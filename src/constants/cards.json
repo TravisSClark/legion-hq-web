@@ -6713,10 +6713,7 @@
         ],
         "wounds": 6,
         "courage": 2,
-        "speed": 2,
-        "equip": [
-            "kh"
-        ]
+        "speed": 2
     },
     "kg": {
         "id": "kg",
@@ -14521,7 +14518,6 @@
         "courage": 0,
         "speed": 2,
         "equip": [
-            "xk",
             "xl"
         ]
     },
