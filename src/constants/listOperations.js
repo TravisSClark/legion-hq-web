@@ -623,9 +623,6 @@ function appendMissionTTSJSON(cardList, ttsArray){
     }
   }
 
-  // TODO TODO TODO - from grabnar's POV... it doesn't look like TTA imports most of the new cards
-  // we were previously breaking from not 
-
   // TODO - TTS still uses the old names for battle cards
   // if(list.isUsingOldPoints){
     ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };

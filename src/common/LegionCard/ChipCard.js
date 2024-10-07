@@ -1,7 +1,7 @@
 import React from 'react';
 import { Chip } from '@material-ui/core';
 
-function ChipCard({ card, handleClick, chipSize, handleDelete }) {
+function ChipCard({ card, handleClick, chipSize='medium', handleDelete }) {
   const { cardName, displayName } = card;
   let pips = '';
   if (card.cardSubtype === '1') pips = '•';

@@ -6223,10 +6223,8 @@
         "title": "Human-Cyborg Relations",
         "faction": "rebels",
         "isUnique": true,
-        "upgradeBar": [],
         "cardType": "counterpart",
         "cost": 15,
-        "surges": [],
         "wounds": 2,
         "imageName": "C-3PO Human-Cyborg Relations.webp",
         "keywords": [
@@ -6245,7 +6243,6 @@
         "cardName": "C-3P0",
         "isUnique": true,
         "cost": 15,
-        "surges": [],
         "wounds": 2,
         "imageName": "C-3PO Made to Suffer.webp",
         "keywords": [
@@ -6253,7 +6250,6 @@
             "Distract",
             "Counterpart"
         ],
-        "upgradeBar": [],
         "id": "jj"
     },
     "jl": {
@@ -7724,7 +7720,6 @@
         "wounds": 1,
         "cardType": "counterpart",
         "cost": 15,
-        "additionalTags": [],
         "imageName": "Iden_s ID10 Seeker Droid.webp",
         "keywords": [
             "Counterpart",
@@ -12204,11 +12199,9 @@
         ],
         "subfaction": "bounty hunters",
         "isUnique": true,
-        "upgradeBar": [],
         "wounds": 1,
         "cardType": "counterpart",
         "cost": 17,
-        "additionalTags": [],
         "imageName": "Grogu.webp",
         "keywords": [
             "Hunted",
@@ -14525,7 +14518,6 @@
 		"faction": "mercenary",
 		"affiliations": ["rebels"],
 		"isUnique": true,
-		"upgradeBar": [],
 		"cardType": "counterpart",
 		"cost": 10,
 		"surges": [],

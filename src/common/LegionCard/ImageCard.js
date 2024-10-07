@@ -15,6 +15,7 @@ import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import CardChip from 'common/CardChip';
 import KeywordChips from 'common/KeywordChips';
 import urls from 'constants/urls';
+import UpgradeBar from '../UpgradeBar';
 
 const useStyles = makeStyles(theme => ({
   expand: {
@@ -38,7 +39,7 @@ const useStyles = makeStyles(theme => ({
 
 function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
   const chipSize = 'small';
-  const { cost, cardType, cardName, displayName, keywords, imageName, isNewBattleCard } = card;
+  const { cost, cardType, cardName, displayName, keywords, imageName, isNewBattleCard, upgradeBar } = card;
   const classes = useStyles();
   const [isExpanded, setIsExpanded] = React.useState(false);
   const handleExpandClick = () => setIsExpanded(!isExpanded);
@@ -72,7 +73,11 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
           />
         </CardActionArea>
         <CardActions disableSpacing>
-          {(cost || cost === 0) && <CardChip type="points" value={cost} size={chipSize} />}
+          <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
+            {(cost || cost === 0) && <CardChip type="points" value={cost} size={chipSize} />}
+            {(cardType == "unit" || cardType == "counterpart") &&
+            <UpgradeBar upgradeBar={upgradeBar} iconHeight={20}/>}
+          </div>
           <IconButton
             size="small"
             aria-expanded={isExpanded}
