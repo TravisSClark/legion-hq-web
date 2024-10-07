@@ -6252,6 +6252,7 @@
             "Distract",
             "Counterpart"
         ],
+        "upgradeBar":[],
         "cardSubtype": "droid trooper",
         "id": "ji"
     },
@@ -6270,6 +6271,8 @@
             "Distract",
             "Counterpart"
         ],
+        "upgradeBar":[],
+
         "id": "jj"
     },
     "jl": {
@@ -12308,6 +12311,7 @@
             "Small",
             "Claim"
         ],
+        "upgradeBar":[],
         "cardSubtype": "trooper"
     },
     "to": {
@@ -14624,6 +14628,7 @@
 		"affiliations": ["rebels"],
 		"isUnique": true,
 		"cardType": "counterpart",
+        "upgradeBar":[],
 		"cost": 10,
 		"surges": [],
 		"wounds": 1,
