@@ -8,6 +8,7 @@ import {
 } from '@material-ui/core';
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import urls from 'constants/urls';
+import UpgradeBar from '../UpgradeBar';
 
 function ImagePanel({ card, usingOriginalImage = false }) {
   if (!card) return null;
@@ -19,10 +20,13 @@ function ImagePanel({ card, usingOriginalImage = false }) {
           <Typography>{usingOriginalImage ? (card.cardType === "battle" ? 'Map': 'Original Card Image') : 'Current Card Image'}</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails style={{ padding: '0px 24px 24px' }}>
-          <Img
-            src={`${urls.cdn}/${cardType}Cards/${usingOriginalImage ? `original-${imageName}` : imageName}`}
-            style={{ width: '100%' }}
-          />
+          <div>
+            <Img
+              src={`${urls.cdn}/${cardType}Cards/${usingOriginalImage ? `original-${imageName}` : imageName}`}
+              style={{ width: '100%' }}
+            />
+            <UpgradeBar upgradeBar={card.upgradeBar}/>
+          </div>
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </React.Fragment>

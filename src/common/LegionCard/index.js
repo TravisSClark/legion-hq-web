@@ -7,7 +7,6 @@ import ChipCard from './ChipCard';
 
 function LegionCard({
   id,
-  isBasic = false,
   isSelected = false,
   size = 'medium',
   handleClick,
@@ -16,16 +15,7 @@ function LegionCard({
 }) {
   const { userSettings } = useContext(DataContext);
   const card = cards[id];
-  if (isBasic) {
-    return (
-      <ChipCard
-        chipSize={size}
-        card={card}
-        handleClick={handleCardZoom}
-        handleDelete={handleDelete}
-      />
-    );
-  } else if (userSettings.cardStyle === 'images') {
+  if (userSettings.cardStyle === 'images') {
     return (
       <ImageCard
         isSelected={isSelected}

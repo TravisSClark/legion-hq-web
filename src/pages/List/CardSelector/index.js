@@ -7,6 +7,8 @@ import SelectorHeader from './SelectorHeader';
 import SelectorContent from './SelectorContent';
 import StackController from './StackController';
 import ToggleButton from './ToggleButton';
+import ChipCard from 'common/LegionCard/ChipCard';
+import cards from 'constants/cards';
 
 function Title({ title }) {
   return <Typography variant="body2">{title}</Typography>;
@@ -156,11 +158,10 @@ function CardSelector() {
       header = <Title title="Add command cards" />;
     } else {
       const currentCommands = currentList.commandCards.map((commandId, i) => (
-        <LegionCard
-          isBasic={true}
-          id={commandId}
+        <ChipCard
+          card={cards[commandId]}
           key={commandId}
-          handleCardZoom={() => handleCardZoom(commandId)}
+          handleClick={()=>handleCardZoom(commandId)}
           handleDelete={() => handleRemoveCommand(i)}
         />
       ));
@@ -180,11 +181,10 @@ function CardSelector() {
       header = <Title title="Add contingency cards" />;
     } else {
       const currentContingencies = currentList.contingencies.map((commandId, i) => (
-        <LegionCard
-          isBasic={true}
-          id={commandId}
+        <ChipCard
+          card={cards[commandId]}
           key={commandId}
-          handleCardZoom={() => handleCardZoom(commandId)}
+          handleClick={()=>handleCardZoom(commandId)}
           handleDelete={() => handleRemoveContingency(i)}
         />
       ));
@@ -202,11 +202,9 @@ function CardSelector() {
     clickHandler = (battleId) => handleAddBattle(cardPaneFilter.type, battleId)
     const currentBattles = currentList[`${cardPaneFilter.type}Cards`].map((id, i) => {
       return (
-        <LegionCard
-          isBasic={true}
-          id={id}
-          key={id}
-          handleCardZoom={() => handleCardZoom(id)}
+        <ChipCard
+          card={cards[id]}
+          handleClick={()=>handleCardZoom(id)}
           handleDelete={() => handleRemoveBattle(cardPaneFilter.type, i)}
         />
       );

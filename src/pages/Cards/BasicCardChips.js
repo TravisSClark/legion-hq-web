@@ -12,6 +12,8 @@ import {
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import LegionCard from 'common/LegionCard';
+import cards from 'constants/cards';
+import ChipCard from 'common/LegionCard/ChipCard';
 
 const useStyles = makeStyles(theme => ({
   expand: {
@@ -56,11 +58,10 @@ function CollapsedContent({ label, cardIds, handleCardZoom }) {
       <Collapse unmountOnExit timeout="auto" in={isExpanded}>
         <div style={{ display: 'flex', flexFlow: 'row wrap' }}>
           {cardIds.map(cardId => (
-            <LegionCard
+            <ChipCard
               key={cardId}
-              id={cardId}
-              isBasic={true}
-              handleCardZoom={() => handleCardZoom(cardId)}
+              card={cards[cardId]}
+              handleClick={() => handleCardZoom(cardId)}
             />
           ))}
         </div>

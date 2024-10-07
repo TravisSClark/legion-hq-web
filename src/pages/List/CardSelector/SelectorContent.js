@@ -9,6 +9,8 @@ import {
 } from '@material-ui/core';
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import LegionCard from 'common/LegionCard';
+import cards from 'constants/cards';
+import ChipCard from 'common/LegionCard/ChipCard';
 
 const useStyles = makeStyles(theme => ({
   expand: {
@@ -116,11 +118,10 @@ function SelectorContent({
       <CollapsedContent isExpanded={isExpanded}>
         <div className={classes.rowContainerWrap}>
           {invalidIds.map(id => (
-            <LegionCard
+            <ChipCard
+              card={cards[id]}
               key={id}
-              id={id}
-              isBasic={true}
-              handleCardZoom={() => handleCardZoom(id)}
+              handleClick={()=>handleCardZoom(id)}
             />
           ))}
         </div>
