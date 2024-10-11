@@ -7141,7 +7141,7 @@
     "ky": {
         "id": "ky",
         "cardName": "ARC Troopers",
-        "title": "Stike Team",
+        "title": "Strike Team",
         "displayName": "ARC Strike Team",
         "cardType": "unit",
         "cardSubtype": "clone trooper",
@@ -14422,7 +14422,7 @@
 	"xk": {
 		"displayName": "DC-17m ICWS Config",
 		"cardSubtype": "armament",
-		"cardName": "DC-17m ICWS Configuration",
+		"cardName": "DC-17m ICWS Config",
 		"isUnique": false,
 		"cardType": "upgrade",
 		"cost": 0,
