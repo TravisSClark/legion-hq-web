@@ -11858,7 +11858,8 @@
         "rank": "corps",
         "faction": "empire",
         "isUnique": false,
-        "cost": 40,
+        "prevCost": 40,
+        "cost": 36,
         "imageName": "Stormtroopers Heavy Response Unit.webp",
         "keywords": [
             "Flexible Response",
