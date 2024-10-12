@@ -1087,21 +1087,41 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
   return sortIds(validUnitIds);
 }
 
+
+/**
+ * Added so we can check against upgradeBar
+ * @param {*} requirement 
+ * @param {*} unitCard 
+ * @returns 
+ */
+function checkRequirement(unitCard, requirement){
+  let pass = true;
+  
+  console.log(JSON.stringify(requirement));
+
+  // TODO - more perfect-fitting here; get this all more generalized, KISS for now
+  let reqFields = Object.getOwnPropertyNames(requirement);
+  if(reqFields.length == 1){
+    if(Array.isArray(requirement[reqFields[0]])){
+      console.log("it's an array");
+      return _.difference(requirement[reqFields[0]], unitCard[reqFields[0]]) == 0
+    }
+  }
+  return _.isMatch(unitCard, requirement);
+}
+
+/** TODO grabnar - this could use some TLC; 
+ * most functions here only work for 1 or 2 elements; would be cool to extend this a bit for futureproofing
+ */
 function isRequirementsMet(requirements, unitCard) {
   if (requirements instanceof Array) {
     const operator = requirements[0];
     if (operator instanceof Object) {
-      // requirements: [{cardName: 'Whatever'}]
-      return _.isMatch(unitCard, operator);
+      if(operator)
+        // requirements: [{cardName: 'Whatever'}]
+        return checkRequirement(unitCard, operator);
     } else if (operator === 'NOT') {
-      let operand = requirements[1];
-      if (operand instanceof Array) {
-        // requirements: ['NOT', [...]]
-        operand = isRequirementsMet(operand, unitCard);
-      } else {
-        // requirements: ['NOT', {cardName: 'Whatever'}]
-        return !_.isMatch(unitCard, operand);
-      }
+        return !_.isMatch(unitCard, requirements[1]);
     } else if (operator === 'AND' || operator === 'OR') {
       let leftOperand = requirements[1];
       let rightOperand = requirements[2];
