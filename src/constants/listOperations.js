@@ -1097,13 +1097,10 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
 function checkRequirement(unitCard, requirement){
   let pass = true;
   
-  console.log(JSON.stringify(requirement));
-
   // TODO - more perfect-fitting here; get this all more generalized, KISS for now
   let reqFields = Object.getOwnPropertyNames(requirement);
   if(reqFields.length == 1){
     if(Array.isArray(requirement[reqFields[0]])){
-      console.log("it's an array");
       return _.difference(requirement[reqFields[0]], unitCard[reqFields[0]]) == 0
     }
   }
