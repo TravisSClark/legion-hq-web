@@ -36,7 +36,7 @@ const battleForcesDict = {
         heavy: [0, 1]
       }
     },
-    'Bright Tree Village': {
+  'Bright Tree Village': {
       name: 'Bright Tree Village',
       faction: 'rebels',
       commander: ['vv', 'ac', 'ab', 've', 'wd'],
@@ -58,11 +58,11 @@ const battleForcesDict = {
         commOp: 5,
 
         commander: [1, 5],
-        operative: [0, 4],
+        operative: [0, 1],
         corps: [3, 6],
         special: [0, 3],
-        support: [0, 2],
-        heavy: [0, 2]
+        support: [0, 0],
+        heavy: [0, 1]
       },
       '500-point mode': {
         commOp: 4,
@@ -74,7 +74,7 @@ const battleForcesDict = {
         support: [0, 1],
         heavy: [0, 1]
       }
-    },
+  },
   'Blizzard Force': {
       name: 'Blizzard Force',
       faction: 'empire',
@@ -128,20 +128,20 @@ const battleForcesDict = {
     },
     ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ImperialRemnant-1.pdf',
     'standard mode': {
-      commOp: 2,
+      // commOp: 2,
 
       commander: [1, 2],
-      operative: [0, 1],
+      operative: [0, 0],
       corps: [3, 6],
       special: [0, 0],
       support: [0, 2],
       heavy: [0, 2]
     },
     '500-point mode': {
-      commOp: 2,
+      // commOp: 2,
 
       commander: [1, 2],
-      operative: [0, 1],
+      operative: [0, 0],
       corps: [2, 4],
       special: [0, 0],
       support: [0, 1],
@@ -158,7 +158,7 @@ const battleForcesDict = {
     support: ['bf'],
     heavy: ['we', 'bg'],
     allowedUniqueUpgrades: [],
-
+    rules:{},
     ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_TempestForce-1.pdf',
     'standard mode': {
       commander: [1, 2],
@@ -187,13 +187,13 @@ const battleForcesDict = {
       support: ['mb', 'ic', 'xj', 'xp'],
       heavy: ['oo'],
       allowedUniqueUpgrades: ['lh', 'lg'],
-
+      rules:{},
       ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_501st.pdf',
       'standard mode': {
-        commOp: 2,
+        // commOp: 2,
 
         commander: [1, 2],
-        operative: [0, 1],
+        operative: [0, 0],
         corps: [1, 4],
         special: [1, 4],
         support: [1, 2],
@@ -201,7 +201,7 @@ const battleForcesDict = {
       },
       '500-point mode': {
         commander: [1, 1],
-        operative: [0, 1],
+        operative: [0, 0],
         corps: [1, 4],
         special: [1, 4],
         support: [0, 2],

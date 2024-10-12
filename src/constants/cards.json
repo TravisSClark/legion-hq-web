@@ -3364,11 +3364,8 @@
             "Leader"
         ],
         "requirements": [
-            "AND",
             {
-                "rank": "corps"
-            },
-            {
+                "rank": "corps",
                 "faction": "empire"
             }
         ],
@@ -3411,11 +3408,8 @@
         "imageName": "Imperial Comms Technician.webp",
         "keywords": [],
         "requirements": [
-            "AND",
             {
-                "rank": "corps"
-            },
-            {
+                "rank": "corps",
                 "faction": "empire"
             }
         ],
@@ -3437,11 +3431,8 @@
             "Noncombatant"
         ],
         "requirements": [
-            "AND",
             {
-                "faction": "empire"
-            },
-            {
+                "faction": "empire",
                 "rank": "corps"
             }
         ],
@@ -3459,12 +3450,10 @@
             "Noncombatant"
         ],
         "requirements": [
-            "AND",
             {
-                "rank": "corps"
-            },
-            {
+                "rank": "corps",
                 "faction": "empire"
+
             }
         ],
         "id": "fa"
@@ -3717,11 +3706,8 @@
             "Field Commander"
         ],
         "requirements": [
-            "AND",
             {
-                "cardSubtype": "repulsor vehicle"
-            },
-            {
+                "cardSubtype": "repulsor vehicle",
                 "faction": "rebels"
             }
         ],
@@ -4581,11 +4567,8 @@
             "Cover"
         ],
         "requirements": [
-            "AND",
             {
-                "cardSubtype": "repulsor vehicle"
-            },
-            {
+                "cardSubtype": "repulsor vehicle",
                 "faction": "rebels"
             }
         ],
@@ -5700,11 +5683,8 @@
         "imageName": "Ryder Azadi.webp",
         "keywords": [],
         "requirements": [
-            "AND",
             {
-                "cardSubtype": "repulsor vehicle"
-            },
-            {
+                "cardSubtype": "repulsor vehicle",
                 "faction": "rebels"
             }
         ],
@@ -6566,11 +6546,8 @@
         "imageName": "Clone Specialist.webp",
         "keywords": [],
         "requirements": [
-            "AND",
             {
-                "cardSubtype": "clone trooper"
-            },
-            {
+                "cardSubtype": "clone trooper",
                 "rank": "corps"
             }
         ],
@@ -7140,7 +7117,7 @@
     "ky": {
         "id": "ky",
         "cardName": "ARC Troopers",
-        "title": "Stike Team",
+        "title": "Strike Team",
         "displayName": "ARC Strike Team",
         "cardType": "unit",
         "cardSubtype": "clone trooper",
@@ -7928,30 +7905,14 @@
             "Leader"
         ],
         "requirements": [
-            "AND",
-            [
-                "OR",
-                [
-                    "AND",
-                    {
-                        "rank": "corps"
-                    },
-                    {
-                        "cardSubtype": "trooper"
-                    }
-                ],
-                [
-                    "OR",
-                    {
-                        "cardName": "Imperial Special Forces"
-                    },
-                    {
-                        "cardName": "Imperial Special Forces Inferno Squad"
-                    }
-                ]
-            ],
+            "OR",
             {
-                "faction": "empire"
+                "rank": "corps",
+                "cardSubtype": "trooper",
+                "faction":"empire"
+            },
+            {
+                "cardName": "Imperial Special Forces"
             }
         ],
         "history": [
@@ -7978,30 +7939,14 @@
             "Pierce"
         ],
         "requirements": [
-            "AND",
-            [
-                "OR",
-                [
-                    "AND",
-                    {
-                        "rank": "corps"
-                    },
-                    {
-                        "cardSubtype": "trooper"
-                    }
-                ],
-                [
-                    "OR",
-                    {
-                        "cardName": "Imperial Special Forces"
-                    },
-                    {
-                        "cardName": "Imperial Special Forces Inferno Squad"
-                    }
-                ]
-            ],
+            "OR",
             {
-                "faction": "empire"
+                "faction":"empire",
+                "rank": "corps",
+                "cardSubtype": "trooper"
+            },
+            {
+                "cardName": "Imperial Special Forces"
             }
         ],
         "history": [
@@ -8292,11 +8237,8 @@
             "Sidearm"
         ],
         "requirements": [
-            "AND",
             {
-                "faction": "separatists"
-            },
-            {
+                "faction": "separatists",
                 "cardSubtype": "droid trooper"
             }
         ]
@@ -8328,7 +8270,7 @@
         "isDoubleSided": true,
         "requirements": [
             {
-                "force": true
+                "upgradeBar": ["force"]
             }
         ]
     },
@@ -8419,7 +8361,8 @@
     },
     "my": {
         "id": "my",
-        "cardName": "Imperial Special Forces Inferno Squad",
+        "cardName": "Imperial Special Forces",
+        "title": "Inferno Squad",
         "displayName": "Inferno Squad",
         "cardType": "unit",
         "cardSubtype": "trooper",
@@ -8469,9 +8412,14 @@
             "Critical"
         ],
         "requirements": [
+            "AND",
             {
                 "cardName": "Imperial Special Forces"
-            }
+            },
+            [
+                "NOT",
+                { "title": "Inferno Squad" }
+            ]
         ],
         "history": [
             {
@@ -8578,7 +8526,7 @@
         "isDoubleSided": true,
         "requirements": [
             {
-                "force": true
+                "upgradeBar":["force"]
             }
         ]
     },
@@ -9032,11 +8980,8 @@
             "Fire Support"
         ],
         "requirements": [
-            "AND",
             {
-                "cardSubtype": "clone trooper"
-            },
-            {
+                "cardSubtype": "clone trooper",
                 "rank": "corps"
             }
         ],
@@ -9065,11 +9010,8 @@
             "Repair"
         ],
         "requirements": [
-            "AND",
             {
-                "cardSubtype": "clone trooper"
-            },
-            {
+                "cardSubtype": "clone trooper",
                 "rank": "corps"
             }
         ],
@@ -9097,11 +9039,8 @@
             "Treat"
         ],
         "requirements": [
-            "AND",
             {
-                "cardSubtype": "clone trooper"
-            },
-            {
+                "cardSubtype": "clone trooper",
                 "rank": "corps"
             }
         ],
@@ -9160,11 +9099,8 @@
             "Sidearm"
         ],
         "requirements": [
-            "AND",
             {
-                "faction": "separatists"
-            },
-            {
+                "faction": "separatists",
                 "cardSubtype": "droid trooper"
             }
         ],
@@ -9189,11 +9125,8 @@
             "Noncombatant"
         ],
         "requirements": [
-            "AND",
             {
-                "faction": "separatists"
-            },
-            {
+                "faction": "separatists",
                 "cardSubtype": "droid trooper"
             }
         ]
@@ -9212,11 +9145,8 @@
             "Noncombatant"
         ],
         "requirements": [
-            "AND",
             {
-                "faction": "separatists"
-            },
-            {
+                "faction": "separatists",
                 "cardSubtype": "droid trooper"
             }
         ]
@@ -9474,11 +9404,8 @@
             "Field Commander"
         ],
         "requirements": [
-            "AND",
             {
-                "faction": "rebels"
-            },
-            {
+                "faction": "rebels",
                 "rank": "heavy"
             }
         ],
@@ -9502,11 +9429,8 @@
             "Field Commander"
         ],
         "requirements": [
-            "AND",
             {
-                "faction": "empire"
-            },
-            {
+                "faction": "empire",
                 "rank": "heavy"
             }
         ],
@@ -9534,11 +9458,8 @@
             "Field Commander"
         ],
         "requirements": [
-            "AND",
             {
-                "faction": "republic"
-            },
-            {
+                "faction": "republic",
                 "cardName": "LAAT Patrol Transport"
             }
         ],
@@ -9623,11 +9544,8 @@
             "Sharpshooter"
         ],
         "requirements": [
-            "AND",
             {
-                "faction": "rebels"
-            },
-            {
+                "faction": "rebels",
                 "cardSubtype": "repulsor vehicle"
             }
         ]
@@ -9747,11 +9665,8 @@
             "Marksman"
         ],
         "requirements": [
-            "AND",
             {
-                "faction": "empire"
-            },
-            {
+                "faction": "empire",
                 "cardSubtype": "repulsor vehicle"
             }
         ],
@@ -9775,11 +9690,8 @@
             "Observe"
         ],
         "requirements": [
-            "AND",
             {
-                "faction": "republic"
-            },
-            {
+                "faction": "republic",
                 "cardName": "LAAT Patrol Transport"
             }
         ]
@@ -9795,11 +9707,8 @@
         "imageName": "Imperial TIE Pilot.webp",
         "keywords": [],
         "requirements": [
-            "AND",
             {
-                "faction": "empire"
-            },
-            {
+                "faction": "empire",
                 "cardSubtype": "repulsor vehicle"
             }
         ]
@@ -9815,11 +9724,8 @@
         "imageName": "Clone Shock Trooper Pilot.webp",
         "keywords": [],
         "requirements": [
-            "AND",
             {
-                "faction": "republic"
-            },
-            {
+                "faction": "republic",
                 "cardName": "LAAT Patrol Transport"
             }
         ],
@@ -11750,11 +11656,8 @@
         "imageName": "Frenzied Gunner.webp",
         "keywords": [],
         "requirements": [
-            "AND",
             {
-                "rank": "heavy"
-            },
-            {
+                "rank": "heavy",
                 "faction": "mercenary"
             }
         ]
@@ -11774,11 +11677,8 @@
             "Demoralize"
         ],
         "requirements": [
-            "AND",
             {
-                "rank": "heavy"
-            },
-            {
+                "rank": "heavy",
                 "faction": "mercenary"
             }
         ]
@@ -11856,7 +11756,8 @@
         "rank": "corps",
         "faction": "empire",
         "isUnique": false,
-        "cost": 40,
+        "prevCost": 40,
+        "cost": 36,
         "imageName": "Stormtroopers Heavy Response Unit.webp",
         "keywords": [
             "Flexible Response",
@@ -12618,11 +12519,8 @@
             "Leader"
         ],
         "requirements": [
-            "AND",
             {
-                "cardSubtype": "clone trooper"
-            },
-            {
+                "cardSubtype": "clone trooper",
                 "rank": "corps"
             }
         ],
@@ -12649,11 +12547,8 @@
             "Leader"
         ],
         "requirements": [
-            "AND",
             {
-                "cardSubtype": "clone trooper"
-            },
-            {
+                "cardSubtype": "clone trooper",
                 "rank": "corps"
             }
         ],
@@ -14418,7 +14313,7 @@
 	"xk": {
 		"displayName": "DC-17m ICWS Config",
 		"cardSubtype": "armament",
-		"cardName": "DC-17m ICWS Configuration",
+		"cardName": "DC-17m ICWS Config",
 		"isUnique": false,
 		"cardType": "upgrade",
 		"cost": 0,
