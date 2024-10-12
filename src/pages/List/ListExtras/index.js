@@ -4,7 +4,8 @@ import {
   Clear as ClearIcon,
   Save as SaveIcon,
   CallSplit as ForkIcon,
-  Functions as CalculateIcon
+  Functions as CalculateIcon,
+  ShareOutlined
 } from '@material-ui/icons';
 import DataContext from 'context/DataContext';
 import ListContext from 'context/ListContext';
@@ -16,6 +17,7 @@ import ImageExportButton from './ImageExportButton';
 import TextExportButton from './TextExportButton';
 import PrintExportButton from './PrintExportButton';
 import SimpleButton from './SimpleButton';
+import MenuButton from 'common/MenuButton';
 
 function ListExtras() {
   const { userId } = useContext(DataContext);
@@ -39,12 +41,15 @@ function ListExtras() {
       }}
     >
       <TemplateButton />
-      <LinkButton currentList={currentList} />
-      <QRButton currentList={currentList} />
-      <ImageExportButton currentList={currentList} />
-      <TextExportButton currentList={currentList} />
-      <TTSTextExportButton currentList={currentList} />
-      <PrintExportButton currentList={currentList} />
+      <MenuButton label="Export..." icon={<ShareOutlined/>}>
+        <TTSTextExportButton currentList={currentList} />
+        <ImageExportButton currentList={currentList} />
+        <TextExportButton currentList={currentList} />
+        <QRButton currentList={currentList} />
+        <LinkButton currentList={currentList} />
+      </MenuButton>
+      {/* TODO - hung indefinitely on debug, just gives a QR code in production */}
+      {/* <PrintExportButton currentList={currentList} /> */}
       <SimpleButton
         timeout={3000}
         timeoutMessage={listSaveMessage ? listSaveMessage : 'Saving...'}

@@ -31,7 +31,7 @@ function ImageExportButton({ isMobile = false, currentList }) {
         clickable
         disabled={currentList.units.length === 0}
         variant="outlined"
-        label="Export Image"
+        label="Image"
         icon={<ImageIcon />}
         style={{ marginRight: 4, marginBottom: 4 }}
         onClick={() => setIsOpen(true)}

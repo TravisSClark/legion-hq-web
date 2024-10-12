@@ -43,7 +43,7 @@ function TTSTextExportButton({ currentList }) {
       <Chip
         clickable
         variant="outlined"
-        label="Export JSON"
+        label="TTS JSON"
         icon={<TextIcon />}
         onClick={() => setIsOpen(true)}
       />
