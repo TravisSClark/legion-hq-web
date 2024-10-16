@@ -13776,8 +13776,8 @@
         "rank": "commander",
         "faction": "separatists",
         "isUnique": true,
-        "prevCost": 80,
-        "cost": 85,
+        "prevCost": 85,
+        "cost": 80,
         "imageName": "Poggle the Lesser.webp",
         "keywords": [
             "Jump",
