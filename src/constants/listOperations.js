@@ -130,11 +130,11 @@ function consolidate(list) {
 
     list.unitCounts[unitCard.rank] += unit.count;
     
-    if (unitCard.associate){
-      if(list.units.find(u => u.unitId === unitCard.associate) !== undefined){
-        list.unitCounts[unitCard.rank]--;
-      }
-    }
+    // if (unitCard.associate){
+    //   if(list.units.find(u => u.unitId === unitCard.associate) !== undefined){
+    //     list.unitCounts[unitCard.rank]--;
+    //   }
+    // }
     if (unit.unitId === 'rc' && unit.upgradesEquipped.includes('rq')) { // Maul + Darksaber interaction
       list.unitCounts['commander']++;
       list.unitCounts['operative']--;
@@ -1945,13 +1945,19 @@ function applyRankAdjustments(currentList, rankReqs) {
       }
       extraRankCounts[card.entourage] += unit.count;
 
-    } else if (card.detachment) {
+    } 
+    if (card.detachment) {
       // *technically* this is backwards... but still works ;)
       if(!extraRankCounts[card.id]) {
         extraRankCounts[card.id] = 0;
       }
       extraRankCounts[card.id] += unit.count;
     } 
+    if (card.associate){
+      if(currentList.units.find(u => u.unitId === card.associate) !== undefined){
+        extraRankCounts[card.id] = 1;
+      }
+    }
   });
 
   // Do this on a separate pass so we don't get whacked by random list order

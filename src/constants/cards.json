@@ -7904,13 +7904,18 @@
         "requirements": [
             "OR",
             {
+                "faction":"empire",
                 "rank": "corps",
-                "cardSubtype": "trooper",
-                "faction":"empire"
+                "cardSubtype": "trooper"
             },
-            {
-                "cardName": "Imperial Special Forces"
-            }
+            "OR",[
+                {
+                    "cardName": "Imperial Special Forces"
+                },
+                {
+                    "cardName": "Imperial Special Forces Inferno Squad"
+                }
+            ]
         ],
         "history": [
             {
@@ -7942,9 +7947,14 @@
                 "rank": "corps",
                 "cardSubtype": "trooper"
             },
-            {
-                "cardName": "Imperial Special Forces"
-            }
+            "OR",[
+                {
+                    "cardName": "Imperial Special Forces"
+                },
+                {
+                    "cardName": "Imperial Special Forces Inferno Squad"
+                }
+            ]
         ],
         "history": [
             {
@@ -8358,8 +8368,7 @@
     },
     "my": {
         "id": "my",
-        "cardName": "Imperial Special Forces",
-        "title": "Inferno Squad",
+        "cardName": "Imperial Special Forces Inferno Squad",
         "displayName": "Inferno Squad",
         "cardType": "unit",
         "cardSubtype": "trooper",
@@ -13753,6 +13762,7 @@
         "surges": [
             "hit"
         ],
+        "associate":"wl",
         "wounds": 5,
         "courage": 3,
         "speed": 2
