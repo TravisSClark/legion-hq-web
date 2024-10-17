@@ -7908,14 +7908,12 @@
                 "rank": "corps",
                 "cardSubtype": "trooper"
             },
-            "OR",[
-                {
-                    "cardName": "Imperial Special Forces"
-                },
-                {
-                    "cardName": "Imperial Special Forces Inferno Squad"
-                }
-            ]
+            {
+                "cardName": "Imperial Special Forces"
+            },
+            {
+                "cardName": "Imperial Special Forces Inferno Squad"
+            }
         ],
         "history": [
             {
@@ -7947,14 +7945,12 @@
                 "rank": "corps",
                 "cardSubtype": "trooper"
             },
-            "OR",[
-                {
-                    "cardName": "Imperial Special Forces"
-                },
-                {
-                    "cardName": "Imperial Special Forces Inferno Squad"
-                }
-            ]
+            {
+                "cardName": "Imperial Special Forces"
+            },
+            {
+                "cardName": "Imperial Special Forces Inferno Squad"
+            }
         ],
         "history": [
             {

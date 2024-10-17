@@ -962,12 +962,12 @@ function addUnit(list, unitId, stackSize = 1) {
 
       if(upgradeIndex > -1){
         let eligibleUpgrades = getEquippableUpgrades(list, upgradeType, unitId, [], []);
-        if(eligibleUpgrades.validIds.length == 1){
+        if(eligibleUpgrades.validIds.length === 1){
           let freeSoloId = eligibleUpgrades.validIds[0];
-          if(cards[freeSoloId].cost == 0){
+          if(cards[freeSoloId].cost === 0){
             // If this card was already added via equip above, it'll break things if added again
             // (currently a futureproof w no known case)
-            if(!(unitCard.equip?.find(u => u == freeSoloId))){
+            if(!(unitCard.equip?.find(u => u === freeSoloId))){
               equipUpgradeToAll(list, unitIndex, upgradeIndex, freeSoloId);
             }
           }
@@ -1048,7 +1048,7 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     if (card.rank !== rank) continue;
 
 
-    if(!userSettings.showStormTide && (id == "AA" || id == "AK")){
+    if(!userSettings.showStormTide && (id === "AA" || id === "AK")){
       continue;
     }
     // TODO - idk stormtide, but it seems odd that the 0pt one is the one shown in the mode, and the 60pt one is the one outside it
@@ -1092,13 +1092,11 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
  * @returns 
  */
 function checkRequirement(unitCard, requirement){
-  let pass = true;
-  
   // TODO - more perfect-fitting here; get this all more generalized, KISS for now
   let reqFields = Object.getOwnPropertyNames(requirement);
-  if(reqFields.length == 1){
+  if(reqFields.length === 1){
     if(Array.isArray(requirement[reqFields[0]])){
-      return _.difference(requirement[reqFields[0]], unitCard[reqFields[0]]) == 0
+      return _.difference(requirement[reqFields[0]], unitCard[reqFields[0]]) === 0
     }
   }
   return _.isMatch(unitCard, requirement);
@@ -1816,7 +1814,7 @@ function battleForceValidation(currentList, unitCounts){
       
       if(unitCount < limit.count[0] || unitCount > limit.count[1]){
         let name = limit.ids.map(id=> cards[id].displayName ? cards[id].displayName : cards[id].cardName).join(" OR ");
-        if(limit.count[0] == 0)
+        if(limit.count[0] === 0)
           validationIssues.push({level:2, text:"Limit " + limit.count[1] + " " + name.toUpperCase()});
         else
           validationIssues.push({level:2, text:"You must have " + limit.count[0] + " - " + limit.count[1] + " " + name.toUpperCase()});
@@ -1842,7 +1840,7 @@ function battleForceValidation(currentList, unitCounts){
     let hasNone = false;
     let hasMoreThanOne =false;
     corpsCounts.forEach(c=>{
-      if(c.count == 0){
+      if(c.count === 0){
         hasNone = true;
       } else if(c.count > 1){
         hasMoreThanOne = true;
