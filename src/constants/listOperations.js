@@ -1820,7 +1820,6 @@ function battleForceValidation(currentList, unitCounts){
 
     unitLimits.forEach( limit =>{
       let unitCount = limit.ids.reduce((count, id)=>{
-        console.log(unitCounts[id])
         return count + (unitCounts[id] ? unitCounts[id] : 0)}, 0);
       
       if(unitCount < limit.count[0] || unitCount > limit.count[1]){
@@ -1834,9 +1833,6 @@ function battleForceValidation(currentList, unitCounts){
   }  
 
   if( battleForcesDict[currentList.battleForce]?.rules?.minOneOfEachCorps){
-
-    console.log('counts ' + JSON.stringify(unitCounts));
-
     let corpsCounts = battleForcesDict[currentList.battleForce].corps.map(
       id=>{return{id, count:(unitCounts[id] ? unitCounts[id] : 0)}}
     )
