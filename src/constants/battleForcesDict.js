@@ -2,6 +2,7 @@ const battleForcesDict = {
   'Echo Base Defenders': {
       name: 'Echo Base Defenders',
       faction: 'rebels',
+      linkId: 'ebd',
       commander: ['ab', 'ad', 'ac', 'bi'],
       operative: ['jg', 'ji', 'af'],
       corps: ['gv', 'if'],
@@ -39,6 +40,7 @@ const battleForcesDict = {
   'Bright Tree Village': {
       name: 'Bright Tree Village',
       faction: 'rebels',
+      linkId: 'btv',
       commander: ['vv', 'ac', 'ab', 've', 'wd'],
       operative: ['af'],
       corps: ['vk', 'ah'],
@@ -78,6 +80,7 @@ const battleForcesDict = {
   'Blizzard Force': {
       name: 'Blizzard Force',
       faction: 'empire',
+      linkId: 'bf',
       commander: ['at', 'au', 'ar'],
       operative: [],
       corps: ['az', 'ay',  'sr'],
@@ -112,6 +115,7 @@ const battleForcesDict = {
   'Imperial Remnant': {
     name: 'Imperial Remnant',
     faction: 'empire',
+    linkId: 'ir',
     commander: ['ui', 'ar'],
     operative: [],
     corps: ['ay', 'hg'],
@@ -151,6 +155,7 @@ const battleForcesDict = {
   'Tempest Force': {
     name: 'Tempest Force',
     faction: 'empire',
+    linkId: 'tf',
     commander: ['ar'],
     operative: [],
     corps: ['ay'],
@@ -180,6 +185,7 @@ const battleForcesDict = {
   '501st Legion': {
       name: '501st Legion',
       faction: 'republic',
+      linkId: '5t',
       commander: ['na', 'fy', 'ns'],
       operative: [],
       corps: ['fz'],
@@ -211,6 +217,7 @@ const battleForcesDict = {
     'Wookiee Defenders': {
       name: 'Wookiee Defenders',
       faction: 'republic',
+      linkId: 'wd',
       commander: ['ol', 'po', 'ph'],
       operative: [],
       corps: ['fz'],
@@ -249,6 +256,7 @@ const battleForcesDict = {
   'Separatist Invasion': {
       name: 'Separatist Invasion',
       faction: 'separatists',
+      linkId: 'si',
       commander: ['fx', 'ia', 'nr'],
       operative: ['nb'],
       corps: ['gx'],
@@ -281,6 +289,7 @@ const battleForcesDict = {
     'Experimental Droids': {
       name: 'Experimental Droids',
       faction: 'separatists',
+      linkId: 'exd',
       commander: ['py', 'nr', 'pz', 'qa'],
       operative: [],
       corps: ['gx', 'ga', 'xd'],
@@ -319,6 +328,7 @@ const battleForcesDict = {
   'Shadow Collective': {
       name: 'Shadow Collective',
       faction: 'mercenary',
+      linkId: 'sc',
       commander: ['ra', 'rd', 'qy'],
       operative: ['rc', 'kx', 'ax'],
       corps: ['rb', 'qz'],

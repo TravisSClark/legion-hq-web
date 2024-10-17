@@ -891,10 +891,13 @@ function addCounterpart(list, unitIndex, counterpartId) {
     loadoutUpgrades: [],
     additionalUpgradeSlots: []
   };
-  for (let i = 0; i < counterpartCard.upgradeBar.length; i++) {
-    unit.counterpart.upgradesEquipped.push(null);
-    if (unitCard.keywords.includes('Loadout')) {
-      unit.counterpart.loadoutUpgrades.push(null);
+
+  if(counterpartCard.upgradeBar){
+    for (let i = 0; i < counterpartCard.upgradeBar.length; i++) {
+      unit.counterpart.upgradesEquipped.push(null);
+      if (unitCard.keywords.includes('Loadout')) {
+        unit.counterpart.loadoutUpgrades.push(null);
+      }
     }
   }
   return consolidate(list);
@@ -1683,18 +1686,25 @@ function convertHashToList(faction, url) {
   list.contingencies = [];
   let segments;
   if (url.includes(':')) {
-    const battleForceSegments = url.split(':');
-    const battleForceCode = battleForceSegments[0];
+    segments = url.split(':');
 
-    let keys = Object.keys(battleForcesDict);
-    for(let i = 0; i < keys.length; i++) {
-      let bf = battleForcesDict[keys[i]];
-      if (battleForceCode === bf.linkId) {
-        list.battleForce = bf.name;
-        break;
+    let idx=0;
+    let points = parseInt(segments[idx]);
+
+    if(points){
+      idx++;
+      let mode = Object.getOwnPropertyNames(legionModes).find(n => legionModes[n].maxPoints == points);
+      if(mode){
+        list.mode = mode;
       }
     }
-    segments = battleForceSegments[1].split(',');
+
+    let bfCode = Object.getOwnPropertyNames(battleForcesDict).find(k=>battleForcesDict[k].linkId == segments[idx]);
+    if(bfCode){
+      list.battleForce = bfCode;
+    }
+
+    segments = segments[segments.length-1].split(',');
   } else {
     list.battleForce = '';
     segments = url.split(',');
@@ -1704,6 +1714,7 @@ function convertHashToList(faction, url) {
   try {
     let oldCounterparts = ['lw', 'ji', 'jj'];
     segments.forEach(segment => {
+      // TODO - this is *probably* defunct, unless there's a gameuplink archive out there
       let hasOldCounterpart = false;
       oldCounterparts.forEach(id => {
         if (segment === `1${id}`) hasOldCounterpart = true;

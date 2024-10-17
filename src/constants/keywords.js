@@ -42,7 +42,7 @@ const keywords = {
 	"Defend": "When you are issued an order, you gain X dodge tokens.",
 	"Deflect": "While defending, if you spend a dodge token, any defense surge results are converted to block results; if it's a ranged attack, the attacker suffers 1 wound for each defense surge rolled.",
 	"Demoralize": "After your Rally step, add up to X total suppression tokens to enemy units at range 1-2.",
-	"Detachment": "During army building, you may only be included if a unit that has the name or type specified by X is also included in your army. Each unit with the DETACHMENT keyword requires a corresponding unit that matches the unit name or type specified. When you deploy, you must be within speed-1 and height 1 of the corresponding unit. You do not need to be within your deployment zone. See Rulebook.",
+	"Detachment": "During army building, you don't count against the max number of units of your rank that can be included. You may only be added if another unit without Detachment that has the name or type specified by X is also included in this army. Each unit with DETACHMENT needs its own matching specified unit. During the Deploy in Prepared Positions step, you gain the Infiltrate or Prepared Position keyword if your matching specified unit has that keyword.",
 	"Detonate": "After a unit controlled by any player performs an action, you may detonate up to X of the specified friendly charge tokens. See Rulebook.",
 	"Direct": "During the Command Phase, you may issue an order to a friendly unit with X at range 2.",
 	"Disciplined": "When you are issued an order, you may remove up to X suppression tokens.",
