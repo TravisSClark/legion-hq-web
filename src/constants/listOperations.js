@@ -30,9 +30,7 @@ function countPoints(list) {
         }
       }
     });
-    unit.totalUnitCost *= unit.count;
-    list.pointTotal += unit.totalUnitCost;
-    if (unit.counterpart) {
+    if(unit.counterpart){
       const counterpartCard = cards[unit.counterpart.counterpartId];
       if (list.isUsingOldPoints) {
         unit.counterpart.totalUnitCost = counterpartCard.prevCost ? counterpartCard.prevCost : counterpartCard.cost;
@@ -46,9 +44,14 @@ function countPoints(list) {
           } else unit.counterpart.totalUnitCost += upgradeCard.cost;
         }
       });
-      list.pointTotal += unit.counterpart.totalUnitCost;
+      // list.pointTotal += unit.counterpart.totalUnitCost;
       list.uniques.push(unit.counterpart.counterpartId);
+
+      unit.totalUnitCost += unit.counterpart.totalUnitCost;
     }
+
+    unit.totalUnitCost *= unit.count;
+    list.pointTotal += unit.totalUnitCost;
   });
 
   return list;

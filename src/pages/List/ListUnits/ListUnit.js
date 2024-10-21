@@ -39,12 +39,7 @@ function ListUnit({
   unitIndex,
   counterpartId,
   counterpartUnit,
-  isKillPointMode,
   handleCardZoom,
-  handleDecrementUnit,
-  handleIncrementUnit,
-  handleAddKillPoints,
-  handleRemoveKillPoints,
   addCounterpartHandler,
   removeCounterpartHandler,
   zoomUpgradeHandlers,
@@ -55,26 +50,6 @@ function ListUnit({
   deleteLoadoutHandlers
 }) {
   const classes = useStyles();
-  const avatar = (
-    <UnitAvatar
-      key="avatar"
-      id={unitCard.id}
-      count={unit.count}
-      handleClick={handleCardZoom}
-    />
-  );
-  const name = <CardName key="name" id={unitCard.id} />;
-  const points = <UnitPoints key="points" unit={unit} />;
-  const actions = (
-    <UnitActions
-      key="actions"
-      isKillPointMode={isKillPointMode}
-      handleAddKillPoints={handleAddKillPoints}
-      handleRemoveKillPoints={handleRemoveKillPoints}
-      decrementUnit={handleDecrementUnit}
-      incrementUnit={unit.hasUniques ? undefined : handleIncrementUnit}
-    />
-  );
 
   const upgrades = (
     <UnitUpgrades
@@ -95,21 +70,26 @@ function ListUnit({
     />
   );
   const flaws = unitCard.flaw ? <UnitFlaw key="flaws" flawId={unitCard.flaw} /> : undefined;
-  const leftCell = [avatar];
-  const middleCell = [name, upgrades, flaws];
-  const rightCell = [points, actions];
   return (
     <div className={classes.unitColumn}>
       <div className={classes.unitRow}>
         <div className={classes.leftCell}>
           <div style={{ marginTop: 2 }} />
-          {leftCell}
+          <UnitAvatar
+            key="avatar"
+            id={unitCard.id}
+            count={unit.count}
+            handleClick={handleCardZoom}
+          />
         </div>
         <div className={classes.middleCell}>
-          {middleCell}
+          <CardName key="name" id={unitCard.id} />
+          {upgrades}
+          {flaws}
         </div>
         <div className={classes.rightCell}>
-          {rightCell}
+          <UnitPoints key="points" unit={unit} />
+          <UnitActions unit={unit} unitIndex={unitIndex} />
         </div>
       </div>
       {counterpartUnit}

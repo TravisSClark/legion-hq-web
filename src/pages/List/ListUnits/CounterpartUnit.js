@@ -43,48 +43,36 @@ function CounterpartUnit({
   addUpgradeHandlers,
   deleteUpgradeHandlers,
   changeLoadoutHandlers,
-  deleteLoadoutHandlers
+  deleteLoadoutHandlers,
 }) {
   const classes = useStyles();
-  const avatar = (
-    <UnitAvatar
-      key="avatar"
-      id={counterpartId}
-      handleClick={handleCardZoom}
-    />
-  );
-  const name = <CardName key="name" id={counterpartId} />;
-  const points = <UnitPoints key="points" unit={counterpart} />;
-  const actions = (
-    <UnitActions key="actions" decrementUnit={handleRemoveCounterpart} />
-  );
-  const upgrades = (
-    <UnitUpgrades
-      key="upgrades"
-      upgradesEquipped={counterpart.upgradesEquipped}
-      totalUpgradeBar={counterpartCard.upgradeBar}
-      loadoutUpgrades={counterpart.loadoutUpgrades}
-      zoomUpgradeHandlers={zoomUpgradeHandlers}
-      swapUpgradeHandlers={swapUpgradeHandlers}
-      addUpgradeHandlers={addUpgradeHandlers}
-      deleteUpgradeHandlers={deleteUpgradeHandlers}
-      changeLoadoutHandlers={changeLoadoutHandlers}
-      deleteLoadoutHandlers={deleteLoadoutHandlers}
-    />
-  );
-  const leftCell = [avatar];
-  const middleCell = [name, upgrades];
-  const rightCell = [points, actions];
   return (
     <div className={classes.unitRow}>
       <div className={classes.leftCell}>
-        {leftCell}
+        <UnitAvatar
+            key="avatar"
+            id={counterpartId}
+            handleClick={handleCardZoom}
+        />      
       </div>
       <div className={classes.middleCell}>
-        {middleCell}
+        <CardName key="name" id={counterpartId} />      
+        <UnitUpgrades
+          key="upgrades"
+          upgradesEquipped={counterpart.upgradesEquipped}
+          totalUpgradeBar={counterpartCard.upgradeBar}
+          loadoutUpgrades={counterpart.loadoutUpgrades}
+          zoomUpgradeHandlers={zoomUpgradeHandlers}
+          swapUpgradeHandlers={swapUpgradeHandlers}
+          addUpgradeHandlers={addUpgradeHandlers}
+          deleteUpgradeHandlers={deleteUpgradeHandlers}
+          changeLoadoutHandlers={changeLoadoutHandlers}
+          deleteLoadoutHandlers={deleteLoadoutHandlers}
+        />
       </div>
       <div className={classes.rightCell}>
-        {rightCell}
+        <UnitPoints key="points" unit={counterpart} parentheses={true}/>
+        <UnitActions unit={counterpart} unitIndex={unitIndex} isCounterpart={true}/>
       </div>
     </div>
   );

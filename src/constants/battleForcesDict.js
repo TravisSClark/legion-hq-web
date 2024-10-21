@@ -196,8 +196,6 @@ const battleForcesDict = {
       rules:{},
       ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_501st.pdf',
       'standard mode': {
-        // commOp: 2,
-
         commander: [1, 2],
         operative: [0, 0],
         corps: [1, 4],
