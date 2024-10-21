@@ -37,7 +37,6 @@ function CounterpartUnit({
   counterpartCard,
   unitIndex,
   handleCardZoom,
-  handleRemoveCounterpart,
   zoomUpgradeHandlers,
   swapUpgradeHandlers,
   addUpgradeHandlers,

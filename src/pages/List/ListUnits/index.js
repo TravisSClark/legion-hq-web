@@ -23,7 +23,6 @@ function ListUnits() {
     const hasLoadout = loadoutUpgrades ? loadoutUpgrades.length > 0 : false;
     let counterpartUnit;
     let addCounterpartHandler;
-    let removeCounterpartHandler;
     const addUpgradeHandlers = [];
     const zoomUpgradeHandlers = [];
     const swapUpgradeHandlers = [];
@@ -31,93 +30,93 @@ function ListUnits() {
     const changeLoadoutHandlers = [];
     const deleteLoadoutHandlers = [];
     const totalUpgradeBar = [...unitCard.upgradeBar, ...unit.additionalUpgradeSlots];
-    if (counterpartId === 'tn' && currentList.faction === 'empire') {
-      addCounterpartHandler = undefined;
-    } else if (counterpartId && unit.unitId === 'tj' && currentList.uniques.includes('tp') && !currentList.uniques.includes(counterpartId)) {
-      addCounterpartHandler = () => setCardPaneFilter({
-        action: 'COUNTERPART', unitIndex, counterpartId
-      });
-    } else if (counterpartId && !currentList.uniques.includes(counterpartId)) {
-      if (unit.unitId !== 'tj') {
-        addCounterpartHandler = () => setCardPaneFilter({
-          action: 'COUNTERPART', unitIndex, counterpartId
-        });
-      }
-    } else if (counterpartId && currentList.uniques.includes(counterpartId) && unit.counterpart) {
-      const cAddUpgradeHandlers = [];
-      const cSwapUpgradeHandlers = [];
-      const cZoomUpgradeHandlers = [];
-      const cDeleteUpgradeHandlers = [];
-      const cChangeLoadoutHandlers = [];
-      const cDeleteLoadoutHandlers = [];
-      const counterpart = unit.counterpart;
-      const cLoadoutUpgrades = counterpart.loadoutUpgrades;
-      removeCounterpartHandler = () => handleRemoveCounterpart(unitIndex);
-      counterpart.upgradesEquipped.forEach((upgradeId, upgradeIndex) => {
-        const upgradeType = counterpartCard.upgradeBar[upgradeIndex];
-        if (upgradeId) {
-          cZoomUpgradeHandlers.push(() => handleCardZoom(upgradeId));
-          cSwapUpgradeHandlers.push(() => setCardPaneFilter({
-            action: 'COUNTERPART_UPGRADE',
-            upgradeType, unitIndex, upgradeIndex, counterpartId,
-            upgradesEquipped: counterpart.upgradesEquipped,
-            additionalUpgradeSlots: []
-          }));
-          cAddUpgradeHandlers.push(undefined);
-          cDeleteUpgradeHandlers.push(() => handleUnequipUpgrade(
-            'COUNTERPART_UPGRADE', unitIndex, upgradeIndex
-          ));
-          if (hasLoadout && Boolean(cLoadoutUpgrades[upgradeIndex])) {
-            cChangeLoadoutHandlers.push(() => setCardPaneFilter({
-              action: 'COUNTERPART_LOADOUT_UPGRADE',
-              upgradeType, unitIndex, upgradeIndex, counterpartId,
-              upgradesEquipped: counterpart.upgradesEquipped,
-              additionalUpgradeSlots: []
-            }));
-            cDeleteLoadoutHandlers.push(() => handleUnequipUpgrade(
-              'COUNTERPART_LOADOUT_UPGRADE', unitIndex, upgradeIndex
-            ));
-          } else if (hasLoadout && !cLoadoutUpgrades[upgradeIndex]) {
-            cChangeLoadoutHandlers.push(() => setCardPaneFilter({
-              action: 'COUNTERPART_LOADOUT_UPGRADE',
-              upgradeType, unitIndex, upgradeIndex, counterpartId,
-              upgradesEquipped: counterpart.upgradesEquipped,
-              additionalUpgradeSlots: []
-            }));
-            cDeleteLoadoutHandlers.push(undefined)
-          }
-        } else {
-          cZoomUpgradeHandlers.push(undefined);
-          cSwapUpgradeHandlers.push(undefined);
-          cAddUpgradeHandlers.push(() => setCardPaneFilter({
-            action: 'COUNTERPART_UPGRADE',
-            upgradeType, unitIndex, upgradeIndex, counterpartId,
-            upgradesEquipped: counterpart.upgradesEquipped,
-            additionalUpgradeSlots: []
-          }));
-          cDeleteUpgradeHandlers.push(undefined);
-          if (hasLoadout) {
-            cChangeLoadoutHandlers.push(undefined);
-            cDeleteLoadoutHandlers.push(undefined);
-          }
+    
+    if(counterpartId){
+      // Show counterpart add icon(s) if unit has one and not already in list
+      if (!currentList.uniques.includes(counterpartId)){
+        // general case (not IG-11) & Special case for IG-11 (tj) + 'Nanny Programming' (tp)
+        if(unit.unitId != 'tj' || unit.unitId == 'tj' && currentList.uniques.includes('tp')){
+          addCounterpartHandler = () => setCardPaneFilter({
+            action: 'COUNTERPART', unitIndex, counterpartId
+          });
         }
-      });
-      counterpartUnit = (
-        <CounterpartUnit
-          counterpart={unit.counterpart}
-          counterpartId={counterpartId}
-          counterpartCard={counterpartCard}
-          unitIndex={unitIndex}
-          handleCardZoom={() => handleCardZoom(counterpartId)}
-          handleRemoveCounterpart={removeCounterpartHandler}
-          zoomUpgradeHandlers={cZoomUpgradeHandlers}
-          swapUpgradeHandlers={cSwapUpgradeHandlers}
-          addUpgradeHandlers={cAddUpgradeHandlers}
-          deleteUpgradeHandlers={cDeleteUpgradeHandlers}
-          changeLoadoutHandlers={cChangeLoadoutHandlers}
-          deleteLoadoutHandlers={cDeleteLoadoutHandlers}
-        />
-      );
+      }
+      // else, if list has the counterpart added, render the counterpart row + upgrades (if applicable)
+      else if (unit.counterpart) {
+        const cAddUpgradeHandlers = [];
+        const cSwapUpgradeHandlers = [];
+        const cZoomUpgradeHandlers = [];
+        const cDeleteUpgradeHandlers = [];
+        const cChangeLoadoutHandlers = [];
+        const cDeleteLoadoutHandlers = [];
+        const counterpart = unit.counterpart;
+        const cLoadoutUpgrades = counterpart.loadoutUpgrades;
+        // TODO - a lot of this can and should be pushed down to endpoint components via context
+        counterpart.upgradesEquipped.forEach((upgradeId, upgradeIndex) => {
+          const upgradeType = counterpartCard.upgradeBar[upgradeIndex];
+          if (upgradeId) {
+            cZoomUpgradeHandlers.push(() => handleCardZoom(upgradeId));
+            cSwapUpgradeHandlers.push(() => setCardPaneFilter({
+              action: 'COUNTERPART_UPGRADE',
+              upgradeType, unitIndex, upgradeIndex, counterpartId,
+              upgradesEquipped: counterpart.upgradesEquipped,
+              additionalUpgradeSlots: []
+            }));
+            cAddUpgradeHandlers.push(undefined);
+            cDeleteUpgradeHandlers.push(() => handleUnequipUpgrade(
+              'COUNTERPART_UPGRADE', unitIndex, upgradeIndex
+            ));
+            if (hasLoadout && Boolean(cLoadoutUpgrades[upgradeIndex])) {
+              cChangeLoadoutHandlers.push(() => setCardPaneFilter({
+                action: 'COUNTERPART_LOADOUT_UPGRADE',
+                upgradeType, unitIndex, upgradeIndex, counterpartId,
+                upgradesEquipped: counterpart.upgradesEquipped,
+                additionalUpgradeSlots: []
+              }));
+              cDeleteLoadoutHandlers.push(() => handleUnequipUpgrade(
+                'COUNTERPART_LOADOUT_UPGRADE', unitIndex, upgradeIndex
+              ));
+            } else if (hasLoadout && !cLoadoutUpgrades[upgradeIndex]) {
+              cChangeLoadoutHandlers.push(() => setCardPaneFilter({
+                action: 'COUNTERPART_LOADOUT_UPGRADE',
+                upgradeType, unitIndex, upgradeIndex, counterpartId,
+                upgradesEquipped: counterpart.upgradesEquipped,
+                additionalUpgradeSlots: []
+              }));
+              cDeleteLoadoutHandlers.push(undefined)
+            }
+          } else {
+            cZoomUpgradeHandlers.push(undefined);
+            cSwapUpgradeHandlers.push(undefined);
+            cAddUpgradeHandlers.push(() => setCardPaneFilter({
+              action: 'COUNTERPART_UPGRADE',
+              upgradeType, unitIndex, upgradeIndex, counterpartId,
+              upgradesEquipped: counterpart.upgradesEquipped,
+              additionalUpgradeSlots: []
+            }));
+            cDeleteUpgradeHandlers.push(undefined);
+            if (hasLoadout) {
+              cChangeLoadoutHandlers.push(undefined);
+              cDeleteLoadoutHandlers.push(undefined);
+            }
+          }
+        });
+        counterpartUnit = (
+          <CounterpartUnit
+            counterpart={unit.counterpart}
+            counterpartId={counterpartId}
+            counterpartCard={counterpartCard}
+            unitIndex={unitIndex}
+            handleCardZoom={() => handleCardZoom(counterpartId)}
+            zoomUpgradeHandlers={cZoomUpgradeHandlers}
+            swapUpgradeHandlers={cSwapUpgradeHandlers}
+            addUpgradeHandlers={cAddUpgradeHandlers}
+            deleteUpgradeHandlers={cDeleteUpgradeHandlers}
+            changeLoadoutHandlers={cChangeLoadoutHandlers}
+            deleteLoadoutHandlers={cDeleteLoadoutHandlers}
+          />
+        );
+      }
     }
 
     unit.upgradesEquipped.forEach((upgradeId, upgradeIndex) => {
@@ -187,7 +186,6 @@ function ListUnits() {
           counterpartUnit={counterpartUnit}
           handleCardZoom={() => handleCardZoom(unit.unitId)}
           addCounterpartHandler={addCounterpartHandler}
-          removeCounterpartHandler={removeCounterpartHandler}
           zoomUpgradeHandlers={zoomUpgradeHandlers}
           swapUpgradeHandlers={swapUpgradeHandlers}
           addUpgradeHandlers={addUpgradeHandlers}

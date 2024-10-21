@@ -41,7 +41,6 @@ function ListUnit({
   counterpartUnit,
   handleCardZoom,
   addCounterpartHandler,
-  removeCounterpartHandler,
   zoomUpgradeHandlers,
   swapUpgradeHandlers,
   addUpgradeHandlers,
@@ -60,7 +59,6 @@ function ListUnit({
       totalUpgradeBar={[...unitCard.upgradeBar, ...unit.additionalUpgradeSlots]}
       loadoutUpgrades={unit.loadoutUpgrades}
       addCounterpartHandler={addCounterpartHandler}
-      removeCounterpartHandler={removeCounterpartHandler}
       swapUpgradeHandlers={swapUpgradeHandlers}
       zoomUpgradeHandlers={zoomUpgradeHandlers}
       addUpgradeHandlers={addUpgradeHandlers}
