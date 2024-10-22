@@ -39,6 +39,7 @@ function ListUnits() {
               unitIndex,
               unitCard: counterpartCard,
               totalUpgradeBar:[...counterpartCard.upgradeBar, ...unit.counterpart.additionalUpgradeSlots],
+              // TODO: this is not *great*; relies on card funcs following "COUNTERPART_UPGRADE" et al to work
               actionPrefix:"COUNTERPART"
             }}
           >
@@ -57,6 +58,7 @@ function ListUnits() {
             unitIndex,
             unitCard,
             totalUpgradeBar:[...unitCard.upgradeBar, ...unit.additionalUpgradeSlots],
+            // TODO: this is not *great*; relies on card funcs following "UNIT_UPGRADE" et al to work
             actionPrefix:"UNIT"
           }}
         >

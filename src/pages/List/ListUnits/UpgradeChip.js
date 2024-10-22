@@ -13,8 +13,7 @@ function UpgradeLabel({ card, handleSwapUpgrade, handleChangeLoadout }) {
   const {unit} = useContext(UnitContext);
 
   const hasLoadout = unit.loadoutUpgrades ? unit.loadoutUpgrades.length > 0 : false;
-  // console.log('hasloadout: ' + hasLoadout + " "+ JSON.stringify(unit.loadoutUpgrades));
-
+  
   if (handleChangeLoadout) {
     return (
       <div style={{ display: 'flex', alignItems: 'center' }}>

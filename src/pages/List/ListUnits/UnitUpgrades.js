@@ -17,7 +17,6 @@ function UnitUpgrades({
   const hasLoadout = unit.loadoutUpgrades ? unit.loadoutUpgrades.length > 0 : false;
 
   const {setCardPaneFilter, handleCardZoom} = useContext(ListContext);
-  console.log("TODO REMOVE" + unitCard.cardName);
 
   if (addCounterpartHandler) {
     addCounterpartButtons.push(
@@ -43,9 +42,6 @@ function UnitUpgrades({
         />
       );
     } else {
-
-      console.log("TODO REMOVE " + actionPrefix + "_UPGRADE");
-
       addUpgradesButtons.push(
         <AddUpgradeButton
           key={`${totalUpgradeBar[upgradeIndex]}_${upgradeIndex}`}
