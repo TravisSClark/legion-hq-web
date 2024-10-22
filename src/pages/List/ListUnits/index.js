@@ -16,7 +16,6 @@ function ListUnits() {
   const items = currentList.units.map((unit, unitIndex) => {
     const unitCard = cards[unit.unitId];
     const { counterpartId } = unitCard;
-    const counterpartCard = cards[counterpartId];
     let counterpartUnit = null;
     let addCounterpartHandler;
     
@@ -30,8 +29,10 @@ function ListUnits() {
           });
         }
       }
-      // else, if unit has counterpart equipped, render it + upgrades + handlers (if applicable)
+      // else, if unit has counterpart equipped, render it
       else if (unit.counterpart) {
+        const counterpartCard = cards[counterpartId];
+
         counterpartUnit = (
           <UnitContext.Provider 
             value={{
@@ -41,8 +42,7 @@ function ListUnits() {
               totalUpgradeBar:[...counterpartCard.upgradeBar, ...unit.counterpart.additionalUpgradeSlots],
               // TODO: this is not *great*; relies on card funcs following "COUNTERPART_UPGRADE" et al to work
               actionPrefix:"COUNTERPART"
-            }}
-          >
+          }}>
             <CounterpartUnit/>
           </UnitContext.Provider>
         );
@@ -60,8 +60,7 @@ function ListUnits() {
             totalUpgradeBar:[...unitCard.upgradeBar, ...unit.additionalUpgradeSlots],
             // TODO: this is not *great*; relies on card funcs following "UNIT_UPGRADE" et al to work
             actionPrefix:"UNIT"
-          }}
-        >
+        }}>
           <ListUnit
             counterpartUnit={counterpartUnit}
             addCounterpartHandler={addCounterpartHandler}
