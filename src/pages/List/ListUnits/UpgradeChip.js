@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Divider, Chip, Button, IconButton, Icon, Typography } from '@material-ui/core';
 import { Clear as ClearIcon } from '@material-ui/icons';
 import CardIcon from 'common/CardIcon';
 import cards from 'constants/cards';
 import loadoutIcon from 'assets/loadout.png';
+import ListContext from 'context/ListContext';
+import UnitContext from 'context/UnitContext';
 
 function UpgradeLabel({ card, handleSwapUpgrade, handleChangeLoadout }) {
+
+
+  const {unit} = useContext(UnitContext);
+
+  const hasLoadout = unit.loadoutUpgrades ? unit.loadoutUpgrades.length > 0 : false;
+  // console.log('hasloadout: ' + hasLoadout + " "+ JSON.stringify(unit.loadoutUpgrades));
+
   if (handleChangeLoadout) {
     return (
       <div style={{ display: 'flex', alignItems: 'center' }}>
@@ -14,7 +23,7 @@ function UpgradeLabel({ card, handleSwapUpgrade, handleChangeLoadout }) {
             card.displayName :
             card.cardName} (${card.cost})`}
         </Typography>
-        {Boolean(handleChangeLoadout) && (
+        {hasLoadout && (
           <IconButton
             size="small"
             onClick={handleChangeLoadout}
@@ -46,7 +55,7 @@ function UpgradeLabel({ card, handleSwapUpgrade, handleChangeLoadout }) {
             card.cardName} (${card.cost})`}
         </Typography>
       </Button>
-      {Boolean(handleChangeLoadout) && (
+      {hasLoadout && (
         <IconButton
           size="small"
           onClick={handleChangeLoadout}
@@ -109,37 +118,66 @@ function UpgradeChip({
   upgradeId,
   loadoutId,
   handleClick,
-  handleSwap,
-  handleDelete,
-  handleChangeLoadout,
-  handleDeleteLoadout
+  upgradeIndex
 }) {
   const upgradeCard = cards[upgradeId];
   const loadoutCard = cards[loadoutId];
+
+  const {handleUnequipUpgrade, setCardPaneFilter} = useContext(ListContext);
+
+  const {unitCard, unitIndex, unit, totalUpgradeBar, actionPrefix } = useContext(UnitContext);
+
+  const upgradeType = totalUpgradeBar[upgradeIndex];
+
   let pointDelta = 0;
   if (upgradeInteractions && upgradeId in upgradeInteractions) {
     pointDelta = upgradeInteractions[upgradeId];
   }
+  const hasLoadout = unit.loadoutUpgrades.length > 0;
+
   return (
     <Chip
       size={chipSize}
-      label={loadoutCard ? (
+      label={(hasLoadout && loadoutCard) ? (
         <LoadoutLabel
           upgradeCard={{ ...upgradeCard, cost: upgradeCard.cost + pointDelta }}
           loadoutCard={loadoutCard}
-          handleChangeLoadout={handleChangeLoadout}
-          handleDeleteLoadout={handleDeleteLoadout}
+          handleChangeLoadout={() => setCardPaneFilter({
+            action: actionPrefix+'_LOADOUT_UPGRADE',
+            upgradeType, unitIndex, upgradeIndex,
+            unitId: unitCard.id,
+            upgradesEquipped: unit.upgradesEquipped,
+            additionalUpgradeSlots: unit.additionalUpgradeSlots
+          })}
+          handleDeleteLoadout={() => handleUnequipUpgrade(
+            actionPrefix+'_LOADOUT_UPGRADE', unitIndex, upgradeIndex
+          )}
         />
       ) : (
         <UpgradeLabel
           card={{ ...upgradeCard, cost: upgradeCard.cost + pointDelta }}
-          handleSwapUpgrade={handleSwap}
-          handleChangeLoadout={handleChangeLoadout}
+          handleSwapUpgrade={() => setCardPaneFilter({
+            action: actionPrefix+'_UPGRADE',
+            upgradeType, unitIndex, upgradeIndex,
+            hasUniques: unit.hasUniques,
+            unitId: unitCard.id,
+            upgradesEquipped: unit.upgradesEquipped,
+            additionalUpgradeSlots: unit.additionalUpgradeSlots
+          })}
+          handleChangeLoadout={() => setCardPaneFilter({
+            action: actionPrefix+'_LOADOUT_UPGRADE',
+            upgradeType, unitIndex, upgradeIndex,
+            unitId: unitCard.id,
+            upgradesEquipped: unit.upgradesEquipped,
+            additionalUpgradeSlots: unit.additionalUpgradeSlots
+          })}
         />
       )}
       avatar={<UpgradeAvatar card={upgradeCard} handleClick={handleClick} />}
       style={{ marginRight: 4, marginTop: 4, marginBottom: 6, height: 'auto' }}
-      onDelete={handleDelete}
+      onDelete={ () => handleUnequipUpgrade(
+        actionPrefix+'_UPGRADE', unitIndex, upgradeIndex
+      )}
     />
   );
 };
