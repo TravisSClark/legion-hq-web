@@ -1541,7 +1541,7 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
     }
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
-  } else if (action === 'LOADOUT_UPGRADE') {
+  } else if (action === 'UNIT_LOADOUT_UPGRADE') {
     list = equipLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   } else if (action === 'COUNTERPART_LOADOUT_UPGRADE') {
     list = equipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
@@ -1585,7 +1585,7 @@ function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
     list = unequip(list, unitIndex, upgradeIndex);
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = unequipCounterpartUpgrade(list, unitIndex, upgradeIndex);
-  } else if (action === 'LOADOUT_UPGRADE') {
+  } else if (action === 'UNIT_LOADOUT_UPGRADE') {
     list = unequipLoadoutUpgrade(list, unitIndex, upgradeIndex);
   } else if (action === 'COUNTERPART_LOADOUT_UPGRADE') {
     list = unequipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex);

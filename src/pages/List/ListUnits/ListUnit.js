@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import UnitAvatar from 'common/UnitAvatar';
 import CardName from 'common/CardName';
@@ -6,6 +6,8 @@ import UnitPoints from 'common/UnitPoints';
 import UnitActions from './UnitActions';
 import UnitUpgrades from './UnitUpgrades';
 import UnitFlaw from './UnitFlaw';
+import UnitContext from 'context/UnitContext';
+import ListContext from 'context/ListContext';
 
 const useStyles = makeStyles(theme => ({
   unitRow: {
@@ -33,38 +35,19 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function ListUnit({
-  unit,
-  uniques,
-  unitCard,
-  unitIndex,
-  counterpartId,
   counterpartUnit,
-  handleCardZoom,
   addCounterpartHandler,
-  zoomUpgradeHandlers,
-  swapUpgradeHandlers,
-  addUpgradeHandlers,
-  deleteUpgradeHandlers,
-  changeLoadoutHandlers,
-  deleteLoadoutHandlers
 }) {
   const classes = useStyles();
+
+  const {unit, unitIndex, unitCard} = useContext(UnitContext);
+  const {handleCardZoom} = useContext(ListContext);
 
   const upgrades = (
     <UnitUpgrades
       key="upgrades"
-      counterpartId={counterpartId}
-      upgradesEquipped={unit.upgradesEquipped}
-      upgradeInteractions={unit.upgradeInteractions}
-      totalUpgradeBar={[...unitCard.upgradeBar, ...unit.additionalUpgradeSlots]}
-      loadoutUpgrades={unit.loadoutUpgrades}
+      counterpartId={unitCard.counterpartId}
       addCounterpartHandler={addCounterpartHandler}
-      swapUpgradeHandlers={swapUpgradeHandlers}
-      zoomUpgradeHandlers={zoomUpgradeHandlers}
-      addUpgradeHandlers={addUpgradeHandlers}
-      deleteUpgradeHandlers={deleteUpgradeHandlers}
-      changeLoadoutHandlers={changeLoadoutHandlers}
-      deleteLoadoutHandlers={deleteLoadoutHandlers}
     />
   );
   const flaws = unitCard.flaw ? <UnitFlaw key="flaws" flawId={unitCard.flaw} /> : undefined;
@@ -77,7 +60,7 @@ function ListUnit({
             key="avatar"
             id={unitCard.id}
             count={unit.count}
-            handleClick={handleCardZoom}
+            handleClick={() => handleCardZoom(unit.unitId)}
           />
         </div>
         <div className={classes.middleCell}>

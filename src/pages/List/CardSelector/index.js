@@ -93,7 +93,7 @@ function CardSelector() {
       const upgradeIds = getEquippableUpgrades(
       currentList,
       cardPaneFilter.upgradeType,
-      cardPaneFilter.counterpartId,
+      cardPaneFilter.unitId,
       cardPaneFilter.upgradesEquipped,
       cardPaneFilter.additionalUpgradeSlots
     );
@@ -106,7 +106,7 @@ function CardSelector() {
       upgradeId
     );
     header = <Title title="Add counterpart upgrade" />;
-  } else if (action === 'LOADOUT_UPGRADE') {
+  } else if (action === 'UNIT_LOADOUT_UPGRADE') {
     const upgradeIds = getEquippableLoadoutUpgrades(
       currentList,
       cardPaneFilter.upgradeType,
@@ -118,7 +118,7 @@ function CardSelector() {
     validIds = upgradeIds.validIds;
     invalidIds = upgradeIds.invalidIds;
     clickHandler = (upgradeId) => handleEquipUpgrade(
-      'LOADOUT_UPGRADE',
+      'UNIT_LOADOUT_UPGRADE',
       cardPaneFilter.unitIndex,
       cardPaneFilter.upgradeIndex,
       upgradeId
@@ -127,7 +127,7 @@ function CardSelector() {
   } else if (action === 'COUNTERPART_LOADOUT_UPGRADE') {
     const {
       upgradeType,
-      counterpartId,
+      unitId,
       upgradeIndex,
       upgradesEquipped,
       additionalUpgradeSlots
@@ -135,7 +135,7 @@ function CardSelector() {
     const upgradeIds = getEquippableLoadoutUpgrades(
       currentList,
       upgradeType,
-      counterpartId,
+      unitId,
       upgradeIndex,
       upgradesEquipped,
       additionalUpgradeSlots
