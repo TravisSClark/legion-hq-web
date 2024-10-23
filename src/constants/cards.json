@@ -4261,7 +4261,8 @@
         "keywords": [
             "Armor",
             "Arsenal",
-            "Hover",
+            "Hover: Ground",
+            "Strafe",
             "Outmaneuver",
             "Weak Point",
             "Critical",
@@ -4310,7 +4311,8 @@
             "Armor",
             "Arsenal",
             "Barrage",
-            "Hover",
+            "Hover: Ground",
+            "Strafe",
             "Weak Point",
             "Fixed",
             "Critical",
@@ -8647,7 +8649,8 @@
         "keywords": [
             "Detachment",
             "Observe",
-            "Hover",
+            "Hover: Air",
+            "Strafe",
             "Incognito",
             "Suppressive"
         ],
@@ -9251,6 +9254,7 @@
         "keywords": [
             "Armor",
             "Hover: Ground",
+            "Strafe",
             "Reposition",
             "Transport",
             "Weak Point"
@@ -9292,6 +9296,7 @@
             "Arsenal",
             "Cover",
             "Hover: Air",
+            "Strafe",
             "Immune",
             "Transport",
             "Impact",
@@ -9336,6 +9341,7 @@
             "Arsenal",
             "Cover",
             "Hover: Air",
+            "Strafe",
             "Immune",
             "Transport",
             "Fixed",
@@ -10617,7 +10623,8 @@
         "keywords": [
             "Armor",
             "Cover",
-            "Hover",
+            "Hover: Ground",
+            "Strafe",
             "Weak Point"
         ],
         "upgradeBar": [
@@ -11621,6 +11628,7 @@
         "keywords": [
             "Armor",
             "Hover: Ground",
+            "Strafe",
             "Reposition",
             "Transport",
             "Weak Point"
