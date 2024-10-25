@@ -1,12 +1,12 @@
 const keywords = {
 
 	/**
-	 * TODO, finish current pass of keyword updates, then re-do this schema to make things a little nicer:
+	 * TODO, finish current pass of keyword updates, consider expanding schema to make things a little nicer:
 	 * 
 	 * {
 	 * 	"Keyword Name":{
 	 * 		"text":"...",
-	 * 		"summary"?:".."
+	 * 		"summary"?:".." // allow expanding to full text for things like, idk, Loadout and Guardian
 	 * 		"keywords?:"e.g. Ion.keywords=["Ion Token"]
 	 * 	}
 	 * }

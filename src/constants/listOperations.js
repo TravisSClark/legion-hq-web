@@ -1098,11 +1098,11 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
  * @returns 
  */
 function checkRequirement(unitCard, requirement){
-  // TODO - more perfect-fitting here; get this all more generalized, KISS for now
+    // TODO - more perfect-fitting here; get this all more generalized, KISS for now
   let reqFields = Object.getOwnPropertyNames(requirement);
   if(reqFields.length === 1){
     if(Array.isArray(requirement[reqFields[0]])){
-      return _.difference(requirement[reqFields[0]], unitCard[reqFields[0]]) === 0
+      return _.difference(requirement[reqFields[0]], unitCard[reqFields[0]]).length === 0
     }
   }
   return _.isMatch(unitCard, requirement);
@@ -1112,41 +1112,32 @@ function checkRequirement(unitCard, requirement){
  * most functions here only work for 1 or 2 elements; would be cool to extend this a bit for futureproofing
  */
 function isRequirementsMet(requirements, unitCard) {
-  if (requirements instanceof Array) {
-    const operator = requirements[0];
-    if (operator instanceof Object) {
-      if(operator)
-        // requirements: [{cardName: 'Whatever'}]
-        return checkRequirement(unitCard, operator);
-    } else if (operator === 'NOT') {
-        return !_.isMatch(unitCard, requirements[1]);
-    } else if (operator === 'AND' || operator === 'OR') {
-      let leftOperand = requirements[1];
-      let rightOperand = requirements[2];
-      if (leftOperand instanceof Array) {
-        leftOperand = isRequirementsMet(leftOperand, unitCard);
-      } else if (leftOperand instanceof Object) {
-        leftOperand = _.isMatch(unitCard, leftOperand);
-      }
-      if (rightOperand instanceof Array) {
-        rightOperand = isRequirementsMet(rightOperand, unitCard);
-      } else if (rightOperand instanceof Object) {
-        rightOperand = _.isMatch(unitCard, rightOperand);
-      }
-      if (operator === 'OR') {
-        // requirements: ['OR', {cardName: 'Whatever'}, {cardType: 'Whatever'}]
-        return leftOperand || rightOperand
-      } else { // operator === 'AND'
-        // requirements: ['AND', {cardName: 'Whatever'}, {cardType: 'Whatever'}]
-        return leftOperand && rightOperand;
-      }
-    } else {
-      // Empty array of requirements
-      return true;
+  const operator = requirements[0];
+  if (operator instanceof Object) {
+      return checkRequirement(unitCard, operator);
+  } else if (operator === 'NOT') {
+      return !_.isMatch(unitCard, requirements[1]);
+  } else if (operator === 'AND' || operator === 'OR') {
+    let leftOperand = requirements[1];
+    let rightOperand = requirements[2];
+    if (leftOperand instanceof Array) {
+      leftOperand = isRequirementsMet(leftOperand, unitCard);
+    } else if (leftOperand instanceof Object) {
+      leftOperand = _.isMatch(unitCard, leftOperand);
+    }
+    if (rightOperand instanceof Array) {
+      rightOperand = isRequirementsMet(rightOperand, unitCard);
+    } else if (rightOperand instanceof Object) {
+      rightOperand = _.isMatch(unitCard, rightOperand);
+    }
+    if (operator === 'OR') {
+      return leftOperand || rightOperand
+    } else { // operator === 'AND'
+      return leftOperand && rightOperand;
     }
   } else {
-    // requirements: {cardName: 'Whatever'}
-    return _.isMatch(unitCard, requirements);
+    // Empty array of requirements
+    return true;
   }
 }
 
@@ -1377,6 +1368,7 @@ function getEligibleCommandsToAdd(list) {
   };
 }
 
+// TODO: wtf is additionalUpgradeSlots showing up unused?
 function getEquippableUpgrades(
   list, upgradeType, unitId, upgradesEquipped, additionalUpgradeSlots
 ) {
@@ -1390,23 +1382,21 @@ function getEquippableUpgrades(
   for (let i = 0; i < cardIdsByType['upgrade'].length; i++) {
     const id = cardIdsByType['upgrade'][i];
     const card = cards[id];
-    if (id === 'nc') continue; // duplicate card
 
-    // if (card.cardType !== 'upgrade') continue;
     if (card.cardSubtype !== upgradeType) continue;
     if (card.faction && card.faction !== '' && list.faction !== card.faction) continue;
     if (list.uniques.includes(id)) continue;
     if (upgradesEquipped.includes(id)) continue;
     if (card.isUnique && list.battleForce && !battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id)) continue;
-    if (id === 'nc') continue; // duplicate card
 
     // dynamically add the force affinity
     const { faction } = unitCard;
 
     // TODO - not a big fan of modifying unitCard data - leads to unexpected stickiness esp with old points
-
+    // TODO - this needs to be determined based on faction/BF alone... not this
     unitCard['light side'] = unitCard['dark side'] = false;
     if (faction === 'rebels' || faction === 'republic') unitCard['light side'] = true;
+    // TODO this line breaks stuff if we get a light-side merc bf
     else if (faction === 'separatists' || faction === 'empire' || faction === 'mercenary') unitCard['dark side'] = true;
 
     if (unitCard.keywords.includes('Tempted') && list.isUsingOldPoints) {

@@ -8515,25 +8515,6 @@
             }
         ]
     },
-    "nc": {
-        "id": "nc",
-        "displayName": "Defensive/Offensive Stance",
-        "cardSubtype": "training",
-        "cardName": "Defensive Stance",
-        "isUnique": false,
-        "cardType": "upgrade",
-        "cost": 5,
-        "imageName": "Offensive defensive stance.webp",
-        "keywords": [
-            "Reconfigure"
-        ],
-        "isDoubleSided": true,
-        "requirements": [
-            {
-                "upgradeBar":["force"]
-            }
-        ]
-    },
     "nd": {
         "id": "nd",
         "displayName": "",
