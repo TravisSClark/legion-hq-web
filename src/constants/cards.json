@@ -778,7 +778,7 @@
     "al": {
         "id": "al",
         "cardName": "Rebel Commandos",
-        "title": "Stike Team",
+        "title": "Strike Team",
         "displayName": "Commando Strike Team",
         "cardType": "unit",
         "cardSubtype": "trooper",
@@ -1484,7 +1484,7 @@
     "bb": {
         "id": "bb",
         "cardName": "Scout Troopers",
-        "title": "Stike Team",
+        "title": "Strike Team",
         "displayName": "Scout Strike Team",
         "cardType": "unit",
         "cardSubtype": "trooper",
@@ -1744,6 +1744,7 @@
         "id": "bh",
         "cardName": "TX-225 GAVw Occupier Tank",
         "displayName": "Gav Tank",
+        "ttsName": "TX-225 GAVw Occupier Combat Assault Tank",
         "cardType": "unit",
         "cardSubtype": "ground vehicle",
         "rank": "heavy",
@@ -2757,7 +2758,7 @@
     "dz": {
         "displayName": "A-180 Config",
         "cardSubtype": "armament",
-        "cardName": "A-180 Configuration",
+        "cardName": "A-180 Rifle Config",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 0,
@@ -2777,7 +2778,7 @@
     "ea": {
         "displayName": "A-300 Config",
         "cardSubtype": "armament",
-        "cardName": "A-300 Configuration",
+        "cardName": "A-300 Long Range Config",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 0,
@@ -3569,7 +3570,7 @@
     "ff": {
         "displayName": "Ground Buzzer",
         "cardSubtype": "hardpoint",
-        "cardName": "Ax-108 Ground Buzzer",
+        "cardName": "Ax-108 \"Ground Buzzer\"",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 10,
@@ -3593,7 +3594,7 @@
     "fg": {
         "displayName": "Power Harpoon",
         "cardSubtype": "hardpoint",
-        "cardName": "MoDk Power Harpoon",
+        "cardName": "MO/DK Power Harpoon",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 0,
@@ -4518,7 +4519,7 @@
     "gn": {
         "displayName": "E-11D Config",
         "cardSubtype": "armament",
-        "cardName": "E-11D Configuration",
+        "cardName": "E-11D Focused Fire Config",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 0,
@@ -5231,7 +5232,7 @@
     "hq": {
         "displayName": "DC-15 Trooper",
         "cardSubtype": "heavy weapon",
-        "cardName": "DC-15 Phase I Trooper",
+        "cardName": "DC-15 Clone Trooper",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 24,
@@ -5631,8 +5632,7 @@
         "detachment": "gv"
     },
     "ig": {
-        "cardName": "CM-O 93 Trooper",
-        "displayName": "CM-0/93 Trooper",
+        "cardName": "CM-0/93 Trooper",
         "cardSubtype": "heavy weapon",
         "isUnique": false,
         "cardType": "upgrade",
@@ -6722,7 +6722,8 @@
     },
     "kh": {
         "cardSubtype": "armament",
-        "cardName": "A280-CFE Config",
+        "displayName": "A280-CFE Config",
+        "cardName": "A280-CFE Sniper Config",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 0,
@@ -6966,7 +6967,7 @@
         "id": "kt",
         "displayName": "\"Bunker Buster\" Shells",
         "cardSubtype": "ordnance",
-        "cardName": "Bunker Buster Shells",
+        "cardName": "\"Bunker Buster\" Shells",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 12,
@@ -7360,7 +7361,7 @@
         "id": "le",
         "displayName": "EMP \"Droid Poppers\"",
         "cardSubtype": "grenades",
-        "cardName": "EMP Droid Poppers",
+        "cardName": "EMP \"Droid Poppers\"",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 3,
@@ -7431,6 +7432,7 @@
         "cardSubtype": "heavy weapon",
         "cardName": "Echo",
         "title": "ARC Marksman",
+        "ttsName": "Echo, ARC Marskman",
         "isUnique": true,
         "cardType": "upgrade",
         "prevCost": 42,
@@ -8753,7 +8755,7 @@
         "id": "np",
         "displayName": "",
         "cardSubtype": "armament",
-        "cardName": "J-19 Bo-rifle Staff",
+        "cardName": "J-19 Bo-rifle Blaster",
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 5,
@@ -9260,7 +9262,7 @@
     },
     "on": {
         "id": "on",
-        "cardName": "LAAT Patrol Transport",
+        "cardName": "LAAT/le Patrol Transport",
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
         "rank": "heavy",
@@ -9306,7 +9308,7 @@
     },
     "oo": {
         "id": "oo",
-        "cardName": "LAAT Patrol Transport",
+        "cardName": "LAAT/le Patrol Transport",
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
         "rank": "heavy",
@@ -9727,6 +9729,7 @@
         "displayName": "",
         "cardSubtype": "heavy weapon",
         "cardName": "Battle Shield Wookiee",
+        "ttsName": "Battle Shield Wookiee (Offensive)",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 26,
@@ -10664,6 +10667,7 @@
         "id": "qu",
         "cardSubtype": "pilot",
         "cardName": "327th Star Corps Pilot",
+        "ttsName":"327th Star Corps Elite Armor Pilots",
         "isUnique": false,
         "cardType": "upgrade",
         "prevCost": 5,
@@ -11257,6 +11261,7 @@
         "cardSubtype": "armament",
         "cardName": "Maul The Darksaber",
         "displayName": "The Darksaber",
+        "ttsName" : "The Darksaber (Maul)",
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 10,
@@ -11738,7 +11743,8 @@
     "sr": {
         "id": "sr",
         "cardName": "Stormtroopers",
-        "displayName": "Stormtroopers Heavy Response Unit",
+        "title" : "Heavy Response Unit",
+        "displayName": "Stormtroopers HRU",
         "cardType": "unit",
         "cardSubtype": "trooper",
         "rank": "corps",
@@ -12605,6 +12611,7 @@
         "cardSubtype": "armament",
         "cardName": "Moff Gideon The Darksaber",
         "displayName": "The Darksaber",
+        "ttsName" : "The Darksaber (Gideon)",
         "isUnique": true,
         "cardType": "upgrade",
         "cost": 15,
@@ -12859,84 +12866,6 @@
 				"description": "Now divulged during resolve setup effects step rather than deploy units step."
 			}
         ]
-    },
-    "uy-to-be-deleted": {
-        "id": "uy",
-        "cardName": "Imperial Death Troopers",
-        "displayName": "Death Troopers",
-        "cardType": "unit",
-        "cardSubtype": "trooper",
-        "rank": "corps",
-        "faction": "empire",
-        "isUnique": false,
-        "cost": 72,
-        "imageName": "Imperial Death Troopers.webp",
-        "keywords": [
-            "Disciplined",
-            "Precise",
-            "Ready"
-        ],
-        "upgradeBar": [
-            "heavy weapon",
-            "training",
-            "comms",
-            "gear",
-            "armament",
-            "grenades"
-        ],
-        "defense": "red",
-        "surges": [
-            "hit",
-            "block"
-        ],
-        "wounds": 1,
-        "courage": 2,
-        "speed": 2,
-        "history": [
-            {
-                "date": "27 October 2021",
-                "description": "Cost reduced from 76 to 72 points."
-            }
-        ],
-        
-        "specialIssue": "Imperial Remnant"
-    },
-    "uz-to-be-deleted": {
-        "id": "uz",
-        "cardName": "Scout Troopers",
-        "cardType": "unit",
-        "cardSubtype": "trooper",
-        "rank": "corps",
-        "faction": "empire",
-        "isUnique": false,
-        "cost": 48,
-        "imageName": "Scout Troopers.webp",
-        "keywords": [
-            "Low Profile",
-            "Scout",
-            "Sharpshooter"
-        ],
-        "upgradeBar": [
-            "heavy weapon",
-            "training",
-            "comms",
-            "gear",
-            "grenades"
-        ],
-        "defense": "white",
-        "surges": [
-            "block"
-        ],
-        "wounds": 1,
-        "courage": 2,
-        "speed": 2,
-        "history": [
-            {
-                "date": "19 November 2020",
-                "description": "Cost reduced from 60 to 48 points."
-            }
-        ],
-        "specialIssue": "Imperial Remnant"
     },
     "va": {
         "id": "va",
@@ -14152,39 +14081,6 @@
         "speed": 2,
         "specialIssue": "Wookiee Defenders"
     },
-    "xg-to-be-deleted": {
-        "id": "xg",
-        "cardName": "Wookiee Warriors",
-        "title": "Noble Fighters",
-        "cardType": "unit",
-        "cardSubtype": "wookiee trooper",
-        "rank": "corps",
-        "faction": "republic",
-        "isUnique": false,
-        "cost": 69,
-        "imageName": "Wookiee Warriors Noble Fighters.webp",
-        "keywords": [
-            "Charge",
-            "Duelist",
-            "Indomitable",
-            "Scale"
-        ],
-        "upgradeBar": [
-            "heavy weapon",
-            "training",
-            "training",
-            "gear",
-            "grenades"
-        ],
-        "defense": "white",
-        "surges": [
-            "hit"
-        ],
-        "wounds": 3,
-        "courage": 2,
-        "speed": 2,
-        "specialIssue": "Wookiee Defenders"
-    },
     "xh": {
         "id": "xh",
         "cardName": "Range Troopers",
@@ -14355,7 +14251,6 @@
 	"xp": {
         "id": "xp",
         "cardName": "Clone Commandos Delta Squad",
-        "title": "Delta Squad",
         "displayName": "Delta Squad",
         "cardType": "unit",
         "cardSubtype": "clone trooper",
@@ -14394,6 +14289,7 @@
 		"id": "xq",
 		"cardSubtype": "heavy weapon",
 		"cardName": "Echo",
+        "ttsName":"Echo (The Bad Batch)",
 		"isUnique": true,
 		"cardType": "upgrade",
 		"cost": 0,
@@ -14406,6 +14302,7 @@
 		"id": "xr",
 		"cardSubtype": "heavy weapon",
 		"cardName": "Hunter",
+        "ttsName":"Hunter (The Bad Batch)",
 		"isUnique": true,
 		"cardType": "upgrade",
 		"cost": 0,
@@ -14496,6 +14393,7 @@
 	"xw": {
 		"cardName": "Omega",
 		"title": "Mascot of the 99th",
+        "ttsName":"Omega",
 		"faction": "mercenary",
 		"affiliations": ["rebels"],
 		"isUnique": true,
