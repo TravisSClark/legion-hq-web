@@ -6222,7 +6222,7 @@
         "counterpartId": "jj"
     },
     "ji": {
-        "cardName": "C-3P0",
+        "cardName": "C-3PO",
         "title": "Human-Cyborg Relations",
         "faction": "rebels",
         "isUnique": true,
@@ -6235,6 +6235,7 @@
             "Distract",
             "Counterpart"
         ],
+        "upgradeBar":[],
         "cardSubtype": "droid trooper",
         "id": "ji"
     },
@@ -6243,7 +6244,7 @@
         "cardSubtype": "droid trooper",
         "faction": "republic",
         "title": "Made to Suffer",
-        "cardName": "C-3P0",
+        "cardName": "C-3PO",
         "isUnique": true,
         "cost": 15,
         "wounds": 2,
@@ -6253,6 +6254,7 @@
             "Distract",
             "Counterpart"
         ],
+        "upgradeBar":[],
         "id": "jj"
     },
     "jl": {

@@ -59,7 +59,7 @@ async function getTtsCards(){
                     name = toKey(name);
 
                     ttsNames.add(name);
-                    ttsUnits.add(ttsUnits);
+                    ttsUnits.add(name);
 
                     if(u.commands){
                         u.commands.forEach(c=>{
@@ -240,7 +240,7 @@ async function ttsCheckAsync(){
         "SURGICAL STRIKE",
         "TANK SHOCK",
 
-        // Idk what these are - stormtide? scenario?
+        // Idk what these are - stormtide? store kit scenario?
         // did not find a way to get them to show w 2min of playing around
         "FORCES CONVERGE (ACT 1)",
         "SECURE THE INTEL (ACT 1)",
@@ -309,7 +309,8 @@ async function ttsCheckAsync(){
     console.log("\n");
 
     console.log("TTS counts: ");
-    console.log(ttsNames.size + " Cards Total");
+    console.log("(sanity check - we'll never match 100% w different cards getting added and removed...)");
+    console.log(ttsOg.size + " Cards Total");
     console.log(ttsUnits.size + " Units");
     console.log(ttsCcs.size + " CCs");
     console.log(ttsUpgrades.size + " Upgrades");
