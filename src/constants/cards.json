@@ -5377,15 +5377,12 @@
         ],
         "requirements": [
             "OR",
-            [
-                "OR",
-                {
-                    "cardSubtype": "ground vehicle"
-                },
-                {
-                    "cardSubtype": "repulsor vehicle"
-                }
-            ],
+            {
+                "cardSubtype": "ground vehicle"
+            },
+            {
+                "cardSubtype": "repulsor vehicle"
+            },
             {
                 "cardSubtype": "emplacement trooper"
             }
@@ -13242,24 +13239,18 @@
         ],
         "requirements": [
             "OR",
-            [
-                "OR",
-                {
-                    "cardName": "Wicket"
-                },
-                {
-                    "cardName": "Logray"
-                }
-            ],
-            [
-                "OR",
-                {
-                    "cardName": "Ewok Skirmishers"
-                },
-                {
-                    "cardName": "Ewok Slingers"
-                }
-            ]
+            {
+                "cardName": "Wicket"
+            },
+            {
+                "cardName": "Logray"
+            },
+            {
+                "cardName": "Ewok Skirmishers"
+            },
+            {
+                "cardName": "Ewok Slingers"
+            }
         ],
         "history": []
     },
@@ -13267,7 +13258,8 @@
         "id": "vq",
         "cardSubtype": "training",
         "cardName": "Call To Arms",
-        "isUnique": false,
+        "isUnique":true,
+        "uniqueCount": 2,
         "cardType": "upgrade",
         "cost": 5,
         "imageName": "Call to Arms.webp",
@@ -13276,24 +13268,18 @@
         ],
         "requirements": [
             "OR",
-            [
-                "OR",
-                {
-                    "cardName": "Wicket"
-                },
-                {
-                    "cardName": "Logray"
-                }
-            ],
-            [
-                "OR",
-                {
-                    "cardName": "Ewok Skirmishers"
-                },
-                {
-                    "cardName": "Ewok Slingers"
-                }
-            ]
+            {
+                "cardName": "Wicket"
+            },
+            {
+                "cardName": "Logray"
+            },
+            {
+                "cardName": "Ewok Skirmishers"
+            },
+            {
+                "cardName": "Ewok Slingers"
+            }
         ],
         "history": []
     },

@@ -44,9 +44,7 @@ function countPoints(list) {
           } else unit.counterpart.totalUnitCost += upgradeCard.cost;
         }
       });
-      // list.pointTotal += unit.counterpart.totalUnitCost;
-      list.uniques.push(unit.counterpart.counterpartId);
-
+     
       unit.totalUnitCost += unit.counterpart.totalUnitCost;
     }
 
@@ -103,6 +101,8 @@ function consolidate(list) {
       list.uniques.push(unitCard.id);
       unit.hasUniques = true;
     }
+    if(unit.counterpart)list.uniques.push(unit.counterpart.counterpartId);
+
     if (unitCard.keywords.includes('Contingencies')) hasContingencyKeyword = true;
     if (unitCard.rank === 'commander' || unitCard.rank === 'operative' || unitCard.isUnique) {
       list.commanders.push(unitCard.cardName);
@@ -114,6 +114,9 @@ function consolidate(list) {
         if (upgradeCard.isUnique) {
           list.uniques.push(upgradeCard.id);
           unit.hasUniques = true;
+        }
+        if(upgradeCard.uniqueCount){
+          list.uniques.push(upgradeCard.id);
         }
         if (upgradeCard.keywords.includes('Field Commander')) {
           list.hasFieldCommander = true;
@@ -1091,51 +1094,64 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
 }
 
 
-/**
- * Added so we can check against upgradeBar
- * @param {*} requirement 
- * @param {*} unitCard 
- * @returns 
- */
-function checkRequirement(unitCard, requirement){
-    // TODO - more perfect-fitting here; get this all more generalized, KISS for now
-  let reqFields = Object.getOwnPropertyNames(requirement);
-  if(reqFields.length === 1){
-    if(Array.isArray(requirement[reqFields[0]])){
-      return _.difference(requirement[reqFields[0]], unitCard[reqFields[0]]).length === 0
-    }
-  }
-  return _.isMatch(unitCard, requirement);
-}
-
-/** TODO grabnar - this could use some TLC; 
- * most functions here only work for 1 or 2 elements; would be cool to extend this a bit for futureproofing
+/** 
+ * Items in the requirements array or subarrays must be one of the following:
+ * 
+ * A SINGLE lodash match object (shortcut so we don't need to lead with AND for a single req or etc)
+ * 
+ * 'NOT' followed by a lodash object to be negated
+ * 'AND' followed by multiple lodash objects and/or more subarrays as && 
+ * 'OR' followed by lodash objects and/or more subarrays as ||
+ * 
+ * ... else return true;
+ * 
+ * e.g. one of the most complicated requirements[] is for Echo, ARC Marksman:
+ * "requirements": [
+            "AND",
+            {
+                "cardSubtype": "clone trooper"
+            },
+            [
+                "OR",
+                {
+                    "rank": "corps"
+                },
+                {
+                    "rank": "special"
+                }
+            ]
+        ],
+ * 
+ * 
  */
 function isRequirementsMet(requirements, unitCard) {
   const operator = requirements[0];
   if (operator instanceof Object) {
-      return checkRequirement(unitCard, operator);
-  } else if (operator === 'NOT') {
-      return !_.isMatch(unitCard, requirements[1]);
-  } else if (operator === 'AND' || operator === 'OR') {
-    let leftOperand = requirements[1];
-    let rightOperand = requirements[2];
-    if (leftOperand instanceof Array) {
-      leftOperand = isRequirementsMet(leftOperand, unitCard);
-    } else if (leftOperand instanceof Object) {
-      leftOperand = _.isMatch(unitCard, leftOperand);
+      return _.isMatch(unitCard, operator);
+  }else if (operator === 'NOT') {
+    return !_.isMatch(unitCard, requirements[1]);
+  }
+  else if(operator == 'AND'){
+    for(let i=1; i< requirements.length; i++){
+      if (requirements[i] instanceof Array && !isRequirementsMet(requirements[i], unitCard)){
+        return false;
+      } else if (requirements[i] instanceof Object && !_.isMatch(unitCard, requirements[i])){
+        return false;
+      }
     }
-    if (rightOperand instanceof Array) {
-      rightOperand = isRequirementsMet(rightOperand, unitCard);
-    } else if (rightOperand instanceof Object) {
-      rightOperand = _.isMatch(unitCard, rightOperand);
+    return true;
+  }
+  else if (operator === 'OR') {
+    for(let i=1; i< requirements.length; i++){
+      if (requirements[i] instanceof Array && isRequirementsMet(requirements[i], unitCard)){
+        return true;
+      } else if (requirements[i] instanceof Object && _.isMatch(unitCard, requirements[i])){
+        return true;
+      }
     }
-    if (operator === 'OR') {
-      return leftOperand || rightOperand
-    } else { // operator === 'AND'
-      return leftOperand && rightOperand;
-    }
-  } else {
+    return false;
+  } 
+  else {
     // Empty array of requirements
     return true;
   }
@@ -1385,7 +1401,12 @@ function getEquippableUpgrades(
 
     if (card.cardSubtype !== upgradeType) continue;
     if (card.faction && card.faction !== '' && list.faction !== card.faction) continue;
-    if (list.uniques.includes(id)) continue;
+
+    let uniqueEntries = list.uniques.filter(i=>i==id);
+    if(card.uniqueCount){  
+      if(uniqueEntries.length >= card.uniqueCount) continue;
+    }
+    else if (list.uniques.includes(id)) continue;
     if (upgradesEquipped.includes(id)) continue;
     if (card.isUnique && list.battleForce && !battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id)) continue;
 
