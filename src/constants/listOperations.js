@@ -498,39 +498,39 @@ function generateTTSJSONText(list) {
 function appendMissionTTSJSON(cardList, ttsArray){
 
   for (let i = 0; i < cardList.length; i++) {
-    if (idToName[cardList[i]]) {
-      ttsArray.push(idToName[cardList[i]]);
-    } else {
+    // if (idToName[cardList[i]]) {
+    //   ttsArray.push(idToName[cardList[i]]);
+    // } else {
       const battlefieldCard = cards[cardList[i]];
       ttsArray.push(battlefieldCard.cardName);
-    }
+    // }
   }
 
 }
   const idToName = {
-    "nc": "Offensive Stance",
-    "dz": "A-180 Config",
-    "ea": "A-300 Config",
-    "kh": "A-280-CFE Config",
-    "gn": "E-11D Config",
-    "np": "J-19 Bo-rifle",
-    "Ci": "Clear Conditions",
-    "Cl": "War Weary",
-    "Dj": "Battle Lines",
-    "ff": "Ax-108 \"Ground Buzzer\"",
-    "fg": "Mo/Dk Power Harpoon",
-    "bh": "TX-225 GAVw Occupier Combat Assault Tank",
-    "on": "LAAT/le Patrol Transport",
-    "oo": "LAAT/le Patrol Transport",
-    "ig": "CM-0/93 Trooper",
-    "kd": "Z-6 Phase II Trooper",
-    "kt": "\"Bunker Buster\" Shells",
-    "le": "EMP \"Droid Poppers\"",
-    "lw": "Iden's ID10 Seeker Droid",
-    "sr": "Stormtroopers Heavy Response Unit",
-    "uj": "The Darksaber (Gideon)",
-    "rq": "The Darksaber (Maul)",
-    "xw": "Echo (The Bad Batch)"
+    // "nc": "Offensive Stance",
+    // "dz": "A-180 Config",
+    // "ea": "A-300 Config",
+    // "kh": "A-280-CFE Config",
+    // "gn": "E-11D Config",
+    // "np": "J-19 Bo-rifle",
+    // "Ci": "Clear Conditions",
+    // "Cl": "War Weary",
+    // "Dj": "Battle Lines",
+    // "ff": "Ax-108 \"Ground Buzzer\"",
+    // "fg": "Mo/Dk Power Harpoon",
+    // "bh": "TX-225 GAVw Occupier Combat Assault Tank",
+    // "on": "LAAT/le Patrol Transport",
+    // "oo": "LAAT/le Patrol Transport",
+    // "ig": "CM-0/93 Trooper",
+    // "kd": "Z-6 Phase II Trooper",
+    // "kt": "\"Bunker Buster\" Shells",
+    // "le": "EMP \"Droid Poppers\"",
+    // "lw": "Iden's ID10 Seeker Droid",
+    // "sr": "Stormtroopers Heavy Response Unit",
+    // "uj": "The Darksaber (Gideon)",
+    // "rq": "The Darksaber (Maul)",
+    // "xw": "Echo (The Bad Batch)"
   };
 
   ttsJSON.listname = list.title;
@@ -568,29 +568,30 @@ function appendMissionTTSJSON(cardList, ttsArray){
     const unit = list.units[i];
     const unitCard = cards[unit.unitId];
 
-    if (idToName[unit.unitId]) unitJSON.name = idToName[unit.unitId];
+    if(unit.ttsName) unitJSON.name = unit.ttsName;
+    // else if (idToName[unit.unitId]) unitJSON.name = idToName[unit.unitId];
     else if (unitCard.title) unitJSON.name = `${unitCard.cardName} ${unitCard.title}`;
     else unitJSON.name = unitCard.cardName;
 
     for (let j = 0; j < unit.upgradesEquipped.length; j++) {
       if (unit.upgradesEquipped[j]) {
-        if (idToName[unit.upgradesEquipped[j]]) {
-          unitJSON.upgrades.push(idToName[unit.upgradesEquipped[j]]);
-        } else {
+        // if (idToName[unit.upgradesEquipped[j]]) {
+        //   unitJSON.upgrades.push(idToName[unit.upgradesEquipped[j]]);
+        // } else {
           const upgradeCard = cards[unit.upgradesEquipped[j]];
           unitJSON.upgrades.push(upgradeCard.cardName);
-        }
+        // }
       }
     }
     if (unit.loadoutUpgrades) {
       for (let j = 0; j < unit.loadoutUpgrades.length; j++) {
         if (unit.loadoutUpgrades[j]) {
-          if (idToName[unit.loadoutUpgrades[j]]) {
-            unitJSON.loadout.push(idToName[unit.loadoutUpgrades[j]]);
-          } else {
+        //   if (idToName[unit.loadoutUpgrades[j]]) {
+        //     unitJSON.loadout.push(idToName[unit.loadoutUpgrades[j]]);
+        //   } else {
             const upgradeCard = cards[unit.loadoutUpgrades[j]];
             unitJSON.loadout.push(upgradeCard.cardName);
-          }
+        //   }
         }
       }
     }
@@ -600,23 +601,23 @@ function appendMissionTTSJSON(cardList, ttsArray){
       unitJSON.upgrades.push(`${counterpartCard.cardName}${counterpartCard.title ? ` ${counterpartCard.title}}` : ''}`);
       for (let j = 0; j < counterpart.upgradesEquipped.length; j++) {
         if (counterpart.upgradesEquipped[j]) {
-          if (idToName[counterpart.upgradesEquipped[j]]) {
-            unitJSON.upgrades.push(idToName[counterpart.upgradesEquipped[j]]);
-          } else {
+        //   if (idToName[counterpart.upgradesEquipped[j]]) {
+        //     unitJSON.upgrades.push(idToName[counterpart.upgradesEquipped[j]]);
+        //   } else {
             const upgradeCard = cards[counterpart.upgradesEquipped[j]];
             unitJSON.upgrades.push(upgradeCard.cardName);
-          }
+        //   }
         }
       }
       if (counterpart.loadoutUpgrades) {
         for (let j = 0; j < counterpart.loadoutUpgrades.length; j++) {
           if (counterpart.loadoutUpgrades[j]) {
-            if (idToName[counterpart.loadoutUpgrades[j]]) {
-              unitJSON.loadout.push(idToName[counterpart.loadoutUpgrades[j]]);
-            } else {
+            // if (idToName[counterpart.loadoutUpgrades[j]]) {
+            //   unitJSON.loadout.push(idToName[counterpart.loadoutUpgrades[j]]);
+            // } else {
               const upgradeCard = cards[counterpart.loadoutUpgrades[j]];
               unitJSON.loadout.push(upgradeCard.cardName);
-            }
+            // }
           }
         }
       }
