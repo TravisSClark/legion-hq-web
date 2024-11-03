@@ -70,6 +70,7 @@
         "displayName": "Clear Conditions",
         "cardSubtype": "condition",
         "cardName": "Clear Conditions2",
+        "ttsName": "Clear Conditions",
         "cardType": "battle",
         "imageName": "Clear Conditions2.webp",
         "keywords": [
@@ -101,6 +102,7 @@
         "cardSubtype": "condition",
         "displayName": "War Weary",
         "cardName": "War Weary2",
+        "ttsName" : "War Weary",
         "cardType": "battle",
         "imageName": "War Weary2.webp",
         "keywords": [
@@ -194,6 +196,7 @@
         "displayName": "Battle Lines",
         "cardSubtype": "deployment",
         "cardName": "Battle Lines2",
+        "ttsName": "Battle Lines",
         "cardType": "battle",
         "imageName": "Battle Lines2.webp",
         "keywords": [
@@ -699,6 +702,7 @@
         "id": "aj",
         "cardName": "Wookiee Warriors",
         "title": "Freedom Fighters",
+        "ttsName":"Wookiee Warriors",
         "cardType": "unit",
         "cardSubtype": "wookiee trooper",
         "rank": "special",
@@ -6264,19 +6268,6 @@
         ],
         "id": "jl"
     },
-    "jm": {
-        "cardSubtype": "1",
-        "cardName": "Blast Off!",
-        "commander": "R2-D2",
-        "cardType": "command",
-        "faction": "",
-        "imageName": "Blast Off!.webp",
-        "keywords": [
-            "Disengage",
-            "Jump"
-        ],
-        "id": "jm"
-    },
     "jn": {
         "cardSubtype": "personnel",
         "cardName": "Stormtrooper Captain",
@@ -6591,32 +6582,6 @@
             "Suppressive"
         ],
         "id": "ka"
-    },
-    "kb": {
-        "cardName": "Smoke Screen",
-        "cardSubtype": "3",
-        "cardType": "command",
-        "commander": "R2-D2",
-        "faction": "",
-        "imageName": "Smoke Screen.webp",
-        "keywords": [
-            "Smoke"
-        ],
-        "id": "kb"
-    },
-    "kc": {
-        "cardName": "Impromptu Immolation",
-        "cardSubtype": "2",
-        "cardType": "command",
-        "commander": "R2-D2",
-        "faction": "",
-        "imageName": "Impromptu Immolation.webp",
-        "keywords": [
-            "Blast",
-            "Spray",
-            "Suppressive"
-        ],
-        "id": "kc"
     },
     "kd": {
         "displayName": "Z-6 Trooper",
@@ -7432,7 +7397,7 @@
         "cardSubtype": "heavy weapon",
         "cardName": "Echo",
         "title": "ARC Marksman",
-        "ttsName": "Echo, ARC Marskman",
+        "ttsName": "Echo, ARC Marksman",
         "isUnique": true,
         "cardType": "upgrade",
         "prevCost": 42,
@@ -9887,6 +9852,7 @@
         "id": "pm",
         "cardName": "Wookiee Warriors",
         "title": "Noble Fighters",
+        "ttsName":"Wookiee Warriors",
         "cardType": "unit",
         "cardSubtype": "wookiee trooper",
         "rank": "special",
@@ -14113,6 +14079,7 @@
     "xi": {
         "id": "xi",
         "cardName": "The Bad Batch",
+        "title": "Clone Force 99",
         "cardType": "unit",
         "cardSubtype": "clone trooper",
         "rank": "operative",
@@ -14810,7 +14777,7 @@
     "yt": {
         "id": "yt",
         "cardSubtype": "personnel",
-        "cardName": "Clone Trooper Infantry Extra",
+        "cardName": "Clone Trooper Infantry",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 13,

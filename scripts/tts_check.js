@@ -15,7 +15,7 @@ function toKey(name){
     return name.toUpperCase();
 }
 
-async function getTtsUnits(){
+async function getTtsCards(){
 
     const ttsPathBase = "../tts/contrib/cards"
 
@@ -85,6 +85,27 @@ async function getTtsUnits(){
         })
     })
 
+    const commandCards = Object.entries(ttsJson['commands']);
+    commandCards.forEach(ccCategory =>{
+        ccCategory[1].forEach(u=>{
+            let name = toKey(u.name);
+            ttsNames.add(name);
+            ttsCcs.add(name);
+        })
+    })
+
+    for(const battleType in ttsJson["battlefield"]){
+        for(const bfType in ttsJson["battlefield"][battleType]){
+            // console.log(bfType);
+            ttsJson["battlefield"][battleType][bfType].forEach(c=>{
+                ttsNames.add(toKey(c.name));
+            })
+        }
+    }
+
+    
+
+
     return {ttsNames, ttsUnits, ttsCcs, ttsUpgrades};
 }
 
@@ -104,22 +125,12 @@ async function ttsCheckAsync(){
     let counterparts = [];
     let flaws = [];
 
-    let cardUrls = [];
-    let iconUrls = [];
-
-    let ttsCards = await getTtsUnits();
-
-    let count = 0;
-    ttsCards.ttsNames.values().forEach(v=>{
-        count++;
-    });
-    console.log("TTS cards count " + count);
+    
+    let {ttsNames, ttsUnits, ttsCcs, ttsUpgrades} = await getTtsCards();
 
     ids.forEach(id =>{
         
         let c = obj[id];
-        // cardUrls.push(`/${c.cardType}Cards/${c.imageName}`);
-        // iconUrls.push(`/${c.cardType}Icons/${c.imageName}`);
 
         if(c.id != id)
             console.log("id mismatch!" + id);
@@ -157,31 +168,94 @@ async function ttsCheckAsync(){
 
     });
     
-   
-    
-    console.log(ids.length + " Cards total");
-    console.log(units.length + " Units");
-    console.log(upgrades.length + " Upgrades");
-    console.log(ccs.length + " CCs");
-    console.log(battle.length + " Battle");
-    console.log(counterparts.length + " Counterparts");
-    console.log(flaws.length + " Flaws");
-
-
     function getName(c){
         let name = c.cardName;
-        if(c.ttsName){
-            name = c.ttsName;
-        }
-        else if(c.title){
+        
+        if(c.title){
             name += " " + c.title;
+        }
+        if(c.ttsName){
+            console.log("Mapping \"" + name + "\" to \"" + c.ttsName + "\"");
+            name = c.ttsName;
         }
         return toKey(name);
     }
 
+    let ttsOg = new Set();
+    ttsNames.values().forEach(v=>ttsOg.add(v));
+
+    
+
+    // Generally, these are cards removed from the game
+    // TODO - evaluate these w TTS
+    let tts_exceptions = [
+        // TODO pull request made to TTS to fix typo
+        // "A BEAUTIFUL FRIENDSDHIP",
+        // TODO - figure out which wookiees are which, rename as needed
+        // "WOOKIEE WARRIORS",
+        "COMMANDING PRESENCE",
+        "INTEGRATED COMMS ANTENNA",
+        "LONG-RANGE COMLINK",
+        // TTS seems to just import 3po as one card?
+        // they do match re stats, so I guess that's fine
+        // also gets re-named to our cardName+subtitle via a lua map, so maybe should just 
+        // uncomment this line for now
+        // "C-3PO",
+        "NOT A STORY THE JEDI WOULD TELL",
+        "FORCE LIFT",
+        // Leave this as a warning for now - we're about to get hit by it again once marskmen are out ;)
+        // "DC-15 CLONE TROOPER",
+        "RECKLESS DRIVER",
+        // TODO - pull request made to TTS to change this to '\"Nanny\" Programming', which is what both we and TTA use
+        // "NANNY PROGRAMMING",
+        // Ignore here - in this case, we export as 'offensive stance' so we're good
+        "DEFENSIVE STANCE"
+    ];
+
+    let lhq_exceptions = [
+        // Cards obsoleted by 2.6, removed in TTS, but that we support
+        "PHASE I CLONE TROOPER",
+        "PHASE II CLONE TROOPER",
+        "Z-6 PHASE II CLONE TROOPER",
+        "OFFENSIVE STANCE",
+
+        // Pending TTS code changes / pull requests - these should go away on their own...
+        // "\"NANNY\" PROGRAMMING",
+        // "A BEAUTIFUL FRIENDSHIP",
+        
+        // 3po has weird behavior in TTS - apparently only 1 of his 2 prints are used?
+        // 
+        // "C-3P0 HUMAN-CYBORG RELATIONS",
+        // "C-3P0 MADE TO SUFFER",
+
+        // Storm tide stuff
+        "STORM TIDE COMMANDER",
+        "ARMORED ASSAULT",
+        "BROTHERS IN ARMS",
+        "DOORS AND CORNERS",
+        "KEEP THEM DOWN",
+        "MAN THE GUNS",
+        "SOMEBODY HAS TO BE A HERO",
+        "STEALTH TEAM",
+        "SURGICAL STRIKE",
+        "TANK SHOCK",
+
+        // Idk what these are - stormtide? scenario?
+        // did not find a way to get them to show w 2min of playing around
+        "FORCES CONVERGE (ACT 1)",
+        "SECURE THE INTEL (ACT 1)",
+    ];
+
     function findAndRemoveFromTtsList(name, type){
-        if(!ttsCards.ttsNames.delete(name)){
-            console.log(type + " TTS not found: " + name);
+        if(!ttsNames.delete(name)){
+            // Check for multi-faction dupes like AT-RT and AA5
+            if(!ttsOg.has(name)){
+                // console.log("LHQ " + type + " not found in TTS: " + name);
+
+                if(!lhq_exceptions.includes(name))
+                    console.log("\""+name+"\", // " + type);
+            }
+
         }
     }
 
@@ -201,36 +275,14 @@ async function ttsCheckAsync(){
         })
     }
 
-    // console.log(units.length + " Units" + JSON.stringify(units));
+    console.log("LHQ entries NOT found in TTS lists: ")
 
     findAndRemoveAllFromTtsList(units, "Unit");
-    findAndRemoveAllFromTtsList(upgrades, "Upgrades");
-    findAndRemoveAllFromTtsList(ccs, "CCs");
+    findAndRemoveAllFromTtsList(upgrades, "Upgrade");
+    findAndRemoveAllFromTtsList(ccs, "CC");
     findAndRemoveAllFromTtsList(battle, "Battle");
-    findAndRemoveAllFromTtsList(counterparts, "Counterparts");
-    findAndRemoveAllFromTtsList(flaws, "Flaws");
-
-    // Generally, these are cards removed from the game
-    // TODO - evaluate these w TTS
-    let tts_exceptions = [
-        // TODO pull request made to TTS to fix typo
-        // "A BEAUTIFUL FRIENDSDHIP",
-        // TODO - figure out which wookiees are which, rename as needed
-        // "WOOKIEE WARRIORS",
-        "COMMANDING PRESENCE",
-        "INTEGRATED COMMS ANTENNA",
-        "LONG-RANGE COMLINK",
-        // "C-3PO",
-        "NOT A STORY THE JEDI WOULD TELL",
-        "FORCE LIFT",
-        // Leave this as a warning for now - we're about to get hit by it again once marskmen are out ;)
-        // "DC-15 CLONE TROOPER",
-        "RECKLESS DRIVER",
-        // TODO - pull request made to TTS to change this to '\"Nanny\" Programming', which is what both we and TTA use
-        // "NANNY PROGRAMMING",
-        // Ignore here - in this case, we export as 'offensive stance' so we're good
-        "DEFENSIVE STANCE"
-    ];
+    findAndRemoveAllFromTtsList(counterparts, "Counterpart");
+    findAndRemoveAllFromTtsList(flaws, "Flaw");
 
     findAndRemoveAllStringsFromTtsList(tts_exceptions, "Obsolete/Redundant cards");
 
@@ -238,10 +290,29 @@ async function ttsCheckAsync(){
     console.log("\n\n");
 
     console.warn("TTS ENTRIES NOT FOUND IN LHQ: ")
-    ttsCards.ttsNames.forEach(n=>{
+    ttsNames.forEach(n=>{
         console.log(n);
     })
 
+    console.log("\n");
+
+
+    console.log("LHQ Counts: ")
+    console.log(ids.length + " Cards total");
+    console.log(units.length + " Units");
+    console.log(upgrades.length + " Upgrades");
+    console.log(ccs.length + " CCs");
+    console.log(battle.length + " Battle");
+    console.log(counterparts.length + " Counterparts");
+    console.log(flaws.length + " Flaws");
+
+    console.log("\n");
+
+    console.log("TTS counts: ");
+    console.log(ttsNames.size + " Cards Total");
+    console.log(ttsUnits.size + " Units");
+    console.log(ttsCcs.size + " CCs");
+    console.log(ttsUpgrades.size + " Upgrades");
 
 
 
