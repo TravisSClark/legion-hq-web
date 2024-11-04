@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import QRCode from 'qrcode.react';
 import { useReactToPrint } from 'react-to-print';
 import { Chip, Menu, MenuItem } from '@material-ui/core';
@@ -8,81 +8,77 @@ import generateLink from './generateLink';
 import cards from 'constants/cards';
 import urls from 'constants/urls'
 
-class PrintList extends React.Component {
-  render() {
-    const { currentList, showBattlesAndCommands = false, showBattlesNoCommands = false } = this.props;
-    const listLink = generateLink(currentList);
-    const units = []; let printingUnits = true;
-    const commands = []; let printingCommands = false;
-    const battles = []; let printingBattles = false;
-    const lines = generateTournamentText(currentList).split('\n');
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      if (printingUnits) units.push(line);
-      else if (printingCommands) commands.push(line);
-      else if (printingBattles) battles.push(line);
-      if (line === '') {
-        if (printingUnits) {
-          printingUnits = false;
-          printingCommands = true;
-        } else if (printingCommands) {
-          printingCommands = false;
-          printingBattles = true;
-        }
+const PrintList = React.forwardRef(( props, ref) =>{
+
+  const { currentList, showBattles = false, showCommands = false } = props;
+
+  const listLink = generateLink(currentList);
+  const units = []; let printingUnits = true;
+  const commands = []; let printingCommands = false;
+  const battles = []; let printingBattles = false;
+  const lines = generateTournamentText(currentList).split('\n');
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (printingUnits) units.push(line);
+    else if (printingCommands) commands.push(line);
+    else if (printingBattles) battles.push(line);
+    if (line === '') {
+      if (printingUnits) {
+        printingUnits = false;
+        printingCommands = true;
+      } else if (printingCommands) {
+        printingCommands = false;
+        printingBattles = true;
       }
     }
-
-    const unitLines = [];
-    units.forEach((line, i) => {
-      if (i === 0) unitLines.push(<div key={`${line}_${i}`} style={{ fontSize: 24 }}>{line}</div>);
-      else if (line.includes('- ')) unitLines.push(<div key={`${line}_${i}`}>{line}</div>);
-      else unitLines.push(<div key={`${line}_${i}`} style={{ marginTop: 6 }}>{line}</div>)
-    })
-
-    return (
-      <div
-        style={{
-          height: '100%',
-          display: 'flex',
-          flexFlow: 'row nowrap',
-          justifyContent: 'space-evenly'
-        }}
-      >
-        <div>{unitLines}</div>
-        <div style={{ display: 'flex', flexFlow: 'column nowrap', justifyContent: 'space-between' }}>
-          {showBattlesAndCommands && (
-            <div>
-              {commands.map((line, i) => {
-                if (line.includes('Commands:')) {
-                  return <b key="commands header">Command Hand</b>;
-                }
-                return <div key={`${line}_${i}`}>{line}</div>;
-              })}
-              <div style={{ marginTop: 4 }} />
-              {battles.map((line, i) => {
-                if (line.includes('Battle Deck')) {
-                  return <b key="battle deck header">Battle Deck</b>;
-                }
-                return <div key={`${line}_${i}`}>{line}</div>;
-              })}
-            </div>
-          )}
-          {showBattlesNoCommands && (
-            <div>
-              {battles.map((line, i) => {
-                if (line.includes('Battle Deck')) {
-                  return <b key="battle deck header">Battle Deck</b>;
-                }
-                return <div key={`${line}_${i}`}>{line}</div>;
-              })}
-            </div>
-          )}
-          <QRCode size={147} value={listLink} />
-        </div>
-      </div>
-    )
   }
-}
+
+  const unitLines = [];
+  units.forEach((line, i) => {
+    if (i === 0) unitLines.push(<div key={`${line}_${i}`} style={{ fontSize: 24 }}>{line}</div>);
+    else if (line.includes('- ')) unitLines.push(<div key={`${line}_${i}`}>{line}</div>);
+    else unitLines.push(<div key={`${line}_${i}`} style={{ marginTop: 6 }}>{line}</div>)
+  })
+
+  return (
+    <div
+    ref={ref}
+      style={{
+        height: '100%',
+        display: 'flex',
+        flexFlow: 'row nowrap',
+        flexDirection:'column',
+        justifyContent: 'space-evenly',
+        color:'black'
+      }}
+    >
+      <div>{unitLines}</div>
+      <div style={{ display: 'flex', flexFlow: 'column nowrap', justifyContent: 'space-between' }}>
+        
+        {showCommands &&  <div>
+            {commands.map((line, i) => {
+              if (line.includes('Commands:')) {
+                return <b key="commands header">Command Hand</b>;
+              }
+              return <div key={`${line}_${i}`}>{line}</div>;
+            })}
+            </div>}
+
+            <div style={{ marginTop: 4 }} />
+       {showBattles && <div>
+            {battles.map((line, i) => {
+              if (line.includes('Battle Deck')) {
+                return <b key="battle deck header">Battle Deck</b>;
+              }
+              return <div key={`${line}_${i}`}>{line}</div>;
+            })}
+          </div> }
+        <QRCode size={147} value={listLink} />
+      </div>
+    </div>
+  )
+})
+
 
 class PrintListImages extends React.Component {
   render() {
@@ -164,20 +160,23 @@ function PrintExportButton({ currentList }) {
   const componentRefBattlesButNoCommands = React.useRef();
   const componentRefImages = React.useRef();
   const [anchorEl, setAnchorEl] = React.useState(null);
+
   const handlePrintMenuOpen = event => setAnchorEl(event.currentTarget);
   const handlePrintMenuClose = () => setAnchorEl(null);
   const handlePrint = useReactToPrint({
-    content: () => componentRef.current
+    contentRef: componentRef
   });
   const handlePrintNoBattlesCommands = useReactToPrint({
-    content: () => componentRefNoBattlesCommands.current
+    contentRef: componentRefNoBattlesCommands
   });
   const handlePrintBattlesButNoCommands = useReactToPrint({
-    content: () => componentRefBattlesButNoCommands.current
+    contentRef: componentRefBattlesButNoCommands
   });
   const handlePrintListImages = useReactToPrint({
     content: () => componentRefImages.current
   });
+  
+
   return (
     <React.Fragment>
       <Menu
@@ -220,18 +219,23 @@ function PrintExportButton({ currentList }) {
         onClick={handlePrintMenuOpen}
       />
       <div style={{ display: 'none' }}>
+        {/* TODO - there should be a way to simplify this into 1 element w state-driven props
+            can't figure out the right event/promise sequence to get PrintList(/this component) to re-render before the print hook though... */}
         <PrintList
-          showBattlesAndCommands={true}
+          showBattles={true}
+          showCommands={true}
           ref={componentRef}
           currentList={currentList}
         />
         <PrintList
-          showBattlesAndCommands={false}
+          showBattles={false}
+          showCommands={false}
           ref={componentRefNoBattlesCommands}
           currentList={currentList}
         />
         <PrintList
-          showBattlesNoCommands={true}
+          showBattles={true}
+          showCommands={false}
           ref={componentRefBattlesButNoCommands}
           currentList={currentList}
         />

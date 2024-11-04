@@ -39,7 +39,7 @@
     "react-image": "^2.4.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "5.0.1",
-    "react-to-print": "^2.8.0",
+    "react-to-print": "^3.0.2",
     "three": "^0.137.0",
     "typeface-roboto": "0.0.75",
     "universal-cookie": "^4.0.3",
