@@ -1,0 +1,3 @@
+[submodule "tts"]
+	path = tts
+	url = https://github.com/swlegion/tts.git

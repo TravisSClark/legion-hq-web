@@ -71,7 +71,6 @@ export function ListProvider({
   const [isKillPointMode, setIsKillPointMode] = useState(false);
   const [currentKillPoints, setCurrentKillPoints] = useState(0);
   const [validationIssues, setValidationIssues] = useState([]);
-  const [invalidUnits, setInvalidUnits] = useState([]);
   const [rankLimits, setRankLimits] = useState();
 
 

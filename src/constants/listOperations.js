@@ -493,46 +493,26 @@ function generateStandardText(list) {
   return header + points + units + commands + contingencies;
 }
 
+function getTtsName(card){
+  let name = card.cardName;
+  
+  if(card.ttsName){
+      name = card.ttsName;
+  } else if(card.title){
+    name += " " + card.title;
+  } 
+  return name;
+}
+
 function generateTTSJSONText(list) {
   const ttsJSON = { author: 'Legion HQ' };
-function appendMissionTTSJSON(cardList, ttsArray){
 
-  for (let i = 0; i < cardList.length; i++) {
-    if (idToName[cardList[i]]) {
-      ttsArray.push(idToName[cardList[i]]);
-    } else {
-      const battlefieldCard = cards[cardList[i]];
-      ttsArray.push(battlefieldCard.cardName);
+  function appendMissionTTSJSON(cardList, ttsArray){
+
+    for (let i = 0; i < cardList.length; i++) {
+      ttsArray.push(getTtsName(cards[cardList[i]]));
     }
   }
-
-}
-  const idToName = {
-    "nc": "Offensive Stance",
-    "dz": "A-180 Config",
-    "ea": "A-300 Config",
-    "kh": "A-280-CFE Config",
-    "gn": "E-11D Config",
-    "np": "J-19 Bo-rifle",
-    "Ci": "Clear Conditions",
-    "Cl": "War Weary",
-    "Dj": "Battle Lines",
-    "ff": "Ax-108 \"Ground Buzzer\"",
-    "fg": "Mo/Dk Power Harpoon",
-    "bh": "TX-225 GAVw Occupier Combat Assault Tank",
-    "on": "LAAT/le Patrol Transport",
-    "oo": "LAAT/le Patrol Transport",
-    "ig": "CM-0/93 Trooper",
-    "kd": "Z-6 Phase II Trooper",
-    "kt": "\"Bunker Buster\" Shells",
-    "le": "EMP \"Droid Poppers\"",
-    "lw": "Iden's ID10 Seeker Droid",
-    "sr": "Stormtroopers Heavy Response Unit",
-    "uj": "The Darksaber (Gideon)",
-    "rq": "The Darksaber (Maul)",
-    "xw": "Echo (The Bad Batch)"
-  };
-
   ttsJSON.listname = list.title;
 
   ttsJSON.points = list.pointTotal;
@@ -568,60 +548,43 @@ function appendMissionTTSJSON(cardList, ttsArray){
     const unit = list.units[i];
     const unitCard = cards[unit.unitId];
 
-    if (idToName[unit.unitId]) unitJSON.name = idToName[unit.unitId];
-    else if (unitCard.title) unitJSON.name = `${unitCard.cardName} ${unitCard.title}`;
-    else unitJSON.name = unitCard.cardName;
+    unitJSON.name = getTtsName(unitCard)
 
     for (let j = 0; j < unit.upgradesEquipped.length; j++) {
       if (unit.upgradesEquipped[j]) {
-        if (idToName[unit.upgradesEquipped[j]]) {
-          unitJSON.upgrades.push(idToName[unit.upgradesEquipped[j]]);
-        } else {
-          const upgradeCard = cards[unit.upgradesEquipped[j]];
-          unitJSON.upgrades.push(upgradeCard.cardName);
-        }
+        const upgradeCard = cards[unit.upgradesEquipped[j]];
+        unitJSON.upgrades.push(getTtsName(upgradeCard));
       }
     }
     if (unit.loadoutUpgrades) {
       for (let j = 0; j < unit.loadoutUpgrades.length; j++) {
         if (unit.loadoutUpgrades[j]) {
-          if (idToName[unit.loadoutUpgrades[j]]) {
-            unitJSON.loadout.push(idToName[unit.loadoutUpgrades[j]]);
-          } else {
-            const upgradeCard = cards[unit.loadoutUpgrades[j]];
-            unitJSON.loadout.push(upgradeCard.cardName);
-          }
+          const upgradeCard = cards[unit.loadoutUpgrades[j]];
+          unitJSON.loadout.push(getTtsName(upgradeCard));
         }
       }
     }
     if (unit.counterpart) {
       const counterpart = unit.counterpart;
       const counterpartCard = cards[counterpart.counterpartId];
-      unitJSON.upgrades.push(`${counterpartCard.cardName}${counterpartCard.title ? ` ${counterpartCard.title}}` : ''}`);
+      unitJSON.upgrades.push(getTtsName(counterpartCard));
       for (let j = 0; j < counterpart.upgradesEquipped.length; j++) {
         if (counterpart.upgradesEquipped[j]) {
-          if (idToName[counterpart.upgradesEquipped[j]]) {
-            unitJSON.upgrades.push(idToName[counterpart.upgradesEquipped[j]]);
-          } else {
-            const upgradeCard = cards[counterpart.upgradesEquipped[j]];
-            unitJSON.upgrades.push(upgradeCard.cardName);
-          }
+          const upgradeCard = cards[counterpart.upgradesEquipped[j]];
+          unitJSON.upgrades.push(getTtsName(upgradeCard));
         }
       }
       if (counterpart.loadoutUpgrades) {
         for (let j = 0; j < counterpart.loadoutUpgrades.length; j++) {
           if (counterpart.loadoutUpgrades[j]) {
-            if (idToName[counterpart.loadoutUpgrades[j]]) {
-              unitJSON.loadout.push(idToName[counterpart.loadoutUpgrades[j]]);
-            } else {
-              const upgradeCard = cards[counterpart.loadoutUpgrades[j]];
-              unitJSON.loadout.push(upgradeCard.cardName);
-            }
+            const upgradeCard = cards[counterpart.loadoutUpgrades[j]];
+            unitJSON.loadout.push(getTtsName(upgradeCard));
           }
         }
       }
     };
-    if (unitCard.flaw) unitJSON.upgrades.push(cards[unitCard.flaw].cardName);
+    if (unitCard.flaw) unitJSON.upgrades.push(getTtsName(cards[unitCard.flaw]));
+    // TODO - do we ever improperly use count like this? should just be a for()
     if (unit.count > 1) {
       for (let j = 0; j < unit.count; j++) ttsJSON.units.push(unitJSON);
     } else {
@@ -1552,7 +1515,7 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
     }
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
-  } else if (action === 'LOADOUT_UPGRADE') {
+  } else if (action === 'UNIT_LOADOUT_UPGRADE') {
     list = equipLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   } else if (action === 'COUNTERPART_LOADOUT_UPGRADE') {
     list = equipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
@@ -1596,7 +1559,7 @@ function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
     list = unequip(list, unitIndex, upgradeIndex);
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = unequipCounterpartUpgrade(list, unitIndex, upgradeIndex);
-  } else if (action === 'LOADOUT_UPGRADE') {
+  } else if (action === 'UNIT_LOADOUT_UPGRADE') {
     list = unequipLoadoutUpgrade(list, unitIndex, upgradeIndex);
   } else if (action === 'COUNTERPART_LOADOUT_UPGRADE') {
     list = unequipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex);
