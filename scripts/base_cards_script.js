@@ -1,3 +1,12 @@
+/**
+ * Basically, a rat's nest of code snippets used to manipulate and extract data from cards.json
+ * 
+ * TODO TODO split this file up and then remove/rename it
+ * 
+ * (ie, tts_check was already derived from this, probably want another "do our cards make sense re IDs, schemas, keywords, and etc?" script
+ *  to  run at build time, plus an occasional "rewrite cards.json with consistent field order and ditch obsolete fields" script)
+ */
+
 const fs = require('node:fs');
 
 fs.readFile('./cards.js', 'utf8', (err, data) => {

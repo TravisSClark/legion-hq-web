@@ -12174,6 +12174,7 @@
             "Small",
             "Claim"
         ],
+        "upgradeBar":[],
         "cardSubtype": "trooper"
     },
     "to": {
@@ -14373,6 +14374,7 @@
 		"imageName": "Omega.webp",
 		"keywords": ["Counterpart", "I'm Part of the Squad Too"],
 		"cardSubtype": "trooper",
+    "upgradeBar":[],
 		"id": "xw"
 	},
 	"xx": {
