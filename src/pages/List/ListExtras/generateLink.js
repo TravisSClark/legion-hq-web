@@ -1,8 +1,12 @@
 import urls from 'constants/urls';
 import battleForcesDict from 'constants/battleForcesDict';
+import legionModes from 'constants/legionModes';
 
 function generateLink(list) {
   const urlStrings = [];
+  
+  const points = legionModes[list.mode].maxPoints;
+
   list.units.forEach(unit => {
     let urlString = `${unit.count}${unit.unitId}`;
     unit.upgradesEquipped.forEach((upgradeId, i) => {
@@ -51,9 +55,9 @@ function generateLink(list) {
   if (list.battleForce) {
     let bf = battleForcesDict[list.battleForce];
 
-    return `${urls.listPath}/${list.faction}/${bf.linkId}:${urlStrings.join(',')}`;
+    return `${urls.listPath}/${list.faction}/${points}:${bf.linkId}:${urlStrings.join(',')}`;
   }
-  return `${urls.listPath}/${list.faction}/${urlStrings.join(',')}`;
+  return `${urls.listPath}/${list.faction}/${points}:${urlStrings.join(',')}`;
 }
 
 export default generateLink;

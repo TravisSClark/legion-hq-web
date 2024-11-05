@@ -7,7 +7,7 @@ const News = lazy(() => import('pages/News'));
 const Cards = lazy(() => import('pages/Cards'));
 const Roller = lazy(() => import('pages/Roller'));
 const Privacy = lazy(() => import('pages/Privacy'));
-const List = lazy(() => import('pages/List'));
+const MainListPage = lazy(() => import('pages/List'));
 const Settings = lazy(() => import('pages/Settings'));
 const Info = lazy(() => import('pages/Info'));
 
@@ -37,7 +37,7 @@ function Pages() {
             const { params } = match;
             const { slug, listHash } = params;
             return (
-              <List
+              <MainListPage
                 slug={slug}
                 listHash={listHash}
                 storedLists={storedLists}

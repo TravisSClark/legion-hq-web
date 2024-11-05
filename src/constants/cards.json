@@ -4261,7 +4261,8 @@
         "keywords": [
             "Armor",
             "Arsenal",
-            "Hover",
+            "Hover: Ground",
+            "Strafe",
             "Outmaneuver",
             "Weak Point",
             "Critical",
@@ -4310,7 +4311,8 @@
             "Armor",
             "Arsenal",
             "Barrage",
-            "Hover",
+            "Hover: Ground",
+            "Strafe",
             "Weak Point",
             "Fixed",
             "Critical",
@@ -5375,15 +5377,12 @@
         ],
         "requirements": [
             "OR",
-            [
-                "OR",
-                {
-                    "cardSubtype": "ground vehicle"
-                },
-                {
-                    "cardSubtype": "repulsor vehicle"
-                }
-            ],
+            {
+                "cardSubtype": "ground vehicle"
+            },
+            {
+                "cardSubtype": "repulsor vehicle"
+            },
             {
                 "cardSubtype": "emplacement trooper"
             }
@@ -7904,12 +7903,15 @@
         "requirements": [
             "OR",
             {
+                "faction":"empire",
                 "rank": "corps",
-                "cardSubtype": "trooper",
-                "faction":"empire"
+                "cardSubtype": "trooper"
             },
             {
                 "cardName": "Imperial Special Forces"
+            },
+            {
+                "cardName": "Imperial Special Forces Inferno Squad"
             }
         ],
         "history": [
@@ -7944,6 +7946,9 @@
             },
             {
                 "cardName": "Imperial Special Forces"
+            },
+            {
+                "cardName": "Imperial Special Forces Inferno Squad"
             }
         ],
         "history": [
@@ -8358,8 +8363,7 @@
     },
     "my": {
         "id": "my",
-        "cardName": "Imperial Special Forces",
-        "title": "Inferno Squad",
+        "cardName": "Imperial Special Forces Inferno Squad",
         "displayName": "Inferno Squad",
         "cardType": "unit",
         "cardSubtype": "trooper",
@@ -8508,25 +8512,6 @@
             }
         ]
     },
-    "nc": {
-        "id": "nc",
-        "displayName": "Defensive/Offensive Stance",
-        "cardSubtype": "training",
-        "cardName": "Defensive Stance",
-        "isUnique": false,
-        "cardType": "upgrade",
-        "cost": 5,
-        "imageName": "Offensive defensive stance.webp",
-        "keywords": [
-            "Reconfigure"
-        ],
-        "isDoubleSided": true,
-        "requirements": [
-            {
-                "upgradeBar":["force"]
-            }
-        ]
-    },
     "nd": {
         "id": "nd",
         "displayName": "",
@@ -8642,7 +8627,8 @@
         "keywords": [
             "Detachment",
             "Observe",
-            "Hover",
+            "Hover: Air",
+            "Strafe",
             "Incognito",
             "Suppressive"
         ],
@@ -9246,6 +9232,7 @@
         "keywords": [
             "Armor",
             "Hover: Ground",
+            "Strafe",
             "Reposition",
             "Transport",
             "Weak Point"
@@ -9287,6 +9274,7 @@
             "Arsenal",
             "Cover",
             "Hover: Air",
+            "Strafe",
             "Immune",
             "Transport",
             "Impact",
@@ -9331,6 +9319,7 @@
             "Arsenal",
             "Cover",
             "Hover: Air",
+            "Strafe",
             "Immune",
             "Transport",
             "Fixed",
@@ -10612,7 +10601,8 @@
         "keywords": [
             "Armor",
             "Cover",
-            "Hover",
+            "Hover: Ground",
+            "Strafe",
             "Weak Point"
         ],
         "upgradeBar": [
@@ -11616,6 +11606,7 @@
         "keywords": [
             "Armor",
             "Hover: Ground",
+            "Strafe",
             "Reposition",
             "Transport",
             "Weak Point"
@@ -13248,24 +13239,18 @@
         ],
         "requirements": [
             "OR",
-            [
-                "OR",
-                {
-                    "cardName": "Wicket"
-                },
-                {
-                    "cardName": "Logray"
-                }
-            ],
-            [
-                "OR",
-                {
-                    "cardName": "Ewok Skirmishers"
-                },
-                {
-                    "cardName": "Ewok Slingers"
-                }
-            ]
+            {
+                "cardName": "Wicket"
+            },
+            {
+                "cardName": "Logray"
+            },
+            {
+                "cardName": "Ewok Skirmishers"
+            },
+            {
+                "cardName": "Ewok Slingers"
+            }
         ],
         "history": []
     },
@@ -13273,7 +13258,8 @@
         "id": "vq",
         "cardSubtype": "training",
         "cardName": "Call To Arms",
-        "isUnique": false,
+        "isUnique":true,
+        "uniqueCount": 2,
         "cardType": "upgrade",
         "cost": 5,
         "imageName": "Call to Arms.webp",
@@ -13282,24 +13268,18 @@
         ],
         "requirements": [
             "OR",
-            [
-                "OR",
-                {
-                    "cardName": "Wicket"
-                },
-                {
-                    "cardName": "Logray"
-                }
-            ],
-            [
-                "OR",
-                {
-                    "cardName": "Ewok Skirmishers"
-                },
-                {
-                    "cardName": "Ewok Slingers"
-                }
-            ]
+            {
+                "cardName": "Wicket"
+            },
+            {
+                "cardName": "Logray"
+            },
+            {
+                "cardName": "Ewok Skirmishers"
+            },
+            {
+                "cardName": "Ewok Slingers"
+            }
         ],
         "history": []
     },
@@ -13753,6 +13733,7 @@
         "surges": [
             "hit"
         ],
+        "associate":"wl",
         "wounds": 5,
         "courage": 3,
         "speed": 2
@@ -13766,8 +13747,8 @@
         "rank": "commander",
         "faction": "separatists",
         "isUnique": true,
-        "prevCost": 80,
-        "cost": 85,
+        "prevCost": 85,
+        "cost": 80,
         "imageName": "Poggle the Lesser.webp",
         "keywords": [
             "Jump",

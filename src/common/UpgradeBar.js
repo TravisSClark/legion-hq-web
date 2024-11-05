@@ -11,6 +11,10 @@ function UpgradeBar({ upgradeBar, iconHeight=24 }) {
     justifyContent: 'flex-end'
   };
   const imageStyles = { height: iconHeight };
+  if(!upgradeBar){
+    return null;
+  }
+  
   const upgradeIcons = upgradeBar.map((type, i) => {
     const title = upgradeTypes[type].name;
     const icon = upgradeTypes[type].icon;
