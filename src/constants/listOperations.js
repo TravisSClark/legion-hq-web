@@ -1133,10 +1133,12 @@ function isRequirementsMet(requirements, unitCard) {
   }
   else if(operator == 'AND'){
     for(let i=1; i< requirements.length; i++){
-      if (requirements[i] instanceof Array && !isRequirementsMet(requirements[i], unitCard)){
-        return false;
-      } else if (requirements[i] instanceof Object && !_.isMatch(unitCard, requirements[i])){
-        return false;
+      if (requirements[i] instanceof Array){
+        if(!isRequirementsMet(requirements[i], unitCard))
+          return false;
+      } else if (requirements[i] instanceof Object){
+        if(!_.isMatch(unitCard, requirements[i]))
+          return false;
       }
     }
     return true;
