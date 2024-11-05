@@ -42,12 +42,11 @@ const PrintList = React.forwardRef(( props, ref) =>{
 
   return (
     <div
-    ref={ref}
+      ref={ref}
       style={{
         height: '100%',
         display: 'flex',
         flexFlow: 'row nowrap',
-        flexDirection:'column',
         justifyContent: 'space-evenly',
         color:'black'
       }}
