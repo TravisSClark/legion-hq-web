@@ -1096,8 +1096,6 @@ function isRequirementsMet(requirements, unitCard) {
   }
   else if(operator == 'AND'){
     for(let i=1; i< requirements.length; i++){
-
-      console.log("requirements["+i+"] " + JSON.stringify(requirements[i]))
       if (requirements[i] instanceof Array){
         if(!isRequirementsMet(requirements[i], unitCard))
           return false;
