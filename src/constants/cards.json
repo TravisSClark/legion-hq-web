@@ -2313,7 +2313,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "prevCost": 2,
-        "cost": 5,
+        "cost": 8,
         "imageName": "Recon Intel.webp",
         "keywords": [
             "Scout"
@@ -3318,7 +3318,7 @@
         "cardName": "2-1B Medical Droid",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 18,
+        "cost": 20,
         "imageName": "2-1B Medical Droid.webp",
         "keywords": [
             "Treat",
@@ -3424,7 +3424,7 @@
         "cardName": "FX-9 Medical Droid",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 19,
+        "cost": 22,
         "imageName": "FX-9 Medical Droid.webp",
         "keywords": [
             "Treat",
@@ -3761,7 +3761,7 @@
         "faction": "rebels",
         "isUnique": true,
         "prevCost": 195,
-        "cost": 175,
+        "cost": 165,
         "imageName": "Luke Skywalker Jedi Knight.webp",
         "keywords": [
             "Jump",
@@ -3901,7 +3901,7 @@
         "cardName": "BARC Ion Gunner",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 24,
+        "cost": 25,
         "imageName": "BARC Ion Gunner.webp",
         "keywords": [
             "Critical",
@@ -3936,7 +3936,7 @@
         "cardSubtype": "crew",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 21,
+        "cost": 18,
         "imageName": "BARC RPS-6 Gunner.webp",
         "keywords": [
             "Impact"
@@ -5516,7 +5516,7 @@
         "cardName": "BARC Twin Laser Gunner",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 18,
+        "cost": 15,
         "imageName": "BARC Twin Laser Gunner.webp",
         "keywords": [
             "Fixed"
@@ -7120,7 +7120,7 @@
         "rank": "special",
         "faction": "republic",
         "isUnique": false,
-        "cost": 24,
+        "cost": 26,
         "imageName": "ARC Trooper Strike Team.webp",
         "keywords": [
             "Charge",
@@ -7170,7 +7170,7 @@
         "faction": "republic",
         "isUnique": false,
         "prevCost": 66,
-        "cost": 58,
+        "cost": 64,
         "imageName": "ARC Troopers.webp",
         "keywords": [
             "Charge",
@@ -8438,7 +8438,7 @@
         "rank": "commander",
         "faction": "republic",
         "isUnique": true,
-        "cost": 155,
+        "cost": 170,
         "imageName": "Anakin Skywalker.webp",
         "keywords": [
             "Jump",
@@ -9016,7 +9016,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "prevCost": 15,
-        "cost": 17,
+        "cost": 20,
         "imageName": "Clone Medic.webp",
         "keywords": [
             "Treat"
@@ -9045,7 +9045,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "prevCost": 18,
-        "cost": 22,
+        "cost": 30,
         "imageName": "Clone Commander.webp",
         "keywords": [
             "Inspire",
@@ -9075,7 +9075,7 @@
         "cardName": "Viper Recon Droid",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 6,
+        "cost": 9,
         "imageName": "Viper Recon Droid.webp",
         "keywords": [
             "Observe",
@@ -9101,7 +9101,7 @@
         "cardName": "PK-Series Worker Droid",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 12,
+        "cost": 22,
         "imageName": "PK-Series Worker Droid.webp",
         "keywords": [
             "Repair",
@@ -9184,7 +9184,7 @@
         "faction": "republic",
         "isUnique": true,
         "prevCost": 200,
-        "cost": 180,
+        "cost": 170,
         "imageName": "Yoda.webp",
         "keywords": [
             "Guidance",
@@ -10441,7 +10441,7 @@
         "cardName": "Engagement Protocols",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 5,
+        "cost": 3,
         "imageName": "Engagement Protocols.webp",
         "keywords": [
             "AI"
@@ -10459,7 +10459,7 @@
         "cardName": "Defense Protocols",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 3,
+        "cost": 8,
         "imageName": "Defense Protocols.webp",
         "keywords": [
             "AI",
@@ -10480,7 +10480,7 @@
         "cardName": "Attack Protocols",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 3,
+        "cost": 8,
         "imageName": "Attack Protocols.webp",
         "keywords": [
             "AI",
@@ -14260,7 +14260,7 @@
         "rank": "support",
         "faction": "republic",
         "isUnique": false,
-        "cost": 75,
+        "cost": 90,
         "imageName": "Clone Commandos.webp",
         "keywords": [
             "Complete the Mission",
@@ -14362,7 +14362,7 @@
         "rank": "support",
         "faction": "republic",
         "isUnique": true,
-        "cost": 100,
+        "cost": 105,
         "imageName": "Delta Squad.webp",
         "keywords": [
             "Complete the Mission",
