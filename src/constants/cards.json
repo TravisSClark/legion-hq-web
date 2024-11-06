@@ -2324,6 +2324,10 @@
             {
 				"date": "19 July 2024",
 				"description": "Cost increased from 2 to 5 points."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 5 to 8 points."
 			}
         ]
     },
@@ -2385,7 +2389,7 @@
         "history": [
             {
                 "date": "19 November 2020",
-                "description": "Cost decreased from 3 to 1 point."
+                "description": "Cost reduced from 3 to 1 point."
             },
             {
                 "date": "8 December 2022",
@@ -2983,7 +2987,7 @@
         "history": [
             {
                 "date": "19 July 2024",
-                "description": "Cost decreased from 23 to 22 points. Now can be used in melee."
+                "description": "Cost reduced from 23 to 22 points. Now can be used in melee."
             }
         ],
         "id": "eh"
@@ -3161,7 +3165,7 @@
         "history": [
             {
 				"date": "19 July 2024",
-				"description": "Cost decreased from 26 to 23 points. No longer surges to crit. Now works in melee. Dice increased from a red and a black to a red, 2 black, and a white. Gained Impact 2 and lost Arm and Detonate keywords."
+				"description": "Cost reduced from 26 to 23 points. No longer surges to crit. Now works in melee. Dice increased from a red and a black to a red, 2 black, and a white. Gained Impact 2 and lost Arm and Detonate keywords."
 			}
         ],
         "id": "en"
@@ -3329,6 +3333,13 @@
                 "faction": "rebels"
             }
         ],
+        "history": [
+            
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 18 to 20 points."
+			}
+        ],
         "id": "eu"
     },
     "ev": {
@@ -3435,6 +3446,13 @@
                 "faction": "empire",
                 "rank": "corps"
             }
+        ],
+        "history": [
+            
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 19 to 22 points."
+			}
         ],
         "id": "ez"
     },
@@ -3794,7 +3812,11 @@
             {
                 "date": "19 July 2024",
                 "description": "Cost reduced from 195 to 175 points."
-            }
+            },
+            {
+				"date": "6 November 2024",
+				"description": "Cost reduced from 175 to 165 points."
+			}
         ]
     },
     "fn": {
@@ -3922,6 +3944,10 @@
             {
 				"date": "19 July 2024",
 				"description": "Cost increased from 24 to 28 points. No longer exhausts. Gained Critical 1 keyword."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost reduced from 28 to 25 points."
 			}
         ],
         "id": "fr"
@@ -3945,7 +3971,11 @@
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 24 to 21 points."
-            }
+            },
+            {
+				"date": "6 November 2024",
+				"description": "Cost reduced from 21 to 18 points."
+			}
         ],
         "id": "fs"
     },
@@ -4202,7 +4232,7 @@
             },
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 62 to 60 points."
+                "description": "Cost reduced from 62 to 60 points."
             },
             {
 				"date": "19 July 2024",
@@ -5219,7 +5249,7 @@
             },
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 23 to 20 points."
+                "description": "Cost reduced from 23 to 20 points."
             },
             {
 				"date": "19 July 2024",
@@ -5255,7 +5285,7 @@
             },
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 26 to 24 points."
+                "description": "Cost reduced from 26 to 24 points."
             }
         ],
         "id": "hq"
@@ -5534,7 +5564,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost increased from 15 to 18 points."
-            }
+            },
+            {
+				"date": "6 November 2024",
+				"description": "Cost reduced from 18 to 15 points."
+			}
         ],
         "id": "id"
     },
@@ -5907,7 +5941,7 @@
             },
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 22 to 20 points."
+                "description": "Cost reduced from 22 to 20 points."
             },
             {
 				"date": "19 July 2024",
@@ -7152,11 +7186,15 @@
             },
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 27 to 24."
+                "description": "Cost reduced from 27 to 24."
             },
             {
 				"date": "19 July 2024",
 				"description": "Gained Charge, Detachment: ARC Troopers, and Scale keywords. Blaster changed from 1 black and 1 white to 2 black, and can be used in melee. Lost unarmed and range 3 gun."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 24 to 26 points."
 			}
         ],
         "detachment": "kz"
@@ -7201,7 +7239,7 @@
             },
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 78 to 72."
+                "description": "Cost reduced from 78 to 72."
             },
             {
                 "date": "5 June 2023",
@@ -7210,6 +7248,10 @@
             {
 				"date": "19 July 2024",
 				"description": "Cost reduced from 66 to 58 points. Gained Squad Leader upgrade. Gained Charge and Scale keywords. Blaster changed from 1 black and 1 white to 2 black, and can be used in melee. Lost unarmed and range 3 gun."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 58 to 64 points."
 			}
         ]
     },
@@ -8471,6 +8513,10 @@
             {
 				"date": "19 July 2024",
 				"description": "Gained Charge and Master of the Force 1, and lost Flawed keywords."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 155 to 170 points."
 			}
         ]
     },
@@ -8971,7 +9017,7 @@
         "history": [
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 12 to 11 points."
+                "description": "Cost reduced from 12 to 11 points."
             },
             {
 				"date": "19 July 2024",
@@ -9001,7 +9047,7 @@
         "history": [
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 18 to 14 points."
+                "description": "Cost reduced from 18 to 14 points."
             },
             {
 				"date": "19 July 2024",
@@ -9030,11 +9076,15 @@
         "history": [
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 20 to 15 points."
+                "description": "Cost reduced from 20 to 15 points."
             },
             {
 				"date": "19 July 2024",
 				"description": "Cost increased from 15 to 17 points. Gained requirement for core rank only."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 17 to 20 points."
 			}
         ]
     },
@@ -9060,11 +9110,15 @@
         "history": [
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 20 to 18 points."
+                "description": "Cost reduced from 20 to 18 points."
             },
             {
 				"date": "19 July 2024",
 				"description": "Cost increased from 18 to 22 points. Upgrade type changed from personnel to squad leader."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 22 to 30 points."
 			}
         ]
     },
@@ -9091,7 +9145,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 8 to 6 points."
-            }
+            },
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 6 to 9 points."
+			}
         ]
     },
     "of": {
@@ -9112,6 +9170,13 @@
                 "faction": "separatists",
                 "cardSubtype": "droid trooper"
             }
+        ],
+        "history": [
+            
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 12 to 22 points."
+			}
         ]
     },
     "og": {
@@ -9215,6 +9280,10 @@
             {
 				"date": "19 July 2024",
 				"description": "Cost reduced from 200 to 180 points. Gained Deflect keyword and Guidance keyword was changed to Trooper."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost reduced from 180 to 170 points."
 			}
         ]
     },
@@ -10450,6 +10519,12 @@
             {
                 "cardSubtype": "ground vehicle"
             }
+        ],
+        "history": [
+            {
+				"date": "6 November 2024",
+				"description": "Cost reduced from 5 to 3 points."
+			}
         ]
     },
     "qm": {
@@ -10471,6 +10546,12 @@
             {
                 "cardSubtype": "ground vehicle"
             }
+        ],
+        "history": [
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 5 to 8 points."
+			}
         ]
     },
     "qn": {
@@ -10490,6 +10571,12 @@
             {
                 "cardSubtype": "ground vehicle"
             }
+        ],
+        "history": [
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 5 to 8 points."
+			}
         ]
     },
     "qo": {
@@ -14285,6 +14372,12 @@
         "equip": [
             "xk",
             "xl"
+        ],
+        "history": [
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 75 to 90 points."
+			}
         ]
     },
 	"xk": {
@@ -14388,6 +14481,12 @@
         "speed": 2,
         "equip": [
             "xl"
+        ],
+        "history": [
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 100 to 105 points."
+			}
         ]
     },
 	"xq": {
