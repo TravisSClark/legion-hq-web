@@ -8,10 +8,10 @@ import urls from 'constants/urls';
 import factions from 'constants/factions';
 import cards from 'constants/cards';
 
-function findFirstCommanderId (list) {
+function findFirstCardId (list) {
   for (let i = 0; i < list.units.length; i++) {
     const card = cards[list.units[i].unitId];
-    if (card.rank === 'commander') return card.id;
+    return card.id;
   }
   return undefined;
 }
@@ -28,11 +28,11 @@ function ListChip({ userList, deleteUserList }) {
         secondary: { main: factions[userList.faction].secondaryColor }
       }
     });
-    const card = cards[findFirstCommanderId(userList)];
+    const card = cards[findFirstCardId(userList)];
     return (
       <React.Fragment>
         <ThemeProvider theme={factionTheme}>
-          <Badge max={10000} color="secondary" badgeContent={userList.pointTotal}>
+          <Badge max={10000} color="secondary">
             <Chip
               clickable
               color="primary"
