@@ -153,11 +153,38 @@ function NavigationDrawer() {
         </List>
         <Divider />
         <List dense={true}>
-          <ListItem button onClick={() => window.open("https://legionquickguide.com/", "_blank", "noopener noreferrer")}>
+          <ListItem button onClick={() => window.open(" https://www.atomicmassgames.com/swlegiondocs/", "_blank", "noopener noreferrer")}>
             <ListItemIcon>
               <LaunchIcon />
             </ListItemIcon>
-            <ListItemText primary="Legion Quick Guide" />
+            <ListItemText primary="AMG Legion Docs" />
+          </ListItem>
+          <ListItem button onClick={() => window.open("https://legion.longshanks.org/", "_blank", "noopener noreferrer")}>
+            <ListItemIcon>
+              <LaunchIcon />
+            </ListItemIcon>
+            <ListItemText primary="Longshanks" />
+          </ListItem>
+        </List>
+        <Divider />
+        <List dense={true}>
+          <ListItem button onClick={() => window.open("https://www.youtube.com/@crit2block", "_blank", "noopener noreferrer")}>
+            <ListItemIcon>
+              <LaunchIcon />
+            </ListItemIcon>
+            <ListItemText primary="Crit2Block YouTube" />
+          </ListItem>
+          <ListItem button onClick={() => window.open("https://www.crit2block.com/blog", "_blank", "noopener noreferrer")}>
+            <ListItemIcon>
+              <LaunchIcon />
+            </ListItemIcon>
+            <ListItemText primary="Carolina Holocronicles" />
+          </ListItem>
+          <ListItem button onClick={() => window.open("https://www.youtube.com/@kokozula", "_blank", "noopener noreferrer")}>
+            <ListItemIcon>
+              <LaunchIcon />
+            </ListItemIcon>
+            <ListItemText primary="Kokozula YouTube" />
           </ListItem>
         </List>
       </div>
