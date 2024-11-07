@@ -10,17 +10,13 @@ function countPoints(list) {
   list.pointTotal = 0;
   list.units.forEach((unit, unitIndex) => {
     const unitCard = cards[unit.unitId];
-    if (list.isUsingOldPoints) {
-      unit.totalUnitCost = unitCard.prevCost ? unitCard.prevCost : unitCard.cost;
-    } else unit.totalUnitCost = unitCard.cost;
+    unit.totalUnitCost = unitCard.cost;
     
     unit.upgradeInteractions = {};
-    unit.upgradesEquipped.forEach((upgradeId, upgradeIndex) => {
+    unit.upgradesEquipped.forEach((upgradeId) => {
       if (upgradeId) {
         const upgradeCard = cards[upgradeId];
-        if (list.isUsingOldPoints) {
-          unit.totalUnitCost += upgradeCard.prevCost ? upgradeCard.prevCost : upgradeCard.cost;
-        } else unit.totalUnitCost += upgradeCard.cost;
+        unit.totalUnitCost += upgradeCard.cost;
         if (upgradeId in interactions.upgradePoints) {
           const interaction = interactions.upgradePoints[upgradeId];
           if (interaction.isConditionMet(list, unit)) {
@@ -32,16 +28,12 @@ function countPoints(list) {
     });
     if(unit.counterpart){
       const counterpartCard = cards[unit.counterpart.counterpartId];
-      if (list.isUsingOldPoints) {
-        unit.counterpart.totalUnitCost = counterpartCard.prevCost ? counterpartCard.prevCost : counterpartCard.cost;
-      } else unit.counterpart.totalUnitCost = counterpartCard.cost;
+      unit.counterpart.totalUnitCost = counterpartCard.cost;
 
       unit.counterpart.upgradesEquipped.forEach(upgradeId => {
         if (upgradeId) {
           const upgradeCard = cards[upgradeId];
-          if (list.isUsingOldPoints) {
-            unit.counterpart.totalUnitCost += upgradeCard.prevCost ? upgradeCard.prevCost : upgradeCard.cost;
-          } else unit.counterpart.totalUnitCost += upgradeCard.cost;
+          unit.counterpart.totalUnitCost += upgradeCard.cost;
         }
       });
      
@@ -53,12 +45,6 @@ function countPoints(list) {
   });
 
   return list;
-}
-
-function toggleUsingOldPoints(list) {
-  if (!list.isUsingOldPoints) list.isUsingOldPoints = true;
-  else list.isUsingOldPoints = false;
-  return countPoints(list);
 }
 
 function rehashList(list) {
@@ -273,17 +259,9 @@ function generateTournamentText(
   }
 
   let battleDeck = '';
-
-  if(list.isUsingOldPoints){
-    battleDeck += printMissionCards(list.objectiveCards, "Objectives");
-    battleDeck += printMissionCards(list.deploymentCards, "Deployments");
-    battleDeck += printMissionCards(list.conditionCards, "Conditions");
-  }
-  else{
-    battleDeck += printMissionCards(list.primaryCards, "Objectives");
-    battleDeck += printMissionCards(list.secondaryCards, "Secondaries");
-    battleDeck += printMissionCards(list.advantageCards, "Advantages");
-  }
+  battleDeck += printMissionCards(list.primaryCards, "Objectives");
+  battleDeck += printMissionCards(list.secondaryCards, "Secondaries");
+  battleDeck += printMissionCards(list.advantageCards, "Advantages");
 
   if(battleDeck.length > 0){
     battleDeck = `\nBattle Deck\n` + battleDeck;
@@ -389,16 +367,9 @@ function generateHTMLText(
   }
 
   let battleDeck = '';
-  if(list.isUsingOldPoints){
-    battleDeck += generateMissionCardHTML(list.objectiveCards, "Objectives");
-    battleDeck += generateMissionCardHTML(list.deploymentCards, "Deployments");
-    battleDeck += generateMissionCardHTML(list.conditionsCards, "Conditions");
-  }else{
-    battleDeck += generateMissionCardHTML(list.primaryCards, "Primaries");
-    battleDeck += generateMissionCardHTML(list.secondaryCards, "Secondaries");
-    battleDeck += generateMissionCardHTML(list.advantageCards, "Advantages");
-
-  }
+  battleDeck += generateMissionCardHTML(list.primaryCards, "Primaries");
+  battleDeck += generateMissionCardHTML(list.secondaryCards, "Secondaries");
+  battleDeck += generateMissionCardHTML(list.advantageCards, "Advantages");
   
   if(battleDeck.length > 0){
     battleDeck =  `<br>Battle Deck<br>` + battleDeck;
@@ -630,12 +601,8 @@ function appendMissionTTSJSON(cardList, ttsArray){
   }
 
   // TODO - TTS still uses the old names for battle cards
-  // if(list.isUsingOldPoints){
     ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };
-  // } else{
-  //     // TODO - check new TTS standard
-  //   ttsJSON.battlefieldDeck = { objective: [], secondary: [], advantage: [] };
-  // }
+    // ttsJSON.battlefieldDeck = { objective: [], secondary: [], advantage: [] };
   if (list.mode === "500-point mode") {
     ttsJSON.battlefieldDeck.scenario =  "skirmish";
   } else if (list.mode.includes("storm tide")) {
@@ -644,20 +611,13 @@ function appendMissionTTSJSON(cardList, ttsArray){
     ttsJSON.battlefieldDeck.scenario =  "standard";
   }
 
-  if(list.isUsingOldPoints){
-    appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
-    appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.deployment);
-    appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.conditions);
-  } else{
-    // TODO - map the 'new' obj cards to the card type names TTS wants
-    appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.deployment);
-    appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.objective);
-    appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.conditions);
-
-    // appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
-    // appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.secondary);
-    // appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.advantage);
-  }
+  // TODO - map the 'new' obj cards to the card type names TTS wants
+  appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.deployment);
+  appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.objective);
+  appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.conditions);
+  // appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
+  // appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.secondary);
+  // appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.advantage);
 
   return JSON.stringify(ttsJSON, null, 4);
 }
@@ -1200,15 +1160,7 @@ function addCommand(list, commandId) {
 }
 
 function addBattle(list, type, id) {
-  if (type === 'objective') {
-    list.objectiveCards.push(id);
-  } else if (type === 'deployment') {
-    list.deploymentCards.push(id);
-  } else if (type === 'condition') {
-    list.conditionCards.push(id);
-  }
-
-  else if (type === 'primary') {
+  if (type === 'primary') {
     list.primaryCards.push(id);
   } else if (type === 'secondary') {
     list.secondaryCards.push(id);
@@ -1219,13 +1171,7 @@ function addBattle(list, type, id) {
 }
 
 function removeBattle(list, type, index) {
-  if (type === 'objective') {
-    list.objectiveCards = deleteItem(list.objectiveCards, index);
-  } else if (type === 'deployment') {
-    list.deploymentCards = deleteItem(list.deploymentCards, index);
-  } else if (type === 'condition') {
-    list.conditionCards = deleteItem(list.conditionCards, index);
-  }else if (type === 'primary') {
+  if (type === 'primary') {
     list.primaryCards = deleteItem(list.primaryCards, index);
   } else if (type === 'secondary') {
     list.secondaryCards = deleteItem(list.secondaryCards, index);
@@ -1262,10 +1208,7 @@ function getEligibleBattlesToAdd(list, type) {
   // const cardsById = cardIdsByType.battle; //Object.keys(cards);
 
   let currentCards;
-  if (type === 'objective') currentCards = list.objectiveCards;
-  else if (type === 'deployment') currentCards = list.deploymentCards;
-  else if (type === 'condition') currentCards = list.conditionCards;
-  else if (type === 'primary') currentCards = list.primaryCards;
+  if (type === 'primary') currentCards = list.primaryCards;
   else if (type === 'secondary') currentCards = list.secondaryCards;
   else if (type === 'advantage') currentCards = list.advantageCards;
   else return;
@@ -1421,11 +1364,6 @@ function getEquippableUpgrades(
     if (faction === 'rebels' || faction === 'republic') unitCard['light side'] = true;
     // TODO this line breaks stuff if we get a light-side merc bf
     else if (faction === 'separatists' || faction === 'empire' || faction === 'mercenary') unitCard['dark side'] = true;
-
-    if (unitCard.keywords.includes('Tempted') && list.isUsingOldPoints) {
-      unitCard['light side'] = true;
-      unitCard['dark side'] = true;
-    }
 
     if (
       unitCard.id in interactions.eligibility &&
@@ -1763,17 +1701,11 @@ function convertHashToList(faction, url) {
         } else {
           list.contingencies.push(cardId);
         }
-      } else if (card.cardSubtype === 'objective') {
-        list.objectiveCards.push(cardId);
-      } else if (card.cardSubtype === 'deployment') {
-        list.deploymentCards.push(cardId);
-      } else if (card.cardSubtype === 'condition') {
-        list.conditionCards.push(cardId);
-      }else if (card.cardSubtype === 'primary') {
+      } else if (card.cardSubtype === 'primary') {
         list.primaryCards.push(cardId);
-      }else if (card.cardSubtype === 'secondary') {
+      } else if (card.cardSubtype === 'secondary') {
         list.secondaryCards.push(cardId);
-      }else if (card.cardSubtype === 'advantage') {
+      } else if (card.cardSubtype === 'advantage') {
         list.advantageCards.push(cardId);
       }
     });
@@ -2109,7 +2041,6 @@ function validateList(currentList){
 }
 
 export {
-  toggleUsingOldPoints,
   rehashList,
   convertHashToList,
   changeListTitle,

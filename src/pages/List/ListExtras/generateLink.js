@@ -43,15 +43,10 @@ function generateLink(list) {
   if (list.contingencies)
     list.contingencies.forEach(commandId => urlStrings.push(commandId));
 
-  if(list.isUsingOldPoints){
-    list.objectiveCards.forEach(i => urlStrings.push(i));
-    list.deploymentCards.forEach(i => urlStrings.push(i));
-    list.conditionCards.forEach(i => urlStrings.push(i));
-  }else{
-    list.primaryCards.forEach(i => urlStrings.push(i));
-    list.secondaryCards.forEach(i => urlStrings.push(i));
-    list.advantageCards.forEach(i => urlStrings.push(i));
-  }
+  list.primaryCards.forEach(i => urlStrings.push(i));
+  list.secondaryCards.forEach(i => urlStrings.push(i));
+  list.advantageCards.forEach(i => urlStrings.push(i));
+  
   if (list.battleForce) {
     let bf = battleForcesDict[list.battleForce];
 
