@@ -165,6 +165,12 @@ function NavigationDrawer() {
             </ListItemIcon>
             <ListItemText primary="Longshanks" />
           </ListItem>
+          <ListItem button onClick={() => window.open("https://legionquickguide.com/", "_blank", "noopener noreferrer")}>
+            <ListItemIcon>
+              <LaunchIcon />
+            </ListItemIcon>
+            <ListItemText primary="Legion Quick Guide" />
+          </ListItem>
         </List>
         <Divider />
         <List dense={true}>
