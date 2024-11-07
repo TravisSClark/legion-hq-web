@@ -1091,7 +1091,7 @@ function isRequirementsMet(requirements, unitCard) {
   }else if (operator === 'NOT') {
     return !_.isMatch(unitCard, requirements[1]);
   }
-  else if(operator == 'AND'){
+  else if(operator === 'AND'){
     for(let i=1; i< requirements.length; i++){
       if (requirements[i] instanceof Array){
         if(!isRequirementsMet(requirements[i], unitCard))
@@ -1426,7 +1426,7 @@ function validateUpgrades(list, unitIndex){
   if(card.flexResponse){
     let heavyCount = 0;
     unit.upgradesEquipped.forEach((id)=>{
-      if(id == null)
+      if(id === null)
         return;
       const equipCard = cards[id];
       if(equipCard.cardSubtype === 'heavy weapon'){
@@ -1453,7 +1453,7 @@ function validateUpgrades(list, unitIndex){
   if(card.keywords.includes("Heavy Weapon Team")){
     let hasHeavy = false;
     unit.upgradesEquipped.forEach((id)=>{
-      if(id == null)
+      if(id === null)
         return;
       const equipCard = cards[id];
       if(equipCard.cardSubtype === 'heavy weapon'){
@@ -1469,7 +1469,7 @@ function validateUpgrades(list, unitIndex){
   if(card.keywords.includes("Programmed")){
     let hasProto = false;
     unit.upgradesEquipped.forEach((id)=>{
-      if(id == null)
+      if(id === null)
         return;
       const equipCard = cards[id];
       if(equipCard.cardSubtype === 'protocol'){
@@ -1647,13 +1647,13 @@ function convertHashToList(faction, url) {
 
     if(points){
       idx++;
-      let mode = Object.getOwnPropertyNames(legionModes).find(n => legionModes[n].maxPoints == points);
+      let mode = Object.getOwnPropertyNames(legionModes).find(n => legionModes[n].maxPoints === points);
       if(mode){
         list.mode = mode;
       }
     }
 
-    let bfCode = Object.getOwnPropertyNames(battleForcesDict).find(k=>battleForcesDict[k].linkId == segments[idx]);
+    let bfCode = Object.getOwnPropertyNames(battleForcesDict).find(k=>battleForcesDict[k].linkId === segments[idx]);
     if(bfCode){
       list.battleForce = bfCode;
     }
@@ -1853,7 +1853,7 @@ function rankValidation(currentList, ranks, mercs, rankReqs){
 
   // TODO this is ugly - probably should be a BF flag
   const battleForce = battleForcesDict[currentList.battleForce];
-  const countMercs = battleForce?.rules?.countMercs; // currentList.battleForce === "Shadow Collective" || currentList.battleForce == "Bright Tree Village"
+  const countMercs = battleForce?.rules?.countMercs; // currentList.battleForce === "Shadow Collective" || currentList.battleForce === "Bright Tree Village"
 
   if(rankReqs.commOp && (ranks.commander + ranks.operative) > rankReqs.commOp
     && !(ranks.commander > rankReqs.commander || ranks.operative > rankReqs.operative)){
