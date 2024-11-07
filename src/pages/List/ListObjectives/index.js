@@ -13,8 +13,7 @@ function ListObjectives() {
     currentList,
     setCardPaneFilter,
     handleRemoveBattle,
-    handleCardZoom,
-    userSettings
+    handleCardZoom
   } = React.useContext(ListContext);
   const chipStyle = { marginRight: 4, marginBottom: 4 };
 

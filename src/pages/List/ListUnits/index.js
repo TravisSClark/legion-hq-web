@@ -12,7 +12,6 @@ function ListUnits() {
     setCardPaneFilter,
     handleUnequipUpgrade,
     handleCardZoom,
-    handleRemoveCounterpart,
   } = React.useContext(ListContext);
 
   const items = currentList.units.map((unit, unitIndex) => {
@@ -35,7 +34,7 @@ function ListUnits() {
       // Show counterpart add icon(s) if unit has one and not already in list
       if (!currentList.uniques.includes(counterpartId)){
         // general case (not IG-11) & Special case for IG-11 (tj) + 'Nanny Programming' (tp)
-        if(unit.unitId != 'tj' || unit.unitId == 'tj' && currentList.uniques.includes('tp')){
+        if(unit.unitId !== 'tj' || (unit.unitId === 'tj' && currentList.uniques.includes('tp'))){
           addCounterpartHandler = () => setCardPaneFilter({
             action: 'COUNTERPART', unitIndex, counterpartId
           });

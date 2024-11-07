@@ -33,8 +33,7 @@ import {
   getEquippableLoadoutUpgrades,
   getEligibleBattlesToAdd,
   validateList,
-  getRankLimits,
-  checkBattleforceUnits
+  getRankLimits
 } from 'constants/listOperations';
 import listTemplate from 'constants/listTemplate';
 

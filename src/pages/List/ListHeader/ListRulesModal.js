@@ -110,7 +110,7 @@ function RankLimits({list}){
   return <div style={{ marginLeft:10}}>
     { Object.getOwnPropertyNames(rankReqs).map(r=>{ 
       
-      if(r == 'commOp'){
+      if (r === 'commOp'){
         return <div className={classes.row} style={{marginBottom:5}}>
             <Avatar
               alt={'CMDR'}
