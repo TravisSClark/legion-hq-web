@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import UnitAvatar from 'common/UnitAvatar';
 import CardName from 'common/CardName';
 import UnitPoints from 'common/UnitPoints';
 import UnitActions from './UnitActions';
 import UnitUpgrades from './UnitUpgrades';
+import UnitContext from 'context/UnitContext';
+import ListContext from 'context/ListContext';
 
 const useStyles = makeStyles(theme => ({
   unitRow: {
@@ -31,47 +33,30 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function CounterpartUnit({
-  counterpart,
-  counterpartId,
-  counterpartCard,
-  unitIndex,
-  handleCardZoom,
-  zoomUpgradeHandlers,
-  swapUpgradeHandlers,
-  addUpgradeHandlers,
-  deleteUpgradeHandlers,
-  changeLoadoutHandlers,
-  deleteLoadoutHandlers,
-}) {
+function CounterpartUnit() {
   const classes = useStyles();
+
+  const {unit, unitCard, unitIndex} = useContext(UnitContext);
+  const {handleCardZoom} = useContext(ListContext);
+
   return (
     <div className={classes.unitRow}>
       <div className={classes.leftCell}>
         <UnitAvatar
             key="avatar"
-            id={counterpartId}
-            handleClick={handleCardZoom}
+            id={unitCard.id}
+            handleClick={() => handleCardZoom(unitCard.id)}
         />      
       </div>
       <div className={classes.middleCell}>
-        <CardName key="name" id={counterpartId} />      
+        <CardName key="name" id={unitCard.id} />      
         <UnitUpgrades
           key="upgrades"
-          upgradesEquipped={counterpart.upgradesEquipped}
-          totalUpgradeBar={counterpartCard.upgradeBar}
-          loadoutUpgrades={counterpart.loadoutUpgrades}
-          zoomUpgradeHandlers={zoomUpgradeHandlers}
-          swapUpgradeHandlers={swapUpgradeHandlers}
-          addUpgradeHandlers={addUpgradeHandlers}
-          deleteUpgradeHandlers={deleteUpgradeHandlers}
-          changeLoadoutHandlers={changeLoadoutHandlers}
-          deleteLoadoutHandlers={deleteLoadoutHandlers}
         />
       </div>
       <div className={classes.rightCell}>
-        <UnitPoints key="points" unit={counterpart} parentheses={true}/>
-        <UnitActions unit={counterpart} unitIndex={unitIndex} isCounterpart={true}/>
+        <UnitPoints key="points" unit={unit} parentheses={true}/>
+        <UnitActions unit={unit} unitIndex={unitIndex} isCounterpart={true}/>
       </div>
     </div>
   );

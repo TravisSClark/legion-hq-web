@@ -1,26 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import AddCounterpartButton from './AddCounterpartButton';
 import AddUpgradeButton from './AddUpgradeButton';
 import UpgradeChip from './UpgradeChip';
+import ListContext from 'context/ListContext';
+import UnitContext from 'context/UnitContext';
 
 function UnitUpgrades({
   counterpartId,
-  upgradesEquipped,
-  upgradeInteractions,
-  totalUpgradeBar,
-  loadoutUpgrades,
   addCounterpartHandler,
-  zoomUpgradeHandlers,
-  swapUpgradeHandlers,
-  addUpgradeHandlers,
-  deleteUpgradeHandlers,
-  changeLoadoutHandlers,
-  deleteLoadoutHandlers
 }) {
+
+  const {unit, unitIndex, unitCard, totalUpgradeBar, actionPrefix} = useContext(UnitContext);
   const addCounterpartButtons = [];
   const addUpgradesButtons = [];
   const upgradeChips = [];
-  const hasLoadout = loadoutUpgrades ? loadoutUpgrades.length > 0 : false;
+  const hasLoadout = unit.loadoutUpgrades ? unit.loadoutUpgrades.length > 0 : false;
+
+  const {setCardPaneFilter, handleCardZoom} = useContext(ListContext);
+
   if (addCounterpartHandler) {
     addCounterpartButtons.push(
       <AddCounterpartButton
@@ -30,19 +27,18 @@ function UnitUpgrades({
       />
     );
   }
-  upgradesEquipped.forEach((upgradeId, upgradeIndex) => {
+  unit.upgradesEquipped.forEach((upgradeId, upgradeIndex) => {
+    const upgradeType = totalUpgradeBar[upgradeIndex];
+
     if (upgradeId) {
       upgradeChips.push(
         <UpgradeChip
+          unitIndex={unitIndex}
+          upgradeIndex={upgradeIndex}
           key={upgradeId}
           upgradeId={upgradeId}
-          upgradeInteractions={upgradeInteractions}
-          loadoutId={hasLoadout ? loadoutUpgrades[upgradeIndex] : undefined}
-          handleClick={zoomUpgradeHandlers[upgradeIndex]}
-          handleSwap={swapUpgradeHandlers[upgradeIndex]}
-          handleDelete={deleteUpgradeHandlers[upgradeIndex]}
-          handleChangeLoadout={changeLoadoutHandlers[upgradeIndex]}
-          handleDeleteLoadout={deleteLoadoutHandlers[upgradeIndex]}
+          loadoutId={hasLoadout ? unit.loadoutUpgrades[upgradeIndex] : undefined}
+          handleClick={() => handleCardZoom(upgradeId)}
         />
       );
     } else {
@@ -50,7 +46,19 @@ function UnitUpgrades({
         <AddUpgradeButton
           key={`${totalUpgradeBar[upgradeIndex]}_${upgradeIndex}`}
           type={totalUpgradeBar[upgradeIndex]}
-          handleClick={addUpgradeHandlers[upgradeIndex]}
+          // handleClick={addUpgradeHandlers[upgradeIndex]}
+          handleClick={
+            () =>{ 
+              setCardPaneFilter({
+                action: actionPrefix + '_UPGRADE',
+                upgradeType, unitIndex, upgradeIndex,
+                hasUniques: unit.hasUniques,
+                unitId: unitCard.id,
+                upgradesEquipped: unit.upgradesEquipped,
+                additionalUpgradeSlots: unit.additionalUpgradeSlots
+              })
+          }
+          }
         />
       );
     }
