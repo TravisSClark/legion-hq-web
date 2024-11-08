@@ -20,3 +20,6 @@ function CardChip({ size = 'small', type, value }) {
 };
 
 export default CardChip;
+
+export {SpeedChip, SurgeChips, DefenseChip, PointsChip, StatChip};
+
