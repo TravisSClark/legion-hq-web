@@ -10,7 +10,6 @@ function UnitUpgrades({
   totalUpgradeBar,
   loadoutUpgrades,
   addCounterpartHandler,
-  removeCounterpartHandler,
   zoomUpgradeHandlers,
   swapUpgradeHandlers,
   addUpgradeHandlers,

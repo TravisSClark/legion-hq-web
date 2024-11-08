@@ -192,6 +192,8 @@ export function ListProvider({
     const unit = currentList.units[unitIndex];
     let applyFilter; let nextAvailIndex; let nextAvailType;
     if (isApplyToAll || unit.count === 1) {
+
+      // TODO grabnar - prevent isApplyToAll if upgrade is unique
       let i = (upgradeIndex + 1) % unit.upgradesEquipped.length;
       let numUpgradesEquipped = 0;
 

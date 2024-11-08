@@ -130,7 +130,6 @@ function RankLimits({list}){
       if(rankReqs[r][1] > 0){
         
         let bf  = battleForcesDict[list.battleForce];
-        console.log("BF: '" + list.battleForce+"'");
         let unitLinks = null;
         if(bf){
 

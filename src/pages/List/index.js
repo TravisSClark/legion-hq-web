@@ -5,7 +5,7 @@ import { ErrorBoundary } from 'react-error-boundary'
 import ErrorFallback from 'common/ErrorFallback';
 import ListLayout from './ListLayout';
 
-function List({ width, slug, listHash, storedLists, updateStoredList }) {
+function MainListPage({ width, slug, listHash, storedLists, updateStoredList }) {
   return (
     <ListProvider
       width={width}
@@ -21,4 +21,4 @@ function List({ width, slug, listHash, storedLists, updateStoredList }) {
   );
 }
 
-export default withWidth()(List);
+export default withWidth()(MainListPage);
