@@ -1,6 +1,6 @@
 import React from 'react';
 import SpeedChip from './SpeedChip';
-import SurgeChips from './SurgeChips';
+import SurgeChip from './SurgeChips';
 import DefenseChip from './DefenseChip';
 import PointsChip from './PointsChip';
 import StatChip from './StatChip';
@@ -9,7 +9,7 @@ function CardChip({ size = 'small', type, value }) {
   if (type === 'speed') {
     return <SpeedChip size={size} speed={value} />;
   } else if (type === 'surge' || type === 'surges') {
-    return <SurgeChips size={size} surges={value} />;
+    return <SurgeChip size={size} surges={value} />;
   } else if (type === 'defense') {
     return <DefenseChip size={size} color={value} />;
   } else if (type === 'points') {
@@ -21,5 +21,5 @@ function CardChip({ size = 'small', type, value }) {
 
 export default CardChip;
 
-export {SpeedChip, SurgeChips, DefenseChip, PointsChip, StatChip};
+export {SpeedChip, SurgeChip, DefenseChip, PointsChip, StatChip};
 

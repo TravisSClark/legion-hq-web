@@ -17,7 +17,7 @@ import {
   Add as AddIcon,
   ExpandMore as ExpandMoreIcon
 } from '@material-ui/icons';
-import CardChip from 'common/CardChip';
+import {DefenseChip, PointsChip, SpeedChip, StatChip, SurgeChip} from 'common/CardChip';
 import KeywordChips from 'common/KeywordChips';
 import CardIcon from 'common/CardIcon';
 import IconBadge from 'common/IconBadge';
@@ -216,7 +216,7 @@ function CounterpartCardContent({ card, chipSize }) {
           Cost
         </Typography>
         <div style={{ flexGrow: 1 }} />
-        <CardChip type="points" value={cost} size={chipSize} />
+        <PointsChip value={cost} size={chipSize} />
       </ReverseWrapper>
       <Divider style={{ marginBottom: 4 }} />
       <ReverseWrapper>
@@ -224,7 +224,7 @@ function CounterpartCardContent({ card, chipSize }) {
           Stats
         </Typography>
         <div style={{ flexGrow: 1 }} />
-        <CardChip type="wounds" value={wounds} size={chipSize} />
+        <StatChip type="wounds" value={wounds} size={chipSize} />
       </ReverseWrapper>
     </CardContent>
   );
@@ -273,7 +273,7 @@ function UpgradeCardContent({ card, chipSize }) {
           Cost
         </Typography>
         <div style={{ flexGrow: 1 }} />
-        <CardChip type="points" value={cost} size={chipSize} />
+        <PointsChip value={cost} size={chipSize} />
       </ReverseWrapper>
     </CardContent>
   );
@@ -295,7 +295,7 @@ function UnitCardContent({ card, chipSize }) {
       <ReverseWrapper>
         <Typography variant="body2" color="textSecondary">Cost</Typography>
         <div style={{ flexGrow: 1 }} />
-        <CardChip type="points" value={cost} size={chipSize} />
+        <PointsChip value={cost} size={chipSize} />
       </ReverseWrapper>
       <Divider style={{ marginBottom: 4 }} />
       <ReverseWrapper>
@@ -303,15 +303,15 @@ function UnitCardContent({ card, chipSize }) {
           Stats
         </Typography>
         <div style={{ flexGrow: 1 }} />
-        <CardChip type="wounds" value={wounds} size={chipSize} />
+        <StatChip type="wounds" value={wounds} size={chipSize} />
         {resilience ? (
-          <CardChip type="resilience" value={resilience} size={chipSize} />
+          <StatChip type="resilience" value={resilience} size={chipSize} />
         ) : (
-          <CardChip type="courage" value={courage} size={chipSize} />
+          <StatChip type="courage" value={courage} size={chipSize} />
         )}
-        <CardChip type="speed" value={speed} size={chipSize} />
-        <CardChip type="defense" value={defense} size={chipSize} />
-        <CardChip type="surges" value={surges} size={chipSize} />
+        <SpeedChip value={speed} size={chipSize} />
+        <DefenseChip type="defense" value={defense} size={chipSize} />
+        <SurgeChip type="surges" value={surges} size={chipSize} />
       </ReverseWrapper>
       <Divider style={{ marginBottom: 4 }} />
       <ReverseWrapper>

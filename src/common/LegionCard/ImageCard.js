@@ -12,7 +12,7 @@ import {
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
-import CardChip from 'common/CardChip';
+import { PointsChip } from 'common/CardChip';
 import KeywordChips from 'common/KeywordChips';
 import urls from 'constants/urls';
 import UpgradeBar from '../UpgradeBar';
@@ -74,7 +74,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
         </CardActionArea>
         <CardActions disableSpacing>
           <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
-            {(cost || cost === 0) && <CardChip type="points" value={cost} size={chipSize} />}
+            {(cost || cost === 0) && <PointsChip value={cost} size={chipSize} />}
             {(cardType == "unit" || cardType == "counterpart") &&
             <UpgradeBar upgradeBar={upgradeBar} iconHeight={20}/>}
           </div>
