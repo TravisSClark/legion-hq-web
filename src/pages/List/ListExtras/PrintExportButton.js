@@ -3,7 +3,7 @@ import QRCode from 'qrcode.react';
 import { useReactToPrint } from 'react-to-print';
 import { Chip, Menu, MenuItem } from '@material-ui/core';
 import { Print as PrintIcon } from '@material-ui/icons';
-import { generateTournamentText } from 'constants/listOperations';
+import { generateTournamentText } from 'constants/listExporters';
 import generateLink from './generateLink';
 import cards from 'constants/cards';
 import urls from 'constants/urls'

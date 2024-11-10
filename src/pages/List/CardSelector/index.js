@@ -8,12 +8,14 @@ import StackController from './StackController';
 import ToggleButton from './ToggleButton';
 import ChipCard from 'common/LegionCard/ChipCard';
 import cards from 'constants/cards';
+import listReducer from 'constants/listReducer';
 
 function Title({ title }) {
   return <Typography variant="body2">{title}</Typography>;
 }
 
 function CardSelector() {
+
   const {
     currentList,
     cardPaneFilter,
@@ -45,11 +47,13 @@ function CardSelector() {
   let selectorIds = {validIds:[], invalidIds:[]};
   const { action } = cardPaneFilter;
 
+  const [list, dispatch] = useReducer(listReducer, currentList);
+
   switch(action){
     case 'UNIT':
       selectorIds.validIds = getEligibleUnitsToAdd(currentList, cardPaneFilter.rank, userSettings);
       selectorIds.invalidIds = [];
-      clickHandler = (unitId) => handleAddUnit(unitId);
+      clickHandler = (unitId) => handleAddUnit(unitId); // dispatch({type:'addUnit', unitId, stackSize:1});
       header = (
         <StackController
           stackSize={stackSize}

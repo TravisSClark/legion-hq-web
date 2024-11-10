@@ -6,14 +6,8 @@ import interactions from 'constants/cardInteractions';
 import listTemplate from 'constants/listTemplate';
 import battleForcesDict from 'constants/battleForcesDict';
 
-// TODO - maybe shift these into separate downstream imports... fine for now
-import{
-  generateTTSJSONText,
-  generateTournamentText,
-  generateStandardText,
-  generateMinimalText,
-  generateHTMLText,
-} from './listExporters';
+
+
 
 function countPoints(list) {
   list.pointTotal = 0;
@@ -1566,12 +1560,6 @@ export {
   getEligibleUnitsToAdd,
   getEquippableUpgrades,
   getEquippableLoadoutUpgrades,
-  // Imported from listExporter.js
-  generateTTSJSONText,
-  generateTournamentText,
-  generateStandardText,
-  generateMinimalText,
-  generateHTMLText,
   validateList,
   getRankLimits,
   getOriginalRankLimits,

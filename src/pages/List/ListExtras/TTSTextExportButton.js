@@ -11,7 +11,7 @@ import {
 } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import { Description as TextIcon } from '@material-ui/icons';
-import { generateTTSJSONText } from 'constants/listOperations';
+import { generateTTSJSONText } from 'constants/listExporters';
 import DialogModal from './DialogModal';
 import ClipboardButton from './ClipboardButton';
 

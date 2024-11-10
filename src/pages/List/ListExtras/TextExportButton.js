@@ -16,7 +16,7 @@ import {
   generateMinimalText,
   generateTournamentText,
   generateHTMLText
-} from 'constants/listOperations';
+} from 'constants/listExporters';
 import HtmlListText from './HtmlListText';
 import DialogModal from './DialogModal';
 import ClipboardButton from './ClipboardButton';
@@ -56,7 +56,7 @@ function DialogContent({
           <Tab label="Standard" />
           <Tab label="Minimal" />
           <Tab label="Tournament" />
-          <Tab label="Tabletop.to (HTML)" />
+          {/* <Tab label="Tabletop.to (HTML)" /> */}
         </Tabs>
       </AppBar>
       <TabPanel value="standard" index={0}>
@@ -68,9 +68,9 @@ function DialogContent({
       <TabPanel value="tournament" index={2}>
         Tournament
       </TabPanel>
-      <TabPanel value="tournament" index={3}>
+      {/* <TabPanel value="tournament" index={3}>
         Tabletop.to
-      </TabPanel>
+      </TabPanel> */}
       <div style={{ marginTop: 16 }} />
       <TextField
         multiline
