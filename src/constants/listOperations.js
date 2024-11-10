@@ -95,7 +95,7 @@ function rehashList(list) {
  * @returns 
  */
  // TODO need to specialize this; should at least be a on-upgrade and on-unit fire, not this whole big thing
-function consolidate(list) {
+ function consolidate(list) {
   let hasContingencyKeyword = false;
   list.hasFieldCommander = false;
   list.commanders = [];
@@ -177,26 +177,6 @@ function consolidate(list) {
   if (!hasContingencyKeyword) list.contingencies = [];
   list.commandCards = sortCommandIds(list.commandCards);
   return countPoints(list);
-}
-
-function getNumActivations(list) {
-  return list.units.reduce((num, unit) => {
-    num += unit.count;
-    return num;
-  }, 0);
-}
-
-function printMissionCards(missionArray, label){
-  
-  if (missionArray.length > 0) {
-    let objectives = label + ':\n';
-    missionArray.forEach((id, i) => {
-        const card = cards[id];
-        objectives += ` - ${card.cardName}\n`;
-    });
-    return objectives;
-  }
-  return '';
 }
 
 
@@ -1586,6 +1566,7 @@ export {
   getEligibleUnitsToAdd,
   getEquippableUpgrades,
   getEquippableLoadoutUpgrades,
+  // Imported from listExporter.js
   generateTTSJSONText,
   generateTournamentText,
   generateStandardText,

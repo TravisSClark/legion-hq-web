@@ -1,3 +1,26 @@
+import cards from "./cards";
+import legionModes from "./legionModes";
+
+function printMissionCards(missionArray, label){
+  
+  if (missionArray.length > 0) {
+    let objectives = label + ':\n';
+    missionArray.forEach((id, i) => {
+        const card = cards[id];
+        objectives += ` - ${card.cardName}\n`;
+    });
+    return objectives;
+  }
+  return '';
+}
+
+function getNumActivations(list) {
+  return list.units.reduce((num, unit) => {
+    num += unit.count;
+    return num;
+  }, 0);
+}
+
 function generateTournamentText(
   list, showPoints = true, showCommands = false, showBattles = false
 ) {
