@@ -2081,5 +2081,6 @@ export {
   generateHTMLText,
   validateList,
   getRankLimits,
-  getOriginalRankLimits
+  getOriginalRankLimits,
+  countPoints
 };

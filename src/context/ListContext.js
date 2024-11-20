@@ -33,7 +33,8 @@ import {
   getEquippableLoadoutUpgrades,
   getEligibleBattlesToAdd,
   validateList,
-  getRankLimits
+  getRankLimits,
+  countPoints
 } from 'constants/listOperations';
 import listTemplate from 'constants/listTemplate';
 
@@ -69,7 +70,6 @@ export function ListProvider({
   const [isKillPointMode, setIsKillPointMode] = useState(false);
   const [currentKillPoints, setCurrentKillPoints] = useState(0);
   const [validationIssues, setValidationIssues] = useState([]);
-  const [invalidUnits, setInvalidUnits] = useState([]);
   const [rankLimits, setRankLimits] = useState();
 
 
@@ -141,6 +141,7 @@ export function ListProvider({
     setCurrentList(list);
     doUnitValidation(list, rankLimits);
     setRankLimits(rankLimits);
+    countPoints(list);
   }
 
   const validateBattleforceSelection = (list, battleForce) => {

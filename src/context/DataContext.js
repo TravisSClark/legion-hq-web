@@ -170,7 +170,9 @@ export function DataProvider({ children }) {
     if (userId) {
       httpClient.get(`${urls.api}/lists?userId=${userId}`, config)
         .then(response => {
-          setUserLists(response.data);
+          let lists = response.data;
+          lists.sort((a, b) => b.updatedAt.localeCompare(a.updatedAt))
+          setUserLists(lists);
         }).catch(e => {
           setError(e);
           setMessage(`Failed to fetch lists for user ${userId}.`);
