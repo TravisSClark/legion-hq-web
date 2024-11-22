@@ -16,7 +16,7 @@ const PrintList = React.forwardRef(( props, ref) =>{
   const units = []; let printingUnits = true;
   const commands = []; let printingCommands = false;
   const battles = []; let printingBattles = false;
-  const lines = generateTournamentText(currentList).split('\n');
+  const lines = generateTournamentText(currentList, false).split('\n');
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
     if (printingUnits) units.push(line);

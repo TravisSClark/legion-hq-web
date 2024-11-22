@@ -21,19 +21,20 @@ function generateMissionCards(missionArray, label, html){
   return '';
 }
 
-function generateTournamentText(list) {
-  let header = `${list.title ? list.title : 'Untitled'}\n`;
-  header += `${list.pointTotal}/${legionModes[list.mode].maxPoints}\n`;
+function generateTournamentText(list, html) {
+  let lineBreak = html ? '<br>' : '\n';
+  let header = `${list.title ? list.title : 'Untitled'}${lineBreak}`;
+  header += `${list.pointTotal}/${legionModes[list.mode].maxPoints}${lineBreak}`;
   let units = '';
   list.units.forEach(unit => {
     const unitCard = cards[unit.unitId];
     if (unit.count === 1) {
       if (unit.unitId === 'pz') { // Kraken
-        units += `${unitCard.cardName} - Kraken (${unit.totalUnitCost})\n`;
+        units += `${unitCard.cardName} - Kraken (${unit.totalUnitCost})${lineBreak}`;
       } else if (unit.unitId === 'qa') { // Kalani
-        units += `${unitCard.cardName} - Kalani (${unit.totalUnitCost})\n`;
+        units += `${unitCard.cardName} - Kalani (${unit.totalUnitCost})${lineBreak}`;
       } else {
-        units += `${unitCard.cardName} (${unit.totalUnitCost})\n`;
+        units += `${unitCard.cardName} (${unit.totalUnitCost})${lineBreak}`;
       }
       for (let j = 0; j < unit.upgradesEquipped.length; j++) {
         if (unit.upgradesEquipped[j]) {
@@ -41,36 +42,36 @@ function generateTournamentText(list) {
           if (unit.loadoutUpgrades && unit.loadoutUpgrades[j]) {
             const loadoutCard = cards[unit.loadoutUpgrades[j]];
             units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})`;
-            units += `/${loadoutCard.cardName} (${loadoutCard.cost})\n`;
+            units += `/${loadoutCard.cardName} (${loadoutCard.cost})${lineBreak}`;
           } else {
-            units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})\n`;
+            units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})${lineBreak}`;
           }
         }
       }
       if (unit.counterpart) {
         const { counterpart } = unit;
         const counterpartCard = cards[counterpart.counterpartId];
-        units += `${counterpartCard.cardName} (${unit.counterpart.totalUnitCost})\n`;
+        units += `${counterpartCard.cardName} (${unit.counterpart.totalUnitCost})${lineBreak}`;
         for (let j = 0; j < counterpart.upgradesEquipped.length; j++) {
           if (counterpart.upgradesEquipped[j]) {
             const upgradeCard = cards[counterpart.upgradesEquipped[j]];
             if (counterpart.loadoutUpgrades && counterpart.loadoutUpgrades[j]) {
               const loadoutCard = cards[counterpart.loadoutUpgrades[j]];
               units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})`;
-              units += `/${loadoutCard.cardName} (${loadoutCard.cost})\n`;
+              units += `/${loadoutCard.cardName} (${loadoutCard.cost})${lineBreak}`;
             } else {
-              units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})\n`;
+              units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})${lineBreak}`;
             }
           }
         }
       }
     } else {
       for (let i = 0; i < unit.count; i++) {
-        units += `${unitCard.cardName} (${unit.totalUnitCost / unit.count})\n`;
+        units += `${unitCard.cardName} (${unit.totalUnitCost / unit.count})${lineBreak}`;
         for (let j = 0; j < unit.upgradesEquipped.length; j++) {
           if (unit.upgradesEquipped[j]) {
             const upgradeCard = cards[unit.upgradesEquipped[j]];
-            units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})\n`;
+            units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})${lineBreak}`;
           }
         }
       }
@@ -83,22 +84,22 @@ function generateTournamentText(list) {
     if (commandCard.cardSubtype === '1') pips = '•';
     else if (commandCard.cardSubtype === '2') pips = '••';
     else if (commandCard.cardSubtype === '3') pips = '•••';
-    commands += `${pips}${commandCard.cardName}\n`;
+    commands += `${pips}${commandCard.cardName}${lineBreak}`;
   });
   if (commands !== '') {
-    commands = `\nCommands:\n${commands}`;
-    commands += '••••Standing Orders\n';
+    commands = `${lineBreak}Commands:${lineBreak}${commands}`;
+    commands += '••••Standing Orders${lineBreak}';
   }
   let contingencies = '';
   if (list.contingencies && list.contingencies.length > 0) {
-    contingencies = '\nContingencies:\n';
+    contingencies = `${lineBreak}Contingencies:${lineBreak}`;
     list.contingencies.forEach(commandId => {
       let pips = '••••';
       const commandCard = cards[commandId];
       if (commandCard.cardSubtype === '1') pips = '•';
       else if (commandCard.cardSubtype === '2') pips = '••';
       else if (commandCard.cardSubtype === '3') pips = '•••';
-      contingencies += `${pips}${commandCard.cardName}\n`;
+      contingencies += `${pips}${commandCard.cardName}${lineBreak}`;
     });
   }
 
@@ -108,104 +109,10 @@ function generateTournamentText(list) {
   battleDeck += generateMissionCards(list.advantageCards, "Advantages", false);
 
   if(battleDeck.length > 0){
-    battleDeck = `\nBattle Deck\n` + battleDeck;
+    battleDeck = `${lineBreak}Battle Deck${lineBreak}` + battleDeck;
   }
   
   return header + units + commands + contingencies + battleDeck;
-}
-
-function generateHTMLText(
-  list, showPoints = true, showCommands = false, showBattles = false
-) {
-  let header = `${list.title ? list.title : 'Untitled'}<br>`;
-  header += `${list.pointTotal}/${legionModes[list.mode].maxPoints}<br>`;
-  let units = '';
-  list.units.forEach(unit => {
-    const unitCard = cards[unit.unitId];
-    if (unit.count === 1) {
-      if (unit.unitId === 'pz') { // Kraken
-        units += `${unitCard.cardName} - Kraken (${unit.totalUnitCost})<br>`;
-      } else if (unit.unitId === 'pz') { // Kalani
-        units += `${unitCard.cardName} - Kalani (${unit.totalUnitCost})<br>`;
-      } else {
-        units += `${unitCard.cardName} (${unit.totalUnitCost})<br>`;
-      }
-      for (let j = 0; j < unit.upgradesEquipped.length; j++) {
-        if (unit.upgradesEquipped[j]) {
-          const upgradeCard = cards[unit.upgradesEquipped[j]];
-          if (unit.loadoutUpgrades && unit.loadoutUpgrades[j]) {
-            const loadoutCard = cards[unit.loadoutUpgrades[j]];
-            units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})`;
-            units += `/${loadoutCard.cardName} (${loadoutCard.cost})<br>`;
-          } else {
-            units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})<br>`;
-          }
-        }
-      }
-      if (unit.counterpart) {
-        const { counterpart } = unit;
-        const counterpartCard = cards[counterpart.counterpartId];
-        units += `${counterpartCard.cardName} (${unit.counterpart.totalUnitCost})\n`;
-        for (let j = 0; j < counterpart.upgradesEquipped.length; j++) {
-          if (counterpart.upgradesEquipped[j]) {
-            const upgradeCard = cards[counterpart.upgradesEquipped[j]];
-            if (counterpart.loadoutUpgrades && counterpart.loadoutUpgrades[j]) {
-              const loadoutCard = cards[counterpart.loadoutUpgrades[j]];
-              units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})`;
-              units += `/${loadoutCard.cardName} (${loadoutCard.cost})<br>`;
-            } else {
-              units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})<br>`;
-            }
-          }
-        }
-      }
-    } else {
-      for (let i = 0; i < unit.count; i++) {
-        units += `${unitCard.cardName} (${unit.totalUnitCost / unit.count})<br>`;
-        for (let j = 0; j < unit.upgradesEquipped.length; j++) {
-          if (unit.upgradesEquipped[j]) {
-            const upgradeCard = cards[unit.upgradesEquipped[j]];
-            units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})<br>`;
-          }
-        }
-      }
-    }
-  });
-  let commands = '';
-  list.commandCards.forEach(commandId => {
-    let pips = '••••';
-    const commandCard = cards[commandId];
-    if (commandCard.cardSubtype === '1') pips = '•';
-    else if (commandCard.cardSubtype === '2') pips = '••';
-    else if (commandCard.cardSubtype === '3') pips = '•••';
-    commands += `${pips}${commandCard.cardName}<br>`;
-  });
-  if (commands !== '') {
-    commands = `<br>Commands:<br>${commands}`;
-    commands += '••••Standing Orders<br>';
-  }
-  let contingencies = '';
-  if (list.contingencies && list.contingencies.length > 0) {
-    contingencies = '<br>Contingencies:<br>';
-    list.contingencies.forEach(commandId => {
-      let pips = '••••';
-      const commandCard = cards[commandId];
-      if (commandCard.cardSubtype === '1') pips = '•';
-      else if (commandCard.cardSubtype === '2') pips = '••';
-      else if (commandCard.cardSubtype === '3') pips = '•••';
-      contingencies += `${pips}${commandCard.cardName}<br>`;
-    });
-  }
-
-  let battleDeck = '';
-  battleDeck += generateMissionCards(list.primaryCards, "Primaries", true);
-  battleDeck += generateMissionCards(list.secondaryCards, "Secondaries", true);
-  battleDeck += generateMissionCards(list.advantageCards, "Advantages", true);
-  
-  if(battleDeck.length > 0){
-    battleDeck =  `<br>Battle Deck<br>` + battleDeck;
-  }
-  return '<html><p>' + header + units + commands + contingencies + battleDeck + '</p></html>';
 }
 
 function generateStandardText(list) {
@@ -294,18 +201,18 @@ function generateStandardText(list) {
 
 function generateTTSJSONText(list) {
   const ttsJSON = { author: 'Legion HQ' };
-function appendMissionTTSJSON(cardList, ttsArray){
+  function appendMissionTTSJSON(cardList, ttsArray){
 
-  for (let i = 0; i < cardList.length; i++) {
-    if (idToName[cardList[i]]) {
-      ttsArray.push(idToName[cardList[i]]);
-    } else {
-      const battlefieldCard = cards[cardList[i]];
-      ttsArray.push(battlefieldCard.cardName);
+    for (let i = 0; i < cardList.length; i++) {
+      if (idToName[cardList[i]]) {
+        ttsArray.push(idToName[cardList[i]]);
+      } else {
+        const battlefieldCard = cards[cardList[i]];
+        ttsArray.push(battlefieldCard.cardName);
+      }
     }
-  }
 
-}
+  }
   const idToName = {
     "nc": "Offensive Stance",
     "dz": "A-180 Config",
@@ -546,6 +453,5 @@ export {
   generateTTSJSONText,
   generateTournamentText,
   generateStandardText,
-  generateMinimalText,
-  generateHTMLText
+  generateMinimalText
 };

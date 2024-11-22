@@ -15,7 +15,6 @@ import {
   generateStandardText,
   generateMinimalText,
   generateTournamentText,
-  generateHTMLText
 } from 'components/printList';
 import DialogModal from './DialogModal';
 import ClipboardButton from './ClipboardButton';
@@ -23,8 +22,8 @@ import ClipboardButton from './ClipboardButton';
 function generateListText(type, currentList) {
   if (type === 0) return generateStandardText(currentList);
   else if (type === 1) return generateMinimalText(currentList);
-  else if (type === 2) return generateTournamentText(currentList);
-  else if (type === 3) return generateHTMLText(currentList);
+  else if (type === 2) return generateTournamentText(currentList, false);
+  else if (type === 3) return generateTournamentText(currentList, true);
   else return '';
 }
 
