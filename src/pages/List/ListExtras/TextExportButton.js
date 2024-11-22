@@ -119,7 +119,6 @@ function TextExportButton({ currentList }) {
         onClick={() => setIsOpen(true)}
       />
       <DialogModal
-        isFullWidth={true}
         isMobile={isFullscreen}
         isOpen={isOpen}
         actions={<ClipboardButton content={listText} />}
