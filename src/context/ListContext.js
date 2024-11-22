@@ -35,7 +35,7 @@ import {
   validateList,
   getRankLimits,
   countPoints
-} from 'constants/listOperations';
+} from 'components/listOperations';
 import listTemplate from 'constants/listTemplate';
 
 const ListContext = createContext();

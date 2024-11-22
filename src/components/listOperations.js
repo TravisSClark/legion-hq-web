@@ -2,7 +2,7 @@ import _ from 'lodash';
 import cards, {cardsIdsByType as cardIdsByType} from 'constants/cards';
 import ranks from 'constants/ranks';
 import legionModes from 'constants/legionModes';
-import interactions from 'constants/cardInteractions';
+import interactions from 'components/cardInteractions';
 import listTemplate from 'constants/listTemplate';
 import battleForcesDict from 'constants/battleForcesDict';
 
