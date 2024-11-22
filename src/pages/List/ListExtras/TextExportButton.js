@@ -16,8 +16,7 @@ import {
   generateMinimalText,
   generateTournamentText,
   generateHTMLText
-} from 'components/listOperations';
-import HtmlListText from './HtmlListText';
+} from 'components/printList';
 import DialogModal from './DialogModal';
 import ClipboardButton from './ClipboardButton';
 
