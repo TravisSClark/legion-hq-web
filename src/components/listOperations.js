@@ -582,10 +582,30 @@ function addContingency(list, commandId) {
   return list;
 }
 
+function removeContingency(list, contingencyIndex) {
+  list.contingencies = deleteItem(list.contingencies, contingencyIndex);
+  return list;
+}
+
 function addCommand(list, commandId) {
   list.commandCards.push(commandId);
   list.commandCards = sortCommandIds(list.commandCards);
   return list;
+}
+
+function removeCommand(list, commandIndex) {
+  list.commandCards = deleteItem(list.commandCards, commandIndex);
+  return list;
+}
+
+function sortCommandIds(cardIds) {
+  return cardIds.sort((firstId, secondId) => {
+    const firstType = Number.parseInt(cards[firstId].cardSubtype);
+    const secondType = Number.parseInt(cards[secondId].cardSubtype);
+    if (firstType > secondType) return 1;
+    else if (firstType < secondType) return -1;
+    return 0;
+  });
 }
 
 function addBattle(list, type, id) {
@@ -610,31 +630,9 @@ function removeBattle(list, type, index) {
   return list;
 }
 
-function removeContingency(list, contingencyIndex) {
-  list.contingencies = deleteItem(list.contingencies, contingencyIndex);
-  return list;
-}
-
-function removeCommand(list, commandIndex) {
-  list.commandCards = deleteItem(list.commandCards, commandIndex);
-  return list;
-}
-
-function sortCommandIds(cardIds) {
-  return cardIds.sort((firstId, secondId) => {
-    const firstType = Number.parseInt(cards[firstId].cardSubtype);
-    const secondType = Number.parseInt(cards[secondId].cardSubtype);
-    if (firstType > secondType) return 1;
-    else if (firstType < secondType) return -1;
-    return 0;
-  });
-}
-
 function getEligibleBattlesToAdd(list, type) {
   const validIds = [];
   const invalidIds = [];
-  const scenarioMissionIds = ['Df', 'Oe'];
-  // const cardsById = cardIdsByType.battle; //Object.keys(cards);
 
   let currentCards;
   if (type === 'primary') currentCards = list.primaryCards;
@@ -643,12 +641,12 @@ function getEligibleBattlesToAdd(list, type) {
   else return;
   cardIdsByType['battle'].forEach(id => {
     const card = cards[id];
-    // if (card.cardType !== 'battle') return;
     if (card.cardSubtype !== type) return;
     if (currentCards.includes(id)) return;
-    if (scenarioMissionIds.includes(id)) return;
-    if (currentCards.length > 3) invalidIds.push(id);
-    if (list.mode === '500-point mode') {
+    if (currentCards.length >= 3) {
+      invalidIds.push(id);
+    }
+    else if (list.mode === '500-point mode') {
       if (card.keywords.includes('Skirmish')) validIds.push(id);
       else invalidIds.push(id);
     } else {

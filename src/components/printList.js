@@ -114,6 +114,7 @@ function generateTournamentText(list, html) {
   return header + units + commands + contingencies + battleDeck;
 }
 
+// TODO: I really want to combine this logic with the one above somehow
 function generateStandardText(list) {
   let header = list.title ? list.title : 'Untitled';
   let points = `\n${list.pointTotal}/${legionModes[list.mode].maxPoints}`;

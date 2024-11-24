@@ -78,7 +78,7 @@ const PrintList = React.forwardRef(( props, ref) =>{
   )
 })
 
-
+// TODO: Get upgrade images, commands, and battle cards print working
 const PrintListImages = React.forwardRef(( props, ref) => {
     const { currentList } = props;
     const units = [];
@@ -92,6 +92,7 @@ const PrintListImages = React.forwardRef(( props, ref) => {
       unit.upgradesEquipped.forEach((upgradeId, i) => {
         if (!upgradeId) return;
         const upgradeCard = cards[upgradeId];
+        // Need to actually use this somewhere
         upgradeImages.push(`${urls.cdn}/${upgradeCard.cardType}Cards/${upgradeCard.imageName}`);
       });
       units.push(
@@ -104,7 +105,7 @@ const PrintListImages = React.forwardRef(( props, ref) => {
         </div>
       );
     });
-
+    // Need to do something similar as above for commands and battle cards
 
     return (
       <div
