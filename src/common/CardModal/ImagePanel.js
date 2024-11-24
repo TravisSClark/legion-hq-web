@@ -9,7 +9,7 @@ import {
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import urls from 'constants/urls';
 import UpgradeBar from '../UpgradeBar';
-import {PointsChip} from '../CardChip';
+import { PointsChip } from '../CardChip';
 
 function ImagePanel({ card, usingOriginalImage = false }) {
   if (!card) return null;

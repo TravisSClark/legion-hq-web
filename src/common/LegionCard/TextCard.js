@@ -17,7 +17,7 @@ import {
   Add as AddIcon,
   ExpandMore as ExpandMoreIcon
 } from '@material-ui/icons';
-import {DefenseChip, PointsChip, SpeedChip, StatChip, SurgeChip} from 'common/CardChip';
+import { DefenseChip, PointsChip, SpeedChip, StatChip, SurgeChip } from 'common/CardChip';
 import KeywordChips from 'common/KeywordChips';
 import CardIcon from 'common/CardIcon';
 import IconBadge from 'common/IconBadge';
