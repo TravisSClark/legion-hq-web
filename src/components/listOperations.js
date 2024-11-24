@@ -164,15 +164,6 @@ function changeListTitle(list, title) {
   return { ...list, title: title.substring(0, 30) };
 }
 
-// function toggleListMode(list) {
-//   const modes = Object.keys(legionModes);
-//   let modeIndex = modes.indexOf(list.mode);
-//   modeIndex += 1;
-//   modeIndex %= modes.length;
-//   list.mode = modes[modeIndex];
-//   return list;
-// }
-
 function setListMode(list, mode) {
   if (legionModes[mode]) {
     list.mode = mode;
@@ -180,7 +171,7 @@ function setListMode(list, mode) {
   return list;
 }
 
-function findUnitHash(list, unitHash) {
+function findUnitHashInList(list, unitHash) {
   return list.unitObjectStrings.indexOf(unitHash);
 }
 
@@ -251,7 +242,7 @@ function equipUpgradeToOne(list, unitIndex, upgradeIndex, upgradeId) {
     newUnit.additionalUpgradeSlots = [...upgradeCard.additionalUpgradeSlots];
     newUnit.upgradesEquipped.push(null);
   }
-  const newUnitHashIndex = findUnitHash(list, newUnit.unitObjectString);
+  const newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
   if (newUnitHashIndex > -1) {
     list = incrementUnit(list, newUnitHashIndex);
   } else {
@@ -317,7 +308,7 @@ function removeCounterpart(list, unitIndex) {
 
 function addUnit(list, unitId, stackSize = 1) {
   const unitCard = cards[unitId];
-  let unitIndex = findUnitHash(list, unitId);
+  let unitIndex = findUnitHashInList(list, unitId);
 
   // TODO TODO - this  will break stuff again if a list can have 2 units with Contingencies
   // Should set list.contingencies=[] by default and let consolidate handle the show/no-show/emptying of it
@@ -785,7 +776,7 @@ function getEquippableUpgrades(
     if (card.cardSubtype !== upgradeType) continue;
     if (card.faction && card.faction !== '' && list.faction !== card.faction) continue;
 
-    let uniqueEntries = list.uniques.filter(i=>i==id);
+    let uniqueEntries = list.uniques.filter(i=>i === id);
     if(card.uniqueCount){  
       if(uniqueEntries.length >= card.uniqueCount) continue;
     }
@@ -961,7 +952,7 @@ function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
         newUnit.additionalUpgradeSlots = [];
         newUnit.upgradesEquipped.pop();
       }
-      const newUnitHashIndex = findUnitHash(list, newUnit.unitObjectString);
+      const newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
       if (newUnitHashIndex > -1) {
         list = incrementUnit(list, newUnitHashIndex);
       } else {
@@ -1498,8 +1489,6 @@ export {
   unequipCounterpartUpgrade,
   equipLoadoutUpgrade,
   unequipLoadoutUpgrade,
-  equipCounterpartLoadoutUpgrade,
-  unequipCounterpartLoadoutUpgrade,
   incrementUnit,
   decrementUnit,
   restoreUnit,

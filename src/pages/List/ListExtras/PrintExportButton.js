@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React from 'react';
 import QRCode from 'qrcode.react';
 import { useReactToPrint } from 'react-to-print';
 import { Chip, Menu, MenuItem } from '@material-ui/core';
@@ -79,14 +79,12 @@ const PrintList = React.forwardRef(( props, ref) =>{
 })
 
 
-class PrintListImages extends React.Component {
-  render() {
-    const { currentList } = this.props;
-    const listLink = generateLink(currentList);
-    const units = []; let printingUnits = true;
-    const commands = []; let printingCommands = false;
-    const battles = []; let printingBattles = false;
-    
+const PrintListImages = React.forwardRef(( props, ref) => {
+    const { currentList } = props;
+    const units = [];
+    const commands = []; 
+    const battles = [];
+
     currentList.units.forEach((unit, i) => {
       const card = cards[unit.unitId];
       const unitImage = `${urls.cdn}/${card.cardType}Cards/${card.imageName}`
@@ -110,16 +108,17 @@ class PrintListImages extends React.Component {
 
     return (
       <div
+        ref={ref}
         style={{
           height: '100%',
           display: 'flex',
-          flexFlow: 'row nowrap',
+          flexFlow: 'row wrap',
           justifyContent: 'space-evenly'
         }}
       >
         <div>{units}</div>
-        <div style={{ display: 'flex', flexFlow: 'column nowrap', justifyContent: 'space-between' }}>
-          {true && (
+        <div style={{ display: 'flex', flexFlow: 'column', justifyContent: 'space-between' }}>
+          {(
             <div>
               {commands.map((line, i) => {
                 if (line.includes('Commands:')) {
@@ -136,22 +135,18 @@ class PrintListImages extends React.Component {
               })}
             </div>
           )}
-          {true && (
-            <div>
-              {battles.map((line, i) => {
-                if (line.includes('Battle Deck')) {
-                  return <b key="battle deck header">Battle Deck</b>;
-                }
-                return <div key={`${line}_${i}`}>{line}</div>;
-              })}
-            </div>
-          )}
-          <QRCode size={147} value={listLink} />
+          <div>
+            {battles.map((line, i) => {
+              if (line.includes('Battle Deck')) {
+                return <b key="battle deck header">Battle Deck</b>;
+              }
+              return <div key={`${line}_${i}`}>{line}</div>;
+            })}
+          </div>
         </div>
       </div>
     )
-  }
-}
+})
 
 function PrintExportButton({ currentList }) {
   const componentRef = React.useRef();
@@ -172,7 +167,7 @@ function PrintExportButton({ currentList }) {
     contentRef: componentRefBattlesButNoCommands
   });
   const handlePrintListImages = useReactToPrint({
-    content: () => componentRefImages.current
+    contentRef: componentRefImages
   });
   
 
@@ -208,6 +203,14 @@ function PrintExportButton({ currentList }) {
         >
           With Battle Cards & Without Command Cards
         </MenuItem>
+        <MenuItem
+          onClick={() => {
+            handlePrintListImages();
+            handlePrintMenuClose();
+          }}
+        >
+          Print Card Images
+        </MenuItem>
       </Menu>
       <Chip
         clickable
@@ -236,6 +239,10 @@ function PrintExportButton({ currentList }) {
           showBattles={true}
           showCommands={false}
           ref={componentRefBattlesButNoCommands}
+          currentList={currentList}
+        />
+        <PrintListImages
+          ref={componentRefImages}
           currentList={currentList}
         />
       </div>

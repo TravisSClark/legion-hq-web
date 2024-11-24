@@ -1,5 +1,4 @@
-import _ from 'lodash';
-import cards, {cardsIdsByType as cardIdsByType} from 'constants/cards';
+import cards from 'constants/cards';
 import legionModes from 'constants/legionModes';
 
 function getNumActivations(list) {
@@ -88,7 +87,7 @@ function generateTournamentText(list, html) {
   });
   if (commands !== '') {
     commands = `${lineBreak}Commands:${lineBreak}${commands}`;
-    commands += '••••Standing Orders${lineBreak}';
+    commands += `••••Standing Orders${lineBreak}`;
   }
   let contingencies = '';
   if (list.contingencies && list.contingencies.length > 0) {
