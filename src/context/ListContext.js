@@ -32,7 +32,6 @@ import {
   getEquippableUpgrades,
   getEquippableLoadoutUpgrades,
   getEligibleBattlesToAdd,
-  toggleUsingOldPoints, 
   validateList,
   getRankLimits,
   countPoints
@@ -166,10 +165,6 @@ export function ListProvider({
       currentList.unitObjectStrings, startIndex, endIndex
     );
     setCurrentList({ ...currentList });
-  }
-  const handleToggleUsingOldPoints = () => {
-    const newList = toggleUsingOldPoints(currentList);
-    setCurrentList({ ...newList });
   }
   const handleIncrementStackSize = () => {
     if (stackSize < 12) { setStackSize(stackSize + 1); }
@@ -418,7 +413,6 @@ export function ListProvider({
     handleListSave,
     handleListFork,
     handleMergeList,
-    handleToggleUsingOldPoints,
     handleToggleIsKillPointMode,
     handleAddKillPoints,
   };
