@@ -122,12 +122,7 @@ function consolidate(list) {
 
     list.unitCounts[unitCard.rank] += unit.count;
     
-    // if (unitCard.associate){
-    //   if(list.units.find(u => u.unitId === unitCard.associate) !== undefined){
-    //     list.unitCounts[unitCard.rank]--;
-    //   }
-    // }
-    if (unit.unitId === 'rc' && unit.upgradesEquipped.includes('rq')) { // Maul + Darksaber interaction
+    if (unit.unitId === 'rc' && unit.upgradesEquipped.includes('rq')) { // Maul + Darksaber interaction - TODO, make it data/rules-driven
       list.unitCounts['commander']++;
       list.unitCounts['operative']--;
     }
