@@ -1,362 +1,173 @@
 {
-    "Ca": {
-        "cardSubtype": "condition",
-        "cardName": "Clear Conditions",
-        "cardType": "battle",
-        "imageName": "Clear Conditions.webp",
-        "keywords": [],
-        "id": "Ca"
-    },
-    "Cb": {
-        "cardSubtype": "condition",
-        "cardName": "Hostile Environment",
-        "cardType": "battle",
-        "imageName": "Hostile Environment.webp",
-        "keywords": [],
-        "id": "Cb"
-    },
-    "Cc": {
-        "cardSubtype": "condition",
-        "cardName": "Limited Visibility",
-        "cardType": "battle",
-        "imageName": "Limited Visibility.webp",
-        "keywords": [],
-        "id": "Cc"
-    },
-    "Cd": {
-        "cardSubtype": "condition",
-        "cardName": "Minefield",
-        "cardType": "battle",
-        "imageName": "Minefield.webp",
-        "keywords": [
-            "Blast",
-            "Impact"
+    "AA": {
+        "id": "AA",
+        "cardType": "unit",
+        "defense": "red",
+        "surges": [
+            "crit"
         ],
-        "id": "Cd"
-    },
-    "Ce": {
-        "cardSubtype": "condition",
-        "cardName": "Rapid Reinforcements",
-        "cardType": "battle",
-        "imageName": "Rapid Reinforcements.webp",
-        "keywords": [],
-        "id": "Ce"
-    },
-    "Cf": {
-        "cardSubtype": "condition",
-        "cardName": "Fortified Positions",
-        "cardType": "battle",
-        "imageName": "Fortified Positions.webp",
-        "keywords": [],
-        "id": "Cf"
-    },
-    "Cg": {
-        "cardSubtype": "condition",
-        "cardName": "Supply Drop",
-        "cardType": "battle",
-        "imageName": "Supply Drop.webp",
-        "keywords": [],
-        "id": "Cg"
-    },
-    "Ch": {
-        "cardSubtype": "condition",
-        "cardName": "War Weary",
-        "cardType": "battle",
-        "imageName": "War Weary.webp",
-        "keywords": [],
-        "id": "Ch"
-    },
-    "Ci": {
-        "displayName": "Clear Conditions",
-        "cardSubtype": "condition",
-        "cardName": "Clear Conditions2",
-        "ttsName": "Clear Conditions",
-        "cardType": "battle",
-        "imageName": "Clear Conditions2.webp",
+        "wounds": 5,
+        "courage": 2,
+        "speed": 2,
+        "cardSubtype": "trooper",
+        "cardName": "Storm Tide Commander",
+        "isUnique": true,
+        "rank": "commander",
+        "cost": 60,
+        "faction": "",
+        "imageName": "Storm Tide Commander1.webp",
         "keywords": [
-            "Skirmish"
+            "Inspire"
         ],
-        "id": "Ci"
-    },
-    "Cj": {
-        "cardSubtype": "condition",
-        "cardName": "Dawn",
-        "cardType": "battle",
-        "imageName": "Dawn.webp",
-        "keywords": [
-            "Skirmish"
+        "upgradeBar": [
+            "training",
+            "gear",
+            "armament"
         ],
-        "id": "Cj"
+        "history": []
     },
-    "Ck": {
-        "cardSubtype": "condition",
-        "cardName": "Improvised Defenses",
-        "cardType": "battle",
-        "imageName": "Improvised Defenses.webp",
+    "AB": {
+        "id": "AB",
+        "cardName": "Armored Assault",
+        "cardSubtype": "1",
+        "cardType": "command",
+        "commander": "Storm Tide Commander",
+        "imageName": "Armored Assault.jpeg",
+        "products": [],
+        "faction": "",
         "keywords": [
-            "Skirmish"
-        ],
-        "id": "Ck"
+            "Barrage",
+            "Steady"
+        ]
     },
-    "Cl": {
-        "cardSubtype": "condition",
-        "displayName": "War Weary",
-        "cardName": "War Weary2",
-        "ttsName" : "War Weary",
-        "cardType": "battle",
-        "imageName": "War Weary2.webp",
+    "AC": {
+        "id": "AC",
+        "cardName": "Brothers in Arms",
+        "cardSubtype": "3",
+        "cardType": "command",
+        "commander": "Storm Tide Commander",
+        "imageName": "Brothers in Arms.jpeg",
+        "products": [],
+        "faction": "",
         "keywords": [
-            "Skirmish"
-        ],
-        "id": "Cl"
+            "Inspire"
+        ]
     },
-    "Da": {
-        "cardSubtype": "deployment",
-        "cardName": "Advanced Positions",
-        "cardType": "battle",
-        "imageName": "Advanced Positions.webp",
+    "AD": {
+        "id": "AD",
+        "cardName": "Doors and Corners",
+        "cardSubtype": "1",
+        "cardType": "command",
+        "commander": "Storm Tide Commander",
+        "imageName": "Doors and Corners.jpeg",
+        "products": [],
+        "faction": "",
         "keywords": [
-            "Scout",
-            "Stationary"
-        ],
-        "id": "Da"
+            "Tactical",
+            "Nimble"
+        ]
     },
-    "Db": {
-        "cardSubtype": "deployment",
-        "cardName": "Battle Lines",
-        "cardType": "battle",
-        "imageName": "Battle Lines.webp",
-        "keywords": [],
-        "id": "Db"
-    },
-    "Dc": {
-        "cardSubtype": "deployment",
-        "cardName": "Disarray",
-        "cardType": "battle",
-        "imageName": "Disarray.webp",
-        "keywords": [],
-        "id": "Dc"
-    },
-    "Dd": {
-        "cardSubtype": "deployment",
-        "cardName": "The Long March",
-        "cardType": "battle",
-        "imageName": "The Long March.webp",
-        "keywords": [],
-        "id": "Dd"
-    },
-    "De": {
-        "cardSubtype": "deployment",
-        "cardName": "Major Offensive",
-        "cardType": "battle",
-        "imageName": "Major Offensive.webp",
-        "keywords": [],
-        "id": "De"
-    },
-    "Df": {
-        "displayName": "Forces Converge",
-        "cardSubtype": "deployment",
-        "cardName": "Forces Converge (Act 1)",
-        "cardType": "battle",
-        "imageName": "Forces Converge (Act 1).webp",
-        "keywords": [],
-        "id": "Df"
-    },
-    "Dg": {
-        "cardSubtype": "deployment",
-        "cardName": "Faceoff",
-        "cardType": "battle",
-        "imageName": "Faceoff.webp",
+    "AE": {
+        "id": "AE",
+        "cardName": "Keep Them Down",
+        "cardSubtype": "2",
+        "cardType": "command",
+        "commander": "Storm Tide Commander",
+        "imageName": "Keep Them Down.jpeg",
+        "products": [],
+        "faction": "",
         "keywords": [
-            "Skirmish"
-        ],
-        "id": "Dg"
-    },
-    "Dh": {
-        "cardSubtype": "deployment",
-        "cardName": "Meeting Engagement",
-        "cardType": "battle",
-        "imageName": "Meeting Engagement.webp",
-        "keywords": [
-            "Skirmish"
-        ],
-        "id": "Dh"
-    },
-    "Di": {
-        "cardSubtype": "deployment",
-        "cardName": "Flanking Positions",
-        "cardType": "battle",
-        "imageName": "Flanking Positions.webp",
-        "keywords": [
-            "Skirmish"
-        ],
-        "id": "Di"
-    },
-    "Dj": {
-        "displayName": "Battle Lines",
-        "cardSubtype": "deployment",
-        "cardName": "Battle Lines2",
-        "ttsName": "Battle Lines",
-        "cardType": "battle",
-        "imageName": "Battle Lines2.webp",
-        "keywords": [
-            "Skirmish"
-        ],
-        "id": "Dj"
-    },
-    "Dk": {
-        "cardSubtype": "deployment",
-        "cardName": "Roll Out",
-        "cardType": "battle",
-        "imageName": "Roll Out.webp",
-        "keywords": [],
-        "id": "Dk"
-    },
-    "Dl": {
-        "displayName": "",
-        "cardSubtype": "deployment",
-        "cardName": "Hemmed In",
-        "cardType": "battle",
-        "imageName": "Hemmed In.webp",
-        "keywords": [],
-        "id": "Dl"
-    },
-    "Dm": {
-        "displayName": "",
-        "cardSubtype": "deployment",
-        "cardName": "Danger Close",
-        "cardType": "battle",
-        "imageName": "Danger Close.webp",
-        "keywords": [],
-        "id": "Dm"
-    },
-    "Oa": {
-        "cardSubtype": "objective",
-        "cardName": "Breakthrough",
-        "cardType": "battle",
-        "imageName": "Breakthrough.webp",
-        "keywords": [],
-        "id": "Oa"
-    },
-    "Ob": {
-        "displayName": "Intercept Transmissions",
-        "cardSubtype": "objective",
-        "cardName": "Intercept the Transmissions",
-        "cardType": "battle",
-        "imageName": "Intercept the Transmissions.webp",
-        "keywords": [],
-        "id": "Ob"
-    },
-    "Oc": {
-        "cardSubtype": "objective",
-        "cardName": "Key Positions",
-        "cardType": "battle",
-        "imageName": "Key Positions.webp",
-        "keywords": [],
-        "id": "Oc"
-    },
-    "Od": {
-        "displayName": "Recover Supplies",
-        "cardSubtype": "objective",
-        "cardName": "Recover the Supplies",
-        "cardType": "battle",
-        "imageName": "Recover the Supplies.webp",
-        "keywords": [
-            "Claim"
-        ],
-        "id": "Od"
-    },
-    "Oe": {
-        "displayName": "Secure the Intel",
-        "cardSubtype": "objective",
-        "cardName": "Secure the Intel (Act 1)",
-        "cardType": "battle",
-        "imageName": "Secure the Intel (Act 1).webp",
-        "keywords": [
-            "Extract",
-            "Claim"
-        ],
-        "id": "Oe"
-    },
-    "Of": {
-        "displayName": "Sabotage Moisture Vaporators",
-        "cardSubtype": "objective",
-        "cardName": "Sabotage the Moisture Vaporators",
-        "cardType": "battle",
-        "imageName": "Sabotage the Moisture Vaporators.webp",
-        "keywords": [
-            "Sabotage/Repair"
-        ],
-        "id": "Of"
-    },
-    "Og": {
-        "cardSubtype": "objective",
-        "cardName": "Hostage Exchange",
-        "cardType": "battle",
-        "imageName": "Hostage Exchange.webp",
-        "keywords": [
-            "Claim"
-        ],
-        "id": "Og"
-    },
-    "Oh": {
-        "cardSubtype": "objective",
-        "cardName": "Elimination",
-        "cardType": "battle",
-        "imageName": "Elimination.webp",
-        "keywords": [
-            "Skirmish"
-        ],
-        "id": "Oh"
-    },
-    "Oi": {
-        "cardSubtype": "objective",
-        "cardName": "Pivotal Positions",
-        "cardType": "battle",
-        "imageName": "Pivotal Positions.webp",
-        "keywords": [
-            "Skirmish"
-        ],
-        "id": "Oi"
-    },
-    "Oj": {
-        "cardSubtype": "objective",
-        "cardName": "Breach",
-        "cardType": "battle",
-        "imageName": "Breach.webp",
-        "keywords": [
-            "Skirmish"
-        ],
-        "id": "Oj"
-    },
-    "Ok": {
-        "cardSubtype": "objective",
-        "cardName": "Control",
-        "cardType": "battle",
-        "imageName": "Control.webp",
-        "keywords": [
-            "Skirmish"
-        ],
-        "id": "Ok"
-    },
-    "Ol": {
-        "cardSubtype": "objective",
-        "cardName": "Bombing Run",
-        "cardType": "battle",
-        "imageName": "Bombing Run.webp",
-        "keywords": [
-            "Blast",
             "Suppressive"
-        ],
-        "id": "Ol"
+        ]
     },
-    "Om": {
-        "cardSubtype": "objective",
-        "cardName": "Payload",
-        "cardType": "battle",
-        "imageName": "Payload.webp",
-        "keywords": [],
-        "id": "Om"
+    "AF": {
+        "id": "AF",
+        "cardName": "Man the Guns",
+        "cardSubtype": "3",
+        "cardType": "command",
+        "commander": "Storm Tide Commander",
+        "imageName": "Man the Guns.jpeg",
+        "products": [],
+        "faction": "",
+        "keywords": []
+    },
+    "AG": {
+        "id": "AG",
+        "cardName": "Somebody Has To Be a Hero",
+        "cardSubtype": "1",
+        "cardType": "command",
+        "commander": "Storm Tide Commander",
+        "imageName": "Somebody Has To Be a Hero.jpeg",
+        "products": [],
+        "faction": "",
+        "keywords": [
+            "Dauntless",
+            "Steady"
+        ]
+    },
+    "AH": {
+        "id": "AH",
+        "cardName": "Stealth Team",
+        "cardSubtype": "3",
+        "cardType": "command",
+        "commander": "Storm Tide Commander",
+        "imageName": "Stealth Team.jpeg",
+        "products": [],
+        "faction": "",
+        "keywords": [
+            "Infiltrate",
+            "Scout",
+            "Low Profile"
+        ]
+    },
+    "AI": {
+        "id": "AI",
+        "cardName": "Surgical Strike",
+        "cardSubtype": "2",
+        "cardType": "command",
+        "commander": "Storm Tide Commander",
+        "imageName": "Surgical Strike.jpeg",
+        "products": [],
+        "faction": "",
+        "keywords": []
+    },
+    "AJ": {
+        "id": "AJ",
+        "cardName": "Tank Shock",
+        "cardSubtype": "2",
+        "cardType": "command",
+        "commander": "Storm Tide Commander",
+        "imageName": "Tank Shock.jpeg",
+        "products": [],
+        "faction": "",
+        "keywords": []
+    },
+    "AK": {
+        "id": "AK",
+        "cardType": "unit",
+        "defense": "red",
+        "surges": [
+            "crit"
+        ],
+        "wounds": 5,
+        "courage": 2,
+        "speed": 2,
+        "cardSubtype": "trooper",
+        "cardName": "Storm Tide Commander",
+        "isUnique": true,
+        "rank": "commander",
+        "cost": 0,
+        "faction": "",
+        "imageName": "Storm Tide Commander1.webp",
+        "keywords": [
+            "Inspire"
+        ],
+        "upgradeBar": [
+            "training",
+            "gear",
+            "armament"
+        ],
+        "history": []
     },
     "aa": {
         "cardSubtype": "4",
@@ -463,7 +274,6 @@
         "rank": "commander",
         "faction": "rebels",
         "isUnique": true,
-        "prevCost": 150,
         "cost": 120,
         "imageName": "Luke Skywalker Hero of the Rebellion.webp",
         "keywords": [
@@ -918,7 +728,6 @@
         "rank": "support",
         "faction": "rebels",
         "isUnique": false,
-        "prevCost": 55,
         "cost": 50,
         "imageName": "AT-RT Reb.webp",
         "keywords": [
@@ -957,7 +766,6 @@
         "rank": "heavy",
         "faction": "rebels",
         "isUnique": false,
-        "prevCost": 130,
         "cost": 125,
         "imageName": "T-47 Airspeeder.webp",
         "keywords": [
@@ -1007,7 +815,6 @@
         "rank": "heavy",
         "faction": "rebels",
         "isUnique": false,
-        "prevCost": 60,
         "cost": 55,
         "imageName": "X-34 Landspeeder.webp",
         "keywords": [
@@ -1051,7 +858,6 @@
         "rank": "commander",
         "faction": "empire",
         "isUnique": false,
-        "prevCost": 50,
         "cost": 55,
         "imageName": "Imperial Officer.webp",
         "keywords": [
@@ -1095,7 +901,6 @@
         "rank": "commander",
         "faction": "empire",
         "isUnique": true,
-        "prevCost": 190,
         "cost": 170,
         "imageName": "Emperor Palpatine.webp",
         "keywords": [
@@ -1145,7 +950,6 @@
         "rank": "commander",
         "faction": "empire",
         "isUnique": true,
-        "prevCost": 190,
         "cost": 170,
         "imageName": "Darth Vader Dark Lord of the Sith.webp",
         "keywords": [
@@ -1196,7 +1000,6 @@
         "rank": "commander",
         "faction": "empire",
         "isUnique": true,
-        "prevCost": 70,
         "cost": 75,
         "imageName": "General Veers.webp",
         "keywords": [
@@ -1243,7 +1046,6 @@
         "rank": "commander",
         "faction": "empire",
         "isUnique": true,
-        "prevCost": 75,
         "cost": 65,
         "imageName": "Director Orson Krennic.webp",
         "keywords": [
@@ -1385,7 +1187,6 @@
         "rank": "corps",
         "faction": "empire",
         "isUnique": false,
-        "prevCost": 44,
         "cost": 42,
         "imageName": "Stormtroopers.webp",
         "keywords": [
@@ -1419,7 +1220,6 @@
         "rank": "corps",
         "faction": "empire",
         "isUnique": false,
-        "prevCost": 44,
         "cost": 42,
         "imageName": "Snowtroopers.webp",
         "keywords": [
@@ -1613,7 +1413,6 @@
         "rank": "support",
         "faction": "empire",
         "isUnique": false,
-        "prevCost": 50,
         "cost": 60,
         "imageName": "E-Web Heavy Blaster Team.webp",
         "keywords": [
@@ -1656,7 +1455,6 @@
         "rank": "support",
         "faction": "empire",
         "isUnique": false,
-        "prevCost": 70,
         "cost": 80,
         "imageName": "74-Z Speeder Bikes.webp",
         "keywords": [
@@ -1700,7 +1498,6 @@
         "rank": "heavy",
         "faction": "empire",
         "isUnique": false,
-        "prevCost": 155,
         "cost": 145,
         "imageName": "AT-ST.webp",
         "keywords": [
@@ -1754,7 +1551,6 @@
         "rank": "heavy",
         "faction": "empire",
         "isUnique": false,
-        "prevCost": 140,
         "cost": 125,
         "imageName": "TX-225 GAVw Occupier Tank.webp",
         "keywords": [
@@ -1802,7 +1598,6 @@
         "rank": "commander",
         "faction": "rebels",
         "isUnique": false,
-        "prevCost": 45,
         "cost": 50,
         "imageName": "Rebel Officer.webp",
         "keywords": [
@@ -2317,7 +2112,6 @@
         "cardName": "Recon Intel",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 2,
         "cost": 8,
         "imageName": "Recon Intel.webp",
         "keywords": [
@@ -2649,7 +2443,6 @@
         "cardName": "Force Push",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 10,
         "cost": 40,
         "imageName": "Force Push.webp",
         "keywords": [],
@@ -2839,7 +2632,6 @@
         "cardName": "MPL-57 Ion Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 17,
         "cost": 27,
         "imageName": "MPL-57 Ion Trooper.webp",
         "keywords": [
@@ -2923,7 +2715,6 @@
         "cardName": "Proton Charge Saboteur",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 23,
         "cost": 20,
         "imageName": "Proton Charge Saboteur.webp",
         "keywords": [
@@ -2953,7 +2744,6 @@
         "cardName": "DH-447 Sniper",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 28,
         "cost": 38,
         "imageName": "DH-447 Sniper.webp",
         "keywords": [
@@ -2978,7 +2768,6 @@
         "cardName": "Scatter Gun Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 23,
         "cost": 22,
         "imageName": "Scatter Gun Trooper.webp",
         "keywords": [
@@ -3003,7 +2792,6 @@
         "cardName": "MPL-57 Barrage Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 19,
         "cost": 22,
         "imageName": "MPL-57 Barrage Trooper.webp",
         "keywords": [
@@ -3068,7 +2856,6 @@
         "cardName": "HH-12 Stormtrooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 16,
         "cost": 22,
         "imageName": "HH-12 Stormtrooper.webp",
         "keywords": [
@@ -3129,7 +2916,6 @@
         "cardName": "DLT-19x Sniper",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 28,
         "cost": 38,
         "imageName": "DLT-19x Sniper.webp",
         "keywords": [
@@ -3154,7 +2940,6 @@
         "cardName": "Sonic Charge Saboteur",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 26,
         "cost": 23,
         "imageName": "Sonic Charge Saboteur.webp",
         "keywords": [
@@ -3181,7 +2966,6 @@
         "cardName": "T-7 Ion Snowtrooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 18,
         "cost": 24,
         "imageName": "T-7 Ion Snowtrooper.webp",
         "keywords": [
@@ -3783,7 +3567,6 @@
         "rank": "operative",
         "faction": "rebels",
         "isUnique": true,
-        "prevCost": 195,
         "cost": 165,
         "imageName": "Luke Skywalker Jedi Knight.webp",
         "keywords": [
@@ -3833,7 +3616,6 @@
         "rank": "operative",
         "faction": "empire",
         "isUnique": true,
-        "prevCost": 175,
         "cost": 155,
         "imageName": "Darth Vader The Emperor's Apprentice.webp",
         "keywords": [
@@ -4111,7 +3893,6 @@
         "rank": "commander",
         "faction": "separatists",
         "isUnique": true,
-        "prevCost": 185,
         "cost": 165,
         "imageName": "Count Dooku.webp",
         "keywords": [
@@ -4211,7 +3992,6 @@
         "rank": "corps",
         "faction": "republic",
         "isUnique": false,
-        "prevCost": 60,
         "cost": 56,
         "imageName": "Clone Trooper Infantry.webp",
         "keywords": [
@@ -4254,7 +4034,6 @@
         "rank": "corps",
         "faction": "separatists",
         "isUnique": false,
-        "prevCost": 45,
         "cost": 64,
         "imageName": "B2 Super Battle Droids.webp",
         "keywords": [
@@ -4290,7 +4069,6 @@
         "rank": "heavy",
         "faction": "republic",
         "isUnique": false,
-        "prevCost": 160,
         "cost": 155,
         "imageName": "Saber-Class Tank.webp",
         "keywords": [
@@ -4338,7 +4116,6 @@
         "rank": "heavy",
         "faction": "separatists",
         "isUnique": false,
-        "prevCost": 175,
         "cost": 165,
         "imageName": "AAT Battle Tank.webp",
         "keywords": [
@@ -4666,7 +4443,6 @@
         "cardName": "Bistan",
         "isUnique": true,
         "cardType": "upgrade",
-        "prevCost": 28,
         "cost": 33,
         "imageName": "Bistan.webp",
         "keywords": [
@@ -4787,7 +4563,6 @@
         "rank": "commander",
         "faction": "republic",
         "isUnique": true,
-        "prevCost": 170,
         "cost": 150,
         "imageName": "Obi-Wan Kenobi.webp",
         "keywords": [
@@ -4907,7 +4682,6 @@
         "cardName": "M-45 Ion Blaster",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 25,
         "cost": 28,
         "imageName": "M-45 Ion Blaster.webp",
         "keywords": [
@@ -4978,7 +4752,6 @@
         "rank": "support",
         "faction": "rebels",
         "isUnique": false,
-        "prevCost": 90,
         "cost": 95,
         "imageName": "Tauntaun Riders.webp",
         "keywords": [
@@ -5433,7 +5206,6 @@
         "rank": "commander",
         "faction": "separatists",
         "isUnique": true,
-        "prevCost": 150,
         "cost": 130,
         "imageName": "General Grievous Sinister Cyborg.webp",
         "keywords": [
@@ -5510,7 +5282,6 @@
         "rank": "support",
         "faction": "republic",
         "isUnique": false,
-        "prevCost": 55,
         "cost": 65,
         "imageName": "BARC Speeder.webp",
         "keywords": [
@@ -5585,7 +5356,6 @@
         "rank": "support",
         "faction": "separatists",
         "isUnique": false,
-        "prevCost": 70,
         "cost": 60,
         "imageName": "Droidekas.webp",
         "keywords": [
@@ -5792,7 +5562,6 @@
         "cardSubtype": "personnel",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 13,
         "cost": 18,
         "imageName": "B2 Super Battle Droid.webp",
         "keywords": [],
@@ -5927,7 +5696,6 @@
         "cardName": "DP-23 Clone Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 20,
         "cost": 22,
         "imageName": "DP-23 Clone Trooper.webp",
         "keywords": [
@@ -5992,7 +5760,6 @@
         "cardName": "RPS-6 Clone Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 21,
         "cost": 23,
         "imageName": "RPS-6 Clone Trooper.webp",
         "keywords": [
@@ -6022,7 +5789,6 @@
         "cardSubtype": "heavy weapon",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 24,
         "cost": 22,
         "imageName": "RT-97C Stormtrooper.webp",
         "keywords": [],
@@ -6079,7 +5845,6 @@
         "cardSubtype": "heavy weapon",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 22,
         "cost": 20,
         "imageName": "T-21 Stormtrooper.webp",
         "keywords": [
@@ -6531,7 +6296,6 @@
         "cardName": "Clone Captain",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 12,
         "cost": 22,
         "imageName": "Clone Captain.webp",
         "keywords": [
@@ -6565,7 +6329,6 @@
         "cardName": "Clone Specialist",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 11,
         "cost": 17,
         "imageName": "Clone Specialist.webp",
         "keywords": [],
@@ -6850,7 +6613,6 @@
         "cardName": "Mortar Clone Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 18,
         "cost": 20,
         "imageName": "Mortar Clone Trooper.webp",
         "keywords": [
@@ -7026,7 +6788,6 @@
         "rank": "operative",
         "faction": "republic",
         "isUnique": true,
-        "prevCost": 85,
         "cost": 60,
         "imageName": "Padme Amidala.webp",
         "keywords": [
@@ -7176,7 +6937,6 @@
         "rank": "special",
         "faction": "republic",
         "isUnique": false,
-        "prevCost": 66,
         "cost": 64,
         "imageName": "ARC Troopers.webp",
         "keywords": [
@@ -7317,7 +7077,6 @@
         "cardName": "Deflector Shields",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 10,
         "cost": 18,
         "imageName": "Deflector Shields.webp",
         "keywords": [
@@ -7346,7 +7105,6 @@
         "cardName": "BX-Series Droid Sniper",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 30,
         "cost": 40,
         "imageName": "BX-Series Droid Sniper.webp",
         "keywords": [
@@ -7387,7 +7145,6 @@
         "cardName": "DC-15x ARC Trooper",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 31,
         "cost": 37,
         "imageName": "DC-15x ARC Trooper.webp",
         "keywords": [
@@ -7445,7 +7202,6 @@
         "ttsName": "Echo, ARC Marksman",
         "isUnique": true,
         "cardType": "upgrade",
-        "prevCost": 42,
         "cost": 52,
         "imageName": "Echo ARC Marksman.webp",
         "keywords": [],
@@ -7847,7 +7603,6 @@
         "rank": "support",
         "faction": "separatists",
         "isUnique": false,
-        "prevCost": 75,
         "cost": 80,
         "imageName": "STAP Riders.webp",
         "keywords": [
@@ -7941,7 +7696,6 @@
         "imageName": "Del Meeko.webp",
         "isUnique": true,
         "cardType": "upgrade",
-        "prevCost": 25,
         "cost": 35,
         "keywords": [
             "Repair",
@@ -8499,7 +8253,6 @@
         "rank": "operative",
         "faction": "separatists",
         "isUnique": true,
-        "prevCost": 160,
         "cost": 130,
         "imageName": "Maul Impatient Apprentice.webp",
         "keywords": [
@@ -8818,7 +8571,6 @@
         "rank": "commander",
         "faction": "separatists",
         "isUnique": false,
-        "prevCost": 55,
         "cost": 60,
         "imageName": "T-Series Tactical Droid.webp",
         "keywords": [
@@ -8972,7 +8724,6 @@
         "cardName": "Clone Comms Technician",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 11,
         "cost": 30,
         "imageName": "Clone Comms Technician.webp",
         "keywords": [
@@ -9002,7 +8753,6 @@
         "cardName": "Clone Engineer",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 14,
         "cost": 17,
         "imageName": "Clone Engineer.webp",
         "keywords": [
@@ -9031,7 +8781,6 @@
         "cardName": "Clone Medic",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 15,
         "cost": 20,
         "imageName": "Clone Medic.webp",
         "keywords": [
@@ -9064,7 +8813,6 @@
         "cardName": "Clone Commander",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 18,
         "cost": 30,
         "imageName": "Clone Commander.webp",
         "keywords": [
@@ -9218,7 +8966,6 @@
         "rank": "commander",
         "faction": "republic",
         "isUnique": true,
-        "prevCost": 200,
         "cost": 170,
         "imageName": "Yoda.webp",
         "keywords": [
@@ -9265,7 +9012,6 @@
         "rank": "heavy",
         "faction": "rebels",
         "isUnique": false,
-        "prevCost": 75,
         "cost": 65,
         "imageName": "A-A5 Speeder Truck R.webp",
         "keywords": [
@@ -9305,7 +9051,6 @@
         "rank": "heavy",
         "faction": "empire",
         "isUnique": false,
-        "prevCost": 105,
         "cost": 100,
         "imageName": "LAAT Patrol Transport E.webp",
         "keywords": [
@@ -9398,7 +9143,6 @@
         "cardName": "Heavy Laser Retrofit",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 16,
         "cost": 12,
         "imageName": "Heavy Laser Retrofit.webp",
         "keywords": [
@@ -9501,7 +9245,6 @@
         "cardName": "Onboard Comms Channel",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 3,
         "cost": 10,
         "imageName": "Onboard Comms Channel.webp",
         "keywords": [
@@ -9530,7 +9273,6 @@
         "cardName": "AG-2G Quad Laser",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 25,
         "cost": 20,
         "imageName": "AG-2G Quad Laser.webp",
         "keywords": [
@@ -9604,7 +9346,6 @@
         "cardName": "Refurbished \"Gonk\" Droid",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 14,
         "cost": 20,
         "imageName": "Refurbished Gonk Droid.webp",
         "keywords": [
@@ -10146,7 +9887,6 @@
         "rank": "commander",
         "faction": "separatists",
         "isUnique": true,
-        "prevCost": 90,
         "cost": 75,
         "imageName": "Super Tactical Droid.webp",
         "keywords": [
@@ -10191,7 +9931,6 @@
         "rank": "commander",
         "faction": "separatists",
         "isUnique": true,
-        "prevCost": 100,
         "cost": 80,
         "imageName": "Super Tactical Droid Kraken.webp",
         "keywords": [
@@ -10233,7 +9972,6 @@
         "rank": "commander",
         "faction": "separatists",
         "isUnique": true,
-        "prevCost": 100,
         "cost": 85,
         "imageName": "Super Tactical Droid Kalani.webp",
         "keywords": [
@@ -10307,7 +10045,6 @@
         "cardName": "RPS-6 MagnaGuard",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 34,
         "cost": 40,
         "imageName": "RPS-6 MagnaGuard.webp",
         "keywords": [
@@ -10444,7 +10181,6 @@
         "rank": "support",
         "faction": "separatists",
         "isUnique": false,
-        "prevCost": 55,
         "cost": 50,
         "imageName": "DSD1 Dwarf Spider Droid.webp",
         "keywords": [
@@ -10603,7 +10339,6 @@
         "cardName": "Nose-Mounted Ion Blaster",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 25,
         "cost": 30,
         "imageName": "Nose-Mounted Ion Blaster.webp",
         "keywords": [
@@ -10687,7 +10422,6 @@
         "rank": "heavy",
         "faction": "separatists",
         "isUnique": false,
-        "prevCost": 145,
         "cost": 130,
         "imageName": "Persuader-Class Tank Droid.webp",
         "keywords": [
@@ -10726,7 +10460,6 @@
         "ttsName":"327th Star Corps Elite Armor Pilots",
         "isUnique": false,
         "cardType": "upgrade",
-        "prevCost": 5,
         "cost": 8,
         "imageName": "327th Star Corps Pilot.webp",
         "keywords": [],
@@ -10776,7 +10509,6 @@
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 30,
-        "prevCost": 25,
         "imageName": "Twin Beam Cannons.webp",
         "keywords": [
             "Beam",
@@ -10986,7 +10718,6 @@
         "faction": "mercenary",
         "subfaction": "shadow collective",
         "isUnique": true,
-        "prevCost": 170,
         "cost": 150,
         "imageName": "Maul A Rival.webp",
         "keywords": [
@@ -11028,7 +10759,6 @@
         "faction": "mercenary",
         "subfaction": "shadow collective",
         "isUnique": true,
-        "prevCost": 100,
         "cost": 95,
         "imageName": "Gar Saxon.webp",
         "keywords": [
@@ -11661,7 +11391,6 @@
         "faction": "mercenary",
         "subfaction": "raiders",
         "isUnique": false,
-        "prevCost": 75,
         "cost": 65,
         "imageName": "A-A5 Speeder Truck M.webp",
         "keywords": [
@@ -11764,7 +11493,6 @@
             "republic"
         ],
         "isUnique": false,
-        "prevCost": 65,
         "cost": 70,
         "imageName": "Swoop Bike Riders.webp",
         "keywords": [
@@ -11806,7 +11534,6 @@
         "rank": "corps",
         "faction": "empire",
         "isUnique": false,
-        "prevCost": 40,
         "cost": 36,
         "imageName": "Stormtroopers Heavy Response Unit.webp",
         "keywords": [
@@ -12132,7 +11859,6 @@
             "empire"
         ],
         "isUnique": true,
-        "prevCost": 105,
         "cost": 95,
         "imageName": "Din Djarin.webp",
         "counterpartId": "tn",
@@ -12559,7 +12285,6 @@
         "cardName": "Boil",
         "isUnique": true,
         "cardType": "upgrade",
-        "prevCost": 15,
         "cost": 20,
         "faction": "republic",
         "imageName": "Boil.webp",
@@ -12587,7 +12312,6 @@
         "cardName": "Waxer",
         "isUnique": true,
         "cardType": "upgrade",
-        "prevCost": 15,
         "cost": 20,
         "faction": "republic",
         "imageName": "Waxer.webp",
@@ -12833,7 +12557,6 @@
         "rank": "operative",
         "faction": "separatists",
         "isUnique": true,
-        "prevCost": 150,
         "cost": 130,
         "imageName": "Asajj Ventress.webp",
         "keywords": [
@@ -12964,7 +12687,6 @@
         "faction": "rebels",
         "isUnique": true,
         "cost": 145,
-        "prevCost": 165,
         "imageName": "Ahsoka Tano Fulcrum.webp",
         "keywords": [
             "Jump",
@@ -13096,7 +12818,6 @@
         "faction": "mercenary",
         "affiliations": [],
         "isUnique": true,
-        "prevCost": 190,
         "cost": 180,
         "imageName": "Chewbacca Let the Wookiee Win.webp",
         "keywords": [
@@ -13545,7 +13266,6 @@
         "rank": "heavy",
         "faction": "empire",
         "isUnique": true,
-        "prevCost": 190,
         "cost": 180,
         "imageName": "Major Marquand.webp",
         "keywords": [
@@ -13733,7 +13453,6 @@
         "rank": "commander",
         "faction": "separatists",
         "isUnique": true,
-        "prevCost": 85,
         "cost": 80,
         "imageName": "Poggle the Lesser.webp",
         "keywords": [
@@ -13773,7 +13492,6 @@
         "rank": "operative",
         "faction": "separatists",
         "isUnique": true,
-        "prevCost": 90,
         "cost": 80,
         "imageName": "Sun Fac.webp",
         "keywords": [
@@ -14030,7 +13748,6 @@
         "rank": "special",
         "faction": "separatists",
         "isUnique": false,
-        "prevCost": 60,
         "cost": 56,
         "imageName": "IG-100 MagnaGuard Prototype Assassin Droids.webp",
         "keywords": [
@@ -14070,7 +13787,6 @@
         "rank": "heavy",
         "faction": "separatists",
         "isUnique": false,
-        "prevCost": 145,
         "cost": 130,
         "imageName": "Persuader-Class Tank Droid Prototype Tank Droid.webp",
         "keywords": [
@@ -14900,7 +14616,6 @@
         "cardType": "battle",
         "imageName": "Advanced Intel.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "yu"
     },
     "yv": {
@@ -14909,7 +14624,6 @@
         "cardType": "battle",
         "imageName": "Cunning Deployment.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "yv"
     },
     "yw": {
@@ -14918,7 +14632,6 @@
         "cardType": "battle",
         "imageName": "Fortified Position.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "yw"
     },
     "yx": {
@@ -14927,7 +14640,6 @@
         "cardType": "battle",
         "imageName": "Garrison.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "yx"
     },
     "yy": {
@@ -14936,7 +14648,6 @@
         "cardType": "battle",
         "imageName": "Ordnance.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "yy"
     },
     "yz": {
@@ -14945,7 +14656,6 @@
         "cardType": "battle",
         "imageName": "Strafing Run.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "yz"
     },
     "Aa": {
@@ -14954,7 +14664,6 @@
         "cardType": "battle",
         "imageName": "Bring Them to Heel.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "Aa"
     },
     "Ab": {
@@ -14963,7 +14672,6 @@
         "cardType": "battle",
         "imageName": "Destroy Enemy Base.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "Ab"
     },
     "Ac": {
@@ -14972,7 +14680,6 @@
         "cardType": "battle",
         "imageName": "Marked Targets.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "Ac"
     },
     "Ad": {
@@ -14981,7 +14688,6 @@
         "cardType": "battle",
         "imageName": "Recon Mission.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "Ad"
     },
     "Ae": {
@@ -14990,7 +14696,6 @@
         "cardType": "battle",
         "imageName": "Surface Scan.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "Ae"
     },
     "Af": {
@@ -14999,16 +14704,14 @@
         "cardType": "battle",
         "imageName": "Sweep and Clear.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "Af"
     },
     "Ag": {
         "cardSubtype": "primary",
         "cardName": "Breakthrough",
         "cardType": "battle",
-        "imageName": "Breakthrough2.webp",
+        "imageName": "Breakthrough.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "Ag"
     },
     "Ah": {
@@ -15017,7 +14720,6 @@
         "cardType": "battle",
         "imageName": "Bunker Assault.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "Ah"
     },
     "Ai": {
@@ -15026,7 +14728,6 @@
         "cardType": "battle",
         "imageName": "Close the Pocket.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "Ai"
     },
     "Aj": {
@@ -15035,7 +14736,6 @@
         "cardType": "battle",
         "imageName": "Intercept the Signals.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "Aj"
     },
     "Ak": {
@@ -15044,7 +14744,6 @@
         "cardType": "battle",
         "imageName": "Recover the Research.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "Ak"
     },
     "Al": {
@@ -15053,7 +14752,6 @@
         "cardType": "battle",
         "imageName": "Shifting Priorities.webp",
         "keywords": [],
-        "isNewBattleCard": true,
         "id": "Al"
     },
     "Am": {
@@ -15074,174 +14772,76 @@
             }
         ]
     },
-    "AA": {
-        "id": "AA",
-        "cardType": "unit",
-        "defense": "red",
-        "surges": [
-            "crit"
-        ],
-        "wounds": 5,
-        "courage": 2,
-        "speed": 2,
-        "cardSubtype": "trooper",
-        "cardName": "Storm Tide Commander",
-        "isUnique": true,
-        "rank": "commander",
-        "cost": 60,
-        "faction": "",
-        "imageName": "Storm Tide Commander1.webp",
-        "keywords": [
-            "Inspire"
-        ],
-        "upgradeBar": [
-            "training",
-            "gear",
-            "armament"
-        ],
-        "history": []
-    },
-    "AB": {
-        "id": "AB",
-        "cardName": "Armored Assault",
-        "cardSubtype": "1",
-        "cardType": "command",
-        "commander": "Storm Tide Commander",
-        "imageName": "Armored Assault.jpeg",
-        "products": [],
-        "faction": "",
-        "keywords": [
-            "Barrage",
-            "Steady"
-        ]
-    },
-    "AC": {
-        "id": "AC",
-        "cardName": "Brothers in Arms",
-        "cardSubtype": "3",
-        "cardType": "command",
-        "commander": "Storm Tide Commander",
-        "imageName": "Brothers in Arms.jpeg",
-        "products": [],
-        "faction": "",
-        "keywords": [
-            "Inspire"
-        ]
-    },
-    "AD": {
-        "id": "AD",
-        "cardName": "Doors and Corners",
-        "cardSubtype": "1",
-        "cardType": "command",
-        "commander": "Storm Tide Commander",
-        "imageName": "Doors and Corners.jpeg",
-        "products": [],
-        "faction": "",
-        "keywords": [
-            "Tactical",
-            "Nimble"
-        ]
-    },
-    "AE": {
-        "id": "AE",
-        "cardName": "Keep Them Down",
-        "cardSubtype": "2",
-        "cardType": "command",
-        "commander": "Storm Tide Commander",
-        "imageName": "Keep Them Down.jpeg",
-        "products": [],
-        "faction": "",
-        "keywords": [
-            "Suppressive"
-        ]
-    },
-    "AF": {
-        "id": "AF",
-        "cardName": "Man the Guns",
-        "cardSubtype": "3",
-        "cardType": "command",
-        "commander": "Storm Tide Commander",
-        "imageName": "Man the Guns.jpeg",
-        "products": [],
-        "faction": "",
-        "keywords": []
-    },
-    "AG": {
-        "id": "AG",
-        "cardName": "Somebody Has To Be a Hero",
-        "cardSubtype": "1",
-        "cardType": "command",
-        "commander": "Storm Tide Commander",
-        "imageName": "Somebody Has To Be a Hero.jpeg",
-        "products": [],
-        "faction": "",
-        "keywords": [
-            "Dauntless",
-            "Steady"
-        ]
-    },
-    "AH": {
-        "id": "AH",
-        "cardName": "Stealth Team",
-        "cardSubtype": "3",
-        "cardType": "command",
-        "commander": "Storm Tide Commander",
-        "imageName": "Stealth Team.jpeg",
-        "products": [],
-        "faction": "",
-        "keywords": [
-            "Infiltrate",
-            "Scout",
-            "Low Profile"
-        ]
-    },
-    "AI": {
-        "id": "AI",
-        "cardName": "Surgical Strike",
-        "cardSubtype": "2",
-        "cardType": "command",
-        "commander": "Storm Tide Commander",
-        "imageName": "Surgical Strike.jpeg",
-        "products": [],
-        "faction": "",
-        "keywords": []
-    },
-    "AJ": {
-        "id": "AJ",
-        "cardName": "Tank Shock",
-        "cardSubtype": "2",
-        "cardType": "command",
-        "commander": "Storm Tide Commander",
-        "imageName": "Tank Shock.jpeg",
-        "products": [],
-        "faction": "",
-        "keywords": []
-    },
-    "AK": {
-        "id": "AK",
-        "cardType": "unit",
-        "defense": "red",
-        "surges": [
-            "crit"
-        ],
-        "wounds": 5,
-        "courage": 2,
-        "speed": 2,
-        "cardSubtype": "trooper",
-        "cardName": "Storm Tide Commander",
-        "isUnique": true,
-        "rank": "commander",
-        "cost": 0,
-        "faction": "",
-        "imageName": "Storm Tide Commander1.webp",
-        "keywords": [
-            "Inspire"
-        ],
-        "upgradeBar": [
-            "training",
-            "gear",
-            "armament"
-        ],
-        "history": []
-    }
+    "An": {
+        "id": "An",
+		"cardSubtype": "primary",
+		"cardName": "Bunker Assault",
+		"cardType": "battle",
+		"imageName": "skirmish-Bunker Assault.webp",
+		"keywords": ["Skirmish"]
+	},
+	"Ao": {
+        "id": "Ao",
+		"cardSubtype": "primary",
+		"cardName": "Close the Pocket",
+		"cardType": "battle",
+		"imageName": "skirmish-Close the Pocket.webp",
+		"keywords": ["Skirmish"]
+	},
+	"Ap": {
+        "id": "Ap",
+		"cardSubtype": "primary",
+		"cardName": "Intercept the Signals",
+		"cardType": "battle",
+		"imageName": "skirmish-Intercept the Signals.webp",
+		"keywords": ["Skirmish"]
+	},
+    "Aq": {
+        "id": "Aq",
+		"cardSubtype": "secondary",
+		"cardName": "Bring Them to Heel",
+		"cardType": "battle",
+		"imageName": "skirmish-Bring Them to Heel.webp",
+		"keywords": ["Skirmish"]
+	},
+	"Ar": {
+        "id": "Ar",
+		"cardSubtype": "secondary",
+		"cardName": "Recon Mission",
+		"cardType": "battle",
+		"imageName": "skirmish-Recon Mission.webp",
+		"keywords": ["Skirmish"]
+	},
+	"As": {
+        "id": "As",
+		"cardSubtype": "secondary",
+		"cardName": "Surface Scan",
+		"cardType": "battle",
+		"imageName": "skirmish-Surface Scan.webp",
+		"keywords": ["Skirmish"]
+	},
+    "At": {
+        "id": "At",
+		"cardSubtype": "advantage",
+		"cardName": "Advanced Intel",
+		"cardType": "battle",
+		"imageName": "skirmish-Advanced Intel.webp",
+		"keywords": ["Skirmish"]
+	},
+	"Au": {
+        "id": "Au",
+		"cardSubtype": "advantage",
+		"cardName": "Cunning Deployment",
+		"cardType": "battle",
+		"imageName": "skirmish-Cunning Deployment.webp",
+		"keywords": ["Skirmish"]
+	},
+	"Av": {
+        "id": "Av",
+		"cardSubtype": "advantage",
+		"cardName": "Fortified Position",
+		"cardType": "battle",
+		"imageName": "skirmish-Fortified Position.webp",
+		"keywords": ["Skirmish"]
+	}
 }

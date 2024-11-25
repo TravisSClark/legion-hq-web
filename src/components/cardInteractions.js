@@ -1,4 +1,4 @@
-import cards from './cards';
+import cards from 'constants/cards';
 
 function checkUpgradeName(upgrade, values) {
   if (Array.isArray(values)) {

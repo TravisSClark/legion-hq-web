@@ -11,19 +11,19 @@ import urls from 'constants/urls';
 import UpgradeBar from '../UpgradeBar';
 import { PointsChip } from '../CardChip';
 
-function ImagePanel({ card, usingOriginalImage = false }) {
+function ImagePanel({ card, extraCardImage = false }) {
   if (!card) return null;
   const { cardType, imageName } = card;
   return (
     <React.Fragment>
-      <ExpansionPanel defaultExpanded={!usingOriginalImage}>
+      <ExpansionPanel defaultExpanded={!extraCardImage}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>{usingOriginalImage ? (card.cardType === "battle" ? 'Map': 'Original Card Image') : 'Current Card Image'}</Typography>
+          <Typography>{extraCardImage ? (card.cardType === "battle" ? 'Map': 'Card Back') : 'Card Image'}</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails style={{ padding: '0px 24px 24px' }}>
           <div>
             <Img
-              src={`${urls.cdn}/${cardType}Cards/${usingOriginalImage ? `original-${imageName}` : imageName}`}
+              src={`${urls.cdn}/${cardType}Cards/${extraCardImage ? `extra-${imageName}` : imageName}`}
               style={{ width: '100%' }}
             />
             <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>

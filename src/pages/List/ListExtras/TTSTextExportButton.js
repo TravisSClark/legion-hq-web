@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   useMediaQuery,
   Chip,
-  AppBar,
-  Tabs,
-  Tab,
-  Box,
-  Typography,
   TextField
 } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import { Description as TextIcon } from '@material-ui/icons';
-import { generateTTSJSONText } from 'constants/listExporters';
+import { generateTTSJSONText } from 'components/printList';
 import DialogModal from './DialogModal';
 import ClipboardButton from './ClipboardButton';
 
@@ -34,7 +29,7 @@ function DialogContent({
 function TTSTextExportButton({ currentList }) {
   const theme = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-  const [textType, setTextType] = useState(0);
+  const [textType] = useState(0);
   const ttsJSON = isOpen ? generateTTSJSONText(currentList) : null;
 
   const isFullscreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -48,7 +43,6 @@ function TTSTextExportButton({ currentList }) {
         onClick={() => setIsOpen(true)}
       />
       <DialogModal
-        isFullWidth={true}
         isMobile={isFullscreen}
         isOpen={isOpen}
         actions={<ClipboardButton content={ttsJSON} />}

@@ -226,7 +226,7 @@ const keywords = {
 	"Master of the Force": "At the end of its activation, this unit may ready up to X of its exhausted Force upgrade cards.",
 	"Master Storyteller": "When a unit performs the Master Storyteller card action, it chooses up to X friendly Ewok units at range 2, \
 		where X is the current round number.  Each chosen unit gains 2 surge tokens.",
-	"Mercenary: Faction": "A unit with the Mercenary keyword is a Mercnary unit. The faction(s) specified by the Mercenary keyword\
+	"Mercenary": "A unit with the Mercenary keyword is a Mercnary unit. The faction(s) specified by the Mercenary keyword\
 	 	can include that unit in an army as a Mercenary unit.",
 	"Nimble": "After defending, if you spent 1 or more dodge tokens, gain 1 dodge token.",
 	"Observe": "Choose an enemy unit at range 3 and in LOS. It gains X Observation Tokens.",

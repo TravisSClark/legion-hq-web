@@ -39,12 +39,11 @@ const useStyles = makeStyles(theme => ({
 
 function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
   const chipSize = 'small';
-  const { cost, cardType, cardName, displayName, keywords, imageName, isNewBattleCard, upgradeBar } = card;
+  const { cost, cardType, cardName, displayName, keywords, imageName, upgradeBar } = card;
   const classes = useStyles();
   const [isExpanded, setIsExpanded] = React.useState(false);
   const handleExpandClick = () => setIsExpanded(!isExpanded);
   const isDoubleSided = cardType === 'upgrade' && card.isDoubleSided;
-  const isSkirmish = card.keywords.includes('Skirmish');
 
   return (
     <Grow unmountOnExit in={true}>
@@ -52,11 +51,9 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
         className={clsx(classes.card,
           { [classes.selected]: isSelected },
           { [classes.unitCard]: cardType === 'unit' },
-          { [classes.unitCard]: cardType === 'battle' && !isSkirmish },
-          { [classes.commandCard]: cardType === 'battle' && isSkirmish },
           { [classes.upgradeCard]: cardType === 'upgrade' && ! isDoubleSided },
           { [classes.doubleUpgrade]: isDoubleSided },
-          { [classes.commandCard]: cardType === 'command' },
+          { [classes.commandCard]: cardType === 'command' || cardType === 'battle'},
         )}
       >
         <CardActionArea onClick={handleClick}>
@@ -64,8 +61,8 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
             title={displayName ? displayName : cardName}
             image={`${urls.cdn}/${cardType}Cards/${imageName}`}
             className={clsx(
-              { [classes.unitImage]: cardType === 'unit' || cardType === 'counterpart' || (cardType === 'battle' && !isNewBattleCard)},
-              { [classes.commandImage]: cardType === 'battle' && isNewBattleCard},
+              { [classes.unitImage]: cardType === 'unit' || cardType === 'counterpart'},
+              { [classes.commandImage]: cardType === 'battle'},
               { [classes.upgradeImage]: cardType === 'upgrade' },
               { [classes.commandImage]: cardType === 'command' },
               { [classes.doubleUpgrade]: isDoubleSided }
