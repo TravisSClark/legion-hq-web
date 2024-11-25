@@ -12,7 +12,7 @@ import battleForcesDict from 'constants/battleForcesDict';
 
 import cards from 'constants/cards';
 import ranks from 'constants/ranks';
-import { getOriginalRankLimits } from 'components/listOperations';
+import { getOriginalRankLimits } from 'components/listValidator';
 import ListContext from 'context/ListContext';
 
 const useStyles = makeStyles({

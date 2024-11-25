@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react';
+import React from 'react';
 import Fade from '@material-ui/core/Fade';
 import Typography from '@material-ui/core/Typography';
 import ListContext from 'context/ListContext';
@@ -8,7 +8,6 @@ import StackController from './StackController';
 import ToggleButton from './ToggleButton';
 import ChipCard from 'common/LegionCard/ChipCard';
 import cards from 'constants/cards';
-import listReducer from 'constants/listReducer';
 
 function Title({ title }) {
   return <Typography variant="body2">{title}</Typography>;
@@ -47,8 +46,6 @@ function CardSelector() {
   let selectorIds = {validIds:[], invalidIds:[]};
   const { action } = cardPaneFilter;
 
-  const [list, dispatch] = useReducer(listReducer, currentList);
-
   switch(action){
     case 'UNIT':
       selectorIds.validIds = getEligibleUnitsToAdd(currentList, cardPaneFilter.rank, userSettings);
@@ -72,9 +69,9 @@ function CardSelector() {
       break;
     case 'UNIT_UPGRADE':
     case 'COUNTERPART_UPGRADE':
-      let upgradeTargetId = action == 'COUNTERPART_UPGRADE' ? cardPaneFilter.counterpartId : cardPaneFilter.unitId;
+      let upgradeTargetId = action === 'COUNTERPART_UPGRADE' ? cardPaneFilter.counterpartId : cardPaneFilter.unitId;
 
-      let title = action == 'COUNTERPART_UPGRADE' ? "Add counterpart upgrade" : "Add upgrade";
+      let title = action === 'COUNTERPART_UPGRADE' ? "Add counterpart upgrade" : "Add upgrade";
       selectorIds = getEquippableUpgrades(
         currentList,
         cardPaneFilter.upgradeType,
@@ -101,7 +98,7 @@ function CardSelector() {
       break;
     case 'LOADOUT_UPGRADE':
     case 'COUNTERPART_LOADOUT_UPGRADE':
-      let id = action == 'COUNTERPART_LOADOUT_UPGRADE' ? cardPaneFilter.counterpartId : cardPaneFilter.unitId;
+      let id = action === 'COUNTERPART_LOADOUT_UPGRADE' ? cardPaneFilter.counterpartId : cardPaneFilter.unitId;
       selectorIds = getEquippableLoadoutUpgrades(
         currentList,
         cardPaneFilter.upgradeType,

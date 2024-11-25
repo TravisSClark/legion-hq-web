@@ -1,8 +1,8 @@
 import React from 'react';
 import { Chip, Typography } from '@material-ui/core';
 
-function PointsChip({ size, points }) {
-  const label = `${points} ${points === 1 ? 'point' : 'points'}`;
+function PointsChip({ size, value }) {
+  const label = `${value} ${value === 1 ? 'point' : 'points'}`;
   return (
     <Chip
       size={size}

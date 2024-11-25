@@ -8,35 +8,42 @@ import cards from 'constants/cards';
 import urls from 'constants/urls';
 import xapikey from 'constants/ssl';
 import {
-  rehashList,
-  mergeLists,
-  convertHashToList,
-  changeListTitle,
-  setListMode,
   addUnit,
+  incrementUnit,
+  decrementUnit,
   addCommand,
-  addContingency,
   removeCommand,
+  addContingency,
   removeContingency,
   addCounterpart,
   removeCounterpart,
   addBattle,
   removeBattle,
-  incrementUnit,
-  decrementUnit,
   equipUpgrade,
   unequipUpgrade,
+  countPoints
+} from 'components/listOperations';
+import listTemplate from 'constants/listTemplate';
+import { validateList } from 'components/listValidator';
+
+import {
   getEligibleCommandsToAdd,
   getEligibleContingenciesToAdd,
   getEligibleUnitsToAdd,
   getEquippableUpgrades,
   getEquippableLoadoutUpgrades,
   getEligibleBattlesToAdd,
-  validateList,
-  getRankLimits,
-  countPoints
-} from 'components/listOperations';
-import listTemplate from 'constants/listTemplate';
+} from 'components/eligibleCardListGetter'
+
+import { getRankLimits } from 'components/listValidator' 
+
+import{
+  rehashList,
+  mergeLists,
+  convertHashToList,
+  changeListTitle,
+  setListMode,
+} from 'components/listLoadAndHash'
 
 const ListContext = createContext();
 const httpClient = Axios.create();
@@ -45,10 +52,6 @@ let config = {
   headers: {
     "x-api-key": xapikey
   }
-}
-
-function isValidListId(listId) {
-  return Number.parseInt(listId) > 999 && Number.parseInt(listId) < 999999;
 }
 
 export function ListProvider({
