@@ -35,7 +35,7 @@ import {
   toggleUsingOldPoints, 
   validateList,
   getRankLimits,
-  checkBattleforceUnits
+  countPoints
 } from 'constants/listOperations';
 import listTemplate from 'constants/listTemplate';
 
@@ -142,6 +142,7 @@ export function ListProvider({
     setCurrentList(list);
     doUnitValidation(list, rankLimits);
     setRankLimits(rankLimits);
+    countPoints(list);
   }
 
   const validateBattleforceSelection = (list, battleForce) => {

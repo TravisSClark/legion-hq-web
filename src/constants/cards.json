@@ -2318,7 +2318,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "prevCost": 2,
-        "cost": 5,
+        "cost": 8,
         "imageName": "Recon Intel.webp",
         "keywords": [
             "Scout"
@@ -2329,6 +2329,10 @@
             {
 				"date": "19 July 2024",
 				"description": "Cost increased from 2 to 5 points."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 5 to 8 points."
 			}
         ]
     },
@@ -2390,7 +2394,7 @@
         "history": [
             {
                 "date": "19 November 2020",
-                "description": "Cost decreased from 3 to 1 point."
+                "description": "Cost reduced from 3 to 1 point."
             },
             {
                 "date": "8 December 2022",
@@ -2988,7 +2992,7 @@
         "history": [
             {
                 "date": "19 July 2024",
-                "description": "Cost decreased from 23 to 22 points. Now can be used in melee."
+                "description": "Cost reduced from 23 to 22 points. Now can be used in melee."
             }
         ],
         "id": "eh"
@@ -3166,7 +3170,7 @@
         "history": [
             {
 				"date": "19 July 2024",
-				"description": "Cost decreased from 26 to 23 points. No longer surges to crit. Now works in melee. Dice increased from a red and a black to a red, 2 black, and a white. Gained Impact 2 and lost Arm and Detonate keywords."
+				"description": "Cost reduced from 26 to 23 points. No longer surges to crit. Now works in melee. Dice increased from a red and a black to a red, 2 black, and a white. Gained Impact 2 and lost Arm and Detonate keywords."
 			}
         ],
         "id": "en"
@@ -3323,7 +3327,7 @@
         "cardName": "2-1B Medical Droid",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 18,
+        "cost": 20,
         "imageName": "2-1B Medical Droid.webp",
         "keywords": [
             "Treat",
@@ -3333,6 +3337,13 @@
             {
                 "faction": "rebels"
             }
+        ],
+        "history": [
+            
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 18 to 20 points."
+			}
         ],
         "id": "eu"
     },
@@ -3429,7 +3440,7 @@
         "cardName": "FX-9 Medical Droid",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 19,
+        "cost": 22,
         "imageName": "FX-9 Medical Droid.webp",
         "keywords": [
             "Treat",
@@ -3440,6 +3451,13 @@
                 "faction": "empire",
                 "rank": "corps"
             }
+        ],
+        "history": [
+            
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 19 to 22 points."
+			}
         ],
         "id": "ez"
     },
@@ -3766,7 +3784,7 @@
         "faction": "rebels",
         "isUnique": true,
         "prevCost": 195,
-        "cost": 175,
+        "cost": 165,
         "imageName": "Luke Skywalker Jedi Knight.webp",
         "keywords": [
             "Jump",
@@ -3799,7 +3817,11 @@
             {
                 "date": "19 July 2024",
                 "description": "Cost reduced from 195 to 175 points."
-            }
+            },
+            {
+				"date": "6 November 2024",
+				"description": "Cost reduced from 175 to 165 points."
+			}
         ]
     },
     "fn": {
@@ -3906,7 +3928,7 @@
         "cardName": "BARC Ion Gunner",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 24,
+        "cost": 25,
         "imageName": "BARC Ion Gunner.webp",
         "keywords": [
             "Critical",
@@ -3927,6 +3949,10 @@
             {
 				"date": "19 July 2024",
 				"description": "Cost increased from 24 to 28 points. No longer exhausts. Gained Critical 1 keyword."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost reduced from 28 to 25 points."
 			}
         ],
         "id": "fr"
@@ -3941,7 +3967,7 @@
         "cardSubtype": "crew",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 21,
+        "cost": 18,
         "imageName": "BARC RPS-6 Gunner.webp",
         "keywords": [
             "Impact"
@@ -3950,7 +3976,11 @@
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 24 to 21 points."
-            }
+            },
+            {
+				"date": "6 November 2024",
+				"description": "Cost reduced from 21 to 18 points."
+			}
         ],
         "id": "fs"
     },
@@ -4207,7 +4237,7 @@
             },
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 62 to 60 points."
+                "description": "Cost reduced from 62 to 60 points."
             },
             {
 				"date": "19 July 2024",
@@ -5224,7 +5254,7 @@
             },
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 23 to 20 points."
+                "description": "Cost reduced from 23 to 20 points."
             },
             {
 				"date": "19 July 2024",
@@ -5260,7 +5290,7 @@
             },
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 26 to 24 points."
+                "description": "Cost reduced from 26 to 24 points."
             }
         ],
         "id": "hq"
@@ -5521,7 +5551,7 @@
         "cardName": "BARC Twin Laser Gunner",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 18,
+        "cost": 15,
         "imageName": "BARC Twin Laser Gunner.webp",
         "keywords": [
             "Fixed"
@@ -5539,7 +5569,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost increased from 15 to 18 points."
-            }
+            },
+            {
+				"date": "6 November 2024",
+				"description": "Cost reduced from 18 to 15 points."
+			}
         ],
         "id": "id"
     },
@@ -5911,7 +5945,7 @@
             },
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 22 to 20 points."
+                "description": "Cost reduced from 22 to 20 points."
             },
             {
 				"date": "19 July 2024",
@@ -7088,7 +7122,7 @@
         "rank": "special",
         "faction": "republic",
         "isUnique": false,
-        "cost": 24,
+        "cost": 26,
         "imageName": "ARC Trooper Strike Team.webp",
         "keywords": [
             "Charge",
@@ -7120,11 +7154,15 @@
             },
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 27 to 24."
+                "description": "Cost reduced from 27 to 24."
             },
             {
 				"date": "19 July 2024",
 				"description": "Gained Charge, Detachment: ARC Troopers, and Scale keywords. Blaster changed from 1 black and 1 white to 2 black, and can be used in melee. Lost unarmed and range 3 gun."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 24 to 26 points."
 			}
         ],
         "detachment": "kz"
@@ -7138,7 +7176,7 @@
         "faction": "republic",
         "isUnique": false,
         "prevCost": 66,
-        "cost": 58,
+        "cost": 64,
         "imageName": "ARC Troopers.webp",
         "keywords": [
             "Charge",
@@ -7169,7 +7207,7 @@
             },
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 78 to 72."
+                "description": "Cost reduced from 78 to 72."
             },
             {
                 "date": "5 June 2023",
@@ -7178,6 +7216,10 @@
             {
 				"date": "19 July 2024",
 				"description": "Cost reduced from 66 to 58 points. Gained Squad Leader upgrade. Gained Charge and Scale keywords. Blaster changed from 1 black and 1 white to 2 black, and can be used in melee. Lost unarmed and range 3 gun."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 58 to 64 points."
 			}
         ]
     },
@@ -8407,7 +8449,7 @@
         "rank": "commander",
         "faction": "republic",
         "isUnique": true,
-        "cost": 155,
+        "cost": 170,
         "imageName": "Anakin Skywalker.webp",
         "keywords": [
             "Jump",
@@ -8440,6 +8482,10 @@
             {
 				"date": "19 July 2024",
 				"description": "Gained Charge and Master of the Force 1, and lost Flawed keywords."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 155 to 170 points."
 			}
         ]
     },
@@ -8940,7 +8986,7 @@
         "history": [
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 12 to 11 points."
+                "description": "Cost reduced from 12 to 11 points."
             },
             {
 				"date": "19 July 2024",
@@ -8970,7 +9016,7 @@
         "history": [
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 18 to 14 points."
+                "description": "Cost reduced from 18 to 14 points."
             },
             {
 				"date": "19 July 2024",
@@ -8985,7 +9031,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "prevCost": 15,
-        "cost": 17,
+        "cost": 20,
         "imageName": "Clone Medic.webp",
         "keywords": [
             "Treat"
@@ -8999,11 +9045,15 @@
         "history": [
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 20 to 15 points."
+                "description": "Cost reduced from 20 to 15 points."
             },
             {
 				"date": "19 July 2024",
 				"description": "Cost increased from 15 to 17 points. Gained requirement for core rank only."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 17 to 20 points."
 			}
         ]
     },
@@ -9014,7 +9064,7 @@
         "isUnique": false,
         "cardType": "upgrade",
         "prevCost": 18,
-        "cost": 22,
+        "cost": 30,
         "imageName": "Clone Commander.webp",
         "keywords": [
             "Inspire",
@@ -9029,11 +9079,15 @@
         "history": [
             {
                 "date": "8 December 2022",
-                "description": "Cost decreased from 20 to 18 points."
+                "description": "Cost reduced from 20 to 18 points."
             },
             {
 				"date": "19 July 2024",
 				"description": "Cost increased from 18 to 22 points. Upgrade type changed from personnel to squad leader."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 22 to 30 points."
 			}
         ]
     },
@@ -9044,7 +9098,7 @@
         "cardName": "Viper Recon Droid",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 6,
+        "cost": 9,
         "imageName": "Viper Recon Droid.webp",
         "keywords": [
             "Observe",
@@ -9060,7 +9114,11 @@
             {
                 "date": "27 October 2021",
                 "description": "Cost reduced from 8 to 6 points."
-            }
+            },
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 6 to 9 points."
+			}
         ]
     },
     "of": {
@@ -9070,7 +9128,7 @@
         "cardName": "PK-Series Worker Droid",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 12,
+        "cost": 22,
         "imageName": "PK-Series Worker Droid.webp",
         "keywords": [
             "Repair",
@@ -9081,6 +9139,13 @@
                 "faction": "separatists",
                 "cardSubtype": "droid trooper"
             }
+        ],
+        "history": [
+            
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 12 to 22 points."
+			}
         ]
     },
     "og": {
@@ -9153,7 +9218,7 @@
         "faction": "republic",
         "isUnique": true,
         "prevCost": 200,
-        "cost": 180,
+        "cost": 170,
         "imageName": "Yoda.webp",
         "keywords": [
             "Guidance",
@@ -9184,6 +9249,10 @@
             {
 				"date": "19 July 2024",
 				"description": "Cost reduced from 200 to 180 points. Gained Deflect keyword and Guidance keyword was changed to Trooper."
+			},
+            {
+				"date": "6 November 2024",
+				"description": "Cost reduced from 180 to 170 points."
 			}
         ]
     },
@@ -10412,7 +10481,7 @@
         "cardName": "Engagement Protocols",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 5,
+        "cost": 3,
         "imageName": "Engagement Protocols.webp",
         "keywords": [
             "AI"
@@ -10421,6 +10490,12 @@
             {
                 "cardSubtype": "ground vehicle"
             }
+        ],
+        "history": [
+            {
+				"date": "6 November 2024",
+				"description": "Cost reduced from 5 to 3 points."
+			}
         ]
     },
     "qm": {
@@ -10430,7 +10505,7 @@
         "cardName": "Defense Protocols",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 3,
+        "cost": 8,
         "imageName": "Defense Protocols.webp",
         "keywords": [
             "AI",
@@ -10442,6 +10517,12 @@
             {
                 "cardSubtype": "ground vehicle"
             }
+        ],
+        "history": [
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 5 to 8 points."
+			}
         ]
     },
     "qn": {
@@ -10451,7 +10532,7 @@
         "cardName": "Attack Protocols",
         "isUnique": false,
         "cardType": "upgrade",
-        "cost": 3,
+        "cost": 8,
         "imageName": "Attack Protocols.webp",
         "keywords": [
             "AI",
@@ -10461,6 +10542,12 @@
             {
                 "cardSubtype": "ground vehicle"
             }
+        ],
+        "history": [
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 5 to 8 points."
+			}
         ]
     },
     "qo": {
@@ -14126,7 +14213,7 @@
         "rank": "support",
         "faction": "republic",
         "isUnique": false,
-        "cost": 75,
+        "cost": 90,
         "imageName": "Clone Commandos.webp",
         "keywords": [
             "Complete the Mission",
@@ -14151,6 +14238,12 @@
         "equip": [
             "xk",
             "xl"
+        ],
+        "history": [
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 75 to 90 points."
+			}
         ]
     },
 	"xk": {
@@ -14227,7 +14320,7 @@
         "rank": "support",
         "faction": "republic",
         "isUnique": true,
-        "cost": 100,
+        "cost": 105,
         "imageName": "Delta Squad.webp",
         "keywords": [
             "Complete the Mission",
@@ -14253,6 +14346,12 @@
         "speed": 2,
         "equip": [
             "xl"
+        ],
+        "history": [
+            {
+				"date": "6 November 2024",
+				"description": "Cost increased from 100 to 105 points."
+			}
         ]
     },
 	"xq": {
