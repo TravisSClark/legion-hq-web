@@ -425,6 +425,8 @@ function removeBattle(list, type, index) {
   return list;
 }
 
+
+// TODO remove these routers in favor of calling the right action type directly from the click handler
 function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyToAll = false) {
   if (action === 'UNIT_UPGRADE') {
     if (isApplyToAll) {
@@ -434,7 +436,7 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
     }
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
-  } else if (action === 'LOADOUT_UPGRADE') {
+  } else if (action === 'UNIT_LOADOUT_UPGRADE') {
     list = equipLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   } else if (action === 'COUNTERPART_LOADOUT_UPGRADE') {
     list = equipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
@@ -445,13 +447,14 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
   return list;
 }
 
+// TODO remove these routers in favor of calling the right action type directly from the click handler
 function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
   // const upgradeId = list.units[unitIndex].upgradesEquipped[upgradeIndex];
   if (action === 'UNIT_UPGRADE') {
     list = unequipUnitUpgrade(list, unitIndex, upgradeIndex);
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = unequipCounterpartUpgrade(list, unitIndex, upgradeIndex);
-  } else if (action === 'LOADOUT_UPGRADE') {
+  } else if (action === 'UNIT_LOADOUT_UPGRADE') {
     list = unequipLoadoutUpgrade(list, unitIndex, upgradeIndex);
   } else if (action === 'COUNTERPART_LOADOUT_UPGRADE') {
     list = unequipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex);

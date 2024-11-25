@@ -219,7 +219,7 @@ export function ListProvider({
 
       if (letUpgradesCascade && nextAvailIndex !== undefined && nextAvailType) {
         applyFilter = (newUpgradesEquipped, newAdditionalUpgradeSlots) => setCardPaneFilter({
-          action: 'UNIT_UPGRADE',
+          action,
           unitIndex,
           upgradeIndex: nextAvailIndex,
           upgradeType: nextAvailType,
