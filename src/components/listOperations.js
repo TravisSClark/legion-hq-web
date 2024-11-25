@@ -138,10 +138,6 @@ function consolidate(list) {
   return countPoints(list);
 }
 
-function deleteItem(items, i) {
-  return items.slice(0, i).concat(items.slice(i + 1, items.length))
-}
-
 function findUnitHashInList(list, unitHash) {
   return list.unitObjectStrings.indexOf(unitHash);
 }
@@ -194,7 +190,7 @@ function equipUpgradeToAll(list, unitIndex, upgradeIndex, upgradeId) {
   }
   if (list.unitObjectStrings.includes(newUnitHash)) {
     list.units[list.unitObjectStrings.indexOf(newUnitHash)].count += unit.count;
-    list.units = deleteItem(list.units, unitIndex);
+    list.units.splice(unitIndex, 1);
   } else {
     list.units[unitIndex] = newUnit;
     list.unitObjectStrings[unitIndex] = newUnitHash;
@@ -272,7 +268,7 @@ function addCounterpart(list, unitIndex, counterpartId) {
 
 function removeCounterpart(list, unitIndex) {
   const counterpart = list.units[unitIndex].counterpart;
-  list.uniques = deleteItem(list.uniques, list.uniques.indexOf(counterpart.counterpartId));
+  list.uniques.splice(list.uniques.indexOf(counterpart.counterpartId),1)
   delete list.units[unitIndex].counterpart;
   return consolidate(list);
 }
@@ -363,8 +359,8 @@ function incrementUnit(list, index) {
 function decrementUnit(list, index) {
   const unitObject = list.units[index];
   if (unitObject.count === 1) {
-    list.unitObjectStrings = deleteItem(list.unitObjectStrings, index);
-    list.units = deleteItem(list.units, index);
+    list.unitObjectStrings.splice(index, 1);
+    list.units.splice(index, 1);
   } else {
     list.units[index].count -= 1;
   }
@@ -377,7 +373,7 @@ function addContingency(list, commandId) {
 }
 
 function removeContingency(list, contingencyIndex) {
-  list.contingencies = deleteItem(list.contingencies, contingencyIndex);
+  list.contingencies.splice(contingencyIndex,1);
   return list;
 }
 
@@ -388,11 +384,10 @@ function addCommand(list, commandId) {
 }
 
 function removeCommand(list, commandIndex) {
-  list.commandCards = deleteItem(list.commandCards, commandIndex);
+  list.commandCards.splice(commandIndex, 1);
   return list;
 }
 
-// TODO - this seems to get called too much in CC lifecycle
 function sortCommandIds(cardIds) {
   return cardIds.sort((firstId, secondId) => {
     const firstType = Number.parseInt(cards[firstId].cardSubtype);
@@ -416,11 +411,11 @@ function addBattle(list, type, id) {
 
 function removeBattle(list, type, index) {
   if (type === 'primary') {
-    list.primaryCards = deleteItem(list.primaryCards, index);
+    list.primaryCards.splice(index,1);
   } else if (type === 'secondary') {
-    list.secondaryCards = deleteItem(list.secondaryCards, index);
+    list.secondaryCards.splice(index,1);
   } else if (type === 'advantage') {
-    list.advantageCards = deleteItem(list.advantageCards, index);
+    list.advantageCards.splice(index,1);
   } else return;
   return list;
 }
@@ -511,8 +506,8 @@ export {
   incrementUnit,
   decrementUnit,
   countPoints, 
-
-  // TODO - these are *probably* unneeded by importing classes via redundancy or tbd consolidate refactor; reassess
   sortCommandIds,
+
+  // TODO - *probably* unneeded by importing classes via redundancy or tbd consolidate refactor; reassess
   consolidate
 };

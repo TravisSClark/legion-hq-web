@@ -81,11 +81,10 @@ function validateUpgrades(list, unitIndex){
 
 }
 
-// All (most...) battleForce-specific stuff (should) goes here
+// BattleForce-specific stuff goes here
 function battleForceValidation(currentList, unitCounts){
 
   const validationIssues = [];
-  // TODO is a switch against the code standard? ;)
   // Should destroy this in favor of adding a 'rule' to apply for BzF in the object, e.g.
   // rules:[... {type:'unitLimit', min:0, max:1, types:['ay', 'sr']}]
 
@@ -146,7 +145,6 @@ function battleForceValidation(currentList, unitCounts){
     }
   }  
   
-  
   return validationIssues;
 }
 
@@ -190,9 +188,8 @@ function mercValidation(currentList, rank, mercs){
 function rankValidation(currentList, ranks, mercs, rankReqs){
   const validationIssues = [];
 
-  // TODO this is ugly - probably should be a BF flag
   const battleForce = battleForcesDict[currentList.battleForce];
-  const countMercs = battleForce?.rules?.countMercs; // currentList.battleForce === "Shadow Collective" || currentList.battleForce === "Bright Tree Village"
+  const countMercs = battleForce?.rules?.countMercs;
 
   if(rankReqs.commOp && (ranks.commander + ranks.operative) > rankReqs.commOp
     && !(ranks.commander > rankReqs.commander || ranks.operative > rankReqs.operative)){
@@ -288,7 +285,6 @@ function validateList(currentList){
     }
   })
 
-  // TODO - now that we count units by ID, use that for BF validation
   validationIssues.push(...battleForceValidation(currentList, unitCounts));
   validationIssues.push(...rankValidation(currentList, ranks, mercs, rankReqs));
   validationIssues.push(...mercValidation(currentList, ranks, mercs));

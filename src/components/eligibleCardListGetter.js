@@ -226,8 +226,8 @@ function getEquippableUpgrades(
     // dynamically add the force affinity
     const { faction } = unitCard;
 
-    // TODO - not a big fan of modifying unitCard data - leads to unexpected stickiness esp with old points
-    // TODO - this needs to be determined based on faction/BF alone... not this
+    // TODO - not a big fan of modifying unitCard data - leads to unexpected stickiness
+    // TODO - this should be determined based on faction/BF - but also needs to (re)work with current usage in cards.json
     unitCard['light side'] = unitCard['dark side'] = false;
     if (faction === 'rebels' || faction === 'republic') unitCard['light side'] = true;
     // TODO this line breaks stuff if we get a light-side merc bf
