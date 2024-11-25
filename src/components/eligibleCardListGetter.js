@@ -200,7 +200,7 @@ function getEligibleCommandsToAdd(list) {
 }
 
 function getEquippableUpgrades(
-  list, upgradeType, unitId, upgradesEquipped
+  list, upgradeType, unitId, upgradesEquipped=[]
 ) {
   const impRemnantUpgrades = ['ej', 'ek', 'fv', 'iy', 'fu', 'gm', 'gl', 'em', 'en', 'ja'];
   const validUpgradeIds = [];
