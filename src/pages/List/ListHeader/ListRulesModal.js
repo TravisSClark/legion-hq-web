@@ -162,8 +162,6 @@ function RankLimits({list}){
                   }
                 }
 
-                // console.log("l " + JSON.stringify(unitLimits) + " " + limit);
-
                 let display = limit + " " + name;
 
                 let suffix = idx < bf[r].length -1 ? ",": ""
