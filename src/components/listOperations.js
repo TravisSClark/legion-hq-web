@@ -195,11 +195,12 @@ function equipUpgradeToAll(list, unitIndex, upgradeIndex, upgradeId) {
   if (list.unitObjectStrings.includes(newUnitHash)) {
     list.units[list.unitObjectStrings.indexOf(newUnitHash)].count += unit.count;
     list.units = deleteItem(list.units, unitIndex);
+    unitIndex = list.unitObjectStrings.indexOf(newUnitHash);
   } else {
     list.units[unitIndex] = newUnit;
     list.unitObjectStrings[unitIndex] = newUnitHash;
   }
-  return list;
+  return [list, unitIndex];
 }
 
 function equipUpgradeToOne(list, unitIndex, upgradeIndex, upgradeId) {
@@ -319,7 +320,7 @@ function addUnit(list, unitId, stackSize = 1) {
             upgradeIndex += 1;
           }
         }
-        equipUpgradeToAll(list, unitIndex, upgradeIndex, unitCard.equip[i]);
+        [list, unitIndex] = equipUpgradeToAll(list, unitIndex, upgradeIndex, unitCard.equip[i]);
       }
     }
 
@@ -338,7 +339,7 @@ function addUnit(list, unitId, stackSize = 1) {
             // If this card was already added via equip above, it'll break things if added again
             // (currently a futureproof w no known case)
             if(!(unitCard.equip?.find(u => u === freeSoloId))){
-              equipUpgradeToAll(list, unitIndex, upgradeIndex, freeSoloId);
+              [list, unitIndex] = equipUpgradeToAll(list, unitIndex, upgradeIndex, freeSoloId);
             }
           }
         }
@@ -350,7 +351,7 @@ function addUnit(list, unitId, stackSize = 1) {
       unitCard.command.forEach((commandId) => addCommand(list, commandId));
     }
   }
-  list = consolidate(list);
+  consolidate(list);
   validateUpgrades(list, unitIndex);
   return list;
 }
@@ -430,16 +431,16 @@ function removeBattle(list, type, index) {
 function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyToAll = false) {
   if (action === 'UNIT_UPGRADE') {
     if (isApplyToAll) {
-      list = equipUpgradeToAll(list, unitIndex, upgradeIndex, upgradeId);
+      [list, unitIndex] = equipUpgradeToAll(list, unitIndex, upgradeIndex, upgradeId);
     } else {
-      list = equipUpgradeToOne(list, unitIndex, upgradeIndex, upgradeId);
+      equipUpgradeToOne(list, unitIndex, upgradeIndex, upgradeId);
     }
   } else if (action === 'COUNTERPART_UPGRADE') {
-    list = equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
+    equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   } else if (action === 'UNIT_LOADOUT_UPGRADE') {
-    list = equipLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
+    equipLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   } else if (action === 'COUNTERPART_LOADOUT_UPGRADE') {
-    list = equipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
+    equipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   }
 
   consolidate(list);
@@ -460,7 +461,7 @@ function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
     list = unequipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex);
   }
 
-  list = consolidate(list);
+  consolidate(list);
   validateUpgrades(list, unitIndex);
   return list;
 }
@@ -482,12 +483,12 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
   }
   const newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
   if (newUnitHashIndex > -1) {
-    list = incrementUnit(list, newUnitHashIndex);
+    incrementUnit(list, newUnitHashIndex);
   } else {
     list.units.splice(unitIndex + 1, 0, newUnit);
     list.unitObjectStrings.splice(unitIndex + 1, 0, newUnit.unitObjectString);
   }
-  list = decrementUnit(list, unitIndex);
+  decrementUnit(list, unitIndex);
   return list;
 }
 
