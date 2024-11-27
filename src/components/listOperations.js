@@ -177,9 +177,10 @@ function unequipLoadoutUpgrade(list, unitIndex, upgradeIndex) {
   return list;
 }
 
-function equipUpgradeToAll(list, unitIndex, upgradeIndex, upgradeId) {
+function equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll) {
   // applying upgrade to multiple units
   const unit = list.units[unitIndex];
+  const count = isApplyToAll ? unit.count : 1;
   const upgradeCard = cards[upgradeId];
   const newUnit = JSON.parse(JSON.stringify(unit));
   newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
@@ -189,38 +190,21 @@ function equipUpgradeToAll(list, unitIndex, upgradeIndex, upgradeId) {
     newUnit.additionalUpgradeSlots = [...upgradeCard.additionalUpgradeSlots];
     newUnit.upgradesEquipped.push(null);
   }
-  if (list.unitObjectStrings.includes(newUnitHash)) {
-    list.units[list.unitObjectStrings.indexOf(newUnitHash)].count += unit.count;
-    list.units = deleteItem(list.units, unitIndex);
-    unitIndex = list.unitObjectStrings.indexOf(newUnitHash);
-  } else {
-    list.units[unitIndex] = newUnit;
-    list.unitObjectStrings[unitIndex] = newUnitHash;
-  }
-  return [list, unitIndex];
-}
-
-function equipUpgradeToOne(list, unitIndex, upgradeIndex, upgradeId) {
-  const unit = list.units[unitIndex];
-  const upgradeCard = cards[upgradeId];
-  const newUnit = JSON.parse(JSON.stringify(unit));
-  newUnit.count = 1;
-  newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
-  newUnit.unitObjectString = getUnitHash(newUnit);
-  if ('additionalUpgradeSlots' in upgradeCard) {
-    newUnit.additionalUpgradeSlots = [...upgradeCard.additionalUpgradeSlots];
-    newUnit.upgradesEquipped.push(null);
-  }
   let newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
   if (newUnitHashIndex > -1) {
-    list = incrementUnit(list, newUnitHashIndex);
+    list.units[list.unitObjectStrings.indexOf(newUnitHash)].count += count;
+    list.units = deleteItem(list.units, unitIndex);
+    unitIndex = list.unitObjectStrings.indexOf(newUnitHash);
+  } else if (isApplyToAll) {
+      list.units[unitIndex] = newUnit;
+      list.unitObjectStrings[unitIndex] = newUnitHash;
+      newUnitHashIndex = unitIndex;
   } else {
     list.units.splice(unitIndex + 1, 0, newUnit);
     list.unitObjectStrings.splice(unitIndex + 1, 0, newUnit.unitObjectString);
     newUnitHashIndex = list.units[unitIndex].count > 1 ? unitIndex + 1 : unitIndex;
+    list = decrementUnit(list, unitIndex);
   }
-  list = decrementUnit(list, unitIndex);
-
   return [list, newUnitHashIndex];
 }
 
@@ -318,7 +302,7 @@ function addUnit(list, unitId, stackSize = 1) {
             upgradeIndex += 1;
           }
         }
-        [list, unitIndex] = equipUpgradeToAll(list, unitIndex, upgradeIndex, unitCard.equip[i]);
+        [list, unitIndex] = equipUnitUpgrade(list, unitIndex, upgradeIndex, unitCard.equip[i], true);
       }
     }
 
@@ -337,7 +321,7 @@ function addUnit(list, unitId, stackSize = 1) {
             // If this card was already added via equip above, it'll break things if added again
             // (currently a futureproof w no known case)
             if(!(unitCard.equip?.find(u => u === freeSoloId))){
-              [list, unitIndex] = equipUpgradeToAll(list, unitIndex, upgradeIndex, freeSoloId);
+              [list, unitIndex] = equipUnitUpgrade(list, unitIndex, upgradeIndex, freeSoloId, true);
             }
           }
         }
@@ -428,11 +412,7 @@ function removeBattle(list, type, index) {
 // TODO remove these routers in favor of calling the right action type directly from the click handler
 function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyToAll = false) {
   if (action === 'UNIT_UPGRADE') {
-    if (isApplyToAll) {
-      [list, unitIndex] = equipUpgradeToAll(list, unitIndex, upgradeIndex, upgradeId);
-    } else {
-      [list, unitIndex] = equipUpgradeToOne(list, unitIndex, upgradeIndex, upgradeId);
-    }
+    [list, unitIndex] = equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll);
   } else if (action === 'COUNTERPART_UPGRADE') {
     equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   } else if (action === 'UNIT_LOADOUT_UPGRADE') {
