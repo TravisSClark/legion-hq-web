@@ -85,11 +85,8 @@ function consolidate(list) {
       if (upgradeId) {
         const upgradeCard = cards[upgradeId];
         if (upgradeCard.isUnique) {
-          list.uniques.push(upgradeCard.id);
+          for (let i = 0; i < unit.count; i++) list.uniques.push(upgradeCard.id);
           unit.hasUniques = true;
-        }
-        if(upgradeCard.uniqueCount){
-          list.uniques.push(upgradeCard.id);
         }
         if (upgradeCard.keywords.includes('Field Commander')) {
           list.hasFieldCommander = true;
@@ -214,16 +211,17 @@ function equipUpgradeToOne(list, unitIndex, upgradeIndex, upgradeId) {
     newUnit.additionalUpgradeSlots = [...upgradeCard.additionalUpgradeSlots];
     newUnit.upgradesEquipped.push(null);
   }
-  const newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
+  let newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
   if (newUnitHashIndex > -1) {
     list = incrementUnit(list, newUnitHashIndex);
   } else {
     list.units.splice(unitIndex + 1, 0, newUnit);
     list.unitObjectStrings.splice(unitIndex + 1, 0, newUnit.unitObjectString);
+    newUnitHashIndex = list.units[unitIndex].count > 1 ? unitIndex + 1 : unitIndex;
   }
   list = decrementUnit(list, unitIndex);
 
-  return list;
+  return [list, newUnitHashIndex];
 }
 
 function equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId) {
@@ -433,7 +431,7 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
     if (isApplyToAll) {
       [list, unitIndex] = equipUpgradeToAll(list, unitIndex, upgradeIndex, upgradeId);
     } else {
-      equipUpgradeToOne(list, unitIndex, upgradeIndex, upgradeId);
+      [list, unitIndex] = equipUpgradeToOne(list, unitIndex, upgradeIndex, upgradeId);
     }
   } else if (action === 'COUNTERPART_UPGRADE') {
     equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
