@@ -88,15 +88,8 @@ const PrintListImages = React.forwardRef(( props, ref) => {
     currentList.units.forEach((unit, i) => {
       const card = cards[unit.unitId];
       const unitImage = `${urls.cdn}/${card.cardType}Cards/${card.imageName}`
-      const upgradeImages = [];
-      unit.upgradesEquipped.forEach((upgradeId, i) => {
-        if (!upgradeId) return;
-        const upgradeCard = cards[upgradeId];
-        // Need to actually use this somewhere
-        upgradeImages.push(`${urls.cdn}/${upgradeCard.cardType}Cards/${upgradeCard.imageName}`);
-      });
       units.push(
-        <div id={`${unit}-${i}`}>
+        <div>
           <img
             alt={card.cardName}
             src={unitImage}
@@ -104,6 +97,19 @@ const PrintListImages = React.forwardRef(( props, ref) => {
           />
         </div>
       );
+      unit.upgradesEquipped.forEach((upgradeId, i) => {
+        if (!upgradeId) return;
+        const upgradeCard = cards[upgradeId];
+        // Need to actually use this somewhere
+        const upgradeImage = `${urls.cdn}/${upgradeCard.cardType}Cards/${upgradeCard.imageName}`;
+        units.push(
+          <img
+            alt={upgradeCard.cardName}
+            src={upgradeImage}
+            style={{ height: '200px', width: 'auto' }}
+          />
+        );
+      });
     });
     // Need to do something similar as above for commands and battle cards
 
