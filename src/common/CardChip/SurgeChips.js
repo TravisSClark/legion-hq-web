@@ -16,7 +16,7 @@ function SurgeLabel({ type }) {
   );
 }
 
-function SurgeChips({ size, surges }) {
+function SurgeChip({ size, surges }) {
   if (!surges) return (
     <Chip
       size={size}
@@ -39,4 +39,4 @@ function SurgeChips({ size, surges }) {
   );
 };
 
-export default SurgeChips;
+export default SurgeChip;

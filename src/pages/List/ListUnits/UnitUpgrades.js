@@ -52,7 +52,7 @@ function UnitUpgrades({
               setCardPaneFilter({
                 action: actionPrefix + '_UPGRADE',
                 upgradeType, unitIndex, upgradeIndex,
-                hasUniques: unit.hasUniques,
+                hasUniques: unit.hasUniques || unitCard.isUnique,
                 unitId: unitCard.id,
                 upgradesEquipped: unit.upgradesEquipped,
                 additionalUpgradeSlots: unit.additionalUpgradeSlots

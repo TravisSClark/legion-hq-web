@@ -6054,6 +6054,7 @@
             "Counterpart"
         ],
         "upgradeBar":[],
+
         "id": "jj"
     },
     "jl": {
@@ -14183,6 +14184,7 @@
 		"affiliations": ["rebels"],
 		"isUnique": true,
 		"cardType": "counterpart",
+        "upgradeBar":[],
 		"cost": 10,
 		"surges": [],
 		"wounds": 1,

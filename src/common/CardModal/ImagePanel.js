@@ -9,7 +9,7 @@ import {
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import urls from 'constants/urls';
 import UpgradeBar from '../UpgradeBar';
-import CardChip from '../CardChip';
+import { PointsChip } from '../CardChip';
 
 function ImagePanel({ card, extraCardImage = false }) {
   if (!card) return null;
@@ -27,7 +27,7 @@ function ImagePanel({ card, extraCardImage = false }) {
               style={{ width: '100%' }}
             />
             <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
-              {(card.cost || card.cost === 0) && <CardChip type="points" value={card.cost} size={20} />}
+              {(card.cost || card.cost === 0) && <PointsChip value={card.cost} size={20} />}
               <UpgradeBar upgradeBar={card.upgradeBar}/>
             </div>
           </div>
