@@ -200,6 +200,7 @@ function equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll
       list.unitObjectStrings[unitIndex] = newUnitHash;
       newUnitHashIndex = unitIndex;
   } else {
+    newUnit.count = 1;
     list.units.splice(unitIndex + 1, 0, newUnit);
     list.unitObjectStrings.splice(unitIndex + 1, 0, newUnit.unitObjectString);
     newUnitHashIndex = list.units[unitIndex].count > 1 ? unitIndex + 1 : unitIndex;
@@ -430,7 +431,7 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
 function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
   // const upgradeId = list.units[unitIndex].upgradesEquipped[upgradeIndex];
   if (action === 'UNIT_UPGRADE') {
-    list = unequipUnitUpgrade(list, unitIndex, upgradeIndex);
+    [list, unitIndex] = unequipUnitUpgrade(list, unitIndex, upgradeIndex);
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = unequipCounterpartUpgrade(list, unitIndex, upgradeIndex);
   } else if (action === 'UNIT_LOADOUT_UPGRADE') {
@@ -467,7 +468,7 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
     list.unitObjectStrings.splice(unitIndex + 1, 0, newUnit.unitObjectString);
   }
   decrementUnit(list, unitIndex);
-  return list;
+  return [list, newUnitHashIndex];
 }
 
 

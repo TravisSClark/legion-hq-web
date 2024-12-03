@@ -34,7 +34,7 @@ function Info() {
           .
         </Typography>
         <Typography>
-          All game images, character names, and game pieces are © FFG & © Disney.
+          All game images, character names, and game pieces are © AMG & © Disney.
         </Typography>
         <Typography>
           Full art upgrade cards created by {' '}
