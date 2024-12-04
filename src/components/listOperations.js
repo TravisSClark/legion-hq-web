@@ -191,22 +191,20 @@ function equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll
     newUnit.upgradesEquipped.push(null);
   }
   let newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
+  // If a unit with that upgrade doesn't exist
   if (newUnitHashIndex > -1) {
     list.units[list.unitObjectStrings.indexOf(newUnitHash)].count += count;
-    list.units = deleteItem(list.units, unitIndex);
-    unitIndex = list.unitObjectStrings.indexOf(newUnitHash);
+    list = decrementUnit(list, unitIndex);
   } else if (isApplyToAll) {
-      list.units[unitIndex] = newUnit;
-      list.unitObjectStrings[unitIndex] = newUnitHash;
-      newUnitHashIndex = unitIndex;
+    list.units[unitIndex] = newUnit;
+    list.unitObjectStrings[unitIndex] = newUnitHash;
   } else {
     newUnit.count = 1;
     list.units.splice(unitIndex + 1, 0, newUnit);
     list.unitObjectStrings.splice(unitIndex + 1, 0, newUnit.unitObjectString);
-    newUnitHashIndex = list.units[unitIndex].count > 1 ? unitIndex + 1 : unitIndex;
     list = decrementUnit(list, unitIndex);
   }
-  return [list, newUnitHashIndex];
+  return [list, newUnit];
 }
 
 function equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId) {
@@ -334,7 +332,7 @@ function addUnit(list, unitId, stackSize = 1) {
       unitCard.command.forEach((commandId) => addCommand(list, commandId));
     }
   }
-  consolidate(list);
+  list = consolidate(list);
   validateUpgrades(list, unitIndex);
   return list;
 }
@@ -409,20 +407,21 @@ function removeBattle(list, type, index) {
   return list;
 }
 
-
 // TODO remove these routers in favor of calling the right action type directly from the click handler
 function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyToAll = false) {
   if (action === 'UNIT_UPGRADE') {
-    [list, unitIndex] = equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll);
+    let newUnit;
+    [list, newUnit] = equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll);
+    unitIndex = findUnitHashInList(list, newUnit.unitObjectString);
   } else if (action === 'COUNTERPART_UPGRADE') {
-    equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
+    list = equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   } else if (action === 'UNIT_LOADOUT_UPGRADE') {
-    equipLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
+    list = equipLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   } else if (action === 'COUNTERPART_LOADOUT_UPGRADE') {
-    equipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
+    list = equipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   }
 
-  consolidate(list);
+  list = consolidate(list);
   validateUpgrades(list, unitIndex);
   return list;
 }
@@ -431,7 +430,9 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
 function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
   // const upgradeId = list.units[unitIndex].upgradesEquipped[upgradeIndex];
   if (action === 'UNIT_UPGRADE') {
-    [list, unitIndex] = unequipUnitUpgrade(list, unitIndex, upgradeIndex);
+    let newUnit;
+    [list, newUnit] = unequipUnitUpgrade(list, unitIndex, upgradeIndex);
+    unitIndex = findUnitHashInList(list, newUnit.unitObjectString);
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = unequipCounterpartUpgrade(list, unitIndex, upgradeIndex);
   } else if (action === 'UNIT_LOADOUT_UPGRADE') {
@@ -440,7 +441,7 @@ function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
     list = unequipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex);
   }
 
-  consolidate(list);
+  list = consolidate(list);
   validateUpgrades(list, unitIndex);
   return list;
 }
@@ -460,15 +461,15 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
     newUnit.additionalUpgradeSlots = [];
     newUnit.upgradesEquipped.pop();
   }
-  const newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
+  let newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
   if (newUnitHashIndex > -1) {
-    incrementUnit(list, newUnitHashIndex);
+    list = incrementUnit(list, newUnitHashIndex);
   } else {
     list.units.splice(unitIndex + 1, 0, newUnit);
     list.unitObjectStrings.splice(unitIndex + 1, 0, newUnit.unitObjectString);
   }
-  decrementUnit(list, unitIndex);
-  return [list, newUnitHashIndex];
+  list = decrementUnit(list, unitIndex);
+  return [list, newUnit];
 }
 
 
