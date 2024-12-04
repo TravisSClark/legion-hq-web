@@ -7,7 +7,17 @@ import themes from 'constants/themes';
 function ThemeWrapper({ children, themeColor }) {
   const theme = responsiveFontSizes(createTheme({
     typography: { useNextVariants: true },
-    palette: themes.palettes[themeColor]
+    palette: themes.palettes[themeColor],
+    MuiRadio: {
+      root: {
+        color: 'green',
+      },
+      colorSecondary: {
+        '&$checked': {
+          color: 'green',
+        },
+      },
+    }
   }));
   return (
     <MuiThemeProvider theme={theme}>

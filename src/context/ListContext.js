@@ -21,7 +21,8 @@ import {
   removeBattle,
   equipUpgrade,
   unequipUpgrade,
-  countPoints
+  countPoints,
+  consolidate
 } from 'components/listOperations';
 import listTemplate from 'constants/listTemplate';
 import { validateList } from 'components/listValidator';
@@ -188,10 +189,21 @@ export function ListProvider({
   }
   const handleEquipUpgrade = (action, unitIndex, upgradeIndex, upgradeId, isApplyToAll) => {
     const unit = currentList.units[unitIndex];
-    let applyFilter; let nextAvailIndex; let nextAvailType;
-    if (isApplyToAll || unit.count === 1) {
+    const unitCard = cards[unit.unitId];
 
-      // TODO grabnar - prevent isApplyToAll if upgrade is unique
+    let applyFilter; let nextAvailIndex; let nextAvailType;
+    
+
+    let letUpgradesCascade = true;
+    if (userSettings && userSettings.cascadeUpgradeSelection) {
+      letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
+    }
+
+    // Upgrade cascading
+    // TODO: this is what we'd change up if we'd want 'apply to 1' for a stack to still cascade
+    if (letUpgradesCascade && (isApplyToAll || unit.count === 1)) {
+
+      // TODO grabnar - prevent isApplyToAll if upgrade is unique or limited count (Call to Arms)
       let i = (upgradeIndex + 1) % unit.upgradesEquipped.length;
       let numUpgradesEquipped = 0;
 
@@ -200,8 +212,9 @@ export function ListProvider({
         !nextAvailType &&
         numUpgradesEquipped < unit.upgradesEquipped.length
       ) {
+
+        console.log("cascadeCheck", i, JSON.stringify(unit), JSON.stringify(unitCard));
         const id = unit.upgradesEquipped[i];
-        const unitCard = cards[unit.unitId];
         if (id) {
           numUpgradesEquipped++;
           continue;
@@ -212,11 +225,7 @@ export function ListProvider({
                         unit.additionalUpgradeSlots[i - (unitCard.upgradeBar.length + 1)];
         i = (i + 1) % unit.upgradesEquipped.length;
       }
-      let letUpgradesCascade = true;
-      if (userSettings && userSettings.cascadeUpgradeSelection) {
-        letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
-      }
-
+      
       if (letUpgradesCascade && nextAvailIndex !== undefined && nextAvailType) {
         applyFilter = (newUpgradesEquipped, newAdditionalUpgradeSlots) => setCardPaneFilter({
           action,
@@ -293,14 +302,17 @@ export function ListProvider({
     updateThenValidateList({ ...newList });
   }
   const handleIncrementUnit = (index) => {
-    const newList = incrementUnit(currentList, index);
+    let newList = incrementUnit(currentList, index);
+    newList = consolidate(newList);
+
     updateThenValidateList({ ...newList });
   }
   const handleDecrementUnit = (index) => {
     if (cardPaneFilter.action.includes('UPGRADE')) {
       setCardPaneFilter({ action: 'DISPLAY' });
     }
-    const newList = decrementUnit(currentList, index);
+    let newList = decrementUnit(currentList, index);
+    newList = consolidate(newList);
     updateThenValidateList({ ...newList });
   }
 

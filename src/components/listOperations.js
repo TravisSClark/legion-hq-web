@@ -59,6 +59,7 @@ function countPoints(list) {
  * @returns 
  */
  // TODO need to specialize this; should at least be a on-upgrade and on-unit fire, not this whole big thing
+ // TODO make this modify-in-place (...among the bigger updates)
 function consolidate(list) {
   let hasContingencyKeyword = false;
   list.hasFieldCommander = false;
@@ -176,47 +177,29 @@ function unequipLoadoutUpgrade(list, unitIndex, upgradeIndex) {
   return list;
 }
 
-function equipUpgradeToAll(list, unitIndex, upgradeIndex, upgradeId) {
-  // applying upgrade to multiple units
+function equipUpgradeToUnit(list, unitIndex, upgradeIndex, upgradeId, upgradeCount) {
   const unit = list.units[unitIndex];
   const upgradeCard = cards[upgradeId];
   const newUnit = JSON.parse(JSON.stringify(unit));
-  newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
-  const newUnitHash = getUnitHash(newUnit);
-  newUnit.unitObjectString = newUnitHash;
-  if ('additionalUpgradeSlots' in upgradeCard) {
-    newUnit.additionalUpgradeSlots = [...upgradeCard.additionalUpgradeSlots];
-    newUnit.upgradesEquipped.push(null);
-  }
-  if (list.unitObjectStrings.includes(newUnitHash)) {
-    list.units[list.unitObjectStrings.indexOf(newUnitHash)].count += unit.count;
-    list.units.splice(unitIndex, 1);
-  } else {
-    list.units[unitIndex] = newUnit;
-    list.unitObjectStrings[unitIndex] = newUnitHash;
-  }
-  return list;
-}
-
-function equipUpgradeToOne(list, unitIndex, upgradeIndex, upgradeId) {
-  const unit = list.units[unitIndex];
-  const upgradeCard = cards[upgradeId];
-  const newUnit = JSON.parse(JSON.stringify(unit));
-  newUnit.count = 1;
+  newUnit.count = upgradeCount;
   newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
   newUnit.unitObjectString = getUnitHash(newUnit);
   if ('additionalUpgradeSlots' in upgradeCard) {
     newUnit.additionalUpgradeSlots = [...upgradeCard.additionalUpgradeSlots];
     newUnit.upgradesEquipped.push(null);
   }
+  
+  // See if upgrades now match a pre-existing unit
   const newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
   if (newUnitHashIndex > -1) {
-    list = incrementUnit(list, newUnitHashIndex);
+    list = incrementUnit(list, newUnitHashIndex, upgradeCount);
   } else {
     list.units.splice(unitIndex + 1, 0, newUnit);
     list.unitObjectStrings.splice(unitIndex + 1, 0, newUnit.unitObjectString);
   }
-  list = decrementUnit(list, unitIndex);
+
+  // Remove the 'old' unit from before applying the upgrade
+  list = decrementUnit(list, unitIndex, upgradeCount);
 
   return list;
 }
@@ -315,7 +298,7 @@ function addUnit(list, unitId, stackSize = 1) {
             upgradeIndex += 1;
           }
         }
-        equipUpgradeToAll(list, unitIndex, upgradeIndex, unitCard.equip[i]);
+        equipUpgradeToUnit(list, unitIndex, upgradeIndex, unitCard.equip[i], list[unitIndex].count);
       }
     }
 
@@ -334,7 +317,7 @@ function addUnit(list, unitId, stackSize = 1) {
             // If this card was already added via equip above, it'll break things if added again
             // (currently a futureproof w no known case)
             if(!(unitCard.equip?.find(u => u === freeSoloId))){
-              equipUpgradeToAll(list, unitIndex, upgradeIndex, freeSoloId);
+              equipUpgradeToUnit(list, unitIndex, upgradeIndex, freeSoloId, list[unitIndex].count);
             }
           }
         }
@@ -351,20 +334,20 @@ function addUnit(list, unitId, stackSize = 1) {
   return list;
 }
 
-function incrementUnit(list, index) {
-  list.units[index].count += 1;
-  return consolidate(list);
+function incrementUnit(list, index, incrementCount=1) {
+  list.units[index].count += incrementCount;
+  return list;
 }
 
-function decrementUnit(list, index) {
+function decrementUnit(list, index, decrementCount=1) {
   const unitObject = list.units[index];
-  if (unitObject.count === 1) {
+  if (unitObject.count <= decrementCount) {
     list.unitObjectStrings.splice(index, 1);
     list.units.splice(index, 1);
   } else {
-    list.units[index].count -= 1;
+    list.units[index].count -= decrementCount;
   }
-  return consolidate(list);
+  return list;
 }
 
 function addContingency(list, commandId) {
@@ -424,11 +407,8 @@ function removeBattle(list, type, index) {
 // TODO remove these routers in favor of calling the right action type directly from the click handler
 function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyToAll = false) {
   if (action === 'UNIT_UPGRADE') {
-    if (isApplyToAll) {
-      list = equipUpgradeToAll(list, unitIndex, upgradeIndex, upgradeId);
-    } else {
-      list = equipUpgradeToOne(list, unitIndex, upgradeIndex, upgradeId);
-    }
+    let count = isApplyToAll ? list.units[unitIndex].count : 1;
+    list = equipUpgradeToUnit(list, unitIndex, upgradeIndex, upgradeId, count)
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   } else if (action === 'UNIT_LOADOUT_UPGRADE') {
@@ -438,7 +418,8 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
   }
 
   consolidate(list);
-  validateUpgrades(list, unitIndex);
+  // TODO grabnar this currently nulls out / hits wrong unit, if/when a stack becomes a match after changing an upgrade
+  // validateUpgrades(list, unitIndex);
   return list;
 }
 
@@ -456,7 +437,9 @@ function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
   }
 
   list = consolidate(list);
-  validateUpgrades(list, unitIndex);
+
+  // TODO grabnar this currently nulls out / hits wrong unit, if/when a stack becomes a match after changing an upgrade
+  // validateUpgrades(list, unitIndex);
   return list;
 }
 
@@ -507,6 +490,7 @@ export {
   decrementUnit,
   countPoints, 
   sortCommandIds,
+  equipUpgradeToUnit,
 
   // TODO - *probably* unneeded by importing classes via redundancy or tbd consolidate refactor; reassess
   consolidate
