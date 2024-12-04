@@ -14843,5 +14843,50 @@
 		"cardType": "battle",
 		"imageName": "skirmish-Fortified Position.webp",
 		"keywords": ["Skirmish"]
-	}
+	},
+    "Aw": {
+        "id": "Aw",
+        "cardName": "Aqua Droids",
+        "cardType": "unit",
+        "cardSubtype": "ground vehicle",
+        "rank": "heavy",
+        "faction": "separatists",
+        "cost": 65,
+        "imageName": "Aqua Droids.webp",
+        "keywords": [
+            "AI",
+            "Armor",
+            "Infiltrate",
+            "Impact"
+        ],
+        "upgradeBar": [
+            "heavy weapon",
+            "comms"
+        ],
+        "defense": "white",
+        "surges": [
+            "block",
+            "hit"
+        ],
+        "wounds": 3,
+        "resistence": -1,
+        "speed": 1
+    },
+    "Ax": {
+        "id": "Ax",
+        "cardSubtype": "heavy weapon",
+        "cardName": "Heavy Aqua Droid",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 28,
+        "imageName": "Heavy Aqua Droid.webp",
+        "keywords": [
+            "Impact"
+        ],
+        "requirements": [
+            {
+                "cardName": "Aqua Droids"
+            }
+        ]
+    }
 }
