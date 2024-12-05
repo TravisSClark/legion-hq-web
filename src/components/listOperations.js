@@ -301,7 +301,9 @@ function addUnit(list, unitId, stackSize = 1) {
             upgradeIndex += 1;
           }
         }
-        [list, unitIndex] = equipUnitUpgrade(list, unitIndex, upgradeIndex, unitCard.equip[i], true);
+        let newUnit;
+        [list, newUnit] = equipUnitUpgrade(list, unitIndex, upgradeIndex, unitCard.equip[i], true);
+        unitIndex = findUnitHashInList(list, newUnit.unitObjectString);
       }
     }
 
@@ -320,7 +322,9 @@ function addUnit(list, unitId, stackSize = 1) {
             // If this card was already added via equip above, it'll break things if added again
             // (currently a futureproof w no known case)
             if(!(unitCard.equip?.find(u => u === freeSoloId))){
-              [list, unitIndex] = equipUnitUpgrade(list, unitIndex, upgradeIndex, freeSoloId, true);
+              let newUnit;
+              [list, newUnit] = equipUnitUpgrade(list, unitIndex, upgradeIndex, freeSoloId, true);
+              unitIndex = findUnitHashInList(list, newUnit.unitObjectString);
             }
           }
         }
