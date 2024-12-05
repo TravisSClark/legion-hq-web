@@ -1,5 +1,6 @@
 import cards from 'constants/cards';
 import legionModes from 'constants/legionModes';
+import generateLink from 'pages/List/ListExtras/generateLink';
 
 function getNumActivations(list) {
   return list.units.reduce((num, unit) => {
@@ -23,7 +24,9 @@ function generateMissionCards(missionArray, label, html){
 function generateTournamentText(list, html) {
   let lineBreak = html ? '<br>' : '\n';
   let header = `${list.title ? list.title : 'Untitled'}${lineBreak}`;
-  header += `${list.pointTotal}/${legionModes[list.mode].maxPoints}${lineBreak}`;
+  header += `${list.pointTotal}/${legionModes[list.mode].maxPoints}`;
+  const numActivations = getNumActivations(list);
+  header += ` (${numActivations} activation${numActivations === 1 ? '' : 's'})${lineBreak}`;
   let units = '';
   list.units.forEach(unit => {
     const unitCard = cards[unit.unitId];
@@ -118,7 +121,7 @@ function generateTournamentText(list, html) {
 function generateStandardText(list) {
   let header = list.title ? list.title : 'Untitled';
   let points = `\n${list.pointTotal}/${legionModes[list.mode].maxPoints}`;
-  const numActivations = getNumActivations(list)
+  const numActivations = getNumActivations(list);
   points += ` (${numActivations} activation${numActivations === 1 ? '' : 's'})\n`;
   let commander = '';
   let counterpart = '';
@@ -237,8 +240,8 @@ function generateTTSJSONText(list) {
   };
 
   ttsJSON.listname = list.title;
-
   ttsJSON.points = list.pointTotal;
+  ttsJSON.numActivations = getNumActivations(list);
 
   if (list.faction === 'rebels') ttsJSON.armyFaction = 'rebel';
   else if (list.faction === 'empire') ttsJSON.armyFaction = 'empire';
@@ -351,6 +354,8 @@ function generateTTSJSONText(list) {
   // appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
   // appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.secondary);
   // appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.advantage);
+
+  ttsJSON.listlink = generateLink(list);
 
   return JSON.stringify(ttsJSON, null, 4);
 }
