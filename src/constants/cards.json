@@ -3034,11 +3034,19 @@
         "keywords": [],
         "requirements": [
             {
-                "faction": "rebels"
+                "faction": "rebels",
+                "rank": "corps",
+                "cardSubtype": "trooper"
             }
         ],
         "additionalUpgradeSlots": [
             "comms"
+        ],
+        "history": [
+            {
+				"date": "6 December 2024",
+				"description": "Change the restriction to Rebel Core Trooper only."
+			}
         ],
         "id": "eq"
     },
@@ -3055,14 +3063,20 @@
         ],
         "requirements": [
             {
-                "faction": "rebels"
+                "faction": "rebels",
+                "rank": "corps",
+                "cardSubtype": "trooper"
             }
         ],
         "history": [
             {
                 "date": "19 November 2020",
                 "description": "Cost reduced from 19 to 16 points."
-            }
+            },
+            {
+				"date": "6 December 2024",
+				"description": "Change the restriction to Rebel Core Trooper only."
+			}
         ],
         "id": "er"
     },
@@ -3100,15 +3114,23 @@
         ],
         "requirements": [
             {
-                "faction": "rebels"
+                "faction": "rebels",
+                "rank": "corps",
+                "cardSubtype": "trooper"
             }
+        ],
+        "history": [
+            {
+				"date": "6 December 2024",
+				"description": "Change the restriction to Rebel Core Trooper only."
+			}
         ],
         "id": "et"
     },
     "eu": {
         "displayName": "Medical Droid",
         "cardSubtype": "personnel",
-        "cardName": "2-1B Medical Droid",
+        "cardName": "21-B Medical Droid",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 20,
@@ -3119,14 +3141,19 @@
         ],
         "requirements": [
             {
-                "faction": "rebels"
+                "faction": "rebels",
+                "rank": "corps",
+                "cardSubtype": "trooper"
             }
         ],
         "history": [
-            
             {
 				"date": "6 November 2024",
 				"description": "Cost increased from 18 to 20 points."
+            },
+            {
+				"date": "6 December 2024",
+				"description": "Change the restriction to Rebel Core Trooper only."
 			}
         ],
         "id": "eu"
@@ -8867,6 +8894,10 @@
             {
 				"date": "6 November 2024",
 				"description": "Cost increased from 6 to 9 points."
+			},
+            {
+				"date": "6 December 2024",
+				"description": "Remove the Sidearm: Ranged keyword. Gain the Sidearm: Melee, Ranged keyword."
 			}
         ]
     },
@@ -11521,6 +11552,10 @@
             {
 				"date": "19 July 2024",
 				"description": "Cost increased from 65 to 70 points."
+			},
+            {
+				"date": "6 December 2024",
+				"description": "Increase the Vibro-Ax's Overrun 1 to Overrun 2."
 			}
         ]
     },
