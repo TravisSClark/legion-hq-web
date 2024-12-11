@@ -85,6 +85,8 @@ function ControlPanel({
               aria-labelledby="demo-radio-buttons-group-label"
               defaultValue="red"
               name="radio-cover-group"
+              value={rollerState.defenseColor}
+              onChange={(e)=>onControlChange({...rollerState, defenseColor:e.target.value})}
             >
               <FormControlLabel value="red" control={radio}label="Red" />
               <FormControlLabel value="white" control={radio} label="White" />
@@ -103,6 +105,8 @@ function ControlPanel({
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="none"
             name="radio-buttons-group"
+            value={rollerState.cover}
+            onChange={(e)=>onControlChange({...rollerState, cover:e.target.value})}
           >
             <FormControlLabel value="none" control={radio} label="None" />
             <FormControlLabel value="light" control={radio} label="Light" />
