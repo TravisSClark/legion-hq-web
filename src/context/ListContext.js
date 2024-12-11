@@ -218,16 +218,20 @@ export function ListProvider({
       }
 
       if (letUpgradesCascade && nextAvailIndex !== undefined && nextAvailType) {
-        applyFilter = (newUpgradesEquipped, newAdditionalUpgradeSlots) => setCardPaneFilter({
-          action,
-          unitIndex,
-          upgradeIndex: nextAvailIndex,
-          upgradeType: nextAvailType,
-          hasUniques: unit.hasUniques,
-          unitId: unit.unitId,
-          upgradesEquipped: newUpgradesEquipped,
-          additionalUpgradeSlots: newAdditionalUpgradeSlots
-        });
+        if(!unit.upgradesEquipped[nextAvailIndex]){
+          applyFilter = null;
+        }else{
+          applyFilter = (newUpgradesEquipped, newAdditionalUpgradeSlots) => setCardPaneFilter({
+            action,
+            unitIndex,
+            upgradeIndex: nextAvailIndex,
+            upgradeType: nextAvailType,
+            hasUniques: unit.hasUniques,
+            unitId: unit.unitId,
+            upgradesEquipped: newUpgradesEquipped,
+            additionalUpgradeSlots: newAdditionalUpgradeSlots
+          });
+        }
       }
     } // else applyFilter = () => setCardPaneFilter({ action: 'DISPLAY' })
 

@@ -156,7 +156,6 @@ function getEligibleCommandsToAdd(list) {
   });
   cardIdsByType['command'].forEach(id => {
     const card = cards[id];
-    // if (card.cardType !== 'command') return;
     if (list.commandCards.includes(id)) return;
     if (list.contingencies && list.contingencies.includes(id)) return;
 
@@ -178,7 +177,6 @@ function getEligibleCommandsToAdd(list) {
 
     if (!list.faction.includes(card.faction)) return;
     if (id === 'aa') return; // Standing Orders
-    if (id === 'jl' || id === 'ka' || id === 'kb') return; // Duplicates
     if ((id === 'tv' || id === 'ud') && !list.uniques.includes('tn')) return; // grogu's command card
 
     if (card.battleForce && card.battleForce !== list.battleForce) {
@@ -273,6 +271,7 @@ function getEquippableLoadoutUpgrades(
   const validLoadoutUpgradeIds = [];
   const invalidLoadoutUpgradeIds = [...invalidIds];
   const parentUpgradeCard = cards[upgradesEquipped[upgradeIndex]];
+  console.log(JSON.stringify(upgradesEquipped), upgradeIndex);
   for (let i = 0; i < validIds.length; i++) {
     const upgradeId = validIds[i]
     const upgradeCard = cards[upgradeId];

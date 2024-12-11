@@ -204,40 +204,28 @@ function generateStandardText(list) {
 
 function generateTTSJSONText(list) {
   const ttsJSON = { author: 'Legion HQ' };
-  function appendMissionTTSJSON(cardList, ttsArray){
 
-    for (let i = 0; i < cardList.length; i++) {
-      if (idToName[cardList[i]]) {
-        ttsArray.push(idToName[cardList[i]]);
-      } else {
-        const battlefieldCard = cards[cardList[i]];
-        ttsArray.push(battlefieldCard.cardName);
-      }
+  const getTtsName = (card)=>{
+    if(card.ttsName){
+      return card.ttsName;
+    }else if(card.title){
+      return card.cardName + " " + card.title;
+    }else{
+      return card.cardName;
     }
-
   }
-  const idToName = {
-    "nc": "Offensive Stance",
-    "dz": "A-180 Config",
-    "ea": "A-300 Config",
-    "kh": "A-280-CFE Config",
-    "gn": "E-11D Config",
-    "np": "J-19 Bo-rifle",
-    "ff": "Ax-108 \"Ground Buzzer\"",
-    "fg": "Mo/Dk Power Harpoon",
-    "bh": "TX-225 GAVw Occupier Combat Assault Tank",
-    "on": "LAAT/le Patrol Transport",
-    "oo": "LAAT/le Patrol Transport",
-    "ig": "CM-0/93 Trooper",
-    "kd": "Z-6 Phase II Trooper",
-    "kt": "\"Bunker Buster\" Shells",
-    "le": "EMP \"Droid Poppers\"",
-    "lw": "Iden's ID10 Seeker Droid",
-    "sr": "Stormtroopers Heavy Response Unit",
-    "uj": "The Darksaber (Gideon)",
-    "rq": "The Darksaber (Maul)",
-    "xw": "Echo (The Bad Batch)"
-  };
+
+  const writeCardsToJsonArray = (cardList, jsonArray) =>{
+    if(!cardList)
+      return;
+
+    for (let i = 0; i < cardList.length; i++){
+      const card = cards[cardList[i]];
+      if(!card)
+        continue;
+      jsonArray.push(getTtsName(card));
+    }
+  }
 
   ttsJSON.listname = list.title;
   ttsJSON.points = list.pointTotal;
@@ -254,19 +242,12 @@ function generateTTSJSONText(list) {
   }
 
   ttsJSON.commandCards = [];
-  for (let i = 0; i < list.commandCards.length; i++) {
-    const commandCard = cards[list.commandCards[i]];
-    ttsJSON.commandCards.push(commandCard.cardName);
-  }
+  writeCardsToJsonArray(list.commandCards, ttsJSON.commandCards);
+
   ttsJSON.commandCards.push('Standing Orders');
 
   ttsJSON.contingencies = [];
-  if (list.contingencies) {
-    for (let i = 0; i < list.contingencies.length; i++){
-      const commandCard = cards[list.contingencies[i]];
-      ttsJSON.contingencies.push(commandCard.cardName);
-    }
-  }
+  writeCardsToJsonArray(list.contingencies, ttsJSON.contingencies);
 
   ttsJSON.units = [];
   for (let i = 0; i < list.units.length; i++) {
@@ -274,71 +255,30 @@ function generateTTSJSONText(list) {
     const unit = list.units[i];
     const unitCard = cards[unit.unitId];
 
-    if (idToName[unit.unitId]) unitJSON.name = idToName[unit.unitId];
-    else if (unitCard.ttsName) unitJSON.name = unitCard.ttsName;
-    else if (unitCard.title) unitJSON.name = `${unitCard.cardName} ${unitCard.title}`;
-    else unitJSON.name = unitCard.cardName;
+    unitJSON.name = getTtsName(unitCard);
+      
+    writeCardsToJsonArray(unit.upgradesEquipped, unitJSON.upgrades);
+    writeCardsToJsonArray(unit.loadoutUpgrades, unitJSON.loadout);
 
-    for (let j = 0; j < unit.upgradesEquipped.length; j++) {
-      if (unit.upgradesEquipped[j]) {
-        if (idToName[unit.upgradesEquipped[j]]) {
-          unitJSON.upgrades.push(idToName[unit.upgradesEquipped[j]]);
-        } else {
-          const upgradeCard = cards[unit.upgradesEquipped[j]];
-          unitJSON.upgrades.push(upgradeCard.cardName);
-        }
-      }
-    }
-    if (unit.loadoutUpgrades) {
-      for (let j = 0; j < unit.loadoutUpgrades.length; j++) {
-        if (unit.loadoutUpgrades[j]) {
-          if (idToName[unit.loadoutUpgrades[j]]) {
-            unitJSON.loadout.push(idToName[unit.loadoutUpgrades[j]]);
-          } else {
-            const upgradeCard = cards[unit.loadoutUpgrades[j]];
-            unitJSON.loadout.push(upgradeCard.cardName);
-          }
-        }
-      }
-    }
     if (unit.counterpart) {
       const counterpart = unit.counterpart;
-      const counterpartCard = cards[counterpart.counterpartId];
-      unitJSON.upgrades.push(`${counterpartCard.cardName}${counterpartCard.title ? ` ${counterpartCard.title}}` : ''}`);
-      for (let j = 0; j < counterpart.upgradesEquipped.length; j++) {
-        if (counterpart.upgradesEquipped[j]) {
-          if (idToName[counterpart.upgradesEquipped[j]]) {
-            unitJSON.upgrades.push(idToName[counterpart.upgradesEquipped[j]]);
-          } else {
-            const upgradeCard = cards[counterpart.upgradesEquipped[j]];
-            unitJSON.upgrades.push(upgradeCard.cardName);
-          }
-        }
-      }
-      if (counterpart.loadoutUpgrades) {
-        for (let j = 0; j < counterpart.loadoutUpgrades.length; j++) {
-          if (counterpart.loadoutUpgrades[j]) {
-            if (idToName[counterpart.loadoutUpgrades[j]]) {
-              unitJSON.loadout.push(idToName[counterpart.loadoutUpgrades[j]]);
-            } else {
-              const upgradeCard = cards[counterpart.loadoutUpgrades[j]];
-              unitJSON.loadout.push(upgradeCard.cardName);
-            }
-          }
-        }
-      }
+      unitJSON.upgrades.push(getTtsName(cards[counterpart.counterpartId]));
+      
+      // Write counterpart to the units' arrays. FOR NOW, this doesn't cause any confusion (and is what TTS wants)
+      // since only Iden has a counterpart with an upgrade, and said upgrade isn't a type Iden already has
+      writeCardsToJsonArray(counterpart.upgradesEquipped, unitJSON.upgrades);
+      writeCardsToJsonArray(counterpart.loadoutUpgrades, unitJSON.loadout);
     };
     if (unitCard.flaw) unitJSON.upgrades.push(cards[unitCard.flaw].cardName);
-    if (unit.count > 1) {
-      for (let j = 0; j < unit.count; j++) ttsJSON.units.push(unitJSON);
-    } else {
+    
+    for (let j = 0; j < unit.count; j++) 
       ttsJSON.units.push(unitJSON);
-    }
   }
 
-  // TODO - TTS still uses the old names for battle cards
-    ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };
-    // ttsJSON.battlefieldDeck = { objective: [], secondary: [], advantage: [] };
+  // TTS still uses the old names for battle cards
+  ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };
+  // ttsJSON.battlefieldDeck = { objective: [], secondary: [], advantage: [] };
+  
   if (list.mode === "500-point mode") {
     ttsJSON.battlefieldDeck.scenario =  "skirmish";
   } else if (list.mode.includes("storm tide")) {
@@ -347,10 +287,11 @@ function generateTTSJSONText(list) {
     ttsJSON.battlefieldDeck.scenario =  "standard";
   }
 
-  // TODO - map the 'new' obj cards to the card type names TTS wants
-  appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.deployment);
-  appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.objective);
-  appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.conditions);
+  // map the 'new' obj cards to the card type names TTS wants
+  writeCardsToJsonArray(list.primaryCards, ttsJSON.battlefieldDeck.deployment);
+  writeCardsToJsonArray(list.secondaryCards, ttsJSON.battlefieldDeck.objective);
+  writeCardsToJsonArray(list.advantageCards, ttsJSON.battlefieldDeck.conditions);
+  // TODO maybe someday we update this to the 'actual' new names, need a TTS update for that
   // appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
   // appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.secondary);
   // appendMissionTTSJSON(list.advantageCards, ttsJSON.battlefieldDeck.advantage);

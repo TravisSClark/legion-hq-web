@@ -223,10 +223,9 @@ async function ttsCheckAsync(){
         // "\"NANNY\" PROGRAMMING",
         // "A BEAUTIFUL FRIENDSHIP",
         
-        // 3po has weird behavior in TTS - apparently only 1 of his 2 prints are used?
-        // 
-        // "C-3P0 HUMAN-CYBORG RELATIONS",
-        // "C-3P0 MADE TO SUFFER",
+        // 3p0 cards are OK - they're remapped from these full names to "C-3P0" in the .lua script itself (not the JS we parse for this check)
+        "C-3PO HUMAN-CYBORG RELATIONS",
+        "C-3PO MADE TO SUFFER",
 
         // Storm tide stuff
         "STORM TIDE COMMANDER",

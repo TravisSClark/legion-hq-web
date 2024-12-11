@@ -3130,7 +3130,7 @@
     "eu": {
         "displayName": "Medical Droid",
         "cardSubtype": "personnel",
-        "cardName": "21-B Medical Droid",
+        "cardName": "2-1B Medical Droid",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 20,
@@ -6461,6 +6461,7 @@
         "keywords": [
             "Covert Ops",
             "Danger Sense",
+            "Loadout",
             "Marksman",
             "Tactical"
         ],
@@ -14214,12 +14215,12 @@
 	"xw": {
 		"cardName": "Omega",
 		"title": "Mascot of the 99th",
-        "ttsName":"Omega",
+    "ttsName":"Omega",
 		"faction": "mercenary",
 		"affiliations": ["rebels"],
 		"isUnique": true,
 		"cardType": "counterpart",
-        "upgradeBar":[],
+    "upgradeBar":[],
 		"cost": 10,
 		"surges": [],
 		"wounds": 1,
@@ -14825,7 +14826,7 @@
 	"Ap": {
         "id": "Ap",
 		"cardSubtype": "primary",
-		"cardName": "Intercept the Signals",
+		"cardName": "Intercept Signals",
 		"cardType": "battle",
 		"imageName": "skirmish-Intercept the Signals.webp",
 		"keywords": ["Skirmish"]
