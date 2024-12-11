@@ -266,7 +266,7 @@ function getEquippableLoadoutUpgrades(
   list, upgradeType, id, upgradeIndex, upgradesEquipped
 ) {
   const upgrades = getEquippableUpgrades(
-    list, upgradeType, id, upgradesEquipped=[]
+    list, upgradeType, id, upgradesEquipped
   );
   const validIds = upgrades.validIds;
   const invalidIds = upgrades.invalidIds;
@@ -290,7 +290,6 @@ function getEquippableLoadoutUpgrades(
     invalidIds: invalidLoadoutUpgradeIds
   };
 }
-
 
 function getEligibleBattlesToAdd(list, type) {
   const validIds = [];

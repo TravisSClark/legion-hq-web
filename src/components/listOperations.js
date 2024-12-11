@@ -85,11 +85,8 @@ function consolidate(list) {
       if (upgradeId) {
         const upgradeCard = cards[upgradeId];
         if (upgradeCard.isUnique) {
-          list.uniques.push(upgradeCard.id);
+          for (let i = 0; i < unit.count; i++) list.uniques.push(upgradeCard.id);
           unit.hasUniques = true;
-        }
-        if(upgradeCard.uniqueCount){
-          list.uniques.push(upgradeCard.id);
         }
         if (upgradeCard.keywords.includes('Field Commander')) {
           list.hasFieldCommander = true;
@@ -180,9 +177,10 @@ function unequipLoadoutUpgrade(list, unitIndex, upgradeIndex) {
   return list;
 }
 
-function equipUpgradeToAll(list, unitIndex, upgradeIndex, upgradeId) {
+function equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll) {
   // applying upgrade to multiple units
   const unit = list.units[unitIndex];
+  const count = isApplyToAll ? unit.count : 1;
   const upgradeCard = cards[upgradeId];
   const newUnit = JSON.parse(JSON.stringify(unit));
   newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
@@ -192,37 +190,21 @@ function equipUpgradeToAll(list, unitIndex, upgradeIndex, upgradeId) {
     newUnit.additionalUpgradeSlots = [...upgradeCard.additionalUpgradeSlots];
     newUnit.upgradesEquipped.push(null);
   }
-  if (list.unitObjectStrings.includes(newUnitHash)) {
-    list.units[list.unitObjectStrings.indexOf(newUnitHash)].count += unit.count;
-    list.units = deleteItem(list.units, unitIndex);
-  } else {
+  let newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
+  // If a unit with that upgrade doesn't exist
+  if (newUnitHashIndex > -1) {
+    list.units[list.unitObjectStrings.indexOf(newUnitHash)].count += count;
+    list = decrementUnit(list, unitIndex);
+  } else if (isApplyToAll) {
     list.units[unitIndex] = newUnit;
     list.unitObjectStrings[unitIndex] = newUnitHash;
-  }
-  return list;
-}
-
-function equipUpgradeToOne(list, unitIndex, upgradeIndex, upgradeId) {
-  const unit = list.units[unitIndex];
-  const upgradeCard = cards[upgradeId];
-  const newUnit = JSON.parse(JSON.stringify(unit));
-  newUnit.count = 1;
-  newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
-  newUnit.unitObjectString = getUnitHash(newUnit);
-  if ('additionalUpgradeSlots' in upgradeCard) {
-    newUnit.additionalUpgradeSlots = [...upgradeCard.additionalUpgradeSlots];
-    newUnit.upgradesEquipped.push(null);
-  }
-  const newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
-  if (newUnitHashIndex > -1) {
-    list = incrementUnit(list, newUnitHashIndex);
   } else {
+    newUnit.count = 1;
     list.units.splice(unitIndex + 1, 0, newUnit);
     list.unitObjectStrings.splice(unitIndex + 1, 0, newUnit.unitObjectString);
+    list = decrementUnit(list, unitIndex);
   }
-  list = decrementUnit(list, unitIndex);
-
-  return list;
+  return [list, newUnit];
 }
 
 function equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId) {
@@ -319,7 +301,9 @@ function addUnit(list, unitId, stackSize = 1) {
             upgradeIndex += 1;
           }
         }
-        equipUpgradeToAll(list, unitIndex, upgradeIndex, unitCard.equip[i]);
+        let newUnit;
+        [list, newUnit] = equipUnitUpgrade(list, unitIndex, upgradeIndex, unitCard.equip[i], true);
+        unitIndex = findUnitHashInList(list, newUnit.unitObjectString);
       }
     }
 
@@ -338,7 +322,9 @@ function addUnit(list, unitId, stackSize = 1) {
             // If this card was already added via equip above, it'll break things if added again
             // (currently a futureproof w no known case)
             if(!(unitCard.equip?.find(u => u === freeSoloId))){
-              equipUpgradeToAll(list, unitIndex, upgradeIndex, freeSoloId);
+              let newUnit;
+              [list, newUnit] = equipUnitUpgrade(list, unitIndex, upgradeIndex, freeSoloId, true);
+              unitIndex = findUnitHashInList(list, newUnit.unitObjectString);
             }
           }
         }
@@ -425,33 +411,35 @@ function removeBattle(list, type, index) {
   return list;
 }
 
+// TODO remove these routers in favor of calling the right action type directly from the click handler
 function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyToAll = false) {
   if (action === 'UNIT_UPGRADE') {
-    if (isApplyToAll) {
-      list = equipUpgradeToAll(list, unitIndex, upgradeIndex, upgradeId);
-    } else {
-      list = equipUpgradeToOne(list, unitIndex, upgradeIndex, upgradeId);
-    }
+    let newUnit;
+    [list, newUnit] = equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll);
+    unitIndex = findUnitHashInList(list, newUnit.unitObjectString);
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
-  } else if (action === 'LOADOUT_UPGRADE') {
+  } else if (action === 'UNIT_LOADOUT_UPGRADE') {
     list = equipLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   } else if (action === 'COUNTERPART_LOADOUT_UPGRADE') {
     list = equipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   }
 
-  consolidate(list);
+  list = consolidate(list);
   validateUpgrades(list, unitIndex);
   return list;
 }
 
+// TODO remove these routers in favor of calling the right action type directly from the click handler
 function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
   // const upgradeId = list.units[unitIndex].upgradesEquipped[upgradeIndex];
   if (action === 'UNIT_UPGRADE') {
-    list = unequipUnitUpgrade(list, unitIndex, upgradeIndex);
+    let newUnit;
+    [list, newUnit] = unequipUnitUpgrade(list, unitIndex, upgradeIndex);
+    unitIndex = findUnitHashInList(list, newUnit.unitObjectString);
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = unequipCounterpartUpgrade(list, unitIndex, upgradeIndex);
-  } else if (action === 'LOADOUT_UPGRADE') {
+  } else if (action === 'UNIT_LOADOUT_UPGRADE') {
     list = unequipLoadoutUpgrade(list, unitIndex, upgradeIndex);
   } else if (action === 'COUNTERPART_LOADOUT_UPGRADE') {
     list = unequipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex);
@@ -477,7 +465,7 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
     newUnit.additionalUpgradeSlots = [];
     newUnit.upgradesEquipped.pop();
   }
-  const newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
+  let newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
   if (newUnitHashIndex > -1) {
     list = incrementUnit(list, newUnitHashIndex);
   } else {
@@ -485,7 +473,7 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
     list.unitObjectStrings.splice(unitIndex + 1, 0, newUnit.unitObjectString);
   }
   list = decrementUnit(list, unitIndex);
-  return list;
+  return [list, newUnit];
 }
 
 

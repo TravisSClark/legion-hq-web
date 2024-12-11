@@ -69,7 +69,7 @@ function CardSelector() {
       break;
     case 'UNIT_UPGRADE':
     case 'COUNTERPART_UPGRADE':
-      let upgradeTargetId = action === 'COUNTERPART_UPGRADE' ? cardPaneFilter.counterpartId : cardPaneFilter.unitId;
+      let upgradeTargetId = cardPaneFilter.unitId;
 
       let title = action === 'COUNTERPART_UPGRADE' ? "Add counterpart upgrade" : "Add upgrade";
       selectorIds = getEquippableUpgrades(
@@ -77,7 +77,6 @@ function CardSelector() {
         cardPaneFilter.upgradeType,
         upgradeTargetId,
         cardPaneFilter.upgradesEquipped,
-        cardPaneFilter.additionalUpgradeSlots
       );
       clickHandler = (upgradeId) => handleEquipUpgrade(
         action,
@@ -96,16 +95,15 @@ function CardSelector() {
         />
       );
       break;
-    case 'LOADOUT_UPGRADE':
+    case 'UNIT_LOADOUT_UPGRADE':
     case 'COUNTERPART_LOADOUT_UPGRADE':
-      let id = action === 'COUNTERPART_LOADOUT_UPGRADE' ? cardPaneFilter.counterpartId : cardPaneFilter.unitId;
+      let id = cardPaneFilter.unitId;
       selectorIds = getEquippableLoadoutUpgrades(
         currentList,
         cardPaneFilter.upgradeType,
         id,
         cardPaneFilter.upgradeIndex,
-        cardPaneFilter.upgradesEquipped,
-        cardPaneFilter.additionalUpgradeSlots
+        cardPaneFilter.upgradesEquipped
       );
       clickHandler = (upgradeId) => handleEquipUpgrade(
         action,
