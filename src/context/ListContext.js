@@ -216,11 +216,10 @@ export function ListProvider({
       if (userSettings && userSettings.cascadeUpgradeSelection) {
         letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
       }
-
       if (letUpgradesCascade && nextAvailIndex !== undefined && nextAvailType) {
-        if(!unit.upgradesEquipped[nextAvailIndex]){
-          applyFilter = null;
-        }else{
+        // if (!unit.upgradesEquipped[nextAvailIndex]) {
+        //   applyFilter = null;
+        // } else {
           applyFilter = (newUpgradesEquipped, newAdditionalUpgradeSlots) => setCardPaneFilter({
             action,
             unitIndex,
@@ -231,7 +230,7 @@ export function ListProvider({
             upgradesEquipped: newUpgradesEquipped,
             additionalUpgradeSlots: newAdditionalUpgradeSlots
           });
-        }
+        // }
       }
     } // else applyFilter = () => setCardPaneFilter({ action: 'DISPLAY' })
 
