@@ -299,9 +299,7 @@ export function ListProvider({
           }
       }
 
-      // TODO grabnar - prevent isApplyToAll if upgrade is unique, ie Call to Arms
       let nextUpgradeIndex = (upgradeIndex + 1) % upgradesEquipped.length;
-
       let count = 0;
 
       while (filter == null && count < upgradesEquipped.length) {

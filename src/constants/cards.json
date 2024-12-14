@@ -7204,7 +7204,8 @@
         "imageName": "Fives.webp",
         "keywords": [
             "Charge",
-            "Coordinate"
+            "Coordinate",
+            "Leader"
         ],
         "requirements": [
             {
@@ -7232,7 +7233,7 @@
         "cardType": "upgrade",
         "cost": 52,
         "imageName": "Echo ARC Marksman.webp",
-        "keywords": [],
+        "keywords": ["Leader", "Reliable"],
         "requirements": [
             "AND",
             {

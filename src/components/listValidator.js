@@ -82,6 +82,26 @@ function validateUpgrades(list, unitIndex){
     }
   }
 
+
+  // Loop upgrades for checks
+  // For now, this just confirms we don't have 2+ Leader cards
+
+  let leaderList = [];
+  unit.upgradesEquipped.forEach(id=>{
+
+    if(!id) return;
+    const upgradeCard = cards[id];
+
+    if(upgradeCard.keywords.includes("Leader")){
+      leaderList.push(upgradeCard.cardName);
+    }
+
+  });
+
+  if(leaderList.length > 1){
+    unit.validationIssues.push( { level:2, text: card.cardName + " has too many LEADER upgrades (" + leaderList.join(' and ') + ")"});
+  }
+
 }
 
 function battleForceValidation(currentList, unitCounts){
