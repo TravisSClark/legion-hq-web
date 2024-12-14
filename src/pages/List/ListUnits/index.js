@@ -22,8 +22,8 @@ function ListUnits() {
     if(counterpartId){
       // Show counterpart add icon(s) if unit has a counterpart option and it's not already in list
       if (!currentList.uniques.includes(counterpartId)){
-        // general case (not IG-11) || IG-11 (tj) + 'Nanny Programming' (tp)
-        if(unit.unitId != 'tj' || unit.unitId == 'tj' && currentList.uniques.includes('tp')){
+        // general case (not IG-11) & Special case for IG-11 (tj) + 'Nanny Programming' (tp)
+        if(unit.unitId !== 'tj' || (unit.unitId === 'tj' && currentList.uniques.includes('tp'))){
           addCounterpartHandler = () => setCardPaneFilter({
             action: 'COUNTERPART', unitIndex, counterpartId
           });

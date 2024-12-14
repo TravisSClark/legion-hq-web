@@ -12,7 +12,7 @@ import battleForcesDict from 'constants/battleForcesDict';
 
 import cards from 'constants/cards';
 import ranks from 'constants/ranks';
-import { getOriginalRankLimits } from 'constants/listOperations';
+import { getOriginalRankLimits } from 'components/listValidator';
 import ListContext from 'context/ListContext';
 
 const useStyles = makeStyles({
@@ -110,7 +110,7 @@ function RankLimits({list}){
   return <div style={{ marginLeft:10}}>
     { Object.getOwnPropertyNames(rankReqs).map(r=>{ 
       
-      if(r == 'commOp'){
+      if (r === 'commOp'){
         return <div className={classes.row} style={{marginBottom:5}}>
             <Avatar
               alt={'CMDR'}

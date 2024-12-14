@@ -54,7 +54,7 @@ const keywords = {
 		an attack or effect, the friendly unit's controlling players scores 1 VP.",
 	"Cache": "During Setup, place the listed tokens on this Upgrade Card. The unit owning the card may spend those tokens.",
 	"Calculate Odds": "As a card action, you can choose a friendly trooper unit at range 2 and in LOS to gain 1 aim, 1 dodge, and 1 suppression token",
-	"Charge": "After you perform a move action that brings you into base contact with an enemy miniature, \
+	"Charge": "After you perform a move action during its activation that brings you into base contact with an enemy miniature, \
 		you may perform a free melee attack action against that unit using only melee weapons.",
 	"Climbing Vehicle": "You are treated as a trooper for the purposes of climbing.",
 	"Complete The Mission": "During Setup, for each friendly unit with this keyword, place a friendly \
@@ -226,7 +226,7 @@ const keywords = {
 	"Master of the Force": "At the end of its activation, this unit may ready up to X of its exhausted Force upgrade cards.",
 	"Master Storyteller": "When a unit performs the Master Storyteller card action, it chooses up to X friendly Ewok units at range 2, \
 		where X is the current round number.  Each chosen unit gains 2 surge tokens.",
-	"Mercenary: Faction": "A unit with the Mercenary keyword is a Mercnary unit. The faction(s) specified by the Mercenary keyword\
+	"Mercenary": "A unit with the Mercenary keyword is a Mercnary unit. The faction(s) specified by the Mercenary keyword\
 	 	can include that unit in an army as a Mercenary unit.",
 	"Nimble": "After defending, if you spent 1 or more dodge tokens, gain 1 dodge token.",
 	"Observe": "Choose an enemy unit at range 3 and in LOS. It gains X Observation Tokens.",
@@ -249,11 +249,8 @@ const keywords = {
 	"Recharge": "When you recover, flip up to X inactive shield tokens to their active side.",
 	"Regenerate": "At the end of your activation, roll 1 white defense die for each wound token you have, up to X. For each surge or block result, remove 1 wound token.",
 	"Reinforcements": "At the start of the End Phase of the first round of a game, you may perform a free speed-1 move.",
-	"Relentless": "After you perform a move action, you may perform 1 free attack action.",
+	"Relentless": "After you perform a move action during your activation, you may perform 1 free attack action.",
 	"Reliable": "At the start of the Activation Phase, you gain X surge tokens.",
-	
-	
-	
 	"Reposition": "Either before or after you perform a standard move, you may perform a free pivot action.",
 	"Restore": "Choose a unit, then select a mini from this unit defeated in the current round. Place that mini in cohesion with its unit leader, then give it wound tokens equal to one less than its wound threshold",
 	"Retinue": "At the start of the Activation Phase, if you are at range 2 of X, gain 1 aim or dodge token. Additionally, a unit with Retinue keyword ignors the core rank requirments to provide backup to the specified unit.",
@@ -281,7 +278,7 @@ const keywords = {
 	"Spray": "Add this weapon's dice to the attack pool one time for each mini in the defending unit to which LOS is not blocked.",
 	"Spur": "While performing a move, you may gain 1 suppression token to increase your maximum speed by 1.",
 	"Stationary": "You cannot perform moves, except pivots.",
-	"Steady": "After you perform a move action, you may perform a free ranged attack action.",
+	"Steady": "After you perform a move action during your activation, you may perform a free ranged attack action.",
 	"Strategize": "Gain 1 suppression token and choose X friendly units at range 2. The chosen units each gain 1 aim and 1 dodge token.",
 	"Suppressive": "After you perform an attack, the defender that this weapon was used against gains 1 suppression token.",
 	"Surge Token": "Spending one or more surge tokens will convert the same number of surges to blocks while defending or using using GUARDIAN, and to hits while attacking.",

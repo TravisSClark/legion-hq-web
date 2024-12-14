@@ -28,7 +28,6 @@ function ListExtras() {
     handleClearList,
     handleListSave,
     handleListFork,
-    handleToggleUsingOldPoints,
     handleToggleIsKillPointMode
   } = useContext(ListContext);
 
@@ -73,12 +72,6 @@ function ListExtras() {
         icon={<CalculateIcon />}
         label={isKillPointMode ? "Calculating Kill Points!" : "Calculate Kill Points"}
         handleClick={handleToggleIsKillPointMode}
-      />
-      <SimpleButton
-        timeoutMessage="Changing Points..."
-        icon={<UsePrevIcon />}
-        label={currentList.isUsingOldPoints ? "Using Old Points" : "Using New Points"}
-        handleClick={handleToggleUsingOldPoints}
       />
     </div>
   );

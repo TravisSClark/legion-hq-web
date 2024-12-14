@@ -8,36 +8,42 @@ import cards from 'constants/cards';
 import urls from 'constants/urls';
 import xapikey from 'constants/ssl';
 import {
-  rehashList,
-  mergeLists,
-  convertHashToList,
-  changeListTitle,
-  setListMode,
   addUnit,
+  incrementUnit,
+  decrementUnit,
   addCommand,
-  addContingency,
   removeCommand,
+  addContingency,
   removeContingency,
   addCounterpart,
   removeCounterpart,
   addBattle,
   removeBattle,
-  incrementUnit,
-  decrementUnit,
   equipUpgrade,
   unequipUpgrade,
+  countPoints
+} from 'components/listOperations';
+import listTemplate from 'constants/listTemplate';
+import { validateList } from 'components/listValidator';
+
+import {
   getEligibleCommandsToAdd,
   getEligibleContingenciesToAdd,
   getEligibleUnitsToAdd,
   getEquippableUpgrades,
   getEquippableLoadoutUpgrades,
   getEligibleBattlesToAdd,
-  toggleUsingOldPoints, 
-  validateList,
-  getRankLimits,
-  checkBattleforceUnits
-} from 'constants/listOperations';
-import listTemplate from 'constants/listTemplate';
+} from 'components/eligibleCardListGetter'
+
+import { getRankLimits } from 'components/listValidator' 
+
+import{
+  rehashList,
+  mergeLists,
+  convertHashToList,
+  changeListTitle,
+  setListMode,
+} from 'components/listLoadAndHash'
 
 const ListContext = createContext();
 const httpClient = Axios.create();
@@ -46,10 +52,6 @@ let config = {
   headers: {
     "x-api-key": xapikey
   }
-}
-
-function isValidListId(listId) {
-  return Number.parseInt(listId) > 999 && Number.parseInt(listId) < 999999;
 }
 
 export function ListProvider({
@@ -142,6 +144,7 @@ export function ListProvider({
     setCurrentList(list);
     doUnitValidation(list, rankLimits);
     setRankLimits(rankLimits);
+    countPoints(list);
   }
 
   const validateBattleforceSelection = (list, battleForce) => {
@@ -165,10 +168,6 @@ export function ListProvider({
       currentList.unitObjectStrings, startIndex, endIndex
     );
     setCurrentList({ ...currentList });
-  }
-  const handleToggleUsingOldPoints = () => {
-    const newList = toggleUsingOldPoints(currentList);
-    setCurrentList({ ...newList });
   }
   const handleIncrementStackSize = () => {
     if (stackSize < 12) { setStackSize(stackSize + 1); }
@@ -217,18 +216,21 @@ export function ListProvider({
       if (userSettings && userSettings.cascadeUpgradeSelection) {
         letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
       }
-
       if (letUpgradesCascade && nextAvailIndex !== undefined && nextAvailType) {
-        applyFilter = (newUpgradesEquipped, newAdditionalUpgradeSlots) => setCardPaneFilter({
-          action: 'UNIT_UPGRADE',
-          unitIndex,
-          upgradeIndex: nextAvailIndex,
-          upgradeType: nextAvailType,
-          hasUniques: unit.hasUniques,
-          unitId: unit.unitId,
-          upgradesEquipped: newUpgradesEquipped,
-          additionalUpgradeSlots: newAdditionalUpgradeSlots
-        });
+        // if (!unit.upgradesEquipped[nextAvailIndex]) {
+        //   applyFilter = null;
+        // } else {
+          applyFilter = (newUpgradesEquipped, newAdditionalUpgradeSlots) => setCardPaneFilter({
+            action,
+            unitIndex,
+            upgradeIndex: nextAvailIndex,
+            upgradeType: nextAvailType,
+            hasUniques: unit.hasUniques,
+            unitId: unit.unitId,
+            upgradesEquipped: newUpgradesEquipped,
+            additionalUpgradeSlots: newAdditionalUpgradeSlots
+          });
+        // }
       }
     } // else applyFilter = () => setCardPaneFilter({ action: 'DISPLAY' })
 
@@ -417,7 +419,6 @@ export function ListProvider({
     handleListSave,
     handleListFork,
     handleMergeList,
-    handleToggleUsingOldPoints,
     handleToggleIsKillPointMode,
     handleAddKillPoints,
   };

@@ -15,17 +15,15 @@ import {
   generateStandardText,
   generateMinimalText,
   generateTournamentText,
-  generateHTMLText
-} from 'constants/listOperations';
-import HtmlListText from './HtmlListText';
+} from 'components/printList';
 import DialogModal from './DialogModal';
 import ClipboardButton from './ClipboardButton';
 
 function generateListText(type, currentList) {
   if (type === 0) return generateStandardText(currentList);
   else if (type === 1) return generateMinimalText(currentList);
-  else if (type === 2) return generateTournamentText(currentList);
-  else if (type === 3) return generateHTMLText(currentList);
+  else if (type === 2) return generateTournamentText(currentList, false);
+  else if (type === 3) return generateTournamentText(currentList, true);
   else return '';
 }
 
@@ -56,7 +54,7 @@ function DialogContent({
           <Tab label="Standard" />
           <Tab label="Minimal" />
           <Tab label="Tournament" />
-          <Tab label="Tabletop.to (HTML)" />
+          {/* <Tab label="Tabletop.to (HTML)" /> */}
         </Tabs>
       </AppBar>
       <TabPanel value="standard" index={0}>
@@ -68,9 +66,9 @@ function DialogContent({
       <TabPanel value="tournament" index={2}>
         Tournament
       </TabPanel>
-      <TabPanel value="tournament" index={3}>
+      {/* <TabPanel value="tournament" index={3}>
         Tabletop.to
-      </TabPanel>
+      </TabPanel> */}
       <div style={{ marginTop: 16 }} />
       <TextField
         multiline
@@ -119,7 +117,6 @@ function TextExportButton({ currentList }) {
         onClick={() => setIsOpen(true)}
       />
       <DialogModal
-        isFullWidth={true}
         isMobile={isFullscreen}
         isOpen={isOpen}
         actions={<ClipboardButton content={listText} />}

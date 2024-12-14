@@ -1,5 +1,20 @@
 [
     {
+        "title": "Aqua Droids Added",
+        "date": "4 Dec 2024",
+        "body": "Added revealed Aqua Droid cards. Also added Rebel Personnel Restrictions."
+    },
+    {
+        "title": "Skirmish and Card Backs Added",
+        "date": "19 Nov 2024",
+        "body": "Added skirmish battle decks, added card backs to the more dropdown instead of the original card image, and re-uploaded some of the images."
+    },
+    {
+        "title": "2.6.1 Points Update!",
+        "date": "6 Nov 2024",
+        "body": "Changed points and keywords for 2.6.1."
+    },
+    {
         "title": "Login and More",
         "date": "27 Sept 2024",
         "body": "The ability to login and save lists has been added.  Maps of primaries have been added to the Show More button. Clicking the info bar with your battleforce/faction name gives a summary of listbuilding rules. Sleeper Cell, Crab Droids, Riot Troopers all added."
@@ -12,7 +27,7 @@
     {
         "title": "Bad Batch cards",
         "date": "5 June 2024",
-        "body": "Added revealed Bad Batch cards"
+        "body": "Added revealed Bad Batch cards."
     },
     {
         "title": "Range Trooper cards",

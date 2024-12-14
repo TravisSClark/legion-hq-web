@@ -8,8 +8,6 @@ import {
   DialogTitle,
   DialogContent,
   DialogContentText,
-  Avatar,
-  Typography,
   Link
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -23,9 +21,6 @@ import TitleField from './TitleField';
 import KillPointsField from './KillPointsField';
 import FactionButton from './FactionButton';
 
-import cards from 'constants/cards';
-import ranks from 'constants/ranks';
-import { getOriginalRankLimits } from 'constants/listOperations';
 import { BFRules, RankLimits } from './ListRulesModal';
 
 const useStyles = makeStyles({
