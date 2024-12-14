@@ -63,9 +63,10 @@ function countPoints(list) {
 function consolidate(list) {
   let hasContingencyKeyword = false;
   list.hasFieldCommander = false;
-  list.commanders = [];
   list.uniques = [];
   list.unitCounts = { ...listTemplate.unitCounts };
+  const cardNames = list.units.map(u=>cards[u.unitId].cardName);
+
   for (let i = 0; i < list.units.length; i++) {
     const unit = list.units[i];
     if (!unit.loadoutUpgrades) unit.loadoutUpgrades = [];
@@ -78,9 +79,7 @@ function consolidate(list) {
     if(unit.counterpart)list.uniques.push(unit.counterpart.counterpartId);
 
     if (unitCard.keywords.includes('Contingencies')) hasContingencyKeyword = true;
-    if (unitCard.rank === 'commander' || unitCard.rank === 'operative' || unitCard.isUnique) {
-      list.commanders.push(unitCard.cardName);
-    }
+
     for (let j = 0; j < unit.upgradesEquipped.length; j++) {
       const upgradeId = unit.upgradesEquipped[j];
       if (upgradeId) {
@@ -118,14 +117,14 @@ function consolidate(list) {
   }
   for (let i = list.commandCards.length - 1; i > -1 ; i--) {
     const { commander } = cards[list.commandCards[i]];
-    if (commander && !list.commanders.includes(commander)) {
+    if (commander && !cardNames.includes(commander)) {
       list = removeCommand(list, i);
     }
   }
   if (list.contingencies) {
     for (let i = list.contingencies.length - 1; i > -1; i--) {
       const { commander } = cards[list.contingencies[i]];
-      if (commander && !list.commanders.includes(commander)) {
+      if (commander && !cardNames.includes(commander)) {
         list = removeContingency(list, i);
       }
     }

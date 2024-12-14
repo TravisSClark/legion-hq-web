@@ -16,6 +16,7 @@
         "cost": 60,
         "faction": "",
         "imageName": "Storm Tide Commander1.webp",
+        "isStormTide": true,
         "keywords": [
             "Inspire"
         ],
@@ -28,6 +29,7 @@
     },
     "AB": {
         "id": "AB",
+        "isStormTide": true,
         "cardName": "Armored Assault",
         "cardSubtype": "1",
         "cardType": "command",
@@ -42,6 +44,7 @@
     },
     "AC": {
         "id": "AC",
+        "isStormTide": true,
         "cardName": "Brothers in Arms",
         "cardSubtype": "3",
         "cardType": "command",
@@ -55,6 +58,7 @@
     },
     "AD": {
         "id": "AD",
+        "isStormTide": true,
         "cardName": "Doors and Corners",
         "cardSubtype": "1",
         "cardType": "command",
@@ -69,6 +73,7 @@
     },
     "AE": {
         "id": "AE",
+        "isStormTide": true,
         "cardName": "Keep Them Down",
         "cardSubtype": "2",
         "cardType": "command",
@@ -82,6 +87,7 @@
     },
     "AF": {
         "id": "AF",
+        "isStormTide": true,
         "cardName": "Man the Guns",
         "cardSubtype": "3",
         "cardType": "command",
@@ -93,6 +99,7 @@
     },
     "AG": {
         "id": "AG",
+        "isStormTide": true,
         "cardName": "Somebody Has To Be a Hero",
         "cardSubtype": "1",
         "cardType": "command",
@@ -107,6 +114,7 @@
     },
     "AH": {
         "id": "AH",
+        "isStormTide": true,
         "cardName": "Stealth Team",
         "cardSubtype": "3",
         "cardType": "command",
@@ -122,6 +130,7 @@
     },
     "AI": {
         "id": "AI",
+        "isStormTide": true,
         "cardName": "Surgical Strike",
         "cardSubtype": "2",
         "cardType": "command",
@@ -133,6 +142,7 @@
     },
     "AJ": {
         "id": "AJ",
+        "isStormTide": true,
         "cardName": "Tank Shock",
         "cardSubtype": "2",
         "cardType": "command",
@@ -144,6 +154,7 @@
     },
     "AK": {
         "id": "AK",
+        "isStormTide": true,
         "cardType": "unit",
         "defense": "red",
         "surges": [

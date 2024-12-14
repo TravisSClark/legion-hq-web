@@ -99,7 +99,7 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     if (card.rank !== rank) continue;
 
 
-    if(!userSettings.showStormTide && (id === "AA" || id === "AK")){
+    if(!userSettings.showStormTide && card.isStormTide){ 
       continue;
     }
     // TODO - idk stormtide, but it seems odd that the 0pt one is the one shown in the mode, and the 60pt one is the one outside it
@@ -116,8 +116,11 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     } else {
       if (!battleForcesDict[list.battleForce][rank].includes(id)) continue;
     }
-    if (list.uniques.includes(id)) continue;
-    if (list.commanders.includes(card.cardName)) continue;
+
+    const uniqueCardNames = list.uniques.map(id=>cards[id].cardName);
+    if (uniqueCardNames.includes(card.cardName)) continue;
+
+
     if (card.specialIssue && card.specialIssue !== list.battleForce)continue;
 
     if (card.detachment) {
@@ -137,63 +140,49 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
 
 function getEligibleCommandsToAdd(list) {
   const stormTideCommands = {
-    '500-point mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
-    'standard mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
-    'grand army mode': ['AB', 'AC', 'AD', 'AE', 'AF', 'AG', 'AH', 'AH', 'AI', 'AJ'],
+    // There are 9 total stormtide cards, 3 each valid in their respective modes
     'storm tide: infantry': ['AC', 'AE', 'AG'],
     'storm tide: armored': ['AB', 'AF', 'AJ'],
     'storm tide: special forces': ['AD', 'AH', 'AI']
   };
 
   const validCommandIds = [];
-  const invalidCommandIds = [];
-  // const cardsById = cardIdsByType.command; // Object.keys(cards);
+  // Currently, we don't do anything with invalid CC IDs on UI; stop tracking them unless we get a good use case
+  // const invalidCommandIds = [];
 
   const pipCounts = { '1': 0, '2': 0, '3': 0 };
   list.commandCards.forEach(id => {
-    const commandCard = cards[id];
-    pipCounts[commandCard.cardSubtype] += 1;
+    pipCounts[cards[id].cardSubtype] += 1;
   });
+
+  const cardNames = list.units.map(u=>cards[u.unitId].cardName);
+
   cardIdsByType['command'].forEach(id => {
     const card = cards[id];
     if (list.commandCards.includes(id)) return;
     if (list.contingencies && list.contingencies.includes(id)) return;
 
-    if (
-      stormTideCommands[list.mode] &&
-      stormTideCommands[list.mode].length === 3 &&
-      stormTideCommands[list.mode].includes(id)
-    ) {
-      validCommandIds.push(id);
+    if (card.isStormTide){
+      if(stormTideCommands[list.mode] && stormTideCommands[list.mode].includes(id)){
+        validCommandIds.push(id);
+      }
+      // filter out stormtide commands not in the current mode
       return;
-    } else if (
-      stormTideCommands[list.mode] &&
-      stormTideCommands[list.mode].length === 3 &&
-      stormTideCommands['standard mode'].includes(id)
-    ) {
-      invalidCommandIds.push(id);
-      return;
-    }
+    } 
 
     if (!list.faction.includes(card.faction)) return;
     if (id === 'aa') return; // Standing Orders
     if ((id === 'tv' || id === 'ud') && !list.uniques.includes('tn')) return; // grogu's command card
 
-    if (card.battleForce && card.battleForce !== list.battleForce) {
-      return;
-    }
-    if (
-      pipCounts[card.cardSubtype] > 1 ||
-      (card.commander && !list.commanders.includes(card.commander))
-    ) {
-      invalidCommandIds.push(id);
-      return;
-    }
+    if (card.battleForce && card.battleForce !== list.battleForce) return;
+    if (pipCounts[card.cardSubtype] > 1) return; 
+    if(card.commander && !cardNames.includes(card.commander)) return;
+
     validCommandIds.push(id);
   });
   return {
     validIds: sortCommandIds(validCommandIds),
-    invalidIds: sortCommandIds(invalidCommandIds)
+    invalidIds: [] // sortCommandIds(invalidCommandIds)
   };
 }
 
@@ -320,8 +309,7 @@ function getEligibleBattlesToAdd(list, type) {
 function getEligibleContingenciesToAdd(list) {
   if (!list.contingencies) list.contingencies = [];
   const validCommandIds = [];
-  const invalidCommandIds = [];
-  // const cardsById = cardIdsByType.command; // Object.keys(cards);
+  const cardNames = list.units.map(u=>cards[u.unitId].cardName);
 
   let numContingencies = 0;
   list.units.forEach((unit) => {
@@ -339,16 +327,15 @@ function getEligibleContingenciesToAdd(list) {
     if (id === 'jl' || id === 'ka' || id ==='kb') return;
     if (
       list.contingencies.length >= numContingencies ||
-      (card.commander && !list.commanders.includes(card.commander))
+      (card.commander && !cardNames.includes(card.commander))
     ) {
-      invalidCommandIds.push(id);
       return;
     }
     validCommandIds.push(id);
   });
   return {
     validIds: sortCommandIds(validCommandIds),
-    invalidIds: sortCommandIds(invalidCommandIds)
+    invalidIds:[] 
   };
 }
 
