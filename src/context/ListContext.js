@@ -200,10 +200,11 @@ export function ListProvider({
     const unit = newList.units[unitIndex];
     const unitCard = cards[unit.unitId];
 
+    // These might be a bad pattern, but they sort of are needed for confirming we haven't exceeded the total upgrade count when cascading
     let upgradesEquipped = unit.upgradesEquipped;
     let upgradeBar = unitCard.upgradeBar.concat(unit.additionalUpgradeSlots);
+    
     let filter = null;
-
 
     let letUpgradesCascade = true;
     if (userSettings && userSettings.cascadeUpgradeSelection) {
@@ -215,8 +216,11 @@ export function ListProvider({
 
       let getFilter; // function getFilter(index)  -> returns a cardselector filter if one is applicable for proposed next index and current action
 
+      // Create a function for each action type that will return a CardSelector filter after adding an upgrade (or null if no selector valid) for the next upgrade index
       switch(action){
         case "COUNTERPART_UPGRADE":
+          // this could probably re-use default by changing upgradesEquipped and upgradeBar; leaving it alone for now
+          // since it works and there's currently 1 counterpart upgrade slot in the entire game for now, lol
           upgradesEquipped = unit.counterpart.upgradesEquipped;
           upgradeBar = cards[unit.counterpart.counterpartId].upgradeBar;
 
@@ -235,16 +239,19 @@ export function ListProvider({
             }
             return null;
           }
-
           break;
 
         case "COUNTERPART_LOADOUT_UPGRADE":
-          // TODO punt
+          // Punt for now - rather have non-function than a breaking change if/when a 
+          // counterpart with loadout and multiple slots appears in-game
           upgradesEquipped = unit.counterpart.upgradesEquipped;
           upgradeBar = cards[unit.counterpart.counterpartId].upgradeBar;
           getFilter = () => null
           break;
+
         case "UNIT_LOADOUT_UPGRADE":
+          // If it's a laodout upgrade, return a UNIT_LOADOUT selector if the next upgrade is filled, return a UNIT_UPGRADE pick if not
+
           getFilter = (index) =>{
             if (!upgradesEquipped[index]) {
               return {
@@ -274,9 +281,9 @@ export function ListProvider({
           break;
 
         default:
+          // If the next upgrade is empty on UNIT_UPGRADE, get me a selector for that next slot, if used, return null
           getFilter = (index) =>{
             if (!upgradesEquipped[index]) {
-              console.log('assign', index)
               return {
                 action,
                 unitIndex,
