@@ -7,6 +7,7 @@ import battleForcesDict from 'constants/battleForcesDict';
 import { validateUpgrades } from './listValidator';
 import { getEquippableUpgrades } from './eligibleCardListGetter';
 
+const battleTypes = ["primary", "secondary", "advantage"];
 
 // Contains and only contains functions which modify the contents of the Legion list
 // (split other things into appropriate helpers in components so this doesn't go to 2k+ LOC again XD)
@@ -135,10 +136,6 @@ function consolidate(list) {
   return countPoints(list);
 }
 
-function deleteItem(items, i) {
-  return items.slice(0, i).concat(items.slice(i + 1, items.length))
-}
-
 function findUnitHashInList(list, unitHash) {
   return list.unitObjectStrings.indexOf(unitHash);
 }
@@ -254,7 +251,7 @@ function addCounterpart(list, unitIndex, counterpartId) {
 
 function removeCounterpart(list, unitIndex) {
   const counterpart = list.units[unitIndex].counterpart;
-  list.uniques = deleteItem(list.uniques, list.uniques.indexOf(counterpart.counterpartId));
+  list.uniques.splice(list.uniques.indexOf(counterpart.counterpartId), 1);
   delete list.units[unitIndex].counterpart;
   return consolidate(list);
 }
@@ -349,8 +346,8 @@ function incrementUnit(list, index) {
 function decrementUnit(list, index) {
   const unitObject = list.units[index];
   if (unitObject.count === 1) {
-    list.unitObjectStrings = deleteItem(list.unitObjectStrings, index);
-    list.units = deleteItem(list.units, index);
+    list.unitObjectStrings.splice(index, 1);
+    list.units.splice(index, 1);
   } else {
     list.units[index].count -= 1;
   }
@@ -363,7 +360,7 @@ function addContingency(list, commandId) {
 }
 
 function removeContingency(list, contingencyIndex) {
-  list.contingencies = deleteItem(list.contingencies, contingencyIndex);
+  list.contingencies.splice(contingencyIndex, 1);
   return list;
 }
 
@@ -374,7 +371,7 @@ function addCommand(list, commandId) {
 }
 
 function removeCommand(list, commandIndex) {
-  list.commandCards = deleteItem(list.commandCards, commandIndex);
+  list.commandCards.splice(commandIndex, 1);
   return list;
 }
 
@@ -389,25 +386,41 @@ function sortCommandIds(cardIds) {
   });
 }
 
-function addBattle(list, type, id) {
-  if (type === 'primary') {
-    list.primaryCards.push(id);
-  } else if (type === 'secondary') {
-    list.secondaryCards.push(id);
-  } else if (type === 'advantage') {
-    list.advantageCards.push(id);
+function getBattleArray(list, type){
+
+  let typeIndex = battleTypes.findIndex((t)=>t===type);
+  if(typeIndex != -1){
+    return list[battleTypes[typeIndex]+"Cards"];
+  } else{
+    console.warn("Unrecognized battle type: " + type);
+    return null;
   }
-  return list;
+}
+
+function addBattle(list, type, id) {
+
+  let currentCards = getBattleArray(list, type);
+  if(!currentCards) return;
+
+  let nextType = type;
+  let typeIndex = battleTypes.findIndex((t)=>t===type);
+
+  currentCards.push(id);
+
+  // intentionally go undef here and use it above, rather than messing w wraparound
+  if(currentCards.length >= 3)
+      nextType = battleTypes[typeIndex + 1];
+
+  return {list, nextType};
 }
 
 function removeBattle(list, type, index) {
-  if (type === 'primary') {
-    list.primaryCards = deleteItem(list.primaryCards, index);
-  } else if (type === 'secondary') {
-    list.secondaryCards = deleteItem(list.secondaryCards, index);
-  } else if (type === 'advantage') {
-    list.advantageCards = deleteItem(list.advantageCards, index);
-  } else return;
+
+  let currentCards = getBattleArray(list, type);
+  if(!currentCards) return list;
+
+  currentCards.splice(index, 1);
+
   return list;
 }
 

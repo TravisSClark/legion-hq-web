@@ -176,16 +176,21 @@ export function ListProvider({
     if (stackSize > 1) { setStackSize(stackSize - 1); }
   }
   const handleToggleIsApplyToAll = () => setIsApplyToAll(!isApplyToAll);
+
   const handleClearList = () => {
     setCardPaneFilter({ action: 'DISPLAY' });
     const newList = JSON.parse(JSON.stringify(listTemplate));
     if (currentList.faction === 'mercenary') newList.battleForce = 'Shadow Collective';
     updateThenValidateList({ ...newList, faction: currentList.faction });
   }
+  
   const handleChangeTitle = title => setCurrentList({ ...changeListTitle(currentList, title) });
+
   const handleChangeMode = mode => {
     updateThenValidateList({ ...setListMode(currentList, mode) });
   }
+
+  // TODO this gets painful when doing counterpart upgrades (....Iden....)
   const handleEquipUpgrade = (action, unitIndex, upgradeIndex, upgradeId, isApplyToAll) => {
     const unit = currentList.units[unitIndex];
     let applyFilter; let nextAvailIndex; let nextAvailType;
@@ -277,9 +282,30 @@ export function ListProvider({
     setCurrentList({ ...newList });
   }
   const handleAddBattle = (type, battleId) => {
-    // TODO limit battle overflow from here, ie limit 4
-    const newList = addBattle(currentList, type, battleId);
-    setCurrentList({ ...newList });
+    const {list, nextType} = addBattle(currentList, type, battleId);
+
+    console.log(nextType);
+
+    let letUpgradesCascade = false;
+    if (userSettings && userSettings.cascadeUpgradeSelection) {
+      letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
+    }
+
+    if(letUpgradesCascade && nextType != type){
+      console.log(nextType, type);
+
+      if(nextType){
+        setCardPaneFilter({
+          action: 'BATTLE', type: nextType
+        })
+      } else {
+        setCardPaneFilter({
+          action: 'DISPLAY'
+        })
+      }
+    }
+
+    setCurrentList({ ...list });
   }
   const handleRemoveBattle = (type, battleId) => {
     const newList = removeBattle(currentList, type, battleId);
