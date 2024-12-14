@@ -192,62 +192,131 @@ export function ListProvider({
 
   // TODO this gets painful when doing counterpart upgrades (....Iden....)
   const handleEquipUpgrade = (action, unitIndex, upgradeIndex, upgradeId, isApplyToAll) => {
-    const unit = currentList.units[unitIndex];
-    let applyFilter; let nextAvailIndex; let nextAvailType;
-    if (isApplyToAll || unit.count === 1) {
-
-      // TODO grabnar - prevent isApplyToAll if upgrade is unique
-      let i = (upgradeIndex + 1) % unit.upgradesEquipped.length;
-      let numUpgradesEquipped = 0;
-
-      while (
-        !nextAvailIndex &&
-        !nextAvailType &&
-        numUpgradesEquipped < unit.upgradesEquipped.length
-      ) {
-        const id = unit.upgradesEquipped[i];
-        const unitCard = cards[unit.unitId];
-        if (id) {
-          numUpgradesEquipped++;
-          continue;
-        };
-        nextAvailIndex = i;
-        nextAvailType = unitCard.upgradeBar[i] ?
-                        unitCard.upgradeBar[i] :
-                        unit.additionalUpgradeSlots[i - (unitCard.upgradeBar.length + 1)];
-        i = (i + 1) % unit.upgradesEquipped.length;
-      }
-      let letUpgradesCascade = true;
-      if (userSettings && userSettings.cascadeUpgradeSelection) {
-        letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
-      }
-      if (letUpgradesCascade && nextAvailIndex !== undefined && nextAvailType) {
-        // if (!unit.upgradesEquipped[nextAvailIndex]) {
-        //   applyFilter = null;
-        // } else {
-          applyFilter = (newUpgradesEquipped, newAdditionalUpgradeSlots) => setCardPaneFilter({
-            action,
-            unitIndex,
-            upgradeIndex: nextAvailIndex,
-            upgradeType: nextAvailType,
-            hasUniques: unit.hasUniques,
-            unitId: unit.unitId,
-            upgradesEquipped: newUpgradesEquipped,
-            additionalUpgradeSlots: newAdditionalUpgradeSlots
-          });
-        // }
-      }
-    } // else applyFilter = () => setCardPaneFilter({ action: 'DISPLAY' })
 
     const newList = equipUpgrade(
       currentList, action, unitIndex, upgradeIndex, upgradeId, isApplyToAll
     );
-    if (applyFilter && newList.units[unitIndex]) {
-      const newUnit = newList.units[unitIndex];
-      applyFilter(newUnit.upgradesEquipped, newUnit.additionalUpgradeSlots);
-    } else setCardPaneFilter({ action: 'DISPLAY' });
+
+    const unit = newList.units[unitIndex];
+    const unitCard = cards[unit.unitId];
+
+    let upgradesEquipped = unit.upgradesEquipped;
+    let upgradeBar = unitCard.upgradeBar.concat(unit.additionalUpgradeSlots);
+    let filter = null;
+
+
+    let letUpgradesCascade = true;
+    if (userSettings && userSettings.cascadeUpgradeSelection) {
+      letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
+    }
+
+    // Cascade only if we're a 1-stack or if applying to all
+    if ( letUpgradesCascade && (isApplyToAll || unit.count === 1)) {
+
+      let getFilter; // function getFilter(index)  -> returns a cardselector filter if one is applicable for proposed next index and current action
+
+      switch(action){
+        case "COUNTERPART_UPGRADE":
+          upgradesEquipped = unit.counterpart.upgradesEquipped;
+          upgradeBar = cards[unit.counterpart.counterpartId].upgradeBar;
+
+          getFilter = (index) =>{
+            if (!upgradesEquipped[index]) {
+              return {
+                action,
+                unitIndex,
+                upgradeIndex: index,
+                upgradeType: upgradeBar[index],
+                hasUniques: unit.hasUniques,
+                unitId: unit.unitId,
+                upgradesEquipped,
+                additionalUpgradeSlots: []
+              }
+            }
+            return null;
+          }
+
+          break;
+
+        case "COUNTERPART_LOADOUT_UPGRADE":
+          // TODO punt
+          upgradesEquipped = unit.counterpart.upgradesEquipped;
+          upgradeBar = cards[unit.counterpart.counterpartId].upgradeBar;
+          getFilter = () => null
+          break;
+        case "UNIT_LOADOUT_UPGRADE":
+          getFilter = (index) =>{
+            if (!upgradesEquipped[index]) {
+              return {
+                action: "UNIT_UPGRADE",
+                unitIndex,
+                upgradeIndex: index,
+                upgradeType: upgradeBar[index],
+                hasUniques: unit.hasUniques,
+                unitId: unit.unitId,
+                upgradesEquipped: unit.upgradesEquipped,
+                additionalUpgradeSlots: unit.additionalUpgradeSlots
+              }
+            } else if(!unit.loadoutUpgrades[index]){
+              return {
+                action: "UNIT_LOADOUT_UPGRADE",
+                unitIndex,
+                upgradeIndex: index,
+                upgradeType: upgradeBar[index],
+                hasUniques: unit.hasUniques,
+                unitId: unit.unitId,
+                upgradesEquipped: unit.upgradesEquipped,
+                additionalUpgradeSlots: unit.additionalUpgradeSlots
+              }
+            }
+            return null;
+          }
+          break;
+
+        default:
+          getFilter = (index) =>{
+            if (!upgradesEquipped[index]) {
+              console.log('assign', index)
+              return {
+                action,
+                unitIndex,
+                upgradeIndex: index,
+                upgradeType: upgradeBar[index],
+                hasUniques: unit.hasUniques,
+                unitId: unit.unitId,
+                upgradesEquipped: unit.upgradesEquipped,
+                additionalUpgradeSlots: unit.additionalUpgradeSlots
+              }
+            }
+            return null;
+          }
+      }
+
+      // TODO grabnar - prevent isApplyToAll if upgrade is unique, ie Call to Arms
+      let nextUpgradeIndex = (upgradeIndex + 1) % upgradesEquipped.length;
+
+      let count = 0;
+
+      while (filter == null && count < upgradesEquipped.length) {
+        filter = getFilter(nextUpgradeIndex);
+        count++;
+        nextUpgradeIndex = (nextUpgradeIndex + 1) % upgradesEquipped.length;
+      }
+    } 
+    
+    if(filter){
+      setCardPaneFilter(filter);
+    }
+    else{
+      setCardPaneFilter({ action: 'DISPLAY' });
+    }
+
     updateThenValidateList({ ...newList });
   };
+
+
+
+
 
   const handleUnequipUpgrade = (action, unitIndex, upgradeIndex) => {
 
