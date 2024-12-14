@@ -177,8 +177,10 @@ function unequipLoadoutUpgrade(list, unitIndex, upgradeIndex) {
 function equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll) {
   // applying upgrade to multiple units
   const unit = list.units[unitIndex];
-  const count = isApplyToAll ? unit.count : 1;
   const upgradeCard = cards[upgradeId];
+
+  const count = (isApplyToAll && !upgradeCard.isUnique) ? unit.count : 1;
+
   const newUnit = JSON.parse(JSON.stringify(unit));
   newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
   const newUnitHash = getUnitHash(newUnit);
@@ -188,18 +190,18 @@ function equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll
     newUnit.upgradesEquipped.push(null);
   }
   let newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
-  // If a unit with that upgrade doesn't exist
+  // If this unit already exists...
   if (newUnitHashIndex > -1) {
     list.units[list.unitObjectStrings.indexOf(newUnitHash)].count += count;
-    list = decrementUnit(list, unitIndex);
-  } else if (isApplyToAll) {
+    list = decrementUnit(list, unitIndex, count);
+  } else if (list.units[unitIndex].count == count) {
     list.units[unitIndex] = newUnit;
     list.unitObjectStrings[unitIndex] = newUnitHash;
   } else {
-    newUnit.count = 1;
+    newUnit.count = count;
     list.units.splice(unitIndex + 1, 0, newUnit);
     list.unitObjectStrings.splice(unitIndex + 1, 0, newUnit.unitObjectString);
-    list = decrementUnit(list, unitIndex);
+    list = decrementUnit(list, unitIndex, count);
   }
   return [list, newUnit];
 }
@@ -338,18 +340,18 @@ function addUnit(list, unitId, stackSize = 1) {
   return list;
 }
 
-function incrementUnit(list, index) {
-  list.units[index].count += 1;
+function incrementUnit(list, index, count = 1) {
+  list.units[index].count += count;
   return consolidate(list);
 }
 
-function decrementUnit(list, index) {
+function decrementUnit(list, index, count = 1) {
   const unitObject = list.units[index];
-  if (unitObject.count === 1) {
+  if (unitObject.count <= count) {
     list.unitObjectStrings.splice(index, 1);
     list.units.splice(index, 1);
   } else {
-    list.units[index].count -= 1;
+    list.units[index].count -= count;
   }
   return consolidate(list);
 }
@@ -440,7 +442,7 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
 
   list = consolidate(list);
   validateUpgrades(list, unitIndex);
-  return list;
+  return {list, unitIndex};
 }
 
 // TODO remove these routers in favor of calling the right action type directly from the click handler

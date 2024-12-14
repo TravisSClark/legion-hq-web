@@ -190,14 +190,8 @@ export function ListProvider({
     updateThenValidateList({ ...setListMode(currentList, mode) });
   }
 
-  // TODO this gets painful when doing counterpart upgrades (....Iden....)
-  const handleEquipUpgrade = (action, unitIndex, upgradeIndex, upgradeId, isApplyToAll) => {
-
-    const newList = equipUpgrade(
-      currentList, action, unitIndex, upgradeIndex, upgradeId, isApplyToAll
-    );
-
-    const unit = newList.units[unitIndex];
+  const setCardSelectorToNextUpgradeSlot = (list, action, unitIndex, upgradeIndex, isApplyToAll) => {
+    const unit = list.units[unitIndex];
     const unitCard = cards[unit.unitId];
 
     // These might be a bad pattern, but they sort of are needed for confirming we haven't exceeded the total upgrade count when cascading
@@ -212,7 +206,7 @@ export function ListProvider({
     }
 
     // Cascade only if we're a 1-stack or if applying to all
-    if ( letUpgradesCascade && (isApplyToAll || unit.count === 1)) {
+    if ( letUpgradesCascade){ // && (isApplyToAll || unit.count === 1)) {
 
       let getFilter; // function getFilter(index)  -> returns a cardselector filter if one is applicable for proposed next index and current action
 
@@ -315,6 +309,17 @@ export function ListProvider({
     else{
       setCardPaneFilter({ action: 'DISPLAY' });
     }
+
+  }
+
+  const handleEquipUpgrade = (action, unitIndex, upgradeIndex, upgradeId, isApplyToAll) => {
+
+    const {list:newList, unitIndex:newUnitIndex} = equipUpgrade(
+      currentList, action, unitIndex, upgradeIndex, upgradeId, isApplyToAll
+    );
+
+    setCardSelectorToNextUpgradeSlot(newList, action, newUnitIndex, upgradeIndex, isApplyToAll);
+    
 
     updateThenValidateList({ ...newList });
   };
@@ -521,6 +526,7 @@ export function ListProvider({
     handleMergeList,
     handleToggleIsKillPointMode,
     handleAddKillPoints,
+    setCardSelectorToNextUpgradeSlot
   };
   const modalProps = {
     handleOpenModal,
