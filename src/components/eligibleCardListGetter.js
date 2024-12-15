@@ -138,51 +138,86 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
   return sortIds(validUnitIds);
 }
 
-function getEligibleCommandsToAdd(list) {
-  const stormTideCommands = {
-    // There are 9 total stormtide cards, 3 each valid in their respective modes
-    'storm tide: infantry': ['AC', 'AE', 'AG'],
-    'storm tide: armored': ['AB', 'AF', 'AJ'],
-    'storm tide: special forces': ['AD', 'AH', 'AI']
-  };
+const stormTideCommands = {
+  // There are 9 total stormtide cards, 3 each valid in their respective modes
+  'storm tide: infantry': ['AC', 'AE', 'AG'],
+  'storm tide: armored': ['AB', 'AF', 'AJ'],
+  'storm tide: special forces': ['AD', 'AH', 'AI']
+};
 
-  const validCommandIds = [];
-  // Currently, we don't do anything with invalid CC IDs on UI; stop tracking them unless we get a good use case
-  // const invalidCommandIds = [];
-
+function getEligibleCcs(list, validCcs, isContingencies = false){
+  
   const pipCounts = { '1': 0, '2': 0, '3': 0 };
   list.commandCards.forEach(id => {
     pipCounts[cards[id].cardSubtype] += 1;
   });
 
   const cardNames = list.units.map(u=>cards[u.unitId].cardName);
+  const uniqueCardNames = list.uniques.map(id=>cards[id].cardName);
 
   cardIdsByType['command'].forEach(id => {
+
     const card = cards[id];
-    if (list.commandCards.includes(id)) return;
-    if (list.contingencies && list.contingencies.includes(id)) return;
+
+    if (!isContingencies && pipCounts[card.cardSubtype] > 1) return false; 
+    if (!list.faction.includes(card.faction)) return false;
+    if (card.battleForce && card.battleForce !== list.battleForce) return false;
+
+    if (list.commandCards.includes(id)) return false;
+    if (list.contingencies && list.contingencies.includes(id)) return false;
+
+    // TODO - grabnar I think this check is redundant and we *should* be able to just parse uniques as in the next line
+    // For now, leave both in in case there's a card I'm not thinking of (...again, I don't think there is)
+    if(card.commander && (!cardNames.includes(card.commander) && !uniqueCardNames.includes(card.commander))) return false;
+    // if(card.commander && (!uniqueCardNames.includes(card.commander))) return;
 
     if (card.isStormTide){
       if(stormTideCommands[list.mode] && stormTideCommands[list.mode].includes(id)){
-        validCommandIds.push(id);
+        return true;
       }
       // filter out stormtide commands not in the current mode
-      return;
+      return false;
     } 
 
-    if (!list.faction.includes(card.faction)) return;
-    if (id === 'aa') return; // Standing Orders
-    if ((id === 'tv' || id === 'ud') && !list.uniques.includes('tn')) return; // grogu's command card
+    if (id === 'aa') return false; // Standing Orders
 
-    if (card.battleForce && card.battleForce !== list.battleForce) return;
-    if (pipCounts[card.cardSubtype] > 1) return; 
-    if(card.commander && !cardNames.includes(card.commander)) return;
-
-    validCommandIds.push(id);
+    validCcs.push(id);
+    return true;
   });
+}
+
+function getEligibleCommandsToAdd(list) {
+ 
+  const validCommandIds = [];
+  // Currently, we don't do anything with invalid CC IDs on UI; stop tracking them unless we get a good use case
+  // const invalidCommandIds = [];
+
+  getEligibleCcs(list, validCommandIds);
+  
   return {
     validIds: sortCommandIds(validCommandIds),
     invalidIds: [] // sortCommandIds(invalidCommandIds)
+  };
+}
+
+function getEligibleContingenciesToAdd(list) {
+  if (!list.contingencies) list.contingencies = [];
+  const validCommandIds = [];
+
+  let numContingencies = 0;
+  list.units.forEach((unit) => {
+    const unitCard = cards[unit.unitId];
+    if (unitCard.contingencies && unitCard.contingencies > 0)
+      numContingencies += unitCard.contingencies
+  });
+
+  if(list.contingencies.length < numContingencies){
+    getEligibleCcs(list, validCommandIds, true);
+  }
+
+  return {
+    validIds: sortCommandIds(validCommandIds),
+    invalidIds:[] 
   };
 }
 
@@ -304,39 +339,6 @@ function getEligibleBattlesToAdd(list, type) {
     }
   });
   return { validIds, invalidIds };
-}
-
-function getEligibleContingenciesToAdd(list) {
-  if (!list.contingencies) list.contingencies = [];
-  const validCommandIds = [];
-  const cardNames = list.units.map(u=>cards[u.unitId].cardName);
-
-  let numContingencies = 0;
-  list.units.forEach((unit) => {
-    const unitCard = cards[unit.unitId];
-    if (unitCard.contingencies && unitCard.contingencies > 0)
-      numContingencies += unitCard.contingencies
-  });
-  cardIdsByType['command'].forEach(id => {
-    const card = cards[id];
-    // if (card.cardType !== 'command') return;
-    if (list.commandCards.includes(id)) return;
-    if (list.contingencies.includes(id)) return;
-    if (!list.faction.includes(card.faction)) return;
-    if (id === 'aa') return;
-    if (id === 'jl' || id === 'ka' || id ==='kb') return;
-    if (
-      list.contingencies.length >= numContingencies ||
-      (card.commander && !cardNames.includes(card.commander))
-    ) {
-      return;
-    }
-    validCommandIds.push(id);
-  });
-  return {
-    validIds: sortCommandIds(validCommandIds),
-    invalidIds:[] 
-  };
 }
 
 export{

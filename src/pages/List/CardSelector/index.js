@@ -100,7 +100,9 @@ function CardSelector() {
             handleChange={handleToggleIsApplyToAll}
           /> 
         }
-         <Button size="large" style={{marginLeft:20}} onClick={()=>setCardSelectorToNextUpgradeSlot(currentList, action, cardPaneFilter.unitIndex, cardPaneFilter.upgradeIndex, isApplyToAll)}>
+         <Button size="large" style={{marginLeft:20}} onClick={()=>{
+            setCardSelectorToNextUpgradeSlot(currentList, action, cardPaneFilter.unitIndex, cardPaneFilter.upgradeIndex, isApplyToAll, true)
+          }}>
             Skip
         </Button>
         </div>
@@ -122,7 +124,16 @@ function CardSelector() {
         cardPaneFilter.upgradeIndex,
         upgradeId
       );
-      header = <Title title="Add loadout upgrade" />;
+      header = (
+        <div style={{display:'flex', flexDirection: 'row', justifyContent:'space-between', alignItems:"center", flex:1}} >
+          <Title title={"Add loadout upgrade"} />
+          <Button size="large" style={{marginLeft:20}} onClick={()=>{
+              setCardSelectorToNextUpgradeSlot(currentList, action, cardPaneFilter.unitIndex, cardPaneFilter.upgradeIndex, isApplyToAll, true)
+            }}>
+              Skip
+          </Button>
+        </div>
+      );
       break;
     case 'COMMAND':
       selectorIds = getEligibleCommandsToAdd(currentList);

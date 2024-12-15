@@ -7561,7 +7561,7 @@
         "cardName": "Incapacitate",
         "cardSubtype": "2",
         "cardType": "command",
-        "commander": "Iden Versio",
+        "commander": "Iden's ID10 Seeker Droid",
         "faction": "empire",
         "imageName": "Incapacitate.webp",
         "keywords": [],
@@ -12163,19 +12163,6 @@
             "Relentless"
         ]
     },
-    "tv": {
-        "id": "tv",
-        "cardName": "The Hand Thing",
-        "cardSubtype": "2",
-        "cardType": "command",
-        "commander": "Din Djarin",
-        "imageName": "The Hand Thing.webp",
-        "faction": "",
-        "battleForce": "",
-        "keywords": [
-            "Deflect"
-        ]
-    },
     "tw": {
         "id": "tw",
         "cardName": "A Machine Made For Killing",
@@ -12287,7 +12274,7 @@
         "cardName": "The Hand Thing",
         "cardSubtype": "2",
         "cardType": "command",
-        "commander": "IG-11",
+        "commander": "Grogu",
         "imageName": "The Hand Thing.webp",
         "faction": "",
         "battleForce": "",
@@ -13013,8 +13000,6 @@
         "id": "vq",
         "cardSubtype": "training",
         "cardName": "Call To Arms",
-        "note": "faction erroneously added here to filter uniqueCount upgrades",
-        "faction": "rebels",
         "uniqueCount": 2,
         "cardType": "upgrade",
         "cost": 5,

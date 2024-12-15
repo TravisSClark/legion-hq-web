@@ -190,7 +190,7 @@ export function ListProvider({
     updateThenValidateList({ ...setListMode(currentList, mode) });
   }
 
-  const setCardSelectorToNextUpgradeSlot = (list, action, unitIndex, upgradeIndex, isApplyToAll) => {
+  const setCardSelectorToNextUpgradeSlot = (list, action, unitIndex, upgradeIndex, getNewType = false) => {
     const unit = list.units[unitIndex];
     const unitCard = cards[unit.unitId];
 
@@ -246,28 +246,31 @@ export function ListProvider({
         case "UNIT_LOADOUT_UPGRADE":
           // If it's a laodout upgrade, return a UNIT_LOADOUT selector if the next upgrade is filled, return a UNIT_UPGRADE pick if not
 
-          getFilter = (index) =>{
-            if (!upgradesEquipped[index]) {
-              return {
-                action: "UNIT_UPGRADE",
-                unitIndex,
-                upgradeIndex: index,
-                upgradeType: upgradeBar[index],
-                hasUniques: unit.hasUniques,
-                unitId: unit.unitId,
-                upgradesEquipped: unit.upgradesEquipped,
-                additionalUpgradeSlots: unit.additionalUpgradeSlots
-              }
-            } else if(!unit.loadoutUpgrades[index]){
-              return {
-                action: "UNIT_LOADOUT_UPGRADE",
-                unitIndex,
-                upgradeIndex: index,
-                upgradeType: upgradeBar[index],
-                hasUniques: unit.hasUniques,
-                unitId: unit.unitId,
-                upgradesEquipped: unit.upgradesEquipped,
-                additionalUpgradeSlots: unit.additionalUpgradeSlots
+          getFilter = (index, getNewType) =>{
+            if(!getNewType || upgradeBar[upgradeIndex] !== upgradeBar[index]){
+
+              if (!upgradesEquipped[index]) {
+                return {
+                  action: "UNIT_UPGRADE",
+                  unitIndex,
+                  upgradeIndex: index,
+                  upgradeType: upgradeBar[index],
+                  hasUniques: unit.hasUniques,
+                  unitId: unit.unitId,
+                  upgradesEquipped: unit.upgradesEquipped,
+                  additionalUpgradeSlots: unit.additionalUpgradeSlots
+                }
+              } else if(!unit.loadoutUpgrades[index]){
+                return {
+                  action: "UNIT_LOADOUT_UPGRADE",
+                  unitIndex,
+                  upgradeIndex: index,
+                  upgradeType: upgradeBar[index],
+                  hasUniques: unit.hasUniques,
+                  unitId: unit.unitId,
+                  upgradesEquipped: unit.upgradesEquipped,
+                  additionalUpgradeSlots: unit.additionalUpgradeSlots
+                }
               }
             }
             return null;
@@ -276,17 +279,20 @@ export function ListProvider({
 
         default:
           // If the next upgrade is empty on UNIT_UPGRADE, get me a selector for that next slot, if used, return null
-          getFilter = (index) =>{
+          getFilter = (index, getNewType) =>{
+
             if (!upgradesEquipped[index]) {
-              return {
-                action,
-                unitIndex,
-                upgradeIndex: index,
-                upgradeType: upgradeBar[index],
-                hasUniques: unit.hasUniques,
-                unitId: unit.unitId,
-                upgradesEquipped: unit.upgradesEquipped,
-                additionalUpgradeSlots: unit.additionalUpgradeSlots
+              if(!getNewType || upgradeBar[upgradeIndex] !== upgradeBar[index]){
+                return {
+                  action,
+                  unitIndex,
+                  upgradeIndex: index,
+                  upgradeType: upgradeBar[index],
+                  hasUniques: unit.hasUniques,
+                  unitId: unit.unitId,
+                  upgradesEquipped: unit.upgradesEquipped,
+                  additionalUpgradeSlots: unit.additionalUpgradeSlots
+                }
               }
             }
             return null;
@@ -297,14 +303,14 @@ export function ListProvider({
       let count = 0;
 
       while (filter == null && count < upgradesEquipped.length) {
-        filter = getFilter(nextUpgradeIndex);
+        filter = getFilter(nextUpgradeIndex, getNewType);
         count++;
         nextUpgradeIndex = (nextUpgradeIndex + 1) % upgradesEquipped.length;
       }
     } 
     
     if(filter){
-      setCardPaneFilter(filter);
+      setCardPaneFilter(filter, getNewType);
     }
     else{
       setCardPaneFilter({ action: 'DISPLAY' });
@@ -318,8 +324,7 @@ export function ListProvider({
       currentList, action, unitIndex, upgradeIndex, upgradeId, isApplyToAll
     );
 
-    setCardSelectorToNextUpgradeSlot(newList, action, newUnitIndex, upgradeIndex, isApplyToAll);
-    
+    setCardSelectorToNextUpgradeSlot(newList, action, newUnitIndex, upgradeIndex);
 
     updateThenValidateList({ ...newList });
   };
