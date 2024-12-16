@@ -7,6 +7,7 @@ import battleForcesDict from 'constants/battleForcesDict';
 import { validateUpgrades } from './listValidator';
 import { getEquippableUpgrades } from './eligibleCardListGetter';
 
+const battleTypes = ["primary", "secondary", "advantage"];
 
 // Contains and only contains functions which modify the contents of the Legion list
 // (split other things into appropriate helpers in components so this doesn't go to 2k+ LOC again XD)
@@ -62,9 +63,10 @@ function countPoints(list) {
 function consolidate(list) {
   let hasContingencyKeyword = false;
   list.hasFieldCommander = false;
-  list.commanders = [];
   list.uniques = [];
   list.unitCounts = { ...listTemplate.unitCounts };
+  const cardNames = list.units.map(u=>cards[u.unitId].cardName);
+
   for (let i = 0; i < list.units.length; i++) {
     const unit = list.units[i];
     if (!unit.loadoutUpgrades) unit.loadoutUpgrades = [];
@@ -77,9 +79,7 @@ function consolidate(list) {
     if(unit.counterpart)list.uniques.push(unit.counterpart.counterpartId);
 
     if (unitCard.keywords.includes('Contingencies')) hasContingencyKeyword = true;
-    if (unitCard.rank === 'commander' || unitCard.rank === 'operative' || unitCard.isUnique) {
-      list.commanders.push(unitCard.cardName);
-    }
+
     for (let j = 0; j < unit.upgradesEquipped.length; j++) {
       const upgradeId = unit.upgradesEquipped[j];
       if (upgradeId) {
@@ -117,14 +117,14 @@ function consolidate(list) {
   }
   for (let i = list.commandCards.length - 1; i > -1 ; i--) {
     const { commander } = cards[list.commandCards[i]];
-    if (commander && !list.commanders.includes(commander)) {
+    if (commander && !cardNames.includes(commander)) {
       list = removeCommand(list, i);
     }
   }
   if (list.contingencies) {
     for (let i = list.contingencies.length - 1; i > -1; i--) {
       const { commander } = cards[list.contingencies[i]];
-      if (commander && !list.commanders.includes(commander)) {
+      if (commander && !cardNames.includes(commander)) {
         list = removeContingency(list, i);
       }
     }
@@ -133,10 +133,6 @@ function consolidate(list) {
   if (!hasContingencyKeyword) list.contingencies = [];
   list.commandCards = sortCommandIds(list.commandCards);
   return countPoints(list);
-}
-
-function deleteItem(items, i) {
-  return items.slice(0, i).concat(items.slice(i + 1, items.length))
 }
 
 function findUnitHashInList(list, unitHash) {
@@ -180,8 +176,10 @@ function unequipLoadoutUpgrade(list, unitIndex, upgradeIndex) {
 function equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll) {
   // applying upgrade to multiple units
   const unit = list.units[unitIndex];
-  const count = isApplyToAll ? unit.count : 1;
   const upgradeCard = cards[upgradeId];
+
+  const count = (isApplyToAll && !upgradeCard.isUnique) ? unit.count : 1;
+
   const newUnit = JSON.parse(JSON.stringify(unit));
   newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
   const newUnitHash = getUnitHash(newUnit);
@@ -191,18 +189,18 @@ function equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll
     newUnit.upgradesEquipped.push(null);
   }
   let newUnitHashIndex = findUnitHashInList(list, newUnit.unitObjectString);
-  // If a unit with that upgrade doesn't exist
+  // If this unit already exists...
   if (newUnitHashIndex > -1) {
     list.units[list.unitObjectStrings.indexOf(newUnitHash)].count += count;
-    list = decrementUnit(list, unitIndex);
-  } else if (isApplyToAll) {
+    list = decrementUnit(list, unitIndex, count);
+  } else if (list.units[unitIndex].count == count) {
     list.units[unitIndex] = newUnit;
     list.unitObjectStrings[unitIndex] = newUnitHash;
   } else {
-    newUnit.count = 1;
+    newUnit.count = count;
     list.units.splice(unitIndex + 1, 0, newUnit);
     list.unitObjectStrings.splice(unitIndex + 1, 0, newUnit.unitObjectString);
-    list = decrementUnit(list, unitIndex);
+    list = decrementUnit(list, unitIndex, count);
   }
   return [list, newUnit];
 }
@@ -254,7 +252,7 @@ function addCounterpart(list, unitIndex, counterpartId) {
 
 function removeCounterpart(list, unitIndex) {
   const counterpart = list.units[unitIndex].counterpart;
-  list.uniques = deleteItem(list.uniques, list.uniques.indexOf(counterpart.counterpartId));
+  list.uniques.splice(list.uniques.indexOf(counterpart.counterpartId), 1);
   delete list.units[unitIndex].counterpart;
   return consolidate(list);
 }
@@ -341,18 +339,18 @@ function addUnit(list, unitId, stackSize = 1) {
   return list;
 }
 
-function incrementUnit(list, index) {
-  list.units[index].count += 1;
+function incrementUnit(list, index, count = 1) {
+  list.units[index].count += count;
   return consolidate(list);
 }
 
-function decrementUnit(list, index) {
+function decrementUnit(list, index, count = 1) {
   const unitObject = list.units[index];
-  if (unitObject.count === 1) {
-    list.unitObjectStrings = deleteItem(list.unitObjectStrings, index);
-    list.units = deleteItem(list.units, index);
+  if (unitObject.count <= count) {
+    list.unitObjectStrings.splice(index, 1);
+    list.units.splice(index, 1);
   } else {
-    list.units[index].count -= 1;
+    list.units[index].count -= count;
   }
   return consolidate(list);
 }
@@ -363,7 +361,7 @@ function addContingency(list, commandId) {
 }
 
 function removeContingency(list, contingencyIndex) {
-  list.contingencies = deleteItem(list.contingencies, contingencyIndex);
+  list.contingencies.splice(contingencyIndex, 1);
   return list;
 }
 
@@ -374,7 +372,7 @@ function addCommand(list, commandId) {
 }
 
 function removeCommand(list, commandIndex) {
-  list.commandCards = deleteItem(list.commandCards, commandIndex);
+  list.commandCards.splice(commandIndex, 1);
   return list;
 }
 
@@ -389,25 +387,41 @@ function sortCommandIds(cardIds) {
   });
 }
 
-function addBattle(list, type, id) {
-  if (type === 'primary') {
-    list.primaryCards.push(id);
-  } else if (type === 'secondary') {
-    list.secondaryCards.push(id);
-  } else if (type === 'advantage') {
-    list.advantageCards.push(id);
+function getBattleArray(list, type){
+
+  let typeIndex = battleTypes.findIndex((t)=>t===type);
+  if(typeIndex != -1){
+    return list[battleTypes[typeIndex]+"Cards"];
+  } else{
+    console.warn("Unrecognized battle type: " + type);
+    return null;
   }
-  return list;
+}
+
+function addBattle(list, type, id) {
+
+  let currentCards = getBattleArray(list, type);
+  if(!currentCards) return;
+
+  let nextType = type;
+  let typeIndex = battleTypes.findIndex((t)=>t===type);
+
+  currentCards.push(id);
+
+  // intentionally go undef here and use it above, rather than messing w wraparound
+  if(currentCards.length >= 3)
+      nextType = battleTypes[typeIndex + 1];
+
+  return {list, nextType};
 }
 
 function removeBattle(list, type, index) {
-  if (type === 'primary') {
-    list.primaryCards = deleteItem(list.primaryCards, index);
-  } else if (type === 'secondary') {
-    list.secondaryCards = deleteItem(list.secondaryCards, index);
-  } else if (type === 'advantage') {
-    list.advantageCards = deleteItem(list.advantageCards, index);
-  } else return;
+
+  let currentCards = getBattleArray(list, type);
+  if(!currentCards) return list;
+
+  currentCards.splice(index, 1);
+
   return list;
 }
 
@@ -427,7 +441,7 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
 
   list = consolidate(list);
   validateUpgrades(list, unitIndex);
-  return list;
+  return {list, unitIndex};
 }
 
 // TODO remove these routers in favor of calling the right action type directly from the click handler

@@ -1,9 +1,12 @@
 import ranks from 'constants/ranks';
 import _ from 'lodash';
-import cards from 'constants/cards';
+import cards, { cardsIdsByType } from 'constants/cards';
 
 import battleForcesDict from 'constants/battleForcesDict';
 import legionModes from 'constants/legionModes';
+
+const uniqueCountUpgradeIds = cardsIdsByType["upgrade"].filter(c=>cards[c].uniqueCount);
+
 /**
  * Check validation ONLY for things pertaining to this unit's currently equipped upgrades. 
  * Generally, should *probably* not do things that have a further reach than upgrade bar itself (I think)
@@ -79,9 +82,28 @@ function validateUpgrades(list, unitIndex){
     }
   }
 
+
+  // Loop upgrades for checks
+  // For now, this just confirms we don't have 2+ Leader cards
+
+  let leaderList = [];
+  unit.upgradesEquipped.forEach(id=>{
+
+    if(!id) return;
+    const upgradeCard = cards[id];
+
+    if(upgradeCard.keywords.includes("Leader")){
+      leaderList.push(upgradeCard.cardName);
+    }
+
+  });
+
+  if(leaderList.length > 1){
+    unit.validationIssues.push( { level:2, text: card.cardName + " has too many LEADER upgrades (" + leaderList.join(' and ') + ")"});
+  }
+
 }
 
-// All (most...) battleForce-specific stuff (should) goes here
 function battleForceValidation(currentList, unitCounts){
 
   const validationIssues = [];
@@ -145,7 +167,6 @@ function battleForceValidation(currentList, unitCounts){
       validationIssues.push({level:2, text:"You must have at least one of each Corps type before adding additional ones"});
     }
   }  
-  
   
   return validationIssues;
 }
@@ -245,6 +266,7 @@ function validateList(currentList){
   
   let rankReqs = getRankLimits(currentList);
 
+  const uniqueUpgrades = {};
 
   let unitCounts = {};
   // count units, count up them mercs, pull in any unit-specific issues
@@ -256,6 +278,14 @@ function validateList(currentList){
     }
     unitCounts[unit.unitId] += unit.count;
 
+    unit.upgradesEquipped.forEach(id=>{
+      if(!id) return;
+      const card = cards[id];
+      if(card.uniqueCount || card.isUnique){
+        uniqueUpgrades[id] = uniqueUpgrades[id] ? uniqueUpgrades[id] + unit.count : unit.count;
+      }
+    })
+
     if(unit.validationIssues?.length > 0){
       validationIssues = validationIssues.concat(unit.validationIssues);
     }
@@ -264,6 +294,15 @@ function validateList(currentList){
       mercs[card.rank] += unit.count;
     }
   });
+
+  Object.getOwnPropertyNames(uniqueUpgrades).forEach(id=>{
+    const limit = cards[id].uniqueCount ? cards[id].uniqueCount : 1;
+
+    if(uniqueUpgrades[id] > limit){
+      const name = cards[id].cardName;
+      validationIssues.push({level:2, text:"Too many \"" + name.toUpperCase() + "\" equipped! (" + uniqueUpgrades[id] +" equipped, limit " + limit+ ")" });
+    }
+  })
 
   // Check detachment or any similar keywords once we know the full list count for units
   Object.getOwnPropertyNames(unitCounts).forEach(id =>{

@@ -8,6 +8,7 @@ import StackController from './StackController';
 import ToggleButton from './ToggleButton';
 import ChipCard from 'common/LegionCard/ChipCard';
 import cards from 'constants/cards';
+import { Button } from '@material-ui/core';
 
 function Title({ title }) {
   return <Typography variant="body2">{title}</Typography>;
@@ -40,6 +41,7 @@ function CardSelector() {
     handleIncrementStackSize,
     handleDecrementStackSize,
     handleToggleIsApplyToAll,
+    setCardSelectorToNextUpgradeSlot,
     userSettings
   } = React.useContext(ListContext);
   let header; let clickHandler;
@@ -85,14 +87,25 @@ function CardSelector() {
         upgradeId,
         isApplyToAll
       );
-      header = cardPaneFilter.hasUniques ? (
-        <Title title={title} />
-      ) : (
-        <ToggleButton
-          label="Apply to All"
-          value={isApplyToAll}
-          handleChange={handleToggleIsApplyToAll}
-        />
+      header = (
+      
+      <div style={{display:'flex', flexDirection: 'row', justifyContent:'space-between', alignItems:"center", flex:1}} >
+       
+        { cardPaneFilter.hasUniques ? 
+          <Title title={title} />
+         : 
+          <ToggleButton
+            label="Apply to All"
+            value={isApplyToAll}
+            handleChange={handleToggleIsApplyToAll}
+          /> 
+        }
+         <Button size="large" style={{marginLeft:20}} onClick={()=>{
+            setCardSelectorToNextUpgradeSlot(currentList, action, cardPaneFilter.unitIndex, cardPaneFilter.upgradeIndex, isApplyToAll, true)
+          }}>
+            Skip
+        </Button>
+        </div>
       );
       break;
     case 'UNIT_LOADOUT_UPGRADE':
@@ -111,7 +124,16 @@ function CardSelector() {
         cardPaneFilter.upgradeIndex,
         upgradeId
       );
-      header = <Title title="Add loadout upgrade" />;
+      header = (
+        <div style={{display:'flex', flexDirection: 'row', justifyContent:'space-between', alignItems:"center", flex:1}} >
+          <Title title={"Add loadout upgrade"} />
+          <Button size="large" style={{marginLeft:20}} onClick={()=>{
+              setCardSelectorToNextUpgradeSlot(currentList, action, cardPaneFilter.unitIndex, cardPaneFilter.upgradeIndex, isApplyToAll, true)
+            }}>
+              Skip
+          </Button>
+        </div>
+      );
       break;
     case 'COMMAND':
       selectorIds = getEligibleCommandsToAdd(currentList);

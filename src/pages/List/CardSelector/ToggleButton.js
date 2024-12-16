@@ -6,7 +6,7 @@ function ToggleButton({ label, value, handleChange }) {
     <FormGroup>
       <FormControlLabel
         label={label}
-        labelPlacement="start"
+        labelPlacement="end"
         control={
           <Checkbox
             color="primary"

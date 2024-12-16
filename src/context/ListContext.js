@@ -176,73 +176,162 @@ export function ListProvider({
     if (stackSize > 1) { setStackSize(stackSize - 1); }
   }
   const handleToggleIsApplyToAll = () => setIsApplyToAll(!isApplyToAll);
+
   const handleClearList = () => {
     setCardPaneFilter({ action: 'DISPLAY' });
     const newList = JSON.parse(JSON.stringify(listTemplate));
     if (currentList.faction === 'mercenary') newList.battleForce = 'Shadow Collective';
     updateThenValidateList({ ...newList, faction: currentList.faction });
   }
+  
   const handleChangeTitle = title => setCurrentList({ ...changeListTitle(currentList, title) });
+
   const handleChangeMode = mode => {
     updateThenValidateList({ ...setListMode(currentList, mode) });
   }
+
+  const setCardSelectorToNextUpgradeSlot = (list, action, unitIndex, upgradeIndex, getNewType = false) => {
+    const unit = list.units[unitIndex];
+    const unitCard = cards[unit.unitId];
+
+    // These might be a bad pattern, but they sort of are needed for confirming we haven't exceeded the total upgrade count when cascading
+    let upgradesEquipped = unit.upgradesEquipped;
+    let upgradeBar = unitCard.upgradeBar.concat(unit.additionalUpgradeSlots);
+    
+    let filter = null;
+
+    let letUpgradesCascade = true;
+    if (userSettings && userSettings.cascadeUpgradeSelection) {
+      letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
+    }
+
+    // Cascade only if we're a 1-stack or if applying to all
+    if ( letUpgradesCascade){ // && (isApplyToAll || unit.count === 1)) {
+
+      let getFilter; // function getFilter(index)  -> returns a cardselector filter if one is applicable for proposed next index and current action
+
+      // Create a function for each action type that will return a CardSelector filter after adding an upgrade (or null if no selector valid) for the next upgrade index
+      switch(action){
+        case "COUNTERPART_UPGRADE":
+          // this could probably re-use default by changing upgradesEquipped and upgradeBar; leaving it alone for now
+          // since it works and there's currently 1 counterpart upgrade slot in the entire game for now, lol
+          upgradesEquipped = unit.counterpart.upgradesEquipped;
+          upgradeBar = cards[unit.counterpart.counterpartId].upgradeBar;
+
+          getFilter = (index) =>{
+            if (!upgradesEquipped[index]) {
+              return {
+                action,
+                unitIndex,
+                upgradeIndex: index,
+                upgradeType: upgradeBar[index],
+                hasUniques: unit.hasUniques,
+                unitId: unit.unitId,
+                upgradesEquipped,
+                additionalUpgradeSlots: []
+              }
+            }
+            return null;
+          }
+          break;
+
+        case "COUNTERPART_LOADOUT_UPGRADE":
+          // Punt for now - rather have non-function than a breaking change if/when a 
+          // counterpart with loadout and multiple slots appears in-game
+          upgradesEquipped = unit.counterpart.upgradesEquipped;
+          upgradeBar = cards[unit.counterpart.counterpartId].upgradeBar;
+          getFilter = () => null
+          break;
+
+        case "UNIT_LOADOUT_UPGRADE":
+          // If it's a laodout upgrade, return a UNIT_LOADOUT selector if the next upgrade is filled, return a UNIT_UPGRADE pick if not
+
+          getFilter = (index, getNewType) =>{
+            if(!getNewType || upgradeBar[upgradeIndex] !== upgradeBar[index]){
+
+              if (!upgradesEquipped[index]) {
+                return {
+                  action: "UNIT_UPGRADE",
+                  unitIndex,
+                  upgradeIndex: index,
+                  upgradeType: upgradeBar[index],
+                  hasUniques: unit.hasUniques,
+                  unitId: unit.unitId,
+                  upgradesEquipped: unit.upgradesEquipped,
+                  additionalUpgradeSlots: unit.additionalUpgradeSlots
+                }
+              } else if(!unit.loadoutUpgrades[index]){
+                return {
+                  action: "UNIT_LOADOUT_UPGRADE",
+                  unitIndex,
+                  upgradeIndex: index,
+                  upgradeType: upgradeBar[index],
+                  hasUniques: unit.hasUniques,
+                  unitId: unit.unitId,
+                  upgradesEquipped: unit.upgradesEquipped,
+                  additionalUpgradeSlots: unit.additionalUpgradeSlots
+                }
+              }
+            }
+            return null;
+          }
+          break;
+
+        default:
+          // If the next upgrade is empty on UNIT_UPGRADE, get me a selector for that next slot, if used, return null
+          getFilter = (index, getNewType) =>{
+
+            if (!upgradesEquipped[index]) {
+              if(!getNewType || upgradeBar[upgradeIndex] !== upgradeBar[index]){
+                return {
+                  action,
+                  unitIndex,
+                  upgradeIndex: index,
+                  upgradeType: upgradeBar[index],
+                  hasUniques: unit.hasUniques,
+                  unitId: unit.unitId,
+                  upgradesEquipped: unit.upgradesEquipped,
+                  additionalUpgradeSlots: unit.additionalUpgradeSlots
+                }
+              }
+            }
+            return null;
+          }
+      }
+
+      let nextUpgradeIndex = (upgradeIndex + 1) % upgradesEquipped.length;
+      let count = 0;
+
+      while (filter == null && count < upgradesEquipped.length) {
+        filter = getFilter(nextUpgradeIndex, getNewType);
+        count++;
+        nextUpgradeIndex = (nextUpgradeIndex + 1) % upgradesEquipped.length;
+      }
+    } 
+    
+    if(filter){
+      setCardPaneFilter(filter, getNewType);
+    }
+    else{
+      setCardPaneFilter({ action: 'DISPLAY' });
+    }
+
+  }
+
   const handleEquipUpgrade = (action, unitIndex, upgradeIndex, upgradeId, isApplyToAll) => {
-    const unit = currentList.units[unitIndex];
-    let applyFilter; let nextAvailIndex; let nextAvailType;
-    if (isApplyToAll || unit.count === 1) {
 
-      // TODO grabnar - prevent isApplyToAll if upgrade is unique
-      let i = (upgradeIndex + 1) % unit.upgradesEquipped.length;
-      let numUpgradesEquipped = 0;
-
-      while (
-        !nextAvailIndex &&
-        !nextAvailType &&
-        numUpgradesEquipped < unit.upgradesEquipped.length
-      ) {
-        const id = unit.upgradesEquipped[i];
-        const unitCard = cards[unit.unitId];
-        if (id) {
-          numUpgradesEquipped++;
-          continue;
-        };
-        nextAvailIndex = i;
-        nextAvailType = unitCard.upgradeBar[i] ?
-                        unitCard.upgradeBar[i] :
-                        unit.additionalUpgradeSlots[i - (unitCard.upgradeBar.length + 1)];
-        i = (i + 1) % unit.upgradesEquipped.length;
-      }
-      let letUpgradesCascade = true;
-      if (userSettings && userSettings.cascadeUpgradeSelection) {
-        letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
-      }
-      if (letUpgradesCascade && nextAvailIndex !== undefined && nextAvailType) {
-        // if (!unit.upgradesEquipped[nextAvailIndex]) {
-        //   applyFilter = null;
-        // } else {
-          applyFilter = (newUpgradesEquipped, newAdditionalUpgradeSlots) => setCardPaneFilter({
-            action,
-            unitIndex,
-            upgradeIndex: nextAvailIndex,
-            upgradeType: nextAvailType,
-            hasUniques: unit.hasUniques,
-            unitId: unit.unitId,
-            upgradesEquipped: newUpgradesEquipped,
-            additionalUpgradeSlots: newAdditionalUpgradeSlots
-          });
-        // }
-      }
-    } // else applyFilter = () => setCardPaneFilter({ action: 'DISPLAY' })
-
-    const newList = equipUpgrade(
+    const {list:newList, unitIndex:newUnitIndex} = equipUpgrade(
       currentList, action, unitIndex, upgradeIndex, upgradeId, isApplyToAll
     );
-    if (applyFilter && newList.units[unitIndex]) {
-      const newUnit = newList.units[unitIndex];
-      applyFilter(newUnit.upgradesEquipped, newUnit.additionalUpgradeSlots);
-    } else setCardPaneFilter({ action: 'DISPLAY' });
+
+    setCardSelectorToNextUpgradeSlot(newList, action, newUnitIndex, upgradeIndex);
+
     updateThenValidateList({ ...newList });
   };
+
+
+
+
 
   const handleUnequipUpgrade = (action, unitIndex, upgradeIndex) => {
 
@@ -277,9 +366,30 @@ export function ListProvider({
     setCurrentList({ ...newList });
   }
   const handleAddBattle = (type, battleId) => {
-    // TODO limit battle overflow from here, ie limit 4
-    const newList = addBattle(currentList, type, battleId);
-    setCurrentList({ ...newList });
+    const {list, nextType} = addBattle(currentList, type, battleId);
+
+    console.log(nextType);
+
+    let letUpgradesCascade = false;
+    if (userSettings && userSettings.cascadeUpgradeSelection) {
+      letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
+    }
+
+    if(letUpgradesCascade && nextType != type){
+      console.log(nextType, type);
+
+      if(nextType){
+        setCardPaneFilter({
+          action: 'BATTLE', type: nextType
+        })
+      } else {
+        setCardPaneFilter({
+          action: 'DISPLAY'
+        })
+      }
+    }
+
+    setCurrentList({ ...list });
   }
   const handleRemoveBattle = (type, battleId) => {
     const newList = removeBattle(currentList, type, battleId);
@@ -421,6 +531,7 @@ export function ListProvider({
     handleMergeList,
     handleToggleIsKillPointMode,
     handleAddKillPoints,
+    setCardSelectorToNextUpgradeSlot
   };
   const modalProps = {
     handleOpenModal,
