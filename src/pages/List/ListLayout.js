@@ -44,7 +44,7 @@ function ListLayout() {
     backgroundColor: palette ? palette.background.default : ''
   };
 
-  const builderPane = leftPaneWidth > 0 && (
+  let builderPane = leftPaneWidth > 0 && (
     <Grid item xs={leftPaneWidth} style={paneStyles}>
       <div id="list-content">
         <div style={stickyStyles}>
@@ -62,6 +62,29 @@ function ListLayout() {
       </div>
       <Divider style={{ marginBottom: 4 }} />
       <ListExtras />
+      <ListId />
+      <div style={{ marginTop: 24 }} />
+    </Grid>
+  );
+
+  builderPane = leftPaneWidth > 0 && (
+    <Grid item xs={leftPaneWidth} style={paneStyles}>
+      <div id="list-content">
+        <div style={stickyStyles}>
+          <ListHeader />
+          <ListExtras />
+          <div style={{ marginTop: 8 }} />
+        </div>
+        <ListUnits />
+        <Divider style={{ marginBottom: 4 }} />
+        <ListCommands />
+        <Divider style={{ marginBottom: 4 }} />
+        <ListContingencies />
+        <Divider style={{ marginBottom: 4 }} />
+        <ListObjectives />
+      </div>
+      <Divider style={{ marginBottom: 4 }} />
+      <RankSelector />
       <ListId />
       <div style={{ marginTop: 24 }} />
     </Grid>

@@ -19,7 +19,6 @@ function RankSelector(props) {
   const classes = useStyles();
   const { currentList, setCardPaneFilter, rankLimits } = useContext(ListContext);
   
-
   const currentUnitCounts = { ...currentList.unitCounts };
 
   return (

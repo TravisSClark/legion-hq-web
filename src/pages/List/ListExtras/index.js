@@ -1,6 +1,5 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import {
-  History as UsePrevIcon,
   Clear as ClearIcon,
   Save as SaveIcon,
   CallSplit as ForkIcon,
@@ -15,7 +14,6 @@ import QRButton from './QRButton';
 import TTSTextExportButton from './TTSTextExportButton';
 import ImageExportButton from './ImageExportButton';
 import TextExportButton from './TextExportButton';
-import PrintExportButton from './PrintExportButton';
 import SimpleButton from './SimpleButton';
 import MenuButton from 'common/MenuButton';
 
@@ -54,7 +52,7 @@ function ListExtras() {
         timeoutMessage={listSaveMessage ? listSaveMessage : 'Saving...'}
         isDisabled={!Boolean(userId)}
         icon={<SaveIcon />}
-        label="Save List"
+        label="Save"
         handleClick={() => handleListSave(currentList)}
       />
       <SimpleButton
