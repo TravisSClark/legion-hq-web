@@ -8437,7 +8437,6 @@
             "Detachment",
             "Observe",
             "Hover: Air",
-            "Strafe",
             "Incognito",
             "Suppressive"
         ],
@@ -9061,7 +9060,6 @@
         "keywords": [
             "Armor",
             "Hover: Ground",
-            "Strafe",
             "Reposition",
             "Transport",
             "Weak Point"
@@ -11440,7 +11438,6 @@
         "keywords": [
             "Armor",
             "Hover: Ground",
-            "Strafe",
             "Reposition",
             "Transport",
             "Weak Point"
