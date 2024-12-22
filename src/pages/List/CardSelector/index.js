@@ -9,6 +9,7 @@ import ToggleButton from './ToggleButton';
 import ChipCard from 'common/LegionCard/ChipCard';
 import cards from 'constants/cards';
 import { Button } from '@material-ui/core';
+import { unitHasUniques } from 'components/eligibleCardListGetter';
 
 function Title({ title }) {
   return <Typography variant="body2">{title}</Typography>;
@@ -47,6 +48,13 @@ function CardSelector() {
   let header; let clickHandler;
   let selectorIds = {validIds:[], invalidIds:[]};
   const { action } = cardPaneFilter;
+
+
+  let hasUniques = false;
+  
+  if(cardPaneFilter.unitIndex != undefined){
+    hasUniques = unitHasUniques(currentList.units[cardPaneFilter.unitIndex]);
+  }
 
   switch(action){
     case 'UNIT':
@@ -91,7 +99,7 @@ function CardSelector() {
       
       <div style={{display:'flex', flexDirection: 'row', justifyContent:'space-between', alignItems:"center", flex:1}} >
        
-        { cardPaneFilter.hasUniques ? 
+        { hasUniques ? 
           <Title title={title} />
          : 
           <ToggleButton

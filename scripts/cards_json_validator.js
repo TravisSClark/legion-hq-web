@@ -3,7 +3,7 @@
  */
 
 import fs from 'fs-extra';
-
+import {getEquippableUpgrades} from '../src/components/eligibleCardListGetter';
 async function cardsJsonCheck(){
 
   const keywordsWithFields = [
@@ -60,6 +60,10 @@ async function cardsJsonCheck(){
           }
         });
         break;
+      // Look for 'orphaned' upgrades that don't map to any units
+      case "upgrade":
+
+
     }
   });
 

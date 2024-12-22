@@ -158,7 +158,6 @@ function UpgradeChip({
           handleSwapUpgrade={() => setCardPaneFilter({
             action: actionPrefix+'_UPGRADE',
             upgradeType, unitIndex, upgradeIndex,
-            hasUniques: unit.hasUniques,
             unitId: unitCard.id,
             upgradesEquipped: unit.upgradesEquipped,
             additionalUpgradeSlots: unit.additionalUpgradeSlots

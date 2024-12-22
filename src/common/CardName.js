@@ -5,9 +5,12 @@ import cards from 'constants/cards';
 function CardName({ id, variant = 'body1' }) {
   const card = cards[id];
   return (
-    <Typography variant={variant}>
-      {card.displayName ? card.displayName : card.cardName}
-    </Typography>
+    <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
+      <Typography variant={variant}>
+        {card.displayName ? card.displayName : card.cardName} 
+      </Typography>
+      <Typography>({card.cost})</Typography>
+    </div>
   );
 };
 

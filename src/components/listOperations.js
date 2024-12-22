@@ -4,7 +4,6 @@ import cards from 'constants/cards';
 import interactions from 'components/cardInteractions';
 import listTemplate from 'constants/listTemplate';
 import battleForcesDict from 'constants/battleForcesDict';
-import { validateUpgrades } from './listValidator';
 import { getEquippableUpgrades } from './eligibleCardListGetter';
 
 const battleTypes = ["primary", "secondary", "advantage"];
@@ -62,65 +61,36 @@ function countPoints(list) {
  // TODO need to specialize this; should at least be a on-upgrade and on-unit fire, not this whole big thing
 function consolidate(list) {
   let hasContingencyKeyword = false;
+  // TODO see about moving these into validator
   list.hasFieldCommander = false;
-  list.uniques = [];
-  list.unitCounts = { ...listTemplate.unitCounts };
   const cardNames = list.units.map(u=>cards[u.unitId].cardName);
 
   for (let i = 0; i < list.units.length; i++) {
     const unit = list.units[i];
     if (!unit.loadoutUpgrades) unit.loadoutUpgrades = [];
     const unitCard = cards[unit.unitId];
-    unit.hasUniques = false;
-    if (unitCard.isUnique) {
-      list.uniques.push(unitCard.id);
-      unit.hasUniques = true;
-    }
-    if(unit.counterpart)list.uniques.push(unit.counterpart.counterpartId);
 
     if (unitCard.keywords.includes('Contingencies')) hasContingencyKeyword = true;
+    if (unitCard.keywords.includes('Field Commander')) list.hasFieldCommander = true;
 
     for (let j = 0; j < unit.upgradesEquipped.length; j++) {
       const upgradeId = unit.upgradesEquipped[j];
       if (upgradeId) {
         const upgradeCard = cards[upgradeId];
-        if (upgradeCard.isUnique) {
-          for (let i = 0; i < unit.count; i++) list.uniques.push(upgradeCard.id);
-          unit.hasUniques = true;
-        }
         if (upgradeCard.keywords.includes('Field Commander')) {
           list.hasFieldCommander = true;
         }
       }
     }
-    for (let j = 0; j < unit.loadoutUpgrades.length; j++) {
-      const upgradeId = unit.loadoutUpgrades[j];
-      if (upgradeId) {
-        const upgradeCard = cards[upgradeId];
-        if (upgradeCard.isUnique) {
-          list.uniques.push(upgradeCard.id);
-          unit.hasUniques = true;
-        }
-      }
-    }
-
-    list.unitCounts[unitCard.rank] += unit.count;
-    
-    if (unit.unitId === 'rc' && unit.upgradesEquipped.includes('rq')) { // Maul + Darksaber interaction - TODO, make it data/rules-driven
-      list.unitCounts['commander']++;
-      list.unitCounts['operative']--;
-    }
-    if(battleForcesDict[list.battleForce]?.rules?.buildsAsCorps?.includes(unit.unitId)){
-      list.unitCounts[unitCard.rank] -= unit.count;
-      list.unitCounts['corps'] += unit.count;
-    } 
   }
+
   for (let i = list.commandCards.length - 1; i > -1 ; i--) {
     const { commander } = cards[list.commandCards[i]];
     if (commander && !cardNames.includes(commander)) {
       list = removeCommand(list, i);
     }
   }
+
   if (list.contingencies) {
     for (let i = list.contingencies.length - 1; i > -1; i--) {
       const { commander } = cards[list.contingencies[i]];
@@ -252,7 +222,6 @@ function addCounterpart(list, unitIndex, counterpartId) {
 
 function removeCounterpart(list, unitIndex) {
   const counterpart = list.units[unitIndex].counterpart;
-  list.uniques.splice(list.uniques.indexOf(counterpart.counterpartId), 1);
   delete list.units[unitIndex].counterpart;
   return consolidate(list);
 }
@@ -273,7 +242,6 @@ function addUnit(list, unitId, stackSize = 1) {
     const newUnitObject = {
       unitId,
       count: unitCard.isUnique ? 1 : stackSize,
-      hasUniques: unitCard.isUnique,
       totalUnitCost: unitCard.cost * stackSize,
       unitObjectString: unitId,
       upgradesEquipped: [],
@@ -334,9 +302,7 @@ function addUnit(list, unitId, stackSize = 1) {
       unitCard.command.forEach((commandId) => addCommand(list, commandId));
     }
   }
-  list = consolidate(list);
-  validateUpgrades(list, unitIndex);
-  return list;
+  return consolidate(list);
 }
 
 function incrementUnit(list, index, count = 1) {
@@ -440,7 +406,6 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
   }
 
   list = consolidate(list);
-  validateUpgrades(list, unitIndex);
   return {list, unitIndex};
 }
 
@@ -459,9 +424,7 @@ function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
     list = unequipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex);
   }
 
-  list = consolidate(list);
-  validateUpgrades(list, unitIndex);
-  return list;
+  return consolidate(list);
 }
 
 function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {

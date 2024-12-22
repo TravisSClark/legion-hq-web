@@ -5,19 +5,23 @@ import _ from 'lodash';
 import listTemplate from 'constants/listTemplate';
 import battleForcesDict from 'constants/battleForcesDict';
 import cards from 'constants/cards';
+import { getListUniques, unitHasUniques } from './eligibleCardListGetter';
 
 
 // Functions which act upon lists wholesale, rather than tweaking data inside a list
 
 function mergeLists(primaryList, secondaryList) {
   let unitsToAdd = [];
+
+  let primaryUniques = getListUniques(primaryList);
+
   for (let i = 0; i < secondaryList.units.length; i++) {
     const unit = secondaryList.units[i];
-    if (unit.hasUniques) {
-      if (primaryList.uniques.includes(unit.unitId)) continue;
+    if (unitHasUniques(unit)) {
+      if (primaryUniques.includes(unit.unitId)) continue;
       let isValid = true;
       unit.upgradesEquipped.forEach(upgradeId => {
-        if (upgradeId && primaryList.uniques.includes(upgradeId)) isValid = false;
+        if (upgradeId && primaryUniques.includes(upgradeId)) isValid = false;
       });
       if (!isValid) continue;
       unitsToAdd.push(unit);
@@ -45,7 +49,6 @@ function processUnitSegment(segment) {
   const newUnit = {
     unitId,
     count: unitCount,
-    hasUniques: unitCard.isUnique,
     totalUnitCost: unitCard.cost * unitCount,
     unitObjectString: unitId,
     upgradesEquipped: [],
@@ -92,7 +95,6 @@ function segmentToUnitObject(unitIndex, segment) {
     counterpart = processUnitSegment(segment.split('+')[1]);
     const {
       unitId,
-      hasUniques,
       totalUnitCost,
       unitObjectString,
       upgradesEquipped,
@@ -102,7 +104,6 @@ function segmentToUnitObject(unitIndex, segment) {
     unit.counterpart = {
       count: 1,
       counterpartId: unitId,
-      hasUniques,
       totalUnitCost,
       unitObjectString,
       upgradesEquipped,

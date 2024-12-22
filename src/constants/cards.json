@@ -2514,7 +2514,7 @@
         "keywords": [],
         "requirements": [
             {
-                "light side": true
+              "forceAffinity": "light side"
             }
         ],
         "history": [
@@ -2535,7 +2535,7 @@
         "keywords": [],
         "requirements": [
             {
-                "dark side": true
+                "forceAffinity": "dark side"
             }
         ],
         "history": [
@@ -2556,7 +2556,7 @@
         "keywords": [],
         "requirements": [
             {
-                "dark side": true
+              "forceAffinity": "dark side"
             }
         ],
         "history": [
@@ -3705,7 +3705,7 @@
         ],
         "requirements": [
             {
-                "dark side": true
+              "forceAffinity": "dark side"
             }
         ],
         "id": "fo"
@@ -5547,7 +5547,7 @@
         ],
         "requirements": [
             {
-                "light side": true
+              "forceAffinity": "light side"
             }
         ],
         "id": "ij"
@@ -9229,7 +9229,6 @@
     },
     "or": {
         "id": "or",
-        "displayName": "",
         "cardSubtype": "pilot",
         "cardName": "Governor Pryce",
         "isUnique": true,
@@ -9271,7 +9270,7 @@
         "requirements": [
             {
                 "faction": "republic",
-                "cardName": "LAAT Patrol Transport"
+                "cardName": "LAAT/le Patrol Transport"
             }
         ],
         "history": [
@@ -9500,7 +9499,7 @@
         "requirements": [
             {
                 "faction": "republic",
-                "cardName": "LAAT Patrol Transport"
+                "cardName": "LAAT/le Patrol Transport"
             }
         ]
     },
@@ -9534,7 +9533,7 @@
         "requirements": [
             {
                 "faction": "republic",
-                "cardName": "LAAT Patrol Transport"
+                "cardName": "LAAT/le Patrol Transport"
             }
         ],
         "history": [
@@ -12061,7 +12060,6 @@
         "displayName": "",
         "cardSubtype": "protocol",
         "cardName": "\"Nanny\" Programming",
-        "isUnique": true,
         "cardType": "upgrade",
         "cost": 0,
         "faction": "rebels",

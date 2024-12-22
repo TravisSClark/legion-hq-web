@@ -326,6 +326,7 @@ const battleForcesDict = {
   'Shadow Collective': {
       name: 'Shadow Collective',
       faction: 'mercenary',
+      forceAffinity:'dark side',
       linkId: 'sc',
       commander: ['ra', 'rd', 'qy'],
       operative: ['rc', 'kx', 'ax'],

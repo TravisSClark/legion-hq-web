@@ -93,16 +93,9 @@ export function ListProvider({
           if (Object.keys(response.data).length) {
             let loadedList = response.data;
             let oldCounterparts = ['lw', 'ji', 'jj'];
-            const oldUnitCount = loadedList.units.length;
             loadedList.units = loadedList.units.filter(unit => {
               return !oldCounterparts.includes(unit.unitId)
             });
-            const newUnitCount = loadedList.units.length;
-            if (oldUnitCount !== newUnitCount) {
-              loadedList.uniques = loadedList.uniques.filter(id => {
-                return !oldCounterparts.includes(id);
-              });
-            }
             updateThenValidateList(rehashList(loadedList));
           } else setError(`List ${slug} not found.`);
           setStatus('idle');
@@ -140,9 +133,10 @@ export function ListProvider({
     setStackSize(1);
   }, [width, cardPaneFilter]);
 
-  const updateThenValidateList = (list) => { const rankLimits = getRankLimits(list);
+  const updateThenValidateList = (list) => { 
+    const rankLimits = getRankLimits(list);
     setCurrentList(list);
-    doUnitValidation(list, rankLimits);
+    setValidationIssues(validateList(list, rankLimits));
     setRankLimits(rankLimits);
     countPoints(list);
   }
@@ -225,7 +219,6 @@ export function ListProvider({
                 unitIndex,
                 upgradeIndex: index,
                 upgradeType: upgradeBar[index],
-                hasUniques: unit.hasUniques,
                 unitId: unit.unitId,
                 upgradesEquipped,
                 additionalUpgradeSlots: []
@@ -255,7 +248,6 @@ export function ListProvider({
                   unitIndex,
                   upgradeIndex: index,
                   upgradeType: upgradeBar[index],
-                  hasUniques: unit.hasUniques,
                   unitId: unit.unitId,
                   upgradesEquipped: unit.upgradesEquipped,
                   additionalUpgradeSlots: unit.additionalUpgradeSlots
@@ -266,7 +258,6 @@ export function ListProvider({
                   unitIndex,
                   upgradeIndex: index,
                   upgradeType: upgradeBar[index],
-                  hasUniques: unit.hasUniques,
                   unitId: unit.unitId,
                   upgradesEquipped: unit.upgradesEquipped,
                   additionalUpgradeSlots: unit.additionalUpgradeSlots
@@ -288,7 +279,6 @@ export function ListProvider({
                   unitIndex,
                   upgradeIndex: index,
                   upgradeType: upgradeBar[index],
-                  hasUniques: unit.hasUniques,
                   unitId: unit.unitId,
                   upgradesEquipped: unit.upgradesEquipped,
                   additionalUpgradeSlots: unit.additionalUpgradeSlots
@@ -480,11 +470,6 @@ export function ListProvider({
   const handleSetBattleForce = (battleForce) => {
     updateThenValidateList({ ...currentList, battleForce });
     validateBattleforceSelection(currentList, battleForce);
-  }
-
-  // Maybe there should be a 'units only' flag, but lists will be something like 50-100 entities max anyhow...
-  const doUnitValidation = (list) =>{
-    setValidationIssues(validateList(list));
   }
 
   const unitProps = {

@@ -117,9 +117,8 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
       if (!battleForcesDict[list.battleForce][rank].includes(id)) continue;
     }
 
-    const uniqueCardNames = list.uniques.map(id=>cards[id].cardName);
+    const uniqueCardNames = list.units.filter(u=>cards[u.unitId].isUnique).map(u=>cards[u.unitId].cardName);
     if (uniqueCardNames.includes(card.cardName)) continue;
-
 
     if (card.specialIssue && card.specialIssue !== list.battleForce)continue;
 
@@ -153,7 +152,14 @@ function getEligibleCcs(list, validCcs, isContingencies = false){
   });
 
   const cardNames = list.units.map(u=>cards[u.unitId].cardName);
-  const uniqueCardNames = list.uniques.map(id=>cards[id].cardName);
+  // const uniqueCardNames = list.units.filter(u=>cards[u.unitId].isUnique).map(u=>cards[u.unitId].cardName);
+  const listCounterparts = [];
+  
+  list.units.forEach(u=>{
+    if(u.counterpart && u.counterpart.count >0){
+      listCounterparts.push(cards[u.counterpart.counterpartId].cardName);
+    }
+  });
 
   cardIdsByType['command'].forEach(id => {
 
@@ -166,10 +172,8 @@ function getEligibleCcs(list, validCcs, isContingencies = false){
     if (list.commandCards.includes(id)) return false;
     if (list.contingencies && list.contingencies.includes(id)) return false;
 
-    // TODO - grabnar I think this check is redundant and we *should* be able to just parse uniques as in the next line
     // For now, leave both in in case there's a card I'm not thinking of (...again, I don't think there is)
-    if(card.commander && (!cardNames.includes(card.commander) && !uniqueCardNames.includes(card.commander))) return false;
-    // if(card.commander && (!uniqueCardNames.includes(card.commander))) return;
+    if(card.commander && (!cardNames.includes(card.commander) && !listCounterparts.includes(card.commander))) return false;
 
     if (card.isStormTide){
       if(stormTideCommands[list.mode] && stormTideCommands[list.mode].includes(id)){
@@ -228,6 +232,14 @@ function getEquippableUpgrades(
   const validUpgradeIds = [];
   const invalidUpgradeIds = [];
 
+  const faction = list.faction;
+
+  let forceAffinity = 'dark side';
+  if (faction === 'rebels' || faction === 'republic') forceAffinity = 'light side';
+  else if(faction == 'mercenary'){
+    forceAffinity = battleForcesDict[list.battleForce].forceAffinity;
+  }
+
   if (!unitId) return { validUpgradeIds: [], invalidUpgradeIds: [] };
   const unitCard = cards[unitId];
   for (let i = 0; i < cardIdsByType['upgrade'].length; i++) {
@@ -237,23 +249,22 @@ function getEquippableUpgrades(
     if (card.cardSubtype !== upgradeType) continue;
     if (card.faction && card.faction !== '' && list.faction !== card.faction) continue;
 
-    let uniqueEntries = list.uniques.filter(i=>i === id);
-    if(card.uniqueCount){  
-      if(uniqueEntries.length >= card.uniqueCount) continue;
+    if(card.isUnique){
+      const isInList = list.units.reduce((found, u)=>{
+        if(u.upgradesEquipped.includes(id))
+          found = true;
+        return found;
+      },false);
+      if(isInList){
+        continue;
+      }
     }
-    else if (list.uniques.includes(id)) continue;
-    if (upgradesEquipped.includes(id)) continue;
+
+    else if (upgradesEquipped.includes(id)) continue;
     if (card.isUnique && list.battleForce && !battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id)) continue;
 
-    // dynamically add the force affinity
-    const { faction } = unitCard;
-
-    // TODO - not a big fan of modifying unitCard data - leads to unexpected stickiness esp with old points
-    // TODO - this needs to be determined based on faction/BF alone... not this
-    unitCard['light side'] = unitCard['dark side'] = false;
-    if (faction === 'rebels' || faction === 'republic') unitCard['light side'] = true;
-    // TODO this line breaks stuff if we get a light-side merc bf
-    else if (faction === 'separatists' || faction === 'empire' || faction === 'mercenary') unitCard['dark side'] = true;
+    // TODO not great, still better than alternatives I can think of rn
+    unitCard.forceAffinity = forceAffinity;
 
     if (
       unitCard.id in interactions.eligibility &&
@@ -263,14 +274,11 @@ function getEquippableUpgrades(
       if (interaction.resultFunction(card)) {
         validUpgradeIds.push(id);
       }
-    } else if (list.battleForce === 'Imperial Remnant' && card.cardSubtype === 'heavy weapon') {
-
-      if (unitCard.cardSubtype !== 'droid trooper' && unitCard.cardSubtype.includes('trooper')) {
-        if (impRemnantUpgrades.includes(id)) validUpgradeIds.push(id);
-        else if (isRequirementsMet(card.requirements, unitCard)) validUpgradeIds.push(id)
-        else invalidUpgradeIds.push(id);
-      } else if (isRequirementsMet(card.requirements, unitCard)) validUpgradeIds.push(id);
-      else invalidUpgradeIds.push(id);
+    } 
+    // Special case for Imp remnants mixed heavies rule
+    else if (list.battleForce === 'Imperial Remnant' && card.cardSubtype === 'heavy weapon' && unitCard.cardSubtype === 'trooper') {
+        if (impRemnantUpgrades.includes(id)) 
+          validUpgradeIds.push(id);
     } else if (isRequirementsMet(card.requirements, unitCard)) {
       validUpgradeIds.push(id);
     } else {
@@ -341,6 +349,41 @@ function getEligibleBattlesToAdd(list, type) {
   return { validIds, invalidIds };
 }
 
+function unitHasUniques(unit){
+
+  const unitCard = cards[unit.unitId] 
+  let hasUniques = unitCard.isUnique;
+
+  if(!hasUniques){
+    unit.upgradesEquipped.forEach(up=>{
+      if(cards[up]?.isUnique)
+        hasUniques = true;
+    })
+  }
+  return hasUniques;
+}
+
+function getListUniques(list){
+
+  const uniques = [];
+
+  list.units.forEach(u=>{
+    if(cards[u.unitId]?.isUnique){
+      uniques.push(u.unitId);
+    }else{
+      u.upgradesEquipped.forEach(up=>{
+        if(cards[up]?.isUnique){
+          uniques.push(up);
+        }
+      })
+    }
+    // TODO counterpart check COULD go here, but currently no counterparts have non-unique parent cards (and I suspect it will stay that way)
+  });
+
+  return uniques;
+
+}
+
 export{
   getEligibleBattlesToAdd,
   getEligibleUnitsToAdd,
@@ -348,4 +391,6 @@ export{
   getEligibleCommandsToAdd,
   getEquippableLoadoutUpgrades,
   getEquippableUpgrades,
+  unitHasUniques,
+  getListUniques,
 }
