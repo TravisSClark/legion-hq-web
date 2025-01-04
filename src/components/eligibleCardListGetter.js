@@ -303,7 +303,6 @@ function getEquippableLoadoutUpgrades(
   const validLoadoutUpgradeIds = [];
   const invalidLoadoutUpgradeIds = [...invalidIds];
   const parentUpgradeCard = cards[upgradesEquipped[upgradeIndex]];
-  console.log(JSON.stringify(upgradesEquipped), upgradeIndex);
   for (let i = 0; i < validIds.length; i++) {
     const upgradeId = validIds[i]
     const upgradeCard = cards[upgradeId];
@@ -384,6 +383,32 @@ function getListUniques(list){
 
 }
 
+function findUnitIndexInList(unit, list){
+
+  // A unit matches if:
+  // unit ids match
+  // selected upgrades match
+  // *technically* if selected counterparts match, but so far, all of those have been unique cards that wouldn't get here and/or get dinged by validation anyway
+
+  let index = -1;
+
+  list.units.forEach((l, listIndex)=>{
+    if(l.unitId == unit.unitId){
+
+      let upgradesMatch = true;
+      unit.upgradesEquipped.forEach((up, upgradeIndex)=>{
+        if(unit.upgradesEquipped[upgradeIndex] !== l.upgradesEquipped[upgradeIndex])
+          upgradesMatch = false;
+      });
+      if(upgradesMatch){
+        index = listIndex;
+      }
+    }
+  })
+
+  return index;
+}
+
 export{
   getEligibleBattlesToAdd,
   getEligibleUnitsToAdd,
@@ -393,4 +418,5 @@ export{
   getEquippableUpgrades,
   unitHasUniques,
   getListUniques,
+  findUnitIndexInList
 }

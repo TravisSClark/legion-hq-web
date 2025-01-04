@@ -5,7 +5,7 @@ import _ from 'lodash';
 import listTemplate from 'constants/listTemplate';
 import battleForcesDict from 'constants/battleForcesDict';
 import cards from 'constants/cards';
-import { getListUniques, unitHasUniques } from './eligibleCardListGetter';
+import { findUnitIndexInList, getListUniques, unitHasUniques } from './eligibleCardListGetter';
 
 
 // Functions which act upon lists wholesale, rather than tweaking data inside a list
@@ -25,7 +25,7 @@ function mergeLists(primaryList, secondaryList) {
       });
       if (!isValid) continue;
       unitsToAdd.push(unit);
-    } else if (primaryList.unitObjectStrings.includes(unit.unitObjectString)) {
+    } else if (findUnitIndexInList(unit, primaryList) > -1) {
       primaryList.units[i].count += unit.count;
     } else {
       unitsToAdd.push(unit);
@@ -50,7 +50,6 @@ function processUnitSegment(segment) {
     unitId,
     count: unitCount,
     totalUnitCost: unitCard.cost * unitCount,
-    unitObjectString: unitId,
     upgradesEquipped: [],
     loadoutUpgrades: [],
     additionalUpgradeSlots: []
@@ -64,7 +63,6 @@ function processUnitSegment(segment) {
       const upgradeId = upgradeSegment.charAt(i) + upgradeSegment.charAt(i + 1);
       const upgradeCard = cards[upgradeId];
       newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
-      newUnit.unitObjectString += upgradeId;
       if ('additionalUpgradeSlots' in upgradeCard) {
         newUnit.additionalUpgradeSlots = [upgradeCard.additionalUpgradeSlots[0]];
         newUnit.upgradesEquipped.push(null);
@@ -96,7 +94,6 @@ function segmentToUnitObject(unitIndex, segment) {
     const {
       unitId,
       totalUnitCost,
-      unitObjectString,
       upgradesEquipped,
       loadoutUpgrades,
       additionalUpgradeSlots
@@ -105,7 +102,6 @@ function segmentToUnitObject(unitIndex, segment) {
       count: 1,
       counterpartId: unitId,
       totalUnitCost,
-      unitObjectString,
       upgradesEquipped,
       loadoutUpgrades,
       additionalUpgradeSlots
@@ -162,9 +158,6 @@ function convertHashToList(faction, url) {
   }
   try {
     list.units = unitSegments.map((segment, i) => segmentToUnitObject(i, segment));
-    list.units.forEach(unit => {
-      list.unitObjectStrings.push(unit.unitObjectString);
-    });
   } catch (e) {
     return false;
   }
@@ -214,8 +207,7 @@ function rehashList(list) {
     }
     unitObjectStrings.push(unitObjectString);
   }
-  list.unitObjectStrings = unitObjectStrings;
-  return list;
+  return unitObjectStrings;
 }
 
 function changeListTitle(list, title) {

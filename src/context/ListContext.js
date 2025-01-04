@@ -38,7 +38,6 @@ import {
 import { getRankLimits } from 'components/listValidator' 
 
 import{
-  rehashList,
   mergeLists,
   convertHashToList,
   changeListTitle,
@@ -96,7 +95,7 @@ export function ListProvider({
             loadedList.units = loadedList.units.filter(unit => {
               return !oldCounterparts.includes(unit.unitId)
             });
-            updateThenValidateList(rehashList(loadedList));
+            updateThenValidateList(loadedList);
           } else setError(`List ${slug} not found.`);
           setStatus('idle');
         })
@@ -157,9 +156,6 @@ export function ListProvider({
     }
     currentList.units = reorder(
       currentList.units, startIndex, endIndex
-    );
-    currentList.unitObjectStrings = reorder(
-      currentList.unitObjectStrings, startIndex, endIndex
     );
     setCurrentList({ ...currentList });
   }

@@ -61,7 +61,7 @@ function ListUnits() {
     }
 
     return {
-      id: unit.unitObjectString,
+      id: unit.unitId + unit.upgradesEquipped.join(''),
       component: (
         <UnitContext.Provider 
           value={{

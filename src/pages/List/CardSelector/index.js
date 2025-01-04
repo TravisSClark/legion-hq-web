@@ -49,10 +49,9 @@ function CardSelector() {
   let selectorIds = {validIds:[], invalidIds:[]};
   const { action } = cardPaneFilter;
 
-
   let hasUniques = false;
   
-  if(cardPaneFilter.unitIndex != undefined){
+  if(cardPaneFilter.unitIndex !== undefined){
     hasUniques = unitHasUniques(currentList.units[cardPaneFilter.unitIndex]);
   }
 
@@ -60,7 +59,7 @@ function CardSelector() {
     case 'UNIT':
       selectorIds.validIds = getEligibleUnitsToAdd(currentList, cardPaneFilter.rank, userSettings);
       selectorIds.invalidIds = [];
-      clickHandler = (unitId) => handleAddUnit(unitId); // dispatch({type:'addUnit', unitId, stackSize:1});
+      clickHandler = (unitId) => handleAddUnit(unitId);
       header = (
         <StackController
           stackSize={stackSize}

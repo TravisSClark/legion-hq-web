@@ -11,7 +11,6 @@ const listTemplate = {
   primaryCards: [],
   secondaryCards: [],
   advantageCards: [],
-  unitObjectStrings: [],
   unitCounts: {
     commander: 0,
     operative: 0,
