@@ -9705,6 +9705,7 @@
     "pm": {
         "id": "pm",
         "cardName": "Wookiee Warriors",
+        "displayName":"Wookiee Warriors Noble Fighters",
         "title": "Noble Fighters",
         "ttsName":"Wookiee Warriors",
         "cardType": "unit",

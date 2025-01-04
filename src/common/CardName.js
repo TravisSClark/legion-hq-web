@@ -5,11 +5,11 @@ import cards from 'constants/cards';
 function CardName({ id, variant = 'body1' }) {
   const card = cards[id];
   return (
-    <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
+    <div style={{display:'flex', flexDirection:'row', justifyContent:'flex-start'}}>
       <Typography variant={variant}>
         {card.displayName ? card.displayName : card.cardName} 
       </Typography>
-      <Typography>({card.cost})</Typography>
+      <Typography style={{marginLeft:5}} >({card.cost})</Typography>
     </div>
   );
 };

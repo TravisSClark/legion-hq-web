@@ -2,50 +2,58 @@ import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ListContext from 'context/ListContext';
 import ranks from 'constants/ranks';
-import RankButton from './RankButton';
+import { Badge, IconButton, Avatar } from '@material-ui/core';
+import LargerTooltip from 'common/LargerTooltip';
 
 const useStyles = makeStyles({
   container: {
     display: 'flex',
     justifyContent: 'center'
   },
-  item: { marginRight: 10 }
 });
 
-function RankSelector(props) {
+function RankSelector({style}) {
   const classes = useStyles();
   const { currentList, setCardPaneFilter, rankLimits } = useContext(ListContext);
-  
 
   const currentUnitCounts = { ...currentList.unitCounts };
 
   return (
-    <div className={classes.container} style={props.style}>
-      {Object.keys(rankLimits).map(key => {
+    <div className={classes.container} style={style}>
+      {Object.keys(rankLimits).map(rank => {
 
          // commOp is a non-array, non-displayed rank limit
-        if(!ranks[key]) return null;
+        if(!ranks[rank]) return null;
 
         let color = 'primary';
-        if(currentUnitCounts[key] > rankLimits[key][1] || currentUnitCounts[key] < rankLimits[key][0]){
+        if(currentUnitCounts[rank] > rankLimits[rank][1] || currentUnitCounts[rank] < rankLimits[rank][0]){
           color = 'error'
         }
 
         return (
-          <div key={key} className={classes.item}>
-            <RankButton
-              rank={key}
-              color={color}
-              count={currentUnitCounts[key]}
-              handleClick={() => setCardPaneFilter({
-                action: 'UNIT', rank: key
-              })}
-            />
-          </div>
+          <LargerTooltip title={ranks[rank].title}>
+            <IconButton size="small" onClick={() => setCardPaneFilter({
+                  action: 'UNIT', rank: rank
+                })} style={{ marginRight: 10 }}>
+              <Badge
+                showZero
+                max={100}
+                color={color}
+                badgeContent={currentUnitCounts[rank]}
+              >
+                <Avatar
+                  alt={rank}
+                  src={ranks[rank].icon}
+                  style={{ width: 32, height: 32 }}
+                />
+              </Badge>
+            </IconButton>
+          </LargerTooltip>
         );
       })}
     </div>
   );
 };
+
 
 export default RankSelector;

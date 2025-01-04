@@ -57,7 +57,6 @@ function ListLayout() {
         <ListCommands />
         <Divider style={{ marginBottom: 4 }} />
         <ListContingencies />
-        <Divider style={{ marginBottom: 4 }} />
         <ListObjectives />
       </div>
       <Divider style={{ marginBottom: 4 }} />

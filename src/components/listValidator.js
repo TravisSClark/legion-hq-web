@@ -318,6 +318,9 @@ function validateList(currentList, rankLimits){
     if(battleForce && !battleForce[card.rank].includes(unit.unitId)){
         unit.validationIssues.push({level:2, text: '\"' + card.cardName + "\" is not allowed in this battleforce." });
     }
+    else if( card.specialIssue && (!battleForce || card.specialIssue !== battleForce.name)){
+      unit.validationIssues.push({level:2, text: '\"' + card.displayName + "\" is not allowed outside the " +card.specialIssue.toUpperCase() + " battleforce. (Special Issue)" });
+    }
 
     if(unit.validationIssues?.length > 0){
       validationIssues = validationIssues.concat(unit.validationIssues);
@@ -327,7 +330,6 @@ function validateList(currentList, rankLimits){
 
   // TODO confusing naming irt newer unitcounts here
   currentList.unitCounts = ranks;
-
 
   Object.getOwnPropertyNames(listUniqueUpgrades).forEach(id=>{
     const limit = cards[id].uniqueCount ? cards[id].uniqueCount : 1;

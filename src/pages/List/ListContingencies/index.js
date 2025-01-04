@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Grid, Chip } from '@material-ui/core';
+import { Grid, Chip, Divider } from '@material-ui/core';
 import { Add as AddIcon } from '@material-ui/icons';
 import ListContext from 'context/ListContext';
 import CardIcon from 'common/CardIcon';
@@ -29,6 +29,7 @@ function ListContingencies() {
   if (numContingencies === 0) return null;
   const chipStyle = { marginRight: 4, marginBottom: 4 };
   return (
+    <div>
     <Grid container id="list-contingencies" direction="row" justifyContent="center">
       <Grid item>
         {currentList.contingencies.length < numContingencies && (
@@ -58,6 +59,8 @@ function ListContingencies() {
         </Grid>
       ))}
     </Grid>
+    {numContingencies > 0 && <Divider style={{ marginBottom: 4 }} />}
+    </div>
   );
 };
 
