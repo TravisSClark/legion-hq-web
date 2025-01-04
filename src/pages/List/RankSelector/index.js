@@ -2,10 +2,7 @@ import React, { useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import ListContext from 'context/ListContext';
 import ranks from 'constants/ranks';
-// import legionModes from 'constants/legionModes';
-// import cards from 'constants/cards';
 import RankButton from './RankButton';
-// import battleForcesDict from 'constants/battleForcesDict';
 
 const useStyles = makeStyles({
   container: {

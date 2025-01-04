@@ -27,8 +27,9 @@ function ModeButton({ currentMode, points, maxPoints, tooltip, handleChangeMode 
 
             return(
               <MenuItem
-              selected={currentMode === modeName}
-              onClick={() => {
+                key={"mn-"+modeName}
+                selected={currentMode === modeName}
+                onClick={() => {
                 handleChangeMode(modeName);
                 handleCloseMenu();
               }}

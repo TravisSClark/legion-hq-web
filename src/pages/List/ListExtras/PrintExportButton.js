@@ -235,18 +235,21 @@ function PrintExportButton({ currentList }) {
           showCommands={true}
           ref={componentRef}
           currentList={currentList}
+          key="default"
         />
         <PrintList
           showBattles={false}
           showCommands={false}
           ref={componentRefNoBattlesCommands}
           currentList={currentList}
+          key="noBC"
         />
         <PrintList
           showBattles={true}
           showCommands={false}
           ref={componentRefBattlesButNoCommands}
           currentList={currentList}
+          key="noB"
         />
         <PrintListImages
           ref={componentRefImages}

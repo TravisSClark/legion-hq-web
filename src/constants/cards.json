@@ -3054,10 +3054,10 @@
             "comms"
         ],
         "history": [
-            {
-				"date": "6 December 2024",
-				"description": "Change the restriction to Rebel Core Trooper only."
-			}
+          {
+            "date": "6 December 2024",
+            "description": "Change the restriction to Rebel Core Trooper only."
+          }
         ],
         "id": "eq"
     },

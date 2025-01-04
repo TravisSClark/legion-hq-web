@@ -51,7 +51,7 @@ function CardSelector() {
 
   let hasUniques = false;
   
-  if(cardPaneFilter.unitIndex !== undefined){
+  if(cardPaneFilter.unitIndex !== undefined && currentList.units[cardPaneFilter.unitIndex]){
     hasUniques = unitHasUniques(currentList.units[cardPaneFilter.unitIndex]);
   }
 

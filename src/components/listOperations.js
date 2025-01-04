@@ -143,21 +143,22 @@ function equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll
   const upgradeCard = cards[upgradeId];
 
   let newIndex = unitIndex;
-
   const count = (isApplyToAll && !upgradeCard.isUnique) ? unit.count : 1;
 
   const newUnit = JSON.parse(JSON.stringify(unit));
   newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
-  const newUnitHash = getUnitHash(newUnit);
+
   if ('additionalUpgradeSlots' in upgradeCard) {
     newUnit.additionalUpgradeSlots = [...upgradeCard.additionalUpgradeSlots];
     newUnit.upgradesEquipped.push(null);
   }
-  let newUnitHashIndex = findUnitIndexInList(newUnit, list); // <- TODO
+
+  newUnit.upgradesEquipped = sortUpgrades(newUnit);
+
+  let newUnitIndex = findUnitIndexInList(newUnit, list); // <- TODO
   // If this unit already exists...
-  if (newUnitHashIndex > -1) {
-    // TODO
-    list.units[newUnitHashIndex].count += count;
+  if (newUnitIndex > -1) {
+    list.units[newUnitIndex].count += count;
     list = decrementUnit(list, unitIndex, count);
   } else if (list.units[unitIndex].count == count) {
     list.units[unitIndex] = newUnit;
@@ -167,8 +168,8 @@ function equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll
     newIndex = unitIndex + 1;
     list = decrementUnit(list, unitIndex, count);
   }
-  // TODO needs to return the new index
-  return [list, newUnit, newIndex];
+
+  return [list, newIndex];
 }
 
 function equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId) {
@@ -261,8 +262,7 @@ function addUnit(list, unitId, stackSize = 1) {
             upgradeIndex += 1;
           }
         }
-        let newUnit;
-        [list, newUnit, unitIndex] = equipUnitUpgrade(list, unitIndex, upgradeIndex, unitCard.equip[i], true);
+        [list, unitIndex] = equipUnitUpgrade(list, unitIndex, upgradeIndex, unitCard.equip[i], true);
       }
     }
 
@@ -281,8 +281,7 @@ function addUnit(list, unitId, stackSize = 1) {
             // If this card was already added via equip above, it'll break things if added again
             // (currently a futureproof w no known case)
             if(!(unitCard.equip?.find(u => u === freeSoloId))){
-              let newUnit;
-              [list, newUnit] = equipUnitUpgrade(list, unitIndex, upgradeIndex, freeSoloId, true);
+              [list] = equipUnitUpgrade(list, unitIndex, upgradeIndex, freeSoloId, true);
             }
           }
         }
@@ -385,9 +384,8 @@ function removeBattle(list, type, index) {
 // TODO remove these routers in favor of calling the right action type directly from the click handler
 function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyToAll = false) {
   if (action === 'UNIT_UPGRADE') {
-    let newUnit; let newIndex;
-    // TDOO get unitIndex from this call directly
-    [list, newUnit, newIndex] = equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll);
+    let newIndex;
+    [list, newIndex] = equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll);
     unitIndex = newIndex;
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
@@ -405,10 +403,7 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
 function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
   // const upgradeId = list.units[unitIndex].upgradesEquipped[upgradeIndex];
   if (action === 'UNIT_UPGRADE') {
-    console.log("before", JSON.stringify(list));
     list = unequipUnitUpgrade(list, unitIndex, upgradeIndex);
-    console.log("after", JSON.stringify(list));
-
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = unequipCounterpartUpgrade(list, unitIndex, upgradeIndex);
   } else if (action === 'UNIT_LOADOUT_UPGRADE') {
@@ -420,41 +415,51 @@ function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
   return consolidate(list);
 }
 
-// Sorts in place
+// Returns a sorted list of upgrades so we can consolidate identical stacks regardless of add order
 function sortUpgrades(unit){
   const unitCard = cards[unit.unitId];
-  const upgradeBar = unitCard.upgradeBar;
   const {upgradesEquipped} = unit;
 
-  // Been thinking on this one... probably best to just ramrod in whatever works best,
-  // then recoup the last 0.015N operations later...
+  const upgradeBar = unitCard.upgradeBar.concat(unit.additionalUpgradeSlots);
+  const sortedUpgrades = Array(upgradeBar.length).fill(null);
+  const upgradesByType = {};
 
-  let sortedUpgrades = []
-
-  // Iterate thru UE;
-
+  // get all the cards, then make an object {comms:[{id:'aa', cardName:'Comms Jammer'...}...], armament:[...]...}
   for( let i=0; i<upgradesEquipped.length; i++){
 
-      // look ahead for upgrades with >1 of each type
+    if(upgradesEquipped[i]){
+      let upgradeCard = cards[upgradesEquipped[i]];
+      let upgradeTypeList = upgradesByType[upgradeCard.cardSubtype];
+      if(!upgradeTypeList){
+        upgradesByType[upgradeCard.cardSubtype] = [];
+        upgradeTypeList = upgradesByType[upgradeCard.cardSubtype];
+      }
 
-      // if >1 upgrade of a type...
-      // sort by isUnique then ABC
-
-
-      // else put the 1-of into sortedUpgrades 
-
-
-
+      for(let j=0; j <= upgradeTypeList.length; j++)
+      {
+        // Sort these BACKWARDS abc so we can just pop() the arrays below
+        // if(upgradeTypeList[j])
+          // console.log(j, upgradeTypeList.length, upgradeCard.cardName, (upgradeCard.cardName > upgradeTypeList[j].cardName), upgradeTypeList[j].cardName)
+        // TODO make this check for unique(?) so that those show up first
+        if(j==upgradeTypeList.length || upgradeCard.cardName > upgradeTypeList[j].cardName)
+        {
+          upgradeTypeList.splice(j, 0, upgradeCard);
+          break;
+        }
+      }
+    }
   }
 
+  // Iterate our upgradeBar, if upgradesByType has a match, add it in! (and with uBT being sorted already, now bar is sorted!)
+  for(let i=0; i<upgradeBar.length; i++){
+    let sortedPool = upgradesByType[upgradeBar[i]];
+    if(sortedPool && sortedPool.length > 0){
+      sortedUpgrades[i] = sortedPool.pop().id
+    }
+  }
 
-
-
-  // for(let i =0; i<unitCard.upgradesEquipped; i++){
-
-  // }
-
-
+  // Typical total runtime of ~2N, gets worse with repeat upgrade types, but even that's like ~(NlogN + N) worst-case. 
+  return sortedUpgrades;
 }
 
 function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
@@ -465,13 +470,17 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
   const newUnit = JSON.parse(JSON.stringify(unit));
   newUnit.count = 1;
   newUnit.upgradesEquipped[upgradeIndex] = null;
-  if (newUnit.loadoutUpgrades) {
+
+  if (newUnit.loadoutUpgrades && newUnit.loadoutUpgrades.length > 0) {
     newUnit.loadoutUpgrades[upgradeIndex] = null;
   }
+  
   if ('additionalUpgradeSlots' in upgradeCard) {
     newUnit.additionalUpgradeSlots = [];
     newUnit.upgradesEquipped.pop();
   }
+
+  newUnit.upgradesEquipped = sortUpgrades(newUnit);
 
   let newUnitHashIndex = findUnitIndexInList(newUnit, list);
 
@@ -481,6 +490,7 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
     list.units.splice(unitIndex + 1, 0, newUnit);
   }
   list = decrementUnit(list, unitIndex);
+
   return list;
 }
 
