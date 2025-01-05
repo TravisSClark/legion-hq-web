@@ -1,7 +1,6 @@
 
 import legionModes from 'constants/legionModes';
 import { consolidate } from './listOperations';
-import _ from 'lodash';
 import listTemplate from 'constants/listTemplate';
 import battleForcesDict from 'constants/battleForcesDict';
 import cards from 'constants/cards';

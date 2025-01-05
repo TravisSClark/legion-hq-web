@@ -351,7 +351,7 @@ export function ListProvider({
       letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
     }
 
-    if(letUpgradesCascade && nextType != type){
+    if(letUpgradesCascade && nextType !== type){
       if(nextType){
         setCardPaneFilter({
           action: 'BATTLE', type: nextType

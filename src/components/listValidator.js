@@ -192,7 +192,7 @@ function battleForceValidation(currentList, unitCounts){
   return validationIssues;
 }
 
-function mercValidation(currentList, ranks, mercs, rankIssues){
+function mercValidation(currentList, currentRanks, mercs, rankIssues){
   const validationIssues = [];
 
   // If we have the countMercs rule (SC, BTV), bail
@@ -212,11 +212,11 @@ function mercValidation(currentList, ranks, mercs, rankIssues){
       }
     });
 
-    Object.keys(ranks).forEach(t =>{
+    Object.keys(currentRanks).forEach(t =>{
 
       if(mercs[t] > mercLimits[t]){
         if(!hasAoc || mercs[t] > mercLimits[t] + 1){
-          let issue = {level:2, text:"Too many MERCENARY " + t.toUpperCase() + " units! (maximum " + (hasAoc ? mercLimits[t]+1:mercLimits[t]) + ")"}
+          let issue = {level:2, text:"Too many mercenary " + t.toUpperCase() + " units! (maximum " + (hasAoc ? mercLimits[t]+1:mercLimits[t]) + ")"}
           validationIssues.push(issue);
           rankIssues[t].push(issue);
         }
@@ -232,26 +232,28 @@ function mercValidation(currentList, ranks, mercs, rankIssues){
   return validationIssues;
 }
 
-function rankValidation(currentList, rankLimits, mercs, rankIssues){
+function rankValidation(currentList, currentRanks, rankLimits, mercs, rankIssues){
   const validationIssues = [];
 
+  console.log('rank val', rankLimits, mercs, rankIssues)
   const battleForce = battleForcesDict[currentList.battleForce];
   const countMercs = battleForce?.rules?.countMercs;
 
-  if(rankLimits.commOp && (ranks.commander + ranks.operative) > rankLimits.commOp
-    && !(ranks.commander > rankLimits.commander || ranks.operative > rankLimits.operative)){
+  if(rankLimits.commOp && (currentRanks.commander + currentRanks.operative) > rankLimits.commOp
+    && !(currentRanks.commander > rankLimits.commander || currentRanks.operative > rankLimits.operative)){
+      
     let issue = {level:2, text:"Limit of " + rankLimits.commOp + " total COMMMANDERS and OPERATIVES"}
     validationIssues.push(issue);
     rankIssues.commander.push(issue);
     rankIssues.operative.push(issue);
   }
 
-  Object.keys(ranks).forEach(r =>{
+  Object.keys(currentRanks).forEach(r =>{
 
     const [min, max] = rankLimits[r];
 
     // mercs don't count for minimum, unless they do
-    const countMin = !countMercs ? (ranks[r] - mercs[r]) : ranks[r];
+    const countMin = !countMercs ? (currentRanks[r] - mercs[r]) : currentRanks[r];
     if(countMin < min){
       let issue = {level:2, text:"Not enough " + (mercs[r] > 0 ? "non-mercenary ": "" ) + r.toUpperCase() + " units! (minimum " + min + ")"}
       validationIssues.push(issue);
@@ -259,7 +261,7 @@ function rankValidation(currentList, rankLimits, mercs, rankIssues){
 
     }
     
-    if(ranks[r] > max){
+    if(currentRanks[r] > max){
       let issue = {level:2, text:"Too many " + r.toUpperCase() + " units! (maximum " + max + ")"};
       validationIssues.push(issue);
       rankIssues[r].push(issue);
@@ -268,13 +270,14 @@ function rankValidation(currentList, rankLimits, mercs, rankIssues){
 
   // Warn user if it looks like they're trying to use a Field Comm on incompatible army
   // level 1 since the missing commander itself is a level 2 already
-  if(ranks['commander'] < rankLimits['commander'][0] && currentList.hasFieldCommander && battleForce?.rules?.noFieldComm)
+  if(currentRanks['commander'] < rankLimits['commander'][0] && currentList.hasFieldCommander && battleForce?.rules?.noFieldComm)
   {
     let issue = {level:1, text:"This battleforce can't use the Field Commander keyword"}
     validationIssues.push(issue);
     // does not add to rankIssues since this warning is redundant irt not having a cmdr
   }
 
+  console.log('issues', JSON.stringify(validationIssues));
   return validationIssues;
 }
 
@@ -289,11 +292,11 @@ function validateList(currentList, rankLimits){
 
   const battleForce = currentList.battleForce ? battleForcesDict[currentList.battleForce] : null;
 
-  let ranks = {commander:0, operative:0, corps:0, special:0, heavy:0, support:0 };
+  let currentRanks = {commander:0, operative:0, corps:0, special:0, heavy:0, support:0 };
   let rankIssues = {commander:[], operative:[], corps:[], special:[], heavy:[], support:[]}
 
-  let gameTimeRanks = {...ranks};
-  let mercs = {...ranks };
+  let gameTimeRanks = {...currentRanks};
+  let mercs = {...currentRanks };
 
   // Determine what our rank requirements are, warn if unknown
   if(battleForce && !battleForce[currentList.mode]){
@@ -316,18 +319,18 @@ function validateList(currentList, rankLimits){
       mercs[card.rank] += unit.count;
     }
 
-    ranks[card.rank] += unit.count;
+    currentRanks[card.rank] += unit.count;
     gameTimeRanks[card.rank] += unit.count; // DON'T update this using the buildsAsCorps rules below so we see what our gametime counts are
 
     // Maul + Darksaber interaction - TODO, make it data/rules-driven
     if (unit.unitId === 'rc' && unit.upgradesEquipped.includes('rq')) { 
-      ranks['commander']++;
-      ranks['operative']--;
+      currentRanks['commander']++;
+      currentRanks['operative']--;
     }
 
     if(battleForcesDict[currentList.battleForce]?.rules?.buildsAsCorps?.includes(unit.unitId)){
-      ranks[card.rank] -= unit.count;
-      ranks['corps'] += unit.count;
+      currentRanks[card.rank] -= unit.count;
+      currentRanks['corps'] += unit.count;
     } 
 
     // side-effect of tallying list's unique upgrades to the passed in obj for use later
@@ -384,13 +387,13 @@ function validateList(currentList, rankLimits){
 
   // ranks gets decorated with issues here so the tooltip/top-bar can indicate issues
   validationIssues.push(...battleForceValidation(currentList, unitCounts));
-  validationIssues.push(...rankValidation(currentList, rankLimits, mercs, rankIssues));
-  validationIssues.push(...mercValidation(currentList, ranks, mercs, rankIssues));
+  validationIssues.push(...rankValidation(currentList, currentRanks, rankLimits, mercs, rankIssues));
+  validationIssues.push(...mercValidation(currentList, currentRanks, mercs, rankIssues));
 
   // TODO confusing naming - unit counts is more like 'rank counts' irt currentList
   // TODO at some point, adding to currentList like it's a plain ol' object will come back to bite me
   // for now... it's okay since all these are updated as side-effects of the currentList update (or so I think)
-  currentList.unitCounts = ranks;
+  currentList.unitCounts = currentRanks;
   currentList.gametimeUnitCounts = gameTimeRanks;
   currentList.rankIssues = rankIssues;
 

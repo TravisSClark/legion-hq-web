@@ -1,9 +1,6 @@
-import _ from 'lodash';
 import cards from 'constants/cards';
 
 import interactions from 'components/cardInteractions';
-import listTemplate from 'constants/listTemplate';
-import battleForcesDict from 'constants/battleForcesDict';
 import { findUnitIndexInList, getEquippableUpgrades } from './eligibleCardListGetter';
 
 const battleTypes = ["primary", "secondary", "advantage"];
@@ -103,10 +100,6 @@ function consolidate(list) {
   return countPoints(list);
 }
 
-function getUnitHash(unit) {
-  return `${unit.unitId}${unit.upgradesEquipped.join('')}`;
-}
-
 function equipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId) {
   const unit = list.units[unitIndex];
   const counterpart = unit.counterpart;
@@ -160,7 +153,7 @@ function equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll
   if (newUnitIndex > -1) {
     list.units[newUnitIndex].count += count;
     list = decrementUnit(list, unitIndex, count);
-  } else if (list.units[unitIndex].count == count) {
+  } else if (list.units[unitIndex].count === count) {
     list.units[unitIndex] = newUnit;
   } else {
     newUnit.count = count;
@@ -346,7 +339,7 @@ function sortCommandIds(cardIds) {
 function getBattleArray(list, type){
 
   let typeIndex = battleTypes.findIndex((t)=>t===type);
-  if(typeIndex != -1){
+  if(typeIndex !== -1){
     return list[battleTypes[typeIndex]+"Cards"];
   } else{
     console.warn("Unrecognized battle type: " + type);
@@ -439,7 +432,7 @@ function sortUpgrades(unit){
       {
         // Sort these BACKWARDS abc so we can just pop() the arrays below
         // TODO make this check for unique(?) so that those show up first
-        if(j==upgradeTypeList.length || upgradeCard.cardName > upgradeTypeList[j].cardName)
+        if(j === upgradeTypeList.length || upgradeCard.cardName > upgradeTypeList[j].cardName)
         {
           upgradeTypeList.splice(j, 0, upgradeCard);
           break;
