@@ -160,7 +160,7 @@ function ListHeader() {
               <DialogContent>
                 {validationIssues.map((el, i) =>
                 <div key={i} className={classes.valError}>
-                  <WarningIcon className={classes.item} style={{color: el.level == 1 ?'yellow':'red'}}/>
+                  <WarningIcon className={classes.item} style={{color: el.level === 1 ?'yellow':'red'}}/>
                   <DialogContentText>{el.text}</DialogContentText>
                 </div>
                 )}

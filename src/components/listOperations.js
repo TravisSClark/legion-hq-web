@@ -438,8 +438,6 @@ function sortUpgrades(unit){
       for(let j=0; j <= upgradeTypeList.length; j++)
       {
         // Sort these BACKWARDS abc so we can just pop() the arrays below
-        // if(upgradeTypeList[j])
-          // console.log(j, upgradeTypeList.length, upgradeCard.cardName, (upgradeCard.cardName > upgradeTypeList[j].cardName), upgradeTypeList[j].cardName)
         // TODO make this check for unique(?) so that those show up first
         if(j==upgradeTypeList.length || upgradeCard.cardName > upgradeTypeList[j].cardName)
         {

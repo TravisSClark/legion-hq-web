@@ -346,16 +346,12 @@ export function ListProvider({
   const handleAddBattle = (type, battleId) => {
     const {list, nextType} = addBattle(currentList, type, battleId);
 
-    console.log(nextType);
-
     let letUpgradesCascade = false;
     if (userSettings && userSettings.cascadeUpgradeSelection) {
       letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
     }
 
     if(letUpgradesCascade && nextType != type){
-      console.log(nextType, type);
-
       if(nextType){
         setCardPaneFilter({
           action: 'BATTLE', type: nextType

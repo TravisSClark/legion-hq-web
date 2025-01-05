@@ -232,7 +232,7 @@ function mercValidation(currentList, ranks, mercs, rankIssues){
   return validationIssues;
 }
 
-function rankValidation(currentList, rankLimits, ranks, mercs, rankIssues){
+function rankValidation(currentList, rankLimits, mercs, rankIssues){
   const validationIssues = [];
 
   const battleForce = battleForcesDict[currentList.battleForce];
@@ -248,7 +248,6 @@ function rankValidation(currentList, rankLimits, ranks, mercs, rankIssues){
 
   Object.keys(ranks).forEach(r =>{
 
-    console.log(r);
     const [min, max] = rankLimits[r];
 
     // mercs don't count for minimum, unless they do
@@ -383,10 +382,9 @@ function validateList(currentList, rankLimits){
     }
   })
 
-  console.log("limits", JSON.stringify(rankLimits));
   // ranks gets decorated with issues here so the tooltip/top-bar can indicate issues
   validationIssues.push(...battleForceValidation(currentList, unitCounts));
-  validationIssues.push(...rankValidation(currentList, rankLimits, ranks, mercs, rankIssues));
+  validationIssues.push(...rankValidation(currentList, rankLimits, mercs, rankIssues));
   validationIssues.push(...mercValidation(currentList, ranks, mercs, rankIssues));
 
   // TODO confusing naming - unit counts is more like 'rank counts' irt currentList

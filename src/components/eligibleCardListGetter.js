@@ -105,7 +105,8 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
       if (card.rank !== rank) continue;
 
     } else {
-      if (rank === "corps" && battleForce?.rules?.buildsAsCorps?.includes(id) ) console.log('found ' + id); // do nothing
+      // If a unit builds as corps per BF, just have it show in both corps and sf lists
+      if (rank === "corps" && battleForce?.rules?.buildsAsCorps?.includes(id) ); // do nothing
       else if (!battleForce[rank].includes(id)) continue;
       else if (card.rank !== rank) continue;
     }
@@ -352,6 +353,9 @@ function getEligibleBattlesToAdd(list, type) {
 
 function unitHasUniques(unit){
 
+  if(unit.counterpartId){
+    return true;
+  }
   const unitCard = cards[unit.unitId] 
   let hasUniques = unitCard.isUnique;
 
