@@ -268,13 +268,12 @@ function rankValidation(currentList, rankLimits, ranks, mercs, rankIssues){
   });
 
   // Warn user if it looks like they're trying to use a Field Comm on incompatible army
-  // level 1 since the Comm miss itself is a level 2 already
-
+  // level 1 since the missing commander itself is a level 2 already
   if(ranks['commander'] < rankLimits['commander'][0] && currentList.hasFieldCommander && battleForce?.rules?.noFieldComm)
   {
     let issue = {level:1, text:"This battleforce can't use the Field Commander keyword"}
     validationIssues.push(issue);
-    // does not have a 2nd issue since this warning is redundant irt not having a cmdr
+    // does not add to rankIssues since this warning is redundant irt not having a cmdr
   }
 
   return validationIssues;
@@ -285,6 +284,9 @@ function rankValidation(currentList, rankLimits, ranks, mercs, rankIssues){
 // See if anyone complains about LHQ chugging first then go from there ;)
 function validateList(currentList, rankLimits){
   let validationIssues = [];
+
+  // TODO - maybe add email link or etc. Afaik... this is almost untrue now, tbd.
+  validationIssues.push({level: 1, text:"Work in progress... double-check your army rules and unit cards!"});
 
   const battleForce = currentList.battleForce ? battleForcesDict[currentList.battleForce] : null;
 
@@ -348,8 +350,6 @@ function validateList(currentList, rankLimits){
     validationIssues.push({level:1, text:"Your battleforce treats some units as Corps during army building (they are still Special Forces during the game)" });
   }
 
-  
-
   Object.getOwnPropertyNames(listUniqueUpgrades).forEach(id=>{
     const upgradeCard = cards[id];
     const limit = upgradeCard.uniqueCount ? upgradeCard.uniqueCount : 1;
@@ -390,6 +390,8 @@ function validateList(currentList, rankLimits){
   validationIssues.push(...mercValidation(currentList, ranks, mercs, rankIssues));
 
   // TODO confusing naming - unit counts is more like 'rank counts' irt currentList
+  // TODO at some point, adding to currentList like it's a plain ol' object will come back to bite me
+  // for now... it's okay since all these are updated as side-effects of the currentList update (or so I think)
   currentList.unitCounts = ranks;
   currentList.gametimeUnitCounts = gameTimeRanks;
   currentList.rankIssues = rankIssues;
@@ -405,12 +407,16 @@ function applyFieldCommander(list, rankReqs){
   }
 }
 
+// Quantify keywords that expand our rank maximums
 function applyRankAdjustments(currentList, rankReqs) {
   
+  // map of unitIds:count allowed due to keywords below
   let extraRankCounts = {}
   
+  // Count all the things adding ranks
   currentList.units.forEach((unit)=>{
     const card = cards[unit.unitId];
+
     if (card.entourage) {
       if(!extraRankCounts[card.entourage]){
         extraRankCounts[card.entourage] = 0;
@@ -431,7 +437,7 @@ function applyRankAdjustments(currentList, rankReqs) {
     }
   });
 
-  // Do this on a separate pass so we don't get whacked by list order
+  // Do this on a separate pass so we don't get whacked by unit order
   currentList.units.forEach((unit)=>{
     const card = cards[unit.unitId];
 

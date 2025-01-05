@@ -158,10 +158,6 @@ function ListHeader() {
             <Dialog open={isValidationDialogOpen} onClose={() => setValidationDialogOpen(false)}>
               <DialogTitle>List Errors</DialogTitle>
               <DialogContent>
-                <div className={classes.valError}>
-                  <WarningIcon className={classes.item} style={{color: 'yellow'}}/>
-                  <DialogContentText>Work in progress... double-check your army rules and unit cards!</DialogContentText>
-                </div>
                 {validationIssues.map((el, i) =>
                 <div key={i} className={classes.valError}>
                   <WarningIcon className={classes.item} style={{color: el.level == 1 ?'yellow':'red'}}/>

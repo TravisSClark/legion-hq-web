@@ -290,7 +290,7 @@ const battleForcesDict = {
       linkId: 'exd',
       commander: ['py', 'nr', 'pz', 'qa'],
       operative: [],
-      corps: ['gx', 'ga', 'xd'],
+      corps: ['gx', 'ga'],
       special: ['la', 'xd'],
       support: ['ie'],
       heavy: ['xe'],

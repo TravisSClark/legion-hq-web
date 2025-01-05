@@ -3,7 +3,7 @@
  */
 
 import fs from 'fs-extra';
-import {getEquippableUpgrades} from '../src/components/eligibleCardListGetter';
+// import {getEquippableUpgrades} from '../src/components/eligibleCardListGetter';
 async function cardsJsonCheck(){
 
   const keywordsWithFields = [
@@ -54,15 +54,17 @@ async function cardsJsonCheck(){
         c.keywords.forEach(k=>{
           const idx = keywordsWithFields.findIndex(kwf =>kwf[0] === k)
           if(idx > -1){
-            if(!c[keywordsWithFields[idx][1]]){
-              console.error(c.cardName+",", c.id, ": cards.json entry is missing a rule for keyword:",k, '->', keywordsWithFields[idx][1]);
+            // console.log(k, c[keywordsWithFields[idx][1]]);
+
+            if(c[keywordsWithFields[idx][1]] == undefined){
+              console.log(c.cardName+",", c.id, ": cards.json entry is missing a rule for keyword:",k, '->', keywordsWithFields[idx][1]);
             }
           }
         });
         break;
       // Look for 'orphaned' upgrades that don't map to any units
       case "upgrade":
-
+        break;
 
     }
   });

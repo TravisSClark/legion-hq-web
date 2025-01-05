@@ -10457,8 +10457,7 @@
     },
     "qt": {
         "id": "qt",
-        "cardName": "NR-N99 Persuader-class Tank Droid",
-        "displayName": "Snail Tank",
+        "cardName": "Persuader-Class Tank Droid",
         "cardType": "unit",
         "cardSubtype": "ground vehicle",
         "rank": "heavy",
@@ -13772,6 +13771,7 @@
     "xd": {
         "id": "xd",
         "cardName": "IG-100 MagnaGuard",
+        "displayName": "IG-100 MagnaGuard (Prototype)",
         "title": "Prototype Assassin Droids",
         "cardType": "unit",
         "cardSubtype": "droid trooper",
@@ -13809,9 +13809,9 @@
     },
     "xe": {
         "id": "xe",
-        "cardName": "NR-N99 Persuader-class Tank Droid",
+        "cardName": "Persuader-Class Tank Droid",
         "title": "Prototype Tank Droid",
-        "displayName": "Snail Droid",
+        "displayName": "Persuader-Class Tank Droid (Prototype)",
         "cardType": "unit",
         "cardSubtype": "ground vehicle",
         "rank": "heavy",

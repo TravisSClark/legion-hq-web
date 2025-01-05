@@ -390,7 +390,7 @@ function findUnitIndexInList(unit, list){
   // A unit matches if:
   // unit ids match
   // selected upgrades match
-  // *technically* if selected counterparts match, but so far, all of those have been unique cards that wouldn't get here and/or get dinged by validation anyway
+  // *technically* if counterparts match, but so far, all of those have been unique cards
 
   let index = -1;
 
