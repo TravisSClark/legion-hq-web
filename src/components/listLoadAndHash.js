@@ -166,7 +166,6 @@ function convertHashToList(faction, url) {
     otherSegments.forEach(cardId => {
       commandCardSlots -=1;
       if (cardId === '') return;
-      // if (cardId.includes('*')) {}
       const card = cards[cardId];
       if (card.cardType === 'command') {
         if (commandCardSlots > 0) {
