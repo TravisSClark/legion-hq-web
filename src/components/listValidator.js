@@ -1,4 +1,3 @@
-import ranks from 'constants/ranks';
 import cards, { cardsIdsByType } from 'constants/cards';
 
 import battleForcesDict from 'constants/battleForcesDict';
@@ -235,7 +234,6 @@ function mercValidation(currentList, currentRanks, mercs, rankIssues){
 function rankValidation(currentList, currentRanks, rankLimits, mercs, rankIssues){
   const validationIssues = [];
 
-  console.log('rank val', rankLimits, mercs, rankIssues)
   const battleForce = battleForcesDict[currentList.battleForce];
   const countMercs = battleForce?.rules?.countMercs;
 
@@ -258,7 +256,6 @@ function rankValidation(currentList, currentRanks, rankLimits, mercs, rankIssues
       let issue = {level:2, text:"Not enough " + (mercs[r] > 0 ? "non-mercenary ": "" ) + r.toUpperCase() + " units! (minimum " + min + ")"}
       validationIssues.push(issue);
       rankIssues[r].push(issue);
-
     }
     
     if(currentRanks[r] > max){
@@ -277,7 +274,6 @@ function rankValidation(currentList, currentRanks, rankLimits, mercs, rankIssues
     // does not add to rankIssues since this warning is redundant irt not having a cmdr
   }
 
-  console.log('issues', JSON.stringify(validationIssues));
   return validationIssues;
 }
 

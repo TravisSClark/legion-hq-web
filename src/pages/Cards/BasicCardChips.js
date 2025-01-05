@@ -11,7 +11,6 @@ import {
   makeStyles
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import LegionCard from 'common/LegionCard';
 import cards from 'constants/cards';
 import ChipCard from 'common/LegionCard/ChipCard';
 

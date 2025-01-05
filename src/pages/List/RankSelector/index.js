@@ -45,7 +45,7 @@ function RankSelector({style}) {
         }
 
         return (
-          <LargerTooltip title={toolTip}>
+          <LargerTooltip title={toolTip} key={rank}>
             <IconButton size="small" onClick={() => setCardPaneFilter({
                   action: 'UNIT', rank: rank
                 })} style={{ marginRight: 10 }}>

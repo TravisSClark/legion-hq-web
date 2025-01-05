@@ -3,15 +3,12 @@ import DataContext from 'context/DataContext';
 import cards from 'constants/cards';
 import ImageCard from './ImageCard';
 import TextCard from './TextCard';
-import ChipCard from './ChipCard';
 
 function LegionCard({
   id,
   isSelected = false,
-  size = 'medium',
   handleClick,
   handleCardZoom,
-  handleDelete
 }) {
   const { userSettings } = useContext(DataContext);
   const card = cards[id];
