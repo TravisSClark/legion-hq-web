@@ -9,7 +9,7 @@ import { sortCommandIds } from './listOperations';
  * Functions for getting the lists of eligible cards that can be added based on list state
  * 
  */
-
+const impRemnantUpgrades = ['ej', 'ek', 'fv', 'iy', 'fu', 'gm', 'gl', 'em', 'en', 'ja'];
 
 /** 
  * Items in the requirements array or subarrays must be one of the following:
@@ -41,7 +41,7 @@ import { sortCommandIds } from './listOperations';
  * 
  * 
  */
-function isRequirementsMet(requirements, unitCard) {
+function areUpgradeRequirementsMet(requirements, unitCard) {
   const operator = requirements[0];
   if (operator instanceof Object) {
       return _.isMatch(unitCard, operator);
@@ -51,7 +51,7 @@ function isRequirementsMet(requirements, unitCard) {
   else if(operator === 'AND'){
     for(let i=1; i< requirements.length; i++){
       if (requirements[i] instanceof Array){
-        if(!isRequirementsMet(requirements[i], unitCard))
+        if(!areUpgradeRequirementsMet(requirements[i], unitCard))
           return false;
       } else if (requirements[i] instanceof Object){
         if(!_.isMatch(unitCard, requirements[i]))
@@ -62,7 +62,7 @@ function isRequirementsMet(requirements, unitCard) {
   }
   else if (operator === 'OR') {
     for(let i=1; i< requirements.length; i++){
-      if (requirements[i] instanceof Array && isRequirementsMet(requirements[i], unitCard)){
+      if (requirements[i] instanceof Array && areUpgradeRequirementsMet(requirements[i], unitCard)){
         return true;
       } else if (requirements[i] instanceof Object && _.isMatch(unitCard, requirements[i])){
         return true;
@@ -96,8 +96,19 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     const id = cardsById[i];
     const card = cards[id];
 
-    if (card.rank !== rank) continue;
+    const battleForce = battleForcesDict[list.battleForce];
 
+    if(!battleForce)
+    {
+      if (!list.faction.includes(card.faction) && !card.affiliations) continue;
+      if (!list.faction.includes(card.faction) && card.affiliations && !card.affiliations.includes(list.faction)) continue;
+      if (card.rank !== rank) continue;
+
+    } else {
+      if (rank === "corps" && battleForce?.rules?.buildsAsCorps?.includes(id) ) console.log('found ' + id); // do nothing
+      else if (!battleForce[rank].includes(id)) continue;
+      else if (card.rank !== rank) continue;
+    }
 
     if(!userSettings.showStormTide && card.isStormTide){ 
       continue;
@@ -107,14 +118,6 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
       continue;
     } else if (userSettings.showStormTide && (!list.mode.includes('storm tide') && id === 'AK')) {
       continue;
-    }
-
-    if(!list.battleForce)
-    {
-      if (!list.faction.includes(card.faction) && !card.affiliations) continue;
-      if (!list.faction.includes(card.faction) && card.affiliations && !card.affiliations.includes(list.faction)) continue;
-    } else {
-      if (!battleForcesDict[list.battleForce][rank].includes(id)) continue;
     }
 
     const uniqueCardNames = list.units.filter(u=>cards[u.unitId].isUnique).map(u=>cards[u.unitId].cardName);
@@ -228,7 +231,6 @@ function getEligibleContingenciesToAdd(list) {
 function getEquippableUpgrades(
   list, upgradeType, unitId, upgradesEquipped=[]
 ) {
-  const impRemnantUpgrades = ['ej', 'ek', 'fv', 'iy', 'fu', 'gm', 'gl', 'em', 'en', 'ja'];
   const validUpgradeIds = [];
   const invalidUpgradeIds = [];
 
@@ -236,7 +238,7 @@ function getEquippableUpgrades(
 
   let forceAffinity = 'dark side';
   if (faction === 'rebels' || faction === 'republic') forceAffinity = 'light side';
-  else if(faction == 'mercenary'){
+  else if(faction === 'mercenary'){
     forceAffinity = battleForcesDict[list.battleForce].forceAffinity;
   }
 
@@ -279,7 +281,7 @@ function getEquippableUpgrades(
     else if (list.battleForce === 'Imperial Remnant' && card.cardSubtype === 'heavy weapon' && unitCard.cardSubtype === 'trooper') {
         if (impRemnantUpgrades.includes(id)) 
           validUpgradeIds.push(id);
-    } else if (isRequirementsMet(card.requirements, unitCard)) {
+    } else if (areUpgradeRequirementsMet(card.requirements, unitCard)) {
       validUpgradeIds.push(id);
     } else {
       invalidUpgradeIds.push(id);
@@ -393,7 +395,7 @@ function findUnitIndexInList(unit, list){
   let index = -1;
 
   list.units.forEach((l, listIndex)=>{
-    if(l.unitId == unit.unitId){
+    if(l.unitId === unit.unitId){
 
       let upgradesMatch = true;
       unit.upgradesEquipped.forEach((up, upgradeIndex)=>{
@@ -418,5 +420,7 @@ export{
   getEquippableUpgrades,
   unitHasUniques,
   getListUniques,
-  findUnitIndexInList
+  findUnitIndexInList, 
+  areUpgradeRequirementsMet,
+  impRemnantUpgrades
 }

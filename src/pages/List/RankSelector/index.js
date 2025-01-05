@@ -16,7 +16,7 @@ function RankSelector({style}) {
   const classes = useStyles();
   const { currentList, setCardPaneFilter, rankLimits } = useContext(ListContext);
 
-  const currentUnitCounts = { ...currentList.unitCounts };
+  const {unitCounts, gametimeUnitCounts, rankIssues} = currentList;
 
   return (
     <div className={classes.container} style={style}>
@@ -26,12 +26,26 @@ function RankSelector({style}) {
         if(!ranks[rank]) return null;
 
         let color = 'primary';
-        if(currentUnitCounts[rank] > rankLimits[rank][1] || currentUnitCounts[rank] < rankLimits[rank][0]){
+        let badgeContent = unitCounts[rank];
+        let toolTip = ranks[rank].title;
+
+        // TODO rename this in cards.json at some point
+        let rankName = rank === "special" ? "special forces" : rank;
+
+        if(unitCounts[rank] !== gametimeUnitCounts[rank]){
+          badgeContent += "("+gametimeUnitCounts[rank] +")"
+
+          toolTip = " " + rankName.toUpperCase() + " count during army building is " + unitCounts[rank]+". ";
+          toolTip += rankName.toUpperCase() + " count during the game is (" + gametimeUnitCounts[rank] +")"; 
+        }
+
+        if(rankIssues[rank] && rankIssues[rank].length > 0){
           color = 'error'
+          toolTip = rankIssues[rank][0].text;
         }
 
         return (
-          <LargerTooltip title={ranks[rank].title}>
+          <LargerTooltip title={toolTip}>
             <IconButton size="small" onClick={() => setCardPaneFilter({
                   action: 'UNIT', rank: rank
                 })} style={{ marginRight: 10 }}>
@@ -39,7 +53,7 @@ function RankSelector({style}) {
                 showZero
                 max={100}
                 color={color}
-                badgeContent={currentUnitCounts[rank]}
+                badgeContent={badgeContent}
               >
                 <Avatar
                   alt={rank}

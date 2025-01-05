@@ -132,19 +132,15 @@ export function ListProvider({
     setStackSize(1);
   }, [width, cardPaneFilter]);
 
+  // TODO needs some intelligence/context to know WHAT needs validation after a given list change.
+  // There are edges all over and it doesn't *seem* like this "check everything" check chugs too hard,
+  // but it's still bad from a performance perspective
   const updateThenValidateList = (list) => { 
     const rankLimits = getRankLimits(list);
     setCurrentList(list);
     setValidationIssues(validateList(list, rankLimits));
     setRankLimits(rankLimits);
     countPoints(list);
-  }
-
-  const validateBattleforceSelection = (list, battleForce) => {
-    // TODO somewhere/somehow around here we need to confirm user didn't pick units
-    // illegal for a battleforce then swap to it. Ideally, only do this if/after a bf swap.
-    // may need to re-examine how validation issues are opened/closed
-    //setInvalidUnits(checkBattleforceUnits(list, battleForce));
   }
 
   const reorderUnits = (startIndex, endIndex) => {
@@ -315,10 +311,6 @@ export function ListProvider({
     updateThenValidateList({ ...newList });
   };
 
-
-
-
-
   const handleUnequipUpgrade = (action, unitIndex, upgradeIndex) => {
 
     setCardPaneFilter({ action: 'DISPLAY' });
@@ -465,7 +457,6 @@ export function ListProvider({
 
   const handleSetBattleForce = (battleForce) => {
     updateThenValidateList({ ...currentList, battleForce });
-    validateBattleforceSelection(currentList, battleForce);
   }
 
   const unitProps = {
