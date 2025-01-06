@@ -1,4 +1,3 @@
-import React from 'react';
 import SpeedChip from './SpeedChip';
 import SurgeChip from './SurgeChips';
 import DefenseChip from './DefenseChip';

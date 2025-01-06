@@ -290,7 +290,7 @@ const battleForcesDict = {
       linkId: 'exd',
       commander: ['py', 'nr', 'pz', 'qa'],
       operative: [],
-      corps: ['gx', 'ga', 'xd'],
+      corps: ['gx', 'ga'],
       special: ['la', 'xd'],
       support: ['ie'],
       heavy: ['xe'],
@@ -326,6 +326,7 @@ const battleForcesDict = {
   'Shadow Collective': {
       name: 'Shadow Collective',
       faction: 'mercenary',
+      forceAffinity:'dark side',
       linkId: 'sc',
       commander: ['ra', 'rd', 'qy'],
       operative: ['rc', 'kx', 'ax'],

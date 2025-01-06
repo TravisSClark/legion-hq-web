@@ -2,7 +2,7 @@ const legionModes = {
   '500-point mode': {
     name: 'Skirmish',
     maxPoints: 500,
-    unitCounts: {
+    rankReqs: {
       commander: [1, 1],
       operative: [0, 1],
       corps: [2, 4],
@@ -14,7 +14,7 @@ const legionModes = {
   'standard mode': {
     name: 'Standard',
     maxPoints: 1000,
-    unitCounts: {
+    rankReqs: {
       commander: [1, 2],
       operative: [0, 2],
       corps: [3, 6],
@@ -26,7 +26,7 @@ const legionModes = {
   'grand army mode': {
     name: 'Grand Army',
     maxPoints: 1600,
-    unitCounts: {
+    rankReqs: {
       commander: [1, 4],
       operative: [0, 3],
       corps: [6, 10],
@@ -38,7 +38,7 @@ const legionModes = {
   'storm tide: infantry': {
     name: 'Storm Tide: Infantry Division',
     maxPoints: 1200,
-    unitCounts: {
+    rankReqs: {
       commander: [1, 3],
       operative: [0, 1],
       corps: [3, 7],
@@ -50,7 +50,7 @@ const legionModes = {
   'storm tide: armored': {
     name: 'Storm Tide: Armored Division',
     maxPoints: 1200,
-    unitCounts: {
+    rankReqs: {
       commander: [1, 3],
       operative: [0, 1],
       corps: [3, 6],
@@ -62,7 +62,7 @@ const legionModes = {
   'storm tide: special forces': {
     name: 'Storm Tide: Special Forces Division',
     maxPoints: 1200,
-    unitCounts: {
+    rankReqs: {
       commander: [1, 3],
       operative: [0, 2],
       corps: [3, 6],

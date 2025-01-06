@@ -2514,7 +2514,7 @@
         "keywords": [],
         "requirements": [
             {
-                "light side": true
+              "forceAffinity": "light side"
             }
         ],
         "history": [
@@ -2535,7 +2535,7 @@
         "keywords": [],
         "requirements": [
             {
-                "dark side": true
+                "forceAffinity": "dark side"
             }
         ],
         "history": [
@@ -2556,7 +2556,7 @@
         "keywords": [],
         "requirements": [
             {
-                "dark side": true
+              "forceAffinity": "dark side"
             }
         ],
         "history": [
@@ -3054,10 +3054,10 @@
             "comms"
         ],
         "history": [
-            {
-				"date": "6 December 2024",
-				"description": "Change the restriction to Rebel Core Trooper only."
-			}
+          {
+            "date": "6 December 2024",
+            "description": "Change the restriction to Rebel Core Trooper only."
+          }
         ],
         "id": "eq"
     },
@@ -3705,7 +3705,7 @@
         ],
         "requirements": [
             {
-                "dark side": true
+              "forceAffinity": "dark side"
             }
         ],
         "id": "fo"
@@ -5547,7 +5547,7 @@
         ],
         "requirements": [
             {
-                "light side": true
+              "forceAffinity": "light side"
             }
         ],
         "id": "ij"
@@ -9229,7 +9229,6 @@
     },
     "or": {
         "id": "or",
-        "displayName": "",
         "cardSubtype": "pilot",
         "cardName": "Governor Pryce",
         "isUnique": true,
@@ -9271,7 +9270,7 @@
         "requirements": [
             {
                 "faction": "republic",
-                "cardName": "LAAT Patrol Transport"
+                "cardName": "LAAT/le Patrol Transport"
             }
         ],
         "history": [
@@ -9500,7 +9499,7 @@
         "requirements": [
             {
                 "faction": "republic",
-                "cardName": "LAAT Patrol Transport"
+                "cardName": "LAAT/le Patrol Transport"
             }
         ]
     },
@@ -9534,7 +9533,7 @@
         "requirements": [
             {
                 "faction": "republic",
-                "cardName": "LAAT Patrol Transport"
+                "cardName": "LAAT/le Patrol Transport"
             }
         ],
         "history": [
@@ -9706,6 +9705,7 @@
     "pm": {
         "id": "pm",
         "cardName": "Wookiee Warriors",
+        "displayName":"Wookiee Warriors Noble Fighters",
         "title": "Noble Fighters",
         "ttsName":"Wookiee Warriors",
         "cardType": "unit",
@@ -10457,8 +10457,7 @@
     },
     "qt": {
         "id": "qt",
-        "cardName": "NR-N99 Persuader-class Tank Droid",
-        "displayName": "Snail Tank",
+        "cardName": "Persuader-Class Tank Droid",
         "cardType": "unit",
         "cardSubtype": "ground vehicle",
         "rank": "heavy",
@@ -12061,7 +12060,6 @@
         "displayName": "",
         "cardSubtype": "protocol",
         "cardName": "\"Nanny\" Programming",
-        "isUnique": true,
         "cardType": "upgrade",
         "cost": 0,
         "faction": "rebels",
@@ -13773,6 +13771,7 @@
     "xd": {
         "id": "xd",
         "cardName": "IG-100 MagnaGuard",
+        "displayName": "IG-100 MagnaGuard (Prototype)",
         "title": "Prototype Assassin Droids",
         "cardType": "unit",
         "cardSubtype": "droid trooper",
@@ -13810,9 +13809,9 @@
     },
     "xe": {
         "id": "xe",
-        "cardName": "NR-N99 Persuader-class Tank Droid",
+        "cardName": "Persuader-Class Tank Droid",
         "title": "Prototype Tank Droid",
-        "displayName": "Snail Droid",
+        "displayName": "Persuader-Class Tank Droid (Prototype)",
         "cardType": "unit",
         "cardSubtype": "ground vehicle",
         "rank": "heavy",

@@ -88,7 +88,7 @@ function TextCardContent({ card, chipSize }) {
 }
 
 function CounterpartCardHeader({ card, handleClick }) {
-  const { isUnique, displayName, cardName, imageName } = card;
+  const { isUnique, displayName, cardName } = card;
   const avatar = (
     <CardIcon
       card={card}
@@ -129,7 +129,7 @@ function BattleCardHeader({ card, handleClick }) {
 }
 
 function CommandCardHeader({ card, handleClick }) {
-  const { cardName, cardType, imageName } = card;
+  const { cardName, cardType } = card;
   const avatar = (
     <CardIcon
       card={card}
@@ -152,7 +152,7 @@ function CommandCardHeader({ card, handleClick }) {
 }
 
 function UpgradeCardHeader({ card, handleClick }) {
-  const { isUnique, displayName, cardName, cardType, cardSubtype, imageName } = card;
+  const { isUnique, displayName, cardName, cardSubtype } = card;
   const avatar = (
     <IconBadge
       upgradeType={cardSubtype}

@@ -72,7 +72,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
         <CardActions disableSpacing>
           <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
             {(cost || cost === 0) && <PointsChip value={cost} size={chipSize} />}
-            {(cardType == "unit" || cardType == "counterpart") &&
+            {(cardType === "unit" || cardType === "counterpart") &&
             <UpgradeBar upgradeBar={upgradeBar} iconHeight={20}/>}
           </div>
           <IconButton

@@ -27,7 +27,7 @@ function ImagePanel({ card, extraCardImage = false }) {
               style={{ width: '100%' }}
             />
             <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
-              {(card.cost || card.cost === 0) && <PointsChip value={card.cost} size={20} />}
+              {(card.cost || card.cost === 0) && <PointsChip value={card.cost}/>}
               <UpgradeBar upgradeBar={card.upgradeBar}/>
             </div>
           </div>

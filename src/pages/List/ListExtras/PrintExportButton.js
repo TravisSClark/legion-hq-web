@@ -1,5 +1,5 @@
 import React from 'react';
-import QRCode from 'qrcode.react';
+import {QRCodeCanvas as QRCode} from 'qrcode.react';
 import { useReactToPrint } from 'react-to-print';
 import { Chip, Menu, MenuItem } from '@material-ui/core';
 import { Print as PrintIcon } from '@material-ui/icons';
@@ -235,18 +235,21 @@ function PrintExportButton({ currentList }) {
           showCommands={true}
           ref={componentRef}
           currentList={currentList}
+          key="default"
         />
         <PrintList
           showBattles={false}
           showCommands={false}
           ref={componentRefNoBattlesCommands}
           currentList={currentList}
+          key="noBC"
         />
         <PrintList
           showBattles={true}
           showCommands={false}
           ref={componentRefBattlesButNoCommands}
           currentList={currentList}
+          key="noB"
         />
         <PrintListImages
           ref={componentRefImages}

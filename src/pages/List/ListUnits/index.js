@@ -13,6 +13,15 @@ function ListUnits() {
     setCardPaneFilter,
   } = React.useContext(ListContext);
 
+
+  const equippedCounterparts = [];
+  
+  currentList.units.forEach(u => {
+    if(u.counterpart && u.counterpart.count > 0){
+      equippedCounterparts.push(u.counterpart.counterpartId);
+    }
+  });
+
   const items = currentList.units.map((unit, unitIndex) => {
     const unitCard = cards[unit.unitId];
     const { counterpartId } = unitCard;
@@ -21,9 +30,11 @@ function ListUnits() {
     
     if(counterpartId){
       // Show counterpart add icon(s) if unit has a counterpart option and it's not already in list
-      if (!currentList.uniques.includes(counterpartId)){
-        // general case (not IG-11) & Special case for IG-11 (tj) + 'Nanny Programming' (tp)
-        if(unit.unitId !== 'tj' || (unit.unitId === 'tj' && currentList.uniques.includes('tp'))){
+      if (!equippedCounterparts.includes(counterpartId)){
+        // Special case for IG-11 (tj) + 'Nanny Programming' (tp)
+        if(unit.unitId === 'tj' && !unit.upgradesEquipped.includes('tp')){
+          addCounterpartHandler=null;
+        }else{
           addCounterpartHandler = () => setCardPaneFilter({
             action: 'COUNTERPART', unitIndex, counterpartId
           });
@@ -50,7 +61,7 @@ function ListUnits() {
     }
 
     return {
-      id: unit.unitObjectString,
+      id: unit.unitId + unit.upgradesEquipped.join(''),
       component: (
         <UnitContext.Provider 
           value={{

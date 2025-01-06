@@ -38,7 +38,6 @@ import {
 import { getRankLimits } from 'components/listValidator' 
 
 import{
-  rehashList,
   mergeLists,
   convertHashToList,
   changeListTitle,
@@ -93,17 +92,10 @@ export function ListProvider({
           if (Object.keys(response.data).length) {
             let loadedList = response.data;
             let oldCounterparts = ['lw', 'ji', 'jj'];
-            const oldUnitCount = loadedList.units.length;
             loadedList.units = loadedList.units.filter(unit => {
               return !oldCounterparts.includes(unit.unitId)
             });
-            const newUnitCount = loadedList.units.length;
-            if (oldUnitCount !== newUnitCount) {
-              loadedList.uniques = loadedList.uniques.filter(id => {
-                return !oldCounterparts.includes(id);
-              });
-            }
-            updateThenValidateList(rehashList(loadedList));
+            updateThenValidateList(loadedList);
           } else setError(`List ${slug} not found.`);
           setStatus('idle');
         })
@@ -140,18 +132,15 @@ export function ListProvider({
     setStackSize(1);
   }, [width, cardPaneFilter]);
 
-  const updateThenValidateList = (list) => { const rankLimits = getRankLimits(list);
+  // TODO needs some intelligence/context to know WHAT needs validation after a given list change.
+  // There are edges all over and it doesn't *seem* like this "check everything" check chugs too hard,
+  // but it's still bad from a performance perspective
+  const updateThenValidateList = (list) => { 
+    const rankLimits = getRankLimits(list);
     setCurrentList(list);
-    doUnitValidation(list, rankLimits);
+    setValidationIssues(validateList(list, rankLimits));
     setRankLimits(rankLimits);
     countPoints(list);
-  }
-
-  const validateBattleforceSelection = (list, battleForce) => {
-    // TODO somewhere/somehow around here we need to confirm user didn't pick units
-    // illegal for a battleforce then swap to it. Ideally, only do this if/after a bf swap.
-    // may need to re-examine how validation issues are opened/closed
-    //setInvalidUnits(checkBattleforceUnits(list, battleForce));
   }
 
   const reorderUnits = (startIndex, endIndex) => {
@@ -163,9 +152,6 @@ export function ListProvider({
     }
     currentList.units = reorder(
       currentList.units, startIndex, endIndex
-    );
-    currentList.unitObjectStrings = reorder(
-      currentList.unitObjectStrings, startIndex, endIndex
     );
     setCurrentList({ ...currentList });
   }
@@ -225,7 +211,6 @@ export function ListProvider({
                 unitIndex,
                 upgradeIndex: index,
                 upgradeType: upgradeBar[index],
-                hasUniques: unit.hasUniques,
                 unitId: unit.unitId,
                 upgradesEquipped,
                 additionalUpgradeSlots: []
@@ -255,7 +240,6 @@ export function ListProvider({
                   unitIndex,
                   upgradeIndex: index,
                   upgradeType: upgradeBar[index],
-                  hasUniques: unit.hasUniques,
                   unitId: unit.unitId,
                   upgradesEquipped: unit.upgradesEquipped,
                   additionalUpgradeSlots: unit.additionalUpgradeSlots
@@ -266,7 +250,6 @@ export function ListProvider({
                   unitIndex,
                   upgradeIndex: index,
                   upgradeType: upgradeBar[index],
-                  hasUniques: unit.hasUniques,
                   unitId: unit.unitId,
                   upgradesEquipped: unit.upgradesEquipped,
                   additionalUpgradeSlots: unit.additionalUpgradeSlots
@@ -288,7 +271,6 @@ export function ListProvider({
                   unitIndex,
                   upgradeIndex: index,
                   upgradeType: upgradeBar[index],
-                  hasUniques: unit.hasUniques,
                   unitId: unit.unitId,
                   upgradesEquipped: unit.upgradesEquipped,
                   additionalUpgradeSlots: unit.additionalUpgradeSlots
@@ -329,10 +311,6 @@ export function ListProvider({
     updateThenValidateList({ ...newList });
   };
 
-
-
-
-
   const handleUnequipUpgrade = (action, unitIndex, upgradeIndex) => {
 
     setCardPaneFilter({ action: 'DISPLAY' });
@@ -368,16 +346,12 @@ export function ListProvider({
   const handleAddBattle = (type, battleId) => {
     const {list, nextType} = addBattle(currentList, type, battleId);
 
-    console.log(nextType);
-
     let letUpgradesCascade = false;
     if (userSettings && userSettings.cascadeUpgradeSelection) {
       letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
     }
 
-    if(letUpgradesCascade && nextType != type){
-      console.log(nextType, type);
-
+    if(letUpgradesCascade && nextType !== type){
       if(nextType){
         setCardPaneFilter({
           action: 'BATTLE', type: nextType
@@ -479,12 +453,6 @@ export function ListProvider({
 
   const handleSetBattleForce = (battleForce) => {
     updateThenValidateList({ ...currentList, battleForce });
-    validateBattleforceSelection(currentList, battleForce);
-  }
-
-  // Maybe there should be a 'units only' flag, but lists will be something like 50-100 entities max anyhow...
-  const doUnitValidation = (list) =>{
-    setValidationIssues(validateList(list));
   }
 
   const unitProps = {

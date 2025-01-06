@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Container,
   Grid,
-  Typography,
   Fade
 } from '@material-ui/core';
 

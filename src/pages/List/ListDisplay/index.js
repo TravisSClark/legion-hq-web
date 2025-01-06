@@ -133,7 +133,7 @@ function ListDisplay() {
     <Fade unmountOnExit exit={false} in={cardPaneFilter.action === 'DISPLAY'}>
       <div style={{ display: 'flex', flexFlow: 'column nowrap', alignItems: 'stretch' }}>
         {currentList.units.map(unit => (
-          <div key={unit.unitObjectString}>
+          <div key={unit.unitId + unit.upgradesEquipped.join('')}>
             <RowDisplay
               unit={{ ...unit, flawId: cards[unit.unitId].flaw ? cards[unit.unitId].flaw : undefined }}
               faction={currentList.faction}
