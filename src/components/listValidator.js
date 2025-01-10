@@ -17,6 +17,7 @@ const upgradesProvidingAlliesOfConvenience = cardsIdsByType["upgrade"].filter(c=
 function validateUpgrades(list, unitIndex, listUniqueUpgrades){
   const unit = list.units[unitIndex];
   const card = cards[unit.unitId];
+  card.forceAffinity = unit.forceAffinity;
 
   unit.validationIssues = [];
 
@@ -35,7 +36,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
   
   // Validation for each of the 'must equip' keywords (that I know of)
 
-  if(card.flexResponse){
+  if (card.flexResponse) {
     let heavyCount = 0;
     unit.upgradesEquipped.forEach((id)=>{
       if(id === null)
@@ -283,9 +284,6 @@ function rankValidation(currentList, currentRanks, rankLimits, mercs, rankIssues
 function validateList(currentList, rankLimits){
   let validationIssues = [];
 
-  // TODO - maybe add email link or etc. Afaik... this is almost untrue now, tbd.
-  validationIssues.push({level: 1, text:"Work in progress... double-check your army rules and unit cards!"});
-
   const battleForce = currentList.battleForce ? battleForcesDict[currentList.battleForce] : null;
 
   let currentRanks = {commander:0, operative:0, corps:0, special:0, heavy:0, support:0 };
@@ -295,9 +293,15 @@ function validateList(currentList, rankLimits){
   let mercs = {...currentRanks };
 
   // Determine what our rank requirements are, warn if unknown
-  if(battleForce && !battleForce[currentList.mode]){
+  if (battleForce && !battleForce[currentList.mode]){
       validationIssues.push({level:1, text:"Playing a battleforce in a mode with no defined battleforce construction rules (Defaulting to 1000pt)"});
   } 
+
+  const faction = currentList.faction;
+
+  let forceAffinity = 'dark side';
+  if (faction === 'rebels' || faction === 'republic') forceAffinity = 'light side';
+  else if ( faction === 'mercenary') forceAffinity = battleForcesDict[currentList.battleForce].forceAffinity;
   
   const listUniqueUpgrades = {};
   let unitCounts = {};
@@ -329,10 +333,12 @@ function validateList(currentList, rankLimits){
       currentRanks['corps'] += unit.count;
     } 
 
+    unit.forceAffinity = forceAffinity;
+
     // side-effect of tallying list's unique upgrades to the passed in obj for use later
     validateUpgrades(currentList, index, listUniqueUpgrades);
 
-    if(battleForce && !battleForce[card.rank].includes(unit.unitId)){
+    if (battleForce && !battleForce[card.rank].includes(unit.unitId)){
         unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" is not allowed in this battleforce." });
     }
     else if( card.specialIssue && (!battleForce || card.specialIssue !== battleForce.name)){
