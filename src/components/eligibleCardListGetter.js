@@ -398,20 +398,20 @@ function findUnitIndexInList(unit, list){
 
   let index = -1;
 
-  list.units.forEach((l, listIndex)=>{
-    if(l.unitId === unit.unitId){
-
+  list.units.forEach((listUnit, listIndex)=>{
+    if (listUnit.unitId === unit.unitId)  {
       let upgradesMatch = true;
-      unit.upgradesEquipped.forEach((up, upgradeIndex)=>{
-        if(unit.upgradesEquipped[upgradeIndex] !== l.upgradesEquipped[upgradeIndex])
+      let i = 0;
+      while (upgradesMatch && i < unit.upgradesEquipped.length) {
+        if (unit.upgradesEquipped[i] !== listUnit.upgradesEquipped[i]) {
           upgradesMatch = false;
-      });
-      if(upgradesMatch){
-        index = listIndex;
+        }
+        i++;
       }
+      if (upgradesMatch) index = listIndex;
     }
   })
-
+  
   return index;
 }
 
