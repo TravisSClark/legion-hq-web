@@ -226,6 +226,16 @@ function addUnit(list, unitId, stackSize = 1) {
     loadoutUpgrades: [],
     additionalUpgradeSlots: []
   };
+
+  if (newUnitObject.upgradesEquipped.length === 0) {
+    for (let i = 0; i < unitCard.upgradeBar.length; i++) {
+      newUnitObject.upgradesEquipped.push(null);
+      if (unitCard.keywords.includes('Loadout')) {
+        newUnitObject.loadoutUpgrades.push(null);
+      }
+    }
+  }
+  
   let unitIndex = findUnitIndexInList(newUnitObject, list);
 
   // TODO TODO - this  will break stuff again if a list can have 2 units with Contingencies
@@ -237,12 +247,6 @@ function addUnit(list, unitId, stackSize = 1) {
     list.units[unitIndex].count += stackSize;
     list.units[unitIndex].totalUnitCost += unitCard.cost * stackSize;
   } else {
-    for (let i = 0; i < unitCard.upgradeBar.length; i++) {
-      newUnitObject.upgradesEquipped.push(null);
-      if (unitCard.keywords.includes('Loadout')) {
-        newUnitObject.loadoutUpgrades.push(null);
-      }
-    }
     list.units.push(newUnitObject);
     unitIndex = list.units.length - 1;
 

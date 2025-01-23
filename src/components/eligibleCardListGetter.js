@@ -45,23 +45,21 @@ function areUpgradeRequirementsMet(requirements, unitCard) {
   const operator = requirements[0];
   if (operator instanceof Object) {
       return _.isMatch(unitCard, operator);
-  }else if (operator === 'NOT') {
+  } else if (operator === 'NOT') {
     return !_.isMatch(unitCard, requirements[1]);
-  }
-  else if(operator === 'AND'){
-    for(let i=1; i< requirements.length; i++){
+  } else if (operator === 'AND') {
+    for (let i=1; i< requirements.length; i++) {
       if (requirements[i] instanceof Array){
-        if(!areUpgradeRequirementsMet(requirements[i], unitCard))
+        if (!areUpgradeRequirementsMet(requirements[i], unitCard))
           return false;
       } else if (requirements[i] instanceof Object){
-        if(!_.isMatch(unitCard, requirements[i]))
+        if (!_.isMatch(unitCard, requirements[i]))
           return false;
       }
     }
     return true;
-  }
-  else if (operator === 'OR') {
-    for(let i=1; i< requirements.length; i++){
+  } else if (operator === 'OR') {
+    for (let i=1; i< requirements.length; i++){
       if (requirements[i] instanceof Array && areUpgradeRequirementsMet(requirements[i], unitCard)){
         return true;
       } else if (requirements[i] instanceof Object && _.isMatch(unitCard, requirements[i])){
@@ -69,8 +67,7 @@ function areUpgradeRequirementsMet(requirements, unitCard) {
       }
     }
     return false;
-  } 
-  else {
+  } else {
     // Empty array of requirements
     return true;
   }
@@ -98,8 +95,7 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
 
     const battleForce = battleForcesDict[list.battleForce];
 
-    if(!battleForce)
-    {
+    if (!battleForce) {
       if (!list.faction.includes(card.faction) && !card.affiliations) continue;
       if (!list.faction.includes(card.faction) && card.affiliations && !card.affiliations.includes(list.faction)) continue;
       if (card.rank !== rank) continue;
@@ -239,9 +235,7 @@ function getEquippableUpgrades(
 
   let forceAffinity = 'dark side';
   if (faction === 'rebels' || faction === 'republic') forceAffinity = 'light side';
-  else if(faction === 'mercenary'){
-    forceAffinity = battleForcesDict[list.battleForce].forceAffinity;
-  }
+  else if ( faction === 'mercenary') forceAffinity = battleForcesDict[list.battleForce].forceAffinity;
 
   if (!unitId) return { validUpgradeIds: [], invalidUpgradeIds: [] };
   const unitCard = cards[unitId];
@@ -398,20 +392,20 @@ function findUnitIndexInList(unit, list){
 
   let index = -1;
 
-  list.units.forEach((l, listIndex)=>{
-    if(l.unitId === unit.unitId){
-
+  list.units.forEach((listUnit, listIndex)=>{
+    if (listUnit.unitId === unit.unitId)  {
       let upgradesMatch = true;
-      unit.upgradesEquipped.forEach((up, upgradeIndex)=>{
-        if(unit.upgradesEquipped[upgradeIndex] !== l.upgradesEquipped[upgradeIndex])
+      let i = 0;
+      while (upgradesMatch && i < unit.upgradesEquipped.length) {
+        if (unit.upgradesEquipped[i] !== listUnit.upgradesEquipped[i]) {
           upgradesMatch = false;
-      });
-      if(upgradesMatch){
-        index = listIndex;
+        }
+        i++;
       }
+      if (upgradesMatch) index = listIndex;
     }
   })
-
+  
   return index;
 }
 
