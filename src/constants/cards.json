@@ -14918,5 +14918,94 @@
                 "cardName": "Aqua Droids"
             }
         ]
+    },
+    "Ay": {
+        "id": "Ay",
+        "cardName": "ARF Troopers",
+        "cardType": "unit",
+        "cardSubtype": "clone trooper",
+        "rank": "special",
+        "faction": "republic",
+        "cost": 66,
+        "imageName": "ARF Troopers.webp",
+        "keywords": [
+            "Observe",
+            "Scout",
+            "Low Profile",
+            "Unhindered"
+        ],
+        "upgradeBar": [
+            "squad leader",
+            "heavy weapon",
+            "personnel",
+            "comms",
+            "training",
+            "grenades"
+        ],
+        "defense": "red",
+        "surges": [],
+        "wounds": 1,
+        "courage": 2,
+        "speed": 2
+    },
+    "Az": {
+        "id": "Az",
+        "cardSubtype": "squad leader",
+        "cardName": "Jedi Guardian",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 22,
+        "imageName": "Jedi Guardian.webp",
+        "keywords": [
+            "Charge",
+            "Leader",
+            "Sidearm",
+            "Pierce",
+            "Impact"
+        ],
+        "requirements": [
+            "AND",
+            {
+                "cardSubtype": "clone trooper"
+            },
+            {
+                "rank": "special"
+            }
+        ]
+    },
+    "Ba": {
+        "id": "Ba",
+        "cardSubtype": "heavy weapon",
+        "cardName": "RPS-6 ARF Trooper",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 24,
+        "imageName": "RPS-6 ARF Trooper.webp",
+        "keywords": [
+            "Cumbersome",
+            "Impact"
+        ],
+        "requirements": [
+            {
+                "cardName": "ARF Troopers"
+            }
+        ]
+    },
+    "Bb": {
+        "id": "Bb",
+        "cardSubtype": "personnel",
+        "cardName": "ARF Troopers Duo",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 26,
+        "imageName": "ARF Troopers Duo.webp",
+        "keywords": [
+            "Cache"
+        ],
+        "requirements": [
+            {
+                "cardName": "ARF Troopers"
+            }
+        ]
     }
 }
