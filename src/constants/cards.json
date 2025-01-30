@@ -14994,11 +14994,11 @@
     "Bb": {
         "id": "Bb",
         "cardSubtype": "personnel",
-        "cardName": "ARF Troopers Duo",
+        "cardName": "ARF Trooper Duo",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 26,
-        "imageName": "ARF Troopers Duo.webp",
+        "imageName": "ARF Trooper Duo.webp",
         "keywords": [
             "Cache"
         ],
