@@ -2514,7 +2514,7 @@
         "keywords": [],
         "requirements": [
             {
-                "light side": true
+              "forceAffinity": "light side"
             }
         ],
         "history": [
@@ -2535,7 +2535,7 @@
         "keywords": [],
         "requirements": [
             {
-                "dark side": true
+                "forceAffinity": "dark side"
             }
         ],
         "history": [
@@ -2556,7 +2556,7 @@
         "keywords": [],
         "requirements": [
             {
-                "dark side": true
+              "forceAffinity": "dark side"
             }
         ],
         "history": [
@@ -3054,10 +3054,10 @@
             "comms"
         ],
         "history": [
-            {
-				"date": "6 December 2024",
-				"description": "Change the restriction to Rebel Core Trooper only."
-			}
+          {
+            "date": "6 December 2024",
+            "description": "Change the restriction to Rebel Core Trooper only."
+          }
         ],
         "id": "eq"
     },
@@ -3705,7 +3705,7 @@
         ],
         "requirements": [
             {
-                "dark side": true
+              "forceAffinity": "dark side"
             }
         ],
         "id": "fo"
@@ -5547,7 +5547,7 @@
         ],
         "requirements": [
             {
-                "light side": true
+              "forceAffinity": "light side"
             }
         ],
         "id": "ij"
@@ -8437,7 +8437,6 @@
             "Detachment",
             "Observe",
             "Hover: Air",
-            "Strafe",
             "Incognito",
             "Suppressive"
         ],
@@ -9061,7 +9060,6 @@
         "keywords": [
             "Armor",
             "Hover: Ground",
-            "Strafe",
             "Reposition",
             "Transport",
             "Weak Point"
@@ -9231,7 +9229,6 @@
     },
     "or": {
         "id": "or",
-        "displayName": "",
         "cardSubtype": "pilot",
         "cardName": "Governor Pryce",
         "isUnique": true,
@@ -9273,7 +9270,7 @@
         "requirements": [
             {
                 "faction": "republic",
-                "cardName": "LAAT Patrol Transport"
+                "cardName": "LAAT/le Patrol Transport"
             }
         ],
         "history": [
@@ -9502,7 +9499,7 @@
         "requirements": [
             {
                 "faction": "republic",
-                "cardName": "LAAT Patrol Transport"
+                "cardName": "LAAT/le Patrol Transport"
             }
         ]
     },
@@ -9536,7 +9533,7 @@
         "requirements": [
             {
                 "faction": "republic",
-                "cardName": "LAAT Patrol Transport"
+                "cardName": "LAAT/le Patrol Transport"
             }
         ],
         "history": [
@@ -9708,6 +9705,7 @@
     "pm": {
         "id": "pm",
         "cardName": "Wookiee Warriors",
+        "displayName":"Wookiee Warriors Noble Fighters",
         "title": "Noble Fighters",
         "ttsName":"Wookiee Warriors",
         "cardType": "unit",
@@ -10459,8 +10457,7 @@
     },
     "qt": {
         "id": "qt",
-        "cardName": "NR-N99 Persuader-class Tank Droid",
-        "displayName": "Snail Tank",
+        "cardName": "Persuader-Class Tank Droid",
         "cardType": "unit",
         "cardSubtype": "ground vehicle",
         "rank": "heavy",
@@ -11440,7 +11437,6 @@
         "keywords": [
             "Armor",
             "Hover: Ground",
-            "Strafe",
             "Reposition",
             "Transport",
             "Weak Point"
@@ -12064,7 +12060,6 @@
         "displayName": "",
         "cardSubtype": "protocol",
         "cardName": "\"Nanny\" Programming",
-        "isUnique": true,
         "cardType": "upgrade",
         "cost": 0,
         "faction": "rebels",
@@ -13303,6 +13298,7 @@
         "cost": 180,
         "imageName": "Major Marquand.webp",
         "keywords": [
+            "Field Commander",
             "Vehicle",
             "Armor",
             "Arsenal",
@@ -13776,6 +13772,7 @@
     "xd": {
         "id": "xd",
         "cardName": "IG-100 MagnaGuard",
+        "displayName": "IG-100 MagnaGuard (Prototype)",
         "title": "Prototype Assassin Droids",
         "cardType": "unit",
         "cardSubtype": "droid trooper",
@@ -13813,9 +13810,9 @@
     },
     "xe": {
         "id": "xe",
-        "cardName": "NR-N99 Persuader-class Tank Droid",
+        "cardName": "Persuader-Class Tank Droid",
         "title": "Prototype Tank Droid",
-        "displayName": "Snail Droid",
+        "displayName": "Persuader-Class Tank Droid (Prototype)",
         "cardType": "unit",
         "cardSubtype": "ground vehicle",
         "rank": "heavy",
@@ -14919,6 +14916,95 @@
         "requirements": [
             {
                 "cardName": "Aqua Droids"
+            }
+        ]
+    },
+    "Ay": {
+        "id": "Ay",
+        "cardName": "ARF Troopers",
+        "cardType": "unit",
+        "cardSubtype": "clone trooper",
+        "rank": "special",
+        "faction": "republic",
+        "cost": 66,
+        "imageName": "ARF Troopers.webp",
+        "keywords": [
+            "Observe",
+            "Scout",
+            "Low Profile",
+            "Unhindered"
+        ],
+        "upgradeBar": [
+            "squad leader",
+            "heavy weapon",
+            "personnel",
+            "comms",
+            "training",
+            "grenades"
+        ],
+        "defense": "red",
+        "surges": [],
+        "wounds": 1,
+        "courage": 2,
+        "speed": 2
+    },
+    "Az": {
+        "id": "Az",
+        "cardSubtype": "squad leader",
+        "cardName": "Jedi Guardian",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 22,
+        "imageName": "Jedi Guardian.webp",
+        "keywords": [
+            "Charge",
+            "Leader",
+            "Sidearm",
+            "Pierce",
+            "Impact"
+        ],
+        "requirements": [
+            "AND",
+            {
+                "cardSubtype": "clone trooper"
+            },
+            {
+                "rank": "special"
+            }
+        ]
+    },
+    "Ba": {
+        "id": "Ba",
+        "cardSubtype": "heavy weapon",
+        "cardName": "RPS-6 ARF Trooper",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 24,
+        "imageName": "RPS-6 ARF Trooper.webp",
+        "keywords": [
+            "Cumbersome",
+            "Impact"
+        ],
+        "requirements": [
+            {
+                "cardName": "ARF Troopers"
+            }
+        ]
+    },
+    "Bb": {
+        "id": "Bb",
+        "cardSubtype": "personnel",
+        "cardName": "ARF Troopers Duo",
+        "isUnique": false,
+        "cardType": "upgrade",
+        "cost": 26,
+        "imageName": "ARF Troopers Duo.webp",
+        "keywords": [
+            "Cache"
+        ],
+        "requirements": [
+            {
+                "cardName": "ARF Troopers"
             }
         ]
     }

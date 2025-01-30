@@ -16,6 +16,7 @@ function checkUpgradeType(upgrade, value) {
   return upgrade.cardSubtype === value;
 }
 
+// TODO see about either moving these or getting the pointDeltas to show in builder
 const interactions = {
   upgradePoints: {
     lk: {
@@ -25,7 +26,7 @@ const interactions = {
     },
     lu: {
       // Jyn's Blaster + Jyn Erso
-      isConditionMet: (list, unit) => list.uniques.includes('ae'),
+      isConditionMet: (list, unit) => list.units.map(u=>u.unitId).includes('ae'),
       pointDelta: -5
     },
     li: {

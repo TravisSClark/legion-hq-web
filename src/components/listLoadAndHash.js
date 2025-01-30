@@ -1,27 +1,30 @@
 
 import legionModes from 'constants/legionModes';
 import { consolidate } from './listOperations';
-import _ from 'lodash';
 import listTemplate from 'constants/listTemplate';
 import battleForcesDict from 'constants/battleForcesDict';
 import cards from 'constants/cards';
+import { findUnitIndexInList, getListUniques, unitHasUniques } from './eligibleCardListGetter';
 
 
 // Functions which act upon lists wholesale, rather than tweaking data inside a list
 
 function mergeLists(primaryList, secondaryList) {
   let unitsToAdd = [];
+
+  let primaryUniques = getListUniques(primaryList);
+
   for (let i = 0; i < secondaryList.units.length; i++) {
     const unit = secondaryList.units[i];
-    if (unit.hasUniques) {
-      if (primaryList.uniques.includes(unit.unitId)) continue;
+    if (unitHasUniques(unit)) {
+      if (primaryUniques.includes(unit.unitId)) continue;
       let isValid = true;
       unit.upgradesEquipped.forEach(upgradeId => {
-        if (upgradeId && primaryList.uniques.includes(upgradeId)) isValid = false;
+        if (upgradeId && primaryUniques.includes(upgradeId)) isValid = false;
       });
       if (!isValid) continue;
       unitsToAdd.push(unit);
-    } else if (primaryList.unitObjectStrings.includes(unit.unitObjectString)) {
+    } else if (findUnitIndexInList(unit, primaryList) > -1) {
       primaryList.units[i].count += unit.count;
     } else {
       unitsToAdd.push(unit);
@@ -45,9 +48,7 @@ function processUnitSegment(segment) {
   const newUnit = {
     unitId,
     count: unitCount,
-    hasUniques: unitCard.isUnique,
     totalUnitCost: unitCard.cost * unitCount,
-    unitObjectString: unitId,
     upgradesEquipped: [],
     loadoutUpgrades: [],
     additionalUpgradeSlots: []
@@ -61,7 +62,6 @@ function processUnitSegment(segment) {
       const upgradeId = upgradeSegment.charAt(i) + upgradeSegment.charAt(i + 1);
       const upgradeCard = cards[upgradeId];
       newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
-      newUnit.unitObjectString += upgradeId;
       if ('additionalUpgradeSlots' in upgradeCard) {
         newUnit.additionalUpgradeSlots = [upgradeCard.additionalUpgradeSlots[0]];
         newUnit.upgradesEquipped.push(null);
@@ -92,9 +92,7 @@ function segmentToUnitObject(unitIndex, segment) {
     counterpart = processUnitSegment(segment.split('+')[1]);
     const {
       unitId,
-      hasUniques,
       totalUnitCost,
-      unitObjectString,
       upgradesEquipped,
       loadoutUpgrades,
       additionalUpgradeSlots
@@ -102,9 +100,7 @@ function segmentToUnitObject(unitIndex, segment) {
     unit.counterpart = {
       count: 1,
       counterpartId: unitId,
-      hasUniques,
       totalUnitCost,
-      unitObjectString,
       upgradesEquipped,
       loadoutUpgrades,
       additionalUpgradeSlots
@@ -161,9 +157,6 @@ function convertHashToList(faction, url) {
   }
   try {
     list.units = unitSegments.map((segment, i) => segmentToUnitObject(i, segment));
-    list.units.forEach(unit => {
-      list.unitObjectStrings.push(unit.unitObjectString);
-    });
   } catch (e) {
     return false;
   }
@@ -172,7 +165,6 @@ function convertHashToList(faction, url) {
     otherSegments.forEach(cardId => {
       commandCardSlots -=1;
       if (cardId === '') return;
-      // if (cardId.includes('*')) {}
       const card = cards[cardId];
       if (card.cardType === 'command') {
         if (commandCardSlots > 0) {
@@ -213,8 +205,7 @@ function rehashList(list) {
     }
     unitObjectStrings.push(unitObjectString);
   }
-  list.unitObjectStrings = unitObjectStrings;
-  return list;
+  return unitObjectStrings;
 }
 
 function changeListTitle(list, title) {

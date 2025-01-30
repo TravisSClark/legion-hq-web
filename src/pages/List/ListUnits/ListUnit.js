@@ -43,6 +43,8 @@ function ListUnit({
   const {unit, unitIndex, unitCard} = useContext(UnitContext);
   const {handleCardZoom} = useContext(ListContext);
 
+  const bgColor = (unit.validationIssues && unit.validationIssues.length > 0) ? '#6e1303' : 'transparent';
+
   const upgrades = (
     <UnitUpgrades
       key="upgrades"
@@ -52,7 +54,7 @@ function ListUnit({
   );
   const flaws = unitCard.flaw ? <UnitFlaw key="flaws" flawId={unitCard.flaw} /> : undefined;
   return (
-    <div className={classes.unitColumn}>
+    <div className={classes.unitColumn} style={{backgroundColor: bgColor, borderRadius:10}}>
       <div className={classes.unitRow}>
         <div className={classes.leftCell}>
           <div style={{ marginTop: 2 }} />

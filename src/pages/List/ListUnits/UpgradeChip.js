@@ -113,7 +113,6 @@ function UpgradeAvatar({ card, handleClick }) {
 
 function UpgradeChip({
   chipSize = 'medium',
-  upgradeInteractions,
   upgradeId,
   loadoutId,
   handleClick,
@@ -129,8 +128,8 @@ function UpgradeChip({
   const upgradeType = totalUpgradeBar[upgradeIndex];
 
   let pointDelta = 0;
-  if (upgradeInteractions && upgradeId in upgradeInteractions) {
-    pointDelta = upgradeInteractions[upgradeId];
+  if (unit.upgradeInteractions && upgradeId in unit.upgradeInteractions) {
+    pointDelta = unit.upgradeInteractions[upgradeId];
   }
   const hasLoadout = unit.loadoutUpgrades.length > 0;
 
@@ -158,7 +157,6 @@ function UpgradeChip({
           handleSwapUpgrade={() => setCardPaneFilter({
             action: actionPrefix+'_UPGRADE',
             upgradeType, unitIndex, upgradeIndex,
-            hasUniques: unit.hasUniques,
             unitId: unitCard.id,
             upgradesEquipped: unit.upgradesEquipped,
             additionalUpgradeSlots: unit.additionalUpgradeSlots

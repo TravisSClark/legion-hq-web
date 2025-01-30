@@ -10,6 +10,7 @@ import {
 } from '@material-ui/icons';
 import { Icon as IconifyIcon } from '@iconify/react';
 import ListContext from 'context/ListContext';
+import { unitHasUniques } from 'components/eligibleCardListGetter';
 
 const useStyles = makeStyles(theme => ({
   buttons: {
@@ -104,9 +105,12 @@ function UnitActions({
       );
     }
   } else {
+
+    let hasUniques = unitHasUniques(unit);
+
     return(
       <div className={classes.buttons}>
-        {!unit.hasUniques && !isCounterpart ? (
+        {!hasUniques && !isCounterpart ? (
           <React.Fragment>
             <IconButton
               size="small"

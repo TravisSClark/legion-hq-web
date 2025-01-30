@@ -2,12 +2,14 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import cards from 'constants/cards';
 
-function CardName({ id, variant = 'body1' }) {
+function CardName({ id}) {
   const card = cards[id];
   return (
-    <Typography variant={variant}>
-      {card.displayName ? card.displayName : card.cardName}
-    </Typography>
+    <div style={{display:'flex', flexDirection:'row', justifyContent:'flex-start'}}>
+      <Typography style={{flex:1}}>
+        {card.displayName ? card.displayName : card.cardName} ({card.cost})
+      </Typography>
+    </div>
   );
 };
 

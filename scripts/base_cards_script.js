@@ -1,13 +1,21 @@
 /**
  * Basically, a rat's nest of code snippets used to manipulate and extract data from cards.json
+ * Most of this is defunct from grabnar's "Legion Listbuilder" offshoot, and was used to pull down cards and etc
  * 
  * TODO TODO split this file up and then remove/rename it
+ * + TTS check script
+ * + internal cards_json_validator
+ * X Script for pulling in a particular .csv with updated unit/weapon keywords to update cards.json with correct data + weapon profiles
+ * 
  * 
  * (ie, tts_check was already derived from this, probably want another "do our cards make sense re IDs, schemas, keywords, and etc?" script
  *  to  run at build time, plus an occasional "rewrite cards.json with consistent field order and ditch obsolete fields" script)
  */
 
 const fs = require('node:fs');
+
+
+//let data = await fs.readFile('../src/constants/cards.json', 'utf8')
 
 fs.readFile('./cards.js', 'utf8', (err, data) => {
   if (err) {

@@ -35,18 +35,15 @@ function generateLink(list) {
   });
   list.commandCards.forEach(commandId => urlStrings.push(commandId));
 
-  if (list.commandCards.length < 6) {
-    for (let i = 0; i < 6 - list.commandCards.length; i++) {
-      urlStrings.push('');
-    }
-  }
   if (list.contingencies)
     list.contingencies.forEach(commandId => urlStrings.push(commandId));
 
-  list.primaryCards.forEach(i => urlStrings.push(i));
-  list.secondaryCards.forEach(i => urlStrings.push(i));
-  list.advantageCards.forEach(i => urlStrings.push(i));
-  
+  [list.primaryCards, list.secondaryCards, list.advantageCards].forEach(bArray=>{
+    bArray.forEach(id=>{
+      if(id) urlStrings.push(id);
+    });
+  });
+
   if (list.battleForce) {
     let bf = battleForcesDict[list.battleForce];
 

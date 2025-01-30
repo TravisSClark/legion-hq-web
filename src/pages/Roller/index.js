@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
 import { makeStyles, Typography } from '@material-ui/core';
-import Alert from '@material-ui/lab/Alert';
 import ControlPanel from './ControlPanel';
-import ResultPanel from './ResultPanel';
 import AttackDie from './AttackDie';
 
 const useStyles = makeStyles(theme => ({

@@ -1,15 +1,10 @@
 import fs from 'fs-extra';
 import path from 'path';
 
-// import buildDeckSchema  from "../tts/src/lib/generate-deck-schema";
-
-
 async function readJson(inJson) {
     const ttsJson = await fs.readJson(inJson);
     return ttsJson;
 }
-
-
 
 function toKey(name){
     return name.toUpperCase();
