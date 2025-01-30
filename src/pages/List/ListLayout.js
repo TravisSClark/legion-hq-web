@@ -66,28 +66,28 @@ function ListLayout() {
     </Grid>
   );
 
-  builderPane = leftPaneWidth > 0 && (
-    <Grid item xs={leftPaneWidth} style={paneStyles}>
-      <div id="list-content">
-        <div style={stickyStyles}>
-          <ListHeader />
-          <ListExtras />
-          <div style={{ marginTop: 8 }} />
-        </div>
-        <ListUnits />
-        <Divider style={{ marginBottom: 4 }} />
-        <ListCommands />
-        <Divider style={{ marginBottom: 4 }} />
-        <ListContingencies />
-        <Divider style={{ marginBottom: 4 }} />
-        <ListObjectives />
-      </div>
-      <Divider style={{ marginBottom: 4 }} />
-      <RankSelector />
-      <ListId />
-      <div style={{ marginTop: 24 }} />
-    </Grid>
-  );
+  // builderPane = leftPaneWidth > 0 && (
+  //   <Grid item xs={leftPaneWidth} style={paneStyles}>
+  //     <div id="list-content">
+  //       <div style={stickyStyles}>
+  //         <ListHeader />
+  //         <ListExtras />
+  //         <div style={{ marginTop: 8 }} />
+  //       </div>
+  //       <ListUnits />
+  //       <Divider style={{ marginBottom: 4 }} />
+  //       <ListCommands />
+  //       <Divider style={{ marginBottom: 4 }} />
+  //       <ListContingencies />
+  //       <Divider style={{ marginBottom: 4 }} />
+  //       <ListObjectives />
+  //     </div>
+  //     <Divider style={{ marginBottom: 4 }} />
+  //     <RankSelector />
+  //     <ListId />
+  //     <div style={{ marginTop: 24 }} />
+  //   </Grid>
+  // );
 
   const cardPane = rightPaneWidth > 0 && (
     <Grid item xs={rightPaneWidth} style={paneStyles}>

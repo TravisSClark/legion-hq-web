@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import {
@@ -22,6 +22,7 @@ import KeywordChips from 'common/KeywordChips';
 import CardIcon from 'common/CardIcon';
 import IconBadge from 'common/IconBadge';
 import UpgradeBar from 'common/UpgradeBar';
+import ListContext from 'context/ListContext';
 
 function capitalizeFirstLetters(words) {
   const strings = words.split(' ').map(string => {
@@ -39,7 +40,7 @@ const useStyles = makeStyles(theme => ({
     }),
   },
   expandOpen: { transform: 'rotate(180deg)' },
-  card: { width: 315, marginRight: 4, marginBottom: 4 }
+  card: { width: '100%', marginRight: 4, marginBottom: 4 }
 }));
 
 function ReverseWrapper({ children }) {
@@ -55,40 +56,9 @@ function ReverseWrapper({ children }) {
   );
 }
 
-function TextCardHeader({ card, handleClick }) {
-  if (card.cardType === 'unit') {
-    return <UnitCardHeader card={card} handleClick={handleClick} />;
-  } else if (card.cardType === 'upgrade') {
-    return <UpgradeCardHeader card={card} handleClick={handleClick} />;
-  } else if (card.cardType === 'counterpart') {
-    return <CounterpartCardHeader card={card} handleClick={handleClick} />;
-  } else if (card.cardType === 'command') {
-    return <CommandCardHeader card={card} handleClick={handleClick} />;
-  } else if (card.cardType === 'battle') {
-    return <BattleCardHeader card={card} handleClick={handleClick} />;
-  } else {
-    return null;
-  }
-}
-
-function TextCardContent({ card, chipSize }) {
-  if (card.cardType === 'unit') {
-    return <UnitCardContent card={card} chipSize={chipSize} />;
-  } else if (card.cardType === 'upgrade') {
-    return <UpgradeCardContent card={card} chipSize={chipSize} />;
-  } else if (card.cardType === 'counterpart') {
-    return <CounterpartCardContent card={card} chipSize={chipSize} />;
-  } else if (card.cardType === 'command') {
-    return <CommandCardContent card={card} chipSize={chipSize} />;
-  } else if (card.cardType === 'battle') {
-    return <BattleCardContent card={card} chipSize={chipSize} />;
-  } else {
-    return null;
-  }
-}
-
 function CounterpartCardHeader({ card, handleClick }) {
   const { isUnique, displayName, cardName } = card;
+
   const avatar = (
     <CardIcon
       card={card}
@@ -130,9 +100,14 @@ function BattleCardHeader({ card, handleClick }) {
 
 function CommandCardHeader({ card, handleClick }) {
   const { cardName, cardType } = card;
+  const{handleCardZoom} = useContext(ListContext);
+
   const avatar = (
     <CardIcon
       card={card}
+      handleClick={()=>{
+        handleCardZoom(card.id)
+      }}
     />
   );
   const action = (
@@ -140,11 +115,18 @@ function CommandCardHeader({ card, handleClick }) {
       <AddIcon />
     </IconButton>
   );
+
+  let pips = '';
+  const subtypeInt = parseInt(card.cardSubtype);
+  for(let i=0; subtypeInt && i<subtypeInt; i++){
+    pips += '•';
+  }
+
   return (
     <CardHeader
       avatar={avatar}
-      title={cardName}
-      subheader={capitalizeFirstLetters(cardType)}
+      title={pips + " " + cardName}
+      // subheader={capitalizeFirstLetters(cardType)}
       action={action}
       style={{ padding: 8 }}
     />
@@ -232,18 +214,18 @@ function CounterpartCardContent({ card, chipSize }) {
 
 function CommandCardContent({ card, chipSize }) {
   const { cardSubtype } = card;
-  return (
-    <CardContent style={{ padding: 8, textAlign: 'right' }}>
-      <ReverseWrapper>
-        <Typography variant="body2" color="textSecondary">
-          Pips
-        </Typography>
-        <div style={{ flexGrow: 1 }} />
-        <Typography variant="body1" style={{ marginRight: 16 }}>
-          {cardSubtype}
-        </Typography>
-      </ReverseWrapper>
-    </CardContent>
+  return (null
+    // <CardContent style={{ padding: 8, textAlign: 'right' }}>
+    //   <ReverseWrapper>
+    //     <Typography variant="body2" color="textSecondary">
+    //       Pips
+    //     </Typography>
+    //     <div style={{ flexGrow: 1 }} />
+    //     <Typography variant="body1" style={{ marginRight: 16 }}>
+    //       {cardSubtype}
+    //     </Typography>
+    //   </ReverseWrapper>
+    // </CardContent>
   );
 }
 
@@ -369,23 +351,78 @@ function TextCard({ card, handleClick, handleCardZoom }) {
   const classes = useStyles();
   const [isExpanded, setIsExpanded] = React.useState(false);
   const handleExpandClick = () => setIsExpanded(!isExpanded);
+
+  let cardContents = null;
+  let showActions = true;
+
+
+  switch(card.cardType){
+    case 'unit':
+      cardContents = (
+        <div>
+          <UnitCardHeader card={card} handleClick={handleClick} />
+          <UnitCardContent card={card} chipSize={chipSize} />
+        </div>
+      );
+      break;
+    case 'upgrade':
+      cardContents = (
+        <div>
+          <UpgradeCardHeader card={card} handleClick={handleClick} />
+          <UpgradeCardContent card={card} chipSize={chipSize} />
+        </div>
+      );
+      break;
+    case 'counterpart':
+      cardContents = (
+        <div>
+          <CounterpartCardHeader card={card} handleClick={handleClick} />
+          <CounterpartCardContent card={card} chipSize={chipSize} />
+        </div>
+      );
+      break;
+    case 'command':
+      cardContents = (
+        <div>
+          <CommandCardHeader card={card} handleClick={handleClick} />
+          <CommandCardContent card={card} chipSize={chipSize} />
+        </div>
+      );
+      showActions = false;
+      break;
+    case 'battle':
+      cardContents = (
+        <div>
+          <BattleCardHeader card={card} handleClick={handleClick} />
+          <BattleCardContent card={card} chipSize={chipSize} />
+        </div>
+      );
+      break;
+  }
+
   return (
     <Grow unmountOnExit in={true}>
       <Card className={classes.card}>
-        <TextCardHeader card={card} handleClick={handleClick} />
-        <TextCardContent card={card} chipSize={chipSize} />
-        <TextCardActions
-          card={card}
-          chipSize={chipSize}
-          isExpanded={isExpanded}
-          handleExpandClick={handleExpandClick}
-        />
-        <TextCardCollapsedContent
-          card={card}
-          isExpanded={isExpanded}
-          chipSize={chipSize}
-          handleCardZoom={handleCardZoom}
-        />
+        {/* <TextCardHeader card={card} handleClick={handleClick} />
+        <TextCardContent card={card} chipSize={chipSize} /> */}
+        {cardContents}
+        
+        { showActions &&
+          <TextCardActions
+            card={card}
+            chipSize={chipSize}
+            isExpanded={isExpanded}
+            handleExpandClick={handleExpandClick}
+          /> 
+        }
+        { showActions &&
+          <TextCardCollapsedContent
+            card={card}
+            isExpanded={isExpanded}
+            chipSize={chipSize}
+            handleCardZoom={handleCardZoom}
+          />
+        }
       </Card>
     </Grow>
   );

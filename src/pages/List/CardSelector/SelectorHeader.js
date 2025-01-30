@@ -2,7 +2,7 @@ import React from 'react';
 import { Paper, IconButton } from '@material-ui/core';
 import { Clear as ClearIcon } from '@material-ui/icons';
 
-function SelectorHeader({ headerContent, cardPaneFilter, setCardPaneFilter }) {
+function SelectorHeader({ headerContent, setCardPaneFilter, moreHeaderContent }) {
   const sticky = {
     top: 0,
     zIndex: 1,
@@ -11,16 +11,20 @@ function SelectorHeader({ headerContent, cardPaneFilter, setCardPaneFilter }) {
     alignItems: 'center',
     padding: '8px 16px',
     justifyContent: 'space-between',
-    position: '-webkit-sticky',
-    position: 'sticky'
+    position: 'sticky',
+    width:'100%'
   };
   return (
     <Paper style={sticky}>
-      {headerContent}
-      <div style={{ flexGrow: 1 }} />
-      <IconButton onClick={() => setCardPaneFilter({ action: 'DISPLAY' })}>
-        <ClearIcon />
-      </IconButton>
+      <div style={{flexDirection:'column', width:'100%'}}>
+        <div style={{display:'flex', flex:1, alignItems:'center', flexDirection:'row', justifyContent:'space-between'}}>
+          {headerContent}
+          <IconButton onClick={() => setCardPaneFilter({ action: 'DISPLAY' })}>
+            <ClearIcon />
+          </IconButton>
+        </div>
+        {moreHeaderContent}
+      </div>
     </Paper>
   );
 }
