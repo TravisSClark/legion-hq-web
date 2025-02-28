@@ -26,7 +26,7 @@ const battleForcesDict = {
         support: [1, 4],
         heavy: [0, 2]
       },
-      '500-point mode': {
+      '600-point mode': {
         commOp: 3,
 
         commander: [1, 3],
@@ -66,7 +66,7 @@ const battleForcesDict = {
         support: [0, 0],
         heavy: [0, 1]
       },
-      '500-point mode': {
+      '600-point mode': {
         commOp: 4,
 
         commander: [1, 4],
@@ -103,7 +103,7 @@ const battleForcesDict = {
         support: [1, 4],
         heavy: [0, 2]
       },
-      '500-point mode': {
+      '600-point mode': {
         commander: [1, 2],
         operative: [0, 0],
         corps: [2, 4],
@@ -141,7 +141,7 @@ const battleForcesDict = {
       support: [0, 2],
       heavy: [0, 2]
     },
-    '500-point mode': {
+    '600-point mode': {
       // commOp: 2,
 
       commander: [1, 2],
@@ -173,7 +173,7 @@ const battleForcesDict = {
       support: [0, 3],
       heavy: [0, 3]
     },
-    '500-point mode': {
+    '600-point mode': {
       commander: [1, 2],
       operative: [0, 0],
       corps: [1, 2],
@@ -203,7 +203,7 @@ const battleForcesDict = {
         support: [1, 2],
         heavy: [0, 1]
       },
-      '500-point mode': {
+      '600-point mode': {
         commander: [1, 1],
         operative: [0, 0],
         corps: [1, 4],
@@ -242,7 +242,7 @@ const battleForcesDict = {
         support: [0, 3],
         heavy: [0, 1]
       },
-      '500-point mode': {
+      '600-point mode': {
         commander: [1, 2],
         operative: [0, 0],
         corps: [2, 4],
@@ -275,7 +275,7 @@ const battleForcesDict = {
         support: [0, 3],
         heavy: [1, 2]
       },
-      '500-point mode': {
+      '600-point mode': {
         commander: [1, 1],
         operative: [0, 1],
         corps: [2, 6],
@@ -314,7 +314,7 @@ const battleForcesDict = {
         support: [0, 3],
         heavy: [0, 2]
       },
-      '500-point mode': {
+      '600-point mode': {
         commander: [1, 2],
         operative: [0, 0],
         corps: [2, 4],
@@ -351,7 +351,7 @@ const battleForcesDict = {
         support: [0, 3],
         heavy: [0, 2]
       },
-      '500-point mode': {
+      '600-point mode': {
         commOp: 2,
 
         commander: [1, 2],

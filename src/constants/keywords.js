@@ -268,7 +268,7 @@ const keywords = {
 	"Shield Token": "While defending against a ranged attack, during the Apply Dodge and Cover step, a unit may flip any number of active shield tokens. For each shield token flipped this way, the defender cancels 1 hit or crit result.",
 	"Shielded": "You have X shield tokens",
 	"Sidearm": "While performing an attack, this mini can only use the weapon on this upgrade card if the attack type matches X.",
-	"Skirmish": "Intended for use in Skirmish matches.",
+	"Recon": "Intended for use in Recon matches.",
 	"Small": "While defending against a non-area ranged attack, ignore this mini.",
 	"Smoke": "Place X smoke token(s) within range 1 and in LOS of your unit leader.",
 	"Soresu Mastery": "While defending agains a ranged attack, it may reroll all of its defense dice during the Reroll Defense Dice step. Additionally, when using the Guardian X keyword, it may spend one dodge token before converitng any surges. If it does, it rerolls all of its defense dice before converting surges. Each die cannot be rerolled more than once.",

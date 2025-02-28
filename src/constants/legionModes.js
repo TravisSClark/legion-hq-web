@@ -1,7 +1,7 @@
 const legionModes = {
-  '500-point mode': {
-    name: 'Skirmish',
-    maxPoints: 500,
+  '600-point mode': {
+    name: 'Recon',
+    maxPoints: 600,
     rankReqs: {
       commander: [1, 1],
       operative: [0, 1],

@@ -279,8 +279,8 @@ function generateTTSJSONText(list) {
   ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };
   // ttsJSON.battlefieldDeck = { objective: [], secondary: [], advantage: [] };
   
-  if (list.mode === "500-point mode") {
-    ttsJSON.battlefieldDeck.scenario =  "skirmish";
+  if (list.mode === "600-point mode") {
+    ttsJSON.battlefieldDeck.scenario =  "recon";
   } else if (list.mode.includes("storm tide")) {
     ttsJSON.battlefieldDeck.scenario = "community"
   } else {
