@@ -138,24 +138,23 @@ function Home() {
                 <Grid item key="factionChip">
                   <FactionChip faction={faction} />
                 </Grid>
-                {listChips[faction].length > 4 ? (
+                {listChips[faction].slice(0, 3).map(userList => (
+                  <Grid item key={userList.listId}>
+                    <ListChip userList={userList} deleteUserList={deleteUserList} />
+                  </Grid>
+                ))}
+                {listChips[faction].length > 3 ? (
                   <ListChipDropdown
-                    faction={faction}
-                    chips={
-                      listChips[faction].map(userList => (
-                        <Grid item key={userList.listId}>
-                          <ListChip userList={userList} deleteUserList={deleteUserList} />
-                        </Grid>
-                      ))
-                    }
-                  />
-                ) : (
-                  listChips[faction].map(userList => (
-                    <Grid item key={userList.listId}>
-                      <ListChip userList={userList} deleteUserList={deleteUserList} />
-                    </Grid>
-                  ))
-                )}
+                      faction={faction}
+                      chips={
+                        listChips[faction].slice(3, listChips[faction].length).map(userList => (
+                          <Grid item key={userList.listId}>
+                            <ListChip userList={userList} deleteUserList={deleteUserList} />
+                          </Grid>
+                        ))
+                      }
+                    />
+                  ):(<></>)}
               </Grid>
             ))}
             <Grid item>

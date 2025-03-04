@@ -112,6 +112,18 @@ const PrintListImages = React.forwardRef(( props, ref) => {
         );
       });
     });
+    currentList.commandCards.forEach((commandId, i) => {
+      const commandCard = cards[commandId];
+    });
+    currentList.primaryCards.forEach((primaryId, i) => {
+      const primaryCard = cards[primaryId];
+    });
+    currentList.secondaryCards.forEach((secondaryId, i) => {
+      const secondaryCard = cards[secondaryId];
+    });
+    currentList.advantageCards.forEach((advantageId, i) => {
+      const advantageCard = cards[advantageId];
+    });
     // Need to do something similar as above for commands and battle cards
 
     return (
