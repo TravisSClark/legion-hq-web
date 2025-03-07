@@ -1,22 +1,22 @@
 {
-  "short_name": "Legion HQ",
-  "name": "Legion HQ - Crit2Block",
+  "short_name": "Legion HQ 2",
+  "name": "Legion HQ 2 - Crit2Block",
   "description": "An unofficial tool and resource for Atomic Mass Games: Star Wars: Legion.",
   "icons": [
     {
-      "src": "/favicon.ico",
-      "type": "image/x-icon",
+      "src": "/lhqIcon.svg",
+      "type": "image/svg",
       "sizes": "64x64 32x32 24x24 16x16"
     },
     {
-      "src": "/favicon192.png",
-      "type": "image/png",
+      "src": "/lhqIcon.svg",
+      "type": "image/svg",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "/favicon512.png",
-      "type": "image/png",
+      "src": "/lhqIcon.svg",
+      "type": "image/svg",
       "sizes": "512x512",
       "purpose": "any maskable"
     }

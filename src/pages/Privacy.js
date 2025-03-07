@@ -18,7 +18,7 @@ function Privacy() {
               <p>Effective date: March 28, 2021</p>
 
 
-              <p>Legion HQ ("us", "we", or "our") operates the https://legionhq2.com/ website (hereinafter referred to as the "Service").</p>
+              <p>Legion HQ 2 ("us", "we", or "our") operates the https://legionhq2.com/ website (hereinafter referred to as the "Service").</p>
 
               <p>This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data. The Privacy Policy  for Legion HQ has been created with the help of <a href="https://www.termsfeed.com/privacy-policy-generator/">Privacy Policy Generator</a>.</p>
 
