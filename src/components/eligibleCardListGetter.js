@@ -334,7 +334,7 @@ function getEligibleBattlesToAdd(list, type) {
     if (currentCards.length >= 3) {
       invalidIds.push(id);
     }
-    else if (list.mode === '600-point mode') {
+    else if (list.mode === '500-point mode') {
       if (card.keywords.includes('Recon')) validIds.push(id);
       else invalidIds.push(id);
     } else {

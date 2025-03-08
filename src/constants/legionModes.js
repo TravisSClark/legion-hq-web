@@ -1,5 +1,5 @@
 const legionModes = {
-  '600-point mode': {
+  '500-point mode': {
     name: 'Recon',
     maxPoints: 600,
     rankReqs: {
