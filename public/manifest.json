@@ -4,18 +4,18 @@
   "description": "An unofficial tool and resource for Atomic Mass Games: Star Wars: Legion.",
   "icons": [
     {
-      "src": "/lhqIcon.svg",
+      "src": "/favicon.svg",
       "type": "image/svg",
       "sizes": "64x64 32x32 24x24 16x16"
     },
     {
-      "src": "/lhqIcon.svg",
+      "src": "/favicon.svg",
       "type": "image/svg",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
     {
-      "src": "/lhqIcon.svg",
+      "src": "/favicon.svg",
       "type": "image/svg",
       "sizes": "512x512",
       "purpose": "any maskable"

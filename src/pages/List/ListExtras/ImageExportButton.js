@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import domtoimage from 'dom-to-image-more';
 import { Chip } from '@material-ui/core';
 import { Image as ImageIcon } from '@material-ui/icons';
-import lhqIcon from 'assets/lhqIcon.svg';
+import favicon from 'assets/favicon.svg';
 import DialogModal from './DialogModal';
 
 function ImageExport({ currentList }) {
@@ -18,7 +18,7 @@ function ImageExport({ currentList }) {
   if (!listSrc) {
     const list = document.getElementById('list-content');
     domtoimage.toJpeg(list, options).then(src => setListSrc(src));
-    return <img alt="loading" className="pulse" src={lhqIcon} />;
+    return <img alt="loading" className="pulse" src={favicon} />;
   }
   return <img alt="list" src={listSrc} style={{ width: '100%' }} />;
 }

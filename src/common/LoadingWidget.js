@@ -1,6 +1,6 @@
 import React from 'react';
 import Fade from '@material-ui/core/Fade';
-import lhqIcon from 'assets/lhqIcon.svg';
+import favicon from 'assets/favicon.svg';
 
 function LoadingWidget() {
   return (
@@ -13,7 +13,7 @@ function LoadingWidget() {
           transform: 'translate(-50%, -50%)'
         }}
       >
-        <img alt="Loading..." className="pulse" src={lhqIcon} />
+        <img alt="Loading..." className="pulse" src={favicon} />
       </div>
     </Fade>
   );
