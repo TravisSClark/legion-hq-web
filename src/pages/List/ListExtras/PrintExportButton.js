@@ -112,6 +112,21 @@ const PrintListImages = React.forwardRef(( props, ref) => {
         );
       });
       units.push(<div></div>)
+      if (unit.counterpart) {
+        if (!unit.counterpart.counterpartId) return;
+        const counterpartCard = cards[unit.counterpart.counterpartId];
+        // Need to actually use this somewhere
+        const counterpartImage = `${urls.cdn}/${counterpartCard.cardType}Cards/${counterpartCard.imageName}`;
+        units.push(
+          <div>
+            <img
+              alt={counterpartCard.cardName}
+              src={counterpartImage}
+              style={{ height: '200px', width: 'auto' }}
+            />
+          </div>
+        );
+      }
     });
     currentList.commandCards.forEach((commandId, i) => {
       const commandCard = cards[commandId];
