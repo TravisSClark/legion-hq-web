@@ -120,7 +120,7 @@ const PrintListImages = React.forwardRef(( props, ref) => {
         <img
           alt={commandCard.cardName}
           src={commandImage}
-          style={{ height: '200px', width: 'auto' }}
+          style={{ height: '280px', width: 'auto' }}
         />
       );
     });
@@ -131,7 +131,7 @@ const PrintListImages = React.forwardRef(( props, ref) => {
         <img
           alt={primaryCard.cardName}
           src={primaryImage}
-          style={{ height: '200px', width: 'auto' }}
+          style={{ height: '280px', width: 'auto' }}
         />
       );
     });
@@ -142,7 +142,7 @@ const PrintListImages = React.forwardRef(( props, ref) => {
         <img
           alt={secondaryCard.cardName}
           src={secondaryImage}
-          style={{ height: '200px', width: 'auto' }}
+          style={{ height: '280px', width: 'auto' }}
         />
       );
     });
@@ -153,7 +153,7 @@ const PrintListImages = React.forwardRef(( props, ref) => {
         <img
           alt={advantageCard.cardName}
           src={advantageImage}
-          style={{ height: '210px', width: 'auto' }}
+          style={{ height: '280px', width: 'auto' }}
         />
       );
     });
@@ -169,9 +169,8 @@ const PrintListImages = React.forwardRef(( props, ref) => {
           justifyContent: 'space-evenly'
         }}
       >
-        <div>{units}</div>
-        <div style={{pageBreakAfter: 'always'}}></div>
-        <div>{commands}</div>
+        <div style={{pageBreakAfter: 'always'}}>{units}</div>
+        <div style={{pageBreakAfter: 'always'}}>{commands}</div>
         <div>{primaries}</div>
         <div>{secondaries}</div>
         <div>{advantages}</div>
