@@ -117,11 +117,11 @@ function BattleCardHeader({ card, handleClick }) {
       <AddIcon />
     </IconButton>
   );
-  const isSkirmish = card.keywords.includes('Skirmish');
+  const isRecon = card.keywords.includes('Recon');
   return (
     <CardHeader
       title={cardName}
-      subheader={capitalizeFirstLetters(cardType) + 'Card' + isSkirmish ? '(Skirmish)' : ''}
+      subheader={capitalizeFirstLetters(cardType) + 'Card' + isRecon ? '(Recon)' : ''}
       action={action}
       style={{ padding: 8 }}
     />

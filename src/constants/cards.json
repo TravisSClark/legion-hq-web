@@ -8248,6 +8248,7 @@
         "imageName": "Anakin Skywalker.webp",
         "keywords": [
             "Jump",
+            "Deflect",
             "Charge",
             "Djem So Mastery",
             "Immune",
@@ -14809,7 +14810,7 @@
 		"cardName": "Bunker Assault",
 		"cardType": "battle",
 		"imageName": "skirmish-Bunker Assault.webp",
-		"keywords": ["Skirmish"]
+		"keywords": ["Recon"]
 	},
 	"Ao": {
         "id": "Ao",
@@ -14817,7 +14818,7 @@
 		"cardName": "Close the Pocket",
 		"cardType": "battle",
 		"imageName": "skirmish-Close the Pocket.webp",
-		"keywords": ["Skirmish"]
+		"keywords": ["Recon"]
 	},
 	"Ap": {
         "id": "Ap",
@@ -14825,7 +14826,7 @@
 		"cardName": "Intercept Signals",
 		"cardType": "battle",
 		"imageName": "skirmish-Intercept the Signals.webp",
-		"keywords": ["Skirmish"]
+		"keywords": ["Recon"]
 	},
     "Aq": {
         "id": "Aq",
@@ -14833,7 +14834,7 @@
 		"cardName": "Bring Them to Heel",
 		"cardType": "battle",
 		"imageName": "skirmish-Bring Them to Heel.webp",
-		"keywords": ["Skirmish"]
+		"keywords": ["Recon"]
 	},
 	"Ar": {
         "id": "Ar",
@@ -14841,7 +14842,7 @@
 		"cardName": "Recon Mission",
 		"cardType": "battle",
 		"imageName": "skirmish-Recon Mission.webp",
-		"keywords": ["Skirmish"]
+		"keywords": ["Recon"]
 	},
 	"As": {
         "id": "As",
@@ -14849,7 +14850,7 @@
 		"cardName": "Surface Scan",
 		"cardType": "battle",
 		"imageName": "skirmish-Surface Scan.webp",
-		"keywords": ["Skirmish"]
+		"keywords": ["Recon"]
 	},
     "At": {
         "id": "At",
@@ -14857,7 +14858,7 @@
 		"cardName": "Advanced Intel",
 		"cardType": "battle",
 		"imageName": "skirmish-Advanced Intel.webp",
-		"keywords": ["Skirmish"]
+		"keywords": ["Recon"]
 	},
 	"Au": {
         "id": "Au",
@@ -14865,7 +14866,7 @@
 		"cardName": "Cunning Deployment",
 		"cardType": "battle",
 		"imageName": "skirmish-Cunning Deployment.webp",
-		"keywords": ["Skirmish"]
+		"keywords": ["Recon"]
 	},
 	"Av": {
         "id": "Av",
@@ -14873,7 +14874,7 @@
 		"cardName": "Fortified Position",
 		"cardType": "battle",
 		"imageName": "skirmish-Fortified Position.webp",
-		"keywords": ["Skirmish"]
+		"keywords": ["Recon"]
 	},
     "Aw": {
         "id": "Aw",
@@ -14995,11 +14996,11 @@
     "Bb": {
         "id": "Bb",
         "cardSubtype": "personnel",
-        "cardName": "ARF Troopers Duo",
+        "cardName": "ARF Trooper Duo",
         "isUnique": false,
         "cardType": "upgrade",
         "cost": 26,
-        "imageName": "ARF Troopers Duo.webp",
+        "imageName": "ARF Trooper Duo.webp",
         "keywords": [
             "Cache"
         ],

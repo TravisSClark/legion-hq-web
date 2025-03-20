@@ -189,7 +189,7 @@ const battleForcesDict = {
       commander: ['na', 'fy', 'ns'],
       operative: [],
       corps: ['fz'],
-      special: ['kz', 'ky'],
+      special: ['kz', 'ky', 'Ay'],
       support: ['mb', 'ic', 'xj', 'xp'],
       heavy: ['oo'],
       allowedUniqueUpgrades: ['lh', 'lg'],

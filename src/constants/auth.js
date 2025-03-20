@@ -1,7 +1,7 @@
 const auth = {
   v1: {
     domain: 'dev-7x3ata5x3bauon0d.us.auth0.com',
-    audience: 'dev-7x3ata5x3bauon0d.us.auth0.com/userinfo',
+    audience: 'https://legionhq2-auth0',
     clientID: 'udjx2TtB49l1FM6UdWpABXFwG7D7bEk3'
   },
   dev: {

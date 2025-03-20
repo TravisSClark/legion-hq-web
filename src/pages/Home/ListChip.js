@@ -51,7 +51,7 @@ function ListChip({ userList, deleteUserList }) {
               ) : undefined}
               label={(
                 <Typography variant="subtitle1">
-                  {userList.title.length > 20 ? `${userList.title}...` : userList.title}
+                  {userList.title.length > 64 ? `${userList.title}...` : userList.title}
                 </Typography>
               )}
               onClick={() => goToPage(`/list/${userList.listId}`)}

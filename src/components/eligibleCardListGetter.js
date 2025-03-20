@@ -335,10 +335,10 @@ function getEligibleBattlesToAdd(list, type) {
       invalidIds.push(id);
     }
     else if (list.mode === '500-point mode') {
-      if (card.keywords.includes('Skirmish')) validIds.push(id);
+      if (card.keywords.includes('Recon')) validIds.push(id);
       else invalidIds.push(id);
     } else {
-      if (card.keywords.includes('Skirmish')) invalidIds.push(id);
+      if (card.keywords.includes('Recon')) invalidIds.push(id);
       else validIds.push(id);
     }
   });

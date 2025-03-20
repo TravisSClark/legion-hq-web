@@ -21,8 +21,8 @@ import ListChipDropdown from './ListChipDropdown';
 import DataContext from 'context/DataContext';
 import ErrorFallback from 'common/ErrorFallback';
 import factions from 'constants/factions';
-import lhqLogoLight from 'assets/lhqLogoLight.png';
-import lhqLogoDark from 'assets/lhqLogoDark.png';
+import lhqLogoLight from 'assets/lhqLogoLight.svg';
+import lhqLogoDark from 'assets/lhqLogoDark.svg';
 
 const useStyles = makeStyles(theme => ({
   expand: {
@@ -89,7 +89,7 @@ function Home() {
           >
             <Grid item>
               <img
-                alt="Legion HQ Logo"
+                alt="Legion HQ 2 Logo"
                 src={userSettings.themeColor === 'light' ? lhqLogoLight : lhqLogoDark}
                 style={{ width: 400, height: 'auto' }}
               />
@@ -138,24 +138,23 @@ function Home() {
                 <Grid item key="factionChip">
                   <FactionChip faction={faction} />
                 </Grid>
-                {listChips[faction].length > 4 ? (
+                {listChips[faction].slice(0, 3).map(userList => (
+                  <Grid item key={userList.listId}>
+                    <ListChip userList={userList} deleteUserList={deleteUserList} />
+                  </Grid>
+                ))}
+                {listChips[faction].length > 3 ? (
                   <ListChipDropdown
-                    faction={faction}
-                    chips={
-                      listChips[faction].map(userList => (
-                        <Grid item key={userList.listId}>
-                          <ListChip userList={userList} deleteUserList={deleteUserList} />
-                        </Grid>
-                      ))
-                    }
-                  />
-                ) : (
-                  listChips[faction].map(userList => (
-                    <Grid item key={userList.listId}>
-                      <ListChip userList={userList} deleteUserList={deleteUserList} />
-                    </Grid>
-                  ))
-                )}
+                      faction={faction}
+                      chips={
+                        listChips[faction].slice(3, listChips[faction].length).map(userList => (
+                          <Grid item key={userList.listId}>
+                            <ListChip userList={userList} deleteUserList={deleteUserList} />
+                          </Grid>
+                        ))
+                      }
+                    />
+                  ):(<></>)}
               </Grid>
             ))}
             <Grid item>

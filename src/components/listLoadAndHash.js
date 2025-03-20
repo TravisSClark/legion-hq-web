@@ -209,7 +209,7 @@ function rehashList(list) {
 }
 
 function changeListTitle(list, title) {
-  return { ...list, title: title.substring(0, 30) };
+  return { ...list, title: title.substring(0, 64) };
 }
 
 function setListMode(list, mode) {

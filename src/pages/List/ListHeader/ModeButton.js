@@ -53,7 +53,7 @@ function ModeButton({ currentMode, points, maxPoints, tooltip, handleChangeMode 
 };
 
 ModeButton.defaultProps = {
-  tooltip: 'Toggle between Skirmish (500), Standard (1000), and Grand Army (1600) formats.'
+  tooltip: 'Toggle between Recon (600), Standard (1000), and Grand Army (1600) formats.'
 };
 
 ModeButton.propTypes = {
