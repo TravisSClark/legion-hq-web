@@ -1,0 +1,6476 @@
+{
+  "units": [
+    {
+      "id": "ra",
+      "cardName": "Black Sun Vigo",
+      "title": "",
+      "cost": 50,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "commander",
+      "affiliation": "black sun",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Mercenary: Empire",
+        "Separatists",
+        "Aid: Black Sun",
+        "Dauntless",
+        "Independent: Aim 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "r",
+        "hp": "4",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Martial Arts",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 3
+        },
+        {
+          "name": "Vigo's BH-4 Double Blaster",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 2,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "rb",
+      "cardName": "Black Sun Enforcers",
+      "title": "",
+      "cost": 50,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "black sun",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Mercenary: Empire",
+        "Separatists",
+        "Dauntless",
+        "Precise 1",
+        "Self-Preservation",
+        "Independent: Aim 1"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "mercenary",
+        "defense": "r",
+        "hp": "1",
+        "courage": "1",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Close Quarters Combat",
+          "keywords": "",
+          "range": "",
+          "red": 1,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "BH-4 Double Blaster",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "vv",
+      "cardName": "C-3P0",
+      "title": "Golden God",
+      "cost": 40,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "ewok",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "-> Master Storyteller",
+        "Compel: Ewok Trooper",
+        "Infiltrate",
+        "Divine Influence"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "w",
+        "hp": "3",
+        "courage": "2",
+        "speed": "",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": []
+    },
+    {
+      "id": "wd",
+      "cardName": "Logray",
+      "title": "Superstitious Shaman",
+      "cost": 45,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "ewok",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Aid: Ewok",
+        "Independent: Aim or Dodge 1",
+        "Inspire 2",
+        "Low Profile",
+        "Nimble"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "w",
+        "hp": "4",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Staff",
+          "keywords": "Suppressive",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "ve",
+      "cardName": "Wicket",
+      "title": "Hero of Bright Tree",
+      "cost": 70,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "ewok",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Mercenary: Rebels",
+        "Independent: Dodge 1",
+        "Low Profile",
+        "Nimble",
+        "Scout 1",
+        "Scouting Party 2: Ewok",
+        "Sharpshooter 2",
+        "Unhindered"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "w",
+        "hp": "5",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Spear",
+          "keywords": "Pierce 1",
+          "range": "",
+          "red": 2,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Sling",
+          "keywords": "Pierce 1/ Primitive",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "vk",
+      "cardName": "Ewok Skirmishers",
+      "title": "",
+      "cost": 40,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "ewok",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Mercenary: Rebels",
+        "Low Profile",
+        "Unhindered"
+      ],
+      "stats": {
+        "minicount": "6",
+        "faction": "mercenary",
+        "defense": "w",
+        "hp": "1",
+        "courage": "1",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Spear",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "vu",
+      "cardName": "Ewok Slingers",
+      "title": "",
+      "cost": 35,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "special",
+      "affiliation": "ewok",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Mercenary: Rebels",
+        "Independent: Surge 1",
+        "Low Profile",
+        "Target 1"
+      ],
+      "stats": {
+        "minicount": "6",
+        "faction": "mercenary",
+        "defense": "w",
+        "hp": "1",
+        "courage": "1",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Stones",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 1,
+          "black": null
+        },
+        {
+          "name": "Slings",
+          "keywords": "Primitive",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "vj",
+      "cardName": "Chewbacca",
+      "title": "Let the Wookiee Win",
+      "cost": 180,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "heavy",
+      "affiliation": "ewok",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "ground vehicle",
+      "keywords": [
+        "Armor: 5",
+        "Arsenal 2",
+        "Inspire 3",
+        "Incognito",
+        "Weak Point 1: Rear"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "w",
+        "hp": "11",
+        "courage": "8",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Grenade Launcher",
+          "keywords": "Fixed: Front/ Blast",
+          "range": "- 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "88 Twin Light Blaster",
+          "keywords": "Fixed: Front/ Impact 1",
+          "range": "- 3",
+          "red": 1,
+          "white": 1,
+          "black": 1
+        },
+        {
+          "name": "MS-4 Twin Blaster",
+          "keywords": "Fixed: Front/ Impact 3",
+          "range": "1 - 4",
+          "red": 2,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "rd",
+      "cardName": "Gar Saxon",
+      "title": "Militant Commando",
+      "cost": 95,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "maul loyalist",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Jump 2",
+        "Allies of Convenience",
+        "Compel",
+        "Impervious",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "r",
+        "hp": "5",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Advanced Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": 2,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Saxon's Westar-35 Blaster Pistol",
+          "keywords": "Pierce 1",
+          "range": "1 - 2",
+          "red": 1,
+          "white": 1,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "rc",
+      "cardName": "Maul",
+      "title": "A Rival",
+      "cost": 150,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "operative",
+      "affiliation": "maul loyalist",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Jump 1",
+        "Allies of Convenience",
+        "Deflect",
+        "Immune: Pierce",
+        "Juyo Mastery",
+        "Wound 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "r",
+        "hp": "6",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Maul's Double-Bladed Lightsaber",
+          "keywords": "Impact 2/ Pierce 2",
+          "range": "",
+          "red": 4,
+          "white": 4,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "re",
+      "cardName": "Mandalorian Super Commandos",
+      "title": "",
+      "cost": 70,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "special",
+      "affiliation": "maul loyalist",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Jump 2",
+        "Defend 1",
+        "Impervious",
+        "Independent: Aim 1"
+      ],
+      "stats": {
+        "minicount": "3",
+        "faction": "mercenary",
+        "defense": "r",
+        "hp": "1",
+        "courage": "2",
+        "speed": "3",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Combat Expertise",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Westar-35 Blaster Pistols",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Galar-15 Blaster Carbine",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": 1,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "qy",
+      "cardName": "Pyke Syndicate Capo",
+      "title": "",
+      "cost": 48,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "pyke",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Mercenary: All",
+        "Aid: Pyke",
+        "Independent: Dodge 1",
+        "Danger Sense 2"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "w",
+        "hp": "4",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Capo's P13 Long Blaster",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 3
+        }
+      ]
+    },
+    {
+      "id": "qz",
+      "cardName": "Pyke Syndicate Foot Soldiers",
+      "title": "",
+      "cost": 44,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "pyke",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Mercenary: All",
+        "Self-Preservation",
+        "Danger Sense 2",
+        "Outmaneuver",
+        "Independent: Dodge 1"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "mercenary",
+        "defense": "w",
+        "hp": "1",
+        "courage": "1",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Stun Baton",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 2,
+          "black": null
+        },
+        {
+          "name": "P13 Long Blaster",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "sq",
+      "cardName": "Swoop Bike Riders",
+      "title": "",
+      "cost": 70,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "raider",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Mercenary: Rebel",
+        "Republic",
+        "Cover 1",
+        "Independent: Aim 1 or Dodge 1",
+        "Reinforcements",
+        "Speeder 1"
+      ],
+      "stats": {
+        "minicount": "2",
+        "faction": "mercenary",
+        "defense": "w",
+        "hp": "3",
+        "courage": "-",
+        "speed": "3",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Vibro-Ax",
+          "keywords": "Overrun 1",
+          "range": "",
+          "red": 1,
+          "white": 2,
+          "black": null
+        },
+        {
+          "name": "Heavy Blaster Pistol",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": 1,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "om",
+      "cardName": "A-A5 Speeder Truck",
+      "title": "",
+      "cost": 65,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "raider",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Armor 5",
+        "Hover: Ground",
+        "Reposition",
+        "Transport",
+        "Weak Point 2: Rear"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "w",
+        "hp": "8",
+        "courage": "6",
+        "speed": "1",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": []
+    },
+    {
+      "id": "aw",
+      "cardName": "Boba Fett",
+      "title": "Infamous Bounty Hunter",
+      "cost": 130,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "rogue",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Mercenary: Empire",
+        "-> Jump 2",
+        "Arsenal 2",
+        "Bounty",
+        "Impervious",
+        "Independent: Aim 1 or Dodge 1",
+        "Sharpshooter 2"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "r",
+        "hp": "5",
+        "courage": "3",
+        "speed": "3",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Boot Spikes",
+          "keywords": "",
+          "range": "",
+          "red": 3,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Integrated Rockets",
+          "keywords": "Impact 1/ Versatile",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 3
+        },
+        {
+          "name": "Fett's EE-3 Carbine",
+          "keywords": "Pierce 1",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "tl",
+      "cardName": "Boba Fett",
+      "title": "Daimyo of Mos Espa",
+      "cost": 120,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "rogue",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Mercenary: Rebels",
+        "-> Jump 1",
+        "Arsenal 2",
+        "Impervious",
+        "Independent: Standby",
+        "Sentinel",
+        "Sharpshooter 1",
+        "Tactical 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "r",
+        "hp": "5",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Fett's Gaderffii Stick",
+          "keywords": "",
+          "range": "",
+          "red": 3,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Fett's EE-3 Carbine",
+          "keywords": "Pierce 1",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 3
+        }
+      ]
+    },
+    {
+      "id": "ax",
+      "cardName": "Bossk",
+      "title": "Trandoshan Terror",
+      "cost": 105,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "rogue",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Mercenary: Empire",
+        "Separatists",
+        "Bounty",
+        "Enrage 3",
+        "Independent: Surge 2",
+        "Regenerate 3",
+        "Scale"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "w",
+        "hp": "7",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Frenzy",
+          "keywords": "Pierce 1",
+          "range": "",
+          "red": 1,
+          "white": 1,
+          "black": 2
+        },
+        {
+          "name": "Relby-v10 Mortar Rifle",
+          "keywords": "Pierce 1/ Suppressive",
+          "range": "2 - 4",
+          "red": 1,
+          "white": 4,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "kx",
+      "cardName": "Cad Bane",
+      "title": "Needs No Introduction",
+      "cost": 105,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "rogue",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Mercenary: Empire",
+        "Separatists",
+        "-> Jump 1",
+        "Bounty",
+        "Danger Sense 3",
+        "Independent: Dodge 2",
+        "Sharpshooter 1",
+        "Steady"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "w",
+        "hp": "6",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Martial Arts",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 3
+        },
+        {
+          "name": "Dual LL-30 Blaster Pistols",
+          "keywords": "Pierce 1",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 4
+        }
+      ]
+    },
+    {
+      "id": "tk",
+      "cardName": "Din Djarin",
+      "title": "The Mandalorian",
+      "cost": 95,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "rogue",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Mercenary: Empire",
+        "Rebels",
+        "Arsenal 2",
+        "Bounty",
+        "Impervious",
+        "Independent: Aim 1 and Dodge 1",
+        "Tactical 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "r",
+        "hp": "5",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Vibro Knife",
+          "keywords": "Lethal 1",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Din's IB-94 Pistol",
+          "keywords": "Lethal 1/ Longshot 1/ Versatile",
+          "range": "1 - 2",
+          "red": 2,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "tj",
+      "cardName": "IG-11",
+      "title": "Nurse and Protect",
+      "cost": 105,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "rogue",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "Mercenary: Empire",
+        "Rebels",
+        "Armor 1",
+        "Gunslinger",
+        "Impervious",
+        "Programmed",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "r",
+        "hp": "5",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Overpower",
+          "keywords": "",
+          "range": "",
+          "red": 4,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Modified E-11 Blaster",
+          "keywords": "Pierce 1",
+          "range": "1 - 3",
+          "red": null,
+          "white": 2,
+          "black": 1
+        },
+        {
+          "name": "Modified DLT-20A Rifle",
+          "keywords": "",
+          "range": "1-4",
+          "red": null,
+          "white": 1,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "ti",
+      "cardName": "IG-88",
+      "title": "Notorious Assassin Droid",
+      "cost": 110,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "operative",
+      "affiliation": "rogue",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "Mercenary: Empire",
+        "Armor 1",
+        "Bounty",
+        "Impervious",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "mercenary",
+        "defense": "r",
+        "hp": "5",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "IG-88's Vibro-cleaver",
+          "keywords": "Pierce 1",
+          "range": "",
+          "red": 1,
+          "white": 1,
+          "black": 1
+        },
+        {
+          "name": "Modified E-11 Blaster",
+          "keywords": "Pierce 1/ Versatile",
+          "range": "1 - 3",
+          "red": null,
+          "white": 2,
+          "black": 1
+        },
+        {
+          "name": "Modified DLT-20A Rifle",
+          "keywords": "",
+          "range": "1-4",
+          "red": null,
+          "white": 1,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "xi",
+      "cardName": "The Bad Batch",
+      "title": "Clone Force 99",
+      "cost": 160,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "operative",
+      "affiliation": "rogue",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "clone trooper",
+      "keywords": [
+        "Mercenary: Rebels",
+        "Equip: Hunter",
+        "Wrecker",
+        "Echo",
+        "Tech",
+        "Impervious",
+        "Scale",
+        "Steady",
+        "Sharpshooter 1",
+        "We're Not Regs"
+      ],
+      "stats": {
+        "minicount": "0",
+        "faction": "mercenary",
+        "defense": "r",
+        "hp": "2",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Advanced Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": 1,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "DC-17 Hand Blaster",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "nm",
+      "cardName": "Agent Kallus",
+      "title": "Hunter of Spectres",
+      "cost": 85,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Contingencies 2",
+        "Cunning",
+        "Flawed",
+        "Sharpshooter 1",
+        "Tactical 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "6",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Advanced Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": 2,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Kallus's RK-3 Blaster Pistol",
+          "keywords": "Pierce 1",
+          "range": "1 - 2",
+          "red": null,
+          "white": 1,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "at",
+      "cardName": "Darth Vader",
+      "title": "Dark Lord of the Sith",
+      "cost": 170,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Deflect",
+        "Immune: Pierce",
+        "Master of the Force 1",
+        "Relentless",
+        "Compel: Corps"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "8",
+        "courage": "-",
+        "speed": "1",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Vader's Lightsaber",
+          "keywords": "Impact 3/ Pierce 3",
+          "range": "",
+          "red": 6,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "av",
+      "cardName": "Director Orson Krennic",
+      "title": "Architect of Terror",
+      "cost": 65,
+      "cardType": "unit",
+      "displayName": "Director Krennic",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Spotter 1",
+        "Compel",
+        "Cunning",
+        "Entourage: Imperial Death Troopers",
+        "Exemplar"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "w",
+        "hp": "6",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Krennic's Blaster",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": 3,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "as",
+      "cardName": "Emperor Palpatine",
+      "title": "Ruler of the Galactic Empire",
+      "cost": 170,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Pulling the Strings",
+        "Entourage: Imperial Royal Guard",
+        "Immune: Pierce",
+        "Master of the Force 2"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "5",
+        "courage": "4",
+        "speed": "1",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Force Lightning",
+          "keywords": "Pierce 2/ Suppressive",
+          "range": "- 2",
+          "red": 2,
+          "white": 2,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "au",
+      "cardName": "General Veers",
+      "title": "Master Tactician",
+      "cost": 75,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Guidance: Ground Vehicle",
+        "-> Spotter 2",
+        "Exemplar",
+        "Inspire 1",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "5",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Combat Expertise",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Veers' Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": 3,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "kg",
+      "cardName": "Iden Versio",
+      "title": "Inferno Squad Leader",
+      "cost": 100,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "->Quick Thinking",
+        "Covert Ops",
+        "Loadout",
+        "Marksman",
+        "Nimble"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "6",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Advanced Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": 2,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Iden's E-11 Blaster Rifle",
+          "keywords": "Pierce 1",
+          "range": "1 - 3",
+          "red": null,
+          "white": 3,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "ar",
+      "cardName": "Imperial Officer",
+      "title": "Ruthless Commander",
+      "cost": 55,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Spotter 1",
+        "Exemplar",
+        "Inspire 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "w",
+        "hp": "4",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Blaster Pistol",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "ui",
+      "cardName": "Moff Gideon",
+      "title": "Long Live the Empire",
+      "cost": 100,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        ">> Observe 1",
+        "Entourage: Dark Troopers",
+        "Ruthless",
+        "Sharpshooter 1",
+        "Tactical 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "5",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Advanced Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": 2,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Gideon's Custom Blaster Pistol",
+          "keywords": "Pierce 1",
+          "range": "1 - 2",
+          "red": 1,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "fn",
+      "cardName": "Darth Vader",
+      "title": "The Emperor's Apprentice",
+      "cost": 155,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Deflect",
+        "Immune: Pierce",
+        "Jedi Hunter",
+        "Master of the Force 1",
+        "Relentless"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "7",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Vader's Lightsaber",
+          "keywords": "Impact 3/ Pierce 3",
+          "range": "",
+          "red": 5,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Force Throw",
+          "keywords": "Blast/ Scatter",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "wl",
+      "cardName": "Fifth Brother",
+      "title": "The Kill is Mine",
+      "cost": 105,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Dauntless",
+        "Block",
+        "Enrage 2",
+        "Immune: Pierce"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "6",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Spinning Lightsaber",
+          "keywords": "Ram 2/ Impact 2/ Pierce 1",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 5
+        },
+        {
+          "name": "Thrown Spinning Lightsaber",
+          "keywords": "Impact 2/ Pierce 1",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 3
+        }
+      ]
+    },
+    {
+      "id": "wm",
+      "cardName": "Seventh Sister",
+      "title": "Compelled to Inflict Pain",
+      "cost": 110,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "->Jump",
+        "Associate: Fifth Brother",
+        "Block",
+        "Charge",
+        "Disciplined 1",
+        "Interrogate"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "5",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Spinning Lightsaber",
+          "keywords": "Impact 2/ Pierce 1",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 5
+        },
+        {
+          "name": "Thrown Spinning Lightsaber",
+          "keywords": "Impact 2/ Pierce 1",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 3
+        }
+      ]
+    },
+    {
+      "id": "ft",
+      "cardName": "DF-90 Mortar Trooper",
+      "title": "",
+      "cost": 40,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "emplacement trooper",
+      "keywords": [
+        "Detachment: Shore Troopers",
+        "Fire Support",
+        "Full Pivot",
+        "Reposition",
+        "Sentinel"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "3",
+        "courage": "2",
+        "speed": "1",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "E-22 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "DF-90 Mortar",
+          "keywords": "Critical 1/ Cumbersome/ Suppressive/ Fixed: Front",
+          "range": "3 - 4",
+          "red": null,
+          "white": 3,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "hg",
+      "cardName": "Shoretroopers",
+      "title": "",
+      "cost": 52,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Coordinate: Emplacement Trooper",
+        "Prepared Position"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "1",
+        "courage": "1",
+        "speed": "1",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "E-22 Blaster Rifle",
+          "keywords": "Long Shot",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "az",
+      "cardName": "Snowtroopers",
+      "title": "",
+      "cost": 42,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Steady"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "1",
+        "courage": "1",
+        "speed": "1",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Bludgeon",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 1,
+          "black": null
+        },
+        {
+          "name": "E-11 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": 1,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "ay",
+      "cardName": "Stormtroopers",
+      "title": "",
+      "cost": 42,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Precise 1"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "1",
+        "courage": "1",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Bludgeon",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 1,
+          "black": null
+        },
+        {
+          "name": "E-11 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": 1,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "sr",
+      "cardName": "Stormtroopers",
+      "title": "Heavy Response Unit",
+      "cost": 36,
+      "cardType": "unit",
+      "displayName": "Stormtroopers HRU",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Flexible Reponse 2",
+        "Precise 1",
+        "Speicial Issue: Blizzard Force",
+        "Unhindered"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "1",
+        "courage": "1",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Bludgeon",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 1,
+          "black": null
+        },
+        {
+          "name": "E-11 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": 1,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "bd",
+      "cardName": "Imperial Death Troopers",
+      "title": "",
+      "cost": 72,
+      "cardType": "unit",
+      "displayName": "Death Troopers",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Disciplined 2",
+        "Precise 2",
+        "Ready 1"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "1",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Close Quarters Combat",
+          "keywords": "",
+          "range": "",
+          "red": 1,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "SE-14a Light Blaster",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 2,
+          "black": null
+        },
+        {
+          "name": "E-11D Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "bc",
+      "cardName": "Imperial Royal Guards",
+      "title": "",
+      "cost": 69,
+      "cardType": "unit",
+      "displayName": "Royal Guards",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Charge",
+        "Disciplined 2",
+        "Guardian 2"
+      ],
+      "stats": {
+        "minicount": "3",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "2",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Force Pike",
+          "keywords": "",
+          "range": "",
+          "red": 1,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "EC-17 Hold-Out Blaster",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "mx",
+      "cardName": "Imperial Special Forces",
+      "title": "",
+      "cost": 68,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Infiltrate",
+        "Marksman",
+        "Reliable 1"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "empire",
+        "defense": "w",
+        "hp": "",
+        "courage": "2",
+        "speed": "",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Special Forces E-11 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "my",
+      "cardName": "Imperial Special Forces",
+      "title": "Inferno Squad",
+      "cost": 34,
+      "cardType": "unit",
+      "displayName": "Inferno Squad",
+      "isUnique": true,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Equip: Del Meeko",
+        "Gideon Hask",
+        "Infiltrate",
+        "Marksman",
+        "Reliable 1",
+        "Retinue: Iden Versio"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "w",
+        "hp": "",
+        "courage": "2",
+        "speed": "",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Close Quarters Combat",
+          "keywords": "",
+          "range": "",
+          "red": 1,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Inferno Squad E-11 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "ba",
+      "cardName": "Scout Troopers",
+      "title": "",
+      "cost": 48,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Low Profile",
+        "Scout",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "empire",
+        "defense": "w",
+        "hp": "1",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "EC-17 Hold-Out Blaster",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "bb",
+      "cardName": "Scout Troopers",
+      "title": "Strike Team",
+      "cost": 20,
+      "cardType": "unit",
+      "displayName": "Scout Strike Team",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Detachment: Scout Troopers",
+        "Heavy Weapon Team",
+        "Low Profile",
+        "Scout 3",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "empire",
+        "defense": "w",
+        "hp": "1",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "EC-17 Hold-Out Blaster",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "bf",
+      "cardName": "74-Z Speeder Bikes",
+      "title": "",
+      "cost": 80,
+      "cardType": "unit",
+      "displayName": "Speeder Bikes",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Cover 1",
+        "Speeder 1"
+      ],
+      "stats": {
+        "minicount": "2",
+        "faction": "empire",
+        "defense": "w",
+        "hp": "3",
+        "courage": "-",
+        "speed": "3",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "EC-17 Hold-Out Blaster",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Ax-20 Blaster Cannons",
+          "keywords": "Impact 1",
+          "range": "1 - 3",
+          "red": 1,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "hf",
+      "cardName": "Dewback Rider",
+      "title": "",
+      "cost": 70,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "creature trooper",
+      "keywords": [
+        "Armor 1",
+        "Relentless",
+        "Reposition",
+        "Spur",
+        "Unhindered"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "6",
+        "courage": "2",
+        "speed": "1",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Razor Claws & Shock Prod",
+          "keywords": "Critical 2/ Suppressive",
+          "range": "",
+          "red": 3,
+          "white": 3,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "be",
+      "cardName": "E-Web Heavy Blaster Team",
+      "title": "",
+      "cost": 60,
+      "cardType": "unit",
+      "displayName": "E-Web Team",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "emplacement trooper",
+      "keywords": [
+        "Prepared Position",
+        "Reposition",
+        "Sentinel"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "4",
+        "courage": "2",
+        "speed": "1",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Blaster Rifles",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": 2,
+          "black": null
+        },
+        {
+          "name": "E-Web Heavy Blaster",
+          "keywords": "Cumbersome/ Fixed: Front/ Impact 1",
+          "range": "1 - 4",
+          "red": 1,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "xh",
+      "cardName": "Range Troopers",
+      "title": "",
+      "cost": 60,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Advanced Targeting: Trooper 1",
+        "Armor 1",
+        "Indomitable",
+        "Scale",
+        "Spur"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "1",
+        "courage": "2",
+        "speed": "1",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Gription Boot Kick",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 2,
+          "black": null
+        },
+        {
+          "name": "E-10R Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 4",
+          "red": null,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "bg",
+      "cardName": "AT-ST",
+      "title": "",
+      "cost": 145,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "ground vehicle",
+      "keywords": [
+        "Armor 5",
+        "Arsenal 2",
+        "Weak Point 1: Rear"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "w",
+        "hp": "11",
+        "courage": "8",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Fence-Cutting Blades",
+          "keywords": "",
+          "range": "",
+          "red": 4,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "MS-4 Twin Blaster",
+          "keywords": "Fixed: Front/ Impact 3",
+          "range": "1 - 4",
+          "red": 2,
+          "white": 2,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "tm",
+      "cardName": "Imperial Dark Troopers",
+      "title": "",
+      "cost": 95,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "Armor 3",
+        "Plodding",
+        "Unconcerned",
+        "Unstoppable"
+      ],
+      "stats": {
+        "minicount": "3",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "2",
+        "courage": "-",
+        "speed": "1",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Crushing Punch",
+          "keywords": "",
+          "range": "",
+          "red": 1,
+          "white": 1,
+          "black": null
+        },
+        {
+          "name": "E-11D Blaster",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "on",
+      "cardName": "LAAT/le Patrol Transport",
+      "title": "",
+      "cost": 100,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Armor 5",
+        "Arsenal 2",
+        "Cover 1",
+        "Hover: Air 2",
+        "Immune: Blast",
+        "Melee",
+        "Range 1 Weapons",
+        "Transport"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "w",
+        "hp": "8",
+        "courage": "6",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Twin Laser Cannons",
+          "keywords": "Impact 1/ Fixed: Front",
+          "range": "1 - 3",
+          "red": 2,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "we",
+      "cardName": "Major Marquand",
+      "title": "Tempest Scout 2",
+      "cost": 180,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "ground vehicle",
+      "keywords": [
+        "Armor 5",
+        "Arsenal 2",
+        "Direct: Vehicle",
+        "Weak Point 1: Rear",
+        "Special Issue: Tempest Force"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "w",
+        "hp": "11",
+        "courage": "8",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Grenade Launcher",
+          "keywords": "Fixed: Front/ Blast",
+          "range": "- 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "88 Twin Light Blaster",
+          "keywords": "Fixed: Front/ Impact 1",
+          "range": "- 3",
+          "red": 1,
+          "white": 1,
+          "black": 1
+        },
+        {
+          "name": "MS-4 Twin Blaster",
+          "keywords": "Fixed: Front/ Impact 3",
+          "range": "1 - 4",
+          "red": 2,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "bh",
+      "cardName": "TX-225 GAVw Occupier Tank",
+      "title": "",
+      "cost": 125,
+      "cardType": "unit",
+      "displayName": "Gav Tank",
+      "ttsName": "TX-225 GAVw Occupier Combat Assault Tank",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "ground vehicle",
+      "keywords": [
+        "Armor 5",
+        "Arsenal 2",
+        "Reposition",
+        "Transport",
+        "Weak Point 1: Sides"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "empire",
+        "defense": "r",
+        "hp": "8",
+        "courage": "6",
+        "speed": "1",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Twin Cannons",
+          "keywords": "Suppressive/ Fixed: Front",
+          "range": "1 - 2",
+          "red": 1,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Quad Cannons",
+          "keywords": "Impact 2/ Fixed: Front",
+          "range": "1 - 4",
+          "red": 2,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "kf",
+      "cardName": "Cassian Andor",
+      "title": "Capable Intelligence Agent",
+      "cost": 90,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Covert Ops",
+        "Danger Sense 3",
+        "Loadout",
+        "Marksman",
+        "Tactical 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "6",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Advanced Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": 2,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Cassian's Covert Blaster",
+          "keywords": "Pierce 1",
+          "range": "1 - 2",
+          "red": 1,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "ac",
+      "cardName": "Han Solo",
+      "title": "Unorthodox General",
+      "cost": 100,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Steady",
+        "Low Profile",
+        "Gunslinger",
+        "Sharpshooter 1",
+        "Uncanny Luck 3"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "6",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Brawl",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 3,
+          "black": null
+        },
+        {
+          "name": "Han's DL-44",
+          "keywords": "Pierce 2",
+          "range": "1 - 2",
+          "red": 2,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "ae",
+      "cardName": "Jyn Erso",
+      "title": "Stardust",
+      "cost": 90,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Quick Thinking",
+        "Danger Sense 4",
+        "Infiltrate",
+        "Nimble",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "6",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Collapsible Tonfa",
+          "keywords": "Suppressive",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 4
+        }
+      ]
+    },
+    {
+      "id": "nl",
+      "cardName": "Lando Calrissian",
+      "title": "Smooth Operator",
+      "cost": 95,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Contingencies 3",
+        "Covert Ops",
+        "Flawed",
+        "Sharpshooter 2",
+        "Uncanny Luck 2"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "6",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 1,
+          "black": 1
+        },
+        {
+          "name": "Lando's X-8 Night Sniper Pistol",
+          "keywords": "Pierce 1",
+          "range": "1 - 3",
+          "red": 1,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "ab",
+      "cardName": "Leia Organa",
+      "title": "Fearless and Inventive",
+      "cost": 75,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Take Cover 2",
+        "Exemplar",
+        "Inspire 2",
+        "Nimble",
+        "Sharpshooter 2"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "6",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Martial Arts",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 3
+        },
+        {
+          "name": "Leia's Blaster",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": 3,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "ad",
+      "cardName": "Luke Skywalker",
+      "title": "Hero of the Rebellion",
+      "cost": 120,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Jump 1",
+        "Block",
+        "Charge",
+        "Immune:Pierce",
+        "Inspire 2",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "r",
+        "hp": "6",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Anakin's Lightsaber",
+          "keywords": "Impact 2/ Pierce 1",
+          "range": "",
+          "red": 2,
+          "white": null,
+          "black": 3
+        },
+        {
+          "name": "Luke's Blaster",
+          "keywords": "Long Shot/ Pierce 1",
+          "range": "1 - 2",
+          "red": 1,
+          "white": null,
+          "black": 3
+        }
+      ]
+    },
+    {
+      "id": "bi",
+      "cardName": "Rebel Officer",
+      "title": "Resolute Commander",
+      "cost": 50,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Take Cover 1",
+        "Exemplar",
+        "Inspire 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "4",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Blaster Pistol",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "vd",
+      "cardName": "Ahsoka Tano",
+      "title": "Fulcrum",
+      "cost": 145,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Jump 2",
+        "Charge",
+        "Defend 1",
+        "Deflect",
+        "Immune: Pierce",
+        "Jar'Kai Mastery"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "r",
+        "hp": "6",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Ahsoka's Lightsabers",
+          "keywords": "Impact 2/ Pierce 2",
+          "range": "",
+          "red": 2,
+          "white": 2,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "af",
+      "cardName": "Chewbacca",
+      "title": "Walking Carpet",
+      "cost": 90,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "wookiee trooper",
+      "keywords": [
+        "Enrage 4",
+        "Guardian 3",
+        "Teamwork: Han Solo",
+        "Scale"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "9",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Overwhelm",
+          "keywords": "Lethal 1",
+          "range": "",
+          "red": 4,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Chewbacca's Bowcaster",
+          "keywords": "Impact 1/ Pierce 1",
+          "range": "1 - 3",
+          "red": 2,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "lv",
+      "cardName": "K-2SO",
+      "title": "Sardonic Security Droid",
+      "cost": 70,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "-> Calculate Odds",
+        "Armor 1",
+        "Detachment: Cassian Andor",
+        "Incognito",
+        "Teamwork: Cassian Andor"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "",
+        "courage": "2",
+        "speed": "",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Overwhelm",
+          "keywords": "Lethal 1",
+          "range": "",
+          "red": 4,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "fm",
+      "cardName": "Luke Skywalker",
+      "title": "Jedi Knight",
+      "cost": 165,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Jump",
+        "Charge",
+        "Deflect",
+        "Disengage",
+        "Immune: Pierce",
+        "Master of the Force 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "r",
+        "hp": "7",
+        "courage": "4",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Luke's Lightsaber",
+          "keywords": "Impact 2/ Pierce 2",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 7
+        }
+      ]
+    },
+    {
+      "id": "jg",
+      "cardName": "R2-D2",
+      "title": "Hero of a Thousand Devices",
+      "cost": 55,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "-> Repair 2: Capacity 2",
+        "Inconspicuous",
+        "Infiltrate",
+        "Secret Mission"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "4",
+        "courage": "2",
+        "speed": "1",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Electro-Shock",
+          "keywords": "Suppressive",
+          "range": "- 1",
+          "red": null,
+          "white": 3,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "ag",
+      "cardName": "Sabine Wren",
+      "title": "Explosive Artist",
+      "cost": 125,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Jump 2",
+        "Gunslinger",
+        "Impervious",
+        "Nimble"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "r",
+        "hp": "5",
+        "courage": "2",
+        "speed": "3",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Combat Expertise",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Dual Westar-35 Pistols",
+          "keywords": "Pierce 1",
+          "range": "1 - 2",
+          "red": 1,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "ai",
+      "cardName": "Fleet Troopers",
+      "title": "",
+      "cost": 40,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Charge"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "1",
+        "courage": "1",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "DH-17 Blaster Pistol",
+          "keywords": "",
+          "range": "- 2",
+          "red": null,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "if",
+      "cardName": "Mark II Medium Blaster Trooper",
+      "title": "",
+      "cost": 38,
+      "cardType": "unit",
+      "displayName": "Mark 2",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "emplacement trooper",
+      "keywords": [
+        "Detachment: Rebel Veterans",
+        "Fire Support",
+        "Full Pivot",
+        "Reposition",
+        "Sentinel",
+        ""
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "4",
+        "courage": "2",
+        "speed": "1",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "A-280 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Mark II Medium Blaster",
+          "keywords": "Critical 2/ Cumbersome/ Fixed: Front",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "ah",
+      "cardName": "Rebel Troopers",
+      "title": "",
+      "cost": 40,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Agile 1",
+        "Nimble"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "1",
+        "courage": "1",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "A-200 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "gv",
+      "cardName": "Rebel Veterans",
+      "title": "",
+      "cost": 48,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Coordinate: Emplacement Trooper",
+        "Low Profile",
+        "Prepared Position"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "1",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "A-280 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "mk",
+      "cardName": "Mandalorian Resistance",
+      "title": "",
+      "cost": 68,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Jump 2",
+        "Impervious",
+        "Nimble"
+      ],
+      "stats": {
+        "minicount": "3",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "",
+        "courage": "2",
+        "speed": "",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 1,
+          "black": 1
+        },
+        {
+          "name": "Westar 35 Blaster Pistols",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "ml",
+      "cardName": "Mandalorian Resistance",
+      "title": "Clan Wren",
+      "cost": 30,
+      "cardType": "unit",
+      "displayName": "Clan Wren",
+      "isUnique": true,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Jump 2",
+        "Equip: Tristan Wren",
+        "Ursa Wren",
+        "Impervious",
+        "Nimble",
+        "Retinue: Sabine Wren"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "",
+        "courage": "2",
+        "speed": "",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 1,
+          "black": 1
+        },
+        {
+          "name": "Westar 35 Blaster Pistols",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "ak",
+      "cardName": "Rebel Commandos",
+      "title": "",
+      "cost": 48,
+      "cardType": "unit",
+      "displayName": "Rebel Commandos",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Low Profile",
+        "Scout 2",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "1",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "A-200 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "al",
+      "cardName": "Rebel Commandos",
+      "title": "Strike Team",
+      "cost": 20,
+      "cardType": "unit",
+      "displayName": "Commando Strike Team",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Detachment: Rebel Commandos",
+        "Heavy Weapon Team",
+        "Low Profile",
+        "Scout 2",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "1",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "A-200 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "am",
+      "cardName": "Rebel Pathfinders",
+      "title": "",
+      "cost": 56,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Danger Sense 3",
+        "Dauntless",
+        "Infiltrate"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "1",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "A-300 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "aj",
+      "cardName": "Wookiee Warriors",
+      "title": "Freedom Fighters",
+      "cost": 69,
+      "cardType": "unit",
+      "ttsName": "Wookiee Warriors",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "wookiee trooper",
+      "keywords": [
+        "Charge",
+        "Duelist",
+        "Indomitable",
+        "Scale"
+      ],
+      "stats": {
+        "minicount": "3",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "3",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Ryyk Blade",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Kashyyyk Pistol",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "pl",
+      "cardName": "Wookiee Warriors",
+      "title": "Kashyyyk Resistance",
+      "cost": 72,
+      "cardType": "unit",
+      "displayName": "Wookiee Warriors Kashyyyk Resistance",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "wookiee trooper",
+      "keywords": [
+        "Indomitable",
+        "Scale",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "3",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "3",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 1,
+          "black": 1
+        },
+        {
+          "name": "X1 Carbine",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "an",
+      "cardName": "1.4 FD Laser Cannon Team",
+      "title": "",
+      "cost": 65,
+      "cardType": "unit",
+      "displayName": "FD Turret",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "emplacement trooper",
+      "keywords": [
+        "Full Pivot",
+        "Prepared Position",
+        "Sentinel",
+        "Stationary"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "6",
+        "courage": "2",
+        "speed": "0",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Blaster Pistols",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 4,
+          "black": null
+        },
+        {
+          "name": "1.4 FD Laser Cannon",
+          "keywords": "Impact 2; Fixed: Front",
+          "range": "1 - 5",
+          "red": null,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "ao",
+      "cardName": "AT-RT",
+      "title": "",
+      "cost": 50,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "ground vehicle",
+      "keywords": [
+        "Armor 2",
+        "Climbing Vehicle",
+        "Expert Climber",
+        "Scout 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "6",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Grappling Claws",
+          "keywords": "Impact 1",
+          "range": "",
+          "red": 3,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "A300 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "he",
+      "cardName": "Tauntaun Riders",
+      "title": "",
+      "cost": 95,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "creature trooper",
+      "keywords": [
+        "Agile 1",
+        "Relentless",
+        "Reposition",
+        "Sharpshooter 1",
+        "Unhindered"
+      ],
+      "stats": {
+        "minicount": "2",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "1",
+        "courage": "1",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Horns & Hind Claws",
+          "keywords": "Ram 1",
+          "range": "",
+          "red": null,
+          "white": 1,
+          "black": 2
+        },
+        {
+          "name": "DL-44 Blaster Pistol",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": 2,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "om",
+      "cardName": "A-A5 Speeder Truck",
+      "title": "",
+      "cost": 65,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Armor 5",
+        "Hover: Ground",
+        "Reposition",
+        "Transport",
+        "Weak Point 2: Rear"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "8",
+        "courage": "6",
+        "speed": "1",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": []
+    },
+    {
+      "id": "ap",
+      "cardName": "T-47 Airspeeder",
+      "title": "",
+      "cost": 125,
+      "cardType": "unit",
+      "displayName": "Airspeeder",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Armor 3",
+        "Arsenal 2",
+        "Cover 1",
+        "Immune: Blast",
+        "Melee",
+        "Range 1 Weapons",
+        "Speeder 2"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "7",
+        "courage": "5",
+        "speed": "3",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Double Laser Cannon",
+          "keywords": "Impact 3/ Fixed Front",
+          "range": "1 - 3",
+          "red": 3,
+          "white": null,
+          "black": 3
+        }
+      ]
+    },
+    {
+      "id": "aq",
+      "cardName": "X-34 Landspeeder",
+      "title": "",
+      "cost": 55,
+      "cardType": "unit",
+      "displayName": "Landspeeder",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Armor 2",
+        "Arsenal 3",
+        "Cover 1",
+        "Speeder 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "rebels",
+        "defense": "w",
+        "hp": "6",
+        "courage": "4",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Blaster Pistol",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "na",
+      "cardName": "Anakin Skywalker",
+      "title": "The Chosen One",
+      "cost": 170,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Jump 1",
+        "Charge",
+        "Deflect",
+        "Djem So Mastery",
+        "Immune: Pierce",
+        "Master of the Force 1",
+        "Tempted"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "6",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Anakin's Lightsaber",
+          "keywords": "Impact 3/ Pierce 3",
+          "range": "",
+          "red": 5,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "po",
+      "cardName": "Chewbacca",
+      "title": "Hero of Kashyyyk",
+      "cost": 90,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "wookiee trooper",
+      "keywords": [
+        "Enrage 4",
+        "Guardian 2: Commander",
+        "Reliable 2",
+        "Scale",
+        "Lethal"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "w",
+        "hp": "9",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Overwhelm",
+          "keywords": "Lethal 1",
+          "range": "",
+          "red": 4,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Chewbacca's Bowcaster",
+          "keywords": "Critical 1/ Impact 1/ Pierce 1",
+          "range": "1 - 3",
+          "red": 2,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "fy",
+      "cardName": "Clone Captain Rex",
+      "title": "Honorable Soldier",
+      "cost": 95,
+      "cardType": "unit",
+      "displayName": "Captain Rex",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "clone trooper",
+      "keywords": [
+        "Gunslinger",
+        "Scout 1",
+        "Scouting Party 2",
+        "Sharpshooter 1",
+        "Tactical 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "5",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Advanced Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": 2,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Dual DC-17 Hand Blasters",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": 3,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "ns",
+      "cardName": "Clone Commander",
+      "title": "Trained For Leadership",
+      "cost": 60,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "clone trooper",
+      "keywords": [
+        "-> Bolster",
+        "Direct: Corps Clone Trooper",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "4",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Advanced Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": 2,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Commander's DC-15 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 3
+        }
+      ]
+    },
+    {
+      "id": "ue",
+      "cardName": "Clone Commander Cody",
+      "title": "Leader of the 212th",
+      "cost": 105,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "clone trooper",
+      "keywords": [
+        ">> Observe",
+        "-> Jump 1",
+        "-> Take Cover 1",
+        "Direct: Vehicle",
+        "Target 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "5",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Advanced Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": 2,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Cody's DC-15A Blaster Rifle",
+          "keywords": "Lethal 1/ Impact 1",
+          "range": "1 - 4",
+          "red": 2,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "gw",
+      "cardName": "Obi-Wan Kenobi",
+      "title": "Civilized Warrior",
+      "cost": 150,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Jump 1",
+        "Charge",
+        "Deflect",
+        "Guardian",
+        "Immune: Pierce",
+        "Master of the Force 1",
+        "Soresu Mastery"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "6",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Obi-Wan's Lightsaber",
+          "keywords": "Critical 2/ Impact 2/ Pierce 2",
+          "range": "",
+          "red": 2,
+          "white": 2,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "ph",
+      "cardName": "Wookiee Chieftain",
+      "title": "Clan Leader",
+      "cost": 100,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "wookiee trooper",
+      "keywords": [
+        "Agile 1",
+        "Charge",
+        "Duelist",
+        "Indomitable",
+        "Scale"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "w",
+        "hp": "7",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Ancestral Weapon",
+          "keywords": "",
+          "range": "",
+          "red": 2,
+          "white": 2,
+          "black": 2
+        },
+        {
+          "name": "Chieftain's Bowcaster",
+          "keywords": "Impact 1/ Pierce 1",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 4
+        }
+      ]
+    },
+    {
+      "id": "ol",
+      "cardName": "Yoda",
+      "title": "Grand Master of the Jedi Order",
+      "cost": 170,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Guidance: Trooper",
+        "Ataru Mastery",
+        "Deflect",
+        "Immune: Pierce",
+        "Master of the Force 2"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "5",
+        "courage": "4",
+        "speed": "1",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Yoda's Lightsaber",
+          "keywords": "Impact 2/ Pierce 2",
+          "range": "",
+          "red": 4,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Force Wave",
+          "keywords": "Blast/ Suppressive",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 4
+        }
+      ]
+    },
+    {
+      "id": "kw",
+      "cardName": "Padme Amidala",
+      "title": "Spirited Senator",
+      "cost": 60,
+      "cardType": "unit",
+      "displayName": "Padmé Amidala",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Bolster",
+        "Agile 1",
+        "Inspire 2",
+        "Nimble",
+        "Sharpshooter 2"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "w",
+        "hp": "6",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Martial Arts",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 3
+        },
+        {
+          "name": "Padme's Blaster",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": 3,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "jg",
+      "cardName": "R2-D2",
+      "title": "Hero of a Thousand Devices",
+      "cost": 55,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "-> Repair 2: Capacity 2",
+        "Inconspicuous",
+        "Infiltrate",
+        "Secret Mission",
+        "Suppressive"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "w",
+        "hp": "4",
+        "courage": "2",
+        "speed": "1",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Electro-Shock",
+          "keywords": "Suppressive",
+          "range": "- 1",
+          "red": null,
+          "white": 3,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "xi",
+      "cardName": "The Bad Batch",
+      "title": "Clone Force 99",
+      "cost": 160,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "clone trooper",
+      "keywords": [
+        "Equip: Hunter",
+        "Wrecker",
+        "Echo",
+        "Tech",
+        "Crosshair",
+        "Impervious",
+        "Scale",
+        "Steady",
+        "Sharpshooter 1",
+        "We're Not Regs"
+      ],
+      "stats": {
+        "minicount": "0",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "2",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Advanced Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": 1,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "DC-17 Hand Blaster",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "fz",
+      "cardName": "Clone Trooper Infantry",
+      "title": "",
+      "cost": 56,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "clone trooper",
+      "keywords": [
+        "Reliable 1"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "1",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "DC-15A Blaster Carbine",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "pm",
+      "cardName": "Wookiee Warriors",
+      "title": "Noble Fighters",
+      "cost": 69,
+      "cardType": "unit",
+      "displayName": "Wookiee Warriors Noble Fighters",
+      "ttsName": "Wookiee Warriors",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "wookiee trooper",
+      "keywords": [
+        "Charge",
+        "Duelist",
+        "Indomitable",
+        "Scale"
+      ],
+      "stats": {
+        "minicount": "3",
+        "faction": "republic",
+        "defense": "w",
+        "hp": "3",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Ryyk Blade",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Kashyyyk Pistol",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "kz",
+      "cardName": "ARC Troopers",
+      "title": "",
+      "cost": 64,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "clone trooper",
+      "keywords": [
+        "Charge",
+        "Impervious",
+        "Scale",
+        "Scout 2",
+        "Sharpshooter 1",
+        "Tactical 1"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "1",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "DC-17 Hand Blasters",
+          "keywords": "",
+          "range": "- 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "ky",
+      "cardName": "ARC Troopers Strike Team",
+      "title": "",
+      "cost": 26,
+      "cardType": "unit",
+      "displayName": "ARC Strike Team",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "clone trooper",
+      "keywords": [
+        "Charge",
+        "Detachment: ARC Troopers",
+        "Heavy Weapon Team",
+        "Impervious",
+        "Scale",
+        "Scout 2",
+        "Sharpshooter 1",
+        "Tactical 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "1",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "DC-17 Hand Blasters",
+          "keywords": "",
+          "range": "- 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "pg",
+      "cardName": "Wookiee Warriors",
+      "title": "Kashyyyk Defenders",
+      "cost": 72,
+      "cardType": "unit",
+      "displayName": "Wookiee Warriors Kashyyyk Defenders",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "wookiee trooper",
+      "keywords": [
+        "Indomitable",
+        "Scale",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "3",
+        "faction": "republic",
+        "defense": "w",
+        "hp": "3",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Combat Training",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 1,
+          "black": 1
+        },
+        {
+          "name": "X1 Carbine",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "ao",
+      "cardName": "AT-RT",
+      "title": "",
+      "cost": 50,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "ground vehicle",
+      "keywords": [
+        "Armor 2",
+        "Climbing Vehicle",
+        "Expert Climber",
+        "Scout 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "w",
+        "hp": "6",
+        "courage": "",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Grappling Claws",
+          "keywords": "Impact 1",
+          "range": "",
+          "red": 3,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Rocket Launcher",
+          "keywords": "Critical 1/ Impact 1",
+          "range": "1 - 3",
+          "red": null,
+          "white": 2,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "ic",
+      "cardName": "BARC Speeder",
+      "title": "",
+      "cost": 65,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Arsenal 2",
+        "Cover 1",
+        "Speeder 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "5",
+        "courage": "3",
+        "speed": "3",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "DC-15A Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Twin Light Blaster Cannons",
+          "keywords": "Fixed: Front",
+          "range": "1 - 3",
+          "red": 1,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "xj",
+      "cardName": "Clone Commandos",
+      "title": "",
+      "cost": 90,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "clone trooper",
+      "keywords": [
+        "Complete the Mission",
+        "Equip: Katarn Pattern Armor",
+        "Infiltrate",
+        "Recharge 1",
+        "Target 1",
+        "Shielded 1"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "1",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Gauntlet Vibroblade",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "DC-17m ICWS Blaster Carbine",
+          "keywords": "Supressive",
+          "range": "1 - 2",
+          "red": null,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "xp",
+      "cardName": "Clone Commandos",
+      "title": "Delta Squad",
+      "cost": 105,
+      "cardType": "unit",
+      "displayName": "Delta Squad",
+      "isUnique": true,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "clone trooper",
+      "keywords": [
+        "Complete the Mission",
+        "Equip: Katarn Pattern Armor",
+        "Infiltrate",
+        "Independent: Recover",
+        "Recharge 1",
+        "Target 1",
+        "Shielded 1"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "1",
+        "courage": "-",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Gauntlet Vibroblade",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "DC-17m ICWS Blaster Carbine",
+          "keywords": "Supressive",
+          "range": "1 - 2",
+          "red": null,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "qh",
+      "cardName": "Raddaugh Gnasp Fluttercraft",
+      "title": "",
+      "cost": 55,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Cover 2",
+        "Immune: Blast",
+        "Melee",
+        "Range 1 Weapons",
+        "Reposition",
+        "Speeder 2"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "w",
+        "hp": "6",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Pilot's Kashyyyk Pistol",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "xf",
+      "cardName": "Raddaugh Gnasp Fluttercraft",
+      "title": "Attack Craft",
+      "cost": 57,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Attack Run",
+        "Cover 2",
+        "Immune: Blast",
+        "Melee",
+        "Range 1 Weapons",
+        "Reposition",
+        "Speeder 2",
+        "Special Issue: Wookiee Defenders"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "w",
+        "hp": "6",
+        "courage": "",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Pilot's Kashyyyk Pistol",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "qs",
+      "cardName": "Infantry Support Platform",
+      "title": "",
+      "cost": 65,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Armor 3",
+        "Cover 1",
+        "Hover: Ground",
+        "Weak Point 1: Rear",
+        "Sides"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "w",
+        "hp": "7",
+        "courage": "5",
+        "speed": "3",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "DC-15 Blaster Rifles",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "on",
+      "cardName": "LAAT/le Patrol Transport",
+      "title": "",
+      "cost": 100,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Armor 5",
+        "Arsenal 2",
+        "Cover 1",
+        "Hover: Air 2",
+        "Immune: Blast",
+        "Melee",
+        "Range 1 Weapons",
+        "Transport"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "w",
+        "hp": "8",
+        "courage": "",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Twin Laser Cannons",
+          "keywords": "Fixed: Front/ Impact 1",
+          "range": "1 - 3",
+          "red": 2,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "gb",
+      "cardName": "Saber-Class Tank",
+      "title": "",
+      "cost": 155,
+      "cardType": "unit",
+      "displayName": "Saber Fighter Tank",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Armor 5",
+        "Arsenal 2",
+        "Hover: Ground",
+        "Outmaneuver",
+        "Weak Point 1: Rear",
+        "Sides"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "republic",
+        "defense": "r",
+        "hp": "9",
+        "courage": "",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Heavy Laser Cannons",
+          "keywords": "Critical 1/ Fixed: Front/ Impact 2",
+          "range": "1 - 4",
+          "red": 2,
+          "white": 2,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "fx",
+      "cardName": "Count Dooku",
+      "title": "Darth Tyranus",
+      "cost": 165,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Cunning",
+        "Deflect",
+        "Direct: Trooper Unit",
+        "Immune: Pierce",
+        "Makashi Mastery",
+        "Master of the Force 2"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "r",
+        "hp": "6",
+        "courage": "3",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Dooku's Lightsaber",
+          "keywords": "Impact 2/ Pierce 2",
+          "range": "",
+          "red": 5,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Force Lightning",
+          "keywords": "Pierce 1/ Scatter/ Suppressive",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 6
+        }
+      ]
+    },
+    {
+      "id": "ia",
+      "cardName": "General Grievous",
+      "title": "Sinister Cyborg",
+      "cost": 130,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "Block",
+        "Entourage: IG-100",
+        "Immune: Pierce",
+        "Jedi Hunter",
+        "Relentless",
+        "Scale"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "r",
+        "hp": "8",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Trophy Lightsabers",
+          "keywords": "Critical 1/ Impact 2/ Pierce 2",
+          "range": "",
+          "red": 2,
+          "white": 2,
+          "black": 4
+        }
+      ]
+    },
+    {
+      "id": "wn",
+      "cardName": "Poggle the Lesser",
+      "title": "Public Leader of the Geonosians",
+      "cost": 80,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        ">> Jump",
+        "Compel: Corps Separatist Alliance Trooper",
+        "Entourage: B2 Super Battle Droids",
+        "Override",
+        "Weighed Down"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "r",
+        "hp": "4",
+        "courage": "3",
+        "speed": "1",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Staff of Command",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Concealed Blaster",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "py",
+      "cardName": "Super Tactical Droid",
+      "title": "Commanding Controller",
+      "cost": 75,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "-> Strategize 1",
+        "Direct: AI Unit",
+        "Exemplar",
+        "Override",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "r",
+        "hp": "5",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Combat Expertise",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Blaster Rifle",
+          "keywords": "Lethal 1",
+          "range": "1 - 3",
+          "red": 2,
+          "white": null,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "qa",
+      "cardName": "Super Tactical Droid",
+      "title": "Kalani",
+      "cost": 85,
+      "cardType": "unit",
+      "displayName": "Kalani",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "-> Strategize 2",
+        "Direct: AI Unit",
+        "Exemplar",
+        "Reinforcements",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "r",
+        "hp": "5",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Combat Expertise",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Blaster Rifle",
+          "keywords": "Lethal 1",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 3
+        }
+      ]
+    },
+    {
+      "id": "pz",
+      "cardName": "Super Tactical Droid",
+      "title": "Kraken",
+      "cost": 80,
+      "cardType": "unit",
+      "displayName": "Kraken",
+      "isUnique": true,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "-> Strategize 1",
+        "Charge",
+        "Exemplar",
+        "Override",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "r",
+        "hp": "5",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:c",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Overwhelm",
+          "keywords": "Lethal 1",
+          "range": "",
+          "red": 4,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Blaster Rifle",
+          "keywords": "Lethal 1",
+          "range": "1 - 3",
+          "red": 3,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "nr",
+      "cardName": "T-Series Tactical Droid",
+      "title": "Programmed for Strategy",
+      "cost": 60,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "commander",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "-> Bolster 2",
+        "Direct: Corps Droid Trooper Unit",
+        "Exemplar"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "w",
+        "hp": "4",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Bludgeon",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 1,
+          "black": null
+        },
+        {
+          "name": "Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "ut",
+      "cardName": "Asajj Ventress",
+      "title": "Separatist Assassin",
+      "cost": 130,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Jump 2",
+        "Deflect",
+        "Independent: Dodge 1",
+        "Indomitable",
+        "Immune: Pierce",
+        "Jar'Kai Mastery",
+        "Relentless"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "r",
+        "hp": "5",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Asajj Ventress' Lightsabers",
+          "keywords": "Impact 2/ Pierce 2",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 8
+        }
+      ]
+    },
+    {
+      "id": "nb",
+      "cardName": "Maul",
+      "title": "Impatient Apprentice",
+      "cost": 130,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        "-> Jump 1",
+        "Deflect",
+        "Immune: Pierce",
+        "Juyo Mastery"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "w",
+        "hp": "",
+        "courage": "3",
+        "speed": "",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Maul's Double-bladed Lightsaber",
+          "keywords": "Impact 2/ Pierce 2",
+          "range": "",
+          "red": 4,
+          "white": 4,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "wo",
+      "cardName": "Sun Fac",
+      "title": "Ruthless Lieutenant",
+      "cost": 80,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "operative",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        ">> Jump 3",
+        "Cover 1",
+        "Death From Above",
+        "Direct: Geonosian Warriors",
+        "Retinue: Poggle the Lesser",
+        "Scale",
+        "Weighed Down"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "w",
+        "hp": "5",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Force Pike",
+          "keywords": "Pierce 1",
+          "range": "",
+          "red": 2,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Sun Fac's Sonic Carbine",
+          "keywords": "Suppressive",
+          "range": "1 - 3",
+          "red": 1,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "gx",
+      "cardName": "B1 Battle Droids",
+      "title": "",
+      "cost": 38,
+      "cardType": "unit",
+      "displayName": "B1s",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "AI: Attack",
+        "Coordinate: Droid Trooper"
+      ],
+      "stats": {
+        "minicount": "6",
+        "faction": "separatists",
+        "defense": "w",
+        "hp": "1",
+        "courage": "1",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Bludgeon",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 1,
+          "black": null
+        },
+        {
+          "name": "E-5 Blaster Rifle",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": 1,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "ga",
+      "cardName": "B2 Super Battle Droids",
+      "title": "",
+      "cost": 64,
+      "cardType": "unit",
+      "displayName": "B2s",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "AI: Attack"
+      ],
+      "stats": {
+        "minicount": "3",
+        "faction": "separatists",
+        "defense": "r",
+        "hp": "2",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Wrist Rockets",
+          "keywords": "Impact 1",
+          "range": "1",
+          "red": 1,
+          "white": null,
+          "black": null
+        },
+        {
+          "name": "Arm Cannons",
+          "keywords": "",
+          "range": "- 2",
+          "red": null,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "wp",
+      "cardName": "Geonosian Warriors",
+      "title": "Soldiers of the Hive",
+      "cost": 45,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "corps",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "trooper",
+      "keywords": [
+        ">> Jump 3",
+        "Scale",
+        "Death From Above",
+        "Weighed Down"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "separatists",
+        "defense": "w",
+        "hp": "1",
+        "courage": "1",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Spears",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Sonic Blasters",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "la",
+      "cardName": "BX-Series Droid Commandos",
+      "title": "",
+      "cost": 64,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "-> Jump 1",
+        "AI: Dodge",
+        "Move",
+        "Impervious",
+        "Scale",
+        "Scout 3",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "4",
+        "faction": "separatists",
+        "defense": "r",
+        "hp": "1",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Commando E-5 Blaster",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "lb",
+      "cardName": "BX-Series Droid Commandos",
+      "title": "Strike Team",
+      "cost": 20,
+      "cardType": "unit",
+      "displayName": "BX Droid Strike Team",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "-> Jump 1",
+        "AI: Dodge",
+        "Move",
+        "Detachment: BX-Series Droid Commandos",
+        "Heavy Weapon Team",
+        "Impervious",
+        "Scale",
+        "Scout 3",
+        "Sharpshooter 1"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "r",
+        "hp": "1",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Unarmed",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Commando E-5 Blaster",
+          "keywords": "",
+          "range": "1 - 3",
+          "red": null,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "nk",
+      "cardName": "DRK-1 Sith Probe Droids",
+      "title": "",
+      "cost": 35,
+      "cardType": "unit",
+      "isUnique": true,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "-> Observe 3",
+        "Detachment: Maul",
+        "Hover: Air 1",
+        "Incognito"
+      ],
+      "stats": {
+        "minicount": "3",
+        "faction": "separatists",
+        "defense": "w",
+        "hp": "1",
+        "courage": "1",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Electro-stun Micro Blaster",
+          "keywords": "Suppressive",
+          "range": "- 2",
+          "red": null,
+          "white": 2,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "px",
+      "cardName": "IG-100 MagnaGuard",
+      "title": "",
+      "cost": 72,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "AI: Dodge",
+        "Move",
+        "Charge",
+        "Guardian 2: Commander",
+        "Immune: Melee Pierce",
+        "Retinue: Commander",
+        "Unhindered"
+      ],
+      "stats": {
+        "minicount": "3",
+        "faction": "separatists",
+        "defense": "r",
+        "hp": "2",
+        "courage": "2",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Electrostaff",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": null,
+          "black": 2
+        },
+        {
+          "name": "Precision Laser Dart",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "xd",
+      "cardName": "IG-100 MagnaGuard",
+      "title": "Prototype Assassin Droids",
+      "cost": 56,
+      "cardType": "unit",
+      "displayName": "IG-100 MagnaGuard (Prototype)",
+      "isUnique": false,
+      "rank": "special",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "droid trooper",
+      "keywords": [
+        "AI: Dodge",
+        "Charge",
+        "Immune: Melee Pierce",
+        "Special Issue: Experimental Droids",
+        "Unhindered"
+      ],
+      "stats": {
+        "minicount": "3",
+        "faction": "separatists",
+        "defense": "r",
+        "hp": "1",
+        "courage": "1",
+        "speed": "2",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Electrostaff",
+          "keywords": "",
+          "range": "",
+          "red": null,
+          "white": 1,
+          "black": 1
+        },
+        {
+          "name": "Precision Laser Dart",
+          "keywords": "",
+          "range": "1 - 2",
+          "red": null,
+          "white": 1,
+          "black": 1
+        }
+      ]
+    },
+    {
+      "id": "ie",
+      "cardName": "Droidekas",
+      "title": "",
+      "cost": 60,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "ground vehicle",
+      "keywords": [
+        "AI: Attack",
+        "Move",
+        "Generator 1",
+        "Shielded 4",
+        "Wheel Mode"
+      ],
+      "stats": {
+        "minicount": "2",
+        "faction": "separatists",
+        "defense": "w",
+        "hp": "3",
+        "courage": "-",
+        "speed": "1",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Dual Twin Blaster Cannons",
+          "keywords": "Suppressive/ Fixed: Front/ Immune: Deflect",
+          "range": "1 - 3",
+          "red": 1,
+          "white": null,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "qk",
+      "cardName": "DSD1 Dwarf Spider Droid",
+      "title": "",
+      "cost": 50,
+      "cardType": "unit",
+      "displayName": "Dwarf Spider Droid",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "ground vehicle",
+      "keywords": [
+        ">> Self-Destruct 4",
+        "Armor 3",
+        "Climbing Vehicle",
+        "Expert Climber",
+        "Programmed",
+        "Blast"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "w",
+        "hp": "6",
+        "courage": "4",
+        "speed": "2",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Wicked Kick",
+          "keywords": "",
+          "range": "",
+          "red": 1,
+          "white": 1,
+          "black": 1
+        },
+        {
+          "name": "DSD1 Self-Destruct",
+          "keywords": "Blast/ Impact 1",
+          "range": "A1",
+          "red": 3,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "mc",
+      "cardName": "STAP Riders",
+      "title": "",
+      "cost": 80,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "support",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "Agile 1",
+        "AI: Move",
+        "Coordinate: Droid Trooper",
+        "Vehicle",
+        "Cover 1",
+        "Speeder 1"
+      ],
+      "stats": {
+        "minicount": "2",
+        "faction": "separatists",
+        "defense": "w",
+        "hp": "",
+        "courage": "-",
+        "speed": "",
+        "hitsurge": "",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Repeating Dual Blaster Cannons",
+          "keywords": "Critical 1/ Fixed: Front",
+          "range": "1 - 3",
+          "red": null,
+          "white": null,
+          "black": 3
+        }
+      ]
+    },
+    {
+      "id": "gc",
+      "cardName": "AAT Battle Tank",
+      "title": "",
+      "cost": 165,
+      "cardType": "unit",
+      "displayName": "AAT Battle Tank",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "repulsor vehicle",
+      "keywords": [
+        "AI: Attack",
+        "Armor: 5",
+        "Arsenal: 2",
+        "Barrage",
+        "Hover: Ground",
+        "Weak Point 2: Rear"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "r",
+        "hp": "9",
+        "courage": "6",
+        "speed": "1",
+        "hitsurge": "o:h",
+        "defsurge": ""
+      },
+      "weapons": [
+        {
+          "name": "Anti-Personnel Lasers",
+          "keywords": "Fixed: Front",
+          "range": "1 - 2",
+          "red": null,
+          "white": null,
+          "black": 3
+        },
+        {
+          "name": "Artillery Cannon",
+          "keywords": "Critical 2/ High Velocity/ Impact 2",
+          "range": "2 - 4",
+          "red": 4,
+          "white": null,
+          "black": null
+        }
+      ]
+    },
+    {
+      "id": "xe",
+      "cardName": "Persuader-Class Tank Droid",
+      "title": "Prototype Tank Droid",
+      "cost": 130,
+      "cardType": "unit",
+      "displayName": "Persuader-Class Tank Droid (Prototype)",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "ground vehicle",
+      "keywords": [
+        "Armor: 5",
+        "Arsenal 3",
+        "Direct: Corps Trooper Unit",
+        "Programmed",
+        "Reposition",
+        "Special Issue: Experimental Droids",
+        "Weak Point 1: Sides"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "w",
+        "hp": "11",
+        "courage": "7",
+        "speed": "1",
+        "hitsurge": "",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Ion Cannons",
+          "keywords": "Fixed: Front/ Impact 1/ Ion 1",
+          "range": "1 - 2",
+          "red": 1,
+          "white": null,
+          "black": 1
+        },
+        {
+          "name": "Heavy Blasters",
+          "keywords": "Critical 1/ Fixed: Front",
+          "range": "1 - 4",
+          "red": 1,
+          "white": 2,
+          "black": 2
+        }
+      ]
+    },
+    {
+      "id": "qt",
+      "cardName": "Persuader-Class Tank Droid",
+      "title": "",
+      "cost": 130,
+      "cardType": "unit",
+      "isUnique": false,
+      "rank": "heavy",
+      "affiliation": "",
+      "affiliations": [
+        "rebels",
+        "empire"
+      ],
+      "cardSubtype": "ground vehicle",
+      "keywords": [
+        "Armor: 5",
+        "Arsenal 2",
+        "Programmed",
+        "Reposition",
+        "Transport",
+        "Weak Point 1: Sides",
+        "Fixed: Front",
+        "Impact",
+        "Ion",
+        "Critical"
+      ],
+      "stats": {
+        "minicount": "1",
+        "faction": "separatists",
+        "defense": "w",
+        "hp": "11",
+        "courage": "7",
+        "speed": "1",
+        "hitsurge": "o:h",
+        "defsurge": "d:s"
+      },
+      "weapons": [
+        {
+          "name": "Ion Cannons",
+          "keywords": "Critical 1/ Fixed: Front/ Impact 1/ Ion 1",
+          "range": "1 - 2",
+          "red": 1,
+          "white": 1,
+          "black": 1
+        },
+        {
+          "name": "Heavy Blasters",
+          "keywords": "Critical 1/ Fixed: Front",
+          "range": "1 - 4",
+          "red": 1,
+          "white": 2,
+          "black": 2
+        }
+      ]
+    }
+  ]
+}

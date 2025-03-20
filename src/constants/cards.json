@@ -4100,7 +4100,7 @@
     },
     "gb": {
         "id": "gb",
-        "cardName": "TX-130 Saber-Class Fighter Tank",
+        "cardName": "Saber-Class Tank",
         "displayName": "Saber Fighter Tank",
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
@@ -4148,7 +4148,7 @@
     "gc": {
         "id": "gc",
         "displayName": "AAT Battle Tank",
-        "cardName": "AAT Trade Federation Battle Tank",
+        "cardName": "AAT Battle Tank",
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
         "rank": "heavy",
@@ -8604,7 +8604,7 @@
     "nr": {
         "id": "nr",
         "cardName": "T-Series Tactical Droid",
-        "title": "Programmed For Strategy",
+        "title": "Programmed for Strategy",
         "cardType": "unit",
         "cardSubtype": "droid trooper",
         "rank": "commander",
@@ -9924,6 +9924,7 @@
     "py": {
         "id": "py",
         "cardName": "Super Tactical Droid",
+        "title":"Commanding Controller",
         "cardType": "unit",
         "cardSubtype": "droid trooper",
         "rank": "commander",

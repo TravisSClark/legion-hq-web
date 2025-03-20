@@ -403,6 +403,26 @@ function validateList(currentList, rankLimits){
 }
 
 function applyFieldCommander(list, rankReqs){
+
+  list.hasFieldCommander = false;
+
+  for (let i = 0; i < list.units.length && !list.hasFieldCommander; i++) {
+    const unit = list.units[i];
+    const unitCard = cards[unit.unitId];
+
+    if (unitCard.keywords.includes('Field Commander')) list.hasFieldCommander = true;
+
+    for (let j = 0; j < unit.upgradesEquipped.length && !list.hasFieldCommander; j++) { 
+      const upgradeId = unit.upgradesEquipped[j];
+      if (upgradeId) {
+        const upgradeCard = cards[upgradeId];
+        if (upgradeCard.keywords.includes('Field Commander')) {
+          list.hasFieldCommander = true;
+        }
+      }
+    }
+  }
+
   const bf = battleForcesDict[list.battleForce];
   if(list.hasFieldCommander && !bf?.rules?.noFieldComm)
   {
