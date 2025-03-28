@@ -15009,5 +15009,35 @@
                 "cardName": "ARF Troopers"
             }
         ]
+    },
+    "Bc": {
+        "id": "Bc",
+        "cardName": "Ahsoka Tano",
+        "title": "Padawan Commander",
+        "cardType": "unit",
+        "cardSubtype": "trooper",
+        "rank": "commander",
+        "faction": "republic",
+        "cost": 110,
+        "imageName": "Ahsoka Tano Padawan Commander.webp",
+        "keywords": [
+            "Jump",
+            "Associate",
+            "Deflect",
+            "Immune",
+            "Independent",
+            "Scout",
+            "Shien Mastery"
+        ],
+        "upgradeBar": [
+            "command",
+            "training",
+            "force"
+        ],
+        "defense": "red",
+        "surges": ["crit"],
+        "wounds": 5,
+        "courage": 2,
+        "speed": 3
     }
 }

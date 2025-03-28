@@ -186,7 +186,7 @@ const battleForcesDict = {
       name: '501st Legion',
       faction: 'republic',
       linkId: '5t',
-      commander: ['na', 'fy', 'ns'],
+      commander: ['na', 'fy', 'ns', 'Bc'],
       operative: [],
       corps: ['fz'],
       special: ['kz', 'ky', 'Ay'],
