@@ -4100,7 +4100,7 @@
     },
     "gb": {
         "id": "gb",
-        "cardName": "Saber-Class Tank",
+        "cardName": "TX-130 Saber-Class Fighter Tank",
         "displayName": "Saber Fighter Tank",
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
@@ -4148,7 +4148,7 @@
     "gc": {
         "id": "gc",
         "displayName": "AAT Battle Tank",
-        "cardName": "AAT Battle Tank",
+        "cardName": "AAT Trade Federation Battle Tank",
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
         "rank": "heavy",
