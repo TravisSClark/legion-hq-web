@@ -15018,6 +15018,7 @@
         "cardSubtype": "trooper",
         "rank": "commander",
         "faction": "republic",
+        "isUnique": true,
         "cost": 110,
         "imageName": "Ahsoka Tano Padawan Commander.webp",
         "keywords": [
@@ -15034,6 +15035,7 @@
             "training",
             "force"
         ],
+        "associate":"na",
         "defense": "red",
         "surges": ["crit"],
         "wounds": 5,
