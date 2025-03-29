@@ -15041,5 +15041,68 @@
         "wounds": 5,
         "courage": 2,
         "speed": 3
+    },
+    "Bd": {
+        "id": "Bd",
+        "cardName": "Ahsoka Tano",
+        "title": "Jedi Padawan",
+        "cardSubtype": "squad leader",
+        "isUnique": true,
+        "cardType": "upgrade",
+        "cost": 35,
+        "imageName": "Ahsoka Tano Jedi Padawan.webp",
+        "keywords": [
+            "Leader",
+            "Sidearm",
+            "Block",
+            "Charge",
+            "Independent",
+            "Critical",
+            "Impact",
+            "Pierce"
+        ],
+        "requirements": [
+            {
+                "cardSubtype": "clone trooper"
+            }
+        ]
+    },
+    "Be": {
+        "id": "Be",
+        "cardName": "You Are Beaten",
+        "cardSubtype": "1",
+        "cardType": "command",
+        "commander": "Ahsoka Tano",
+        "imageName": "You Are Beaten.webp",
+        "faction": "republic",
+        "keywords": [
+            "Charge"
+        ]
+    },
+    "Bf": {
+        "id": "Bf",
+        "cardName": "I Go Where I'm Needed",
+        "cardSubtype": "3",
+        "cardType": "command",
+        "commander": "Ahsoka Tano",
+        "imageName": "I Go Where I'm Needed.webp",
+        "faction": "republic",
+        "keywords": [
+            "Guardian",
+            "Disengage"
+        ]
+    },
+    "Bg": {
+        "id": "Bg",
+        "cardName": "Revenge Is Not the Jedi Way",
+        "cardSubtype": "2",
+        "cardType": "command",
+        "commander": "Ahsoka Tano",
+        "imageName": "Revenge Is Not the Jedi Way.webp",
+        "faction": "republic",
+        "keywords": [
+            "Jar'Kai Mastery",
+            "Shien Mastery"
+        ]
     }
 }
