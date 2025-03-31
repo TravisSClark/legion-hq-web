@@ -12,7 +12,7 @@ import { findUnitIndexInList, getListUniques, unitHasUniques } from './eligibleC
 function mergeLists(primaryList, secondaryList) {
   let unitsToAdd = [];
 
-  let primaryUniques = getListUniques(primaryList);
+  let primaryUniques = getListUniques(primaryList, "id");
 
   for (let i = 0; i < secondaryList.units.length; i++) {
     const unit = secondaryList.units[i];
