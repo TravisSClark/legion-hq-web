@@ -15104,5 +15104,61 @@
             "Jar'Kai Mastery",
             "Shien Mastery"
         ]
+    },
+    "Bh": {
+        "id": "Bh",
+        "cardName": "Hondo Ohnaka",
+        "title": "Trustworthy Compatriot",
+        "cardType": "unit",
+        "cardSubtype": "trooper",
+        "rank": "operative",
+        "faction": "mercenary",
+        "subfaction": "raiders",
+        "affiliations": [
+            "empire",
+            "rebels",
+            "republic",
+            "separatists"
+        ],
+        "isUnique": true,
+        "cost": 0,
+        "imageName": "Hondo Ohnaka.webp",
+        "keywords": [
+            "Mercenary",
+            "Arsenal",
+            "Disengage",
+            "Independent",
+            "My Mood Is Based On Profit",
+            "Nimble",
+            "Reliable",
+            "Uncanny Luck",
+            "Versatile"
+        ],
+        "upgradeBar": [],
+        "defense": "white",
+        "surges": [],
+        "wounds": 5,
+        "courage": -1,
+        "speed": 2
+    },
+    "Bi": {
+        "id": "Bi",
+        "cardName": "That's Just Good Business",
+        "cardSubtype": "2",
+        "cardType": "command",
+        "commander": "Hondo Ohnaka",
+        "imageName": "That's Just Good Business.webp",
+        "faction": "",
+        "keywords": []
+    },
+    "Bj": {
+        "id": "Bj",
+        "cardName": "Stories, So Many of Them True",
+        "cardSubtype": "3",
+        "cardType": "command",
+        "commander": "Hondo Ohnaka",
+        "imageName": "Stories, So Many of Them True.webp",
+        "faction": "",
+        "keywords": []
     }
 }
