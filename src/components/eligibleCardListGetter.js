@@ -363,13 +363,12 @@ function getListUniques(list, field){
   list.units.forEach(u => {
     if (cards[u.unitId]?.isUnique) {
       uniques.push(field === "id" ? u.unitId : cards[u.unitId].cardName);
-    } else {
-      u.upgradesEquipped.forEach ( up => {
-        if (cards[up]?.isUnique) {
-          uniques.push(field === "id" ? up : cards[up].cardName);
-        }
-      })
     }
+    u.upgradesEquipped.forEach ( up => {
+      if (cards[up]?.isUnique) {
+        uniques.push(field === "id" ? up : cards[up].cardName);
+      }
+    })
     // TODO counterpart check COULD go here, but currently no counterparts have non-unique parent cards (and I suspect it will stay that way)
   });
 
