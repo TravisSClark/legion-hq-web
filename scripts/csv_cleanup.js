@@ -91,7 +91,6 @@ function getCsvCards(){
       let isMerc = ! ["empire", "rebels", "republic", "separatists"].includes(line[7]);
       let faction = line[7];
       let affiliation = "";
-      let affiliations = ['rebels', 'empire'];
       if(isMerc){
         faction = "mercenary";
         affiliation = line[7].slice(1);
