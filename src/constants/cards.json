@@ -4100,8 +4100,9 @@
     },
     "gb": {
         "id": "gb",
-        "cardName": "TX-130 Saber-Class Fighter Tank",
-        "displayName": "Saber Fighter Tank",
+        "cardName": "Saber-Class Tank",
+
+        "ttsName": "Saber-Class Tank",
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
         "rank": "heavy",
@@ -4147,8 +4148,8 @@
     },
     "gc": {
         "id": "gc",
-        "displayName": "AAT Battle Tank",
-        "cardName": "AAT Trade Federation Battle Tank",
+        "cardName": "AAT Battle Tank",
+        "ttsName": "AAT Trade Federation Battle Tank",
         "cardType": "unit",
         "cardSubtype": "repulsor vehicle",
         "rank": "heavy",
@@ -5624,7 +5625,7 @@
     "ip": {
         "requirements": [
             {
-                "cardName": "TX-130 Saber-Class Fighter Tank"
+                "cardName": "Saber-Class Tank"
             }
         ],
         "cardSubtype": "pilot",
@@ -5642,7 +5643,7 @@
     "iq": {
         "requirements": [
             {
-                "cardName": "AAT Trade Federation Battle Tank"
+                "cardName": "AAT Battle Tank"
             }
         ],
         "cardName": "T-Series Tactical Droid Pilot",
@@ -6604,7 +6605,7 @@
         "keywords": [],
         "requirements": [
             {
-                "cardName": "TX-130 Saber-Class Fighter Tank"
+                "cardName": "Saber-Class Tank"
             }
         ],
         "id": "kl"
@@ -6621,7 +6622,7 @@
         ],
         "requirements": [
             {
-                "cardName": "TX-130 Saber-Class Fighter Tank"
+                "cardName": "Saber-Class Tank"
             }
         ],
         "id": "km",
@@ -6727,7 +6728,7 @@
         ],
         "requirements": [
             {
-                "cardName": "AAT Trade Federation Battle Tank"
+                "cardName": "AAT Battle Tank"
             }
         ]
     },
@@ -6744,7 +6745,7 @@
         ],
         "requirements": [
             {
-                "cardName": "TX-130 Saber-Class Fighter Tank"
+                "cardName": "Saber-Class Tank"
             }
         ],
         "id": "kr"
@@ -6761,7 +6762,7 @@
         ],
         "requirements": [
             {
-                "cardName": "TX-130 Saber-Class Fighter Tank"
+                "cardName": "Saber-Class Tank"
             }
         ],
         "id": "ks"
@@ -6812,7 +6813,7 @@
         ],
         "requirements": [
             {
-                "cardName": "AAT Trade Federation Battle Tank"
+                "cardName": "AAT Battle Tank"
             }
         ],
         "history": []
