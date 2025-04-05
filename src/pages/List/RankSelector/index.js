@@ -32,7 +32,8 @@ function RankSelector({style}) {
         // TODO rename this in cards.json at some point
         let rankName = rank === "special" ? "special forces" : rank;
 
-        if(unitCounts[rank] !== gametimeUnitCounts[rank]){
+        // TODO kludge since saber was breaking stuff
+        if(unitCounts[rank] !== gametimeUnitCounts[rank] && currentList.battleForce != "Shadow Collective"){
           badgeContent += "("+gametimeUnitCounts[rank] +")"
 
           toolTip = " " + rankName.toUpperCase() + " count during army building is " + unitCounts[rank]+". ";

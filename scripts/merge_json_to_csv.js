@@ -1,27 +1,11 @@
 /**
  * Take PCGamerPirate's PFP file, remove some columns/types we don't care about, and map the 
- * LHQ id to each card
+ * LHQ id and other info we want to each card
  */
-import { match } from 'assert';
 import fs from 'fs-extra';
 import path from 'path';
 
-async function readJson(inJson) {
-    const ttsJson = await fs.readJson(inJson);
-    return ttsJson;
-}
-
-function toKey(name){
-    return name.toUpperCase();
-}
-
-function trimArray(array){
-  for(let i =0; i<array.length; i++){
-    array[i] = array[i].trim();
-  }
-}
-
-function getCsvCards(){
+function mergeOurJsonToPfp(){
 
     let unitArray = [];
 
@@ -58,7 +42,6 @@ function getCsvCards(){
       cleanedArray[0] += `, weapon${i}, keywords, type, range, r, w, b`;
     }
 
-
     // Add all unit AND Command Card names (ccs are children of their unit)
     const count = linesArray.length;
     for (let a = 1; a < count; a++) {
@@ -77,7 +60,7 @@ function getCsvCards(){
           line.pop();
         }else{
           // TODO fix this for mercs
-          line.push(l.replaceAll(',',"/"));
+          line.push('"' + l + '"'); //l.replaceAll(',',"/"));
         }
       })
 
@@ -87,7 +70,7 @@ function getCsvCards(){
         return lhqName == csvName;
       });
       if(!matchingCard){
-        console.log('no match', line[0], line[1]);
+        console.log('no match', line[0], line[1], a);
         continue;
       }
 
@@ -100,9 +83,7 @@ function getCsvCards(){
       if(isMerc){
         faction = "mercenary";
         affiliation = line[7].slice(1);
-        // affiliations=TODO needs to make /sv of valid faction adds
       }
-
 
       // Grab data from PC's spreadsheet lines, convert it into the format we want
       // lhq id, name, subtitle, displayName, ttsName unique(t/f), rank, minicount,       faction, affiliation,  
@@ -145,125 +126,11 @@ function getCsvCards(){
       cleanedArray.push(newLine);
     }
 
-    // Indices for the new/converted spreadsheet line
-    const indices={
-      ID:0,
-      COST:1,
-
-      NAME:2, 
-      TITLE: 3,
-
-      DISPLAY_NAME:4,
-      TTS_NAME: 5,
-      IMAGE_FILE: 6, 
-      UPGRADEBAR: 7,
-
-      IS_UNIQUE: 8,
-      RANK: 9,
-      MINI_COUNT: 10,
-      FACTION: 11,
-      AFFILIATION: 12,
-      UNIT_TYPE: 13,
-      DEFENSE:14,
-      HP:15,
-      COURAGE:16,
-      SPEED:17,
-      HITSURGE:18,
-      DEFSURGE:19,
-      KEYWORDS:20,
-      WEAPON1:21,
-      WEAPON2: 28,
-      WEAPON3: 35,
-    }
-
     fs.writeFileSync('cleanedCsv.csv', cleanedArray.join('\r\n'));
 
-    {
-      let cardString = fs.readFileSync('../src/constants/cards.json', 'utf8')
-        
-      let cardData = JSON.parse(cardString);
-    
-      cleanedArray.slice(1).forEach((l,i) =>{
-        
-        // Start with mandatory/simple fields
-        let newObj = {
-          id: l[indices.ID],
-          cardName: l[indices.NAME],
-          title: l[indices.TITLE],
-          displayName:l[indices.DISPLAY_NAME],
-          ttsName: l[indices.TTS_NAME],
-
-          cardType:"unit",
-          cardSubtype: l[indices.UNIT_TYPE],
-          rank: l[indices.RANK],
-          faction:l[indices.FACTION],
-          affiliation: l[indices.AFFILIATION],
-          isUnique: l[indices.IS_UNIQUE],
-          cost: l[indices.COST],
-          keywords: l[indices.KEYWORDS].split("/ "), // TODO TODO TODO
-          upgradeBar: l[indices.UPGRADEBAR].split("/"),
-
-          // 'Stats' that are generally not used for listbuilding
-          stats:{
-            minicount: l[indices.MINI_COUNT],
-            hp: l[indices.HP],
-            defense: l[indices.DEFENSE] == "E" ? 'r':'w', // TODO maybe this should be 1|2
-            // skip courageType; derive from cardSubtype trooper/vehicle
-            courage: l[indices.COURAGE], // call resilience courage too
-            speed: l[indices.SPEED],
-            // skip speed --- display
-            hitsurge: l[indices.HITSURGE], // TODO
-            defsurge: l[indices.DEFSURGE], // TODO
-          },
-          weapons:[],
-        }
-
-        for(let i=indices.WEAPON1; l.length > i && l[i]; i+=7){
-          newObj.weapons.push(
-            {
-              name: l[i],
-              keywords: l[i+1].split("/"),
-              type: l[i+2],
-              range: l[i+3],
-              // note that we flip indices here from the PFP (listed rwb)
-              dice:{
-                r: parseInt(l[i+4]), 
-                b: parseInt(l[i+6]), 
-                w: parseInt(l[i+5]), 
-              }
-            }
-          );
-          trimArray(newObj.weapons[newObj.weapons.length -1].keywords);
-        }
-
-        let cleanedObj = {};
-        let ogCardHistory = cardData[l[indices.ID]].history;
-        console.log(JSON.stringify(ogCardHistory));
-
-        if(ogCardHistory)
-          console.log('found' + JSON.stringify(ogCardHistory));
-          cleanedObj.history = JSON.parse(JSON.stringify(
-            ogCardHistory
-          ));
-
-        Object.getOwnPropertyNames(newObj).forEach(k=>{
-          if(newObj[k]){
-            cleanedObj[k] = newObj[k];
-          }
-        })
-
-        trimArray(cleanedObj.upgradeBar);
-        trimArray(cleanedObj.keywords);
-
-
-        cardData[cleanedObj.id] = cleanedObj; // Object.assign(cardData[cleanedObj.id], cleanedObj);
-        // console.log(l[20]);
-      });
-      fs.writeFileSync('newJson.json', JSON.stringify(cardData, null, 2));
-  }
 }
 
-getCsvCards();
+mergeOurJsonToPfp();
 
 
 
