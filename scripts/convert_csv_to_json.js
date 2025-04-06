@@ -156,124 +156,148 @@ function expandKeywords(obj, array, allTheCardsCsv, allTheCardsJson = null){
   obj.keywords = expandedKeywords;
 }
 
-function writeMergedCsvToJson(){
+function convertUnit(l, cleanedArray, cardData){
+  let id = l[indices.ID];
+  // Start with mandatory/simple fields
+  let newObj = {
+    id,
+    cardName: l[indices.NAME],
+    title: l[indices.TITLE],
+    displayName:l[indices.DISPLAY_NAME],
+    ttsName: l[indices.TTS_NAME],
+    imageName:l[indices.IMAGE_FILE],
 
+    cardType:"unit",
+    cardSubtype: l[indices.UNIT_TYPE],
+    rank: l[indices.RANK],
+    faction:l[indices.FACTION],
+    affiliation: l[indices.AFFILIATION],
+    isUnique: l[indices.IS_UNIQUE] == "true",
+    cost: parseInt(l[indices.COST]),
+    keywords: l[indices.KEYWORDS].split("/"), // TODO TODO TODO
+    upgradeBar: l[indices.UPGRADEBAR].split("/"),
 
-  
-
-  {
-    let cardString = fs.readFileSync('../src/constants/cards.json', 'utf8')
-    let cardData = JSON.parse(cardString);
-
-    let csvRaw = fs.readFileSync('cleanedCsv.csv', 'utf8')
-    let cleanedArray = csvRaw.split('\r\n').slice(1)
-      .map(
-        l=>{
-          let line = [];
-
-          let lineByQuotes = l.split('"');
-
-          lineByQuotes.forEach((l,i)=>{
-            if(i%2 == 0){
-              let idx=0;
-              if(i>0){
-                idx =1;
-              }
-              line = line.concat(l.split(',').slice(idx));
-              line.pop();
-            }else{
-              // TODO fix this for mercs
-              line.push('"' + l + '"'); //l.replaceAll(',',"/"));
-            }
-          })
-          return line;
-        
-        });
-
-    console.log('processing ' + cleanedArray.length + " rows");
- 
-  
-    cleanedArray.forEach((l,i) =>{
-      
-      let id = l[indices.ID];
-      // Start with mandatory/simple fields
-      let newObj = {
-        id,
-        cardName: l[indices.NAME],
-        title: l[indices.TITLE],
-        displayName:l[indices.DISPLAY_NAME],
-        ttsName: l[indices.TTS_NAME],
-        imageName:l[indices.IMAGE_FILE],
-
-        cardType:"unit",
-        cardSubtype: l[indices.UNIT_TYPE],
-        rank: l[indices.RANK],
-        faction:l[indices.FACTION],
-        affiliation: l[indices.AFFILIATION],
-        isUnique: l[indices.IS_UNIQUE] == "true",
-        cost: parseInt(l[indices.COST]),
-        keywords: l[indices.KEYWORDS].split("/"), // TODO TODO TODO
-        upgradeBar: l[indices.UPGRADEBAR].split("/"),
-
-        // 'Stats' that are generally not used for listbuilding
-        stats:{
-          minicount: parseInt(l[indices.MINI_COUNT]),
-          hp: parseInt(l[indices.HP]),
-          defense: l[indices.DEFENSE] == "E" ? 'r':'w', // TODO maybe this should be 1|2
-          // skip courageType; derive from cardSubtype trooper/vehicle
-          courage: parseInt(l[indices.COURAGE]), // call resilience courage too
-          speed: parseInt(l[indices.SPEED]),
-          // skip speed --- display
-          hitsurge: l[indices.HITSURGE], // TODO
-          defsurge: l[indices.DEFSURGE], // TODO
-        },
-        weapons:[],
-        history:null
-      }
-
-      for(let i=indices.WEAPON1; l.length > i && l[i]; i+=7){
-        newObj.weapons.push(
-          {
-            name: l[i],
-            keywords: l[i+1].split("/"),
-            type: l[i+2],
-            range: l[i+3],
-            // note that we flip indices here from the PFP (listed rwb)
-            dice:{
-              r: parseInt(l[i+4]), 
-              b: parseInt(l[i+6]), 
-              w: parseInt(l[i+5]), 
-            }
-          }
-        );
-        expandKeywords(newObj.weapons[newObj.weapons.length -1], newObj.weapons[newObj.weapons.length -1].keywords, cleanedArray);
-      }
-
-      if(cardData[id]){
-        let ogCardHistory = cardData[id].history;
-        if(ogCardHistory){
-          newObj.history = JSON.parse(JSON.stringify(
-            ogCardHistory
-          ));
-        }
-      }else{
-        console.warn('no LHQ card found for:', id);
-      }
-
-      let cleanedObj = {};
-      Object.getOwnPropertyNames(newObj).forEach(k=>{
-        if(newObj[k]){
-          cleanedObj[k] = newObj[k];
-        }
-      })
-
-      trimArray(cleanedObj.upgradeBar);
-      expandKeywords(cleanedObj, cleanedObj.keywords, cleanedArray, cardData);
-
-      cardData[cleanedObj.id] = cleanedObj; // Object.assign(cardData[cleanedObj.id], cleanedObj);
-    });
-    fs.writeFileSync('newJson.json', JSON.stringify(cardData, null, 2));
+    // 'Stats' that are generally not used for listbuilding
+    stats:{
+      minicount: parseInt(l[indices.MINI_COUNT]),
+      hp: parseInt(l[indices.HP]),
+      defense: l[indices.DEFENSE] == "E" ? 'r':'w', // TODO maybe this should be 1|2
+      // skip courageType; derive from cardSubtype trooper/vehicle
+      courage: parseInt(l[indices.COURAGE]), // call resilience courage too
+      speed: parseInt(l[indices.SPEED]),
+      // skip speed --- display
+      hitsurge: l[indices.HITSURGE], // TODO
+      defsurge: l[indices.DEFSURGE], // TODO
+    },
+    weapons:[],
+    history:null
   }
+
+  for(let i=indices.WEAPON1; l.length > i && l[i]; i+=7){
+    newObj.weapons.push(
+      {
+        name: l[i],
+        keywords: l[i+1].split("/"),
+        type: l[i+2],
+        range: l[i+3],
+        // note that we flip indices here from the PFP (listed rwb)
+        dice:{
+          r: parseInt(l[i+4]), 
+          b: parseInt(l[i+6]), 
+          w: parseInt(l[i+5]), 
+        }
+      }
+    );
+    expandKeywords(newObj.weapons[newObj.weapons.length -1], newObj.weapons[newObj.weapons.length -1].keywords, cleanedArray);
+  }
+
+  if(cardData[id]){
+    let ogCardHistory = cardData[id].history;
+    if(ogCardHistory){
+      newObj.history = JSON.parse(JSON.stringify(
+        ogCardHistory
+      ));
+    }
+  }else{
+    console.warn('no LHQ card found for:', id);
+  }
+
+  let cleanedObj = {};
+  Object.getOwnPropertyNames(newObj).forEach(k=>{
+    if(newObj[k]){
+      cleanedObj[k] = newObj[k];
+    }
+  })
+
+  trimArray(cleanedObj.upgradeBar);
+  expandKeywords(cleanedObj, cleanedObj.keywords, cleanedArray, cardData);
+
+  cardData[cleanedObj.id] = cleanedObj; // Object.assign(cardData[cleanedObj.id], cleanedObj);
+}
+
+function writeMergedCsvToJson(){
+  let cardString = fs.readFileSync('../src/constants/cards.json', 'utf8')
+  let cardData = JSON.parse(cardString);
+
+  let csvRaw = fs.readFileSync('cleanedCsv.csv', 'utf8')
+  let cleanedArray = csvRaw.split('\r\n')
+    .map(
+      l=>{
+        let line = [];
+
+        let lineByQuotes = l.split('"');
+
+        lineByQuotes.forEach((l,i)=>{
+          if(i%2 == 0){
+            let idx=0;
+            if(i>0){
+              idx =1;
+            }
+            line = line.concat(l.split(',').slice(idx));
+            line.pop();
+          }else{
+            // TODO fix this for mercs
+            line.push('"' + l + '"'); //l.replaceAll(',',"/"));
+          }
+        })
+        return line;
+      
+      });
+
+  console.log('processing ' + cleanedArray.length + " rows");
+
+  let mode = "units";
+
+  let handlers = {
+    units: convertUnit,
+    // upgrades: 
+  }
+
+  cleanedArray.forEach((l,i) =>{
+
+    if(l[0] == undefined || l[0].trim().slice(0,1) == "#" || l[0].trim() == ""){
+      // console.log('skip', l);
+      return;
+    }
+
+    switch(l[0]){
+      case "%%UNITS":
+      case "%%UPGRADES":
+      case "%%COMMANDS":
+      case "%%COUNTERPARTS":
+      // battle
+      // flaw, lol
+        mode = l[0].slice(2).toLowerCase();
+        break;
+    
+      default:
+        handlers[mode](l, cleanedArray, cardData)
+
+    }
+  });
+
+
+  fs.writeFileSync('newJson.json', JSON.stringify(cardData, null, 2));
 }
 
 writeMergedCsvToJson();
