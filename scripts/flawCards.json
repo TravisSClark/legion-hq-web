@@ -1,0 +1,20 @@
+[
+  {
+    "id": "oh",
+    "displayName": "",
+    "cardName": "I've Altered the Deal",
+    "cardType": "flaw",
+    "commander": "Lando Calrissian",
+    "imageName": "I've Altered the Deal.webp",
+    "keywords": []
+  },
+  {
+    "id": "oi",
+    "displayName": "",
+    "cardName": "Developing Sympathies",
+    "cardType": "flaw",
+    "commander": "Agent Kallus",
+    "imageName": "Developing Sympathies.webp",
+    "keywords": []
+  }
+]

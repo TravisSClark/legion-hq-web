@@ -185,8 +185,6 @@ function mergeUpgrades(upgradeArray){
 
 }
 
-
-
 function mergeOurJsonToPfp(){
 
   let cardsByType = {
@@ -218,7 +216,35 @@ function mergeOurJsonToPfp(){
 
 }
 
+function splitJson(){
+
+  let cardData = fs.readFileSync('./newJson.json', 'utf8')
+    
+  let fullObj = JSON.parse(cardData);
+
+  let cardsByType = {
+    unit:[],
+    upgrade:[],
+    command:[],
+    counterpart:[],
+    flaw:[], // rip
+    battle:[]
+  }
+
+  Object.getOwnPropertyNames(fullObj).forEach( n => {
+    cardsByType[fullObj[n].cardType].push(fullObj[n]);
+  });
+
+  fs.writeFileSync('battleCards.json', JSON.stringify(cardsByType.battle));
+  fs.writeFileSync('commandCards.json', JSON.stringify(cardsByType.command));
+  fs.writeFileSync('counterpartCards.json', JSON.stringify(cardsByType.counterpart));
+  fs.writeFileSync('flawCards.json', JSON.stringify(cardsByType.flaw));
+  fs.writeFileSync('unitCards.json', JSON.stringify(cardsByType.unit));
+  fs.writeFileSync('upgradeCards.json', JSON.stringify(cardsByType.battle));
+}
+
 mergeOurJsonToPfp();
+splitJson();
 
 
 

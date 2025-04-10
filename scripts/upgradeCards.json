@@ -1,0 +1,218 @@
+[
+  {
+    "cardSubtype": "advantage",
+    "cardName": "Advanced Intel",
+    "cardType": "battle",
+    "imageName": "Advanced Intel.webp",
+    "keywords": [],
+    "id": "yu"
+  },
+  {
+    "cardSubtype": "advantage",
+    "cardName": "Cunning Deployment",
+    "cardType": "battle",
+    "imageName": "Cunning Deployment.webp",
+    "keywords": [],
+    "id": "yv"
+  },
+  {
+    "cardSubtype": "advantage",
+    "cardName": "Fortified Position",
+    "cardType": "battle",
+    "imageName": "Fortified Position.webp",
+    "keywords": [],
+    "id": "yw"
+  },
+  {
+    "cardSubtype": "advantage",
+    "cardName": "Garrison",
+    "cardType": "battle",
+    "imageName": "Garrison.webp",
+    "keywords": [],
+    "id": "yx"
+  },
+  {
+    "cardSubtype": "advantage",
+    "cardName": "Ordnance",
+    "cardType": "battle",
+    "imageName": "Ordnance.webp",
+    "keywords": [],
+    "id": "yy"
+  },
+  {
+    "cardSubtype": "advantage",
+    "cardName": "Strafing Run",
+    "cardType": "battle",
+    "imageName": "Strafing Run.webp",
+    "keywords": [],
+    "id": "yz"
+  },
+  {
+    "cardSubtype": "secondary",
+    "cardName": "Bring Them to Heel",
+    "cardType": "battle",
+    "imageName": "Bring Them to Heel.webp",
+    "keywords": [],
+    "id": "Aa"
+  },
+  {
+    "cardSubtype": "secondary",
+    "cardName": "Destroy Enemy Base",
+    "cardType": "battle",
+    "imageName": "Destroy Enemy Base.webp",
+    "keywords": [],
+    "id": "Ab"
+  },
+  {
+    "cardSubtype": "secondary",
+    "cardName": "Marked Targets",
+    "cardType": "battle",
+    "imageName": "Marked Targets.webp",
+    "keywords": [],
+    "id": "Ac"
+  },
+  {
+    "cardSubtype": "secondary",
+    "cardName": "Recon Mission",
+    "cardType": "battle",
+    "imageName": "Recon Mission.webp",
+    "keywords": [],
+    "id": "Ad"
+  },
+  {
+    "cardSubtype": "secondary",
+    "cardName": "Surface Scan",
+    "cardType": "battle",
+    "imageName": "Surface Scan.webp",
+    "keywords": [],
+    "id": "Ae"
+  },
+  {
+    "cardSubtype": "secondary",
+    "cardName": "Sweep and Clear",
+    "cardType": "battle",
+    "imageName": "Sweep and Clear.webp",
+    "keywords": [],
+    "id": "Af"
+  },
+  {
+    "cardSubtype": "primary",
+    "cardName": "Breakthrough",
+    "cardType": "battle",
+    "imageName": "Breakthrough.webp",
+    "keywords": [],
+    "id": "Ag"
+  },
+  {
+    "cardSubtype": "primary",
+    "cardName": "Bunker Assault",
+    "cardType": "battle",
+    "imageName": "Bunker Assault.webp",
+    "keywords": [],
+    "id": "Ah"
+  },
+  {
+    "cardSubtype": "primary",
+    "cardName": "Close the Pocket",
+    "cardType": "battle",
+    "imageName": "Close the Pocket.webp",
+    "keywords": [],
+    "id": "Ai"
+  },
+  {
+    "cardSubtype": "primary",
+    "cardName": "Intercept Signals",
+    "cardType": "battle",
+    "imageName": "Intercept the Signals.webp",
+    "keywords": [],
+    "id": "Aj"
+  },
+  {
+    "cardSubtype": "primary",
+    "cardName": "Recover the Research",
+    "cardType": "battle",
+    "imageName": "Recover the Research.webp",
+    "keywords": [],
+    "id": "Ak"
+  },
+  {
+    "cardSubtype": "primary",
+    "cardName": "Shifting Priorities",
+    "cardType": "battle",
+    "imageName": "Shifting Priorities.webp",
+    "keywords": [],
+    "id": "Al"
+  },
+  {
+    "id": "An",
+    "cardSubtype": "primary",
+    "cardName": "Bunker Assault",
+    "cardType": "battle",
+    "imageName": "skirmish-Bunker Assault.webp",
+    "keywords": ["Recon"]
+  },
+  {
+    "id": "Ao",
+    "cardSubtype": "primary",
+    "cardName": "Close the Pocket",
+    "cardType": "battle",
+    "imageName": "skirmish-Close the Pocket.webp",
+    "keywords": ["Recon"]
+  },
+  {
+    "id": "Ap",
+    "cardSubtype": "primary",
+    "cardName": "Intercept Signals",
+    "cardType": "battle",
+    "imageName": "skirmish-Intercept the Signals.webp",
+    "keywords": ["Recon"]
+  },
+  {
+    "id": "Aq",
+    "cardSubtype": "secondary",
+    "cardName": "Bring Them to Heel",
+    "cardType": "battle",
+    "imageName": "skirmish-Bring Them to Heel.webp",
+    "keywords": ["Recon"]
+  },
+  {
+    "id": "Ar",
+    "cardSubtype": "secondary",
+    "cardName": "Recon Mission",
+    "cardType": "battle",
+    "imageName": "skirmish-Recon Mission.webp",
+    "keywords": ["Recon"]
+  },
+  {
+    "id": "As",
+    "cardSubtype": "secondary",
+    "cardName": "Surface Scan",
+    "cardType": "battle",
+    "imageName": "skirmish-Surface Scan.webp",
+    "keywords": ["Recon"]
+  },
+  {
+    "id": "At",
+    "cardSubtype": "advantage",
+    "cardName": "Advanced Intel",
+    "cardType": "battle",
+    "imageName": "skirmish-Advanced Intel.webp",
+    "keywords": ["Recon"]
+  },
+  {
+    "id": "Au",
+    "cardSubtype": "advantage",
+    "cardName": "Cunning Deployment",
+    "cardType": "battle",
+    "imageName": "skirmish-Cunning Deployment.webp",
+    "keywords": ["Recon"]
+  },
+  {
+    "id": "Av",
+    "cardSubtype": "advantage",
+    "cardName": "Fortified Position",
+    "cardType": "battle",
+    "imageName": "skirmish-Fortified Position.webp",
+    "keywords": ["Recon"]
+  }
+]
