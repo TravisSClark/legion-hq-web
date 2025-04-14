@@ -13452,6 +13452,7 @@
     "id": "py",
     "cardName": "Super Tactical Droid",
     "title": "Commanding Controller",
+    "ttsName": "Super Tactical Droid",
     "imageName": "Super Tactical Droid.webp",
     "cardType": "unit",
     "cardSubtype": "droid trooper",
