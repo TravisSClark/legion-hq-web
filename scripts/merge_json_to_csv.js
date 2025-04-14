@@ -218,9 +218,9 @@ function mergeOurJsonToPfp(){
 
 function splitJson(){
 
-  let cardData = fs.readFileSync('./newJson.json', 'utf8')
+  let newCardData = fs.readFileSync('./newJson.json', 'utf8')
     
-  let fullObj = JSON.parse(cardData);
+  let fullObj = JSON.parse(newCardData);
 
   let cardsByType = {
     unit:[],
@@ -243,10 +243,24 @@ function splitJson(){
   fs.writeFileSync('upgradeCards.json', JSON.stringify(cardsByType.battle));
 }
 
+function joinJson(){
+
+  let battleCardsData = JSON.parse(fs.readFileSync('./battleCards.json', 'utf8'));
+  let commandCardsData = JSON.parse(fs.readFileSync('./commandCards.json', 'utf8'));
+  let counterpartCardsData = JSON.parse(fs.readFileSync('./counterpartCards.json', 'utf8'));
+  let flawCardsData = JSON.parse(fs.readFileSync('./flawCards.json', 'utf8'));
+  let unitCardsData = JSON.parse(fs.readFileSync('./unitCards.json', 'utf8'));
+  let upgradeCardsData = JSON.parse(fs.readFileSync('./upgradeCards.json', 'utf8'));
+
+  let fullData = {...battleCardsData, ...commandCardsData, ...counterpartCardsData, ...flawCardsData, ...unitCardsData, ...upgradeCardsData};
+
+  const orderedData = Object.keys(fullData).sort().reduce(
+    (obj, key) => { 
+      obj[key] = fullData[key]; 
+      return obj;
+    }, 
+    {}
+  );
+}
+
 mergeOurJsonToPfp();
-splitJson();
-
-
-
-
-
