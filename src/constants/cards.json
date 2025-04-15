@@ -1096,89 +1096,6 @@
     ],
     "detachment": "ak"
   },
-  "am": {
-    "id": "am",
-    "cardName": "Rebel Pathfinders",
-    "imageName": "Rebel Pathfinders.webp",
-    "cardType": "unit",
-    "cardSubtype": "trooper",
-    "rank": "special",
-    "faction": "rebels",
-    "cost": 56,
-    "keywords": [
-      {
-        "name": "Danger Sense",
-        "value": 3
-      },
-      {
-        "name": "Dauntless"
-      },
-      {
-        "name": "Infiltrate"
-      }
-    ],
-    "upgradeBar": [
-      "heavy weapon",
-      "training",
-      "comms",
-      "gear",
-      "armament",
-      "grenades"
-    ],
-    "stats": {
-      "minicount": 4,
-      "hp": 1,
-      "defense": "w",
-      "courage": 2,
-      "speed": 2,
-      "hitsurge": "c",
-      "defsurge": "b"
-    },
-    "weapons": [
-      {
-        "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
-        "type": "a",
-        "range": "",
-        "dice": {
-          "r": null,
-          "b": 1,
-          "w": null
-        }
-      },
-      {
-        "name": "A-300 Blaster Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
-        "type": "0",
-        "range": "1 - 3",
-        "dice": {
-          "r": null,
-          "b": null,
-          "w": 2
-        }
-      }
-    ],
-    "history": [
-      {
-        "date": "19 November 2020",
-        "description": "Cost reduced from 68 to 58 points."
-      },
-      {
-        "date": "27 October 2021",
-        "description": "Cost reduced from 58 to 56 points."
-      }
-    ]
-  },
   "an": {
     "id": "an",
     "cardName": "1.4 FD Laser Cannon Team",
@@ -1505,91 +1422,6 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 60 to 55 points. Lost transport keyword."
-      }
-    ]
-  },
-  "ar": {
-    "id": "ar",
-    "cardName": "Imperial Officer",
-    "title": "Ruthless Commander",
-    "imageName": "Imperial Officer.webp",
-    "cardType": "unit",
-    "cardSubtype": "trooper",
-    "rank": "commander",
-    "faction": "empire",
-    "cost": 55,
-    "keywords": [
-      {
-        "name": "Spotter",
-        "value": 1
-      },
-      {
-        "name": "Exemplar"
-      },
-      {
-        "name": "Inspire",
-        "value": 1
-      }
-    ],
-    "upgradeBar": [
-      "command",
-      "gear"
-    ],
-    "stats": {
-      "minicount": 1,
-      "hp": 4,
-      "defense": "w",
-      "courage": 2,
-      "speed": 2,
-      "hitsurge": "h",
-      "defsurge": "b"
-    },
-    "weapons": [
-      {
-        "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
-        "type": "a",
-        "range": "",
-        "dice": {
-          "r": null,
-          "b": 1,
-          "w": null
-        }
-      },
-      {
-        "name": "Blaster Pistol",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
-        "type": "0",
-        "range": "1 - 2",
-        "dice": {
-          "r": null,
-          "b": 2,
-          "w": null
-        }
-      }
-    ],
-    "history": [
-      {
-        "date": "19 November 2020",
-        "description": "Cost reduced from 50 to 45 points."
-      },
-      {
-        "date": "5 June 2023",
-        "description": "Cost increased from 45 to 50 points."
-      },
-      {
-        "date": "19 July 2024",
-        "description": "Cost increased from 50 to 55 points. Lost Sharpshooter and gained Exemplar keywords. Blaster pistol changed from 1 black and 1 white to 2 black."
       }
     ]
   },
@@ -2861,87 +2693,6 @@
       }
     ]
   },
-  "bi": {
-    "id": "bi",
-    "cardName": "Rebel Officer",
-    "title": "Resolute Commander",
-    "imageName": "Rebel Officer.webp",
-    "cardType": "unit",
-    "cardSubtype": "trooper",
-    "rank": "commander",
-    "faction": "rebels",
-    "cost": 50,
-    "keywords": [
-      {
-        "name": "Take Cover",
-        "value": 1
-      },
-      {
-        "name": "Exemplar"
-      },
-      {
-        "name": "Inspire",
-        "value": 1
-      }
-    ],
-    "upgradeBar": [
-      "command",
-      "gear"
-    ],
-    "stats": {
-      "minicount": 1,
-      "hp": 4,
-      "defense": "w",
-      "courage": 2,
-      "speed": 2,
-      "hitsurge": "h",
-      "defsurge": "b"
-    },
-    "weapons": [
-      {
-        "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
-        "type": "a",
-        "range": "",
-        "dice": {
-          "r": null,
-          "b": 1,
-          "w": null
-        }
-      },
-      {
-        "name": "Blaster Pistol",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
-        "type": "0",
-        "range": "1 - 2",
-        "dice": {
-          "r": null,
-          "b": 2,
-          "w": null
-        }
-      }
-    ],
-    "history": [
-      {
-        "date": "19 November 2020",
-        "description": "Cost reduced from 50 to 45 points."
-      },
-      {
-        "date": "19 July 2024",
-        "description": "Cost increased from 45 to 50 points. Gained Exemplar and lost Sharpshooter keywords. Blaster changed from 1 black and 1 white to 2 black."
-      }
-    ]
-  },
   "bj": {
     "cardSubtype": "3",
     "cardName": "Assault",
@@ -3042,19 +2793,6 @@
         "description": "Now gives Nimble instead of Outmaneuver."
       }
     ]
-  },
-  "bu": {
-    "cardSubtype": "2",
-    "cardName": "ZX Flame Projector",
-    "cardType": "command",
-    "commander": "Boba Fett",
-    "faction": "",
-    "imageName": "ZX Flame Projector.webp",
-    "keywords": [
-      "Blast",
-      "Spray"
-    ],
-    "id": "bu"
   },
   "bv": {
     "cardSubtype": "1",
@@ -3379,19 +3117,6 @@
     ],
     "id": "cw"
   },
-  "cy": {
-    "cardSubtype": "command",
-    "cardName": "Esteemed Leader",
-    "isUnique": false,
-    "cardType": "upgrade",
-    "cost": 5,
-    "imageName": "Esteemed Leader.webp",
-    "keywords": [
-      "Guardian"
-    ],
-    "requirements": [],
-    "id": "cy"
-  },
   "cz": {
     "cardSubtype": "command",
     "cardName": "Strict Orders",
@@ -3653,22 +3378,6 @@
     ],
     "id": "dn"
   },
-  "dp": {
-    "cardSubtype": "comms",
-    "cardName": "Comms Relay",
-    "isUnique": false,
-    "cardType": "upgrade",
-    "cost": 5,
-    "imageName": "Comms Relay.webp",
-    "keywords": [],
-    "requirements": [
-      "NOT",
-      {
-        "cardSubtype": "emplacement trooper"
-      }
-    ],
-    "id": "dp"
-  },
   "dq": {
     "cardSubtype": "generator",
     "cardName": "Overcharged Generator",
@@ -3716,23 +3425,6 @@
       }
     ],
     "id": "dr"
-  },
-  "ds": {
-    "cardSubtype": "force",
-    "cardName": "Battle Meditation",
-    "isUnique": false,
-    "cardType": "upgrade",
-    "cost": 5,
-    "imageName": "Battle Meditation.webp",
-    "keywords": [],
-    "requirements": [],
-    "history": [
-      {
-        "date": "12 September 2019",
-        "description": "Cost reduced from 10 to 5 points."
-      }
-    ],
-    "id": "ds"
   },
   "dt": {
     "cardSubtype": "force",
@@ -3871,31 +3563,6 @@
     ],
     "isDoubleSided": true,
     "id": "dz"
-  },
-  "ea": {
-    "displayName": "A-300 Config",
-    "cardSubtype": "armament",
-    "cardName": "A-300 Long Range Config",
-    "isUnique": false,
-    "cardType": "upgrade",
-    "cost": 0,
-    "imageName": "A-300 Configuration.webp",
-    "keywords": [
-      "Reconfigure"
-    ],
-    "requirements": [
-      {
-        "cardName": "Rebel Pathfinders"
-      }
-    ],
-    "history": [
-      {
-        "date": "12 September 2019",
-        "description": "Cost reduced from 6 to 0 points."
-      }
-    ],
-    "isDoubleSided": true,
-    "id": "ea"
   },
   "eb": {
     "cardSubtype": "armament",
@@ -6116,64 +5783,6 @@
     ],
     "id": "gr"
   },
-  "gs": {
-    "cardSubtype": "heavy weapon",
-    "cardName": "Bistan",
-    "isUnique": true,
-    "cardType": "upgrade",
-    "cost": 33,
-    "imageName": "Bistan.webp",
-    "keywords": [
-      "Critical",
-      "Impact",
-      "Ion",
-      "Ion Token"
-    ],
-    "requirements": [
-      {
-        "cardName": "Rebel Pathfinders"
-      }
-    ],
-    "history": [
-      {
-        "date": "19 November 2020",
-        "description": "Cost reduced from 32 to 28 points. Wound threshold increased from 1 to 2."
-      },
-      {
-        "date": "19 July 2024",
-        "description": "Cost increased from 28 to 33 points. No longer exhausts. Gained Critical 1 keyword."
-      }
-    ],
-    "id": "gs"
-  },
-  "gt": {
-    "cardSubtype": "heavy weapon",
-    "cardName": "Pao",
-    "isUnique": true,
-    "cardType": "upgrade",
-    "cost": 20,
-    "imageName": "Pao.webp",
-    "keywords": [
-      "Inspire",
-      "Leader"
-    ],
-    "requirements": [
-      {
-        "cardName": "Rebel Pathfinders"
-      }
-    ],
-    "history": [
-      {
-        "date": "19 November 2020",
-        "description": "Wound threshold increased from 1 to 2."
-      },
-      {
-        "date": "27 October 2021",
-        "description": "Cost reduced from 22 to 20 points."
-      }
-    ],
-    "id": "gt"
-  },
   "gu": {
     "cardSubtype": "personnel",
     "cardName": "Rebel Veteran",
@@ -7598,23 +7207,6 @@
       }
     ],
     "id": "ij"
-  },
-  "ik": {
-    "cardSubtype": "command",
-    "cardName": "Aggressive Tactics",
-    "cardType": "upgrade",
-    "isUnique": false,
-    "cost": 15,
-    "imageName": "Aggressive Tactics.webp",
-    "keywords": [],
-    "requirements": [],
-    "history": [
-      {
-        "date": "19 November 2020",
-        "description": "Cost increased from 10 to 15 points. Added 'During the Command Phase' timing."
-      }
-    ],
-    "id": "ik"
   },
   "im": {
     "cardSubtype": "1",
@@ -9760,27 +9352,6 @@
       }
     ]
   },
-  "lk": {
-    "id": "lk",
-    "cardSubtype": "gear",
-    "cardName": "JT-12 Jetpacks",
-    "isUnique": false,
-    "cardType": "upgrade",
-    "cost": 10,
-    "imageName": "JT-12 Jetpacks.webp",
-    "keywords": [
-      "Jump"
-    ],
-    "requirements": [
-      "OR",
-      {
-        "cardName": "ARC Troopers"
-      },
-      {
-        "cardName": "Clone Captain Rex"
-      }
-    ]
-  },
   "ll": {
     "id": "ll",
     "cardSubtype": "armament",
@@ -11467,38 +11038,6 @@
       }
     ]
   },
-  "np": {
-    "id": "np",
-    "displayName": "",
-    "cardSubtype": "armament",
-    "cardName": "J-19 Bo-rifle Blaster",
-    "isUnique": true,
-    "cardType": "upgrade",
-    "cost": 5,
-    "imageName": "J-19 Bo-Rifle.webp",
-    "keywords": [
-      "Charge",
-      "Immune",
-      "Lethal",
-      "Reconfigure"
-    ],
-    "isDoubleSided": true,
-    "requirements": [
-      {
-        "cardName": "Agent Kallus"
-      }
-    ],
-    "history": [
-      {
-        "date": "27 October 2021",
-        "description": "Cost reduced from 25 to 15 points."
-      },
-      {
-        "date": "5 June 2023",
-        "description": "Cost reduced from 15 to 5 points."
-      }
-    ]
-  },
   "nq": {
     "id": "nq",
     "displayName": "",
@@ -12458,39 +11997,6 @@
       }
     ]
   },
-  "oy": {
-    "id": "oy",
-    "displayName": "",
-    "cardSubtype": "crew",
-    "cardName": "Refurbished \"Gonk\" Droid",
-    "isUnique": false,
-    "cardType": "upgrade",
-    "cost": 20,
-    "imageName": "Refurbished Gonk Droid.webp",
-    "keywords": [
-      "Shielded",
-      "Shield Token"
-    ],
-    "requirements": [
-      "OR",
-      {
-        "cardName": "X-34 Landspeeder"
-      },
-      {
-        "cardName": "A-A5 Speeder Truck"
-      }
-    ],
-    "history": [
-      {
-        "date": "27 October 2021",
-        "description": "Cost increased from 10 to 14 points."
-      },
-      {
-        "date": "19 July 2024",
-        "description": "Cost increased from 14 to 20 points."
-      }
-    ]
-  },
   "oz": {
     "id": "oz",
     "displayName": "",
@@ -13262,98 +12768,6 @@
           "b": 1,
           "w": 1
         }
-      }
-    ]
-  },
-  "py": {
-    "id": "py",
-    "cardName": "Super Tactical Droid",
-    "title": "Commanding Controller",
-    "ttsName": "Super Tactical Droid",
-    "imageName": "Super Tactical Droid.webp",
-    "cardType": "unit",
-    "cardSubtype": "droid trooper",
-    "rank": "commander",
-    "faction": "separatists",
-    "isUnique": true,
-    "cost": 75,
-    "keywords": [
-      {
-        "name": "Strategize",
-        "value": 1
-      },
-      {
-        "name": "Direct",
-        "value": "AI Unit"
-      },
-      {
-        "name": "Exemplar"
-      },
-      {
-        "name": "Override"
-      },
-      {
-        "name": "Sharpshooter",
-        "value": 1
-      }
-    ],
-    "upgradeBar": [
-      "command",
-      "command",
-      "comms",
-      "gear"
-    ],
-    "stats": {
-      "minicount": 1,
-      "hp": 5,
-      "defense": "w",
-      "courage": 2,
-      "speed": 2,
-      "hitsurge": "c",
-      "defsurge": ""
-    },
-    "weapons": [
-      {
-        "name": "Combat Expertise",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
-        "type": "a",
-        "range": "",
-        "dice": {
-          "r": null,
-          "b": 2,
-          "w": null
-        }
-      },
-      {
-        "name": "Blaster Rifle",
-        "keywords": [
-          {
-            "name": "Lethal",
-            "value": 1
-          }
-        ],
-        "type": "0",
-        "range": "1 - 3",
-        "dice": {
-          "r": 2,
-          "b": 1,
-          "w": null
-        }
-      }
-    ],
-    "history": [
-      {
-        "date": "5 June 2023",
-        "description": "Cost reduced from 95 to 90 points."
-      },
-      {
-        "date": "19 July 2024",
-        "description": "Cost reduced from 90 to 75 points. Surge changed from hit to crit. Gained Exemplar keyword. Blaster rifle changed from 1 red and 1 white to 2 red and 1 black."
       }
     ]
   },
