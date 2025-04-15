@@ -3197,7 +3197,13 @@
     "faction": "empire",
     "imageName": "Evasive Maneuvers.webp",
     "keywords": [],
-    "id": "bs"
+    "id": "bs",
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Now gives Nimble instead of Outmaneuver."
+      }
+    ]
   },
   "bt": {
     "cardSubtype": "2",
@@ -3309,7 +3315,13 @@
     "faction": "empire",
     "imageName": "Coordinated Fire.webp",
     "keywords": [],
-    "id": "cc"
+    "id": "cc",
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Specifies that it is once per ranged attack."
+      }
+    ]
   },
   "cd": {
     "cardSubtype": "3",
@@ -8179,7 +8191,13 @@
     "faction": "empire",
     "imageName": "Vader's Might.webp",
     "keywords": [],
-    "id": "jc"
+    "id": "jc",
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Moves range 1/2 rather than 1."
+      }
+    ]
   },
   "jd": {
     "cardName": "You Serve Your Master Well",
@@ -10236,7 +10254,7 @@
     "cardName": "Incapacitate",
     "cardSubtype": "2",
     "cardType": "command",
-    "commander": "Iden's ID10 Seeker Droid",
+    "commander": "Iden Versio",
     "faction": "empire",
     "imageName": "Incapacitate.webp",
     "keywords": [],
@@ -10267,7 +10285,13 @@
       "Steady",
       "Tactical"
     ],
-    "id": "ma"
+    "id": "ma",
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Orders to 1 less trooper."
+      }
+    ]
   },
   "mb": {
     "id": "mb",
@@ -11636,8 +11660,13 @@
     "imageName": "Face Me!.webp",
     "faction": "empire",
     "keywords": [
-      "Agile",
-      "Block"
+      "Hold the Line"
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Kallus gains Hold the Line instead of Agile or Block. Troopers cant move instead of just not withdraw"
+      }
     ]
   },
   "np": {
@@ -12130,24 +12159,6 @@
       }
     ]
   },
-  "oh": {
-    "id": "oh",
-    "displayName": "",
-    "cardName": "I've Altered the Deal",
-    "cardType": "flaw",
-    "commander": "Lando Calrissian",
-    "imageName": "I've Altered the Deal.webp",
-    "keywords": []
-  },
-  "oi": {
-    "id": "oi",
-    "displayName": "",
-    "cardName": "Developing Sympathies",
-    "cardType": "flaw",
-    "commander": "Agent Kallus",
-    "imageName": "Developing Sympathies.webp",
-    "keywords": []
-  },
   "oj": {
     "id": "oj",
     "displayName": "",
@@ -12168,7 +12179,15 @@
     "commander": "Agent Kallus",
     "imageName": "Ruthless Tactics.webp",
     "faction": "empire",
-    "keywords": []
+    "keywords": [
+      "Suppressive"
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Issues to 3 units. Spend observes for suppressive."
+      }
+    ]
   },
   "ol": {
     "id": "ol",
@@ -17490,15 +17509,14 @@
         "name": "Nimble"
       },
       {
+        "name": "Relentless"
+      },
+      {
         "name": "Scout",
         "value": 1
       },
       {
-        "name": "Scouting Party 2",
-        "value": "Ewok"
-      },
-      {
-        "name": "Sharpshooter",
+        "name": "Scouting Party",
         "value": 2
       },
       {
@@ -17555,6 +17573,12 @@
     ],
     "affiliations": [
       "rebels"
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Lost Sharpshooter 2, scouting party is no longer limited to ewoks."
+      }
     ]
   },
   "vf": {
@@ -17888,8 +17912,7 @@
       {
         "cardName": "Ewok Slingers"
       }
-    ],
-    "history": []
+    ]
   },
   "vr": {
     "id": "vr",
@@ -17931,8 +17954,7 @@
       {
         "cardName": "Ewok Slingers"
       }
-    ],
-    "history": []
+    ]
   },
   "vt": {
     "id": "vt",
@@ -18172,7 +18194,12 @@
         "cardName": "Logray"
       }
     ],
-    "history": []
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Now requires LOS."
+      }
+    ]
   },
   "wc": {
     "id": "wc",
