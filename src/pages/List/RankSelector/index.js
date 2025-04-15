@@ -27,15 +27,16 @@ function RankSelector({style}) {
 
         let color = 'primary';
         let badgeContent = unitCounts[rank];
-        let toolTip = ranks[rank].title;
+        let toolTip = "Add a " + ranks[rank].name + " unit";
 
         // TODO rename this in cards.json at some point
         let rankName = rank === "special" ? "special forces" : rank;
 
-        if(unitCounts[rank] !== gametimeUnitCounts[rank]){
+        // TODO kludge since darksaber was making the 'buildsascorps' prompt show in warnings/rank headers
+        if(unitCounts[rank] !== gametimeUnitCounts[rank] && currentList.battleForce !== "Shadow Collective"){
           badgeContent += "("+gametimeUnitCounts[rank] +")"
 
-          toolTip = " " + rankName.toUpperCase() + " count during army building is " + unitCounts[rank]+". ";
+          toolTip = rankName.toUpperCase() + " count during army building is " + unitCounts[rank]+". ";
           toolTip += rankName.toUpperCase() + " count during the game is (" + gametimeUnitCounts[rank] +")"; 
         }
 
