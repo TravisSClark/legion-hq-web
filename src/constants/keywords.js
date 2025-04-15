@@ -52,7 +52,7 @@ const keywords = {
 	"Bounty": "During setup, choose an enemy operative or commander unit. The chosen unit gains a bounty token. \
 	 	After a friendly unit with Bounty defeats an enemy unit that has one or more bounty tokens with \
 		an attack or effect, the friendly unit's controlling players scores 1 VP.",
-	"Cache": "During Setup, place the listed tokens on this Upgrade Card. The unit owning the card may spend those tokens.",
+	"Cache": "During Setup, a unit with an equipped Upgrade Card that has the Cache keyword places the listed token(s) on the card with the Cache keyword. The unit may spend those tokens, even if any miniatures added to the unit with that card are defeated.",
 	"Calculate Odds": "As a card action, you can choose a friendly trooper unit at range 2 and in LOS to gain 1 aim, 1 dodge, and 1 suppression token",
 	"Charge": "After you perform a move action during its activation that brings you into base contact with an enemy miniature, \
 		you may perform a free melee attack action against that unit using only melee weapons.",
@@ -174,14 +174,25 @@ const keywords = {
 	"Hover: Air": "You can perform a standby action, and can gain and spend standby tokens. You can reverse.\n\n\
 		You ignore terrain of height of X or lower while moving and may end a movement overlapping such terrain.\n\n\
 		If you have a base with side notches, you may Strafe.",
-	"Strafe":"If a unit with Hover: Ground/Air X has a base with side notches, the unit may perform a strafe move as part \
-		of a move action instead of moving normally. A unit reduces its maximum speed by 1 to a minimum of 1 while performing \
-		a strafe. As with other movements with notched bases, a strafe can be a full strafe or a partial strafe, and can be interrupted if \
-		an object prevents the strafing miniature from fully progressing across the movement tool.\n\n\
-		To perform a full strafe, place the end of a movement tool into one of the side notches on the unit’s base. Keeping the \
-		movement tool in place on the battlefield, move the miniature along the movement tool until the opposite side notch is wholly \
-		in the opposite end of the movement tool. While performing a strafe, a miniature’s base must not overlap terrain that it cannot \
-		move through.",
+	"Strafe":"If a unit with the Hover: Ground/Air X keyword has a base with \
+    side notches, the unit may make a Strafe Move as part of a Move \
+    action instead of moving normally. A Strafe Move is a normal \
+    notched base Standard Move with the following exceptions:\n\
+    • When making a full Strafe Move, instead of placing the \
+    Movement Tool in the front notch of the unit leader’s base, \
+    place it in one of the side notchs. Then place the opposite \
+    side notch of the unit leader’s base on the other end of the \
+    Movement Tool. \
+    • When making a partial Strafe Move, instead of placing the \
+    Movement Tool wholly in the front notch of the unit leader’s \
+    base at the start of the Move, place the Movement Tool \
+    wholly in one of the side notches. When ending a partial \
+    Strafe Move, the miniature must be placed in such a way so \
+    that the line of the two side notches on its base are parallel \
+    to the section of the Movement Tool the miniature reached \
+    at the farthest part of the move. \
+    • While making a Strafe Move, a unit reduces its Speed by 1 to \
+    a minimum of 1.",
 	"Hunted": "During Setup, if one or more enemy units have the Bounty keyword, each unit with the Hunted keyword gains a bounty token.",
 	"I'm, Part of the Squad Too": "You contest an objective token if your unit leader is at range 1 of that token instad of 1/2 range.",
 	// TODO; this is kind of a mess; fix it via updating keywords to be parameterized for different immunes and the numeric values
@@ -234,7 +245,16 @@ const keywords = {
 		the defending unit during the Reroll Attack Dice step. The attacking unit rerolls one attack die for each observation \
 		token spent. Observation tokens are spent one at a time, and the same die can be rerolled by spending subsequent observation or aim tokens. \
 		The attacking unit may spend observation and aim tokens in any order.", 
-	"Outmaneuver": "During the Apply Dodge and Cover step, you can spend dodge tokens to cancel crit results.",
+	"One Step Ahead":"If 1 or more allied units have the One Step Ahead keyword, \
+    during the Resolve Command Card Effects step, after revealing \
+    Command Cards but before resolving Command Card effects, \
+    if the number of pips on the revealed Command Cards do not \
+    match, 1 allied unit with the One Step Ahead keyword on the \
+    battlefield may make a Speed-1 Move. If the number of pips do \
+    match, and there is 1 or more allied units with the One Step \
+    Ahead keyword on the battlefield, choose an allied unit on the \
+    battlefield. The chosen unit may make a Speed-1 Move.",
+    "Outmaneuver": "During the Apply Dodge and Cover step, you can spend dodge tokens to cancel crit results.",
 	"Override": "When a friendly unit begins its activation at range 5 of a unit that has the Override keyword, \
 		it may gain 1 suppression token. If it does, the activating unit ignores AI during its activation.",
 	"Plodding": "During your activation, you can perform only 1 move action.",
@@ -261,7 +281,13 @@ const keywords = {
 	"Scout": "At the start of its Perform Actions step, it may deploy by performing a free speed X move action, ignoring difficult terrain. A unit can perform this move regardless of its maximum speed. The Scout X keyword is cumulative, but cannot exceed 3. If a unit would ever have Scout X eceeding Scout 3, it has Scout 3 instead.",
 	"Scouting Party": "During Setup, a unit with Scouting Party keyword may choose up to X friendly trooper units that share the same faction or affiliation with that unit and do not have the scout keyword. Each chosen unit gains the Scout X keyword this game, where X is the Scout X value of the uint with the Scouting Pary keyword.",
 	"Secret Mission": "Once per game if a unit with the Secret Mission keyword is within enemy territory, it gains a secret mission token. When scoring VP, if a player with 1 or more secret mission tokens is within enemy territory that unit scores 1 VP. Then, remove those secret mission tokens from the game.",
-	"Self-Destruct": "You may perform this attack as a free action if you have at least X wound tokens. Perform this attack against all unit within range 1 and LOS, even if they are engaged. This attack my not be performed by a unit embarked on a TRANSPORT. After performing all attacks, the unit making this attack is defeated and removed from play.",
+	"Self-Destruct": "A unit may make a Self-Destruct X Card action only if it has \
+    a number of Wound tokens equal to or greater than half of its \
+    Wound threshold, rounding up. For each unit within {1} and in \
+    LOS, roll X black attack dice, completely resolving each roll before \
+    moving to the next unit. That unit suffers 1 Wound for each SURGE and \
+    CRIT result rolled, then gains 1 Suppression token for each HIT result \
+    rolled. After all rolls are resolved, this unit is defeated.",
 	"Self-Preservation": "When checking for panic, this unit cannot use the courage value of of units not of the same affiliation.",
 	"Sentinel": "Your standby range is 1-3.",
 	"Sharpshooter": "While performing a ranged attack, reduce the defender's cover by X.",
@@ -269,7 +295,10 @@ const keywords = {
 	"Shielded": "You have X shield tokens",
 	"Sidearm": "While performing an attack, this mini can only use the weapon on this upgrade card if the attack type matches X.",
 	"Recon": "Intended for use in Recon matches.",
-	"Small": "While defending against a non-area ranged attack, ignore this mini.",
+	"Small": "A unit that has 1 or more Counterpart miniatures with the \
+    Small keyword cannot be targeted with attacks if the attacking \
+    unit leader only has LOS to the Counterpart miniature with the \
+    Small keyword",
 	"Smoke": "Place X smoke token(s) within range 1 and in LOS of your unit leader.",
 	"Soresu Mastery": "While defending agains a ranged attack, it may reroll all of its defense dice during the Reroll Defense Dice step. Additionally, when using the Guardian X keyword, it may spend one dodge token before converitng any surges. If it does, it rerolls all of its defense dice before converting surges. Each die cannot be rerolled more than once.",
 	"Special Issue": "This unit may only be included in X battleforce",
@@ -287,7 +316,9 @@ const keywords = {
 	"Target": "After you are issued an order, gain X aim tokens.",
 	"Teamwork": "While you are at range 2 of X, when you or X gains an aim or dodge token, the other unit gains a token of the same type.",
 	"Tempted": "If a friendly unit is defeated by an enemy attack and the attacking unit is at range 3 of a unit with the Tempted keyword, after the attack is resolved, that unit with the Tempted keyword may perform a free attack action or a speed-2 move ignoring difficult terrain. A unit may use the Tempted keyword only once each round.",
-	"Tow Cable": "After a vehicle is wounded by an attack that includes this weapon, the attacker performs a pivot with that vehicle.",
+	"Tow Cable": "After a Vehicle suffers 1 or more Wounds from an attack that \
+    has Tow Cable in the Attack Pool, the attacking player makes a \
+    Pivot with that Vehicle, then it gains 1 Immobilize token.",
 	"Transport":"During Setup you may choose a friendly core trooper or special forces trooper unit to transport. During the Issue Order step of the Command Phase of round1, a unit with Transport may issue an order to the chosen unit. If the chosen unit is undeployed when the Transport unit deploys, after the effect is resloved the chosen unit deploys by preforming a speed 1 move. Measure the start with both prongs of the movement tool touching the base of the Transport.",
 	"Treat": "Choose a friendly non-droid trooper unit at range 1 and in LOS and place a wound token on this card. Remove up to X wound or poison tokens from that unit or restore up to X miniatures to that unit. You cannot use this ability if this card has Y or more wound tokens. If you have multiple TREAT keywords, treat them as separate abilities.",
 	"Uncanny Luck": "While defending, you may reroll up to X defense dice. All dice must be rerolled at once, no die can be rerolled twice.",

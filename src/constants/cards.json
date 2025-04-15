@@ -7625,7 +7625,7 @@
     "cardType": "unit",
     "cardSubtype": "droid trooper",
     "rank": "operative",
-    "faction": "republic",
+    "faction": "rebels",
     "isUnique": true,
     "cost": 55,
     "keywords": [
@@ -7688,7 +7688,8 @@
         "date": "19 July 2024",
         "description": "Removed Grounded and gained Infiltrate keywords."
       }
-    ]
+    ],
+    "counterpartId":"ji"
   },
   "jh": {
     "id": "jh",
@@ -8315,7 +8316,8 @@
         "date": "15 April 2025",
         "description": "Lost Covert Ops and Loadout, and gained Sharpshooter 1 and Infiltrate keywords. Lost Armament but gained Command slot. Melee changed from 2 red to 3 black. Gun now on card - card cost increased by cost of gun (100 to 115)."
       }
-    ]
+    ],
+    "counterpartId":"lw"
   },
   "kh": {
     "cardSubtype": "armament",
@@ -10872,7 +10874,7 @@
       {
         "name": "Uncanny Luck",
         "value": 2
-      }
+      },"One Step Ahead"
     ],
     "upgradeBar": [
       "command",
@@ -15520,7 +15522,8 @@
     "affiliations": [
       "empire",
       "rebels"
-    ]
+    ],
+    "counterpartId":"tn"
   },
   "tk": {
     "id": "tk",
@@ -15618,7 +15621,8 @@
     "affiliations": [
       "empire",
       "rebels"
-    ]
+    ],
+    "counterpartId":"tn"
   },
   "tl": {
     "id": "tl",

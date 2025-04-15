@@ -25,7 +25,13 @@ function KeywordsPanel({ card }) {
           <Typography>Keywords</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails style={columnContainerStyles}>
-          {cardKeywords.map(keyword => (
+          {cardKeywords.map(kw => {
+            let keyword = kw
+            if(typeof keyword === "string"){
+              keyword = {name:kw}
+            }
+
+            return(
             <div key={keyword.name}>
               <Typography variant="caption" color="textSecondary">
                 {keyword.name + (!keyword.value ? "" : (Number.isInteger(keyword.value) ? " " : ": " ) + keyword.value)}
@@ -35,8 +41,8 @@ function KeywordsPanel({ card }) {
                 {keyword.name in keywords ? keywords[keyword.name] : 'No definition found.'}
               </Typography>
               <Divider />
-            </div>
-          ))}
+            </div>)
+          })}
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </React.Fragment>
