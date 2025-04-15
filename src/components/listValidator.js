@@ -63,7 +63,8 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
     });
   }
 
-  if(card.keywords.includes("Heavy Weapon Team")){
+    if(card.keywords.find(k=> k === "Heavy Weapon Team" || k.name === "Heavy Weapon Team")){
+
     let hasHeavy = false;
     unit.upgradesEquipped.forEach((id)=>{
       if(id === null)
@@ -79,7 +80,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
     }
   }
 
-  if(card.keywords.includes("Programmed")){
+  if(card.keywords.find(k=> k === "Programmed" || k.name === "Programmed")){
     let hasProto = false;
     unit.upgradesEquipped.forEach((id)=>{
       if(id === null)
