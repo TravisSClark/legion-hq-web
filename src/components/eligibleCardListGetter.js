@@ -117,7 +117,7 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
       continue;
     }
 
-    const uniqueCardNames = list.units.filter(u=>cards[u.unitId].isUnique).map(u=>cards[u.unitId].cardName);
+    const uniqueCardNames = getListUniques(list, "name");
     if (uniqueCardNames.includes(card.cardName)) continue;
 
     if (card.specialIssue && card.specialIssue !== list.battleForce)continue;
@@ -246,15 +246,9 @@ function getEquippableUpgrades(
     if (card.cardSubtype !== upgradeType) continue;
     if (card.faction && card.faction !== '' && list.faction !== card.faction) continue;
 
-    if(card.isUnique){
-      const isInList = list.units.reduce((found, u)=>{
-        if(u.upgradesEquipped.includes(id))
-          found = true;
-        return found;
-      },false);
-      if(isInList){
-        continue;
-      }
+    if(card.isUnique) {
+      const uniqueCardNames = getListUniques(list, "name");
+      if (uniqueCardNames.includes(card.cardName)) continue;
     }
 
     else if (upgradesEquipped.includes(id)) continue;
@@ -355,27 +349,26 @@ function unitHasUniques(unit){
 
   if(!hasUniques){
     unit.upgradesEquipped.forEach(up=>{
-      if(cards[up]?.isUnique)
+      if (cards[up]?.isUnique)
         hasUniques = true;
     })
   }
   return hasUniques;
 }
 
-function getListUniques(list){
+function getListUniques(list, field){
 
   const uniques = [];
 
-  list.units.forEach(u=>{
-    if(cards[u.unitId]?.isUnique){
-      uniques.push(u.unitId);
-    }else{
-      u.upgradesEquipped.forEach(up=>{
-        if(cards[up]?.isUnique){
-          uniques.push(up);
-        }
-      })
+  list.units.forEach(u => {
+    if (cards[u.unitId]?.isUnique) {
+      uniques.push(field === "id" ? u.unitId : cards[u.unitId].cardName);
     }
+    u.upgradesEquipped.forEach ( up => {
+      if (cards[up]?.isUnique) {
+        uniques.push(field === "id" ? up : cards[up].cardName);
+      }
+    })
     // TODO counterpart check COULD go here, but currently no counterparts have non-unique parent cards (and I suspect it will stay that way)
   });
 
