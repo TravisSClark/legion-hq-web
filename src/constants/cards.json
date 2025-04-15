@@ -1593,82 +1593,6 @@
       }
     ]
   },
-  "as": {
-    "id": "as",
-    "cardName": "Emperor Palpatine",
-    "title": "Ruler of the Galactic Empire",
-    "imageName": "Emperor Palpatine.webp",
-    "cardType": "unit",
-    "cardSubtype": "trooper",
-    "rank": "commander",
-    "faction": "empire",
-    "isUnique": true,
-    "cost": 170,
-    "keywords": [
-      {
-        "name": "Pulling the Strings"
-      },
-      {
-        "name": "Entourage",
-        "value": "Imperial Royal Guard"
-      },
-      {
-        "name": "Immune",
-        "value": "Pierce"
-      },
-      {
-        "name": "Master of the Force",
-        "value": 2
-      }
-    ],
-    "upgradeBar": [
-      "force",
-      "force",
-      "force",
-      "command"
-    ],
-    "stats": {
-      "minicount": 1,
-      "hp": 5,
-      "defense": "w",
-      "courage": 4,
-      "speed": 1,
-      "hitsurge": "c",
-      "defsurge": "b"
-    },
-    "weapons": [
-      {
-        "name": "Force Lightning",
-        "keywords": [
-          {
-            "name": "Pierce 2,",
-            "value": " Suppressive"
-          }
-        ],
-        "type": "a",
-        "range": "- 2",
-        "dice": {
-          "r": 2,
-          "b": 2,
-          "w": 2
-        }
-      }
-    ],
-    "history": [
-      {
-        "date": "19 November 2020",
-        "description": "Cost reduced from 210 to 200 points."
-      },
-      {
-        "date": "27 October 2021",
-        "description": "Cost reduced from 200 to 190 points."
-      },
-      {
-        "date": "19 July 2024",
-        "description": "Cost reduced from 190 to 170 points."
-      }
-    ]
-  },
   "at": {
     "id": "at",
     "cardName": "Darth Vader",
@@ -2473,86 +2397,6 @@
     ],
     "detachment": "ba"
   },
-  "bc": {
-    "id": "bc",
-    "cardName": "Imperial Royal Guards",
-    "displayName": "Royal Guards",
-    "imageName": "Imperial Royal Guards.webp",
-    "cardType": "unit",
-    "cardSubtype": "trooper",
-    "rank": "special",
-    "faction": "empire",
-    "cost": 69,
-    "keywords": [
-      {
-        "name": "Charge"
-      },
-      {
-        "name": "Disciplined",
-        "value": 2
-      },
-      {
-        "name": "Guardian",
-        "value": 2
-      }
-    ],
-    "upgradeBar": [
-      "heavy weapon",
-      "training",
-      "training",
-      "gear",
-      "grenades"
-    ],
-    "stats": {
-      "minicount": 3,
-      "hp": 2,
-      "defense": "w",
-      "courage": 2,
-      "speed": 2,
-      "hitsurge": "",
-      "defsurge": ""
-    },
-    "weapons": [
-      {
-        "name": "Force Pike",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
-        "type": "a",
-        "range": "",
-        "dice": {
-          "r": 1,
-          "b": 1,
-          "w": null
-        }
-      },
-      {
-        "name": "EC-17 Hold-Out Blaster",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
-        "type": "0",
-        "range": "1 - 2",
-        "dice": {
-          "r": null,
-          "b": 2,
-          "w": null
-        }
-      }
-    ],
-    "history": [
-      {
-        "date": "27 October 2021",
-        "description": "Cost reduced from 75 to 69 points."
-      }
-    ]
-  },
   "bd": {
     "id": "bd",
     "cardName": "Imperial Death Troopers",
@@ -2888,7 +2732,11 @@
         "keywords": [
           {
             "name": "Fixed",
-            "value": "Front, Impact 3"
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": 3
           }
         ],
         "type": "0",
@@ -3144,16 +2992,6 @@
     "keywords": [],
     "id": "bn"
   },
-  "bo": {
-    "cardSubtype": "3",
-    "cardName": "An Entire Legion",
-    "cardType": "command",
-    "commander": "Emperor Palpatine",
-    "faction": "empire",
-    "imageName": "An Entire Legion.webp",
-    "keywords": [],
-    "id": "bo"
-  },
   "bp": {
     "cardSubtype": "3",
     "cardName": "Z-6 Jetpack Rocket",
@@ -3205,16 +3043,6 @@
       }
     ]
   },
-  "bt": {
-    "cardSubtype": "2",
-    "cardName": "Give In To Your Anger",
-    "cardType": "command",
-    "commander": "Emperor Palpatine",
-    "faction": "empire",
-    "imageName": "Give In To Your Anger.webp",
-    "keywords": [],
-    "id": "bt"
-  },
   "bu": {
     "cardSubtype": "2",
     "cardName": "ZX Flame Projector",
@@ -3250,16 +3078,6 @@
     "imageName": "Implacable.webp",
     "keywords": [],
     "id": "bw"
-  },
-  "bx": {
-    "cardSubtype": "1",
-    "cardName": "And Now You Will Die",
-    "cardType": "command",
-    "commander": "Emperor Palpatine",
-    "faction": "empire",
-    "imageName": "And Now You Will Die.webp",
-    "keywords": [],
-    "id": "bx"
   },
   "by": {
     "cardSubtype": "1",
@@ -4365,30 +4183,6 @@
     ],
     "id": "ek"
   },
-  "el": {
-    "cardSubtype": "heavy weapon",
-    "cardName": "Electrostaff Guard",
-    "isUnique": false,
-    "cardType": "upgrade",
-    "cost": 21,
-    "imageName": "Electrostaff Guard.webp",
-    "keywords": [
-      "Sidearm",
-      "Immune"
-    ],
-    "requirements": [
-      {
-        "cardName": "Imperial Royal Guards"
-      }
-    ],
-    "history": [
-      {
-        "date": "27 October 2021",
-        "description": "Cost reduced from 25 to 21 points."
-      }
-    ],
-    "id": "el"
-  },
   "em": {
     "cardSubtype": "heavy weapon",
     "cardName": "DLT-19x Sniper",
@@ -5192,7 +4986,11 @@
         "name": "Vader's Lightsaber",
         "keywords": [
           {
-            "name": "Impact 3, Pierce",
+            "name": "Impact",
+            "value": 3
+          },
+          {
+            "name": "Pierce",
             "value": 3
           }
         ],
@@ -5207,10 +5005,8 @@
       {
         "name": "Force Throw",
         "keywords": [
-          {
-            "name": "Blast,",
-            "value": " Scatter"
-          }
+          "Blast",
+          "Scatter"
         ],
         "type": "0",
         "range": "1 - 2",
@@ -5368,6 +5164,9 @@
         "name": "Full Pivot"
       },
       {
+        "name": "Prepared Position"
+      },
+      {
         "name": "Reposition"
       },
       {
@@ -5388,22 +5187,6 @@
     },
     "weapons": [
       {
-        "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
-        "type": "a",
-        "range": "",
-        "dice": {
-          "r": null,
-          "b": 1,
-          "w": null
-        }
-      },
-      {
         "name": "E-22 Blaster Rifle",
         "keywords": [
           {
@@ -5411,8 +5194,8 @@
             "value": ""
           }
         ],
-        "type": "0",
-        "range": "1 - 3",
+        "type": "a",
+        "range": "- 3",
         "dice": {
           "r": null,
           "b": 1,
@@ -5432,7 +5215,7 @@
         "dice": {
           "r": null,
           "b": null,
-          "w": null
+          "w": 3
         }
       }
     ],
@@ -5444,6 +5227,10 @@
       {
         "date": "8 December 2022",
         "description": "Cost increased from 38 to 40 points."
+      },
+      {
+        "date": "15 April 2025",
+        "description": "Gained Prepared Position keyword. Blaster now works in melee"
       }
     ],
     "detachment": "hg"
@@ -8841,16 +8628,13 @@
     "rank": "commander",
     "faction": "empire",
     "isUnique": true,
-    "cost": 100,
+    "cost": 115,
     "keywords": [
       {
         "name": "Quick Thinking"
       },
       {
-        "name": "Covert Ops"
-      },
-      {
-        "name": "Loadout"
+        "name": "Infiltrate"
       },
       {
         "name": "Marksman"
@@ -8860,10 +8644,10 @@
       }
     ],
     "upgradeBar": [
+      "command",
       "training",
       "training",
-      "gear",
-      "armament"
+      "gear"
     ],
     "stats": {
       "minicount": 1,
@@ -8876,7 +8660,7 @@
     },
     "weapons": [
       {
-        "name": "Advanced Combat Training",
+        "name": "Martial Arts",
         "keywords": [
           {
             "name": "",
@@ -8886,26 +8670,55 @@
         "type": "a",
         "range": "",
         "dice": {
-          "r": 2,
-          "b": null,
+          "r": null,
+          "b": 3,
           "w": null
         }
       },
       {
-        "name": "Iden's E-11 Blaster Rifle",
+        "name": "Iden's DLT-20A Rifle",
         "keywords": [
+          {
+            "name": "High Velocity"
+          },
           {
             "name": "Pierce",
             "value": 1
           }
         ],
         "type": "0",
-        "range": "1 - 3",
+        "range": "1 -",
         "dice": {
           "r": null,
-          "b": null,
-          "w": 3
+          "b": 2,
+          "w": null
         }
+      },
+      {
+        "name": "Iden's TL-50 Repeater",
+        "keywords": [
+          {
+            "name": "Critcal",
+            "value": 1
+          },
+          {
+            "name": "Impact",
+            "value": 1
+          }
+        ],
+        "type": "0",
+        "range": "1 - 3",
+        "dice": {
+          "r": 2,
+          "b": 1,
+          "w": 2
+        }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Lost Covert Ops and Loadout, and gained Sharpshooter 1 and Infiltrate keywords. Lost Armament but gained Command slot. Melee changed from 2 red to 3 black. Gun now on card - card cost increased by cost of gun (100 to 115)."
       }
     ]
   },
@@ -8936,24 +8749,6 @@
     ],
     "isDoubleSided": true,
     "id": "kh"
-  },
-  "ki": {
-    "cardSubtype": "armament",
-    "cardName": "Iden's DLT-20A Rifle",
-    "isUnique": false,
-    "cardType": "upgrade",
-    "cost": 15,
-    "imageName": "Iden's DLT-20A Rifle.webp",
-    "keywords": [
-      "High Velocity",
-      "Pierce"
-    ],
-    "requirements": [
-      {
-        "cardName": "Iden Versio"
-      }
-    ],
-    "id": "ki"
   },
   "kj": {
     "cardName": "Crack Shot",
@@ -10222,33 +10017,41 @@
     "cost": 15,
     "imageName": "Iden_s ID10 Seeker Droid.webp",
     "keywords": [
-      "Counterpart",
-      "Recharge",
-      "Shielded",
+      {
+        "name": "Observe",
+        "value": 1
+      },
+      {
+        "name": "Counterpart",
+        "value": "Iden Versio"
+      },
+      {
+        "name": "Recharge",
+        "value": 1
+      },
+      {
+        "name": "Shielded",
+        "value": 1
+      },
       "Small"
+    ],
+    "weapons": [
+      {
+        "name": "Electro-Shock",
+        "keywords": [
+          "Suppressive"
+        ],
+        "type": "0",
+        "range": "- 1",
+        "dice": {
+          "r": null,
+          "b": null,
+          "w": 3
+        }
+      }
     ],
     "cardSubtype": "droid trooper",
     "id": "lw"
-  },
-  "lx": {
-    "id": "lx",
-    "displayName": "TL-50 Repeater",
-    "cardSubtype": "armament",
-    "cardName": "Iden's TL-50 Repeater",
-    "iconLocation": "Iden's TL-50 Repeater.webp",
-    "isUnique": true,
-    "cardType": "upgrade",
-    "cost": 15,
-    "imageName": "Iden's TL-50 Repeater.webp",
-    "keywords": [
-      "Critical",
-      "Impact"
-    ],
-    "requirements": [
-      {
-        "cardName": "Iden Versio"
-      }
-    ]
   },
   "ly": {
     "cardName": "Incapacitate",
@@ -11559,76 +11362,67 @@
     "imageName": "Agent Kallus.webp",
     "cardType": "unit",
     "cardSubtype": "trooper",
-    "rank": "commander",
+    "rank": "operative",
     "faction": "empire",
     "isUnique": true,
-    "cost": 85,
+    "cost": 70,
     "keywords": [
       {
-        "name": "Contingencies",
+        "name": "Observe",
         "value": 2
       },
       {
-        "name": "Cunning"
+        "name": "Bounty"
       },
       {
-        "name": "Flawed"
+        "name": "Charge"
       },
       {
-        "name": "Sharpshooter",
-        "value": 1
+        "name": "Direct",
+        "value": "Corps Trooper Unit"
       },
       {
-        "name": "Tactical",
-        "value": 1
+        "name": "Immune",
+        "value": "Melee Pierce"
+      },
+      {
+        "name": "Interrogate"
       }
     ],
     "upgradeBar": [
       "command",
       "training",
-      "gear",
-      "armament"
+      "gear"
     ],
     "stats": {
       "minicount": 1,
-      "hp": 6,
-      "defense": "w",
+      "hp": 5,
+      "defense": "red",
       "courage": 2,
       "speed": 2,
-      "hitsurge": "c",
+      "hitsurge": "",
       "defsurge": ""
     },
     "weapons": [
       {
-        "name": "Advanced Combat Training",
+        "name": "J-19 Bo-Rifle",
         "keywords": [
           {
-            "name": "",
-            "value": ""
-          }
-        ],
-        "type": "a",
-        "range": "",
-        "dice": {
-          "r": 2,
-          "b": null,
-          "w": null
-        }
-      },
-      {
-        "name": "Kallus's RK-3 Blaster Pistol",
-        "keywords": [
-          {
-            "name": "Pierce",
+            "name": "Critcal",
             "value": 1
-          }
+          },
+          {
+            "name": "Lethal",
+            "value": 1
+          },
+          "Long Shot"
         ],
         "type": "0",
-        "range": "1 - 2",
+        "range": "- 2",
         "dice": {
-          "r": null,
-          "b": 2,
-          "w": 1
+          "r": 1,
+          "b": 3,
+          "w": null
         }
       }
     ],
@@ -11636,6 +11430,10 @@
       {
         "date": "5 June 2023",
         "description": "Cost reduced from 90 to 85 points."
+      },
+      {
+        "date": "15 April 2025",
+        "description": "Points dropped from 85 to 70. Changed from Commander to Operative. Lost Contingencies, Cunning Flawed, Sharpshooter, and Tactical keywords and gained Observe, Bounty, Charge, Direct, Immunem, and Interrogate. Lost Surge to Crit and 1 health. Weapons changed to the Bo Rifle which is 1 red and 3 black."
       }
     ]
   },
@@ -18513,7 +18311,15 @@
         "name": "Spinning Lightsaber",
         "keywords": [
           {
-            "name": "Ram 2, Impact 2, Pierce",
+            "name": "Ram",
+            "value": 2
+          },
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
             "value": 1
           }
         ],
@@ -18529,7 +18335,11 @@
         "name": "Thrown Spinning Lightsaber",
         "keywords": [
           {
-            "name": "Impact 2, Pierce",
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
             "value": 1
           }
         ],
@@ -19321,7 +19131,7 @@
     "cardSubtype": "trooper",
     "rank": "support",
     "faction": "empire",
-    "cost": 60,
+    "cost": 70,
     "keywords": [
       {
         "name": "Advanced Targeting",
@@ -19388,6 +19198,12 @@
           "b": 1,
           "w": null
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Cost increased from 60 to 70 points."
       }
     ]
   },
