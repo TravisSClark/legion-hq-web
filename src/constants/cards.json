@@ -4393,11 +4393,11 @@
   "fh": {
     "displayName": "Twin Light Blaster Cannon",
     "cardSubtype": "hardpoint",
-    "cardName": "88 Twin Light Blaster Cannon",
+    "cardName": "88i Twin Light Blaster Cannon",
     "isUnique": false,
     "cardType": "upgrade",
     "cost": 10,
-    "imageName": "88 Twin Light Blaster Cannon.webp",
+    "imageName": "88i Twin Light Blaster Cannon.webp",
     "keywords": [
       "Impact",
       "Fixed"
@@ -4966,7 +4966,10 @@
     "cardType": "upgrade",
     "cost": 10,
     "imageName": "CR-24 Flame Rifle.webp",
-    "keywords": [],
+    "keywords": [
+      "Blast",
+      "Spray"
+    ],
     "history": [
       {
         "date": "19 November 2020",
@@ -5675,7 +5678,7 @@
   "gn": {
     "displayName": "E-11D Config",
     "cardSubtype": "armament",
-    "cardName": "E-11D Focused Fire Config",
+    "cardName": "E-11D Focused Fire Configuration",
     "isUnique": false,
     "cardType": "upgrade",
     "cost": 0,
@@ -6120,11 +6123,11 @@
   },
   "hc": {
     "cardSubtype": "hardpoint",
-    "cardName": "DLT-19 Rifle Pintle",
+    "cardName": "Pintle-Mounted DLT-19",
     "isUnique": false,
     "cardType": "upgrade",
     "cost": 18,
-    "imageName": "DLT-19 Rifle Pintle.webp",
+    "imageName": "Pintle-Mounted DLT-19.webp",
     "keywords": [
       "Impact"
     ],
@@ -6137,11 +6140,11 @@
   },
   "hd": {
     "cardSubtype": "hardpoint",
-    "cardName": "RT-97C Rifle Pintle",
+    "cardName": "Pintle-Mounted RT-97C",
     "isUnique": false,
     "cardType": "upgrade",
     "cost": 14,
-    "imageName": "RT-97C Rifle Pintle.webp",
+    "imageName": "Pintle-Mounted RT-97C.webp",
     "keywords": [],
     "requirements": [
       {
