@@ -11,7 +11,7 @@ import cards from 'constants/cards';
 function findFirstCardId (list) {
   for (let i = 0; i < list.units.length; i++) {
     const card = cards[list.units[i].unitId];
-    return card.id;
+    if (card) return card.id;
   }
   return undefined;
 }
