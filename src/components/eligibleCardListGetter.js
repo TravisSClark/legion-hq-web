@@ -118,7 +118,7 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     }
 
     const uniqueCardNames = getListUniques(list, "name");
-    if (uniqueCardNames.includes(card.cardName)) continue;
+    if (uniqueCardNames.includes(card.cardName + " " + card.title)) continue;
 
     if (card.specialIssue && card.specialIssue !== list.battleForce)continue;
 
@@ -248,7 +248,7 @@ function getEquippableUpgrades(
 
     if(card.isUnique) {
       const uniqueCardNames = getListUniques(list, "name");
-      if (uniqueCardNames.includes(card.cardName)) continue;
+      if (uniqueCardNames.includes(card.cardName + " " + card.title)) continue;
     }
 
     else if (upgradesEquipped.includes(id)) continue;
@@ -362,7 +362,7 @@ function getListUniques(list, field){
 
   list.units.forEach(u => {
     if (cards[u.unitId]?.isUnique) {
-      uniques.push(field === "id" ? u.unitId : cards[u.unitId].cardName);
+      uniques.push(field === "id" ? u.unitId : cards[u.unitId].cardName + " " + cards[u.unitId].title);
     }
     u.upgradesEquipped.forEach ( up => {
       if (cards[up]?.isUnique) {
