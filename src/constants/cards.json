@@ -12536,7 +12536,7 @@
     "imageName": "Wookiee Warriors Noble Fighters.webp",
     "cardType": "unit",
     "cardSubtype": "wookiee trooper",
-    "rank": "corps",
+    "rank": "special",
     "faction": "republic",
     "cost": 69,
     "keywords": [
