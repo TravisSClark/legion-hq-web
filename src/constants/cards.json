@@ -12923,8 +12923,8 @@
   },
   "pz": {
     "id": "pz",
-    "cardName": "Super Tactical Droid",
-    "title": "Kraken",
+    "title": "Super Tactical Droid",
+    "cardName": "Kraken",
     "displayName": "Kraken",
     "imageName": "Super Tactical Droid Kraken.webp",
     "cardType": "unit",
@@ -13011,8 +13011,8 @@
   },
   "qa": {
     "id": "qa",
-    "cardName": "Super Tactical Droid",
-    "title": "Kalani",
+    "title": "Super Tactical Droid",
+    "cardName": "Kalani",
     "displayName": "Kalani",
     "imageName": "Super Tactical Droid Kalani.webp",
     "cardType": "unit",
@@ -13167,7 +13167,7 @@
     "cardName": "They Too Will Suffer",
     "cardSubtype": "1",
     "cardType": "command",
-    "commander": "Super Tactical Droid",
+    "commander": ["Kalani", "Kraken"],
     "imageName": "They Too Will Suffer.webp",
     "faction": "separatists",
     "keywords": []
@@ -13177,7 +13177,7 @@
     "cardName": "Preservation Protocols",
     "cardSubtype": "2",
     "cardType": "command",
-    "commander": "Super Tactical Droid",
+    "commander": ["Kalani", "Kraken"],
     "imageName": "Preservation Protocols.webp",
     "faction": "separatists",
     "keywords": [
@@ -13197,7 +13197,7 @@
     "cardName": "Do Not Underestimate Our Means",
     "cardSubtype": "3",
     "cardType": "command",
-    "commander": "Super Tactical Droid",
+    "commander": ["Kalani", "Kraken"],
     "imageName": "Do Not Underestimate Our Means.webp",
     "faction": "separatists",
     "keywords": [
@@ -16147,7 +16147,7 @@
     "cardName": "A Machine Made For Killing",
     "cardSubtype": "2",
     "cardType": "command",
-    "commander": "IG-11",
+    "commander": ["IG-11", "IG-88"],
     "imageName": "A Machine Made for Killing.webp",
     "faction": "",
     "battleForce": "",
@@ -16233,20 +16233,6 @@
       {
         "cardName": "IG-11"
       }
-    ]
-  },
-  "uc": {
-    "id": "uc",
-    "cardName": "A Machine Made For Killing",
-    "cardSubtype": "2",
-    "cardType": "command",
-    "commander": "IG-88",
-    "imageName": "A Machine Made for Killing.webp",
-    "faction": "",
-    "battleForce": "",
-    "keywords": [
-      "Demoralize",
-      "Steady"
     ]
   },
   "ud": {
