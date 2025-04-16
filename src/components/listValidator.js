@@ -2,7 +2,7 @@ import cards, { cardsIdsByType } from 'constants/cards';
 
 import battleForcesDict from 'constants/battleForcesDict';
 import legionModes from 'constants/legionModes';
-import {areUpgradeRequirementsMet, impRemnantUpgrades} from 'components/eligibleCardListGetter';
+import {areRequirementsMet, impRemnantUpgrades} from 'components/eligibleCardListGetter';
 
 const upgradesProvidingAlliesOfConvenience = cardsIdsByType["upgrade"].filter(c=>cards[c].keywords?.includes("Allies of Convenience"));
 /**
@@ -112,7 +112,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
     else if (list.battleForce === 'Imperial Remnant' && upgradeCard.cardSubtype === 'heavy weapon' && card.cardSubtype === 'trooper') {
       if (impRemnantUpgrades.includes(id)) 
         return;
-    } else if (!areUpgradeRequirementsMet(upgradeCard.requirements, card)) {
+    } else if (!areRequirementsMet(upgradeCard.requirements, card)) {
       unit.validationIssues.push({level:2, text: card.cardName.toUpperCase() + " cannot equip " + upgradeCard.cardName.toUpperCase()})
     }
   });

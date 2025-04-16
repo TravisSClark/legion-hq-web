@@ -4754,7 +4754,12 @@
     "faction": "rebels",
     "imageName": "I Am a Jedi.webp",
     "keywords": [],
-    "id": "fp"
+    "id": "fp",
+    "requirements": [
+      {
+        "title": "Jedi Knight"
+      }
+    ]
   },
   "fq": {
     "cardSubtype": "3",
@@ -7625,7 +7630,12 @@
     "faction": "rebels",
     "imageName": "You Serve Your Master Well.webp",
     "keywords": [],
-    "id": "jd"
+    "id": "jd",
+    "requirements": [
+      {
+        "title": "Jedi Knight"
+      }
+    ]
   },
   "je": {
     "cardSubtype": "2",
@@ -11779,7 +11789,7 @@
     "cardType": "unit",
     "cardSubtype": "repulsor vehicle",
     "rank": "heavy",
-    "faction": "republic",
+    "faction": "empire",
     "cost": 100,
     "keywords": [
       {
@@ -14720,7 +14730,18 @@
     "commander": "",
     "imageName": "Ploy.webp",
     "faction": "",
-    "keywords": []
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "faction": "mercenary",
+        "rank": "commander"
+      },
+      {
+        "faction": "mercenary",
+        "rank": "operative"
+      }
+    ]
   },
   "rx": {
     "id": "rx",
@@ -14735,6 +14756,17 @@
       {
         "date": "15 April 2025",
         "description": "An operative can issue orders from this card."
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "faction": "mercenary",
+        "rank": "commander"
+      },
+      {
+        "faction": "mercenary",
+        "rank": "operative"
       }
     ]
   },
@@ -14751,6 +14783,17 @@
       {
         "date": "15 April 2025",
         "description": "An operative can issue orders from this card."
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "faction": "mercenary",
+        "rank": "commander"
+      },
+      {
+        "faction": "mercenary",
+        "rank": "operative"
       }
     ]
   },

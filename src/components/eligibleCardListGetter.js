@@ -41,7 +41,7 @@ const impRemnantUpgrades = ['ej', 'ek', 'fv', 'iy', 'fu', 'gm', 'gl', 'em', 'en'
  * 
  * 
  */
-function areUpgradeRequirementsMet(requirements, unitCard) {
+function areRequirementsMet(requirements, unitCard) {
   const operator = requirements[0];
   if (operator instanceof Object) {
       return _.isMatch(unitCard, operator);
@@ -50,7 +50,7 @@ function areUpgradeRequirementsMet(requirements, unitCard) {
   } else if (operator === 'AND') {
     for (let i=1; i< requirements.length; i++) {
       if (requirements[i] instanceof Array){
-        if (!areUpgradeRequirementsMet(requirements[i], unitCard))
+        if (!areRequirementsMet(requirements[i], unitCard))
           return false;
       } else if (requirements[i] instanceof Object){
         if (!_.isMatch(unitCard, requirements[i]))
@@ -60,7 +60,7 @@ function areUpgradeRequirementsMet(requirements, unitCard) {
     return true;
   } else if (operator === 'OR') {
     for (let i=1; i< requirements.length; i++){
-      if (requirements[i] instanceof Array && areUpgradeRequirementsMet(requirements[i], unitCard)){
+      if (requirements[i] instanceof Array && areRequirementsMet(requirements[i], unitCard)){
         return true;
       } else if (requirements[i] instanceof Object && _.isMatch(unitCard, requirements[i])){
         return true;
@@ -183,7 +183,16 @@ function getEligibleCcs(list, isContingencies = false){
       }
       // filter out stormtide commands not in the current mode
       return false;
-    } 
+    }
+    if (card.requirements) {
+      let requirementsMet = false;
+      let i = 0;
+      while (!requirementsMet && i < list.units.length) {
+        requirementsMet = areRequirementsMet(card.requirements, cards[list.units[i].unitId])
+        i++;
+      }
+      if (!requirementsMet) return false;
+    }
 
     if (id === 'aa') return false; // Standing Orders
 
@@ -270,7 +279,7 @@ function getEquippableUpgrades(
     else if (list.battleForce === 'Imperial Remnant' && card.cardSubtype === 'heavy weapon' && unitCard.cardSubtype === 'trooper') {
         if (impRemnantUpgrades.includes(id)) 
           validUpgradeIds.push(id);
-    } else if (areUpgradeRequirementsMet(card.requirements, unitCard)) {
+    } else if (areRequirementsMet(card.requirements, unitCard)) {
       validUpgradeIds.push(id);
     } else {
       invalidUpgradeIds.push(id);
@@ -415,6 +424,6 @@ export{
   unitHasUniques,
   getListUniques,
   findUnitIndexInList, 
-  areUpgradeRequirementsMet,
+  areRequirementsMet,
   impRemnantUpgrades
 }
