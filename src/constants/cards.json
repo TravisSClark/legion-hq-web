@@ -472,17 +472,21 @@
     "imageName": "Jyn Erso.webp",
     "cardType": "unit",
     "cardSubtype": "trooper",
-    "rank": "commander",
+    "rank": "operative",
     "faction": "rebels",
     "isUnique": true,
-    "cost": 90,
+    "cost": 75,
     "keywords": [
       {
-        "name": "Quick Thinking"
+        "name": "Agile",
+        "value": 1
       },
       {
-        "name": "Danger Sense",
-        "value": 4
+        "name": "Disengage"
+      },
+      {
+        "name": "Independent",
+        "value": "Move"
       },
       {
         "name": "Infiltrate"
@@ -498,12 +502,11 @@
     "upgradeBar": [
       "command",
       "training",
-      "gear",
-      "armament"
+      "gear"
     ],
     "stats": {
       "minicount": 1,
-      "hp": 6,
+      "hp": 5,
       "defense": "w",
       "courage": 3,
       "speed": 2,
@@ -525,6 +528,25 @@
           "b": 4,
           "w": null
         }
+      },
+      {
+        "name": "A-180 Blaster Pistol",
+        "keywords": [
+          {
+            "name": "Long Shot"
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "type": "0",
+        "range": "1 - 2",
+        "dice": {
+          "r": 2,
+          "b": null,
+          "w": 1
+        }
       }
     ],
     "history": [
@@ -539,6 +561,10 @@
       {
         "date": "27 October 2021",
         "description": "Cost reduced from 100 to 90 points."
+      },
+      {
+        "date": "15 April 2025",
+        "description": "Changed from Commander to Operative. Lost Quick Thinking and Danger Sense, and gained Agile 1, Disengage, and Independent: Move keywords. Removed Armament slot, but gained ranged weapon on card. Health decreased from 6 to 5."
       }
     ]
   },
@@ -1201,7 +1227,7 @@
     "cardType": "unit",
     "cardSubtype": "ground vehicle",
     "rank": "support",
-    "faction": "republic",
+    "faction": "rebels",
     "cost": 50,
     "keywords": [
       {
@@ -1247,22 +1273,6 @@
           "r": 3,
           "b": null,
           "w": null
-        }
-      },
-      {
-        "name": "Rocket Launcher",
-        "keywords": [
-          {
-            "name": "Critical 1, Impact",
-            "value": 1
-          }
-        ],
-        "type": "0",
-        "range": "1 - 3",
-        "dice": {
-          "r": null,
-          "b": 1,
-          "w": 2
         }
       }
     ],
@@ -1424,6 +1434,24 @@
         "description": "Cost reduced from 60 to 55 points. Lost transport keyword."
       }
     ]
+  },
+  "as": {
+    "cardSubtype": "gear",
+    "cardName": "Mandalorian Combat Shields",
+    "isUnique": false,
+    "cardType": "upgrade",
+    "cost": 10,
+    "imageName": "Mandalorian Combat Shields.webp",
+    "keywords": [
+      "Sheilded"
+    ],
+    "requirements": [
+      {
+        "cardName": "Mandalorian Resistance"
+      }
+    ],
+    "id": "as",
+    "history": []
   },
   "at": {
     "id": "at",
@@ -2931,15 +2959,25 @@
   },
   "ci": {
     "cardSubtype": "3",
-    "cardName": "Complete the Mission",
+    "cardName": "Rebellions Are Built on Hope",
     "cardType": "command",
     "commander": "Jyn Erso",
     "faction": "rebels",
-    "imageName": "Complete the Mission.webp",
+    "imageName": "Rebellions Are Built on Hope.webp",
     "keywords": [
-      "Low Profile"
+      {
+        "name": "Danger Sense",
+        "value": 2
+      },
+      "Indomitable"
     ],
-    "id": "ci"
+    "id": "ci",
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Name changed from Complete the Mission to Rebellions Are Built on Hope. Units with face up order tokens gain Danger Sense 2 and Indomitable instead of Low Profile."
+      }
+    ]
   },
   "cj": {
     "cardSubtype": "3",
@@ -2961,7 +2999,13 @@
     "faction": "rebels",
     "imageName": "My Ally is the Force.webp",
     "keywords": [],
-    "id": "ck"
+    "id": "ck",
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Now only affects units given an order from this command card."
+      }
+    ]
   },
   "cl": {
     "cardSubtype": "2",
@@ -2971,7 +3015,13 @@
     "faction": "rebels",
     "imageName": "No Time for Sorrows.webp",
     "keywords": [],
-    "id": "cl"
+    "id": "cl",
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Now only affects units given an order from this command card."
+      }
+    ]
   },
   "cm": {
     "cardSubtype": "2",
@@ -3064,13 +3114,19 @@
   },
   "ct": {
     "cardSubtype": "1",
-    "cardName": "Rebellious",
+    "cardName": "I Rebel",
     "cardType": "command",
     "commander": "Jyn Erso",
     "faction": "rebels",
-    "imageName": "Rebellious.webp",
+    "imageName": "I Rebel.webp",
     "keywords": [
       "Charge"
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Name changed from Rebellious to I Rebel and Jyn can move and attack for a suppression, instead of either or."
+      }
     ],
     "id": "ct"
   },
@@ -3555,26 +3611,6 @@
       }
     ],
     "id": "dy"
-  },
-  "dz": {
-    "displayName": "A-180 Config",
-    "cardSubtype": "armament",
-    "cardName": "A-180 Rifle Config",
-    "isUnique": false,
-    "cardType": "upgrade",
-    "cost": 0,
-    "imageName": "A-180.webp",
-    "keywords": [
-      "Pierce",
-      "Reconfigure"
-    ],
-    "requirements": [
-      {
-        "cardName": "Jyn Erso"
-      }
-    ],
-    "isDoubleSided": true,
-    "id": "dz"
   },
   "eb": {
     "cardSubtype": "armament",
@@ -4736,7 +4772,12 @@
     "faction": "rebels",
     "imageName": "I Am a Jedi.webp",
     "keywords": [],
-    "id": "fp"
+    "id": "fp",
+    "requirements": [
+      {
+        "title":"Jedi Knight"
+      }
+    ]
   },
   "fq": {
     "cardSubtype": "3",
@@ -5573,6 +5614,9 @@
     "faction": "rebels",
     "imageName": "Explosions!.webp",
     "keywords": [
+      "Area Weapon",
+      "Blast",
+      "Critical",
       "Arm",
       "Detonate"
     ],
@@ -5605,7 +5649,7 @@
   },
   "gk": {
     "cardSubtype": "gear",
-    "cardName": "Personal Combat Shield",
+    "cardName": "Sabine's Combat Shield",
     "isUnique": false,
     "cardType": "upgrade",
     "cost": 5,
@@ -5624,6 +5668,10 @@
       {
         "date": "19 November 2020",
         "description": "Cost reduced from 10 to 5 points."
+      },
+      {
+        "date": "15 April 2025",
+        "description": "Renamed to Sabine's Combat Shield. Now comes back if not used this turn."
       }
     ],
     "id": "gk"
@@ -7074,8 +7122,7 @@
         "name": "Sentinel"
       },
       {
-        "name": "",
-        "value": ""
+        "name": "Prepared Position"
       }
     ],
     "upgradeBar": [
@@ -7601,7 +7648,12 @@
     "faction": "rebels",
     "imageName": "You Serve Your Master Well.webp",
     "keywords": [],
-    "id": "jd"
+    "id": "jd",
+    "requirements": [
+      {
+        "title":"Jedi Knight"
+      }
+    ]
   },
   "je": {
     "cardSubtype": "2",
@@ -8159,23 +8211,31 @@
     "imageName": "Cassian Andor.webp",
     "cardType": "unit",
     "cardSubtype": "trooper",
-    "rank": "commander",
+    "rank": "operative",
     "faction": "rebels",
     "isUnique": true,
     "cost": 90,
     "keywords": [
       {
-        "name": "Covert Ops"
-      },
-      {
         "name": "Danger Sense",
         "value": 3
       },
       {
-        "name": "Loadout"
+        "name": "Equip",
+        "value": "A280"
+      },
+      {
+        "name": "Field Commander"
+      },
+      {
+        "name": "Infiltrate"
       },
       {
         "name": "Marksman"
+      },
+      {
+        "name": "Sharpshooter",
+        "value": 1
       },
       {
         "name": "Tactical",
@@ -8183,6 +8243,7 @@
       }
     ],
     "upgradeBar": [
+      "command",
       "training",
       "training",
       "gear",
@@ -8209,26 +8270,27 @@
         "type": "a",
         "range": "",
         "dice": {
-          "r": 2,
-          "b": null,
+          "r": null,
+          "b": 3,
           "w": null
         }
       },
       {
         "name": "Cassian's Covert Blaster",
-        "keywords": [
-          {
-            "name": "Pierce",
-            "value": 1
-          }
-        ],
+        "keywords": [],
         "type": "0",
         "range": "1 - 2",
         "dice": {
-          "r": 1,
-          "b": null,
+          "r": null,
+          "b": 2,
           "w": 2
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Changed from Commander to Operative. Lost Covert Ops and Loadout, and gained Equip: A280, Field Commander, Infiltrate, and Sharpshooter 1 keywords. Gained Command slot. Melee changed from 2 red to 3 black, ranged lost pierce and changed from 1 red and 2 white to 2 black and 2 white. Health decreased from 6 to 5."
       }
     ]
   },
@@ -8375,7 +8437,13 @@
     "keywords": [
       "Gunslinger"
     ],
-    "id": "kj"
+    "id": "kj",
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Instead of a standby, Cassian gets a free attack."
+      }
+    ]
   },
   "kk": {
     "cardName": "Pulse Scan",
@@ -9531,10 +9599,6 @@
       "Pierce"
     ],
     "requirements": [
-      "OR",
-      {
-        "cardName": "Jyn Erso"
-      },
       {
         "cardName": "K-2SO"
       }
@@ -9565,6 +9629,9 @@
       },
       {
         "name": "Incognito"
+      },
+      {
+        "name": "Infiltrate"
       },
       {
         "name": "Teamwork",
@@ -9600,6 +9667,12 @@
           "b": null,
           "w": null
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Gained Infiltrate keyword."
       }
     ],
     "detachment": "kf"
@@ -10165,12 +10238,8 @@
       "Impact"
     ],
     "requirements": [
-      "OR",
       {
         "cardName": "Mandalorian Resistance"
-      },
-      {
-        "cardName": "Mandalorian Resistance Clan Wren"
       }
     ],
     "history": [
@@ -10219,12 +10288,8 @@
       "Long Shot"
     ],
     "requirements": [
-      "OR",
       {
         "cardName": "Mandalorian Resistance"
-      },
-      {
-        "cardName": "Mandalorian Resistance Clan Wren"
       }
     ],
     "history": [
@@ -10247,12 +10312,8 @@
       "Suppressive"
     ],
     "requirements": [
-      "OR",
       {
         "cardName": "Mandalorian Resistance"
-      },
-      {
-        "cardName": "Mandalorian Resistance Clan Wren"
       }
     ],
     "history": [
@@ -10897,26 +10958,25 @@
     "rank": "commander",
     "faction": "rebels",
     "isUnique": true,
-    "cost": 95,
+    "cost": 105,
     "keywords": [
       {
-        "name": "Contingencies",
-        "value": 3
+        "name": "Guidance",
+        "value": "Corps Trooper Unit"
       },
       {
-        "name": "Covert Ops"
+        "name": "Allies of Convenience"
       },
       {
-        "name": "Flawed"
-      },
-      {
-        "name": "Sharpshooter",
-        "value": 2
+        "name": "Steady"
       },
       {
         "name": "Uncanny Luck",
         "value": 2
-      },"One Step Ahead"
+      },
+      {
+        "name": "One Step Ahead"
+      }
     ],
     "upgradeBar": [
       "command",
@@ -10929,12 +10989,12 @@
       "defense": "w",
       "courage": 2,
       "speed": 2,
-      "hitsurge": "",
-      "defsurge": ""
+      "hitsurge": "c",
+      "defsurge": "b"
     },
     "weapons": [
       {
-        "name": "Combat Training",
+        "name": "Backup Plan",
         "keywords": [
           {
             "name": "",
@@ -10945,23 +11005,22 @@
         "range": "",
         "dice": {
           "r": null,
-          "b": 1,
-          "w": 1
+          "b": 3,
+          "w": null
         }
       },
       {
-        "name": "Lando's X-8 Night Sniper Pistol",
+        "name": "Lando's X-8 Pistol",
         "keywords": [
           {
-            "name": "Pierce",
-            "value": 1
+            "name": "Long Shot"
           }
         ],
         "type": "0",
-        "range": "1 - 3",
+        "range": "1 - 2",
         "dice": {
           "r": 1,
-          "b": 1,
+          "b": 3,
           "w": null
         }
       }
@@ -10970,6 +11029,10 @@
       {
         "date": "5 June 2023",
         "description": "Cost reduced from 105 to 95 points."
+      },
+      {
+        "date": "15 April 2025",
+        "description": "Cost increased from 95 to 105 points. Lost Contingencies, Covert Ops, Flawed, and Sharpshooter 2, but gained Guidance: Corps Trooper Unit, Allies of Convience, One Step Ahead, and Steady keywords. Melee increased from 1 black and 1 white to 3 black, ranged increased from 1 red and 1 black to 1 red and 3 black, but lost Pierce 1."
       }
     ]
   },
@@ -11064,7 +11127,13 @@
     "commander": "Lando Calrissian",
     "imageName": "Ace Up His Sleeve.webp",
     "faction": "rebels",
-    "keywords": []
+    "keywords": [],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Acts as a 1 pip. Instead of activating a unit, this card can now be played instead of an already played card."
+      }
+    ]
   },
   "no": {
     "id": "no",
@@ -11256,11 +11325,11 @@
   "nt": {
     "id": "nt",
     "displayName": "",
-    "cardName": "All In",
-    "cardSubtype": "3",
+    "cardName": "Corellian Spike",
+    "cardSubtype": "1",
     "cardType": "command",
     "commander": "Lando Calrissian",
-    "imageName": "All In.webp",
+    "imageName": "Corellian Spike.webp",
     "faction": "rebels",
     "keywords": []
   },
@@ -11290,12 +11359,18 @@
     "id": "nw",
     "displayName": "",
     "cardName": "Idiot's Array",
-    "cardSubtype": "1",
+    "cardSubtype": "3",
     "cardType": "command",
     "commander": "Lando Calrissian",
     "imageName": "Idiot's Array.webp",
     "faction": "rebels",
-    "keywords": []
+    "keywords": [],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Changed from a 1 pip to a 3 pip. Reworked."
+      }
+    ]
   },
   "nx": {
     "id": "nx",
@@ -14598,7 +14673,8 @@
     ],
     "requirements": [
       {
-        "imageName": "Maul A Rival.webp"
+        "cardName": "Maul",
+        "title":"A Rival"
       }
     ]
   },
@@ -14609,8 +14685,12 @@
     "cardType": "command",
     "commander": "Maul",
     "imageName": "Witch Magick.webp",
-    "faction": "mercenary",
-    "keywords": []
+    "keywords": [],
+    "requirements": [
+      {
+        "title": "A Rival"
+      }
+    ]
   },
   "rs": {
     "id": "rs",
@@ -14619,8 +14699,12 @@
     "cardType": "command",
     "commander": "Maul",
     "imageName": "His Eminence.webp",
-    "faction": "mercenary",
-    "keywords": []
+    "keywords": [],
+    "requirements": [
+      {
+        "title": "A Rival"
+      }
+    ]
   },
   "rt": {
     "id": "rt",
@@ -14629,8 +14713,12 @@
     "cardType": "command",
     "commander": "Maul",
     "imageName": "Seize What Power We Can.webp",
-    "faction": "mercenary",
-    "keywords": []
+    "keywords": [],
+    "requirements": [
+      {
+        "title": "A Rival"
+      }
+    ]
   },
   "ru": {
     "id": "ru",
@@ -16916,9 +17004,13 @@
     "cardType": "command",
     "commander": "Ahsoka Tano",
     "imageName": "I Am No Jedi.webp",
-    "faction": "rebels",
     "keywords": [
       "Agile"
+    ],
+    "requirements": [
+      {
+        "title": "Fulcrum"
+      }
     ],
     "history": [
       {
@@ -16934,7 +17026,11 @@
     "cardType": "command",
     "commander": "Ahsoka Tano",
     "imageName": "Family Reunion.webp",
-    "faction": "rebels",
+    "requirements": [
+      {
+        "title": "Fulcrum"
+      }
+    ],
     "keywords": [
       "Teamwork"
     ]
@@ -16946,7 +17042,11 @@
     "cardType": "command",
     "commander": "Ahsoka Tano",
     "imageName": "Swift Protector.webp",
-    "faction": "rebels",
+    "requirements": [
+      {
+        "title": "Fulcrum"
+      }
+    ],
     "keywords": [
       "Guardian"
     ],
@@ -16964,7 +17064,11 @@
     "cardType": "command",
     "commander": "Ahsoka Tano",
     "imageName": "A New Beginning.webp",
-    "faction": "rebels",
+    "requirements": [
+      {
+        "title": "Fulcrum"
+      }
+    ],
     "keywords": [
       "Inspire"
     ]
