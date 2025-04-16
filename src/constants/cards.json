@@ -7642,8 +7642,8 @@
     "cost": 55,
     "keywords": [
       {
-        "name": "Repair 2",
-        "value": "Capacity 2"
+        "name": "Repair",
+        "value": "2 Capacity 2"
       },
       {
         "name": "Inconspicuous"
