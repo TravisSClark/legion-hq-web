@@ -1435,24 +1435,6 @@
       }
     ]
   },
-  "as": {
-    "cardSubtype": "gear",
-    "cardName": "Mandalorian Combat Shields",
-    "isUnique": false,
-    "cardType": "upgrade",
-    "cost": 10,
-    "imageName": "Mandalorian Combat Shields.webp",
-    "keywords": [
-      "Sheilded"
-    ],
-    "requirements": [
-      {
-        "cardName": "Mandalorian Resistance"
-      }
-    ],
-    "id": "as",
-    "history": []
-  },
   "at": {
     "id": "at",
     "cardName": "Darth Vader",
@@ -20293,5 +20275,23 @@
       "Jar'Kai Mastery",
       "Shien Mastery"
     ]
+  },
+  "Bh": {
+    "cardSubtype": "gear",
+    "cardName": "Mandalorian Combat Shields",
+    "isUnique": false,
+    "cardType": "upgrade",
+    "cost": 10,
+    "imageName": "Mandalorian Combat Shields.webp",
+    "keywords": [
+      "Sheilded"
+    ],
+    "requirements": [
+      {
+        "cardName": "Mandalorian Resistance"
+      }
+    ],
+    "id": "Bh",
+    "history": []
   }
 }

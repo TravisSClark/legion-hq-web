@@ -35,7 +35,7 @@ import {
   getEligibleBattlesToAdd,
 } from 'components/eligibleCardListGetter'
 
-import { getRankLimits } from 'components/listValidator' 
+import { getRankLimits, checkValidCards } from 'components/listValidator' 
 
 import{
   mergeLists,
@@ -136,11 +136,12 @@ export function ListProvider({
   // There are edges all over and it doesn't *seem* like this "check everything" check chugs too hard,
   // but it's still bad from a performance perspective
   const updateThenValidateList = (list) => { 
-    const rankLimits = getRankLimits(list);
-    setCurrentList(list);
-    setValidationIssues(validateList(list, rankLimits));
+    let revisedList = checkValidCards(list);
+    const rankLimits = getRankLimits(revisedList);
+    setCurrentList(revisedList);
+    setValidationIssues(validateList(revisedList, rankLimits));
     setRankLimits(rankLimits);
-    countPoints(list);
+    countPoints(revisedList);
   }
 
   const reorderUnits = (startIndex, endIndex) => {
