@@ -10409,7 +10409,13 @@
     "commander": "",
     "imageName": "Mechanized Incursion.webp",
     "faction": "separatists",
-    "keywords": []
+    "keywords": [],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Droid trooper now issues itself an order."
+      }
+    ]
   },
   "mv": {
     "id": "mv",
@@ -13178,6 +13184,12 @@
       "AI",
       "Disengage",
       "Impervious"
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Now only affects units given an order from this command card."
+      }
     ]
   },
   "qg": {
@@ -13303,7 +13315,7 @@
     "keywords": [
       {
         "name": "Self-Destruct",
-        "value": 4
+        "value": 3
       },
       {
         "name": "Armor",
@@ -13352,28 +13364,16 @@
           "b": 1,
           "w": 1
         }
-      },
-      {
-        "name": "DSD1 Self-Destruct",
-        "keywords": [
-          {
-            "name": "Blast, Impact",
-            "value": 1
-          }
-        ],
-        "type": "",
-        "range": "A1",
-        "dice": {
-          "r": 3,
-          "b": null,
-          "w": null
-        }
       }
     ],
     "history": [
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 55 to 50 points."
+      },
+      {
+        "date": "15 April 2025",
+        "description": "Decreased to self-destruct 3."
       }
     ]
   },
