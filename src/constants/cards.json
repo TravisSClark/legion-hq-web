@@ -4750,16 +4750,11 @@
     "cardName": "I am a Jedi",
     "cardSubtype": "3",
     "cardType": "command",
-    "commander": "Luke Skywalker",
+    "commander": "Luke Skywalker Jedi Knight",
     "faction": "rebels",
     "imageName": "I Am a Jedi.webp",
     "keywords": [],
-    "id": "fp",
-    "requirements": [
-      {
-        "title":"Jedi Knight"
-      }
-    ]
+    "id": "fp"
   },
   "fq": {
     "cardSubtype": "3",
@@ -7626,16 +7621,11 @@
     "cardName": "You Serve Your Master Well",
     "cardSubtype": "1",
     "cardType": "command",
-    "commander": "Luke Skywalker",
+    "commander": "Luke Skywalker Jedi Knight",
     "faction": "rebels",
     "imageName": "You Serve Your Master Well.webp",
     "keywords": [],
-    "id": "jd",
-    "requirements": [
-      {
-        "title":"Jedi Knight"
-      }
-    ]
+    "id": "jd"
   },
   "je": {
     "cardSubtype": "2",
@@ -11463,7 +11453,7 @@
   },
   "oc": {
     "id": "oc",
-    "cardSubtype": "personnel",
+    "cardSubtype": "squad leader",
     "cardName": "Clone Medic",
     "isUnique": false,
     "cardType": "upgrade",
@@ -11474,8 +11464,7 @@
     ],
     "requirements": [
       {
-        "cardSubtype": "clone trooper",
-        "rank": "corps"
+        "cardSubtype": "clone trooper"
       }
     ],
     "history": [
@@ -11490,6 +11479,10 @@
       {
         "date": "6 November 2024",
         "description": "Cost increased from 17 to 20 points."
+      },
+      {
+        "date": "15 April 2025",
+        "description": "Changed to squad leader from personnel, can now be taken on all clone troopers."
       }
     ]
   },
@@ -14666,13 +14659,9 @@
     "cardSubtype": "1",
     "cardType": "command",
     "commander": "Maul",
+    "faction": "mercenary",
     "imageName": "Witch Magick.webp",
-    "keywords": [],
-    "requirements": [
-      {
-        "title": "A Rival"
-      }
-    ]
+    "keywords": []
   },
   "rs": {
     "id": "rs",
@@ -14680,13 +14669,9 @@
     "cardSubtype": "2",
     "cardType": "command",
     "commander": "Maul",
+    "faction": "mercenary",
     "imageName": "His Eminence.webp",
-    "keywords": [],
-    "requirements": [
-      {
-        "title": "A Rival"
-      }
-    ]
+    "keywords": []
   },
   "rt": {
     "id": "rt",
@@ -14694,13 +14679,9 @@
     "cardSubtype": "3",
     "cardType": "command",
     "commander": "Maul",
+    "faction": "mercenary",
     "imageName": "Seize What Power We Can.webp",
-    "keywords": [],
-    "requirements": [
-      {
-        "title": "A Rival"
-      }
-    ]
+    "keywords": []
   },
   "ru": {
     "id": "ru",
@@ -16972,14 +16953,10 @@
     "cardSubtype": "1",
     "cardType": "command",
     "commander": "Ahsoka Tano",
+    "faction": "rebels",
     "imageName": "I Am No Jedi.webp",
     "keywords": [
       "Agile"
-    ],
-    "requirements": [
-      {
-        "title": "Fulcrum"
-      }
     ],
     "history": [
       {
@@ -16994,12 +16971,8 @@
     "cardSubtype": "2",
     "cardType": "command",
     "commander": "Ahsoka Tano",
+    "faction": "rebels",
     "imageName": "Family Reunion.webp",
-    "requirements": [
-      {
-        "title": "Fulcrum"
-      }
-    ],
     "keywords": [
       "Teamwork"
     ]
@@ -17010,12 +16983,8 @@
     "cardSubtype": "2",
     "cardType": "command",
     "commander": "Ahsoka Tano",
+    "faction": "rebels",
     "imageName": "Swift Protector.webp",
-    "requirements": [
-      {
-        "title": "Fulcrum"
-      }
-    ],
     "keywords": [
       "Guardian"
     ],
@@ -17032,12 +17001,8 @@
     "cardSubtype": "3",
     "cardType": "command",
     "commander": "Ahsoka Tano",
+    "faction": "rebels",
     "imageName": "A New Beginning.webp",
-    "requirements": [
-      {
-        "title": "Fulcrum"
-      }
-    ],
     "keywords": [
       "Inspire"
     ]
