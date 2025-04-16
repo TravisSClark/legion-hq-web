@@ -24,7 +24,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
   unit.upgradesEquipped.forEach(id=>{
     if(!id) return;
     const card = cards[id];
-    if(card.uniqueCount || card.isUnique){
+    if(card.uniqueCount || card.isUnique || card.isUniqueTitle){
       listUniqueUpgrades[id] = listUniqueUpgrades[id] ? listUniqueUpgrades[id] + unit.count : unit.count;
 
       if(list.battleForce){
@@ -377,7 +377,7 @@ function validateList(currentList, rankLimits){
         let cardName = (card.displayName ? card.displayName : card.cardName).toUpperCase();
         let parentName = (parent.displayName ? parent.displayName : parent.cardName).toUpperCase();
 
-        if(card.isUnique){
+        if(card.isUnique || card.isUniqueTitle){
           validationIssues.push({level:2, text:"In order to use " + cardName + ", you must include " + parentName + ". (DETACHMENT)" });
         }
         else{

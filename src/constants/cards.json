@@ -8275,7 +8275,7 @@
     "cardSubtype": "trooper",
     "rank": "commander",
     "faction": "empire",
-    "isUnique": true,
+    "isUniqueTitle": true,
     "cost": 115,
     "keywords": [
       {
@@ -10112,7 +10112,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "rebels",
-    "isUnique": true,
+    "isUniqueTitle": true,
     "cost": 30,
     "keywords": [
       {
@@ -10504,7 +10504,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "empire",
-    "isUnique": true,
+    "isUniqueTitle": true,
     "cost": 34,
     "keywords": [
       {
@@ -14319,7 +14319,6 @@
     "rank": "special",
     "faction": "mercenary",
     "affiliation": "maul loyalist",
-    "isUnique": true,
     "cost": 70,
     "keywords": [
       {
@@ -18976,12 +18975,8 @@
       "Reconfigure"
     ],
     "requirements": [
-      "OR",
       {
         "cardName": "Clone Commandos"
-      },
-      {
-        "cardName": "Clone Commandos Delta Squad"
       }
     ],
     "isDoubleSided": true,
@@ -18996,12 +18991,8 @@
     "imageName": "Katarn Pattern Armor.webp",
     "keywords": [],
     "requirements": [
-      "OR",
       {
         "cardName": "Clone Commandos"
-      },
-      {
-        "cardName": "Clone Commandos Delta Squad"
       }
     ],
     "id": "xl"
@@ -19063,7 +19054,7 @@
     "cardSubtype": "clone trooper",
     "rank": "support",
     "faction": "republic",
-    "isUnique": true,
+    "isUniqueTitle": true,
     "cost": 105,
     "keywords": [
       {
