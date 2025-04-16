@@ -3256,14 +3256,20 @@
   },
   "dg": {
     "cardSubtype": "training",
-    "cardName": "Hunter",
+    "cardName": "On The Hunt",
     "isUnique": false,
     "cardType": "upgrade",
     "cost": 6,
-    "imageName": "Hunter Upgrade.webp",
+    "imageName": "On The Hunt.webp",
     "keywords": [],
     "requirements": [],
-    "id": "dg"
+    "id": "dg",
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Name changed from Hunter to On The Hunt."
+      }
+    ]
   },
   "dh": {
     "cardSubtype": "training",
@@ -3353,13 +3359,19 @@
   "dm": {
     "cardSubtype": "comms",
     "cardName": "HQ Uplink",
-    "isUnique": false,
+    "uniqueCount": 2,
     "cardType": "upgrade",
     "cost": 10,
     "imageName": "HQ Uplink.webp",
     "keywords": [],
     "requirements": [],
-    "id": "dm"
+    "id": "dm",
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Can take max 2 copies."
+      }
+    ]
   },
   "dn": {
     "cardSubtype": "comms",
@@ -8081,7 +8093,13 @@
     "keywords": [
       "Smoke"
     ],
-    "id": "jz"
+    "id": "jz",
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Now only affects units given an order from this command card."
+      }
+    ]
   },
   "ka": {
     "cardName": "Impromptu Immolation",
@@ -8381,18 +8399,25 @@
     "keywords": [],
     "requirements": [
       {
-        "cardName": "Saber-Class Tank"
+        "faction": "republic",
+        "rank": "heavy"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Requirement changed from Saber Tank only to Republic Heavies. Only works for duration of 1 attack."
       }
     ],
     "id": "kl"
   },
   "km": {
     "cardSubtype": "hardpoint",
-    "cardName": "TX-130 Beam Cannon Turret",
+    "cardName": "Beam Turret",
     "isUnique": false,
     "cardType": "upgrade",
     "cost": 15,
-    "imageName": "TX-130 Beam Cannon Turret.webp",
+    "imageName": "Beam Turret.webp",
     "keywords": [
       "Beam"
     ],
@@ -8509,13 +8534,12 @@
     ]
   },
   "kr": {
-    "displayName": "Twin Laser Turret",
     "cardSubtype": "hardpoint",
-    "cardName": "TX-130 Twin Laser Turret",
+    "cardName": "Twin Laser Turret",
     "isUnique": false,
     "cardType": "upgrade",
     "cost": 14,
-    "imageName": "TX-130 Twin Laser Turret.webp",
+    "imageName": "Twin Laser Turret.webp",
     "keywords": [
       "Critical"
     ],
@@ -9922,7 +9946,13 @@
       "Divulge",
       "Infiltrate"
     ],
-    "id": "mi"
+    "id": "mi",
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Now only affects units given an order from this command card."
+      }
+    ]
   },
   "mj": {
     "id": "mj",
@@ -10284,6 +10314,12 @@
           "force"
         ]
       }
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Lost Sharpshooter 2, scouting party is no longer limited to ewoks."
+      }
     ]
   },
   "mt": {
@@ -10295,7 +10331,13 @@
     "commander": "",
     "imageName": "Synchronized Offensive.webp",
     "faction": "republic",
-    "keywords": []
+    "keywords": [],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Now only affects units given an order from this command card."
+      }
+    ]
   },
   "mu": {
     "id": "mu",
@@ -12122,13 +12164,17 @@
     "requirements": [
       {
         "faction": "republic",
-        "cardName": "LAAT/le Patrol Transport"
+        "rank": "heavy"
       }
     ],
     "history": [
       {
         "date": "19 July 2024",
         "description": "Now affects friendly unit nearby instead of disembarked unit and must be used after an attack."
+      },
+      {
+        "date": "15 April 2025",
+        "description": "Requirement changed from LAAT only to Republic Heavies."
       }
     ]
   },
@@ -12658,38 +12704,56 @@
   "pu": {
     "id": "pu",
     "displayName": "",
-    "cardName": "Grroooogrrraaaawrrrrrrrrmph",
+    "cardName": "Defiance",
     "cardSubtype": "1",
     "cardType": "command",
     "commander": "",
-    "imageName": "Grroooogrrraaaawrrrrrrrrmph.webp",
+    "imageName": "Defiance.webp",
     "faction": "republic",
-    "keywords": []
+    "keywords": [],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Name changed from Grroooogrrraaaawrrrrrrrrmph to Defiance."
+      }
+    ]
   },
   "pv": {
     "id": "pv",
     "displayName": "",
-    "cardName": "MROWGH GHRRMROWRIG!",
+    "cardName": "Get In Position",
     "cardSubtype": "2",
     "cardType": "command",
     "commander": "",
-    "imageName": "MROWGH GHRRMROWRIG!.webp",
+    "imageName": "Get In Position.webp",
     "faction": "republic",
     "keywords": [
       "Agile"
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Name changed from MROWGH GHRRMROWRIG! to Get In Position."
+      }
     ]
   },
   "pw": {
     "id": "pw",
     "displayName": "",
-    "cardName": "YHWARGGHHHHHHHHHH!",
+    "cardName": "Daring Defense",
     "cardSubtype": "3",
     "cardType": "command",
     "commander": "",
-    "imageName": "YHWARGGHHHHHHHHHH!.webp",
+    "imageName": "Daring Defense.webp",
     "faction": "republic",
     "keywords": [
       "Demoralize"
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Name changed from YHWARGGHHHHHHHHHH! to Daring Defense."
+      }
     ]
   },
   "px": {
@@ -13355,6 +13419,12 @@
     "requirements": [
       {
         "cardName": "Raddaugh Gnasp Fluttercraft"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "No longer immune: deflect."
       }
     ]
   },
@@ -19012,6 +19082,7 @@
     "id": "xq",
     "cardSubtype": "heavy weapon",
     "cardName": "Echo",
+    "title": "Clone Force 99",
     "ttsName": "Echo (The Bad Batch)",
     "isUnique": true,
     "cardType": "upgrade",
