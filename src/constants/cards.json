@@ -13424,7 +13424,7 @@
     "history": [
       {
         "date": "15 April 2025",
-        "description": "No longer immune: deflect."
+        "description": "No longer immune: deflect because overrun is not a ranged attack."
       }
     ]
   },
@@ -14510,6 +14510,10 @@
       {
         "date": "5 June 2023",
         "description": "Cost increased from 14 to 16 points."
+      },
+      {
+        "date": "15 April 2025",
+        "description": "Can now be used in melee."
       }
     ],
     "imageName": "Mag-Det Enforcer.webp",
@@ -14538,6 +14542,12 @@
     "requirements": [
       {
         "cardName": "Black Sun Enforcers"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Can now be used in melee."
       }
     ]
   },
@@ -14670,7 +14680,13 @@
     "commander": "",
     "imageName": "Aggression.webp",
     "faction": "",
-    "keywords": []
+    "keywords": [],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "An operative can issue orders from this card."
+      }
+    ]
   },
   "ry": {
     "id": "ry",
@@ -14680,7 +14696,13 @@
     "commander": "",
     "imageName": "Discretion.webp",
     "faction": "",
-    "keywords": []
+    "keywords": [],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "An operative can issue orders from this card."
+      }
+    ]
   },
   "rz": {
     "id": "rz",
@@ -14717,6 +14739,12 @@
     "requirements": [
       {
         "cardName": "Mandalorian Super Commandos"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Minimum range changed from 1 to 3."
       }
     ]
   },
@@ -14800,6 +14828,12 @@
     "requirements": [
       {
         "cardName": "Mandalorian Super Commandos"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 April 2025",
+        "description": "Can now be used in melee."
       }
     ]
   },
@@ -15885,6 +15919,10 @@
     "cost": 17,
     "imageName": "Grogu.webp",
     "keywords": [
+      {
+        "name": "Mercenary",
+        "value": "Rebels"
+      },
       "Hunted",
       "Latent Power",
       "Small",
@@ -16040,9 +16078,10 @@
     "faction": "",
     "battleForce": "",
     "keywords": [
-      "Blast",
-      "Impact",
-      "Suppressive"
+      {
+        "name": "Self-Destruct",
+        "value": 4
+      }
     ]
   },
   "ty": {
@@ -19189,6 +19228,10 @@
     "cost": 140,
     "imageName": "The Bad Batch Reb.webp",
     "keywords": [
+      {
+        "name": "Mercenary",
+        "value": "Rebels"
+      },
       "Equip",
       "Impervious",
       "Scale",
@@ -19232,6 +19275,10 @@
     "wounds": 1,
     "imageName": "Omega.webp",
     "keywords": [
+      {
+        "name": "Mercenary",
+        "value": "Rebels"
+      },
       "Counterpart",
       "I'm Part of the Squad Too"
     ],
