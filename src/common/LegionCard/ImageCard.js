@@ -87,11 +87,11 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
           </IconButton>
         </CardActions>
         <Collapse unmountOnExit timeout="auto" in={isExpanded}>
-          {keywords.length > 0 && (
+          {/* {keywords.length > 0 && (
             <CardActions className={classes.card}>
               <KeywordChips size={chipSize} keywords={keywords} />
             </CardActions>
-          )}
+          )} */}
           <CardActions>
             <Button
               size="small"
