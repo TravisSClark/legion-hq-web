@@ -513,13 +513,13 @@ function getOriginalRankLimits(currentList){
 function checkValidCards(currentList) {
   for (let i = 0; i < currentList.units.length; i++) {
     let unit = currentList.units[i];
-    if (!unit.unitId || !cards[unit.unitId]) {
+    if (unit.unitId && !cards[unit.unitId]) {
       currentList.units.splice(i, 1);
       i--;
     } else {
       for (let j = 0; j < unit.upgradesEquipped.length; j++) {
         let id = unit.upgradesEquipped[j];
-        if(!id || !cards[id]) {
+        if(id && !cards[id]) {
           unit.upgradesEquipped.splice(j, 1);
           j--;
         };
