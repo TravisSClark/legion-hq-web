@@ -144,8 +144,8 @@ const stormTideCommands = {
   'storm tide: special forces': ['AD', 'AH', 'AI']
 };
 
-function getEligibleCcs(list, validCcs, isContingencies = false){
-  
+function getEligibleCcs(list, isContingencies = false){
+  const validCcs = [];
   const pipCounts = { '1': 0, '2': 0, '3': 0 };
   list.commandCards.forEach(id => {
     pipCounts[cards[id].cardSubtype] += 1;
@@ -173,8 +173,10 @@ function getEligibleCcs(list, validCcs, isContingencies = false){
     if (list.contingencies && list.contingencies.includes(id)) return false;
 
     // For now, leave both in in case there's a card I'm not thinking of (...again, I don't think there is)
-    if(card.commander && (!cardNames.includes(card.commander) && !listCounterparts.includes(card.commander))) return false;
-
+    if(card.commander){
+      let commanders = typeof Array.isArray(card.commander) ?  card.commander : [card.commander];
+      if((!cardNames.some(c=> commanders.includes(c)) && !listCounterparts.some(c=>commanders.includes(c)))) return false;
+    }
     if (card.isStormTide){
       if(stormTideCommands[list.mode] && stormTideCommands[list.mode].includes(id)){
         return true;
@@ -188,15 +190,13 @@ function getEligibleCcs(list, validCcs, isContingencies = false){
     validCcs.push(id);
     return true;
   });
+
+  return validCcs;
 }
 
 function getEligibleCommandsToAdd(list) {
  
-  const validCommandIds = [];
-  // Currently, we don't do anything with invalid CC IDs on UI; stop tracking them unless we get a good use case
-  // const invalidCommandIds = [];
-
-  getEligibleCcs(list, validCommandIds);
+  const validCommandIds = getEligibleCcs(list);
   
   return {
     validIds: sortCommandIds(validCommandIds),
@@ -206,7 +206,7 @@ function getEligibleCommandsToAdd(list) {
 
 function getEligibleContingenciesToAdd(list) {
   if (!list.contingencies) list.contingencies = [];
-  const validCommandIds = [];
+  let validCommandIds = [];
 
   let numContingencies = 0;
   list.units.forEach((unit) => {
@@ -216,7 +216,7 @@ function getEligibleContingenciesToAdd(list) {
   });
 
   if(list.contingencies.length < numContingencies){
-    getEligibleCcs(list, validCommandIds, true);
+    validCommandIds = getEligibleCcs(list, true);
   }
 
   return {
