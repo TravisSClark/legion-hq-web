@@ -59,7 +59,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
         <CardActionArea onClick={handleClick}>
           <CardMedia
             title={displayName ? displayName : cardName}
-            image={`${urls.cdn}/${cardType}Cards/${imageName}`}
+            image={`${urls.cdn}/${cardType}Cards/${imageName}?${new Date().getTime()}`}
             className={clsx(
               { [classes.unitImage]: cardType === 'unit' || cardType === 'counterpart'},
               { [classes.commandImage]: cardType === 'battle'},

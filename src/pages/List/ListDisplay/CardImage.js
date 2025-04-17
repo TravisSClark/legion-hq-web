@@ -40,7 +40,7 @@ function CardImage({ id, handleClick, isLoadout = false }) {
     <div className={isLoadout ? classes.loadoutContainer : classes.container}>
       <Img
         alt={card.cardName}
-        src={`${urls.cdn}/${card.cardType}Cards/${card.imageName}`}
+        src={`${urls.cdn}/${card.cardType}Cards/${card.imageName}?${new Date().getTime()}`}
         loader={<Skeleton variant="rect" className={classes[card.cardType]} />}
         className={classes[card.cardType]}
         onClick={handleClick}
