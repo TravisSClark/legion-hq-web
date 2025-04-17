@@ -10,7 +10,6 @@ import { Menu as MenuIcon, Search as SearchIcon } from '@material-ui/icons';
 import DataContext from 'context/DataContext';
 import lhqLogoLight from 'assets/lhqLogoLight.svg';
 import lhqLogoDark from 'assets/lhqLogoDark.svg';
-import crit2block from 'assets/crit2block.png';
 
 const useStyles = makeStyles(theme => ({
   grow: { flexGrow: 1 },

@@ -3,7 +3,7 @@ const battleForcesDict = {
       name: 'Echo Base Defenders',
       faction: 'rebels',
       linkId: 'ebd',
-      commander: ['ab', 'ad', 'ac', 'bi'],
+      commander: ['ab', 'ad', 'ac'],
       operative: ['jg', 'ji', 'af'],
       corps: ['gv', 'if'],
       special: [],
@@ -70,10 +70,10 @@ const battleForcesDict = {
         commOp: 4,
 
         commander: [1, 4],
-        operative: [0, 3],
+        operative: [0, 1],
         corps: [2, 4],
         special: [0, 3],
-        support: [0, 1],
+        support: [0, 0],
         heavy: [0, 1]
       }
   },
@@ -81,7 +81,7 @@ const battleForcesDict = {
       name: 'Blizzard Force',
       faction: 'empire',
       linkId: 'bf',
-      commander: ['at', 'au', 'ar'],
+      commander: ['at', 'au'],
       operative: [],
       corps: ['az', 'ay',  'sr'],
       special: [],
@@ -116,7 +116,7 @@ const battleForcesDict = {
     name: 'Imperial Remnant',
     faction: 'empire',
     linkId: 'ir',
-    commander: ['ui', 'ar'],
+    commander: ['ui'],
     operative: [],
     corps: ['ay', 'hg', 'ba', 'bd'],
     special: ['ba', 'bd'],
@@ -132,7 +132,7 @@ const battleForcesDict = {
     },
     ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ImperialRemnant-1.pdf',
     'standard mode': {
-      // commOp: 2,
+      commOp: 2,
 
       commander: [1, 2],
       operative: [0, 0],
@@ -142,7 +142,7 @@ const battleForcesDict = {
       heavy: [0, 2]
     },
     '500-point mode': {
-      // commOp: 2,
+      commOp: 2,
 
       commander: [1, 2],
       operative: [0, 0],
@@ -156,7 +156,7 @@ const battleForcesDict = {
     name: 'Tempest Force',
     faction: 'empire',
     linkId: 'tf',
-    commander: ['ar'],
+    commander: [],
     operative: [],
     corps: ['ay'],
     special: ['ba'],
@@ -166,7 +166,8 @@ const battleForcesDict = {
     rules:{},
     ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_TempestForce-1.pdf',
     'standard mode': {
-      commander: [1, 2],
+      commOp:2,
+      commander: [0, 0],
       operative: [0, 0],
       corps: [1, 3],
       special: [2, 6],
@@ -174,6 +175,8 @@ const battleForcesDict = {
       heavy: [0, 3]
     },
     '500-point mode': {
+      commOp:2,
+
       commander: [1, 2],
       operative: [0, 0],
       corps: [1, 2],
@@ -235,6 +238,7 @@ const battleForcesDict = {
 
       ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_WookieesDefenders.pdf',
       'standard mode': {
+        commOp:2,
         commander: [1, 2],
         operative: [0, 0],
         corps: [3, 6],
@@ -242,14 +246,24 @@ const battleForcesDict = {
         support: [0, 3],
         heavy: [0, 1]
       },
+      //TODO these match 1000pt mode - typo on AMG doc?
       '500-point mode': {
+        commOp:2,
         commander: [1, 2],
         operative: [0, 0],
-        corps: [2, 4],
-        special: [0, 3],
-        support: [0, 1],
+        corps: [3,6],
+        special: [0, 4],
+        support: [0, 3],
         heavy: [0, 1]
       }
+      // '500-point mode': {
+      //   commander: [1, 2],
+      //   operative: [0, 0],
+      //   corps: [2, 4],
+      //   special: [0, 3],
+      //   support: [0, 1],
+      //   heavy: [0, 1]
+      // }
     },
   'Separatist Invasion': {
       name: 'Separatist Invasion',
@@ -268,7 +282,9 @@ const battleForcesDict = {
       ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2022/10/StarWarsLegionBFRulesSheetSI.pdf',
 
       'standard mode': {
-        commander: [1, 1],
+        commOp: 2,
+
+        commander: [1, 2],
         operative: [0, 1],
         corps: [4, 8],
         special: [0, 2],
@@ -276,7 +292,9 @@ const battleForcesDict = {
         heavy: [1, 2]
       },
       '500-point mode': {
-        commander: [1, 1],
+        commOp: 2,
+
+        commander: [1, 2],
         operative: [0, 1],
         corps: [2, 6],
         special: [0, 1],
@@ -288,9 +306,10 @@ const battleForcesDict = {
       name: 'Experimental Droids',
       faction: 'separatists',
       linkId: 'exd',
-      commander: ['py', 'nr', 'pz', 'qa'],
+      commander: ['nr', 'pz', 'qa'],
       operative: [],
       corps: ['gx', 'ga', 'xd'],
+
       special: ['la', 'xd'],
       support: ['ie'],
       heavy: ['xe'],
@@ -298,6 +317,7 @@ const battleForcesDict = {
 
       rules:{
         buildsAsCorps:['xd'],
+        unitLimits:[{ids:['gx'], count:[0,2]},{ids:['ga'], count:[0,2]}, {ids:['la'], count:[0,2]}],
         rankLimits:[
           {ids:['la'], count:[0,2]},
           {ids:['gx'], count:[0,2]},

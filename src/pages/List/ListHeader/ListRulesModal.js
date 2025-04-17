@@ -140,6 +140,10 @@ function RankLimits({list}){
                   return null;
                 }
 
+                if(!cards[id]){
+                  console.warn('no card for id', id);
+                  return null;
+                }
                 let name = cards[id].displayName ? cards[id].displayName : cards[id].cardName;
                 let unitLimit = bf.rules.unitLimits?.find(l=>l.ids.includes(id));
                 let limit = "";

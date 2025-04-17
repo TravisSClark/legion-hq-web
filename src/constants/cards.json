@@ -17082,9 +17082,7 @@
         "value": "Rear"
       }
     ],
-    "upgradeBar": [
-      ""
-    ],
+    "upgradeBar": [],
     "stats": {
       "minicount": 1,
       "hp": 11,
@@ -17501,9 +17499,7 @@
         "name": "Divine Influence"
       }
     ],
-    "upgradeBar": [
-      ""
-    ],
+    "upgradeBar": [],
     "stats": {
       "minicount": 1,
       "hp": 3,
@@ -17723,9 +17719,7 @@
         "value": "Tempest Force"
       }
     ],
-    "upgradeBar": [
-      ""
-    ],
+    "upgradeBar": [],
     "stats": {
       "minicount": 1,
       "hp": 11,

@@ -26,11 +26,10 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
     const card = cards[id];
     if(card.uniqueCount || card.isUnique || card.isUniqueTitle){
       listUniqueUpgrades[id] = listUniqueUpgrades[id] ? listUniqueUpgrades[id] + unit.count : unit.count;
-
-      if(list.battleForce){
-        if(!battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id))
-          unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" upgrade is not allowed in this battleforce." });
-      }
+    }
+    if(list.battleForce && (card.isUnique || card.isUniqueTitle)){
+      if(!battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id))
+        unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" upgrade is not allowed in this battleforce." });
     }
   })
   
