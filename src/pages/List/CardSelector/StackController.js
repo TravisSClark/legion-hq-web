@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Typography, IconButton } from '@material-ui/core';
 import { Add as AddIcon, Remove as MinusIcon } from '@material-ui/icons';
 
 function StackController({
-  stackSize, handleIncrementStackSize, handleDecrementStackSize
+  handleChange
 }) {
   const rowContainerStyle = {
     display: 'flex',
     flexWrap: 'nowrap',
     alignItems: 'center'
   };
+
+  const [stackSize, setStackSize] = useState(1);
   const rowItemStyle = { marginRight: 4 };
   return (
     <div style={rowContainerStyle}>
@@ -19,7 +21,11 @@ function StackController({
       <IconButton
         disabled={stackSize === 1}
         style={rowItemStyle}
-        onClick={handleDecrementStackSize}
+        onClick={()=>{
+          let newSize = stackSize - 1;
+          setStackSize(newSize);
+          handleChange(newSize);
+        }}
       >
         <MinusIcon />
       </IconButton>
@@ -29,7 +35,11 @@ function StackController({
       <IconButton
         disabled={stackSize === 12}
         style={rowItemStyle}
-        onClick={handleIncrementStackSize}
+        onClick={()=>{
+          let newSize = stackSize + 1;
+          setStackSize(newSize);
+          handleChange(newSize);
+        }}
       >
         <AddIcon />
       </IconButton>

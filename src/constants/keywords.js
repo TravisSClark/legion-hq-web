@@ -373,7 +373,7 @@ While a unit with Immune: Pierce is using the Guardian X \
 keyword, the attacking unit cannot use the Pierce X keyword \
 to cancel BLOCK results on defense dice rolled by that unit for the \
 Guardian X keyword.",
-"Immune: 1 Weapons" : "An Attack Pool that is assigned to a unit with the Immune: 1 \
+"Immune: Range 1 Weapons" : "An Attack Pool that is assigned to a unit with the Immune: 1 \
 Weapons keyword cannot contain weapons with a maximum \
 Range of 1.",
 "Impervious" : "While a unit with the Impervious keyword is defending, it \

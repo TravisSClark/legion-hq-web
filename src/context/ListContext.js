@@ -57,8 +57,6 @@ export function ListProvider({
   width, children, slug, listHash, storedLists, updateStoredList
 }) {
   const { userId, userSettings, goToPage } = useContext(DataContext);
-  const [stackSize, setStackSize] = useState(1);
-  const [isApplyToAll, setIsApplyToAll] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState();
@@ -129,7 +127,6 @@ export function ListProvider({
         setRightPaneWidth(12);
       }
     }
-    setStackSize(1);
   }, [width, cardPaneFilter]);
 
   // TODO needs some intelligence/context to know WHAT needs validation after a given list change.
@@ -156,13 +153,6 @@ export function ListProvider({
     );
     setCurrentList({ ...currentList });
   }
-  const handleIncrementStackSize = () => {
-    if (stackSize < 12) { setStackSize(stackSize + 1); }
-  }
-  const handleDecrementStackSize = () => {
-    if (stackSize > 1) { setStackSize(stackSize - 1); }
-  }
-  const handleToggleIsApplyToAll = () => setIsApplyToAll(!isApplyToAll);
 
   const handleClearList = () => {
     setCardPaneFilter({ action: 'DISPLAY' });
@@ -187,13 +177,7 @@ export function ListProvider({
     
     let filter = null;
 
-    let letUpgradesCascade = true;
-    if (userSettings && userSettings.cascadeUpgradeSelection) {
-      letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
-    }
-
-    // Cascade only if we're a 1-stack or if applying to all
-    if ( letUpgradesCascade){ // && (isApplyToAll || unit.count === 1)) {
+    if ( userSettings && userSettings.cascadeUpgradeSelection === 'yes'){
 
       let getFilter; // function getFilter(index)  -> returns a cardselector filter if one is applicable for proposed next index and current action
 
@@ -320,11 +304,10 @@ export function ListProvider({
     );
     updateThenValidateList({ ...newList });
   }
-  const handleAddUnit = (unitId) => {
+  const handleAddUnit = (unitId, stackSize) => {
     if (width === 'xs' || width === 'sm') {
       setCardPaneFilter({ action: 'DISPLAY' });
     }
-    setStackSize(1);
     const newList = addUnit(currentList, unitId, stackSize);
     updateThenValidateList({ ...newList });
   }
@@ -347,12 +330,7 @@ export function ListProvider({
   const handleAddBattle = (type, battleId) => {
     const {list, nextType} = addBattle(currentList, type, battleId);
 
-    let letUpgradesCascade = false;
-    if (userSettings && userSettings.cascadeUpgradeSelection) {
-      letUpgradesCascade = userSettings.cascadeUpgradeSelection === 'yes' ? true : false;
-    }
-
-    if(letUpgradesCascade && nextType !== type){
+    if((userSettings && userSettings.cascadeUpgradeSelection === 'yes') && nextType !== type){
       if(nextType){
         setCardPaneFilter({
           action: 'BATTLE', type: nextType
@@ -484,17 +462,12 @@ export function ListProvider({
   };
   const listProps = {
     currentList,
-    stackSize,
     reorderUnits,
     isKillPointMode,
     currentKillPoints,
-    isApplyToAll,
     handleClearList,
-    handleToggleIsApplyToAll,
     handleChangeTitle,
     handleChangeMode,
-    handleIncrementStackSize,
-    handleDecrementStackSize,
     handleListSave,
     handleListFork,
     handleMergeList,
