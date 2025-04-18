@@ -57,7 +57,6 @@ export function ListProvider({
   width, children, slug, listHash, storedLists, updateStoredList
 }) {
   const { userId, userSettings, goToPage } = useContext(DataContext);
-  const [stackSize, setStackSize] = useState(1);
   const [isApplyToAll, setIsApplyToAll] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [status, setStatus] = useState('idle');
@@ -129,7 +128,6 @@ export function ListProvider({
         setRightPaneWidth(12);
       }
     }
-    setStackSize(1);
   }, [width, cardPaneFilter]);
 
   // TODO needs some intelligence/context to know WHAT needs validation after a given list change.
@@ -155,12 +153,6 @@ export function ListProvider({
       currentList.units, startIndex, endIndex
     );
     setCurrentList({ ...currentList });
-  }
-  const handleIncrementStackSize = () => {
-    if (stackSize < 12) { setStackSize(stackSize + 1); }
-  }
-  const handleDecrementStackSize = () => {
-    if (stackSize > 1) { setStackSize(stackSize - 1); }
   }
   const handleToggleIsApplyToAll = () => setIsApplyToAll(!isApplyToAll);
 
@@ -320,11 +312,10 @@ export function ListProvider({
     );
     updateThenValidateList({ ...newList });
   }
-  const handleAddUnit = (unitId) => {
+  const handleAddUnit = (unitId, stackSize) => {
     if (width === 'xs' || width === 'sm') {
       setCardPaneFilter({ action: 'DISPLAY' });
     }
-    setStackSize(1);
     const newList = addUnit(currentList, unitId, stackSize);
     updateThenValidateList({ ...newList });
   }
@@ -484,7 +475,6 @@ export function ListProvider({
   };
   const listProps = {
     currentList,
-    stackSize,
     reorderUnits,
     isKillPointMode,
     currentKillPoints,
@@ -493,8 +483,6 @@ export function ListProvider({
     handleToggleIsApplyToAll,
     handleChangeTitle,
     handleChangeMode,
-    handleIncrementStackSize,
-    handleDecrementStackSize,
     handleListSave,
     handleListFork,
     handleMergeList,
