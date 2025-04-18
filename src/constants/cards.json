@@ -17708,9 +17708,10 @@
         "name": "Direct",
         "value": "Vehicle"
       },
+      "Field Commander",
       {
-        "name": "Weak Point 1",
-        "value": "Rear"
+        "name": "Weak Point",
+        "value": "Rear 1"
       },
       {
         "name": "Special Issue",

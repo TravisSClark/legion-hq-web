@@ -188,6 +188,10 @@ function battleForceValidation(currentList, unitCounts){
       validationIssues.push({level:2, text:"You must have at least one of each Corps type before adding additional ones"});
     }
   }  
+
+  if(currentList.battleForce == "Tempest Force" && unitCounts["we"] !== 1){
+    validationIssues.push({level:2, text: "Until 'Imperial Officer' gets reworked, you'll need to include Major Marquand (under Heavies) to fulfill Commander requirements"})
+  }
   
   return validationIssues;
 }

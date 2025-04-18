@@ -167,7 +167,7 @@ const battleForcesDict = {
     ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_TempestForce-1.pdf',
     'standard mode': {
       commOp:2,
-      commander: [0, 0],
+      commander: [1, 1],
       operative: [0, 0],
       corps: [1, 3],
       special: [2, 6],

@@ -52,6 +52,7 @@ const useStyles = makeStyles({
 
 function BFRules({list}){
   
+  const bfPdf = "https://cdn.svc.asmodee.net/production-amgcom/uploads/2025/04/DOC13_BattleForces.pdf"
   const classes = useStyles();
 
   if(!list.battleForce){
@@ -94,7 +95,7 @@ function BFRules({list}){
     </DialogContent>
     <Typography style={{marginBottom:0}} gutterBottom>See your rule doc for full battleforce rules while playing:</Typography>
     <DialogContentText>
-      <Link underline="always" href={battleForcesDict[list.battleForce].ruleUrl} target="_blank" rel="noreferrer noopener">{list.battleForce} Rules</Link>
+      <Link underline="always" href={bfPdf} target="_blank" rel="noreferrer noopener">Battle Forces Rules</Link>
     </DialogContentText>
   </div> 
 }
