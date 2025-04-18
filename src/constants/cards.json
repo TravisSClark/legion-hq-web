@@ -393,8 +393,7 @@
         "name": "Charge"
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       },
       {
         "name": "Inspire",
@@ -1307,8 +1306,13 @@
         "value": 1
       },
       {
-        "name": "Immune",
-        "value": "Blast, Melee, Range 1 Weapons"
+        "name":"Immune: Blast"
+      },
+      {
+        "name":"Immune: Melee"
+      },
+      {
+        "name":"Immune: Range 1 Weapons"
       },
       {
         "name": "Speeder",
@@ -1451,8 +1455,7 @@
         "name": "Deflect"
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       },
       {
         "name": "Master of the Force",
@@ -2812,8 +2815,11 @@
     "faction": "empire",
     "imageName": "Maximum Firepower.webp",
     "keywords": [
-      "Impact",
-      "Immune"
+      {
+        "name":"Impact", 
+        "value":2
+      },
+      "Immune: Deflect"
     ],
     "id": "bv"
   },
@@ -3080,7 +3086,7 @@
     "faction": "rebels",
     "imageName": "Coordinated Bombardment.webp",
     "keywords": [
-      "Immune"
+      "Immune: Deflect"
     ],
     "id": "cr"
   },
@@ -3603,9 +3609,9 @@
     "imageName": "Sabine The Darksaber.webp",
     "keywords": [
       "Dauntless",
-      "Immune",
-      "Impact",
-      "Pierce"
+      "Immune: Pierce",
+      {"name": "Impact", "value":1},
+      {"name": "Pierce", "value":1}
     ],
     "requirements": [
       {
@@ -4577,8 +4583,7 @@
         "name": "Disengage"
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       },
       {
         "name": "Master of the Force",
@@ -4649,8 +4654,7 @@
         "name": "Deflect"
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       },
       {
         "name": "Jedi Hunter"
@@ -5040,8 +5044,7 @@
         "value": "Trooper Unit"
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       },
       {
         "name": "Makashi Mastery"
@@ -5953,8 +5956,7 @@
         "name": "Guardian"
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       },
       {
         "name": "Master of the Force",
@@ -6781,8 +6783,7 @@
         "value": "IG-100"
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       },
       {
         "name": "Jedi Hunter"
@@ -7043,9 +7044,11 @@
       {
         "name": "Dual Twin Blaster Cannons",
         "keywords": [
+          "Suppressive",
+          "Immune: Deflect",
           {
-            "name": "Suppressive, Fixed",
-            "value": "Front, Immune: Deflect"
+            "name": "Fixed",
+            "value": "Front"
           }
         ],
         "type": "0",
@@ -9272,8 +9275,7 @@
     "keywords": [
       "Lethal",
       "Pierce",
-      "Immune",
-      "Deflect"
+      "Immune: Deflect"
     ],
     "requirements": [
       {
@@ -9311,7 +9313,7 @@
     "imageName": "DC-15x ARC Trooper.webp",
     "keywords": [
       "Critical",
-      "Immune",
+      "Immune: Deflect",
       "Deflect",
       "Lethal",
       "Pierce"
@@ -10242,7 +10244,7 @@
     "keywords": [
       "Duelist",
       "Pierce",
-      "Immune"
+      "Immune: Pierce"
     ],
     "requirements": [
       {
@@ -10650,8 +10652,7 @@
         "name": "Djem So Mastery"
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       },
       {
         "name": "Master of the Force",
@@ -10729,8 +10730,7 @@
         "name": "Deflect"
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       },
       {
         "name": "Juyo Mastery"
@@ -11051,8 +11051,7 @@
         "value": "Corps Trooper Unit"
       },
       {
-        "name": "Immune",
-        "value": "Melee Pierce"
+        "name": "Immune: Melee Pierce"
       },
       {
         "name": "Interrogate"
@@ -11102,7 +11101,7 @@
       },
       {
         "date": "15 April 2025",
-        "description": "Points dropped from 85 to 70. Changed from Commander to Operative. Lost Contingencies, Cunning Flawed, Sharpshooter, and Tactical keywords and gained Observe, Bounty, Charge, Direct, Immunem, and Interrogate. Lost Surge to Crit and 1 health. Weapons changed to the Bo Rifle which is 1 red and 3 black."
+        "description": "Points dropped from 85 to 70. Changed from Commander to Operative. Lost Contingencies, Cunning Flawed, Sharpshooter, and Tactical keywords and gained Observe, Bounty, Charge, Direct, Immune, and Interrogate. Lost Surge to Crit and 1 health. Weapons changed to the Bo Rifle which is 1 red and 3 black."
       }
     ]
   },
@@ -11371,8 +11370,8 @@
     "faction": "republic",
     "keywords": [
       "Field Commander",
-      "Beam",
-      "Immune"
+      {"name":"Beam", "value":2},
+      "Immune: Deflect"
     ]
   },
   "ny": {
@@ -11662,8 +11661,7 @@
         "name": "Deflect"
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       },
       {
         "name": "Master of the Force",
@@ -11809,8 +11807,13 @@
         "value": "Air 2"
       },
       {
-        "name": "Immune",
-        "value": "Blast, Melee, Range 1 Weapons"
+        "name": "Immune: Blast"
+      },
+      {
+        "name": "Immune: Melee"
+      },
+      {
+        "name": "Immune: Range 1 Weapons"
       },
       {
         "name": "Transport"
@@ -11874,12 +11877,14 @@
       "Armor",
       "Arsenal",
       "Cover",
-      "Hover: Air",
+      {"name" : "Hover", "value":"Air"},
       "Strafe",
-      "Immune",
+      "Immune: Blast",
+      "Immune: Melee",
+      "Immune: Range 1 Weapons",
       "Transport",
-      "Fixed",
-      "Impact"
+      {"name":"Fixed", "value":"Front"},
+      {"name":"Impact", "value":1}
     ],
     "upgradeBar": [
       "pilot",
@@ -12844,8 +12849,7 @@
         "value": "Commander"
       },
       {
-        "name": "Immune",
-        "value": "Melee Pierce"
+        "name": "Immune: Melee Pierce"
       },
       {
         "name": "Retinue",
@@ -13205,10 +13209,9 @@
         "name": "Cover",
         "value": 2
       },
-      {
-        "name": "Immune",
-        "value": "Blast, Melee, Range 1 Weapons"
-      },
+      "Immune: Blast",
+      "Immune: Melee",
+      "Immune: Range 1 Weapons",
       {
         "name": "Reposition"
       },
@@ -14174,8 +14177,7 @@
         "name": "Deflect"
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       },
       {
         "name": "Juyo Mastery"
@@ -15375,7 +15377,7 @@
       "Blast",
       "Beam",
       "Critical",
-      "Immune",
+      "Immune: Deflect",
       "Suppressive"
     ],
     "history": [
@@ -16504,7 +16506,7 @@
     "imageName": "Moff Gideon The Darksaber.webp",
     "keywords": [
       "Demoralize",
-      "Immune",
+      "Immune: Pierce",
       "Impact",
       "Pierce"
     ],
@@ -16680,8 +16682,7 @@
         "name": "Indomitable"
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       },
       {
         "name": "Jar'Kai Mastery"
@@ -16848,8 +16849,7 @@
         "name": "Deflect"
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       },
       {
         "name": "Jar'Kai Mastery"
@@ -17892,8 +17892,7 @@
         "value": 2
       },
       {
-        "name": "Immune",
-        "value": "Pierce"
+        "name": "Immune: Pierce"
       }
     ],
     "upgradeBar": [
@@ -18497,8 +18496,7 @@
         "name": "Charge"
       },
       {
-        "name": "Immune",
-        "value": "Melee Pierce"
+        "name": "Immune: Melee Pierce"
       },
       {
         "name": "Special Issue",
@@ -18678,10 +18676,9 @@
         "name": "Cover",
         "value": 2
       },
-      {
-        "name": "Immune",
-        "value": "Blast, Melee, Range 1 Weapons"
-      },
+      "Immune: Blast",
+      "Immune: Melee",
+      "Immune: Range 1 Weapons",
       {
         "name": "Reposition"
       },
@@ -20174,7 +20171,7 @@
       "Jump",
       "Associate",
       "Deflect",
-      "Immune",
+      "Immune: Pierce",
       "Independent",
       "Scout",
       "Shien Mastery"

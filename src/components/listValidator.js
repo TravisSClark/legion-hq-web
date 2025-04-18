@@ -4,7 +4,7 @@ import battleForcesDict from 'constants/battleForcesDict';
 import legionModes from 'constants/legionModes';
 import {areRequirementsMet, impRemnantUpgrades} from 'components/eligibleCardListGetter';
 
-const upgradesProvidingAlliesOfConvenience = cardsIdsByType["upgrade"].filter(c=>cards[c].keywords?.includes("Allies of Convenience"));
+const upgradesProvidingAlliesOfConvenience = cardsIdsByType["upgrade"].filter(c=>cards[c].keywords?.some(k=> k==='Allies of Convenience' || k.name ==="Allies of Convenience"));
 /**
  * Check validation ONLY for things pertaining to this unit's currently equipped upgrades. 
  * Generally, should *probably* not do things that have a further reach than upgrade bar itself (I think)
@@ -208,7 +208,7 @@ function mercValidation(currentList, currentRanks, mercs, rankIssues){
       if(!hasAoc)
       {
         const card = cards[unit.unitId]
-        hasAoc = card.keywords.find(k => k === "Allies of Convenience") || unit.upgradesEquipped.find(c => upgradesProvidingAlliesOfConvenience.includes(c));
+        hasAoc = card.keywords.some(k=> k==='Allies of Convenience' || k.name ==="Allies of Convenience") || unit.upgradesEquipped.find(c => upgradesProvidingAlliesOfConvenience.includes(c));
       }
     });
 
@@ -410,13 +410,13 @@ function applyFieldCommander(list, rankReqs){
     const unit = list.units[i];
     const unitCard = cards[unit.unitId];
 
-    if (unitCard.keywords.includes('Field Commander')) list.hasFieldCommander = true;
+    if (unitCard.keywords.some(k=> k==='Field Commander' || k.name ==="Field Commander")) list.hasFieldCommander = true;
 
     for (let j = 0; j < unit.upgradesEquipped.length && !list.hasFieldCommander; j++) { 
       const upgradeId = unit.upgradesEquipped[j];
       if (upgradeId) {
         const upgradeCard = cards[upgradeId];
-        if (upgradeCard.keywords.includes('Field Commander')) {
+        if (upgradeCard.keywords.some(k=> k==='Field Commander' || k.name ==="Field Commander")) {
           list.hasFieldCommander = true;
         }
       }
