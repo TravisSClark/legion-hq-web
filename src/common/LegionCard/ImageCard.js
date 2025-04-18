@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Grow,
   IconButton,
@@ -41,12 +41,20 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
   const chipSize = 'small';
   const { cost, cardType, cardName, displayName, keywords, imageName, upgradeBar } = card;
   const classes = useStyles();
-  const [isExpanded, setIsExpanded] = React.useState(false);
+
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isIn, setIn] = useState(true);
+
   const handleExpandClick = () => setIsExpanded(!isExpanded);
   const isDoubleSided = cardType === 'upgrade' && card.isDoubleSided;
 
+  let flickerCard = ()=>{
+    setIn(false);
+    setTimeout(()=>setIn(true), 200);
+  }
+
   return (
-    <Grow unmountOnExit in={true}>
+    <Grow in={isIn}>
       <Card
         className={clsx(classes.card,
           { [classes.selected]: isSelected },
@@ -56,7 +64,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
           { [classes.commandCard]: cardType === 'command' || cardType === 'battle'},
         )}
       >
-        <CardActionArea onClick={handleClick}>
+        <CardActionArea disableRipple={true}  onClick={()=>{handleClick(); flickerCard();}}>
           <CardMedia
             title={displayName ? displayName : cardName}
             image={`${urls.cdn}/${cardType}Cards/${imageName}?${new Date().getTime()}`}
