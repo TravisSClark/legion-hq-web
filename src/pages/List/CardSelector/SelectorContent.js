@@ -130,19 +130,23 @@ function SelectorContent({
   );
 };
 
-export default React.memo(SelectorContent, (prevProps, nextProps)=>{
+export default SelectorContent;
 
-  if(prevProps.action != nextProps.action){
-    return false;
-  }
 
-  let arraysEqual = prevProps.validIds.length == nextProps.validIds.length;
+// TODO would be nice, but disabling this re-render prevents applytoall from working since clickhandler doesn't get updated with the new a2a value
+// React.memo(SelectorContent, (prevProps, nextProps)=>{
 
-  for(let i=0; i<prevProps.validIds.length && arraysEqual; i++){
-    if(prevProps.validIds[i] !== nextProps.validIds[i]){
-      arraysEqual = false;
-    }
-  }
-  return arraysEqual;
+//   if(prevProps.action != nextProps.action){
+//     return false;
+//   }
 
-});
+//   let arraysEqual = prevProps.validIds.length == nextProps.validIds.length;
+
+//   for(let i=0; i<prevProps.validIds.length && arraysEqual; i++){
+//     if(prevProps.validIds[i] !== nextProps.validIds[i]){
+//       arraysEqual = false;
+//     }
+//   }
+//   return arraysEqual;
+
+// });
