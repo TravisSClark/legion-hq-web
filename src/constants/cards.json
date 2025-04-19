@@ -1124,7 +1124,7 @@
   "an": {
     "id": "an",
     "cardName": "1.4 FD Laser Cannon Team",
-    "displayName": "FD Turret",
+    "displayName": "1.4 FD Laser",
     "imageName": "1.4 FD Laser Cannon Team.webp",
     "cardType": "unit",
     "cardSubtype": "emplacement trooper",
@@ -1285,7 +1285,6 @@
   "ap": {
     "id": "ap",
     "cardName": "T-47 Airspeeder",
-    "displayName": "Airspeeder",
     "imageName": "T-47 Airspeeder.webp",
     "cardType": "unit",
     "cardSubtype": "repulsor vehicle",
@@ -1369,7 +1368,6 @@
   "aq": {
     "id": "aq",
     "cardName": "X-34 Landspeeder",
-    "displayName": "Landspeeder",
     "imageName": "X-34 Landspeeder.webp",
     "cardType": "unit",
     "cardSubtype": "repulsor vehicle",
@@ -2438,7 +2436,6 @@
   "bf": {
     "id": "bf",
     "cardName": "74-Z Speeder Bikes",
-    "displayName": "Speeder Bikes",
     "imageName": "74-Z Speeder Bikes.webp",
     "cardType": "unit",
     "cardSubtype": "repulsor vehicle",
@@ -2615,7 +2612,7 @@
   "bh": {
     "id": "bh",
     "cardName": "TX-225 GAVw Occupier Tank",
-    "displayName": "Gav Tank",
+    "displayName": "TX-225 GAVw Tank",
     "ttsName": "TX-225 GAVw Occupier Combat Assault Tank",
     "imageName": "TX-225 GAVw Occupier Tank.webp",
     "cardType": "unit",
@@ -5300,7 +5297,6 @@
   "ga": {
     "id": "ga",
     "cardName": "B2 Super Battle Droids",
-    "displayName": "B2s",
     "imageName": "B2 Super Battle Droids.webp",
     "cardType": "unit",
     "cardSubtype": "droid trooper",
@@ -5721,7 +5717,7 @@
     "id": "gm"
   },
   "gn": {
-    "displayName": "E-11D Config",
+    "displayName": "E-11D Blaster",
     "cardSubtype": "armament",
     "cardName": "E-11D Focused Fire Configuration",
     "isUnique": false,
@@ -6013,7 +6009,6 @@
   "gx": {
     "id": "gx",
     "cardName": "B1 Battle Droids",
-    "displayName": "B1s",
     "imageName": "B1 Battle Droids.webp",
     "cardType": "unit",
     "cardSubtype": "droid trooper",
@@ -7294,7 +7289,7 @@
         "cardName": "B2 Super Battle Droids"
       }
     ],
-    "displayName": "B2s",
+    "displayName": "B2",
     "history": [
       {
         "date": "19 November 2020",
@@ -7979,7 +7974,6 @@
   },
   "jt": {
     "id": "jt",
-    "displayName": "Call Me Captain",
     "cardSubtype": "1",
     "cardName": "Call Me Captain",
     "cardType": "command",
@@ -7996,7 +7990,6 @@
   },
   "ju": {
     "id": "ju",
-    "displayName": "Take That, Clankers!",
     "cardSubtype": "2",
     "cardName": "Take That, Clankers!",
     "cardType": "command",
@@ -9887,7 +9880,6 @@
   },
   "me": {
     "id": "me",
-    "displayName": "",
     "cardSubtype": "heavy weapon",
     "cardName": "Gideon Hask",
     "isUnique": true,
@@ -9921,7 +9913,6 @@
   },
   "mf": {
     "id": "mf",
-    "displayName": "",
     "cardSubtype": "heavy weapon",
     "cardName": "Del Meeko",
     "imageName": "Del Meeko.webp",
@@ -9960,7 +9951,6 @@
     ]
   },
   "mg": {
-    "displayName": "",
     "cardName": "I'm Your Worst Nightmare",
     "cardSubtype": "1",
     "cardType": "command",
@@ -9974,7 +9964,6 @@
   },
   "mh": {
     "id": "mh",
-    "displayName": "",
     "cardSubtype": "gear",
     "cardName": "Ascension Cables",
     "imageName": "Ascension Cables.webp",
@@ -9987,7 +9976,6 @@
     "requirements": []
   },
   "mi": {
-    "displayName": "",
     "cardName": "Aggressive Negotiations",
     "cardSubtype": "2",
     "cardType": "command",
@@ -10367,7 +10355,6 @@
   },
   "mt": {
     "id": "mt",
-    "displayName": "",
     "cardName": "Synchronized Offensive",
     "cardSubtype": "1",
     "cardType": "command",
@@ -10384,7 +10371,6 @@
   },
   "mu": {
     "id": "mu",
-    "displayName": "",
     "cardName": "Mechanized Incursion",
     "cardSubtype": "1",
     "cardType": "command",
@@ -10401,7 +10387,6 @@
   },
   "mv": {
     "id": "mv",
-    "displayName": "",
     "cardName": "General Skywalker",
     "cardSubtype": "3",
     "cardType": "command",
@@ -10420,7 +10405,6 @@
   },
   "mw": {
     "id": "mw",
-    "displayName": "",
     "cardName": "Duel of the Fates",
     "cardSubtype": "1",
     "cardType": "command",
@@ -10776,7 +10760,6 @@
   },
   "nd": {
     "id": "nd",
-    "displayName": "",
     "cardSubtype": "force",
     "cardName": "Force Barrier",
     "isUnique": false,
@@ -10788,7 +10771,6 @@
   },
   "ne": {
     "id": "ne",
-    "displayName": "",
     "cardSubtype": "training",
     "cardName": "Seize the Initiative",
     "isUnique": false,
@@ -10808,7 +10790,6 @@
   },
   "nf": {
     "id": "nf",
-    "displayName": "",
     "cardName": "This is Where the Fun Begins",
     "cardSubtype": "1",
     "cardType": "command",
@@ -10828,7 +10809,6 @@
   },
   "ng": {
     "id": "ng",
-    "displayName": "",
     "cardName": "You Underestimate My Power",
     "cardSubtype": "2",
     "cardType": "command",
@@ -10845,7 +10825,6 @@
   },
   "ni": {
     "id": "ni",
-    "displayName": "",
     "cardName": "The Phantom Menace",
     "cardSubtype": "2",
     "cardType": "command",
@@ -10865,7 +10844,6 @@
   },
   "nj": {
     "id": "nj",
-    "displayName": "",
     "cardName": "At Last",
     "cardSubtype": "3",
     "cardType": "command",
@@ -11105,7 +11083,6 @@
   },
   "nn": {
     "id": "nn",
-    "displayName": "",
     "cardName": "Ace Up His Sleeve",
     "cardSubtype": "2",
     "cardType": "command",
@@ -11122,7 +11099,6 @@
   },
   "no": {
     "id": "no",
-    "displayName": "",
     "cardName": "Face Me!",
     "cardSubtype": "1",
     "cardType": "command",
@@ -11141,7 +11117,6 @@
   },
   "nq": {
     "id": "nq",
-    "displayName": "",
     "cardSubtype": "command",
     "cardName": "Inspiring Presence",
     "isUnique": false,
@@ -11309,7 +11284,6 @@
   },
   "nt": {
     "id": "nt",
-    "displayName": "",
     "cardName": "Corellian Spike",
     "cardSubtype": "1",
     "cardType": "command",
@@ -11320,7 +11294,6 @@
   },
   "nu": {
     "id": "nu",
-    "displayName": "",
     "cardName": "Orbital Strike",
     "cardSubtype": "2",
     "cardType": "command",
@@ -11331,7 +11304,6 @@
   },
   "nv": {
     "id": "nv",
-    "displayName": "",
     "cardName": "Roger, Roger!",
     "cardSubtype": "3",
     "cardType": "command",
@@ -11342,7 +11314,6 @@
   },
   "nw": {
     "id": "nw",
-    "displayName": "",
     "cardName": "Idiot's Array",
     "cardSubtype": "3",
     "cardType": "command",
@@ -11359,7 +11330,6 @@
   },
   "nx": {
     "id": "nx",
-    "displayName": "",
     "cardName": "Air Support",
     "cardSubtype": "2",
     "cardType": "command",
@@ -11374,7 +11344,6 @@
   },
   "ny": {
     "id": "ny",
-    "displayName": "",
     "cardName": "Attack of the Clones",
     "cardSubtype": "3",
     "cardType": "command",
@@ -11385,7 +11354,6 @@
   },
   "nz": {
     "id": "nz",
-    "displayName": "",
     "cardSubtype": "command",
     "cardName": "Vigilance",
     "isUnique": false,
@@ -11431,7 +11399,6 @@
   },
   "ob": {
     "id": "ob",
-    "displayName": "",
     "cardSubtype": "personnel",
     "cardName": "Clone Engineer",
     "isUnique": false,
@@ -11528,7 +11495,6 @@
   },
   "oe": {
     "id": "oe",
-    "displayName": "",
     "cardSubtype": "personnel",
     "cardName": "Viper Recon Droid",
     "isUnique": false,
@@ -11562,7 +11528,6 @@
   },
   "of": {
     "id": "of",
-    "displayName": "",
     "cardSubtype": "personnel",
     "cardName": "PK-Series Worker Droid",
     "isUnique": false,
@@ -11588,7 +11553,6 @@
   },
   "og": {
     "id": "og",
-    "displayName": "",
     "cardSubtype": "personnel",
     "cardName": "EV-Series Medical Droid",
     "isUnique": false,
@@ -11608,7 +11572,6 @@
   },
   "oj": {
     "id": "oj",
-    "displayName": "",
     "cardName": "ISB Investigation",
     "cardSubtype": "2",
     "cardType": "command",
@@ -11619,7 +11582,6 @@
   },
   "ok": {
     "id": "ok",
-    "displayName": "",
     "cardName": "Ruthless Tactics",
     "cardSubtype": "3",
     "cardType": "command",
@@ -11937,7 +11899,6 @@
   },
   "oq": {
     "id": "oq",
-    "displayName": "",
     "cardSubtype": "pilot",
     "cardName": "Shriv Suurgav",
     "isUnique": true,
@@ -11990,7 +11951,6 @@
   },
   "os": {
     "id": "os",
-    "displayName": "",
     "cardSubtype": "pilot",
     "cardName": "Clone Commander Fox",
     "isUnique": true,
@@ -12042,7 +12002,6 @@
   },
   "ou": {
     "id": "ou",
-    "displayName": "",
     "cardSubtype": "hardpoint",
     "cardName": "AG-2G Quad Laser",
     "isUnique": false,
@@ -12074,7 +12033,6 @@
   },
   "ov": {
     "id": "ov",
-    "displayName": "",
     "cardSubtype": "pilot",
     "cardName": "Hotshot Pilot",
     "isUnique": false,
@@ -12093,7 +12051,6 @@
   },
   "ox": {
     "id": "ox",
-    "displayName": "",
     "cardSubtype": "crew",
     "cardName": "Backworld Medic",
     "isUnique": false,
@@ -12115,7 +12072,6 @@
   },
   "oz": {
     "id": "oz",
-    "displayName": "",
     "cardSubtype": "crew",
     "cardName": "Unstable R5 Astromech",
     "isUnique": false,
@@ -12135,7 +12091,6 @@
   },
   "pa": {
     "id": "pa",
-    "displayName": "",
     "cardSubtype": "crew",
     "cardName": "Unorthodox Tactician",
     "isUnique": false,
@@ -12161,7 +12116,6 @@
   },
   "pb": {
     "id": "pb",
-    "displayName": "",
     "cardSubtype": "pilot",
     "cardName": "Baron Rudor",
     "isUnique": true,
@@ -12186,7 +12140,6 @@
   },
   "pc": {
     "id": "pc",
-    "displayName": "",
     "cardSubtype": "pilot",
     "cardName": "Hound & Grizzer",
     "isUnique": true,
@@ -12205,7 +12158,6 @@
   },
   "pd": {
     "id": "pd",
-    "displayName": "",
     "cardSubtype": "pilot",
     "cardName": "Imperial TIE Pilot",
     "isUnique": false,
@@ -12222,7 +12174,6 @@
   },
   "pe": {
     "id": "pe",
-    "displayName": "",
     "cardSubtype": "pilot",
     "cardName": "Clone Shock Trooper Pilot",
     "isUnique": false,
@@ -12249,7 +12200,6 @@
   },
   "pf": {
     "id": "pf",
-    "displayName": "",
     "cardSubtype": "heavy weapon",
     "cardName": "Battle Shield Wookiee",
     "ttsName": "Battle Shield Wookiee (Offensive)",
@@ -12422,7 +12372,6 @@
   },
   "pi": {
     "id": "pi",
-    "displayName": "",
     "cardName": "Size Matters Not",
     "cardSubtype": "1",
     "cardType": "command",
@@ -12437,7 +12386,6 @@
   },
   "pj": {
     "id": "pj",
-    "displayName": "",
     "cardName": "There Is No Try",
     "cardSubtype": "2",
     "cardType": "command",
@@ -12451,7 +12399,6 @@
   },
   "pk": {
     "id": "pk",
-    "displayName": "",
     "cardName": "Luminous Beings Are We",
     "cardSubtype": "3",
     "cardType": "command",
@@ -12612,7 +12559,6 @@
   },
   "pn": {
     "id": "pn",
-    "displayName": "",
     "cardSubtype": "heavy weapon",
     "cardName": "Long Gun Wookiee",
     "isUnique": false,
@@ -12710,7 +12656,6 @@
   },
   "pp": {
     "id": "pp",
-    "displayName": "",
     "cardName": "Size Matters Sometimes",
     "cardSubtype": "2",
     "cardType": "command",
@@ -12730,7 +12675,6 @@
   },
   "pq": {
     "id": "pq",
-    "displayName": "",
     "cardSubtype": "force",
     "cardName": "Burst of Speed",
     "isUnique": false,
@@ -12748,7 +12692,6 @@
   },
   "ps": {
     "id": "ps",
-    "displayName": "",
     "cardSubtype": "training",
     "cardName": "Into the Fray",
     "isUnique": false,
@@ -12760,7 +12703,6 @@
   },
   "pt": {
     "id": "pt",
-    "displayName": "",
     "cardSubtype": "training",
     "cardName": "Protector",
     "isUnique": false,
@@ -12772,7 +12714,6 @@
   },
   "pu": {
     "id": "pu",
-    "displayName": "",
     "cardName": "Defiance",
     "cardSubtype": "1",
     "cardType": "command",
@@ -12789,7 +12730,6 @@
   },
   "pv": {
     "id": "pv",
-    "displayName": "",
     "cardName": "Get In Position",
     "cardSubtype": "2",
     "cardType": "command",
@@ -12808,7 +12748,6 @@
   },
   "pw": {
     "id": "pw",
-    "displayName": "",
     "cardName": "Daring Defense",
     "cardSubtype": "3",
     "cardType": "command",
@@ -12912,7 +12851,6 @@
     "id": "pz",
     "title": "Super Tactical Droid",
     "cardName": "Kraken",
-    "displayName": "Kraken",
     "imageName": "Kraken.webp",
     "cardType": "unit",
     "cardSubtype": "droid trooper",
@@ -13000,7 +12938,6 @@
     "id": "qa",
     "title": "Super Tactical Droid",
     "cardName": "Kalani",
-    "displayName": "Kalani",
     "imageName": "Kalani.webp",
     "cardType": "unit",
     "cardSubtype": "droid trooper",
@@ -13087,7 +13024,6 @@
   },
   "qb": {
     "id": "qb",
-    "displayName": "",
     "cardSubtype": "heavy weapon",
     "cardName": "Electro-whip MagnaGuard",
     "isUnique": false,
@@ -13106,7 +13042,6 @@
   },
   "qc": {
     "id": "qc",
-    "displayName": "",
     "cardSubtype": "heavy weapon",
     "cardName": "IG-100 MagnaGuard",
     "isUnique": false,
@@ -13122,7 +13057,6 @@
   },
   "qd": {
     "id": "qd",
-    "displayName": "",
     "cardSubtype": "heavy weapon",
     "cardName": "RPS-6 MagnaGuard",
     "isUnique": false,
@@ -13252,7 +13186,6 @@
   },
   "qi": {
     "id": "qi",
-    "displayName": "",
     "cardSubtype": "crew",
     "cardName": "Gnasp Gunner",
     "isUnique": false,
@@ -13278,7 +13211,6 @@
   },
   "qj": {
     "id": "qj",
-    "displayName": "",
     "cardSubtype": "comms",
     "cardName": "Hacked Comms Unit",
     "isUnique": false,
@@ -13388,7 +13320,6 @@
   },
   "qm": {
     "id": "qm",
-    "displayName": "",
     "cardSubtype": "protocol",
     "cardName": "Defense Protocols",
     "isUnique": false,
@@ -13415,7 +13346,6 @@
   },
   "qn": {
     "id": "qn",
-    "displayName": "",
     "cardSubtype": "protocol",
     "cardName": "Attack Protocols",
     "isUnique": false,
@@ -13440,7 +13370,6 @@
   },
   "qo": {
     "id": "qo",
-    "displayName": "",
     "cardSubtype": "hardpoint",
     "cardName": "Nose-Mounted Flamethrower",
     "isUnique": false,
@@ -13466,7 +13395,6 @@
   },
   "qp": {
     "id": "qp",
-    "displayName": "",
     "cardSubtype": "crew",
     "cardName": "Gnasp Bombardier",
     "isUnique": false,
@@ -13491,7 +13419,6 @@
   },
   "qq": {
     "id": "qq",
-    "displayName": "",
     "cardSubtype": "hardpoint",
     "cardName": "Nose-Mounted Ion Blaster",
     "isUnique": false,
@@ -13522,7 +13449,6 @@
   },
   "qr": {
     "id": "qr",
-    "displayName": "",
     "cardSubtype": "hardpoint",
     "cardName": "Nose-Mounted Laser Cannon",
     "isUnique": false,
@@ -13723,7 +13649,6 @@
   },
   "qv": {
     "id": "qv",
-    "displayName": "",
     "cardSubtype": "hardpoint",
     "cardName": "Twin Blaster Cannons",
     "isUnique": false,
@@ -13749,7 +13674,6 @@
   },
   "qw": {
     "id": "qw",
-    "displayName": "",
     "cardSubtype": "hardpoint",
     "cardName": "Twin Beam Cannons",
     "isUnique": false,
@@ -13778,7 +13702,6 @@
   },
   "qx": {
     "id": "qx",
-    "displayName": "",
     "cardSubtype": "hardpoint",
     "cardName": "Twin Missile Pods",
     "isUnique": false,
@@ -14423,7 +14346,6 @@
   },
   "rf": {
     "id": "rf",
-    "displayName": "",
     "cardSubtype": "command",
     "cardName": "Underworld Connections",
     "isUnique": false,
@@ -14437,7 +14359,6 @@
   },
   "rg": {
     "id": "rg",
-    "displayName": "",
     "cardSubtype": "heavy weapon",
     "cardName": "P13-M Disruptor Soldier",
     "isUnique": false,
@@ -14455,7 +14376,6 @@
   },
   "rh": {
     "id": "rh",
-    "displayName": "",
     "cardSubtype": "heavy weapon",
     "cardName": "Electro-Whip Soldier",
     "isUnique": false,
@@ -14474,7 +14394,6 @@
   },
   "ri": {
     "id": "ri",
-    "displayName": "",
     "cardSubtype": "personnel",
     "cardName": "Pyke Syndicate Foot Soldier",
     "isUnique": false,
@@ -14492,7 +14411,6 @@
   },
   "rj": {
     "id": "rj",
-    "displayName": "",
     "cardSubtype": "personnel",
     "cardName": "Pyke Syndicate Capo",
     "isUnique": false,
@@ -14517,7 +14435,6 @@
   },
   "rk": {
     "id": "rk",
-    "displayName": "",
     "cardSubtype": "personnel",
     "cardName": "Black Sun Enforcer",
     "isUnique": false,
@@ -14559,7 +14476,6 @@
   },
   "rm": {
     "id": "rm",
-    "displayName": "",
     "cardSubtype": "heavy weapon",
     "cardName": "Mag-Det Enforcer",
     "isUnique": false,
@@ -14588,7 +14504,6 @@
   },
   "rn": {
     "id": "rn",
-    "displayName": "",
     "cardSubtype": "heavy weapon",
     "cardName": "Scatter Gun Enforcer",
     "isUnique": false,
@@ -14612,7 +14527,6 @@
   },
   "ro": {
     "id": "ro",
-    "displayName": "",
     "cardSubtype": "gear",
     "cardName": "Prepared Supplies",
     "isUnique": false,
@@ -14626,7 +14540,6 @@
   },
   "rp": {
     "id": "rp",
-    "displayName": "",
     "cardSubtype": "grenades",
     "cardName": "Sonic Imploders",
     "isUnique": false,
@@ -14641,9 +14554,8 @@
   "rq": {
     "id": "rq",
     "cardSubtype": "armament",
-    "cardName": "Maul The Darksaber",
     "displayName": "The Darksaber",
-    "ttsName": "The Darksaber (Maul)",
+    "cardName": "The Darksaber (Maul)",
     "isUnique": true,
     "cardType": "upgrade",
     "cost": 10,
@@ -14694,7 +14606,6 @@
   },
   "ru": {
     "id": "ru",
-    "displayName": "",
     "cardSubtype": "training",
     "cardName": "Up Close and Personal",
     "isUnique": false,
@@ -14712,7 +14623,6 @@
   },
   "rv": {
     "id": "rv",
-    "displayName": "",
     "cardSubtype": "command",
     "cardName": "Lead By Example",
     "isUnique": false,
@@ -14799,7 +14709,6 @@
   },
   "rz": {
     "id": "rz",
-    "displayName": "",
     "cardSubtype": "gear",
     "cardName": "Super Commando Combat Shields",
     "isUnique": false,
@@ -14817,7 +14726,6 @@
   },
   "sa": {
     "id": "sa",
-    "displayName": "",
     "cardSubtype": "armament",
     "cardName": "Super Commando Jetpack Rockets",
     "isUnique": false,
@@ -14860,7 +14768,6 @@
   },
   "sc": {
     "id": "sc",
-    "displayName": "",
     "cardSubtype": "heavy weapon",
     "cardName": "Super Commando Gunslinger",
     "isUnique": false,
@@ -14884,7 +14791,6 @@
   },
   "sd": {
     "id": "sd",
-    "displayName": "",
     "cardSubtype": "heavy weapon",
     "cardName": "Super Commando Marksman",
     "isUnique": false,
@@ -14932,7 +14838,6 @@
   },
   "sf": {
     "id": "sf",
-    "displayName": "",
     "cardSubtype": "comms",
     "cardName": "Emergency Transponder",
     "isUnique": false,
@@ -14944,7 +14849,6 @@
   },
   "sg": {
     "id": "sg",
-    "displayName": "",
     "cardSubtype": "armament",
     "cardName": "Saxon's Galar-90 Rifle",
     "isUnique": true,
@@ -14964,7 +14868,6 @@
   },
   "sh": {
     "id": "sh",
-    "displayName": "",
     "cardSubtype": "armament",
     "cardName": "Saxon's Z-3X Jetpack Rockets",
     "isUnique": true,
@@ -14984,7 +14887,6 @@
   },
   "si": {
     "id": "si",
-    "displayName": "",
     "cardSubtype": "armament",
     "cardName": "Saxon's ZX Flame Projector",
     "isUnique": true,
@@ -15077,7 +14979,6 @@
   },
   "sn": {
     "id": "sn",
-    "displayName": "",
     "cardSubtype": "pilot",
     "cardName": "Frenzied Gunner",
     "isUnique": false,
@@ -15095,7 +14996,6 @@
   },
   "so": {
     "id": "so",
-    "displayName": "",
     "cardSubtype": "pilot",
     "cardName": "Raiding Party Leader",
     "isUnique": true,
@@ -15116,7 +15016,6 @@
   },
   "sp": {
     "id": "sp",
-    "displayName": "",
     "cardSubtype": "gear",
     "cardName": "Saxon's Combat Shield",
     "isUnique": true,
@@ -16027,7 +15926,6 @@
   },
   "to": {
     "id": "to",
-    "displayName": "",
     "cardSubtype": "armament",
     "cardName": "Din's Amban Rifle",
     "isUnique": true,
@@ -16047,7 +15945,6 @@
   },
   "tp": {
     "id": "tp",
-    "displayName": "",
     "cardSubtype": "protocol",
     "cardName": "\"Nanny\" Programming",
     "cardType": "upgrade",
@@ -16066,7 +15963,6 @@
   },
   "tq": {
     "id": "tq",
-    "displayName": "",
     "cardSubtype": "gear",
     "cardName": "Din's Flame Projector",
     "isUnique": true,
@@ -16087,7 +15983,6 @@
   },
   "tr": {
     "id": "tr",
-    "displayName": "",
     "cardSubtype": "gear",
     "cardName": "The Mando's Jetpack",
     "isUnique": true,
@@ -16106,7 +16001,6 @@
   },
   "ts": {
     "id": "ts",
-    "displayName": "",
     "cardSubtype": "armament",
     "cardName": "Beskar Spear",
     "isUnique": true,
@@ -16221,7 +16115,6 @@
   },
   "ub": {
     "id": "ub",
-    "displayName": "",
     "cardSubtype": "protocol",
     "cardName": "\"Bounty\" Programming",
     "isUnique": false,
@@ -16337,7 +16230,6 @@
   },
   "uf": {
     "id": "uf",
-    "displayName": "",
     "cardSubtype": "squad leader",
     "cardName": "Boil",
     "isUnique": true,
@@ -16392,7 +16284,6 @@
   },
   "uh": {
     "id": "uh",
-    "displayName": "",
     "cardSubtype": "gear",
     "cardName": "Boba's Flame Projector",
     "isUnique": true,
@@ -16495,9 +16386,8 @@
   },
   "uj": {
     "cardSubtype": "armament",
-    "cardName": "Moff Gideon The Darksaber",
+    "cardName": "The Darksaber (Gideon)",
     "displayName": "The Darksaber",
-    "ttsName": "The Darksaber (Gideon)",
     "isUnique": true,
     "cardType": "upgrade",
     "cost": 15,
@@ -18968,8 +18858,7 @@
         "name": "DC-17m ICWS Blaster Carbine",
         "keywords": [
           {
-            "name": "Supressiv",
-            "value": "e"
+            "name": "Supressive"
           }
         ],
         "type": "0",
@@ -18992,7 +18881,7 @@
     ]
   },
   "xk": {
-    "displayName": "DC-17m ICWS Config",
+    "displayName": "DC-17m ICWS",
     "cardSubtype": "armament",
     "cardName": "DC-17m ICWS Config",
     "isUnique": false,
