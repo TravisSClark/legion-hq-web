@@ -293,7 +293,7 @@ function decrementUnit(list, index, count = 1) {
   } else {
     list.units[index].count -= count;
   }
-  return list;
+  return consolidate(list);
 }
 
 function addContingency(list, commandId) {
@@ -313,7 +313,6 @@ function addCommand(list, commandId) {
 }
 
 function removeCommand(list, commandIndex) {
-  list.commandCards.splice(commandIndex, 1);
   list.commandCards.splice(commandIndex, 1);
   return list;
 }
@@ -498,8 +497,6 @@ export {
   decrementUnit,
   countPoints, 
   sortCommandIds,
-  equipUpgradeToUnit,
-
   // TODO - *probably* unneeded by importing classes via redundancy or tbd consolidate refactor; reassess
   consolidate
 };

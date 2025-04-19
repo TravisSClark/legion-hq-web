@@ -240,7 +240,6 @@ function rankValidation(currentList, currentRanks, rankLimits, mercs, rankIssues
 
   const battleForce = battleForcesDict[currentList.battleForce];
   const countMercs = battleForce?.rules?.countMercs;
-  const countMercs = battleForce?.rules?.countMercs;
 
   if(rankLimits.commOp && (currentRanks.commander + currentRanks.operative) > rankLimits.commOp
     && !(currentRanks.commander > rankLimits.commander || currentRanks.operative > rankLimits.operative)){

@@ -361,8 +361,6 @@ export function ListProvider({
   }
   const handleIncrementUnit = (index) => {
     let newList = incrementUnit(currentList, index);
-    newList = consolidate(newList);
-
     updateThenValidateList({ ...newList });
   }
   const handleDecrementUnit = (index) => {
@@ -370,7 +368,6 @@ export function ListProvider({
       setCardPaneFilter({ action: 'DISPLAY' });
     }
     let newList = decrementUnit(currentList, index);
-    newList = consolidate(newList);
     updateThenValidateList({ ...newList });
   }
 

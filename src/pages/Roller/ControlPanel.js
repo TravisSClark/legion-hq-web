@@ -1,5 +1,5 @@
-import React from 'react';
-import { Typography, Button, Checkbox, makeStyles, Divider, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@material-ui/core';
+import React, { useState,  } from 'react';
+import { Typography, Button, Checkbox, makeStyles, Divider, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, TextField, MenuItem, Select, InputLabel } from '@material-ui/core';
 import DiceCountPicker from './DiceCountPicker';
 import { Check } from '@material-ui/icons';
 
@@ -24,16 +24,15 @@ const useStyles = makeStyles(theme => ({
   checked: {}
 }));
 
-
-
 function ControlPanel({
-  rollerState,
+  parameters,
   onControlChange,
   handleRollDice
 }) {
 
-  const {redCount, blackCount, whiteCount} = rollerState;
-  const [isDisabled, setIsDisabled] = React.useState(false);
+  const {redCount, blackCount, whiteCount} = parameters;
+  const [isDisabled, setIsDisabled] = useState(false);
+  const [surgeTokenCount, setSurgeTokenCount] = useState(0);
   const classes = useStyles();
 
 
@@ -51,53 +50,49 @@ function ControlPanel({
         <Typography>
           Attack Dice
         </Typography>
-        <DiceCountPicker color="red"   numDice={redCount}   handleSetDice={(value)=>onControlChange({...rollerState, redCount:value})} />
-        <DiceCountPicker color="black" numDice={blackCount} handleSetDice={(value)=>onControlChange({...rollerState, blackCount:value})} />
-        <DiceCountPicker color="white" numDice={whiteCount}   handleSetDice={(value)=>onControlChange({...rollerState, whiteCount:value})} />
+        <DiceCountPicker color="red"   numDice={redCount}   handleSetDice={(value)=>onControlChange({...parameters, redCount:value})} />
+        <DiceCountPicker color="white" numDice={whiteCount}   handleSetDice={(value)=>onControlChange({...parameters, whiteCount:value})} />
+        <DiceCountPicker color="black" numDice={blackCount} handleSetDice={(value)=>onControlChange({...parameters, blackCount:value})} />
 
         <FormControl>
-            <FormLabel id="radio-cover">Surge</FormLabel>
-            <RadioGroup
-              aria-labelledby="demo-radio-buttons-group-label"
-              defaultValue="none"
-              name="radio-cover-group"
-              value={rollerState.attackSurge}
-              onChange={(e)=>onControlChange({...rollerState, attackSurge:e.target.value})}
-            >
-              <FormControlLabel value="none" control={radio} label="None" />
-              <FormControlLabel value="hit" control={radio} label="Hit" />
-              <FormControlLabel value="crit" control={radio} label="Crit" />
-            </RadioGroup>
-          </FormControl>
-       
+          <InputLabel id="surge-select-label">Surge</InputLabel>
+          <Select
+            labelId="surge-select-label"
+            id="surge-select"
+            value={parameters.attackSurge}
+            label="Surge"
+            onChange={(e)=>onControlChange({...parameters, attackSurge:e.target.value})}
+          >
+            <MenuItem value="none">None</MenuItem>
+            <MenuItem value="hit">Hit</MenuItem>
+            <MenuItem value="crit">Crit</MenuItem>
+            <MenuItem value="tokens">Surge Tokens</MenuItem>
 
+          </Select>
+        </FormControl>
         <Divider style={{ marginLeft: 8, flexGrow: 1 }} />
 
         <Typography>
           Defender
         </Typography>
 
-        <div className={classes.row}>
-
-          <FormControl>
-            <FormLabel id="radio-cover">Dice</FormLabel>
-            <RadioGroup
-              aria-labelledby="demo-radio-buttons-group-label"
-              defaultValue="red"
-              name="radio-cover-group"
-              value={rollerState.defenseColor}
-              onChange={(e)=>onControlChange({...rollerState, defenseColor:e.target.value})}
+          <FormControl sx={{m:1, minWidth:200}} size="medium">
+            <InputLabel id="def-select-label">Defense Dice</InputLabel>
+            <Select
+              labelId="def-select-label"
+              id="def-select"
+              value={parameters.defenseColor}
+              width={200}
+              onChange={(e)=>onControlChange({...parameters, attackSurge:e.target.value})}
             >
-              <FormControlLabel value="red" control={radio}label="Red" />
-              <FormControlLabel value="white" control={radio} label="White" />
-            </RadioGroup>
+              <MenuItem value="red">Red</MenuItem>
+              <MenuItem value="white">White</MenuItem>
+            </Select>
+            <div className={classes.row}>
+              <Checkbox color='primary'/>
+              <Typography>Surge : Block</Typography>
+            </div>
           </FormControl>
-
-          <div className={classes.row}>
-            <Checkbox color='primary'/>
-            <Typography>Surge : Block</Typography>
-          </div>
-        </div>
 
         <FormControl>
           <FormLabel>Cover</FormLabel>
@@ -105,8 +100,8 @@ function ControlPanel({
             aria-labelledby="demo-radio-buttons-group-label"
             defaultValue="none"
             name="radio-buttons-group"
-            value={rollerState.cover}
-            onChange={(e)=>onControlChange({...rollerState, cover:e.target.value})}
+            value={parameters.cover}
+            onChange={(e)=>onControlChange({...parameters, cover:e.target.value})}
           >
             <FormControlLabel value="none" control={radio} label="None" />
             <FormControlLabel value="light" control={radio} label="Light" />
@@ -119,7 +114,7 @@ function ControlPanel({
           disabled={isDisabled}
           style={{ marginTop: 8 }}
           onClick={() => {
-            setIsDisabled(true);
+            // setIsDisabled(true);
             handleRollDice();
             setTimeout(() => setIsDisabled(false), 500);
           }}
