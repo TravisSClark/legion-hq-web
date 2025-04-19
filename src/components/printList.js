@@ -313,6 +313,7 @@ function generateMinimalText(list) {
     line += `${unitCard.cardName} `;
 
     // TODO this should be a flag to append the unit subtitle to the card display
+    // or maybe just use displayname or etc - rethink this format's name display
     if (unit.unitId === 'pz') {
       line += '- Kraken ';
     } else if (unit.unitId === 'qa') {

@@ -56,6 +56,7 @@ function countPoints(list) {
  * @returns 
  */
  // TODO need to specialize this; should at least be a on-upgrade and on-unit fire, not this whole big thing
+ // TODO make this modify-in-place (...among the bigger updates)
 function consolidate(list) {
   let hasContingencyKeyword = false;
   // TODO see about moving these into validator
@@ -292,7 +293,7 @@ function decrementUnit(list, index, count = 1) {
   } else {
     list.units[index].count -= count;
   }
-  return consolidate(list);
+  return list;
 }
 
 function addContingency(list, commandId) {
@@ -313,10 +314,10 @@ function addCommand(list, commandId) {
 
 function removeCommand(list, commandIndex) {
   list.commandCards.splice(commandIndex, 1);
+  list.commandCards.splice(commandIndex, 1);
   return list;
 }
 
-// TODO - this seems to get called too much in CC lifecycle
 function sortCommandIds(cardIds) {
   return cardIds.sort((firstId, secondId) => {
     const firstType = Number.parseInt(cards[firstId].cardSubtype);
@@ -496,8 +497,9 @@ export {
   incrementUnit,
   decrementUnit,
   countPoints, 
-
-  // TODO - these are *probably* unneeded by importing classes via redundancy or tbd consolidate refactor; reassess
   sortCommandIds,
+  equipUpgradeToUnit,
+
+  // TODO - *probably* unneeded by importing classes via redundancy or tbd consolidate refactor; reassess
   consolidate
 };

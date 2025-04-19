@@ -1,21 +1,43 @@
 import React from 'react';
-import { Typography, Button, Slider } from '@material-ui/core';
-import symbols from 'constants/symbols';
+import { Typography, Button, Checkbox, makeStyles, Divider, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio } from '@material-ui/core';
+import DiceCountPicker from './DiceCountPicker';
+import { Check } from '@material-ui/icons';
 
-function valuetext(value) {
-  return `${value} dice`;
-}
+const useStyles = makeStyles(theme => ({
+  row: {
+    display: 'flex',
+    flexFlow: 'row wrap',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  column: {
+    display: 'flex',
+    flexFlow: 'column nowrap',
+    alignItems: 'center',
+    flexGrow: 1
+  },
+  radio: {
+    '&$checked': {
+      color: 'white'
+    }
+  },
+  checked: {}
+}));
+
+
 
 function ControlPanel({
-  numRedAttackDice,
-  numBlackAttackDice,
-  numWhiteAttackDice,
-  handleSetDice,
+  rollerState,
+  onControlChange,
   handleRollDice
 }) {
-  const { attack } = symbols;
-  const { red, black, white } = attack;
+
+  const {redCount, blackCount, whiteCount} = rollerState;
   const [isDisabled, setIsDisabled] = React.useState(false);
+  const classes = useStyles();
+
+
+  const radio = <Radio classes={{root:classes.radio, checked: classes.checked}}/>;
   return (
     <div style={{ padding: 16, width: 'calc(100% + 100px)' }}>
       <div
@@ -23,63 +45,75 @@ function ControlPanel({
           display: 'flex',
           flexFlow: 'column nowrap',
           justifyContent: 'center',
-          alignItems: 'center'
+          // alignItems:'flex-start'
         }}
       >
         <Typography>
           Attack Dice
         </Typography>
-        <div style={{ display: 'flex', width: '100%', marginBottom: 4 }}>
-          <img
-            alt="red attack die"
-            src={red}
-            style={{ height: 28, marginRight: 12 }}
-          />
-          <Slider
-            marks
-            step={1}
-            min={0}
-            max={15}
-            defaultValue={0}
-            valueLabelDisplay="auto"
-            getAriaValueText={() => valuetext(numRedAttackDice)}
-            onChange={(e, value) => handleSetDice('attack', 'red', value)}
-          />
+        <DiceCountPicker color="red"   numDice={redCount}   handleSetDice={(value)=>onControlChange({...rollerState, redCount:value})} />
+        <DiceCountPicker color="black" numDice={blackCount} handleSetDice={(value)=>onControlChange({...rollerState, blackCount:value})} />
+        <DiceCountPicker color="white" numDice={whiteCount}   handleSetDice={(value)=>onControlChange({...rollerState, whiteCount:value})} />
+
+        <FormControl>
+            <FormLabel id="radio-cover">Surge</FormLabel>
+            <RadioGroup
+              aria-labelledby="demo-radio-buttons-group-label"
+              defaultValue="none"
+              name="radio-cover-group"
+              value={rollerState.attackSurge}
+              onChange={(e)=>onControlChange({...rollerState, attackSurge:e.target.value})}
+            >
+              <FormControlLabel value="none" control={radio} label="None" />
+              <FormControlLabel value="hit" control={radio} label="Hit" />
+              <FormControlLabel value="crit" control={radio} label="Crit" />
+            </RadioGroup>
+          </FormControl>
+       
+
+        <Divider style={{ marginLeft: 8, flexGrow: 1 }} />
+
+        <Typography>
+          Defender
+        </Typography>
+
+        <div className={classes.row}>
+
+          <FormControl>
+            <FormLabel id="radio-cover">Dice</FormLabel>
+            <RadioGroup
+              aria-labelledby="demo-radio-buttons-group-label"
+              defaultValue="red"
+              name="radio-cover-group"
+              value={rollerState.defenseColor}
+              onChange={(e)=>onControlChange({...rollerState, defenseColor:e.target.value})}
+            >
+              <FormControlLabel value="red" control={radio}label="Red" />
+              <FormControlLabel value="white" control={radio} label="White" />
+            </RadioGroup>
+          </FormControl>
+
+          <div className={classes.row}>
+            <Checkbox color='primary'/>
+            <Typography>Surge : Block</Typography>
+          </div>
         </div>
-        <div style={{ display: 'flex', width: '100%', marginBottom: 4 }}>
-          <img
-            alt="black attack die"
-            src={black}
-            style={{ height: 28, marginRight: 12 }}
-          />
-          <Slider
-            marks
-            step={1}
-            min={0}
-            max={15}
-            defaultValue={0}
-            valueLabelDisplay="auto"
-            getAriaValueText={() => valuetext(numBlackAttackDice)}
-            onChange={(e, value) => handleSetDice('attack', 'black', value)}
-          />
-        </div>
-        <div style={{ display: 'flex', width: '100%', marginBottom: 4 }}>
-          <img
-            alt="white attack die"
-            src={white}
-            style={{ height: 29, marginRight: 12 }}
-          />
-          <Slider
-            marks
-            step={1}
-            min={0}
-            max={15}
-            defaultValue={0}
-            valueLabelDisplay="auto"
-            getAriaValueText={() => valuetext(numWhiteAttackDice)}
-            onChange={(e, value) => handleSetDice('attack', 'white', value)}
-          />
-        </div>
+
+        <FormControl>
+          <FormLabel>Cover</FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            defaultValue="none"
+            name="radio-buttons-group"
+            value={rollerState.cover}
+            onChange={(e)=>onControlChange({...rollerState, cover:e.target.value})}
+          >
+            <FormControlLabel value="none" control={radio} label="None" />
+            <FormControlLabel value="light" control={radio} label="Light" />
+            <FormControlLabel value="heavy" control={radio} label="Heavy" />
+          </RadioGroup>
+        </FormControl>
+
         <Button
           variant="contained"
           disabled={isDisabled}
@@ -90,7 +124,7 @@ function ControlPanel({
             setTimeout(() => setIsDisabled(false), 500);
           }}
         >
-          Roll Dice!
+          Roll!
         </Button>
       </div>
     </div>
