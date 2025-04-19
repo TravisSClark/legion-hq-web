@@ -25,14 +25,14 @@ function CardModal({ id, isOpen, handleClose }) {
         {card.displayName ? card.displayName : card.cardName}
       </DialogTitle>
       {card.title && (
-        <DialogContentText style={{ padding: '8px 16px', marginBottom: 0 }}>
+        <DialogContentText style={{ padding: '0 0 16px 32px', marginBottom: 0 }}>
           {card.title}
         </DialogContentText>
       )}
       <DialogContent style={{ padding: 8 }}>
         <ImagePanel card={card} />
         <ImagePanel card={card} extraCardImage={true} />
-        <KeywordsPanel cardKeywords={card.keywords} />
+        <KeywordsPanel card={card} />
         <HistoryPanel history={card.history ? card.history.reverse() : []} />
       </DialogContent>
       {isFullscreen && (

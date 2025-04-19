@@ -57,8 +57,7 @@ function ReverseWrapper({ children }) {
 }
 
 function CounterpartCardHeader({ card, handleClick }) {
-  const { isUnique, displayName, cardName } = card;
-
+  const { isUnique, isUniqueTitle, displayName, cardName } = card;
   const avatar = (
     <CardIcon
       card={card}
@@ -72,7 +71,7 @@ function CounterpartCardHeader({ card, handleClick }) {
   return (
     <CardHeader
       avatar={avatar}
-      title={`${isUnique ? '• ' : ''}${displayName ? displayName : cardName}`}
+      title={`${isUnique || isUniqueTitle ? '• ' : ''}${displayName ? displayName : cardName}`}
       subheader={capitalizeFirstLetters(card.cardSubtype)}
       action={action}
       style={{ padding: 8 }}
@@ -87,11 +86,11 @@ function BattleCardHeader({ card, handleClick }) {
       <AddIcon />
     </IconButton>
   );
-  const isSkirmish = card.keywords.includes('Skirmish');
+  const isRecon = card.keywords.includes('Recon');
   return (
     <CardHeader
       title={cardName}
-      subheader={capitalizeFirstLetters(cardType) + 'Card' + isSkirmish ? '(Skirmish)' : ''}
+      subheader={capitalizeFirstLetters(cardType) + 'Card' + isRecon ? '(Recon)' : ''}
       action={action}
       style={{ padding: 8 }}
     />
@@ -134,7 +133,7 @@ function CommandCardHeader({ card, handleClick }) {
 }
 
 function UpgradeCardHeader({ card, handleClick }) {
-  const { isUnique, displayName, cardName, cardSubtype } = card;
+  const { isUnique, isUniqueTitle, displayName, cardName, cardSubtype } = card;
   const avatar = (
     <IconBadge
       upgradeType={cardSubtype}
@@ -153,7 +152,7 @@ function UpgradeCardHeader({ card, handleClick }) {
   return (
     <CardHeader
       avatar={avatar}
-      title={`${isUnique ? '• ' : ''}${displayName ? displayName : cardName}`}
+      title={`${isUnique || isUniqueTitle ? '• ' : ''}${displayName ? displayName : cardName}`}
       subheader={capitalizeFirstLetters(cardSubtype)}
       action={action}
       style={{ padding: 8 }}
@@ -162,7 +161,7 @@ function UpgradeCardHeader({ card, handleClick }) {
 }
 
 function UnitCardHeader({ card, handleClick }) {
-  const { rank, isUnique, displayName, cardName, cardSubtype } = card;
+  const { rank, isUnique, isUniqueTitle, displayName, cardName, cardSubtype } = card;
   const avatar = (
     <IconBadge
       rank={rank}
@@ -181,7 +180,7 @@ function UnitCardHeader({ card, handleClick }) {
   return (
     <CardHeader
       avatar={avatar}
-      title={`${isUnique ? '• ' : ''}${displayName ? displayName : cardName}`}
+      title={`${isUnique || isUniqueTitle ? '• ' : ''}${displayName ? displayName : cardName}`}
       subheader={capitalizeFirstLetters(cardSubtype)}
       action={action}
       style={{ padding: 8 }}

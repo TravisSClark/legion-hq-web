@@ -9,7 +9,8 @@ import {
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import keywords from 'constants/keywords';
 
-function KeywordsPanel({ cardKeywords }) {
+function KeywordsPanel({ card }) {
+  let cardKeywords = card.keywords;
   if (!(cardKeywords instanceof Array)) return null;
   else if (cardKeywords.length === 0) return null;
   const columnContainerStyles = {
@@ -24,18 +25,24 @@ function KeywordsPanel({ cardKeywords }) {
           <Typography>Keywords</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails style={columnContainerStyles}>
-          {cardKeywords.map(keyword => (
-            <div key={keyword}>
+          {cardKeywords.map(kw => {
+            let keyword = kw
+            if(typeof keyword === "string"){
+              keyword = {name:kw}
+            }
+
+            return(
+            <div key={keyword.name}>
               <Typography variant="caption" color="textSecondary">
-                {keyword}
+                {keyword.name + (!keyword.value ? "" : (Number.isInteger(keyword.value) ? " " : ": " ) + keyword.value)}
               </Typography>
               <div style={{ flexGrow: 1 }} />
               <Typography variant="body2">
-                {keyword in keywords ? keywords[keyword] : 'No definition found.'}
+                {keyword.name in keywords ? keywords[keyword.name] : 'No definition found.'}
               </Typography>
               <Divider />
-            </div>
-          ))}
+            </div>)
+          })}
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </React.Fragment>

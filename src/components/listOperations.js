@@ -59,25 +59,12 @@ function countPoints(list) {
 function consolidate(list) {
   let hasContingencyKeyword = false;
   // TODO see about moving these into validator
-  list.hasFieldCommander = false;
   const cardNames = list.units.map(u=>cards[u.unitId].cardName);
 
   for (let i = 0; i < list.units.length; i++) {
-    const unit = list.units[i];
-    const unitCard = cards[unit.unitId];
+    const unitCard = cards[list.units[i].unitId];
 
     if (unitCard.keywords.includes('Contingencies')) hasContingencyKeyword = true;
-    if (unitCard.keywords.includes('Field Commander')) list.hasFieldCommander = true;
-
-    for (let j = 0; j < unit.upgradesEquipped.length; j++) {
-      const upgradeId = unit.upgradesEquipped[j];
-      if (upgradeId) {
-        const upgradeCard = cards[upgradeId];
-        if (upgradeCard.keywords.includes('Field Commander')) {
-          list.hasFieldCommander = true;
-        }
-      }
-    }
   }
 
   for (let i = list.commandCards.length - 1; i > -1 ; i--) {
@@ -220,7 +207,7 @@ function addUnit(list, unitId, stackSize = 1) {
 
   const newUnitObject = {
     unitId,
-    count: unitCard.isUnique ? 1 : stackSize,
+    count: unitCard.isUnique || unitCard.isUniqueTitle ? 1 : stackSize,
     totalUnitCost: unitCard.cost * stackSize,
     upgradesEquipped: [],
     loadoutUpgrades: [],

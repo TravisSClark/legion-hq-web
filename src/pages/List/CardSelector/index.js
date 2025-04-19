@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo, useRef, useState } from 'react';
 import Fade from '@material-ui/core/Fade';
 import Typography from '@material-ui/core/Typography';
 import ListContext from 'context/ListContext';
@@ -16,14 +16,12 @@ function Title({ title }) {
   return <Typography variant="body2">{title}</Typography>;
 }
 
-function CardSelector() {
+const CardSelector = () => {
 
   const {
     currentList,
     cardPaneFilter,
     setCardPaneFilter,
-    isApplyToAll,
-    stackSize,
     getEligibleUnitsToAdd,
     getEquippableUpgrades,
     getEquippableLoadoutUpgrades,
@@ -40,9 +38,6 @@ function CardSelector() {
     handleCardZoom,
     handleEquipUpgrade,
     handleAddCounterpart,
-    handleIncrementStackSize,
-    handleDecrementStackSize,
-    handleToggleIsApplyToAll,
     setCardSelectorToNextUpgradeSlot,
     userSettings
   } = React.useContext(ListContext);
@@ -50,22 +45,24 @@ function CardSelector() {
   let selectorIds = {validIds:[], invalidIds:[]};
   const { action } = cardPaneFilter;
 
+  const stackSize = useRef(1);
+  const [isApplyToAll, setIsApplyToAll] = useState(false);
+
   let hasUniques = false;
   
   if(cardPaneFilter.unitIndex !== undefined && currentList.units[cardPaneFilter.unitIndex]){
     hasUniques = unitHasUniques(currentList.units[cardPaneFilter.unitIndex]);
   }
 
-  switch(action){
-    case 'UNIT':
-      selectorIds.validIds = getEligibleUnitsToAdd(currentList, cardPaneFilter.rank, userSettings);
-      selectorIds.invalidIds = [];
-      clickHandler = (unitId) => handleAddUnit(unitId);
+    switch(action){
+      case 'UNIT':
+        selectorIds.validIds = getEligibleUnitsToAdd(currentList, cardPaneFilter.rank, userSettings);
+        selectorIds.invalidIds = [];
+      clickHandler = (unitId) => handleAddUnit(unitId, stackSize.current);
       header = (
         <StackController
           stackSize={stackSize}
-          handleIncrementStackSize={handleIncrementStackSize}
-          handleDecrementStackSize={handleDecrementStackSize}
+          handleChange={(newValue)=>stackSize.current = newValue}
         />
       );
       break;
@@ -105,7 +102,7 @@ function CardSelector() {
           <ToggleButton
             label="Apply to All"
             value={isApplyToAll}
-            handleChange={handleToggleIsApplyToAll}
+            handleChange={()=>{setIsApplyToAll(!isApplyToAll)}}
           /> 
         }
          <Button size="large" style={{marginLeft:20}} onClick={()=>{
@@ -217,6 +214,7 @@ function CardSelector() {
     default:
       header = <Title title={`${action} is an invalid action.`} />;
     }
+
   return (
     <Fade unmountOnExit exit={false} in={cardPaneFilter.action !== 'DISPLAY'}>
       <React.Fragment>

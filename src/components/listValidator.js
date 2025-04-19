@@ -2,9 +2,9 @@ import cards, { cardsIdsByType } from 'constants/cards';
 
 import battleForcesDict from 'constants/battleForcesDict';
 import legionModes from 'constants/legionModes';
-import {areUpgradeRequirementsMet, impRemnantUpgrades} from 'components/eligibleCardListGetter';
+import {areRequirementsMet, impRemnantUpgrades} from 'components/eligibleCardListGetter';
 
-const upgradesProvidingAlliesOfConvenience = cardsIdsByType["upgrade"].filter(c=>cards[c].keywords?.includes("Allies of Convenience"));
+const upgradesProvidingAlliesOfConvenience = cardsIdsByType["upgrade"].filter(c=>cards[c].keywords?.some(k=> k==='Allies of Convenience' || k.name ==="Allies of Convenience"));
 /**
  * Check validation ONLY for things pertaining to this unit's currently equipped upgrades. 
  * Generally, should *probably* not do things that have a further reach than upgrade bar itself (I think)
@@ -24,13 +24,12 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
   unit.upgradesEquipped.forEach(id=>{
     if(!id) return;
     const card = cards[id];
-    if(card.uniqueCount || card.isUnique){
+    if(card.uniqueCount || card.isUnique || card.isUniqueTitle){
       listUniqueUpgrades[id] = listUniqueUpgrades[id] ? listUniqueUpgrades[id] + unit.count : unit.count;
-
-      if(list.battleForce){
-        if(!battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id))
-          unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" upgrade is not allowed in this battleforce." });
-      }
+    }
+    if(list.battleForce && (card.isUnique || card.isUniqueTitle)){
+      if(!battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id))
+        unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" upgrade is not allowed in this battleforce." });
     }
   })
   
@@ -63,7 +62,8 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
     });
   }
 
-  if(card.keywords.includes("Heavy Weapon Team")){
+    if(card.keywords.find(k=> k === "Heavy Weapon Team" || k.name === "Heavy Weapon Team")){
+
     let hasHeavy = false;
     unit.upgradesEquipped.forEach((id)=>{
       if(id === null)
@@ -79,7 +79,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
     }
   }
 
-  if(card.keywords.includes("Programmed")){
+  if(card.keywords.find(k=> k === "Programmed" || k.name === "Programmed")){
     let hasProto = false;
     unit.upgradesEquipped.forEach((id)=>{
       if(id === null)
@@ -111,7 +111,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
     else if (list.battleForce === 'Imperial Remnant' && upgradeCard.cardSubtype === 'heavy weapon' && card.cardSubtype === 'trooper') {
       if (impRemnantUpgrades.includes(id)) 
         return;
-    } else if (!areUpgradeRequirementsMet(upgradeCard.requirements, card)) {
+    } else if (!areRequirementsMet(upgradeCard.requirements, card)) {
       unit.validationIssues.push({level:2, text: card.cardName.toUpperCase() + " cannot equip " + upgradeCard.cardName.toUpperCase()})
     }
   });
@@ -188,6 +188,10 @@ function battleForceValidation(currentList, unitCounts){
       validationIssues.push({level:2, text:"You must have at least one of each Corps type before adding additional ones"});
     }
   }  
+
+  if(currentList.battleForce == "Tempest Force" && unitCounts["we"] !== 1){
+    validationIssues.push({level:2, text: "Until 'Imperial Officer' gets reworked, you'll need to include Major Marquand (under Heavies) to fulfill Commander requirements"})
+  }
   
   return validationIssues;
 }
@@ -208,7 +212,7 @@ function mercValidation(currentList, currentRanks, mercs, rankIssues){
       if(!hasAoc)
       {
         const card = cards[unit.unitId]
-        hasAoc = card.keywords.find(k => k === "Allies of Convenience") || unit.upgradesEquipped.find(c => upgradesProvidingAlliesOfConvenience.includes(c));
+        hasAoc = card.keywords.some(k=> k==='Allies of Convenience' || k.name ==="Allies of Convenience") || unit.upgradesEquipped.find(c => upgradesProvidingAlliesOfConvenience.includes(c));
       }
     });
 
@@ -376,7 +380,7 @@ function validateList(currentList, rankLimits){
         let cardName = (card.displayName ? card.displayName : card.cardName).toUpperCase();
         let parentName = (parent.displayName ? parent.displayName : parent.cardName).toUpperCase();
 
-        if(card.isUnique){
+        if(card.isUnique || card.isUniqueTitle){
           validationIssues.push({level:2, text:"In order to use " + cardName + ", you must include " + parentName + ". (DETACHMENT)" });
         }
         else{
@@ -403,6 +407,26 @@ function validateList(currentList, rankLimits){
 }
 
 function applyFieldCommander(list, rankReqs){
+
+  list.hasFieldCommander = false;
+
+  for (let i = 0; i < list.units.length && !list.hasFieldCommander; i++) {
+    const unit = list.units[i];
+    const unitCard = cards[unit.unitId];
+
+    if (unitCard.keywords.some(k=> k==='Field Commander' || k.name ==="Field Commander")) list.hasFieldCommander = true;
+
+    for (let j = 0; j < unit.upgradesEquipped.length && !list.hasFieldCommander; j++) { 
+      const upgradeId = unit.upgradesEquipped[j];
+      if (upgradeId) {
+        const upgradeCard = cards[upgradeId];
+        if (upgradeCard.keywords.some(k=> k==='Field Commander' || k.name ==="Field Commander")) {
+          list.hasFieldCommander = true;
+        }
+      }
+    }
+  }
+
   const bf = battleForcesDict[list.battleForce];
   if(list.hasFieldCommander && !bf?.rules?.noFieldComm)
   {
@@ -489,8 +513,28 @@ function getOriginalRankLimits(currentList){
   return rankReqs;
 }
 
+function checkValidCards(currentList) {
+  for (let i = 0; i < currentList.units.length; i++) {
+    let unit = currentList.units[i];
+    if (unit.unitId && !cards[unit.unitId]) {
+      currentList.units.splice(i, 1);
+      i--;
+    } else {
+      for (let j = 0; j < unit.upgradesEquipped.length; j++) {
+        let id = unit.upgradesEquipped[j];
+        if(id && !cards[id]) {
+          unit.upgradesEquipped.splice(j, 1);
+          j--;
+        };
+      }
+    }
+  }
+  return currentList;
+}
+
 export {
   validateList,
   getOriginalRankLimits, 
-  getRankLimits
+  getRankLimits,
+  checkValidCards
 }

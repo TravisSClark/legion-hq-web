@@ -41,7 +41,7 @@ const impRemnantUpgrades = ['ej', 'ek', 'fv', 'iy', 'fu', 'gm', 'gl', 'em', 'en'
  * 
  * 
  */
-function areUpgradeRequirementsMet(requirements, unitCard) {
+function areRequirementsMet(requirements, unitCard) {
   const operator = requirements[0];
   if (operator instanceof Object) {
       return _.isMatch(unitCard, operator);
@@ -50,7 +50,7 @@ function areUpgradeRequirementsMet(requirements, unitCard) {
   } else if (operator === 'AND') {
     for (let i=1; i< requirements.length; i++) {
       if (requirements[i] instanceof Array){
-        if (!areUpgradeRequirementsMet(requirements[i], unitCard))
+        if (!areRequirementsMet(requirements[i], unitCard))
           return false;
       } else if (requirements[i] instanceof Object){
         if (!_.isMatch(unitCard, requirements[i]))
@@ -60,7 +60,7 @@ function areUpgradeRequirementsMet(requirements, unitCard) {
     return true;
   } else if (operator === 'OR') {
     for (let i=1; i< requirements.length; i++){
-      if (requirements[i] instanceof Array && areUpgradeRequirementsMet(requirements[i], unitCard)){
+      if (requirements[i] instanceof Array && areRequirementsMet(requirements[i], unitCard)){
         return true;
       } else if (requirements[i] instanceof Object && _.isMatch(unitCard, requirements[i])){
         return true;
@@ -117,8 +117,8 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
       continue;
     }
 
-    const uniqueCardNames = list.units.filter(u=>cards[u.unitId].isUnique).map(u=>cards[u.unitId].cardName);
-    if (uniqueCardNames.includes(card.cardName)) continue;
+    const uniqueCardNames = getListUniques(list, "name");
+    if (uniqueCardNames.includes(card.cardName) || uniqueCardNames.includes(card.title)) continue;
 
     if (card.specialIssue && card.specialIssue !== list.battleForce)continue;
 
@@ -144,8 +144,8 @@ const stormTideCommands = {
   'storm tide: special forces': ['AD', 'AH', 'AI']
 };
 
-function getEligibleCcs(list, validCcs, isContingencies = false){
-  
+function getEligibleCcs(list, isContingencies = false){
+  const validCcs = [];
   const pipCounts = { '1': 0, '2': 0, '3': 0 };
   list.commandCards.forEach(id => {
     pipCounts[cards[id].cardSubtype] += 1;
@@ -173,30 +173,39 @@ function getEligibleCcs(list, validCcs, isContingencies = false){
     if (list.contingencies && list.contingencies.includes(id)) return false;
 
     // For now, leave both in in case there's a card I'm not thinking of (...again, I don't think there is)
-    if(card.commander && (!cardNames.includes(card.commander) && !listCounterparts.includes(card.commander))) return false;
-
+    if(card.commander){
+      let commanders = typeof Array.isArray(card.commander) ?  card.commander : [card.commander];
+      if((!cardNames.some(c=> commanders.includes(c)) && !listCounterparts.some(c=>commanders.includes(c)))) return false;
+    }
     if (card.isStormTide){
       if(stormTideCommands[list.mode] && stormTideCommands[list.mode].includes(id)){
         return true;
       }
       // filter out stormtide commands not in the current mode
       return false;
-    } 
+    }
+    if (card.requirements) {
+      let requirementsMet = false;
+      let i = 0;
+      while (!requirementsMet && i < list.units.length) {
+        requirementsMet = areRequirementsMet(card.requirements, cards[list.units[i].unitId])
+        i++;
+      }
+      if (!requirementsMet) return false;
+    }
 
     if (id === 'aa') return false; // Standing Orders
 
     validCcs.push(id);
     return true;
   });
+
+  return validCcs;
 }
 
 function getEligibleCommandsToAdd(list) {
  
-  const validCommandIds = [];
-  // Currently, we don't do anything with invalid CC IDs on UI; stop tracking them unless we get a good use case
-  // const invalidCommandIds = [];
-
-  getEligibleCcs(list, validCommandIds);
+  const validCommandIds = getEligibleCcs(list);
   
   return {
     validIds: sortCommandIds(validCommandIds),
@@ -206,7 +215,7 @@ function getEligibleCommandsToAdd(list) {
 
 function getEligibleContingenciesToAdd(list) {
   if (!list.contingencies) list.contingencies = [];
-  const validCommandIds = [];
+  let validCommandIds = [];
 
   let numContingencies = 0;
   list.units.forEach((unit) => {
@@ -216,7 +225,7 @@ function getEligibleContingenciesToAdd(list) {
   });
 
   if(list.contingencies.length < numContingencies){
-    getEligibleCcs(list, validCommandIds, true);
+    validCommandIds = getEligibleCcs(list, true);
   }
 
   return {
@@ -246,15 +255,9 @@ function getEquippableUpgrades(
     if (card.cardSubtype !== upgradeType) continue;
     if (card.faction && card.faction !== '' && list.faction !== card.faction) continue;
 
-    if(card.isUnique){
-      const isInList = list.units.reduce((found, u)=>{
-        if(u.upgradesEquipped.includes(id))
-          found = true;
-        return found;
-      },false);
-      if(isInList){
-        continue;
-      }
+    if(card.isUnique) {
+      const uniqueCardNames = getListUniques(list, "name");
+      if (uniqueCardNames.includes(card.cardName)) continue;
     }
 
     else if (upgradesEquipped.includes(id)) continue;
@@ -276,7 +279,7 @@ function getEquippableUpgrades(
     else if (list.battleForce === 'Imperial Remnant' && card.cardSubtype === 'heavy weapon' && unitCard.cardSubtype === 'trooper') {
         if (impRemnantUpgrades.includes(id)) 
           validUpgradeIds.push(id);
-    } else if (areUpgradeRequirementsMet(card.requirements, unitCard)) {
+    } else if (areRequirementsMet(card.requirements, unitCard)) {
       validUpgradeIds.push(id);
     } else {
       invalidUpgradeIds.push(id);
@@ -335,10 +338,10 @@ function getEligibleBattlesToAdd(list, type) {
       invalidIds.push(id);
     }
     else if (list.mode === '500-point mode') {
-      if (card.keywords.includes('Skirmish')) validIds.push(id);
+      if (card.keywords.includes('Recon')) validIds.push(id);
       else invalidIds.push(id);
     } else {
-      if (card.keywords.includes('Skirmish')) invalidIds.push(id);
+      if (card.keywords.includes('Recon')) invalidIds.push(id);
       else validIds.push(id);
     }
   });
@@ -351,31 +354,33 @@ function unitHasUniques(unit){
     return true;
   }
   const unitCard = cards[unit.unitId] 
-  let hasUniques = unitCard.isUnique;
+  let hasUniques = unitCard.isUnique || unitCard.isUniqueTitle;
 
   if(!hasUniques){
     unit.upgradesEquipped.forEach(up=>{
-      if(cards[up]?.isUnique)
+      if (cards[up]?.isUnique)
         hasUniques = true;
     })
   }
   return hasUniques;
 }
 
-function getListUniques(list){
+function getListUniques(list, field){
 
   const uniques = [];
 
-  list.units.forEach(u=>{
-    if(cards[u.unitId]?.isUnique){
-      uniques.push(u.unitId);
-    }else{
-      u.upgradesEquipped.forEach(up=>{
-        if(cards[up]?.isUnique){
-          uniques.push(up);
-        }
-      })
+  list.units.forEach(u => {
+    if (cards[u.unitId]?.isUnique) {
+      uniques.push(field === "id" ? u.unitId : cards[u.unitId].cardName);
     }
+    if (cards[u.unitId]?.isUniqueTitle) {
+      uniques.push(field === "id" ? u.unitId : cards[u.unitId].title);
+    }
+    u.upgradesEquipped.forEach ( up => {
+      if (cards[up]?.isUnique) {
+        uniques.push(field === "id" ? up : cards[up].cardName);
+      }
+    })
     // TODO counterpart check COULD go here, but currently no counterparts have non-unique parent cards (and I suspect it will stay that way)
   });
 
@@ -419,6 +424,6 @@ export{
   unitHasUniques,
   getListUniques,
   findUnitIndexInList, 
-  areUpgradeRequirementsMet,
+  areRequirementsMet,
   impRemnantUpgrades
 }

@@ -130,4 +130,19 @@ function SelectorContent({
   );
 };
 
-export default SelectorContent;
+export default React.memo(SelectorContent, (prevProps, nextProps)=>{
+
+  if(prevProps.action != nextProps.action){
+    return false;
+  }
+
+  let arraysEqual = prevProps.validIds.length == nextProps.validIds.length;
+
+  for(let i=0; i<prevProps.validIds.length && arraysEqual; i++){
+    if(prevProps.validIds[i] !== nextProps.validIds[i]){
+      arraysEqual = false;
+    }
+  }
+  return arraysEqual;
+
+});

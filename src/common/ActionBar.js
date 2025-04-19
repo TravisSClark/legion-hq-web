@@ -8,8 +8,8 @@ import {
 import { alpha, makeStyles } from '@material-ui/core/styles';
 import { Menu as MenuIcon, Search as SearchIcon } from '@material-ui/icons';
 import DataContext from 'context/DataContext';
-import lhqLogoLight from 'assets/lhqLogoLight.png';
-import lhqLogoDark from 'assets/lhqLogoDark.png';
+import lhqLogoLight from 'assets/lhqLogoLight.svg';
+import lhqLogoDark from 'assets/lhqLogoDark.svg';
 
 const useStyles = makeStyles(theme => ({
   grow: { flexGrow: 1 },
@@ -74,7 +74,7 @@ function DefaultBar() {
         <MenuIcon />
       </IconButton>
       <img
-        alt="Legion HQ Logo"
+        alt="Legion HQ 2 Logo"
         src={userSettings.themeColor === 'light' ? lhqLogoLight : lhqLogoDark}
         style={{ height: 35 }}
       />

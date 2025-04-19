@@ -18,11 +18,17 @@ function KeywordChips({ keywords, size = 'medium' }) {
         Keywords
       </Typography>
       <div style={{ flexGrow: 1 }} />
-      {keywords.map(keyword => (
+      {keywords.map(kw =>{ 
+        let keyword = kw.name;
+        if(typeof kw === "string"){
+          keyword = kw;
+        }
+
+        return(
         <div key={keyword} style={{ marginRight: 2, marginBottom: 2 }}>
           <KeywordChip keyword={keyword} size={size} />
         </div>
-      ))}
+      )})}
     </div>
   );
 }

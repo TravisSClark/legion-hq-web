@@ -1,0 +1,310 @@
+id,name,is_unique,upgrade type,Restrictions,Action,Card Text,Exhaust,Expend,Unit Keywords Gained,Special Wounds,Weapon,Weapon Name,Weapon Keywords,Weapon Type,Weapon Range Min,Weapon Range Max,Red Dice,White Dice,Black Dice
+73,A-300 Long Range Config,False,Armament,Rebel Pathfinders only.,,,FALSE,FALSE,,,TRUE,A-300 Long Range Config,,R,1,2,1,,
+165,A280-CFE Sniper Config,False,Armament,Cassian Andor only.,,,FALSE,FALSE,,,TRUE,A280-CFE Sniper Config,"Cumbersome, High Velocity, Pierce 1, Reconfigure",R,1,inf,1,,1
+15114,DC-17m ICWS Config,null,Armament,Clone Commandos only.,,"At the start of this unit's activation, it may flip this card, even if it is exhausted. While one or more of these weapons are in an attack pool, that attack pool gains Lethal 1",TRUE,FALSE,Lethal 1,,TRUE,DC-17m ICWS Sniper Config,"High Velocity, Reconfigure",R,3,4,1,,
+86,E-11D,False,Armament,Imperial Death Troopers only.,,,FALSE,FALSE,,,TRUE,E-11D Grenade Launcher Config,"Blast, Reconfigure",R,1,2,1,,
+186,J-19 Bo-rifle,True,Armament,Agent Kallus only.,,,FALSE,FALSE,,,TRUE,J-19 Bo-rifle Blaster,"Lethal 1, Reconfigure",R,1,3,1,1,2
+187,J-19 Bo-rifle,True,Armament,Agent Kallus only.,,,FALSE,FALSE,"Charge, Immune: Melee Pierce",,TRUE,J-19 Bo-rifle Staff,"Lethal 1, Reconfigure",M,,,1,1,2
+176,Jetpack Rockets,False,Armament,Mandalorian Resistance only.,,,FALSE,TRUE,,,TRUE,Jetpack Rockets,"Blast, Impact 1",R,3,4,1,,
+156,Looted E-5 Blaster,False,Armament,Padme Amidala only.,,,FALSE,FALSE,,,TRUE,E-5 Blaster,Pierce 1,R,1,3,1,1,
+116,RT-97C Blaster Rifle,False,Armament,Dewback Rider only.,,,FALSE,FALSE,,,TRUE,RT-97C Blaster Rifle,,R,1,4,1,3,
+2773,Saxon's Galar-90 Rifle,True,Armament,Gar Saxon only.,,,FALSE,FALSE,,,TRUE,Galar-90 Rifle,"High Velocity, Lethal 1, Longshot 1",R,1,4,1,1,1
+2715,Super Commando Jetpack Rockets,null,Armament,Mandalorian Super Commandos only.,,,FALSE,TRUE,,,TRUE,Jetpack Rockets,"Blast, Critical 1, Impact 1",R,,4,1,,
+161,Vibroswords,False,Armament,BX-series Droid Commandos only.,,,FALSE,FALSE,Charge,,TRUE,Vibroswords,,M,,,1,1,
+113,BARC RPS-6 Gunner,False,Crew,BARC Speeder only.,,Reduce your maximum speed by 1.,FALSE,FALSE,,,TRUE,RPS-6,Impact 2,R,2,4,1,1,1
+81,RPS-6 Rocket Gunner,False,Crew,X-34 Landspeeder only.,,,FALSE,FALSE,,,TRUE,RPS-6,Impact 2,R,2,4,1,1,1
+5569,Boba's Flame Projector,null,Gear,Boba Fett only.,,,FALSE,TRUE,,,TRUE,Flame Projector,"Blast, Spray, Suppressive",MR,,1,1,,
+3667,Din's Flame Projector,True,Gear,Din Djarin only.,,,FALSE,TRUE,,,TRUE,Flame Projector,"Blast, Spray, Suppressive",MR,,1,1,,
+57,Fragmentation Grenades,False,Grenade,,,"While this weapon is in your attack pool, you gain ""<surge>:<crit>""",FALSE,FALSE,,,TRUE,Fragmentation Grenades,,,,,1,,
+22,88 Twin Light Blaster Cannon,False,Hardpoint,AT-ST only.,,,FALSE,FALSE,,,TRUE,88 Twin Light Blaster Cannon,Impact 1,R,1,3,1,1,1
+3,AT-RT Laser Cannon,False,Hardpoint,AT-RT only.,,,FALSE,FALSE,,,TRUE,Laser Cannon,"Impact 3, Fixed: Front",R,2,4,1,,2
+197,Heavy Laser Retrofit,False,Hardpoint,A-A5 Speeder Truck only.,,,FALSE,FALSE,,,TRUE,Heavy Laser Cannon,Critical 1,R,1,4,1,1,1
+28,Mo/Dk Power Harpoon,False,Hardpoint,T-47 Airspeeder only.,,,FALSE,FALSE,,,TRUE,Mo/Dk Power Harpoon,"Fixed: Rear, Impact 1, Tow Cable",R,1,2,1,,
+948,Nose-Mounted Flamethrower,False,Hardpoint,DSD1 Dwarf Spider Droid only.,,,FALSE,FALSE,,,TRUE,Flamethrower,"Blast, Fixed: Front, Spray",MR,,1,1,1,
+950,Nose-Mounted Laser Cannon,False,Hardpoint,DSD1 Dwarf Spider Droid only.,,,FALSE,FALSE,,,TRUE,Laser Cannon,"Critical 1, Fixed: Front",R,1,3,1,1,3
+89,RT-97C Rifle Pintle,False,Hardpoint,TX-225 GAVw Occupier Tank only.,,,FALSE,FALSE,,,TRUE,RT-97C Rifle,,R,1,4,1,3,
+9398,Axe Ewok,null,Heavy Weapon,Ewok Skirmishers or Ewok Slingers only.,,Add 1 Axe Ewok miniature.,FALSE,FALSE,,,TRUE,Axe,"Pierce 1, Impact 1",M,,,1,,
+51,Bowcaster Wookiee,False,Heavy Weapon,Wookiee Warriors only.,,Add 1 Bowcaster Wookiee mini.,FALSE,FALSE,,,TRUE,Bowcaster,"Impact 1, Pierce 1",R,1,3,1,1,
+15009,Crosshair,True,Heavy Weapon,Bad Batch only.,,"Add 1 Crosshair mini. When an attack pool only has this weapon, it gains Critical 1.",FALSE,FALSE,Precise 1,,TRUE,Sniper Rifle,"High Velocity, Pierce 1",R,1,5,1,,
+158,DC-15x ARC Trooper,False,Heavy Weapon,Arc Troopers only.,,Add 1 DC-15x ARC trooper mini.,FALSE,FALSE,,,TRUE,DC-15x Rifle,"Lethal 1, Immune: Deflect",R,1,5,1,,1
+174,Dioxis Mine Saboteur,False,Heavy Weapon,BX-series Commando Droids only.,,Add 1 BX-series Droid Saboteur mini,FALSE,FALSE,,,TRUE,Dioxis Mine,"Blast, Poison 1",MR,,1,1,1,1
+126,E-5s B1 Trooper,False,Heavy Weapon,B1 Battle Droids Only,,Add 1 E-5s B1 Trooper mini,FALSE,FALSE,,,TRUE,E-5s,Critical 1,R,1,4,1,1,
+106,E-60R B1 Trooper,False,Heavy Weapon,B1 Battle Droids Only,,Add 1 E-60R B1 Trooper mini,FALSE,FALSE,,,TRUE,E-60R,"Cumbersom, Impact 2",R,2,4,1,1,1
+16579,KX-Series Security Droids,False,Heavy Weapon,Stormtrooper Riot Squad Only,,Add 2 KX-Series Security Droid Mini,FALSE,FALSE,,,TRUE,,Impact 1,M,,,1,,
+2425,P13-M Disruptor Soldier,null,Heavy Weapon,Pyke Syndicate Foot Soldiers Only,,Add 1 P13-M Disruptor Soldier mini,FALSE,FALSE,,,TRUE,P13-M,Impact 1,R,1,4,1,,2
+75,Pao,True,Heavy Weapon,Rebel Pathfinders only,,Add 1 Pao mini.,FALSE,FALSE,"Inspire 1, Leader",2,TRUE,Pao's A-300,,R,1,4,1,1,
+48,Proton Charge Saboteur,False,Heavy Weapon,Rebel Commandos Only,,Add 1 Proton Charge Saboteur mini,FALSE,FALSE,,,TRUE,Proton Charge,"Blast, Critical 2, Impact 3",MR,,1,1,1,1
+16560,RPS-6 Clone Trooper,False,Heavy Weapon,Clone Trooper Infantry or Clone Marksmen Only,,Add 1 RPS-6 Clone Trooper mini,FALSE,FALSE,,,TRUE,RPS-6,"Cumbersome, Impact 2",R,2,4,1,1,1
+884,RPS-6 MagnaGuard,null,Heavy Weapon,Ig-100 MagnaGuard Only,,Add 1 RPS-6 MagnaGuard Only,FALSE,FALSE,,,TRUE,RPS-6,"Critical 1, Impact 2",R,2,4,1,1,1
+121,RT-97C Stormtrooper,False,Heavy Weapon,Stroomtrooper Only,,Add 1 RT-97C Stroomtrooper mini,FALSE,FALSE,,,TRUE,RT-97C,,R,1,4,1,3,
+11866,Sonic Cannon Warrior,null,Heavy Weapon,Geonosian Warriors Only,,Add 1 Sonic Cannon Warrior Mini,FALSE,FALSE,,,TRUE,Sonic Cannon,"Scatter, Impact 1",R,1,2,1,1,1
+53,Sonic Charge Saboteur,False,Heavy Weapon,Scout Troopers Only,,Add 1 Sonic Charge Saboteur Mini,FALSE,FALSE,,,TRUE,Sonic Charge,"Blast, Impact 2, Suppressive",MR,,1,1,1,2
+2717,Super Commando Marksman,null,Heavy Weapon,Mandalorian Super Commandos Only,,Add 1 Super Commando Marksman mini,FALSE,FALSE,Precise 1,,TRUE,,,R,1,3,1,1,1
+178,Ursa Wren,True,Heavy Weapon,Mandalorian Resistance Only,,Add 1 Ursa Wren Mini. You gain Dauntless. Leader. Longshot 1,FALSE,FALSE,Dauntless,2,TRUE,,Long Shot 1,R,1,2,1,1,1
+15986,Wrecker,True,Heavy Weapon,The Bad Batch Only,,"Add 1 Wrecker mini. While this mini is on the battlefield, a friendly Omega in this unit cannot be assigned wounds. ",FALSE,FALSE,,3,TRUE,,,MR,,2,1,1,1
+147,Armor-Piercing Shells,False,Ordnance,,,,TRUE,FALSE,,,TRUE,Armor-Piercing Shells,"Cycle, Fixed Front, Impact 3",R,2,3,1,,2
+181,T-series Tactical Droid,False,Personnel,Seperatist Alliance Droid Trooper Only,,Add 1 T-series tactical droid mini. You lose AI:Attack. You gain Reliable 1. Leader. Sidearm: Ranged,FALSE,FALSE,Reliable 1,1,TRUE,,Sidearm:Ranged,R,1,3,1,,
+59,A-180,False,Armament,Jyn Erso only.,,,FALSE,FALSE,,,TRUE,A-180 Pistol Config,"Pierce 1, Reconfigure",R,1,2,2,1,
+142,A280-CFE,False,Armament,Cassian Andor only.,,,FALSE,FALSE,,,TRUE,A280-CFE Pistol Config,"Longshot 1, Pierce 1, Reconfigure",R,1,2,2,,1
+4413,Beskar Spear,True,Armament,Din Djarin only.,,,FALSE,FALSE,Duelist,,TRUE,Beskar Spear,,M,,,2,,1
+168,Iden's TL-50 Repeater,True,Armament,Iden Versio only.,,,FALSE,FALSE,,,TRUE,TL-50 Repeater,"Critical 1, Impact 1",R,1,3,2,2,1
+932,Gnasp Bombardier,False,Crew,Raddaugh Gnasp Fluttercraft only.,,,FALSE,FALSE,,,TRUE,Grenades,"Immune: Deflect, Overrun 2, Suppressive",O,,,2,2,
+919,Gnasp Gunner,False,Crew,Raddaugh Gnasp Fluttercraft only.,,,FALSE,FALSE,,,TRUE,Mounted Bowcaster,"Fixed: Rear, Impact 1, Pierce 1",R,1,3,2,,2
+88,DLT-19 Rifle Pintle,False,Hardpoint,TX-225 GAVw Occupier Tank only.,,,FALSE,FALSE,,,TRUE,DLT-19 Rifle,Impact 1,R,1,4,2,,
+963,Twin Beam Cannons,False,Hardpoint,Infantry Support Platform only.,,,FALSE,FALSE,,,TRUE,Twin Beam Cannons,"Beam 2, Fixed: Front",R,1,4,2,2,
+145,TX-130 Beam Cannon Turret,False,Hardpoint,TX-130 Saber Tank only.,,,FALSE,FALSE,,,TRUE,Beam Cannon Turret,Beam 2,R,1,4,2,,
+148,B2-HA Trooper,False,Heavy Weapon,B2 Super Battle Droids only.,,Add 1 B2-HA trooper mini.,TRUE,FALSE,,,TRUE,HA,"Blast, Cycle, Impact 2",R,2,3,2,1,
+413,Battle Shield Wookiee,null,Heavy Weapon,Wookiee Warriors only.,,"Add 1 Battleshield Wookiee mini. At the start of your activation, you may flip this card.",FALSE,FALSE,,,TRUE,Battle Shield (Offensive),,M,,,2,,
+175,Beskad Duelist,False,Heavy Weapon,Mandalorian Resistance only.,,Add 1 Beskad Duelist mini.,FALSE,FALSE,Duelist,,TRUE,Beskad Sword,,M,,,2,,
+159,BX-Series Droid Sniper,False,Heavy Weapon,BX-series Commando Droids only.,,Add 1 BX-series Droid Sniper mini,FALSE,FALSE,,,TRUE,Sniper Rifle,"Lethal 1, Immune: Deflect",R,1,5,2,,
+7,DLT-19 Stormtrooper,False,Heavy Weapon,Stormtroopers only,,Add 1 DLT-19 Stormtrooper mini,FALSE,FALSE,,,TRUE,DLT-19,Impact 1,R,1,4,2,,
+84,DLT-19D Trooper,False,Heavy Weapon,Imperial Death Troopers only.,,Add 1 DLT-19D Trooper mini.,FALSE,FALSE,,,TRUE,DLT-19D Rifle,Impact 1,R,1,4,2,1,
+15010,DLT-20A Range Trooper,null,Heavy Weapon,Range Troopers Only,,Add 1 DLT-20A Range Trooper mini,FALSE,FALSE,,,TRUE,DLT-20A,Impact 2,R,1,5,2,,
+16572,DP-23 Clone Trooper,False,Heavy Weapon,Clone Trooper Infantry Only,,Add 1 DP-23 Clone Trooper mini,FALSE,FALSE,,,TRUE,DP-23,Pierce 1,MR,,2,2,,
+16569,"Echo, ARC Marksman",True,Heavy Weapon,Corp or Special Forces Clone Trooper Only,,Add 1 Echo miniature. Leader,FALSE,FALSE,Reliable 1,2,TRUE,DC-15x,"Critical 1, Lethal 1, Immune: Deflect",R,1,5,2,,
+885,Electro-whip MagnaGuard,null,Heavy Weapon,IG-100 MagnaGuard Only,,Add 1 Electro-Whip MagnaGuard mini,FALSE,FALSE,,,TRUE,Electro-Whip,"Imobilize 1, Versatile",MR,,1,2,,
+2426,Electro-Whip Soldier,null,Heavy Weapon,Pyke Syndicate Foot Soldiers Only,,Add 1 Electro-Whip Soldier mini,FALSE,FALSE,,,TRUE,Electro-Whip,"Immobilize 1, Suppressive",MR,,1,2,,
+171,Gideon Hask,True,Heavy Weapon,Imperial Special Forces or Imperial Corp Trooper Only.,,Add 1 Gideon Hask mini. Your Courage is increased by 1. You gain Coordinate: Corp Trooper. Leader,FALSE,FALSE,Coordinate: Corp trooper,2,TRUE,,,R,1,3,2,,
+6320,Mertalizer,null,Heavy Weapon,Imperial Dark Troopers Only,,Add 1 Mertalizer trooper mini,FALSE,FALSE,,,TRUE,Mertalizer,Suppressive,M,,,2,,1
+137,Radiation Cannon B1 Trooper,False,Heavy Weapon,B1 Battle Droids Only,,Add 1 radiation Cannon B1 trooper mini,FALSE,FALSE,,,TRUE,Radiation Cannon,Poison 1,R,1,2,2,,
+2718,Rook Kast,True,Heavy Weapon,Mandalorian Super Commandos Only,,Add 1 Rook Kast Mini. You gain Retinue: Maul. Leader,FALSE,FALSE,Retinue: Maul,2,TRUE,,,R,1,2,2,2,
+2565,Scatter Gun Enforcer,False,Heavy Weapon,Black Sun Enforcers Only,,Add 1 Scatter Gun Enforcer mini,FALSE,FALSE,,,TRUE,Scatter Gun,Pierce 1,R,1,2,2,,
+31,Scatter Gun Trooper,False,Heavy Weapon,Fleet Troopers Only,,Add 1 Scatter Gun trooper mini,FALSE,FALSE,,,TRUE,Scatter Gun,Pierce 1,MR,,2,2,,
+6319,SM-9 Frag Launcher,null,Heavy Weapon,Imperial Dark Troopers Only,,Add 1 SM-9 Frag Launcher trooper mini,TRUE,FALSE,,,TRUE,SM-9 Frag Launcher,"Blast, Impact 2, Cycle",R,1,2,2,,1
+124,SX-21 Trooper,False,Heavy Weapon,Rebel Troopers Only,,Add 1 SX-21 trooper mini,FALSE,FALSE,,,TRUE,SX-21,Impact 1,R,1,2,2,2,
+153,High-Energy Shells,False,Ordnance,,,,TRUE,FALSE,,,TRUE,High-Energy Shells,"Critical 1, Cycle, High Velocity, Fixed: Front",R,2,4,2,1,
+2774,Saxon's Z-3X Jetpack Rockets,True,Armament,Gar Saxon only.,,,TRUE,FALSE,,,TRUE,Z-3X Jetpack Rockets,"Blast, Cycle, Impact 2",R,2,3,3,,
+141,B2-ACM Trooper,False,Heavy Weapon,B2 Super Battle Droids only.,,Add 1 B2-ACM trooper mini.,FALSE,FALSE,,,TRUE,ACM,,R,1,2,3,,
+155,Electro Gauntlets,False,Armament,Cad Bane only.,,"You can perform moves while engaged with a unit that has 1 or more immobilize tokens, even while this card is exhausted.",TRUE,FALSE,,,TRUE,Electro Gauntlets,"Immobilize 3, Suppressive",M,,,4,,
+965,Twin Missile Pods,False,Hardpoint,Infantry Support Platform only.,,"When you activate, you may halve this weapon's dice and keyword values until the end of your activation. If you do, you gain Gunslinger",FALSE,FALSE,,,TRUE,Twin Missile Pods,"Fixed: Front, Impact 2",R,2,4,4,,
+11865,Force Pike Warrior,null,Heavy Weapon,Geonosian Warriors Only,,"Add 1 Force Pike Warrior Mini. When this unit performs an attack action, you may flip this card before the Declare Defenders Step. Add 1 Force Pike Warrior Mini. When this unit performs a move action, you may flip this card before placing the movement tool.",FALSE,FALSE,,,TRUE,Force Pike,"Overrun 1, Suppressive","OM",,,"0
+69,A-180,False,Armament,Jyn Erso only.,,,FALSE,FALSE,,,TRUE,A-180 Rifle Config,"Pierce 1, Reconfigure",R,1,3,,1,2
+60,A-300,False,Armament,Rebel Pathfinders only.,,,FALSE,FALSE,,,TRUE,A-300 Short Range Config,,R,1,4,,1,
+115,CR-24 Flame Rifle,False,Armament,Dewback Rider only.,,,FALSE,FALSE,,,TRUE,CR-24 Flame Rifle,"Blast, Spray",MR,M,1,,1,1
+,DC-17m ICWS Config,null,Armament,Clone Commandos only.,,"At the start of this unit's activation, it may flip this card, even if it is exhausted.",TRUE,FALSE,,,TRUE,DC-17m ICWS Anti-Armor Config,"Impact 1, Scatter, Reconfigure",R,1,2,,,2
+160,Deflector Shields,False,Armament,BX-series Droid Commandos only.,,,FALSE,FALSE,"Shielded 2, Recharge 2",,FALSE,,,,,,,,
+3650,Din's Amban Rifle,True,Armament,Din Djarin only.,Double Action,"If you are not engaged, perform a speed-1 move, then choose an enemy in line of sight. Roll 1 red attack die. If the result is a hit or crit, the chosen unit suffers 1 wound and gains 1 suppression token.",FALSE,FALSE,,,TRUE,Amban Rifle,"Immobilize 2, Suppressive",M,,,,,3
+85,E-11D,False,Armament,Imperial Death Troopers only.,,,FALSE,FALSE,,,TRUE,E-11D Focused Fire Config,"Suppressive, Reconfigure",R,1,4,,,1
+143,Iden's DLT-20A Rifle,False,Armament,Iden Versio only.,,,FALSE,FALSE,,,TRUE,DLT-20A Rifle,"High Velocity, Pierce 1",R,1,inf,,,2
+166,Jyn's SE-14 Blaster,True,Armament,Jyn Erso or K-2SO only.,,"While Jyn Erso is in your army, reduce this card's points by 5.",FALSE,FALSE,,,TRUE,SE-14 Blaster,"Pierce 1, Suppressive",R,1,2,,5,
+2775,Saxon's ZX Flame Projector,True,Armament,Gar Saxon only.,,,FALSE,TRUE,,,TRUE,ZX Flame Projector,"Blast, Spray, Suppressive",MR,,1,,1,1
+96,T-21 Blaster Rifle,False,Armament,Dewback Rider only.,,,FALSE,FALSE,,,TRUE,T-21 Blaster Rifle,Critical 2,R,1,3,,4,
+6132,The Darksaber (Gideon),True,Armament,Moff Gideon only.,,,FALSE,FALSE,Demoralize 1. Immune: Pierce Melee,,TRUE,The Darksaber,"Impact 1, Pierce 1",M,,,,,5
+2632,The Darksaber (Maul),True,Armament,Maul only.,,Treat your rank as Commander. You gain <surge:crit>.,FALSE,FALSE,Cunning,,TRUE,The Darksaber,"Impact 2, Pierce 2, Sidearm: Melee, Ranged",M,,,,,6
+71,The Darksaber (Sabine),True,Armament,Sabine Wren only.,,,FALSE,FALSE,"Dauntless, Immune: Pierce Melee",,TRUE,The Darksaber,"Impact 1, Pierce 1",M,,,,,5
+104,Aggressive Tactics,False,Command,,,"During the Command Phase, if you were nominated, after issuing orders choose up to 4 friendly units with faceup order tokens. Each chosen unit gains 1 surge token.",FALSE,FALSE,,,FALSE,,,,,,,,
+26,Esteemed Leader,False,Command,,,"While you are defending, each friendly corps trooper unit at <1> gains Guardian 1.",FALSE,FALSE,,,FALSE,,,,,,,,
+44,Improvised Orders,False,Command,,,"After an order token is drawn from a friendly order pool, draw a second order token from that order pool; choose 1 to use and shuffle the other back into its order pool. If you do, during the End Phase, ready this card.",TRUE,FALSE,,,FALSE,,,,,,,,
+188,Inspiring Presence,False,Command,,,Friendly units at <4> can use your courage value when checking whether they are panicked. This range can be reduced by other effects.,FALSE,FALSE,,,FALSE,,,,,,,,
+2697,Lead by Example,False,Command,,,,FALSE,FALSE,Inspire 2,,FALSE,,,,,,,,
+62,Strict Orders,False,Command,,,"When a friendly trooper unit with a faceup order token activates, during its Rally step, it may remove 1 suppression token instead of rolling dice.",FALSE,FALSE,,,FALSE,,,,,,,,
+2429,Underworld Connections,null,Command,,,,FALSE,FALSE,Allies of convenience,,FALSE,,,,,,,,
+191,Vigilance,False,Command,,,"During the End Phase, choose either 1 friendly trooper unit at <2> or up to 2 friendly corps trooper units at <2>. Each chosen unit does not remove 1 dodge token.",FALSE,FALSE,,,FALSE,,,,,,,,
+169,Command Control Array,False,Comms,Vehicle only.,,"When you Coordinate, you can issue an order at range <2>, instead of <1>.",FALSE,FALSE,,,FALSE,,,,,,,,
+1,Comms Jammer,False,Comms,,,"Enemy units at <1> cannot be issued orders, unless they are issuing an order to themselves.",FALSE,FALSE,,,FALSE,,,,,,,,
+65,Comms Relay,False,Comms,Non-Emplacement Trooper only.,,"When you would be issued an order, you may choose a friendly unit at <2>. Issue an order to the chosen unit instead. If you do, you cannot be issued another order during this round.",FALSE,FALSE,,,FALSE,,,,,,,,
+2713,Emergency Transponder,False,Comms,,,"When you activate, if you were activated from an order token from the order pool, gain 1 aim token, gain 1 dodge token, or remove 1 suppression token.",FALSE,TRUE,,,FALSE,,,,,,,,
+918,Hacked Comms Unit,False,Comms,,,"During the Issue Orders step, after an enemy unit at <1> is issued an order, you may issue an order to yourself, if able.",FALSE,FALSE,,,FALSE,,,,,,,,
+41,HQ Uplink,False,Comms,,,"During the Issue Orders step, issue an order to yourself.",TRUE,FALSE,,,FALSE,,,,,,,,
+99,Linked Targeting Array,False,Comms,Emplacement Trooper or Vehicle only.,,,FALSE,FALSE,Target 1,,FALSE,,,,,,,,
+201,Onboard Comms Channel,False,Comms,Vehicle only.,,,FALSE,FALSE,Coordinate: Trooper,,FALSE,,,,,,,,
+131,C-3PO,True,Counterpart,,,,FALSE,FALSE,,,FALSE,,,,,,,,
+3649,Grogu,True,Counterpart,,,,FALSE,FALSE,,,FALSE,,,,,,,,
+167,Iden's ID10 Seeker Droid,True,Counterpart,,,,FALSE,FALSE,,,FALSE,,,,,,,,
+15628,Omega,True,Counterpart,,,,FALSE,FALSE,,,FALSE,,,,,,,,
+80,A-300 Rifle Gunner,False,Crew,X-34 Landspeeder only.,,,FALSE,FALSE,,,TRUE,A-300 Rifle,,R,1,3,,2,
+212,Backworld Medic,False,Crew,A-A5 Speeder Truck only.,Action,"Remove 1 wound or poison token from, or restore 1 mini to, a friendly non-droid trooper unit at <1> and in line of sight. Then roll 2 white defense dice. That unit gains 1 suppression token for each <block> and <surge> result.",FALSE,FALSE,,,FALSE,,,,,,,,
+112,BARC Ion Gunner,False,Crew,BARC Speeder only.,,Reduce your maximum speed by 1.,FALSE,FALSE,,,TRUE,Ion Rifle,"Critical 1, Fixed: Front, Rear, Impact 1, Ion 1",R,1,3,,1,3
+100,BARC Twin Laser Gunner,False,Crew,BARC Speeder only.,,Reduce your maximum speed by 1.,FALSE,FALSE,,,TRUE,Twin Laser Cannon,"Fixed: Front, Rear",R,1,3,,2,2
+211,"Refurbished ""Gonk"" Droid",False,Crew,A-A5 Speeder Truck or X-34 Landspeeder only.,,"During the End Phase, roll 1 red defense die for each of your inactive shield tokens, for each <block> result, flip 1 inactive shield token.",FALSE,FALSE,Shielded 2,,FALSE,,,,,,,,
+210,Unorthodox Tactician,False,Crew,A-A5 Speeder Truck only.,,"When this unit activates, roll 3 red defense dice. For each <block> or <surge> result, choose a different friendly unit at <3>. Each chosen unit gains 1 aim token.",FALSE,FALSE,,,FALSE,,,,,,,,
+209,Unstable R5 Astromech,null,Crew,A-A5 Speeder Truck or X-34 Landspeeder only.,,"At the end of your activation, perform an attack or move, then roll 3 black attack dice and suffer 1 wound for each <hit> or <crit> result.",FALSE,TRUE,,,FALSE,,,,,,,,
+45,Anger,False,Force,Dark Side only.,,"After you suffer 1 or more wounds, gain 1 aim token.",FALSE,FALSE,,,FALSE,,,,,,,,
+5,Battle Meditation,False,Force,,,"While you are issuing orders using a command card, you may issue 1 of those orders to any friendly unit on the battlefield, instead of a unit indicated on the command card.",FALSE,FALSE,,,FALSE,,,,,,,,
+626,Burst of Speed,False,Force,,,"At the start of your activation, treat your maximum speed as 3 until the end of the round. If you do, gain 1 immobilize token at the end of the round.",FALSE,TRUE,,,FALSE,,,,,,,,
+111,Fear,False,Force,Dark Side only.,,,FALSE,FALSE,Demoralize 1,,FALSE,,,,,,,,
+184,Force Barrier,False,Force,,,"While another friendly trooper unit at range 1 is defending against a ranged attack, during the Modify Attack Dice step, cancel either 1 <crit> result or up to 2 <hit> results.",TRUE,FALSE,,,FALSE,,,,,,,,
+8,Force Choke,False,Force,Dark Side only.,Free Action,"Choose 1 non-<commander>, non-<operative> enemy trooper unit at range 1. It suffers 1 wound.",TRUE,FALSE,,,FALSE,,,,,,,,
+102,Force Guidance,False,Force,,Free Action,Choose up to 2 friendly units at <2>. Each chosen unit gains 1 surge token.,FALSE,FALSE,,,FALSE,,,,,,,,
+9,Force Push,False,Force,,Free Action,"Choose an enemy trooper at <1>. Perform a speed-1 move with that unit, even if it is engaged.",FALSE,FALSE,,,FALSE,,,,,,,,
+10,Force Reflexes,False,Force,,Free Action,Gain a dodge token.,FALSE,FALSE,,,FALSE,,,,,,,,
+107,Hope,False,Force,Light Side only.,,,FALSE,FALSE,Inspire 1,,FALSE,,,,,,,,
+32,Jedi Mind Trick,False,Force,Light Side only.,Free Action,"Choose a non-<commander>, non-<operative> enemy trooper unit at <2>. It gains 2 suppression tokens.",TRUE,FALSE,,,FALSE,,,,,,,,
+13,Saber Throw,False,Force,,Action,"Choose 1 of your melee weapons. Perform a ranged attack with that weapon against an enemy unit at <2>, using half of that weapon's dice, rounded up. This is an attack action.",FALSE,FALSE,,,FALSE,,,,,,,,
+173,Ascension Cables,False,Gear,,Free Action,"Until the end of your activation, gain Scale.",TRUE,FALSE,Scale,,FALSE,,,,,,,,
+97,Electro Grappling Line,False,Gear,Sabine Wren only.,Action,Choose an enemy trooper unit at <1> and in line of sight. It gains 2 immobilize tokens and 2 suppression tokens.,TRUE,FALSE,,,FALSE,,,,,,,,
+101,Electrobinoculars,False,Gear,,Action,B1 Battle Droids can ignore this card's <gear> requirement.,FALSE,FALSE,Spotter 1,,FALSE,,,,,,,,
+43,Emergency Stims,False,Gear,,,"During an attack, when you would suffer wounds, prevent up to 2 wounds and place an equal number of wound tokens on this card instead. If you do, at the end of your next activation, discard each token on this card and suffer wounds equal to the number of tokens discarded.",TRUE,FALSE,,,FALSE,,,,,,,,
+37,Environmental Gear,False,Gear,,,,FALSE,FALSE,Unhindered,,FALSE,,,,,,,,
+18,Grappling Hooks,False,Gear,,,,FALSE,FALSE,Expert Climber,,FALSE,,,,,,,,
+157,JT-12 Jetpacks,False,Gear,Clone Captain Rex or ARC Troopers only,,"When equipped to Clone Captain Rex, reduce this card's points by 5.",FALSE,FALSE,-> Jump 2,,FALSE,,,,,,,,
+15012,Katarn Pattern Armor,null,Gear,Clone Commandos only.,,"When this unit would be assigned more than 1 wound from a non-melee attack, you may expend this card. Assign this unit 1 wound instead.",FALSE,TRUE,,,FALSE,,,,,,,,
+79,Personal Combat Shield,False,Gear,Sabine Wren only.,,,FALSE,FALSE,"Shielded 1, Recharge 1",,FALSE,,,,,,,,
+180,Portable Scanner,False,Gear,,Action,,FALSE,FALSE,Take Cover 1,,FALSE,,,,,,,,
+2609,Prepared Supplies,False,Gear,,,,FALSE,FALSE,Cache: Dodge 1,,FALSE,,,,,,,,
+58,Recon Intel,False,Gear,,,,FALSE,FALSE,Scout 1,,FALSE,,,,,,,,
+3006,Saxon's Combat Shield,True,Gear,Gar Saxon only.,,"During the End Phase, if this unit did not flip any active shield tokens this round, it may flip up to 1 of its inactive shield tokens.",FALSE,FALSE,"Shielded 1, Recharge 1",,FALSE,,,,,,,,
+2714,Super Commando Combat Shields,False,Gear,Mandalorian Super Commandos only.,,,FALSE,FALSE,Shielded 2,,FALSE,,,,,,,,
+15,Targeting Scopes,False,Gear,,,,FALSE,FALSE,Precise 1,,FALSE,,,,,,,,
+3668,The Mando's Jetpack,True,Gear,Din Djarin only.,,Increase your maximum speed by 1.,FALSE,FALSE,-> Jump 2,,FALSE,,,,,,,,
+40,Barrage Generator,False,Generator,,,"While performing a ranged attack with a weapon that has Fixed, add 2 white attack dice and apply Suppressive to your attack pool.",FALSE,FALSE,,,FALSE,,,,,,,,
+42,Overcharged Generator,False,Generator,,,"While performing a ranged attack with a weapon that has Fixed, add 1 white attack die and apply Impact 1 to your attack pool.",FALSE,FALSE,,,FALSE,,,,,,,,
+6,Concussion Grenades,False,Grenade,,,,FALSE,FALSE,,,TRUE,Concussion Grenades,Blast,R,,1,,,1
+162,EMP Droid Poppers,False,Grenade,,,,FALSE,FALSE,,,TRUE,EMP Grenades,Ion 1,R,,1,,,1
+30,Impact Grenades,False,Grenade,,,,FALSE,FALSE,,,TRUE,Impact Grenade,Impact 4,MR,,1,,,1
+103,Smoke Grenades,False,Grenade,,Free Action,,FALSE,TRUE,Smoke 1,,FALSE,,,,,,,,
+2610,Sonic Imploders,null,Grenade,,,,FALSE,FALSE,,,TRUE,Sonic Imploders,Suppressive,R,,1,,,1
+206,AG-2G Quad Laser,False,Hardpoint,A-A5 Speeder Truck only.,,,FALSE,FALSE,,,TRUE,AG-2G Quad Laser,Impact 2,R,1,3,,,6
+20,AT-RT Flamethrower,False,Hardpoint,AT-RT only.,,,FALSE,FALSE,,,TRUE,Flamethrower,"Blast, Fixed: Front, Spray",MR,,1,,,2
+4,AT-RT Rotary Blaster,False,Hardpoint,AT-RT only.,,,FALSE,FALSE,,,TRUE,Rotary Blaster,Fixed: Front,R,1,3,,,5
+23,AT-ST Mortar Launcher,False,Hardpoint,AT-ST only.,,,FALSE,FALSE,,,TRUE,Mortar Launcher,"Fixed: Front, Suppressive",R,4,inf,,3,
+27,Ax-108 Ground Buzzer,False,Hardpoint,T-47 Airspeeder only.,,,FALSE,FALSE,,,TRUE,Ax-108 Ground Buzzer,Fixed: Rear,R,1,2,,,4
+24,DW-3 Concussion Grenade Launcher,False,Hardpoint,AT-ST only.,,,FALSE,FALSE,,,TRUE,DW-3 Concussion Grenade Launcher,"Fixed: Front, Blast",R,1,2,,,2
+16580,Heavy Laser Cannon,False,Hardpoint,LM-432 Crab Droid only.,,,FALSE,FALSE,,,TRUE,Heavy Laser Cannon,"Impact 3, Fixed: Front",R,1,3,,,5
+92,M-45 Ion Blaster,False,Hardpoint,X-34 Landspeeder only.,,,FALSE,FALSE,,,TRUE,M-45 Ion Blaster,"Critical 1, Fixed: Front, Impact 1, Ion 1",R,1,4,,2,2
+91,Mark II Medium Blaster,False,Hardpoint,X-34 Landspeeder only.,,,FALSE,FALSE,,,TRUE,Mark II Medium Blaster,Fixed: Front,R,1,3,,,4
+949,Nose-Mounted Ion Blaster,False,Hardpoint,DSD1 Dwarf Spider Droid only.,,,FALSE,FALSE,,,TRUE,Ion Blaster,"Critical 1, Fixed: Front, Impact 2, Ion 1",R,2,4,,3,3
+16578,Twin Blaster Cannons,False,Hardpoint,Infantry Support Platform only.,,"When you activate, you may halve this weapon's dice and keyword values until the end of your activation. If you do, you gain Gunslinger",FALSE,FALSE,,,TRUE,Twin Blaster Cannons,"Critical 2, Fixed: Front",R,1,3,,,6
+151,TX-130 Twin Laser Turret,False,Hardpoint,TX-130 Saber Tank only.,,,FALSE,FALSE,,,TRUE,Twin Laser Turret,Critical 1,R,1,3,,,3
+414,Battle Shield Wookiee,null,Heavy Weapon,Wookiee Warriors only.,,"Add 1 Battleshield Wookiee mini. Reduce your maximum speed by 1. At the start of your activation, you may flip this card.",FALSE,FALSE,Armor 1,,TRUE,Battle Shield (Defensive),,M,,,,,2
+74,Bistan,True,Heavy Weapon,Rebel Pathfinders only.,,Add 1 Bistan mini.,FALSE,FALSE,,2,TRUE,Ion Blaster,"Critical 1, Impact 1, Ion 1",R,1,4,,4,1
+98,CM-0/93 Trooper,False,Heavy Weapon,Rebel Veterans only.,,Add 1 CM-0/93 Trooper mini.,FALSE,FALSE,,,TRUE,CM-0/93 Blaster,Critical 2,R,1,4,,4,
+170,Del Meeko,True,Heavy Weapon,Imperial Special Forces or Imperial Corp Trooper Unit Only,Free Action,Add 1 Del Meeko Mini,FALSE,FALSE,Repair 2: Capactiy 1,2,TRUE,,"Lethal 1, High Velocity",R,1,5,,,2
+47,DH-447 Sniper,False,Heavy Weapon,Rebel Commandos only,,Add 1 DH-447 Sniper Mini,FALSE,FALSE,,,TRUE,DH-447 Rifle,"Pierce 1, High Velociy",R,1,5,,1,1
+52,DLT-19x Sniper,False,Heavy Weapon,Scout Troopers Only,,Add 1 DLT-19x Sniper,FALSE,FALSE,,,TRUE,DLT-19x Rifle,"Pierce 1, High Velocity",R,1,5,,,2
+123,DLT-20A Trooper,False,Heavy Weapon,Rebel Trooper Only,,Add 1 DLT-20A Trooper mini,FALSE,FALSE,,,TRUE,DLT-20A,Critical 1,R,1,4,,1,2
+77,DT-F16,True,Heavy Weapon,Imperial Death Troopers only.,,Add 1 DT-F16 mini. Leader,FALSE,FALSE,Compel,2,TRUE,DT-F16,,R,1,3,,1,1
+105,E-5C B1 Trooper,False,Heavy Weapon,B1 Battle Droids Only,,Add 1 E-5C B1 trooper mini,FALSE,FALSE,,,TRUE,E-5C,,R,1,3,,,3
+15987,Echo (Bad Batch),True,Heavy Weapon,The Bad Batch ONly,,Add 1 Echo Mini,FALSE,FALSE,Reliable 3,,TRUE,,,,,,,,
+46,Electrostaff Guard,False,Heavy Weapon,Imperial Royal Gurads Only,,"Add 1 electrostaff guard mini. While defending against a melee attack, you gain Immune: Pierce. Sidearm: Melee",FALSE,FALSE,Immune: Melee Pierce,,TRUE,Electro Staff,Sidearm: Melee,M,,,,,2
+36,Flametrooper,False,Heavy Weapon,SnowTroopers Only,,Add 1 Flametrooper Mini,FALSE,FALSE,,,TRUE,Flamethrower,"Blast, Spray",MR,,1,,,1
+19,HH-12 Stormtrooper,False,Heavy Weapon,Stroomtroopers Only,,Add 1 HH-12 Stormtrooper mini,FALSE,FALSE,,,TRUE,HH-12,"Cumbersome, Impact 3",R,2,4,,,3
+15011,Hunter,True,Heavy Weapon,The Bad Batch Only,Free Action,"Add 1 Hunter Mini. >> Choose a non Commander or Operative enemy trooper unit at range 1 and in LOS. Roll a black attack die. On a Hit or Crit result, that unit suffers one wound. Leader.",FALSE,FALSE,,,TRUE,,,,,,,,
+883,IG-100 MagnaGuard,null,Heavy Weapon,IG-100 MagnaGuard Only,,Add 1 IG-100 MagnaGuard mini,FALSE,FALSE,,,TRUE,,,,,,,,
+618,Long Gun Wookiee,null,Heavy Weapon,Wookiee Warriors Only.,,Add 1 Long Gun Wookiee Mini,FALSE,FALSE,,,TRUE,Long Gun,Suppressive,R,1,4,,,2
+2568,Mag-Det Enforcer,False,Heavy Weapon,Black Sun Enforcers Only,,Add 1 Mag-Det Enforcer Mini,FALSE,FALSE,,,TRUE,Mag-Det,"Blast, Impact 3",,1,,,,3
+2716,Mandalorian Super Commando,null,Heavy Weapon,Mandalorian Super Commandos Only,,Add 1 Mandalorian Super Commando Mini. You gain Cache: Surge 2. You have this keyword even if this mini is defeated.,FALSE,FALSE,Cashe: Surge 2,,TRUE,,,,,,,,
+16568,Mortar Clone Trooper,False,Heavy Weapon,Clone Trooper Infantry or Clone Marksmen Only,,Add 1 Mortar Clone Trooper Mini,FALSE,FALSE,,,TRUE,Clone Mortar,"Critical 1, Suppressive, Cumbersome",R,2,4,,,2
+39,MPL-57 Barrage Trooper,False,Heavy Weapon,Fleet Troopers Only,,Add 1 MPL-57 Barrage Trooper mini,FALSE,FALSE,,,TRUE,MPL-57 Barrage,"Cycle, Blast, Impact 2",R,1,3,,2,1
+11,MPL-57 Ion Trooper,False,Heavy Weapon,Rebel Troopers Only,,Add 1 MPL-57 Ion Trooper Mini,FALSE,FALSE,,,TRUE,MPL-57 Ion,"Critical 1, Impact 1, Ion 1",R,1,3,,1,2
+16576,Rebel Marksman,False,Heavy Weapon,Rebel Sleeper Cell Only,Action,"Add 1 Rebel Marksman Mini. ->If you are not engaged, choose an unengaged enemy trooper unit in line of sight. Roll 1 red attack die. If the result is a surge or crit, the chosen unit suffers 1 wound and gains 1 suppression token.",FALSE,FALSE,,,TRUE,,,,,,,,
+16577,Stormtrooper Marksman,False,Heavy Weapon,Strooper Riot Squad Only,Action,"Add 1 Storm Trooper marksman Mini. -> If you are not engaged, choose an unengaged enemy trooper unit in line of sight. Roll 1 red attack die. If the result is a surge or crit, the chosen unit suffers 1 wound and gains 1 suppression token.",FALSE,FALSE,,,TRUE,,,,,,,,
+2719,Super Commando Gunslinger,False,Heavy Weapon,Mandalorian Super Commandos Only,,Add 1 Super Commando Gunslinger mini,FALSE,FALSE,,,TRUE,,Lethal 1,R,1,2,,2,2
+182,T-21 Special Forces Trooper,False,Heavy Weapon,Imperial Special Forces Only,,Add 1 T-21 special forces trooper mini.,FALSE,FALSE,,,TRUE,T-21,Critical 2,R,1,3,,4,
+122,T-21 Stormtrooper,False,Heavy Weapon,Stormtroopers Only,,Add 1 T-21 Stormtrooper mini.,FALSE,FALSE,,,TRUE,T-21,Critical 2,R,1,3,,4,
+15015,T-21A Range Trooper,null,Heavy Weapon,Range Troopers Only,,Add 1 T-21A Range Trooper Mini,FALSE,FALSE,,,TRUE,T-21A,Suppressive,R,1,4,,2,2
+114,T-21B Trooper,False,Heavy Weapon,Shore Troopers Only,,Add 1 T-21 B Trooper mini,FALSE,FALSE,,,TRUE,T-21B,Critical 1,R,1,4,,2,2
+21,T-7 Ion Snowtrooper,False,Heavy Weapon,SnowTroopers Only,,Add 1 T-7 Ion Snowtrooper mini,FALSE,FALSE,,,TRUE,T-7 Ion,"Critical 1, Impact 1, Ion 1",R,1,3,,1,2
+15988,Tech,True,Heavy Weapon,The Bad Batch Only,,Add 1 Tech Mini. This unit gains Cache: Aim 1 and Dodge 1,FALSE,FALSE,"Cache: Aim 1 and Dodge 1, Tactical 1",2,TRUE,,,,,,,,
+177,Tristan Wren,True,Heavy Weapon,Mandalorian Resistance Only,,Add 1 Tristan Wren Mini,FALSE,,,2,TRUE,,"Lethal 1, Suppressive",R,1,3,,,2
+6318,XS-IV Assault Cannon,null,Heavy Weapon,Imperial Dark Troopers Only,,Add 1 XS-IV Assault Cannon Trooper miniature.,FALSE,FALSE,,,TRUE,XS-IV Assault Cannon,Critical 1,R,1,3,,,4
+16557,Z-6 Clone Trooper,False,Heavy Weapon,Clone Trooper Infantry Only,,Add 1 Z-6 Clone Trooper Mini,FALSE,FALSE,,,TRUE,Z-6,,R,1,3,,6,
+16,Z-6 Trooper,False,Heavy Weapon,Rebel Troopers Only,,Add 1 Z-6 trooper mini,FALSE,FALSE,,,TRUE,Z-6,,R,1,3,,6,
+152,"""Bunker Buster"" Shells",False,Ordnance,,,,TRUE,FALSE,,,TRUE,Bunker Buster Shells,"Blast, Cycle, Fixed: Front, Scatter",R,1,2,,3,1
+64,2-1B Medical Droid,False,Personnel,Rebel Only.,Free Action,Add 1 2-1B Medical Droid Mini. Treat 1:Capcity 2. Noncombatant,FALSE,FALSE,Treat 1: Capcity 2,,FALSE,,,,,,,,
+16581,Astromech,False,Personnel,Rebel Sleeper Cell Only,,"Add 1 Astromech mini. When this unit ends a move at range-1 of one or more objective tokens, it gains a dodge token. Noncombatant. ",FALSE,FALSE,,,FALSE,,,,,,,,
+94,B1 Battle Droid,False,Personnel,B1 Battle Droids Only,,Add 1 B1 Battle Droid mini,FALSE,FALSE,,,FALSE,,,,,,,,
+16573,B1 Battle Droid Squad,False,Personnel,B1 Battle Droids Only,,Add 7 B1 Battle Droid miniatures. This unit gains Indomitable. This unit is in cohesion if all miniatures are at range 1 of thee unit leader instead of at range 1/2. This unit cannot be deployed or issued orders using the Transport keyword. ,FALSE,FALSE,,,FALSE,,,,,,,,
+125,B1 Security Droid,False,Personnel,B1 Battle Droids Only,,"Add 1 B1 security droid mini. When you activate, lose AI:Attack until the end of this actication",TRUE,FALSE,,,FALSE,,,,,,,,
+118,B2 Super Battle Droid,False,Personnel,B2 Super Battle Droids Only,,Add 1 B2 Super battle droid mini.,FALSE,FALSE,,,FALSE,,,,,,,,
+16563,B2 Super Battle Droid Squad,False,Personnel,B2 Super Battle Droids Only,,Add 4 B2 Super Battle Droid miniatures. This unit gains Indomitable. This unit is in cohesion if all miniatures are at range 1 of thee unit leader instead of at range 1/2. This unit cannot be deployed or issued orders using the Transport keyword. ,FALSE,FALSE,,,FALSE,,,,,,,,
+2566,Black Sun Enforcer,False,Personnel,Black Sun Enforcers Only,,Add 1 Black Sun Enforcer mini. You gain Cache: Dodge 1,FALSE,FALSE,Cache: Dodge 1,,FALSE,,,,,,,,
+2567,Black Sun Vigo,False,Personnel,Black Sun Enforcers Only,,Add 1 Black Sun Vigo mini. Your courage is increased by 1. You gain Independent: Surge 1. Leader.,FALSE,FALSE,Independent: Surge 1,,FALSE,,,,,,,,
+3749,Boil,True,Personnel,,,,FALSE,FALSE,,,FALSE,,,,,,,,
+193,Clone Commander,False,Personnel,,,,FALSE,FALSE,,,FALSE,,,,,,,,
+194,Clone Comms Technician,False,Personnel,Corp Clone Trooper Only,,Add 1 Clone Comms Technician Mini. This unit gains Fire Support,FALSE,FALSE,Fire Support,,FALSE,,,,,,,,
+195,Clone Engineer,False,Personnel,Corp Clone Trooper Only,Free Action,Add 1 Clone Engineer mini. >>Repair 1:Capacity 1,FALSE,FALSE,>>Repair 1:Capacity 1,,FALSE,,,,,,,,
+196,Clone Medic,False,Personnel,Corp Clone Trooper Only,,Add 1 Clone Medic mini. >> Treat 1: Capacity 1,FALSE,FALSE,>>Treat 1: Capacity 1,,FALSE,,,,,,,,
+16567,Clone Specialist,False,Personnel,Corp Clone Trooper Only,Free Action,"Add 1 Clone Specialist mini. This unit gains a gear upgrade. >>Gain 1 aim, dodge or surge token.",TRUE,FALSE,,,FALSE,,,,,,,,
+16559,Clone Trooper Infantry,False,Personnel,Clone Trooper Infantry Only,,Add 1 Clone Trooper Infantry miniature,FALSE,FALSE,,,FALSE,,,,,,,,
+16571,Clone Trooper Infantry Squad,False,Personnel,Clone Trooper Infantry Only,,Add 5 Clone Trooper Infantry miniatures. This unit gains Indomitable. This unit is in cohesion if all miniatures are at range 1 of thee unit leader instead of at range 1/2. This unit cannot be deployed or issued orders using the Transport keyword. ,FALSE,FALSE,,,FALSE,,,,,,,,
+189,EV-series Medical Droid,False,Personnel,Seperatist Alliance Droid Trooper Only,Free Action,Add 1 EV-series medical droid mini. >>Trea 1:Capaciity 2. Noncombatant,FALSE,FALSE,,1,FALSE,,,,,,,,
+16564,Ewok Skirmisher Squad,False,Personnel,Ewok Skirmishers Only,,Add 4 Ewok Skirmishers miniatures. This unit gains Indomitable. This unit is in cohesion if all miniatures are at range 1 of thee unit leader instead of at range 1/2. This unit cannot be deployed or issued orders using the Transport keyword. ,FALSE,FALSE,,,FALSE,,,,,,,,
+16575,Ewok Slinger Squad,False,Personnel,Ewok Slingers Only,,Add 4 Ewok Slinger miniatures. This unit gains Indomitable. This unit is in cohesion if all miniatures are at range 1 of thee unit leader instead of at range 1/2. This unit cannot be deployed or issued orders using the Transport keyword. ,FALSE,FALSE,,,FALSE,,,,,,,,
+9402,Ewok Trapper,null,Personnel,Ewok Skirmishers or Ewok Slingers only.,,Add 1 Ewok Trapper Mini. This unit gains a training upgrade. ,FALSE,FALSE,,,FALSE,,,,,,,,
+35,Fleet Trooper,False,Personnel,Fleet Troopers Only.,,Add 1 fleet trooper mini,FALSE,FALSE,,,FALSE,,,,,,,,
+16558,Fleet Trooper Squad,False,Personnel,Fleet Troopers Only.,,Add 5 Fleet Trooper miniatures. This unit gains Indomitable. This unit is in cohesion if all miniatures are at range 1 of thee unit leader instead of at range 1/2. This unit cannot be deployed or issued orders using the Transport keyword. ,FALSE,FALSE,,,FALSE,,,,,,,,
+66,FX-9 Medical Droid,False,Personnel,Imperial Corp Only,Free Action,Add 1 FX-9 Medical droid mini. >>Treat 1: Capacity 2. Noncombatant,TRUE,FALSE,,,FALSE,,,,,,,,
+11864,Geonosian Warrior,null,Personnel,Geonosian Warriors Only,,Add 1 Geonosian Warrior mini. ,FALSE,FALSE,,,FALSE,,,,,,,,
+16561,Geonosian Warrior Squad,False,Personnel,Geonosian Warriors Only,,Add 5 Geonosian Warrior miniatures. This unit gains Indomitable. This unit is in cohesion if all miniatures are at range 1 of thee unit leader instead of at range 1/2. This unit cannot be deployed or issued orders using the Transport keyword. ,FALSE,FALSE,,,FALSE,,,,,,,,
+67,Imperial Comms Technician,False,Personnel,Imperial Corp Only,,Add 1 Imperial comms techician mini. You gain a comms upgrade. You must equip a comms upgrade,FALSE,FALSE,,,FALSE,,,,,,,,
+6321,Imperial Dark Trooper,null,Personnel,Imperial Dark Troopers Only,,Add 1 Imperial Dark trooper Mini,FALSE,FALSE,,,FALSE,,,,,,,,
+50,Imperial Officer,False,Personnel,Imperial Corp Only,,Add 1 Imperial officer mini. Your courage is increased by 1. You gain Inspire 1. Leader,FALSE,FALSE,Inspire 1,,FALSE,,,,,,,,
+136,OOM-Series Battle Droid,False,Personnel,B1 Battle Droids Only,,"Add 1 OOM-series battle droid mini. When you use Coordinate, you can issue an order at range 1-2 instead of range 1. Leader",FALSE,FALSE,,,FALSE,,,,,,,,
+190,PK-series Worker Droid,False,Personnel,Seperatist Alliance Droid Trooper Only,Free Action,Add 1 PK-series worker droid mini. Repair 1:Capacity 2. Noncombatant,FALSE,FALSE,,1,FALSE,,,,,,,,
+2428,Pyke Syndicate Capo,null,Personnel,Pyke Syndicate Foot Soldiers Only,,Add 1 Pyke Syndicate Capo Mini. Your courage is increased by 1. You gain Independent: Surge 1. Leader,FALSE,FALSE,Independent: Surge 1,,FALSE,,,,,,,,
+2427,Pyke Syndicate Foot Soldier,null,Personnel,Pyke Syndicate Foot Soldiers Only,,Add 1 Pyke Syndicate Foot Soldier mini. You gain Cache: Aim 1,FALSE,FALSE,Cache: Aim 1,,FALSE,,,,,,,,
+68,R4 Astromech Droid,False,Personnel,Imperial Corp Only,Free Action,Add 1 R4 astromech droid mini. >>Repair 1:Capacity 2. Noncombatant,FALSE,FALSE,,,FALSE,,,,,,,,
+63,R5 Astromech Droid,False,Personnel,Rebel Only.,Free Action,Add 1 R5 astromech droid mini. Repair 1: Capacity 2. Noncombatant.,FALSE,FALSE,,,FALSE,,,,,,,,
+15014,Range Trooper,null,Personnel,Range Troopers Only,,Add 1 Range Trooper mini,FALSE,FALSE,,,FALSE,,,,,,,,
+55,Rebel Comms Technician,False,Personnel,Rebel Only.,,Add 1 Rebel comms technician mini. You gain a comms upgrade slot. You must equip a comms upgrade card. ,FALSE,FALSE,,,FALSE,,,,,,,,
+49,Rebel Officer,False,Personnel,Rebel Only.,,Add 1 Rebel officer mini. Your courage is incraesed by 1. You gain inspire 1. Leader.,FALSE,FALSE,Inspire 1,,FALSE,,,,,,,,
+12,Rebel Trooper,False,Personnel,Rebel Troopers Only.,,Add 1 Rebel Trooper mini.,FALSE,FALSE,,,FALSE,,,,,,,,
+132,Rebel Trooper Captain,False,Personnel,Rebel Troopers Only.,,"Add 1 Rebel Trooper captain mini You gain a training upgrade. When you activate, you cannot remove suppression tokens or be suppressed during this activation. Leader",TRUE,FALSE,,,FALSE,,,,,,,,
+133,Rebel Trooper Specialist,False,Personnel,Rebel Troopers Only.,Free Action,Add 1 Rebel trooper specialist mini. You gain a gear upgrade. >>Gain 1 dodge token or 1 surge token,TRUE,FALSE,,,FALSE,,,,,,,,
+16562,Rebel Trooper Squad,False,Personnel,Rebel Troopers Only.,,Add 5 Rebel Trooper miniatures. This unit gains Indomitable. This unit is in cohesion if all miniatures are at range 1 of thee unit leader instead of at range 1/2. This unit cannot be deployed or issued orders using the Transport keyword. ,FALSE,FALSE,,,FALSE,,,,,,,,
+76,Rebel Veteran,False,Personnel,Rebel Veteran Only.,,Add 1 Rebel veteran mini,FALSE,FALSE,,,FALSE,,,,,,,,
+16574,Rebel Veteran Squad,False,Personnel,Rebel Veteran Only.,,Add 5 Rebel Veteran miniatures. This unit gains Indomitable. This unit is in cohesion if all miniatures are at range 1 of thee unit leader instead of at range 1/2. This unit cannot be deployed or issued orders using the Transport keyword. ,FALSE,FALSE,,,FALSE,,,,,,,,
+95,Shoretrooper,False,Personnel,Shoretroopers Only,,Add 1 Shoretrooper mini,FALSE,FALSE,,,FALSE,,,,,,,,
+16570,Shoretrooper Squad,False,Personnel,Shoretroopers Only,,Add 5 Shoretrooper miniatures. This unit gains Indomitable. This unit is in cohesion if all miniatures are at range 1 of thee unit leader instead of at range 1/2. This unit cannot be deployed or issued orders using the Transport keyword. ,FALSE,FALSE,,,FALSE,,,,,,,,
+34,Snowtrooper,False,Personnel,Snowtroopers Only,,Add 1 Snowtrooper mini,FALSE,FALSE,,,FALSE,,,,,,,,
+16565,Snowtrooper Squad,False,Personnel,Snowtroopers Only,,Add 5 Snowtrooper miniatures. This unit gains Indomitable. This unit is in cohesion if all miniatures are at range 1 of thee unit leader instead of at range 1/2. This unit cannot be deployed or issued orders using the Transport keyword. ,FALSE,FALSE,,,FALSE,,,,,,,,
+14,Stormtrooper,False,Personnel,Stormtroopers Only,,Add 1 Stromtrooper mini,FALSE,FALSE,,,FALSE,,,,,,,,
+134,Stormtrooper Captain,False,Personnel,Stormtroopers Only,,"Add 1 Stromtrooper captain mini. You gain a training upgrade icon. When you activate, you cannot remove suppression tokens or be suppressed during this activation. Leader",TRUE,FALSE,,,FALSE,,,,,,,,
+135,Stormtrooper Specialist,False,Personnel,Stormtroopers Only,Free Action,Add 1 Stormtrooper specialist mini. You gain a gear upgrade icon. >>Gain 1 aim token or 1 surge token,TRUE,FALSE,,,FALSE,,,,,,,,
+16566,Stormtrooper Squad,False,Personnel,Stormtroopers Only,,Add 5 Stormtrooper miniatures. This unit gains Indomitable. This unit is in cohesion if all miniatures are at range 1 of thee unit leader instead of at range 1/2. This unit cannot be deployed or issued orders using the Transport keyword. ,FALSE,FALSE,,,FALSE,,,,,,,,
+192,Viper Recon Droid,False,Personnel,Seperatist Alliance Droid Trooper Only,Action,Add 1 viper recon droid mini. ->Observe 2. Sidearm: Ranged,FALSE,FALSE,->Observe 2,1,TRUE,,Sidearm:Ranged,R,1,2,,2,
+3748,Waxer,True,Personnel,,,,FALSE,FALSE,,,FALSE,,,,,,,,
+960,327th Star Corps Pilot,False,Pilot,Infantry Support Platform Only,,"When this unit performs an attack action, after the action is resolved, each defending unit gains 1 observation token. ",FALSE,FALSE,,,FALSE,,,,,,,,
+119,Aayla Secura,True,Pilot,TX-130 Saber-Class Fighter Tank Only,,You gain Inspire 2 and Field Commander,FALSE,FALSE,"Inspire 2, Field Commander",,FALSE,,,,,,,,
+205,Baron Rudor,True,Pilot,Imperial Only. Repulsor Vehicle Only,,"You gain Marksman. After you recover, gain 1 aim token. ",FALSE,FALSE,Marksman,,FALSE,,,,,,,,
+200,Clone Commander Fox,True,Pilot,Republic Only. LAAT/LE Patrol Transport Only,Free Action,This Unit gains Field Commander. >>Choose a friendly Trooper unit at range 2. The chosen unit gains 1 surge token and may remove 1 suppression token. ,FALSE,FALSE,,,FALSE,,,,,,,,
+202,Clone Shock Trooper Pilot,False,Pilot,Republic Only. LAAT/LE Patrol Transport Only,,"When this unit performs an attack action, after the action is resolbed, choose up to 1 friendly unit at range 1 of this unit. The chosen unit gains 1 surge token. ",FALSE,FALSE,,,FALSE,,,,,,,,
+87,First Sergeant Arbmab,True,Pilot,Imperial Only. Ground Vehicle Only,,you gain Tactical 1,FALSE,FALSE,Tactical 1,,FALSE,,,,,,,,
+2799,Frenzied Gunner,null,Pilot,Raider only. Heavy Only. ,,"While performing a ranged attack, during the Form Attack Pool step, you may roll 1 red defense die. On a blank result, add 1 white attdie to the attack pool. On a block, add 1 black attack die. On a surge result, add 1 red attack die. ",FALSE,FALSE,,,FALSE,,,,,,,,
+25,General Weiss,True,Pilot,Imperial Only. Ground Vehicle Only,Free Action,">>Until the end of your activation, you gain Arsenal 2. You gain Field Commander",FALSE,FALSE,,,FALSE,,,,,,,,
+199,Governor Pryce,True,Pilot,Imperial Only. Heavy Only,Free Action,>>Choose a friendly trooper unit at range 2. The chosen unit gains 1 aim token and 1 suppression token. This unit gains Field Commander.,FALSE,FALSE,,,FALSE,,,,,,,,
+207,Hotshot Pilot,null,Pilot,Rebel Only. Repulsor Vehicle Only,,You Gain Sharpshooter 1,FALSE,FALSE,Sharpshooter 1,,FALSE,,,,,,,,
+203,Hound & Grizzer,True,Pilot,Republic Only. LAAT/LE Patrol Transport Only,Action,Observe 4,FALSE,FALSE,Observe 4,,FALSE,,,,,,,,
+83,Imperial Hammers Elite Armor Pilot,False,Pilot,Imperial Only. Ground Vehicle Only,,"You gain ""Surge:Hit""",FALSE,FALSE,,,FALSE,,,,,,,,
+204,Imperial Tie Pilot,False,Pilot,Imperial Only. Repulsor Vehicle Only,,Increase you rmaximum speed by 1.,FALSE,FALSE,,,FALSE,,,,,,,,
+149,Lok Durd,True,Pilot,AAT Trade Federation Battle Tank Only,Free Action,"You lose AI: Attack, even while this card is exhausted. >>Until the end of your activtaion, each of your weapons gains Suppressive",TRUE,FALSE,,,FALSE,,,,,,,,
+154,OOM-Series Droid Pilot,False,Pilot,AAT Trade Federation Battle Tank Only,,You gain Coordinate: Droid Trooper,FALSE,FALSE,Coordinate: Droid Trooper,,FALSE,,,,,,,,
+82,Outer Rim Speeder Jockey,False,Pilot,Rebel Only. Repulsor Vehicle Only,,You gain Cover 1,FALSE,FALSE,Cover 1,,FALSE,,,,,,,,
+150,Plo Koon,True,Pilot,TX-130 Saber-Class Fighter Tank Only,Free Action,Until the end of your activation you gain Agile 2,TRUE,FALSE,,,FALSE,,,,,,,,
+2800,Raiding Party Leader,null,Pilot,Raider only. Heavy Only. ,,You gain Allies of Convenience and Field Commander. Each friendly Raider vehicle unit gains Demoralize 1.,FALSE,FALSE,"Allies of Convenience, Field Commander",,FALSE,,,,,,,,
+90,Ryder Azadi,True,Pilot,Rebel Only. Repulsor Vehicle Only ,,"While performing a move, increase or decrease your maximum speed by 1",TRUE,FALSE,,,FALSE,,,,,,,,
+198,Shriv Suurgav,True,Pilot,Rebel Only. Heavy Only. ,Free Action,This unit gains Field Commander. >> Choose a friendly trooper unit at range 2. The chosen unit gains 1 dodge token and may gain 1 suppression token. ,FALSE,FALSE,,,FALSE,,,,,,,,
+120,T-Series Tactical Droid Pilot,False,Pilot,AAT Trade Federation Battle Tank Only,,You lose AI:Attack. You gain Field Commander,FALSE,FALSE,,,FALSE,,,,,,,,
+146,Veteran Clone Pilot,False,Pilot,TX-130 Saber-Class Fighter Tank Only,,"While you or a friendly clone trooper unit at range 1 and in line of sight attacks or defends, you and that unit can spend each othe's aim, dodge, and surge tokens. During the End Pahse, ready this card. ",TRUE,FALSE,,,FALSE,,,,,,,,
+29,Wedge Antilles,True,Pilot,Rebel Only. Repulsor Vehicle Only,Free Action,You gain Field Commander. >> Perform a pivot,FALSE,FALSE,,,FALSE,,,,,,,,
+4441,"""Bounty"" Programming",False,Programming,IG-11 only,,"You gain Bounty and AI: Aim, Attack. If you choose a Commander as the target of Bounty, your weapons gain Pierce 1. If you choose an operative as the target of Bounty, your weapons gain Suppressive.",FALSE,FALSE,"Bounty, AI: Aim, Attack",,FALSE,,,,,,,,
+3648,"""Nanny"" Programming",False,Programming,IG-11 only. Rebel Only,,"While building an army, Grogu gains Counterpart: IG-11. IG-11 gains AI: Doge, Move",FALSE,FALSE,"AI: Dodge, Move",,FALSE,,,,,,,,
+947,Attack Protocols,False,Programming,Vehicle Only,,,FALSE,FALSE,AI: Aim Precise 2,,FALSE,,,,,,,,
+961,Defense Protocols,False,Programming,Vehicle Only,,,FALSE,FALSE,"AI: Dodge, Nimble, Outmaneuver",,FALSE,,,,,,,,
+962,Engagement Protocols,False,Programming,Vehicle Only,,,FALSE,FALSE,"AI: Attack, Move",,FALSE,,,,,,,,
+6322,Programmed Loyalty,null,Programming,Imperial Dark Troopers Only,,This unit can only be issued orders by a Commander Unit. This unit gains Retinue: Commander,FALSE,FALSE,Retinue: Commander,,FALSE,,,,,,,,
+16554,Boil,True,Squad Leader,Corp Clone Trooper Only,,Add 1 Boil miniature. Leader. This unit gaiins Guardian 1 and Scout 1.,FALSE,FALSE,"Guardian 1, Scout 1",,FALSE,,,,,,,,
+16556,Clone Captain,False,Squad Leader,Clone Trooper Only,,Add 1 Clone Captain miniature. Leader. This unit gains Outmaneuver and Defend 1.,FALSE,FALSE,"Outmaneuver, Defend 1",,FALSE,,,,,,,,
+16555,Clone Commander,False,Squad Leader,Clone Trooper Only,,Add 1 Clone Commander miniature. Leader. This unit gains Inspire 1 and Reliable 1. ,FALSE,FALSE,"Inspire 1, Reliable 1",,FALSE,,,,,,,,
+16552,Fives,True,Squad Leader,Clone Trooper Only,,Add 1 Fives miniature. Leader. This unit's courage is increased by 1. This unit gains Charge and Coordinate: Clone Trooper.,FALSE,FALSE,"Charge, Coordinate: Clone Trooper",2,TRUE,Five's Blaster,,MR,,3,,,3
+16553,Waxer,True,Squad Leader,Corp Clone Trooper Only,,Add 1 Waxer miniature. Leader. This unit gains Disciplined 1 and Scout 1.,FALSE,FALSE,"Disciplined 1, Scout 1",,FALSE,,,,,,,,
+9399,Call to Arms,False,Training,Ewok Trooper only,,This unit gains one suppression token. This unit gains Charge unitl the end of the round. ,TRUE,FALSE,Charge,,FALSE,,,,,,,,
+33,Duck and Cover,False,Training,,,"While defending against a ranged attack, during the Apply Dodge and Cover step, you may gaini 1 suppression token.",FALSE,FALSE,,,FALSE,,,,,,,,
+70,Endurance,False,Training,,,"At the end of the Activation Phase, you may remove 1 suppression token.",FALSE,FALSE,,,FALSE,,,,,,,,
+9317,Forest Dwellers,null,Training,Ewok Trooper only,,"This unit gains Scout 1. At the Start of the first Activation Phase, this unit gains a dodge token.",FALSE,FALSE,Scout 1,,FALSE,,,,,,,,
+9625,Herbal Medicine,True,Training,,Free Action,Choose an ewok trooper unit at range 1. Remove 1 wound from the unit or restore 1 deafted miniature to the unit. ,TRUE,FALSE,,,FALSE,,,,,,,,
+38,Hunter,False,Training,,,"While attackin ga wounded trooper unit, during the Roll Attack Dice step, you may gain 1 aim token.",FALSE,FALSE,,,FALSE,,,,,,,,
+11867,Inquisitorius Training,null,Training,Fifth Brother or Seventh Sister Only,,"This unit gains Demoralize 1. When a unit at range 1 exhausts a force upgrade, you may roll a red defense die. On a block or a surge result, cancel the effect. The upgrade remains exhausted. ",FALSE,FALSE,Demoralize 1,,FALSE,,,,,,,,
+9400,Insatiable Curiosity,null,Training,Ewok Skirmishers or Ewok Slingers Only,Free Action,">>Choose an enemy unit in base contact with this unit's unit leader that has a heavy weapon, gear or armament upgrade equipped. Discard one of those non-unique or limited upgrades. This unit suffers one wound. ",FALSE,TRUE,,,FALSE,,,,,,,,
+628,Into the Fray,False,Training,,,"When an enemy unit at range 1 activates, you may gain 1 surge token.",FALSE,FALSE,,,FALSE,,,,,,,,
+129,Offensive Push,False,Training,,,"While preforming a move, gain Tactical 1.",TRUE,FALSE,Tactical 1,,FALSE,,,,,,,,
+179,Offensive Stance,False,Training,Force Icon Only,,"At the Start of your activation, you may flip this card. When you perform a dodge action, gain 2 dodge tokens instead of 1. You cannot spend aim tokens.",FALSE,FALSE,,,FALSE,,,,,,,,
+9626,Onward to Victory,True,Training,,,"This card may only be exhausted at the start of the Activation Phase. If you do, discard it at the start of the End Phase. While this card is exhausted, when an enemy unit is defeated, 1 friendly ewok trooper unit may perform a speed 1 move. ",TRUE,FALSE,,,FALSE,,,,,,,,
+72,Overwatch,False,Training,,,You gain Sentinel,FALSE,FALSE,Sentinel,,FALSE,,,,,,,,
+627,Protector,False,Training,,,"While using Guardian, you can cancel crit results as though they were hit results. During the End Phase, ready this card.",TRUE,FALSE,,,FALSE,,,,,,,,
+9624,Secret Ingredients,True,Training,,,"At the start of each round, put 1 aim or dodge token on this card. At the start of this unit's activation, it may remove any number of tokens from this card to gaiin the matchiing tokens. After this unit uses Aid, it may remove 1 suppression token. ",FALSE,FALSE,,,FALSE,,,,,,,,
+185,Seize the Initiative,False,Training,Commander or Opperative Only,,"During the Issue Orders step of the Command Phase, issue an order to yourself. ",FALSE,TRUE,,,FALSE,,,,,,,,
+172,Situational Awareness,False,Training,,,"While equipped to a Support unit, increase this card's points by 4. You gain outmaneuver.",FALSE,FALSE,Outmaneuver,,FALSE,,,,,,,,
+54,Tenacity,False,Training,,,"While performing a melee attack, if you are wounded or if one or more of your minis have been defeated, add 1 red attack die to your attack pool.",FALSE,FALSE,,,FALSE,,,,,,,,
+2631,Up Close and Personal,False,Training,,,"After you perform a ranged attack at range 1-2, gaini 1 dodge token.",FALSE,FALSE,,,FALSE,,,,,,,,

@@ -9,8 +9,7 @@ class Auth {
     this.auth0 = new auth0.WebAuth({
       redirectUri, domain, audience, clientID,
       responseType: 'id_token',
-      scope: 'openid profile email',
-      expires_in: 36 * 60 * 60 * 1000 // 36 hours
+      scope: 'openid profile email'
     });
     this.getProfile = this.getProfile.bind(this);
     this.handleAuthentication = this.handleAuthentication.bind(this);

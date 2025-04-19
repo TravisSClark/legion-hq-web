@@ -84,19 +84,19 @@ const PrintListImages = React.forwardRef(( props, ref) => {
     const { currentList } = props;
     const units = [];
     const commands = []; 
-    const battles = [];
+    const primaries = [];
+    const secondaries = [];
+    const advantages = [];
 
     currentList.units.forEach((unit, i) => {
       const card = cards[unit.unitId];
       const unitImage = `${urls.cdn}/${card.cardType}Cards/${card.imageName}`
       units.push(
-        <div>
-          <img
-            alt={card.cardName}
-            src={unitImage}
-            style={{ height: '200px', width: 'auto' }}
-          />
-        </div>
+        <img
+          alt={card.cardName}
+          src={unitImage}
+          style={{ height: '200px', width: 'auto' }}
+        />
       );
       unit.upgradesEquipped.forEach((upgradeId, i) => {
         if (!upgradeId) return;
@@ -111,6 +111,66 @@ const PrintListImages = React.forwardRef(( props, ref) => {
           />
         );
       });
+      units.push(<div></div>)
+      if (unit.counterpart) {
+        if (!unit.counterpart.counterpartId) return;
+        const counterpartCard = cards[unit.counterpart.counterpartId];
+        // Need to actually use this somewhere
+        const counterpartImage = `${urls.cdn}/${counterpartCard.cardType}Cards/${counterpartCard.imageName}`;
+        units.push(
+          <div>
+            <img
+              alt={counterpartCard.cardName}
+              src={counterpartImage}
+              style={{ height: '200px', width: 'auto' }}
+            />
+          </div>
+        );
+      }
+    });
+    currentList.commandCards.forEach((commandId, i) => {
+      const commandCard = cards[commandId];
+      const commandImage = `${urls.cdn}/${commandCard.cardType}Cards/${commandCard.imageName}`
+      commands.push(
+        <img
+          alt={commandCard.cardName}
+          src={commandImage}
+          style={{ height: '280px', width: 'auto' }}
+        />
+      );
+    });
+    currentList.primaryCards.forEach((primaryId, i) => {
+      const primaryCard = cards[primaryId];
+      const primaryImage = `${urls.cdn}/${primaryCard.cardType}Cards/${primaryCard.imageName}`
+      primaries.push(
+        <img
+          alt={primaryCard.cardName}
+          src={primaryImage}
+          style={{ height: '280px', width: 'auto' }}
+        />
+      );
+    });
+    currentList.secondaryCards.forEach((secondaryId, i) => {
+      const secondaryCard = cards[secondaryId];
+      const secondaryImage = `${urls.cdn}/${secondaryCard.cardType}Cards/${secondaryCard.imageName}`
+      secondaries.push(
+        <img
+          alt={secondaryCard.cardName}
+          src={secondaryImage}
+          style={{ height: '280px', width: 'auto' }}
+        />
+      );
+    });
+    currentList.advantageCards.forEach((advantageId, i) => {
+      const advantageCard = cards[advantageId];
+      const advantageImage = `${urls.cdn}/${advantageCard.cardType}Cards/${advantageCard.imageName}`
+      advantages.push(
+        <img
+          alt={advantageCard.cardName}
+          src={advantageImage}
+          style={{ height: '280px', width: 'auto' }}
+        />
+      );
     });
     // Need to do something similar as above for commands and battle cards
 
@@ -124,34 +184,11 @@ const PrintListImages = React.forwardRef(( props, ref) => {
           justifyContent: 'space-evenly'
         }}
       >
-        <div>{units}</div>
-        <div style={{ display: 'flex', flexFlow: 'column', justifyContent: 'space-between' }}>
-          {(
-            <div>
-              {commands.map((line, i) => {
-                if (line.includes('Commands:')) {
-                  return <b key="commands header">Command Hand</b>;
-                }
-                return <div key={`${line}_${i}`}>{line}</div>;
-              })}
-              <div style={{ marginTop: 4 }} />
-              {battles.map((line, i) => {
-                if (line.includes('Battle Deck')) {
-                  return <b key="battle deck header">Battle Deck</b>;
-                }
-                return <div key={`${line}_${i}`}>{line}</div>;
-              })}
-            </div>
-          )}
-          <div>
-            {battles.map((line, i) => {
-              if (line.includes('Battle Deck')) {
-                return <b key="battle deck header">Battle Deck</b>;
-              }
-              return <div key={`${line}_${i}`}>{line}</div>;
-            })}
-          </div>
-        </div>
+        <div style={{pageBreakAfter: 'always'}}>{units}</div>
+        <div style={{pageBreakAfter: 'always'}}>{commands}</div>
+        <div>{primaries}</div>
+        <div>{secondaries}</div>
+        <div>{advantages}</div>
       </div>
     )
 })
