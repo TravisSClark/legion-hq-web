@@ -523,8 +523,7 @@ function checkValidCards(currentList) {
       for (let j = 0; j < unit.upgradesEquipped.length; j++) {
         let id = unit.upgradesEquipped[j];
         if(id && !cards[id]) {
-          unit.upgradesEquipped.splice(j, 1);
-          j--;
+          unit.upgradesEquipped[j] = null;
         };
       }
     }
