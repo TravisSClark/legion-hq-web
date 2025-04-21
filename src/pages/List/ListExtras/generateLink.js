@@ -23,9 +23,6 @@ function generateLink(list) {
   });
   list.commandCards.forEach(commandId => urlStrings.push(commandId));
 
-  if (list.contingencies)
-    list.contingencies.forEach(commandId => urlStrings.push(commandId));
-
   [list.primaryCards, list.secondaryCards, list.advantageCards].forEach(bArray=>{
     bArray.forEach(id=>{
       if(id) urlStrings.push(id);

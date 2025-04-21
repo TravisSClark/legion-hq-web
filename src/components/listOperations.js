@@ -50,22 +50,14 @@ function countPoints(list) {
 }
 
 /**
- * Lots of various reduction and housekeeping things. 
- * E.g. remove Contingencies deck if you no longer have
+ * Removes command cards if commander is removed
  * @param {} list 
  * @returns 
  */
  // TODO need to specialize this; should at least be a on-upgrade and on-unit fire, not this whole big thing
 function consolidate(list) {
-  let hasContingencyKeyword = false;
   // TODO see about moving these into validator
   const cardNames = list.units.map(u=>cards[u.unitId].cardName);
-
-  for (let i = 0; i < list.units.length; i++) {
-    const unitCard = cards[list.units[i].unitId];
-
-    if (unitCard.keywords.includes('Contingencies')) hasContingencyKeyword = true;
-  }
 
   for (let i = list.commandCards.length - 1; i > -1 ; i--) {
     const { commander } = cards[list.commandCards[i]];
@@ -74,15 +66,6 @@ function consolidate(list) {
     }
   }
 
-  if (list.contingencies) {
-    for (let i = list.contingencies.length - 1; i > -1; i--) {
-      const { commander } = cards[list.contingencies[i]];
-      if (commander && !cardNames.includes(commander)) {
-        list = removeContingency(list, i);
-      }
-    }
-  }
-  if (!hasContingencyKeyword) list.contingencies = [];
   list.commandCards = sortCommandIds(list.commandCards);
   return countPoints(list);
 }
@@ -184,11 +167,6 @@ function addUnit(list, unitId, stackSize = 1) {
   
   let unitIndex = findUnitIndexInList(newUnitObject, list);
 
-  // TODO TODO - this  will break stuff again if a list can have 2 units with Contingencies
-  // Should set list.contingencies=[] by default and let consolidate handle the show/no-show/emptying of it
-  if (unitCard.keywords.includes('Contingencies')) {
-    if (!list.contingencies) list.contingencies = [];
-  }
   if (unitIndex > -1) {
     list.units[unitIndex].count += stackSize;
     list.units[unitIndex].totalUnitCost += unitCard.cost * stackSize;
@@ -252,16 +230,6 @@ function decrementUnit(list, index, count = 1) {
     list.units[index].count -= count;
   }
   return consolidate(list);
-}
-
-function addContingency(list, commandId) {
-  list.contingencies.push(commandId);
-  return list;
-}
-
-function removeContingency(list, contingencyIndex) {
-  list.contingencies.splice(contingencyIndex, 1);
-  return list;
 }
 
 function addCommand(list, commandId) {
@@ -432,8 +400,6 @@ export {
   removeBattle,
   addCommand,
   removeCommand,
-  addContingency,
-  removeContingency,
   equipUpgrade,
   unequipUpgrade,
   equipCounterpartUpgrade,

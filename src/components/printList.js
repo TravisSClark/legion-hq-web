@@ -80,18 +80,6 @@ function generateTournamentText(list, html) {
     commands = `${lineBreak}Commands:${lineBreak}${commands}`;
     commands += `••••Standing Orders${lineBreak}`;
   }
-  let contingencies = '';
-  if (list.contingencies && list.contingencies.length > 0) {
-    contingencies = `${lineBreak}Contingencies:${lineBreak}`;
-    list.contingencies.forEach(commandId => {
-      let pips = '••••';
-      const commandCard = cards[commandId];
-      if (commandCard.cardSubtype === '1') pips = '•';
-      else if (commandCard.cardSubtype === '2') pips = '••';
-      else if (commandCard.cardSubtype === '3') pips = '•••';
-      contingencies += `${pips}${commandCard.cardName}${lineBreak}`;
-    });
-  }
 
   let battleDeck = '';
   battleDeck += generateMissionCards(list.primaryCards, "Objectives", false);
@@ -102,7 +90,7 @@ function generateTournamentText(list, html) {
     battleDeck = `${lineBreak}Battle Deck${lineBreak}` + battleDeck;
   }
   
-  return header + units + commands + contingencies + battleDeck;
+  return header + units + commands + battleDeck;
 }
 
 // TODO: I really want to combine this logic with the one above somehow
@@ -167,19 +155,7 @@ function generateStandardText(list) {
     commands += `${commandCard.cardName}, `;
   });
   if (commands !== '') commands += '•••• Standing Orders';
-  let contingencies = '';
-  if (list.contingencies && list.contingencies.length > 0) {
-    contingencies += '\nContingencies: ';
-    list.contingencies.forEach(id => {
-      const commandCard = cards[id];
-      if (commandCard.cardSubtype === '1') contingencies += '• ';
-      else if (commandCard.cardSubtype === '2') contingencies += '•• ';
-      else if (commandCard.cardSubtype === '3') contingencies += '••• ';
-      else contingencies += '•••• ';
-      contingencies += `${commandCard.cardName}, `;
-    });
-  }
-  return header + points + units + commands + contingencies;
+  return header + points + units + commands;
 }
 
 function generateTTSJSONText(list) {
@@ -225,9 +201,6 @@ function generateTTSJSONText(list) {
   writeCardsToJsonArray(list.commandCards, ttsJSON.commandCards);
 
   ttsJSON.commandCards.push('Standing Orders');
-
-  ttsJSON.contingencies = [];
-  writeCardsToJsonArray(list.contingencies, ttsJSON.contingencies);
 
   ttsJSON.units = [];
   for (let i = 0; i < list.units.length; i++) {
@@ -337,19 +310,7 @@ function generateMinimalText(list) {
     commands += `${commandCard.cardName}, `;
   });
   if (commands !== '') commands += '•••• Standing Orders';
-  let contingencies = '';
-  if (list.contingencies && list.contingencies.length > 0) {
-    contingencies += '\nContingencies: ';
-    list.contingencies.forEach((id, i) => {
-      const commandCard = cards[id];
-      if (commandCard.cardSubtype === '1') contingencies += '• ';
-      else if (commandCard.cardSubtype === '2') contingencies += '•• ';
-      else if (commandCard.cardSubtype === '3') contingencies += '••• ';
-      else contingencies += '•••• ';
-      contingencies += `${commandCard.cardName}, `;
-    });
-  }
-  return header + units + commands + contingencies;
+  return header + units + commands;
 }
 
 export {

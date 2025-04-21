@@ -93,7 +93,6 @@ function segmentToUnitObject(unitIndex, segment) {
 function convertHashToList(faction, url) {
   let list = JSON.parse(JSON.stringify(listTemplate));
   list.faction = faction;
-  list.contingencies = [];
   let segments;
   if (url.includes(':')) {
     segments = url.split(':');
@@ -148,11 +147,7 @@ function convertHashToList(faction, url) {
       if (cardId === '') return;
       const card = cards[cardId];
       if (card.cardType === 'command') {
-        if (commandCardSlots > 0) {
-          list.commandCards.push(cardId);
-        } else {
-          list.contingencies.push(cardId);
-        }
+        list.commandCards.push(cardId);
       } else if (card.cardSubtype === 'primary') {
         list.primaryCards.push(cardId);
       } else if (card.cardSubtype === 'secondary') {

@@ -24,13 +24,10 @@ const CardSelector = () => {
     getEligibleUnitsToAdd,
     getEquippableUpgrades,
     getEligibleCommandsToAdd,
-    getEligibleContingenciesToAdd,
     getEligibleBattlesToAdd,
     handleAddUnit,
     handleAddCommand,
-    handleAddContingency,
     handleRemoveCommand,
-    handleRemoveContingency,
     handleAddBattle,
     handleRemoveBattle,
     handleCardZoom,
@@ -129,28 +126,6 @@ const CardSelector = () => {
           <div style={{ display: 'flex', alignItems: 'center', flexFlow: 'row wrap' }}>
             <Title title="Commands:" style={{ marginRight: 4 }} />
             {currentCommands}
-          </div>
-        );
-      }
-      break;
-    case 'CONTINGENCY':
-      selectorIds = getEligibleContingenciesToAdd(currentList);
-      clickHandler = (commandId) => handleAddContingency(commandId);
-      if (currentList.contingencies || currentList.contingencies.length === 0) {
-        header = <Title title="Add contingency cards" />;
-      } else {
-        const currentContingencies = currentList.contingencies.map((commandId, i) => (
-          <ChipCard
-            card={cards[commandId]}
-            key={commandId}
-            handleClick={()=>handleCardZoom(commandId)}
-            handleDelete={() => handleRemoveContingency(i)}
-          />
-        ));
-        header = (
-          <div style={{ display: 'flex', alignItems: 'center', flexFlow: 'row wrap' }}>
-            <Title title="Commands:" style={{ marginRight: 4 }} />
-            {currentContingencies}
           </div>
         );
       }

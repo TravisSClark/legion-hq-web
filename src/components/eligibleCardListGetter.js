@@ -144,7 +144,7 @@ const stormTideCommands = {
   'storm tide: special forces': ['AD', 'AH', 'AI']
 };
 
-function getEligibleCcs(list, isContingencies = false){
+function getEligibleCcs(list){
   const validCcs = [];
   const pipCounts = { '1': 0, '2': 0, '3': 0 };
   list.commandCards.forEach(id => {
@@ -165,12 +165,10 @@ function getEligibleCcs(list, isContingencies = false){
 
     const card = cards[id];
 
-    if (!isContingencies && pipCounts[card.cardSubtype] > 1) return false; 
     if (!list.faction.includes(card.faction)) return false;
     if (card.battleForce && card.battleForce !== list.battleForce) return false;
 
     if (list.commandCards.includes(id)) return false;
-    if (list.contingencies && list.contingencies.includes(id)) return false;
 
     // For now, leave both in in case there's a card I'm not thinking of (...again, I don't think there is)
     if(card.commander){
@@ -210,27 +208,6 @@ function getEligibleCommandsToAdd(list) {
   return {
     validIds: sortCommandIds(validCommandIds),
     invalidIds: [] // sortCommandIds(invalidCommandIds)
-  };
-}
-
-function getEligibleContingenciesToAdd(list) {
-  if (!list.contingencies) list.contingencies = [];
-  let validCommandIds = [];
-
-  let numContingencies = 0;
-  list.units.forEach((unit) => {
-    const unitCard = cards[unit.unitId];
-    if (unitCard.contingencies && unitCard.contingencies > 0)
-      numContingencies += unitCard.contingencies
-  });
-
-  if(list.contingencies.length < numContingencies){
-    validCommandIds = getEligibleCcs(list, true);
-  }
-
-  return {
-    validIds: sortCommandIds(validCommandIds),
-    invalidIds:[] 
   };
 }
 
@@ -387,7 +364,6 @@ function findUnitIndexInList(unit, list){
 export{
   getEligibleBattlesToAdd,
   getEligibleUnitsToAdd,
-  getEligibleContingenciesToAdd,
   getEligibleCommandsToAdd,
   getEquippableUpgrades,
   unitHasUniques,

@@ -13,8 +13,6 @@ import {
   decrementUnit,
   addCommand,
   removeCommand,
-  addContingency,
-  removeContingency,
   addCounterpart,
   removeCounterpart,
   addBattle,
@@ -28,7 +26,6 @@ import { validateList } from 'components/listValidator';
 
 import {
   getEligibleCommandsToAdd,
-  getEligibleContingenciesToAdd,
   getEligibleUnitsToAdd,
   getEquippableUpgrades,
   getEligibleBattlesToAdd,
@@ -274,16 +271,8 @@ export function ListProvider({
     const newList = addCommand(currentList, commandId);
     setCurrentList({ ...newList });
   }
-  const handleAddContingency = (commandId) => {
-    const newList = addContingency(currentList, commandId);
-    setCurrentList({ ...newList });
-  }
   const handleRemoveCommand = (commandIndex) => {
     const newList = removeCommand(currentList, commandIndex);
-    setCurrentList({ ...newList });
-  }
-  const handleRemoveContingency = (contingencyIndex) => {
-    const newList = removeContingency(currentList, contingencyIndex);
     setCurrentList({ ...newList });
   }
   const handleAddBattle = (type, battleId) => {
@@ -413,10 +402,7 @@ export function ListProvider({
   const commandProps = {
     getEligibleCommandsToAdd,
     handleAddCommand,
-    handleRemoveCommand,
-    getEligibleContingenciesToAdd,
-    handleAddContingency,
-    handleRemoveContingency
+    handleRemoveCommand
   };
   const listProps = {
     currentList,
