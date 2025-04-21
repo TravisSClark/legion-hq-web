@@ -201,6 +201,7 @@ function generateTTSJSONText(list) {
   writeCardsToJsonArray(list.commandCards, ttsJSON.commandCards);
 
   ttsJSON.commandCards.push('Standing Orders');
+  ttsJSON.contingencies = [];
 
   ttsJSON.units = [];
   for (let i = 0; i < list.units.length; i++) {

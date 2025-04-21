@@ -165,6 +165,7 @@ function getEligibleCcs(list){
 
     const card = cards[id];
 
+    if (pipCounts[card.cardSubtype] > 1) return false; 
     if (!list.faction.includes(card.faction)) return false;
     if (card.battleForce && card.battleForce !== list.battleForce) return false;
 
