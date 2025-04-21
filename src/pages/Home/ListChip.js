@@ -40,7 +40,7 @@ function ListChip({ userList, deleteUserList }) {
               avatar={card ? (
                 <Img
                   alt={card.cardName}
-                  src={`${urls.cdn}/unitIcons/${card.imageName}`}
+                  src={`${urls.cdn}/unitIcons/${card.imageName}?${new Date().getTime()}`}
                   style={{
                     marginLeft: 0,
                     width: 44,

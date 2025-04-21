@@ -11,7 +11,7 @@ function AddCounterpartButton({ counterpartId, handleClick }) {
       <Icon style={{ height: size, width: size }}>
         <Avatar
           alt={cardName}
-          src={`${urls.cdn}/counterpartIcons/${imageName}`}
+          src={`${urls.cdn}/counterpartIcons/${imageName}?${new Date().getTime()}`}
           style={{ height: size, width: size }}
         />
       </Icon>

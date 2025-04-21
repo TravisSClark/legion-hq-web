@@ -172,7 +172,7 @@ function getEligibleCcs(list){
 
     // For now, leave both in in case there's a card I'm not thinking of (...again, I don't think there is)
     if(card.commander){
-      let commanders = typeof Array.isArray(card.commander) ?  card.commander : [card.commander];
+      let commanders = Array.isArray(card.commander) ?  card.commander : [card.commander];
       if((!cardNames.some(c=> commanders.includes(c)) && !listCounterparts.some(c=>commanders.includes(c)))) return false;
     }
     if (card.isStormTide){

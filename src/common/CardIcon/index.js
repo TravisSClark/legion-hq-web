@@ -31,7 +31,7 @@ function CardIcon({
     <Img
       decode={false}
       alt={card.cardName}
-      src={`${urls.cdn}/${card.cardType}Icons/${card.imageName}`}
+      src={`${urls.cdn}/${card.cardType}Icons/${card.imageName}?${new Date().getTime()}`}
       style={{ scale: 5 }}
       loader={placeholder}
       className={clsx(classes.image, classes[size], {

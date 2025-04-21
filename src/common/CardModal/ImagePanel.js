@@ -23,7 +23,7 @@ function ImagePanel({ card, extraCardImage = false }) {
         <ExpansionPanelDetails style={{ padding: '0px 24px 24px' }}>
           <div>
             <Img
-              src={`${urls.cdn}/${cardType}Cards/${extraCardImage ? `extra-${imageName}` : imageName}`}
+              src={`${urls.cdn}/${cardType}Cards/${extraCardImage ? `extra-${imageName}` : imageName}?${new Date().getTime()}`}
               style={{ width: '100%' }}
             />
             <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
