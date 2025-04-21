@@ -87,36 +87,6 @@ function consolidate(list) {
   return countPoints(list);
 }
 
-function equipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId) {
-  const unit = list.units[unitIndex];
-  const counterpart = unit.counterpart;
-  counterpart.loadoutUpgrades[upgradeIndex] = upgradeId;
-  return list;
-}
-
-function unequipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex) {
-  const unit = list.units[unitIndex];
-  const counterpart = unit.counterpart;
-  if (counterpart.loadoutUpgrades[upgradeIndex]) {
-    counterpart.loadoutUpgrades[upgradeIndex] = null;
-  }
-  return list;
-}
-
-function equipLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId) {
-  const unit = list.units[unitIndex];
-  unit.loadoutUpgrades[upgradeIndex] = upgradeId;
-  return list;
-}
-
-function unequipLoadoutUpgrade(list, unitIndex, upgradeIndex) {
-  const unit = list.units[unitIndex];
-  if (unit.loadoutUpgrades[upgradeIndex]) {
-    unit.loadoutUpgrades[upgradeIndex] = null;
-  }
-  return list;
-}
-
 function equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll) {
   // applying upgrade to multiple units
   const unit = list.units[unitIndex];
@@ -167,9 +137,6 @@ function unequipCounterpartUpgrade(list, unitIndex, upgradeIndex) {
   const upgradeCard = cards[counterpart.upgradesEquipped[upgradeIndex]];
   counterpart.upgradesEquipped[upgradeIndex] = null;
   counterpart.totalUnitCost -= upgradeCard.cost;
-  if (counterpart.loadoutUpgrades.length > 0) {
-    counterpart.loadoutUpgrades[upgradeIndex] = null;
-  }
   return list;
 }
 
@@ -182,16 +149,12 @@ function addCounterpart(list, unitIndex, counterpartId) {
     counterpartId: counterpartCard.id,
     totalUnitCost: counterpartCard.cost,
     upgradesEquipped: [],
-    loadoutUpgrades: [],
     additionalUpgradeSlots: []
   };
 
   if(counterpartCard.upgradeBar){
     for (let i = 0; i < counterpartCard.upgradeBar.length; i++) {
       unit.counterpart.upgradesEquipped.push(null);
-      if (unitCard.keywords.includes('Loadout')) {
-        unit.counterpart.loadoutUpgrades.push(null);
-      }
     }
   }
   return consolidate(list);
@@ -210,16 +173,12 @@ function addUnit(list, unitId, stackSize = 1) {
     count: unitCard.isUnique || unitCard.isUniqueTitle ? 1 : stackSize,
     totalUnitCost: unitCard.cost * stackSize,
     upgradesEquipped: [],
-    loadoutUpgrades: [],
     additionalUpgradeSlots: []
   };
 
   if (newUnitObject.upgradesEquipped.length === 0) {
     for (let i = 0; i < unitCard.upgradeBar.length; i++) {
       newUnitObject.upgradesEquipped.push(null);
-      if (unitCard.keywords.includes('Loadout')) {
-        newUnitObject.loadoutUpgrades.push(null);
-      }
     }
   }
   
@@ -373,10 +332,6 @@ function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyT
     unitIndex = newIndex;
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
-  } else if (action === 'UNIT_LOADOUT_UPGRADE') {
-    list = equipLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
-  } else if (action === 'COUNTERPART_LOADOUT_UPGRADE') {
-    list = equipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   }
 
   list = consolidate(list);
@@ -390,10 +345,6 @@ function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
     list = unequipUnitUpgrade(list, unitIndex, upgradeIndex);
   } else if (action === 'COUNTERPART_UPGRADE') {
     list = unequipCounterpartUpgrade(list, unitIndex, upgradeIndex);
-  } else if (action === 'UNIT_LOADOUT_UPGRADE') {
-    list = unequipLoadoutUpgrade(list, unitIndex, upgradeIndex);
-  } else if (action === 'COUNTERPART_LOADOUT_UPGRADE') {
-    list = unequipCounterpartLoadoutUpgrade(list, unitIndex, upgradeIndex);
   }
 
   return consolidate(list);
@@ -452,10 +403,6 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
   const newUnit = JSON.parse(JSON.stringify(unit));
   newUnit.count = 1;
   newUnit.upgradesEquipped[upgradeIndex] = null;
-
-  if (newUnit.loadoutUpgrades && newUnit.loadoutUpgrades.length > 0) {
-    newUnit.loadoutUpgrades[upgradeIndex] = null;
-  }
   
   if ('additionalUpgradeSlots' in upgradeCard) {
     newUnit.additionalUpgradeSlots = [];
@@ -491,8 +438,6 @@ export {
   unequipUpgrade,
   equipCounterpartUpgrade,
   unequipCounterpartUpgrade,
-  equipLoadoutUpgrade,
-  unequipLoadoutUpgrade,
   incrementUnit,
   decrementUnit,
   countPoints, 

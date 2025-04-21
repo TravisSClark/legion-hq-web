@@ -38,30 +38,13 @@ function RowDisplay({ unit, faction, handleCardZoom }) {
         />
         {unit.upgradesEquipped.map((upgradeId, i) => {
           if (upgradeId) {
-            if (unit.loadoutUpgrades && unit.loadoutUpgrades[i]) {
-              const loadoutUpgradeId = unit.loadoutUpgrades[i];
-              return (
-                <div key={upgradeId} style={{ display: 'flex', flexflow: 'row nowrap' }}>
-                  <CardImage
-                    id={upgradeId}
-                    handleClick={() => handleCardZoom(upgradeId)}
-                  />
-                  <CardImage
-                    id={loadoutUpgradeId}
-                    isLoadout={true}
-                    handleClick={() => handleCardZoom(loadoutUpgradeId)}
-                  />
-                </div>
-              );
-            } else {
-              return (
-                <CardImage
-                  key={upgradeId}
-                  id={upgradeId}
-                  handleClick={() => handleCardZoom(upgradeId)}
-                />
-              );
-            }
+            return (
+              <CardImage
+                key={upgradeId}
+                id={upgradeId}
+                handleClick={() => handleCardZoom(upgradeId)}
+              />
+            );
           } else return null;
         })}
         {flawId && (
@@ -79,30 +62,13 @@ function RowDisplay({ unit, faction, handleCardZoom }) {
           />
           {counterpart.upgradesEquipped.map((upgradeId, i) => {
             if (upgradeId) {
-              if (counterpart.loadoutUpgrades && counterpart.loadoutUpgrades[i]) {
-                const loadoutUpgradeId = counterpart.loadoutUpgrades[i];
-                return (
-                  <div key={upgradeId} style={{ display: 'flex', flexflow: 'row nowrap' }}>
-                    <CardImage
-                      id={upgradeId}
-                      handleClick={() => handleCardZoom(upgradeId)}
-                    />
-                    <CardImage
-                      id={loadoutUpgradeId}
-                      isLoadout={true}
-                      handleClick={() => handleCardZoom(loadoutUpgradeId)}
-                    />
-                  </div>
-                );
-              } else {
-                return (
-                  <CardImage
-                    key={upgradeId}
-                    id={upgradeId}
-                    handleClick={() => handleCardZoom(upgradeId)}
-                  />
-                );
-              }
+              return (
+                <CardImage
+                  key={upgradeId}
+                  id={upgradeId}
+                  handleClick={() => handleCardZoom(upgradeId)}
+                />
+              );
             } else return null;
           })}
         </div>

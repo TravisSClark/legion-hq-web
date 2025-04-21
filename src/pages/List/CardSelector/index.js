@@ -23,7 +23,6 @@ const CardSelector = () => {
     setCardPaneFilter,
     getEligibleUnitsToAdd,
     getEquippableUpgrades,
-    getEquippableLoadoutUpgrades,
     getEligibleCommandsToAdd,
     getEligibleContingenciesToAdd,
     getEligibleBattlesToAdd,
@@ -109,33 +108,6 @@ const CardSelector = () => {
           }}>
             Skip
         </Button>
-        </div>
-      );
-      break;
-    case 'UNIT_LOADOUT_UPGRADE':
-    case 'COUNTERPART_LOADOUT_UPGRADE':
-      let id = cardPaneFilter.unitId;
-      selectorIds = getEquippableLoadoutUpgrades(
-        currentList,
-        cardPaneFilter.upgradeType,
-        id,
-        cardPaneFilter.upgradeIndex,
-        cardPaneFilter.upgradesEquipped
-      );
-      clickHandler = (upgradeId) => handleEquipUpgrade(
-        action,
-        cardPaneFilter.unitIndex,
-        cardPaneFilter.upgradeIndex,
-        upgradeId
-      );
-      header = (
-        <div style={{display:'flex', flexDirection: 'row', justifyContent:'space-between', alignItems:"center", flex:1}} >
-          <Title title={"Add loadout upgrade"} />
-          <Button size="large" style={{marginLeft:20}} onClick={()=>{
-              setCardSelectorToNextUpgradeSlot(currentList, action, cardPaneFilter.unitIndex, cardPaneFilter.upgradeIndex, isApplyToAll, true)
-            }}>
-              Skip
-          </Button>
         </div>
       );
       break;

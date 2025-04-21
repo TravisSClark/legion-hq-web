@@ -291,36 +291,6 @@ function getEquippableUpgrades(
   };
 }
 
-
-function getEquippableLoadoutUpgrades(
-  list, upgradeType, id, upgradeIndex, upgradesEquipped
-) {
-  const upgrades = getEquippableUpgrades(
-    list, upgradeType, id, upgradesEquipped
-  );
-  const validIds = upgrades.validIds;
-  const invalidIds = upgrades.invalidIds;
-  const validLoadoutUpgradeIds = [];
-  const invalidLoadoutUpgradeIds = [...invalidIds];
-  const parentUpgradeCard = cards[upgradesEquipped[upgradeIndex]];
-  for (let i = 0; i < validIds.length; i++) {
-    const upgradeId = validIds[i]
-    const upgradeCard = cards[upgradeId];
-    if (
-      upgradeCard.cost <= parentUpgradeCard.cost &&
-      upgradeId !== parentUpgradeCard.id
-    ) {
-      validLoadoutUpgradeIds.push(upgradeCard.id);
-    } else {
-      invalidLoadoutUpgradeIds.push(upgradeCard.id);
-    }
-  }
-  return {
-    validIds: validLoadoutUpgradeIds,
-    invalidIds: invalidLoadoutUpgradeIds
-  };
-}
-
 function getEligibleBattlesToAdd(list, type) {
   const validIds = [];
   const invalidIds = [];
@@ -419,7 +389,6 @@ export{
   getEligibleUnitsToAdd,
   getEligibleContingenciesToAdd,
   getEligibleCommandsToAdd,
-  getEquippableLoadoutUpgrades,
   getEquippableUpgrades,
   unitHasUniques,
   getListUniques,

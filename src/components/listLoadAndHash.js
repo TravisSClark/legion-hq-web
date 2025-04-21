@@ -37,11 +37,7 @@ function mergeLists(primaryList, secondaryList) {
 
 function processUnitSegment(segment) {
   const unitSegment = segment.slice(0, 3);
-  let loadoutSegment; let upgradeSegment = segment.slice(3);
-  if (upgradeSegment.includes('_')) {
-    loadoutSegment = upgradeSegment.split('_')[1];
-    upgradeSegment = upgradeSegment.split('_')[0]
-  }
+  let upgradeSegment = segment.slice(3);
   const unitCount = Number.parseInt(unitSegment.charAt(0));
   const unitId = unitSegment.charAt(1) + unitSegment.charAt(2);
   const unitCard = cards[unitId];
@@ -50,7 +46,6 @@ function processUnitSegment(segment) {
     count: unitCount,
     totalUnitCost: unitCard.cost * unitCount,
     upgradesEquipped: [],
-    loadoutUpgrades: [],
     additionalUpgradeSlots: []
   };
   let upgradeIndex = 0;
@@ -70,18 +65,6 @@ function processUnitSegment(segment) {
       upgradeIndex++;
     }
   }
-  let loadoutIndex = 0;
-  for (let i = 0; loadoutSegment && i < loadoutSegment.length; i++) {
-    if (loadoutSegment.charAt(i) === '0') {
-      newUnit.loadoutUpgrades[loadoutIndex] = null;
-      loadoutIndex++;
-    } else {
-      const upgradeId = loadoutSegment.charAt(i) + loadoutSegment.charAt(i + 1);
-      newUnit.loadoutUpgrades[loadoutIndex] = upgradeId;
-      i++;
-      loadoutIndex++;
-    }
-  }
   return newUnit;
 }
 
@@ -94,7 +77,6 @@ function segmentToUnitObject(unitIndex, segment) {
       unitId,
       totalUnitCost,
       upgradesEquipped,
-      loadoutUpgrades,
       additionalUpgradeSlots
     } = counterpart;
     unit.counterpart = {
@@ -102,7 +84,6 @@ function segmentToUnitObject(unitIndex, segment) {
       counterpartId: unitId,
       totalUnitCost,
       upgradesEquipped,
-      loadoutUpgrades,
       additionalUpgradeSlots
     };
   } else unit = processUnitSegment(segment);

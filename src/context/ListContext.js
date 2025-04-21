@@ -31,7 +31,6 @@ import {
   getEligibleContingenciesToAdd,
   getEligibleUnitsToAdd,
   getEquippableUpgrades,
-  getEquippableLoadoutUpgrades,
   getEligibleBattlesToAdd,
 } from 'components/eligibleCardListGetter'
 
@@ -199,46 +198,6 @@ export function ListProvider({
                 unitId: unit.unitId,
                 upgradesEquipped,
                 additionalUpgradeSlots: []
-              }
-            }
-            return null;
-          }
-          break;
-
-        case "COUNTERPART_LOADOUT_UPGRADE":
-          // Punt for now - rather have non-function than a breaking change if/when a 
-          // counterpart with loadout and multiple slots appears in-game
-          upgradesEquipped = unit.counterpart.upgradesEquipped;
-          upgradeBar = cards[unit.counterpart.counterpartId].upgradeBar;
-          getFilter = () => null
-          break;
-
-        case "UNIT_LOADOUT_UPGRADE":
-          // If it's a laodout upgrade, return a UNIT_LOADOUT selector if the next upgrade is filled, return a UNIT_UPGRADE pick if not
-
-          getFilter = (index, getNewType) =>{
-            if(!getNewType || upgradeBar[upgradeIndex] !== upgradeBar[index]){
-
-              if (!upgradesEquipped[index]) {
-                return {
-                  action: "UNIT_UPGRADE",
-                  unitIndex,
-                  upgradeIndex: index,
-                  upgradeType: upgradeBar[index],
-                  unitId: unit.unitId,
-                  upgradesEquipped: unit.upgradesEquipped,
-                  additionalUpgradeSlots: unit.additionalUpgradeSlots
-                }
-              } else if(!unit.loadoutUpgrades[index]){
-                return {
-                  action: "UNIT_LOADOUT_UPGRADE",
-                  unitIndex,
-                  upgradeIndex: index,
-                  upgradeType: upgradeBar[index],
-                  unitId: unit.unitId,
-                  upgradesEquipped: unit.upgradesEquipped,
-                  additionalUpgradeSlots: unit.additionalUpgradeSlots
-                }
               }
             }
             return null;
@@ -437,7 +396,6 @@ export function ListProvider({
   const unitProps = {
     getEligibleUnitsToAdd,
     getEquippableUpgrades,
-    getEquippableLoadoutUpgrades,
     handleAddUnit,
     handleAddCounterpart,
     handleRemoveCounterpart,

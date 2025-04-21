@@ -41,13 +41,7 @@ function generateTournamentText(list, html) {
       for (let j = 0; j < unit.upgradesEquipped.length; j++) {
         if (unit.upgradesEquipped[j]) {
           const upgradeCard = cards[unit.upgradesEquipped[j]];
-          if (unit.loadoutUpgrades && unit.loadoutUpgrades[j]) {
-            const loadoutCard = cards[unit.loadoutUpgrades[j]];
-            units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})`;
-            units += `/${loadoutCard.cardName} (${loadoutCard.cost})${lineBreak}`;
-          } else {
-            units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})${lineBreak}`;
-          }
+          units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})${lineBreak}`;
         }
       }
       if (unit.counterpart) {
@@ -57,13 +51,7 @@ function generateTournamentText(list, html) {
         for (let j = 0; j < counterpart.upgradesEquipped.length; j++) {
           if (counterpart.upgradesEquipped[j]) {
             const upgradeCard = cards[counterpart.upgradesEquipped[j]];
-            if (counterpart.loadoutUpgrades && counterpart.loadoutUpgrades[j]) {
-              const loadoutCard = cards[counterpart.loadoutUpgrades[j]];
-              units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})`;
-              units += `/${loadoutCard.cardName} (${loadoutCard.cost})${lineBreak}`;
-            } else {
-              units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})${lineBreak}`;
-            }
+            units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})${lineBreak}`;
           }
         }
       }
@@ -141,16 +129,8 @@ function generateStandardText(list) {
       unit.upgradesEquipped.forEach((upgradeId, i) => {
         if (!upgradeId) return;
         const upgradeCard = cards[upgradeId];
-        if (unit.loadoutUpgrades && unit.loadoutUpgrades[i]) {
-          const loadoutCard = cards[unit.loadoutUpgrades[i]];
-          line += upgradeCard.displayName ? upgradeCard.displayName : upgradeCard.cardName;
-          line += ` (${upgradeCard.cost})/`;
-          line += loadoutCard.displayName ? loadoutCard.displayName : loadoutCard.cardName;
-          line += ` (${loadoutCard.cost}), `;
-        } else {
-          line += upgradeCard.displayName ? upgradeCard.displayName : upgradeCard.cardName;
-          line += ` (${upgradeCard.cost}), `;
-        }
+        line += upgradeCard.displayName ? upgradeCard.displayName : upgradeCard.cardName;
+        line += ` (${upgradeCard.cost}), `;
       });
       line = line.substring(0, line.length - 2)
       line += ` = ${unit.totalUnitCost}`;
@@ -251,14 +231,13 @@ function generateTTSJSONText(list) {
 
   ttsJSON.units = [];
   for (let i = 0; i < list.units.length; i++) {
-    const unitJSON = { name: '', upgrades: [], loadout: [] };
+    const unitJSON = { name: '', upgrades: [] };
     const unit = list.units[i];
     const unitCard = cards[unit.unitId];
 
     unitJSON.name = getTtsName(unitCard);
       
     writeCardsToJsonArray(unit.upgradesEquipped, unitJSON.upgrades);
-    writeCardsToJsonArray(unit.loadoutUpgrades, unitJSON.loadout);
 
     if (unit.counterpart) {
       const counterpart = unit.counterpart;
@@ -267,7 +246,6 @@ function generateTTSJSONText(list) {
       // Write counterpart to the units' arrays. FOR NOW, this doesn't cause any confusion (and is what TTS wants)
       // since only Iden has a counterpart with an upgrade, and said upgrade isn't a type Iden already has
       writeCardsToJsonArray(counterpart.upgradesEquipped, unitJSON.upgrades);
-      writeCardsToJsonArray(counterpart.loadoutUpgrades, unitJSON.loadout);
     };
     if (unitCard.flaw) unitJSON.upgrades.push(cards[unitCard.flaw].cardName);
     
@@ -320,52 +298,30 @@ function generateMinimalText(list) {
     }
 
     let upgrades = '';
-    let loadout = '';
     unit.upgradesEquipped.forEach((id, i) => {
       if (id) {
         const upgradeCard = cards[id];
         upgrades += `${upgradeCard.cardName}, `;
-        if (unit.loadoutUpgrades && unit.loadoutUpgrades.length > 0) {
-           if (unit.loadoutUpgrades[i]) {
-             const loadoutCard = cards[unit.loadoutUpgrades[i]];
-             loadout += `${loadoutCard.cardName}, `;
-           } else loadout += 'none, ';
-        }
       }
     });
     if (upgrades !== '') {
       upgrades = upgrades.substring(0, upgrades.length - 2)
       line += `(${upgrades})`;
     }
-    if (loadout !== '') {
-      loadout = loadout.substring(0, loadout.length - 2);
-      line += `\n - Loadout: (${loadout})`;
-    }
     let counterpart = '';
     if (unit.counterpart) {
       let cUpgrades = '';
-      let cLoadout = '';
       const counterpartCard = cards[unit.counterpart.counterpartId];
       counterpart += `\n${counterpartCard.cardName}`;
       unit.counterpart.upgradesEquipped.forEach((id, i) => {
         if (id) {
           const upgradeCard = cards[id];
           cUpgrades += `${upgradeCard.cardName}, `;
-          if (unit.counterpart.loadoutUpgrades) {
-            if (unit.counterpart.loadoutUpgrades[i]) {
-              const loadoutCard = cards[unit.counterpart.loadoutUpgrades[i]];
-              cLoadout += `${loadoutCard.cardName}, `;
-            } else cLoadout += 'none, ';
-          }
         }
       });
       if (cUpgrades !== '') {
         cUpgrades = cUpgrades.substring(0, cUpgrades.length - 2);
         counterpart += ` (${cUpgrades})`;
-      }
-      if (cLoadout !== '') {
-        cLoadout = cLoadout.substring(0, cLoadout.length - 2);
-        counterpart += `\n - Loadout: (${cLoadout})`;
       }
     }
     line += counterpart;
