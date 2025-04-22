@@ -1,7 +1,7 @@
 import Jimp from "jimp";
 import fs from 'fs';
 
-const inputFolder = "";
+const inputFolder = '';
 const outputFolder = "";
 
 // const portrait = [300,420];
@@ -20,17 +20,17 @@ fs.readdir(inputFolder, (err, files) => {
 		// let xOffsetRatio = (144 / 420);
 		// let yOffsetRatio = (45 / 300);
 		
-		// // back unit cards
+		// // unit cards (large side for more definition)
 		// let x = - (3 * image.bitmap.width / 4);
 		// let y = image.bitmap.height / 5;
 		// let w = 2 * image.bitmap.width / 3;
 		// let h = 2 * image.bitmap.height / 3;
 
-		// command cards (do a second pass with / 4 instead of 3 for h for the more dense cards)
+		// command cards (do a second pass with / 5 or 4 instead of 3 for h for the more dense cards)
 		let x = 0;
 		let y = image.bitmap.height / 7;
 		let w = image.bitmap.width;
-		let h = image.bitmap.height / 4;
+		let h = image.bitmap.height / 3;
 
 		// If your original images are already ~420w*300h, this is 'fuck-off overcomplicated', lol...
 		// Otherwise, it *should* scale my window relative to yours if your images are 840x600 or w/e
