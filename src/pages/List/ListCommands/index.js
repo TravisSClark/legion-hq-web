@@ -1,11 +1,33 @@
 import React, { useContext } from 'react';
-import { Grid, Chip } from '@material-ui/core';
+import { Button, Grid, Chip } from '@material-ui/core';
 import { Add as AddIcon } from '@material-ui/icons';
 import ListContext from 'context/ListContext';
 import CardIcon from 'common/CardIcon';
 import cards from 'constants/cards';
 
 const chipSize = 'medium';
+
+function CommandLabel({ card, handleSwapCommand }) {
+
+  const getNumPips = (card) => {
+    if (card.cardSubtype === '1') return '•';
+    else if (card.cardSubtype === '2') return '••';
+    else if (card.cardSubtype === '3') return '•••';
+  }
+
+  return (
+    <div style={{ display: 'flex', alignItems: 'center' }}>
+      <Button
+        disableRipple
+        size="small"
+        onClick={handleSwapCommand}
+        style={{ textTransform: 'none' }}
+      >
+        {`${getNumPips(card)} ${card.cardName}`}
+      </Button>
+    </div>
+  );
+}
 
 function ListCommands() {
   const {
@@ -14,12 +36,6 @@ function ListCommands() {
     handleCardZoom,
     handleRemoveCommand
   } = useContext(ListContext);
-  const getNumPips = (cardId) => {
-    const card = cards[cardId];
-    if (card.cardSubtype === '1') return '•';
-    else if (card.cardSubtype === '2') return '••';
-    else if (card.cardSubtype === '3') return '•••';
-  }
   const chipStyle = { marginRight: 4, marginBottom: 4 };
   return (
     <Grid container id="list-commands" direction="row" justifyContent="center">
@@ -37,7 +53,12 @@ function ListCommands() {
       {currentList.commandCards.map((cardId, commandIndex) => (
         <Grid item key={cardId}>
           <Chip
-            label={`${getNumPips(cardId)} ${cards[cardId].cardName}`}
+            label={(
+              <CommandLabel
+                card={cards[cardId]}
+                cardId={{cardId}}
+                handleSwapCommand={() => setCardPaneFilter({ action: 'COMMAND' })}>
+                </CommandLabel> )}
             avatar={
               <CardIcon
                 size="small"
