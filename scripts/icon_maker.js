@@ -1,8 +1,8 @@
 import Jimp from "jimp";
 import fs from 'fs';
 
-const inputFolder = '';
-const outputFolder = "";
+const inputFolder = 'C://Users/wolfs/Downloads/cards jpgs/';
+const outputFolder = "C://Users/wolfs/Downloads/icon jpgs/";
 
 // const portrait = [300,420];
 // const landscape = [1040,720];
@@ -20,17 +20,24 @@ fs.readdir(inputFolder, (err, files) => {
 		// let xOffsetRatio = (144 / 420);
 		// let yOffsetRatio = (45 / 300);
 		
-		// // unit cards (large side for more definition)
+		// unit cards
+		let x = - (image.bitmap.width / 3);
+		let y = image.bitmap.height / 8;
+		let w = image.bitmap.width / 3;
+		let h = image.bitmap.height / 3;
+
+		// counterpart cards (large side for more definition)
 		// let x = - (3 * image.bitmap.width / 4);
 		// let y = image.bitmap.height / 5;
 		// let w = 2 * image.bitmap.width / 3;
 		// let h = 2 * image.bitmap.height / 3;
 
+
 		// command cards (do a second pass with / 5 or 4 instead of 3 for h for the more dense cards)
-		let x = 0;
-		let y = image.bitmap.height / 7;
-		let w = image.bitmap.width;
-		let h = image.bitmap.height / 3;
+		// let x = 0;
+		// let y = image.bitmap.height / 7;
+		// let w = image.bitmap.width;
+		// let h = image.bitmap.height / 3;
 
 		// If your original images are already ~420w*300h, this is 'fuck-off overcomplicated', lol...
 		// Otherwise, it *should* scale my window relative to yours if your images are 840x600 or w/e
