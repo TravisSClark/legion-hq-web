@@ -2,6 +2,7 @@ import React, { useState,  } from 'react';
 import { Typography, Button, Checkbox, makeStyles, Divider, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio, TextField, MenuItem, Select, InputLabel } from '@material-ui/core';
 import DiceCountPicker from './DiceCountPicker';
 import { Check } from '@material-ui/icons';
+import { useRoller, useRollerDispatch } from './RollerContext';
 
 const useStyles = makeStyles(theme => ({
   row: {
@@ -24,17 +25,23 @@ const useStyles = makeStyles(theme => ({
   checked: {}
 }));
 
-function ControlPanel({
-  parameters,
-  onControlChange,
-  handleRollDice
-}) {
+function ControlPanel() {
 
-  const {redCount, blackCount, whiteCount} = parameters;
+  const roller = useRoller();
+  const dispatch = useRollerDispatch()
+
+  const parameters = roller.parameters;
   const [isDisabled, setIsDisabled] = useState(false);
-  const [surgeTokenCount, setSurgeTokenCount] = useState(0);
   const classes = useStyles();
 
+  function onControlChange(parameters){
+    dispatch({
+      type:"updateParameters",
+      parameters
+    })
+  }
+
+  console.log('params', JSON.stringify(parameters));
 
   const radio = <Radio classes={{root:classes.radio, checked: classes.checked}}/>;
   return (
@@ -43,16 +50,16 @@ function ControlPanel({
         style={{
           display: 'flex',
           flexFlow: 'column nowrap',
-          justifyContent: 'center',
+          justifyContent: 'center', 
           // alignItems:'flex-start'
         }}
       >
         <Typography>
           Attack Dice
         </Typography>
-        <DiceCountPicker color="red"   numDice={redCount}   handleSetDice={(value)=>onControlChange({...parameters, redCount:value})} />
-        <DiceCountPicker color="white" numDice={whiteCount}   handleSetDice={(value)=>onControlChange({...parameters, whiteCount:value})} />
-        <DiceCountPicker color="black" numDice={blackCount} handleSetDice={(value)=>onControlChange({...parameters, blackCount:value})} />
+        <DiceCountPicker color="red"   numDice={parameters.redCount}   handleSetDice={(value)=>onControlChange({ redCount:value })} />
+        <DiceCountPicker color="white" numDice={parameters.whiteCount}   handleSetDice={(value)=>onControlChange({ whiteCount:value })} />
+        <DiceCountPicker color="black" numDice={parameters.blackCount} handleSetDice={(value)=>onControlChange({ blackCount:value })} />
 
         <FormControl>
           <InputLabel id="surge-select-label">Surge</InputLabel>
@@ -60,8 +67,7 @@ function ControlPanel({
             labelId="surge-select-label"
             id="surge-select"
             value={parameters.attackSurge}
-            label="Surge"
-            onChange={(e)=>onControlChange({...parameters, attackSurge:e.target.value})}
+            onChange={(e)=>onControlChange({attackSurge:e.target.value})}
           >
             <MenuItem value="none">None</MenuItem>
             <MenuItem value="hit">Hit</MenuItem>
@@ -75,38 +81,40 @@ function ControlPanel({
         <Typography>
           Defender
         </Typography>
-
+        <Typography>
+          Defense Dice
+        </Typography>
           <FormControl sx={{m:1, minWidth:200}} size="medium">
             <InputLabel id="def-select-label">Defense Dice</InputLabel>
             <Select
               labelId="def-select-label"
               id="def-select"
-              value={parameters.defenseColor}
+              value={parameters.defenseDice}
               width={200}
-              onChange={(e)=>onControlChange({...parameters, attackSurge:e.target.value})}
+              onChange={(e)=>onControlChange({defenseDice:e.target.value})}
             >
               <MenuItem value="red">Red</MenuItem>
               <MenuItem value="white">White</MenuItem>
             </Select>
             <div className={classes.row}>
-              <Checkbox color='primary'/>
+              <Checkbox checked={parameters.defenseSurge} color='primary' 
+                onChange={(e)=>onControlChange({defenseSurge:e.target.checked})}/>
               <Typography>Surge : Block</Typography>
             </div>
           </FormControl>
 
-        <FormControl>
-          <FormLabel>Cover</FormLabel>
-          <RadioGroup
-            aria-labelledby="demo-radio-buttons-group-label"
-            defaultValue="none"
-            name="radio-buttons-group"
+          <FormControl>
+          <InputLabel id="cover-select-label">Cover</InputLabel>
+          <Select
+            labelId="cover-select-label"
+            id="cover-select"
             value={parameters.cover}
-            onChange={(e)=>onControlChange({...parameters, cover:e.target.value})}
+            onChange={(e)=>onControlChange({cover:e.target.value})}
           >
-            <FormControlLabel value="none" control={radio} label="None" />
-            <FormControlLabel value="light" control={radio} label="Light" />
-            <FormControlLabel value="heavy" control={radio} label="Heavy" />
-          </RadioGroup>
+            <MenuItem value={0}>None</MenuItem>
+            <MenuItem value={1}>Light</MenuItem>
+            <MenuItem value={2}>Heavy</MenuItem>
+          </Select>
         </FormControl>
 
         <Button
@@ -114,9 +122,7 @@ function ControlPanel({
           disabled={isDisabled}
           style={{ marginTop: 8 }}
           onClick={() => {
-            // setIsDisabled(true);
-            handleRollDice();
-            setTimeout(() => setIsDisabled(false), 500);
+            dispatch({type:'rollDice'})
           }}
         >
           Roll!
