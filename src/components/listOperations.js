@@ -60,9 +60,11 @@ function consolidate(list) {
   const cardNames = list.units.map(u=>cards[u.unitId].cardName);
 
   for (let i = list.commandCards.length - 1; i > -1 ; i--) {
-    const { commander } = cards[list.commandCards[i]];
-    if (commander && !cardNames.includes(commander)) {
+    let { commander } = cards[list.commandCards[i]];
+    commander = typeof Array.isArray(commander) ?  commander : [commander];
+    if (commander && !cardNames.some(c => commander.includes(c))) {
       list = removeCommand(list, i);
+  
     }
   }
 
