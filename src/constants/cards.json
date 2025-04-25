@@ -4376,10 +4376,10 @@
   "fh": {
     "displayName": "Twin Light Blaster Cannon",
     "cardSubtype": "hardpoint",
-    "cardName": "88i Twin Light Blaster Cannon",
+    "cardName": "88 Twin Light Blaster Cannon",
     "cardType": "upgrade",
     "cost": 10,
-    "imageName": "88i Twin Light Blaster Cannon.webp",
+    "imageName": "88 Twin Light Blaster Cannon.webp",
     "keywords": [
       "Impact",
       "Fixed"
