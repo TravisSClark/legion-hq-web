@@ -90,7 +90,7 @@ const PrintListImages = React.forwardRef(( props, ref) => {
 
     currentList.units.forEach((unit, i) => {
       const card = cards[unit.unitId];
-      const unitImage = `${urls.cdn}/${card.cardType}Cards/${card.imageName}?${new Date().getTime()}`
+      const unitImage = `${urls.cdn}/${card.cardType}Cards/${card.imageName}`
       units.push(
         <img
           alt={card.cardName}
@@ -102,7 +102,7 @@ const PrintListImages = React.forwardRef(( props, ref) => {
         if (!upgradeId) return;
         const upgradeCard = cards[upgradeId];
         // Need to actually use this somewhere
-        const upgradeImage = `${urls.cdn}/${upgradeCard.cardType}Cards/${upgradeCard.imageName}?${new Date().getTime()}`;
+        const upgradeImage = `${urls.cdn}/${upgradeCard.cardType}Cards/${upgradeCard.imageName}`;
         units.push(
           <img
             alt={upgradeCard.cardName}
@@ -116,7 +116,7 @@ const PrintListImages = React.forwardRef(( props, ref) => {
         if (!unit.counterpart.counterpartId) return;
         const counterpartCard = cards[unit.counterpart.counterpartId];
         // Need to actually use this somewhere
-        const counterpartImage = `${urls.cdn}/${counterpartCard.cardType}Cards/${counterpartCard.imageName}?${new Date().getTime()}`;
+        const counterpartImage = `${urls.cdn}/${counterpartCard.cardType}Cards/${counterpartCard.imageName}`;
         units.push(
           <div>
             <img
@@ -130,7 +130,7 @@ const PrintListImages = React.forwardRef(( props, ref) => {
     });
     currentList.commandCards.forEach((commandId, i) => {
       const commandCard = cards[commandId];
-      const commandImage = `${urls.cdn}/${commandCard.cardType}Cards/${commandCard.imageName}?${new Date().getTime()}`
+      const commandImage = `${urls.cdn}/${commandCard.cardType}Cards/${commandCard.imageName}`
       commands.push(
         <img
           alt={commandCard.cardName}
@@ -141,7 +141,7 @@ const PrintListImages = React.forwardRef(( props, ref) => {
     });
     currentList.primaryCards.forEach((primaryId, i) => {
       const primaryCard = cards[primaryId];
-      const primaryImage = `${urls.cdn}/${primaryCard.cardType}Cards/${primaryCard.imageName}?${new Date().getTime()}`
+      const primaryImage = `${urls.cdn}/${primaryCard.cardType}Cards/${primaryCard.imageName}`
       primaries.push(
         <img
           alt={primaryCard.cardName}
@@ -152,7 +152,7 @@ const PrintListImages = React.forwardRef(( props, ref) => {
     });
     currentList.secondaryCards.forEach((secondaryId, i) => {
       const secondaryCard = cards[secondaryId];
-      const secondaryImage = `${urls.cdn}/${secondaryCard.cardType}Cards/${secondaryCard.imageName}?${new Date().getTime()}`
+      const secondaryImage = `${urls.cdn}/${secondaryCard.cardType}Cards/${secondaryCard.imageName}`
       secondaries.push(
         <img
           alt={secondaryCard.cardName}
@@ -163,7 +163,7 @@ const PrintListImages = React.forwardRef(( props, ref) => {
     });
     currentList.advantageCards.forEach((advantageId, i) => {
       const advantageCard = cards[advantageId];
-      const advantageImage = `${urls.cdn}/${advantageCard.cardType}Cards/${advantageCard.imageName}?${new Date().getTime()}`
+      const advantageImage = `${urls.cdn}/${advantageCard.cardType}Cards/${advantageCard.imageName}`
       advantages.push(
         <img
           alt={advantageCard.cardName}
