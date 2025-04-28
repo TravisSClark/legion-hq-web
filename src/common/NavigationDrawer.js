@@ -1,15 +1,25 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Grid,
   SwipeableDrawer,
   Divider,
   List,
   ListItem,
   ListItemText,
-  ListItemIcon
+  ListItemIcon,
+  Typography
 } from '@material-ui/core';
+
+import { 
+  Launch as LaunchIcon,
+  ExpandMore
+} from '@material-ui/icons';
+import factions from 'constants/factions';
 import DataContext from 'context/DataContext';
-import { Launch as LaunchIcon } from '@material-ui/icons';
 
 function NavDrawerLink({ selected, icon, text, handleClick }) {
   return (
@@ -28,10 +38,24 @@ function NavigationDrawer() {
   const {
     isDrawerOpen,
     routes,
-    faction,
+    userId,
+    userLists,
+    fetchUserLists,
     goToPage,
     setIsDrawerOpen
   } = useContext(DataContext);
+  const listChips = {};
+  Object.keys(factions).forEach(faction => listChips[faction] = []);
+  if (userLists) {
+    userLists.forEach(userList => {
+      if (userList.faction in listChips) {
+        listChips[userList.faction].push(userList);
+      }
+    });
+  }
+  useEffect(() => {
+    if (userId) fetchUserLists(userId);
+  }, [userId]);
   return (
     <SwipeableDrawer
       open={isDrawerOpen}
@@ -75,15 +99,45 @@ function NavigationDrawer() {
         </List>
         <Divider />
         <List dense={true}>
-          <NavDrawerLink
-            text="Rebels"
-            selected={pathname === '/list/rebels' || faction === 'rebels'}
-            icon={routes['/list/rebels'].icon}
-            handleClick={() => {
-              setIsDrawerOpen(false);
-              goToPage('/list/rebels');
-            }}
-          />
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMore />}
+              aria-controls="panel1-content"
+              id="panel1-header"
+            >
+              <ListItemIcon>
+              </ListItemIcon>
+              <Typography component="span">Rebels</Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+            <List dense={true}>
+              <NavDrawerLink
+                text="Rebels"
+                selected={pathname === '/list/rebels'}
+                icon={routes['/list/rebels'].icon}
+                handleClick={() => {
+                  setIsDrawerOpen(false);
+                  goToPage('/list/rebels');
+                }}
+              />
+              {listChips["rebels"].map(userList => (
+                <NavDrawerLink
+                  text={userList.title.length > 64 ? `${userList.title}...` : userList.title}
+                  selected={pathname === `/list/${userList.listId}`}
+                  icon={undefined}
+                  handleClick={() => {
+                    setIsDrawerOpen(false);
+                    goToPage(`/list/${userList.listId}`);
+                  }}
+                />
+                // <Grid item key={userList.listId}>
+                //   <ListChip userList={userList} deleteUserList={deleteUserList} />
+                // </Grid>
+              ))}
+            </List>
+            </AccordionDetails>
+          </Accordion>
+          {/* 
           <NavDrawerLink
             text="Empire"
             selected={pathname === '/list/empire' || faction === 'empire'}
@@ -119,7 +173,7 @@ function NavigationDrawer() {
               setIsDrawerOpen(false);
               goToPage('/list/mercenary');
             }}
-          />
+          /> */}
         </List>
         <Divider />
         <List dense={true}>
