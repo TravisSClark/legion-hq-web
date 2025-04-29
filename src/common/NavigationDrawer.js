@@ -15,7 +15,11 @@ import {
   Typography,
 } from "@material-ui/core";
 
-import { Launch as LaunchIcon, ExpandMore } from "@material-ui/icons";
+import {
+  Launch as LaunchIcon,
+  ExpandMore,
+  Add as AddIcon,
+} from "@material-ui/icons";
 import cards from "constants/cards";
 import factions from "constants/factions";
 import urls from "constants/urls";
@@ -98,101 +102,61 @@ function NavigationDrawer() {
         </List>
         <Divider />
         <List dense={true}>
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMore />}
-              aria-controls="panel1-content"
-              id="panel1-header"
-            >
-              <ListItemIcon>{routes["/list/rebels"].icon}</ListItemIcon>
-              <Typography component="span">Rebels</Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <List dense={true}>
-                <NavDrawerLink
-                  text="Rebels"
-                  selected={pathname === "/list/rebels"}
-                  icon={routes["/list/rebels"].icon}
-                  handleClick={() => {
-                    setIsDrawerOpen(false);
-                    goToPage("/list/rebels");
-                  }}
-                />
-                {listChips["rebels"].map((userList) => {
-                  const card = cards[findFirstCardId(userList)];
-                  return (
+          {Object.keys(factions).map((faction) => {
+            return (
+              <Accordion>
+                <AccordionSummary expandIcon={<ExpandMore />} dense={true}>
+                  <ListItemIcon>{routes[`/list/${faction}`].icon}</ListItemIcon>
+                  <Typography component="span">{faction}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <List dense={true}>
                     <NavDrawerLink
-                      text={
-                        userList.title.length > 64
-                          ? `${userList.title}...`
-                          : userList.title
-                      }
-                      selected={pathname === `/list/${userList.listId}`}
-                      icon={undefined}
-                      avatar={
-                        card ? (
-                          <Img
-                            alt={card.cardName}
-                            src={`${urls.cdn}/unitIcons/${card.imageName}`}
-                            style={{
-                              marginLeft: 0,
-                              width: 44,
-                              height: 32,
-                              borderRadius: 20,
-                            }}
-                          />
-                        ) : undefined
-                      }
+                      text="New List"
+                      selected={pathname === `/list/${faction}`}
+                      icon={<AddIcon />}
                       handleClick={() => {
                         setIsDrawerOpen(false);
-                        goToPage(`/list/${userList.listId}`);
+                        goToPage(`/list/${faction}`);
                       }}
                     />
-                    // <Grid item key={userList.listId}>
-                    //   <ListChip userList={userList} deleteUserList={deleteUserList} />
-                    // </Grid>
-                  );
-                })}
-              </List>
-            </AccordionDetails>
-          </Accordion>
-          {/* 
-          <NavDrawerLink
-            text="Empire"
-            selected={pathname === '/list/empire' || faction === 'empire'}
-            icon={routes['/list/empire'].icon}
-            handleClick={() => {
-              setIsDrawerOpen(false);
-              goToPage('/list/empire');
-            }}
-          />
-          <NavDrawerLink
-            text="Republic"
-            selected={pathname === '/list/republic' || faction === 'republic'}
-            icon={routes['/list/republic'].icon}
-            handleClick={() => {
-              setIsDrawerOpen(false);
-              goToPage('/list/republic');
-            }}
-          />
-          <NavDrawerLink
-            text="Separatists"
-            selected={pathname === '/list/separatists' || faction === 'separatists'}
-            icon={routes['/list/separatists'].icon}
-            handleClick={() => {
-              setIsDrawerOpen(false);
-              goToPage('/list/separatists');
-            }}
-          />
-          <NavDrawerLink
-            text="Shadow Collective"
-            selected={pathname === '/list/mercenary' || faction === 'mercenary'}
-            icon={routes['/list/mercenary'].icon}
-            handleClick={() => {
-              setIsDrawerOpen(false);
-              goToPage('/list/mercenary');
-            }}
-          /> */}
+                    {listChips[`${faction}`].map((userList) => {
+                      const card = cards[findFirstCardId(userList)];
+                      return (
+                        <NavDrawerLink
+                          text={
+                            userList.title.length > 64
+                              ? `${userList.title}...`
+                              : userList.title
+                          }
+                          selected={pathname === `/list/${userList.listId}`}
+                          icon={undefined}
+                          avatar={
+                            card ? (
+                              <Img
+                                alt={card.cardName}
+                                src={`${urls.cdn}/unitIcons/${card.imageName}`}
+                                style={{
+                                  marginLeft: 0,
+                                  width: 44,
+                                  height: 32,
+                                  borderRadius: 20,
+                                }}
+                              />
+                            ) : undefined
+                          }
+                          handleClick={() => {
+                            setIsDrawerOpen(false);
+                            goToPage(`/list/${userList.listId}`);
+                          }}
+                        />
+                      );
+                    })}
+                  </List>
+                </AccordionDetails>
+              </Accordion>
+            );
+          })}
         </List>
         <Divider />
         <List dense={true}>
