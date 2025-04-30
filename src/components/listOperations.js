@@ -1,7 +1,10 @@
-import cards from 'constants/cards';
+import cards from "constants/cards";
 
-import interactions from 'components/cardInteractions';
-import { findUnitIndexInList, getEquippableUpgrades } from './eligibleCardListGetter';
+import interactions from "components/cardInteractions";
+import {
+  findUnitIndexInList,
+  getEquippableUpgrades,
+} from "./eligibleCardListGetter";
 
 const battleTypes = ["primary", "secondary", "advantage"];
 
@@ -13,7 +16,7 @@ function countPoints(list) {
   list.units.forEach((unit, unitIndex) => {
     const unitCard = cards[unit.unitId];
     unit.totalUnitCost = unitCard.cost;
-    
+
     unit.upgradeInteractions = {};
     unit.upgradesEquipped.forEach((upgradeId) => {
       if (upgradeId) {
@@ -28,17 +31,17 @@ function countPoints(list) {
         }
       }
     });
-    if(unit.counterpart){
+    if (unit.counterpart) {
       const counterpartCard = cards[unit.counterpart.counterpartId];
       unit.counterpart.totalUnitCost = counterpartCard.cost;
 
-      unit.counterpart.upgradesEquipped.forEach(upgradeId => {
+      unit.counterpart.upgradesEquipped.forEach((upgradeId) => {
         if (upgradeId) {
           const upgradeCard = cards[upgradeId];
           unit.counterpart.totalUnitCost += upgradeCard.cost;
         }
       });
-     
+
       unit.totalUnitCost += unit.counterpart.totalUnitCost;
     }
 
@@ -51,20 +54,19 @@ function countPoints(list) {
 
 /**
  * Removes command cards if commander is removed
- * @param {} list 
- * @returns 
+ * @param {} list
+ * @returns
  */
- // TODO need to specialize this; should at least be a on-upgrade and on-unit fire, not this whole big thing
+// TODO need to specialize this; should at least be a on-upgrade and on-unit fire, not this whole big thing
 function consolidate(list) {
   // TODO see about moving these into validator
-  const cardNames = list.units.map(u=>cards[u.unitId].cardName);
+  const cardNames = list.units.map((u) => cards[u.unitId].cardName);
 
-  for (let i = list.commandCards.length - 1; i > -1 ; i--) {
+  for (let i = list.commandCards.length - 1; i > -1; i--) {
     let { commander } = cards[list.commandCards[i]];
-    commander = typeof Array.isArray(commander) ?  commander : [commander];
-    if (commander && !cardNames.some(c => commander.includes(c))) {
+    commander = typeof Array.isArray(commander) ? commander : [commander];
+    if (commander && !cardNames.some((c) => commander.includes(c))) {
       list = removeCommand(list, i);
-  
     }
   }
 
@@ -72,18 +74,24 @@ function consolidate(list) {
   return countPoints(list);
 }
 
-function equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll) {
+function equipUnitUpgrade(
+  list,
+  unitIndex,
+  upgradeIndex,
+  upgradeId,
+  isApplyToAll
+) {
   // applying upgrade to multiple units
   const unit = list.units[unitIndex];
   const upgradeCard = cards[upgradeId];
 
   let newIndex = unitIndex;
-  const count = (isApplyToAll && !upgradeCard.isUnique) ? unit.count : 1;
+  const count = isApplyToAll && !upgradeCard.isUnique ? unit.count : 1;
 
   const newUnit = JSON.parse(JSON.stringify(unit));
   newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
 
-  if ('additionalUpgradeSlots' in upgradeCard) {
+  if ("additionalUpgradeSlots" in upgradeCard) {
     newUnit.additionalUpgradeSlots = [...upgradeCard.additionalUpgradeSlots];
     newUnit.upgradesEquipped.push(null);
   }
@@ -134,10 +142,10 @@ function addCounterpart(list, unitIndex, counterpartId) {
     counterpartId: counterpartCard.id,
     totalUnitCost: counterpartCard.cost,
     upgradesEquipped: [],
-    additionalUpgradeSlots: []
+    additionalUpgradeSlots: [],
   };
 
-  if(counterpartCard.upgradeBar){
+  if (counterpartCard.upgradeBar) {
     for (let i = 0; i < counterpartCard.upgradeBar.length; i++) {
       unit.counterpart.upgradesEquipped.push(null);
     }
@@ -158,7 +166,7 @@ function addUnit(list, unitId, stackSize = 1) {
     count: unitCard.isUnique || unitCard.isUniqueTitle ? 1 : stackSize,
     totalUnitCost: unitCard.cost * stackSize,
     upgradesEquipped: [],
-    additionalUpgradeSlots: []
+    additionalUpgradeSlots: [],
   };
 
   if (newUnitObject.upgradesEquipped.length === 0) {
@@ -166,7 +174,7 @@ function addUnit(list, unitId, stackSize = 1) {
       newUnitObject.upgradesEquipped.push(null);
     }
   }
-  
+
   let unitIndex = findUnitIndexInList(newUnitObject, list);
 
   if (unitIndex > -1) {
@@ -181,41 +189,56 @@ function addUnit(list, unitId, stackSize = 1) {
         let upgradeType = cards[unitCard.equip[i]].cardSubtype;
         let upgradeIndex = unitCard.upgradeBar.indexOf(upgradeType);
         if (list.units[list.units.length - 1].upgradesEquipped[upgradeIndex]) {
-          while (list.units[list.units.length - 1].upgradesEquipped[upgradeIndex] && upgradeIndex < unitCard.upgradeBar.length - 1) {
+          while (
+            list.units[list.units.length - 1].upgradesEquipped[upgradeIndex] &&
+            upgradeIndex < unitCard.upgradeBar.length - 1
+          ) {
             upgradeIndex += 1;
           }
         }
-        [list, unitIndex] = equipUnitUpgrade(list, unitIndex, upgradeIndex, unitCard.equip[i], true);
+        [list, unitIndex] = equipUnitUpgrade(
+          list,
+          unitIndex,
+          upgradeIndex,
+          unitCard.equip[i],
+          true
+        );
       }
     }
 
     // find any upgrades with 0 cost that are the only eligible in slot
     // narrow down upgrade types we check to ones that CAN be a no-cost one-of, e.g. there's always more than 1 grenade type eligible
     let freeSoloUpgradeTypes = ["armament"];
-    
-    freeSoloUpgradeTypes.forEach(upgradeType => {
+
+    freeSoloUpgradeTypes.forEach((upgradeType) => {
       let upgradeIndex = unitCard.upgradeBar.indexOf(upgradeType);
 
-      if(upgradeIndex > -1){
+      if (upgradeIndex > -1) {
         let eligibleUpgrades = getEquippableUpgrades(list, upgradeType, unitId);
-        if(eligibleUpgrades.validIds.length === 1){
+        if (eligibleUpgrades.validIds.length === 1) {
           let freeSoloId = eligibleUpgrades.validIds[0];
-          if(cards[freeSoloId].cost === 0){
+          if (cards[freeSoloId].cost === 0) {
             // If this card was already added via equip above, it'll break things if added again
             // (currently a futureproof w no known case)
-            if(!(unitCard.equip?.find(u => u === freeSoloId))){
-              [list] = equipUnitUpgrade(list, unitIndex, upgradeIndex, freeSoloId, true);
+            if (!unitCard.equip?.find((u) => u === freeSoloId)) {
+              [list] = equipUnitUpgrade(
+                list,
+                unitIndex,
+                upgradeIndex,
+                freeSoloId,
+                true
+              );
             }
           }
         }
       }
-
     });
 
     if (unitCard.command) {
       unitCard.command.forEach((commandId) => addCommand(list, commandId));
     }
   }
+  sortUnitsByRank(list);
   return consolidate(list);
 }
 
@@ -232,6 +255,22 @@ function decrementUnit(list, index, count = 1) {
     list.units[index].count -= count;
   }
   return consolidate(list);
+}
+
+function sortUnitsByRank(list) {
+  const ranks = [
+    "commander",
+    "operative",
+    "corps",
+    "special",
+    "support",
+    "heavy",
+  ];
+  list.units.sort(
+    (a, b) =>
+      ranks.indexOf(cards[a.unitId].rank) > ranks.indexOf(cards[b.unitId].rank)
+  );
+  return list;
 }
 
 function addCommand(list, commandId) {
@@ -256,38 +295,34 @@ function sortCommandIds(cardIds) {
   });
 }
 
-function getBattleArray(list, type){
-
-  let typeIndex = battleTypes.findIndex((t)=>t===type);
-  if(typeIndex !== -1){
-    return list[battleTypes[typeIndex]+"Cards"];
-  } else{
+function getBattleArray(list, type) {
+  let typeIndex = battleTypes.findIndex((t) => t === type);
+  if (typeIndex !== -1) {
+    return list[battleTypes[typeIndex] + "Cards"];
+  } else {
     console.warn("Unrecognized battle type: " + type);
     return null;
   }
 }
 
 function addBattle(list, type, id) {
-
   let currentCards = getBattleArray(list, type);
-  if(!currentCards) return;
+  if (!currentCards) return;
 
   let nextType = type;
-  let typeIndex = battleTypes.findIndex((t)=>t===type);
+  let typeIndex = battleTypes.findIndex((t) => t === type);
 
   currentCards.push(id);
 
   // intentionally go undef here and use it above, rather than messing w wraparound
-  if(currentCards.length >= 3)
-      nextType = battleTypes[typeIndex + 1];
+  if (currentCards.length >= 3) nextType = battleTypes[typeIndex + 1];
 
-  return {list, nextType};
+  return { list, nextType };
 }
 
 function removeBattle(list, type, index) {
-
   let currentCards = getBattleArray(list, type);
-  if(!currentCards) return list;
+  if (!currentCards) return list;
 
   currentCards.splice(index, 1);
 
@@ -295,25 +330,38 @@ function removeBattle(list, type, index) {
 }
 
 // TODO remove these routers in favor of calling the right action type directly from the click handler
-function equipUpgrade(list, action, unitIndex, upgradeIndex, upgradeId, isApplyToAll = false) {
-  if (action === 'UNIT_UPGRADE') {
+function equipUpgrade(
+  list,
+  action,
+  unitIndex,
+  upgradeIndex,
+  upgradeId,
+  isApplyToAll = false
+) {
+  if (action === "UNIT_UPGRADE") {
     let newIndex;
-    [list, newIndex] = equipUnitUpgrade(list, unitIndex, upgradeIndex, upgradeId, isApplyToAll);
+    [list, newIndex] = equipUnitUpgrade(
+      list,
+      unitIndex,
+      upgradeIndex,
+      upgradeId,
+      isApplyToAll
+    );
     unitIndex = newIndex;
-  } else if (action === 'COUNTERPART_UPGRADE') {
+  } else if (action === "COUNTERPART_UPGRADE") {
     list = equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
   }
 
   list = consolidate(list);
-  return {list, unitIndex};
+  return { list, unitIndex };
 }
 
 // TODO remove these routers in favor of calling the right action type directly from the click handler
 function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
   // const upgradeId = list.units[unitIndex].upgradesEquipped[upgradeIndex];
-  if (action === 'UNIT_UPGRADE') {
+  if (action === "UNIT_UPGRADE") {
     list = unequipUnitUpgrade(list, unitIndex, upgradeIndex);
-  } else if (action === 'COUNTERPART_UPGRADE') {
+  } else if (action === "COUNTERPART_UPGRADE") {
     list = unequipCounterpartUpgrade(list, unitIndex, upgradeIndex);
   }
 
@@ -321,31 +369,31 @@ function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
 }
 
 // Returns a sorted list of upgrades so we can consolidate identical stacks regardless of add order
-function sortUpgrades(unit){
+function sortUpgrades(unit) {
   const unitCard = cards[unit.unitId];
-  const {upgradesEquipped} = unit;
+  const { upgradesEquipped } = unit;
 
   const upgradeBar = unitCard.upgradeBar.concat(unit.additionalUpgradeSlots);
   const sortedUpgrades = Array(upgradeBar.length).fill(null);
   const upgradesByType = {};
 
   // get all the cards, then make an object {comms:[{id:'aa', cardName:'Comms Jammer'...}...], armament:[...]...}
-  for( let i=0; i<upgradesEquipped.length; i++){
-
-    if(upgradesEquipped[i]){
+  for (let i = 0; i < upgradesEquipped.length; i++) {
+    if (upgradesEquipped[i]) {
       let upgradeCard = cards[upgradesEquipped[i]];
       let upgradeTypeList = upgradesByType[upgradeCard.cardSubtype];
-      if(!upgradeTypeList){
+      if (!upgradeTypeList) {
         upgradesByType[upgradeCard.cardSubtype] = [];
         upgradeTypeList = upgradesByType[upgradeCard.cardSubtype];
       }
 
-      for(let j=0; j <= upgradeTypeList.length; j++)
-      {
+      for (let j = 0; j <= upgradeTypeList.length; j++) {
         // Sort these BACKWARDS abc so we can just pop() the arrays below
         // TODO make this check for unique(?) so that those show up first
-        if(j === upgradeTypeList.length || upgradeCard.cardName > upgradeTypeList[j].cardName)
-        {
+        if (
+          j === upgradeTypeList.length ||
+          upgradeCard.cardName > upgradeTypeList[j].cardName
+        ) {
           upgradeTypeList.splice(j, 0, upgradeCard);
           break;
         }
@@ -354,14 +402,14 @@ function sortUpgrades(unit){
   }
 
   // Iterate our upgradeBar, if upgradesByType has a match, add it in! (and with uBT being sorted already, now bar is sorted!)
-  for(let i=0; i<upgradeBar.length; i++){
+  for (let i = 0; i < upgradeBar.length; i++) {
     let sortedPool = upgradesByType[upgradeBar[i]];
-    if(sortedPool && sortedPool.length > 0){
-      sortedUpgrades[i] = sortedPool.pop().id
+    if (sortedPool && sortedPool.length > 0) {
+      sortedUpgrades[i] = sortedPool.pop().id;
     }
   }
 
-  // Typical total runtime of ~2N, gets worse with repeat upgrade types, but even that's like ~(NlogN + N) worst-case. 
+  // Typical total runtime of ~2N, gets worse with repeat upgrade types, but even that's like ~(NlogN + N) worst-case.
   return sortedUpgrades;
 }
 
@@ -373,8 +421,8 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
   const newUnit = JSON.parse(JSON.stringify(unit));
   newUnit.count = 1;
   newUnit.upgradesEquipped[upgradeIndex] = null;
-  
-  if ('additionalUpgradeSlots' in upgradeCard) {
+
+  if ("additionalUpgradeSlots" in upgradeCard) {
     newUnit.additionalUpgradeSlots = [];
     newUnit.upgradesEquipped.pop();
   }
@@ -393,7 +441,6 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
   return list;
 }
 
-
 export {
   addUnit,
   addCounterpart,
@@ -408,9 +455,9 @@ export {
   unequipCounterpartUpgrade,
   incrementUnit,
   decrementUnit,
-  countPoints, 
+  countPoints,
 
   // TODO - these are *probably* unneeded by importing classes via redundancy or tbd consolidate refactor; reassess
   sortCommandIds,
-  consolidate
+  consolidate,
 };
