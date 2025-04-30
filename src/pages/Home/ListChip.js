@@ -8,7 +8,7 @@ import urls from 'constants/urls';
 import factions from 'constants/factions';
 import cards from 'constants/cards';
 
-function findFirstCardId (list) {
+export function findFirstCardId (list) {
   for (let i = 0; i < list.units.length; i++) {
     const card = cards[list.units[i].unitId];
     if (card) return card.id;

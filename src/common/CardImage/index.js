@@ -28,7 +28,7 @@ function CardImage({ id, handleClick }) {
     <div className={classes.container}>
       <Img
         alt={card.cardName}
-        src={`${urls.cdn}/${card.cardType}Cards/${card.imageName}?${new Date().getTime()}`}
+        src={`${urls.cdn}/${card.cardType}Cards/${card.imageName}`}
         loader={<Skeleton className={classes[card.cardType]} />}
         className={classes[card.cardType]}
         onClick={handleClick}
