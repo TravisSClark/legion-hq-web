@@ -15322,6 +15322,7 @@
     "rank": "operative",
     "faction": "mercenary",
     "affiliation": "rogue",
+    "isUnique": true,
     "cost": 110,
     "keywords": [
       {
@@ -16771,7 +16772,7 @@
     "history": [
       {
         "date": "15 April 2025",
-        "description": "Lost Sharpshooter 2, scouting party is no longer limited to ewoks."
+        "description": "Lost Sharpshooter 2."
       }
     ]
   },
@@ -20010,7 +20011,7 @@
     "cost": 10,
     "imageName": "Mandalorian Combat Shields.webp",
     "keywords": [
-      "Sheilded"
+      "Shielded"
     ],
     "requirements": [
       {
