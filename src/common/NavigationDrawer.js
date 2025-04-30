@@ -114,7 +114,7 @@ function NavigationDrawer() {
                     {faction[0].toUpperCase() + faction.slice(1)}
                   </Typography>
                 </AccordionSummary>
-                <AccordionDetails style={{ paddingRight: 0 }}>
+                <AccordionDetails style={{ paddingRight: 0, paddingTop: 0 }}>
                   <List dense={true}>
                     <NavDrawerLink
                       text="New List"
