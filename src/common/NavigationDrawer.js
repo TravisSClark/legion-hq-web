@@ -5,7 +5,6 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  Grid,
   SwipeableDrawer,
   Divider,
   List,
@@ -65,7 +64,7 @@ function NavigationDrawer() {
       onOpen={() => setIsDrawerOpen(true)}
       onClose={() => setIsDrawerOpen(false)}
     >
-      <div style={{ width: 250 }}>
+      <div style={{ width: "100%" }}>
         <List>
           <ListItem>
             <ListItemText primary="Legion HQ 2" secondary="Crit2Block" />
@@ -105,11 +104,17 @@ function NavigationDrawer() {
           {Object.keys(factions).map((faction) => {
             return (
               <Accordion>
-                <AccordionSummary expandIcon={<ExpandMore />} dense={true}>
+                <AccordionSummary
+                  expandIcon={<ExpandMore />}
+                  dense={true}
+                  min-height={48}
+                >
                   <ListItemIcon>{routes[`/list/${faction}`].icon}</ListItemIcon>
-                  <Typography component="span">{faction}</Typography>
+                  <Typography component="span">
+                    {faction[0].toUpperCase() + faction.slice(1)}
+                  </Typography>
                 </AccordionSummary>
-                <AccordionDetails>
+                <AccordionDetails style={{ paddingRight: 0 }}>
                   <List dense={true}>
                     <NavDrawerLink
                       text="New List"
