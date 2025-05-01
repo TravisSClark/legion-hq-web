@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 function RankSelector({style}) {
   const classes = useStyles();
   const { currentList, setCardPaneFilter, rankLimits } = useContext(ListContext);
-
+  
   const {unitCounts, gametimeUnitCounts, rankIssues} = currentList;
 
   return (

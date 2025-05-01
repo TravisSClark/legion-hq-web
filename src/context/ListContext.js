@@ -21,7 +21,8 @@ import {
   removeBattle,
   equipUpgrade,
   unequipUpgrade,
-  countPoints
+  countPoints,
+  consolidate
 } from 'components/listOperations';
 import listTemplate from 'constants/listTemplate';
 import { validateList } from 'components/listValidator';
@@ -359,14 +360,14 @@ export function ListProvider({
     updateThenValidateList({ ...newList });
   }
   const handleIncrementUnit = (index) => {
-    const newList = incrementUnit(currentList, index);
+    let newList = incrementUnit(currentList, index);
     updateThenValidateList({ ...newList });
   }
   const handleDecrementUnit = (index) => {
     if (cardPaneFilter.action.includes('UPGRADE')) {
       setCardPaneFilter({ action: 'DISPLAY' });
     }
-    const newList = decrementUnit(currentList, index);
+    let newList = decrementUnit(currentList, index);
     updateThenValidateList({ ...newList });
   }
 

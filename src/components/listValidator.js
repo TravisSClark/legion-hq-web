@@ -124,7 +124,6 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
 function battleForceValidation(currentList, unitCounts){
 
   const validationIssues = [];
-  // TODO is a switch against the code standard? ;)
   // Should destroy this in favor of adding a 'rule' to apply for BzF in the object, e.g.
   // rules:[... {type:'unitLimit', min:0, max:1, types:['ay', 'sr']}]
 

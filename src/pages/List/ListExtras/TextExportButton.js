@@ -112,7 +112,7 @@ function TextExportButton({ currentList }) {
       <Chip
         clickable
         variant="outlined"
-        label="Export Text"
+        label="Text"
         icon={<TextIcon />}
         onClick={() => setIsOpen(true)}
       />

@@ -136,6 +136,7 @@ function UpgradeChip({
   return (
     <Chip
       size={chipSize}
+      onClick={handleClick}
       label={(hasLoadout && loadoutCard) ? (
         <LoadoutLabel
           upgradeCard={{ ...upgradeCard, cost: upgradeCard.cost + pointDelta }}

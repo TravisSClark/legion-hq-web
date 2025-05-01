@@ -4,9 +4,11 @@ import { Chip } from '@material-ui/core';
 function ChipCard({ card, handleClick, chipSize='medium', handleDelete }) {
   const { cardName, displayName } = card;
   let pips = '';
-  if (card.cardSubtype === '1') pips = '•';
-  else if (card.cardSubtype === '2') pips = '••';
-  else if (card.cardSubtype === '3') pips = '•••';
+  const subtypeInt = parseInt(card.cardSubtype);
+  for(let i=0; subtypeInt && i<subtypeInt; i++){
+    pips += '•';
+  }
+
   let label = displayName ? displayName : cardName;
   if (pips) label = `${pips} ${label}`;
   return (

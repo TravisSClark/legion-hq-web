@@ -79,9 +79,43 @@ function sortIds(ids) {
     const cardB = cards[b];
     const nameA = cardA.displayName ? cardA.displayName : cardA.cardName;
     const nameB = cardB.displayName ? cardB.displayName : cardB.cardName;
-    if (nameA > nameB) return 1;
-    if (nameA < nameB) return -1;
-    return 0;
+    return nameA > nameB ? 1 : -1;
+  });
+  return sortedIds;
+}
+
+function sortUnitIds(ids) {
+  const sortedIds = ids.sort((a, b) => {
+    const cardA = cards[a];
+    const cardB = cards[b];
+
+    if(cardA.faction !== cardB.faction){
+      return cardA.faction === 'mercenary' ? 1 : 0;
+    }
+
+    const nameA = cardA.displayName ? cardA.displayName : cardA.cardName;
+    const nameB = cardB.displayName ? cardB.displayName : cardB.cardName;
+    return nameA > nameB ? 1 : -1;
+  });
+  return sortedIds;
+}
+
+function sortUpgradeIds(ids) {
+  const sortedIds = ids.sort((a, b) => {
+    const cardA = cards[a];
+    const cardB = cards[b];
+
+    // TODO: might need another look, but I think it's ok overall (and convenient!)
+    // only non-human-intuitive thing I've seen at a quick look is that 'Jedi Guardian' becomes
+    // the top of Republic spec forces 'leader' slot since he has more reqs
+    if(cardA.requirements && cardB.requirements){
+      if(cardA.requirements.length !== cardB.requirements.length){
+        return cardA.requirements.length > cardB.requirements.length ? 0 : 1;
+      }
+    }
+    const nameA = cardA.displayName ? cardA.displayName : cardA.cardName;
+    const nameB = cardB.displayName ? cardB.displayName : cardB.cardName;
+    return nameA > nameB ? 1 : -1;
   });
   return sortedIds;
 }
@@ -134,7 +168,7 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
       validUnitIds.push(id);
     }
   }
-  return sortIds(validUnitIds);
+  return sortUnitIds(validUnitIds);
 }
 
 const stormTideCommands = {
@@ -275,10 +309,10 @@ function getEquippableUpgrades(
         validUpgradeIds.push(id);
       }
     } 
-    // Special case for Imp remnants mixed heavies rule
+    // Special case for Imp remnant's mixed heavies rule
     else if (list.battleForce === 'Imperial Remnant' && card.cardSubtype === 'heavy weapon' && unitCard.cardSubtype === 'trooper') {
-        if (impRemnantUpgrades.includes(id)) 
-          validUpgradeIds.push(id);
+      if (impRemnantUpgrades.includes(id)) 
+        validUpgradeIds.push(id);
     } else if (areRequirementsMet(card.requirements, unitCard)) {
       validUpgradeIds.push(id);
     } else {
@@ -286,7 +320,7 @@ function getEquippableUpgrades(
     }
   }
   return {
-    validIds: sortIds(validUpgradeIds),
+    validIds: sortUpgradeIds(validUpgradeIds),
     invalidIds: sortIds(invalidUpgradeIds)
   };
 }

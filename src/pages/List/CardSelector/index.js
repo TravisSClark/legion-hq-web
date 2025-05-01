@@ -8,8 +8,9 @@ import StackController from './StackController';
 import ToggleButton from './ToggleButton';
 import ChipCard from 'common/LegionCard/ChipCard';
 import cards from 'constants/cards';
-import { Button } from '@material-ui/core';
+import { Button, IconButton } from '@material-ui/core';
 import { unitHasUniques } from 'components/eligibleCardListGetter';
+import { Clear, Filter, Filter1, FilterList, Usb } from '@material-ui/icons';
 
 function Title({ title }) {
   return <Typography variant="body2">{title}</Typography>;
@@ -40,7 +41,7 @@ const CardSelector = () => {
     setCardSelectorToNextUpgradeSlot,
     userSettings
   } = React.useContext(ListContext);
-  let header; let clickHandler;
+  let header; let clickHandler; let moreHeaderContent;
   let selectorIds = {validIds:[], invalidIds:[]};
   const { action } = cardPaneFilter;
 
@@ -140,48 +141,57 @@ const CardSelector = () => {
       );
       break;
     case 'COMMAND':
-      selectorIds = getEligibleCommandsToAdd(currentList);
-      clickHandler = (commandId) => handleAddCommand(commandId)
-      if (currentList.commandCards.length === 0) {
-        header = <Title title="Add command cards" />;
-      } else {
-        const currentCommands = currentList.commandCards.map((commandId, i) => (
-          <ChipCard
-            card={cards[commandId]}
-            key={commandId}
-            handleClick={()=>handleCardZoom(commandId)}
-            handleDelete={() => handleRemoveCommand(i)}
-          />
-        ));
-        header = (
-          <div style={{ display: 'flex', alignItems: 'center', flexFlow: 'row wrap' }}>
-            <Title title="Commands:" style={{ marginRight: 4 }} />
-            {currentCommands}
-          </div>
-        );
-      }
-      break;
     case 'CONTINGENCY':
-      selectorIds = getEligibleContingenciesToAdd(currentList);
-      clickHandler = (commandId) => handleAddContingency(commandId);
-      if (currentList.contingencies || currentList.contingencies.length === 0) {
-        header = <Title title="Add contingency cards" />;
-      } else {
-        const currentContingencies = currentList.contingencies.map((commandId, i) => (
-          <ChipCard
-            card={cards[commandId]}
-            key={commandId}
-            handleClick={()=>handleCardZoom(commandId)}
-            handleDelete={() => handleRemoveContingency(i)}
-          />
-        ));
-        header = (
-          <div style={{ display: 'flex', alignItems: 'center', flexFlow: 'row wrap' }}>
-            <Title title="Commands:" style={{ marginRight: 4 }} />
-            {currentContingencies}
-          </div>
-        );
+      let currentCards = null;
+      let handleDelete = null;
+      let headerText = "";
+
+      if(action == 'CONTINGENCY'){
+        selectorIds = getEligibleContingenciesToAdd(currentList);
+        clickHandler = (commandId) => handleAddContingency(commandId);
+        currentCards = currentList.contingencies;
+        handleDelete = (id)=>handleRemoveContingency(id);
+
+        if (!currentList.contingencies || currentList.contingencies.length === 0) {
+          headerText = "Add contingencies";
+        }else{
+          headerText = "Contingencies:";
+        } 
       }
+      else{
+        selectorIds = getEligibleCommandsToAdd(currentList);
+        clickHandler = (commandId) => handleAddCommand(commandId);
+        currentCards = currentList.commandCards;
+        handleDelete = (id)=>handleRemoveCommand(id);
+        
+        if (currentList.commandCards.length === 0) {
+          headerText = "Add commands";
+        }else{
+          headerText = "Commands:";
+        } 
+      }
+
+      const currentCommands = (
+        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent:'flex-start', flexFlow: 'row wrap' }}>
+        {        
+          currentCards.map((commandId, i) => (
+            <ChipCard
+              card={cards[commandId]}
+              key={commandId}
+              handleClick={()=>handleCardZoom(commandId)}
+              handleDelete={() => handleDelete(i)}
+            />
+          ))
+        }
+        </div>);
+
+      header = (
+        <div style={{ display: 'flex', flex:1, alignItems: 'center', flexFlow: 'row wrap', justifyContent:'space-between' }}>
+          <Title title={headerText} style={{ marginRight: 4 }} />
+          <IconButton onClick={()=>{}}><FilterList/></IconButton>
+        </div>
+      );
+      moreHeaderContent= currentCommands;
       break;
     case 'BATTLE':
       selectorIds = getEligibleBattlesToAdd(currentList, cardPaneFilter.type);
@@ -210,8 +220,8 @@ const CardSelector = () => {
       <React.Fragment>
         <SelectorHeader
           headerContent={header}
-          cardPaneFilter={cardPaneFilter}
           setCardPaneFilter={setCardPaneFilter}
+          moreHeaderContent={moreHeaderContent}
         />
         <SelectorContent
           action={action}
