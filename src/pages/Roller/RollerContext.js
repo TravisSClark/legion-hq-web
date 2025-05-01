@@ -123,8 +123,6 @@ function roll(p){
   return {initialRoll, totalResults, wounds};
 }
 
-
-
 function handleMultiRoll(roller){
 
   let p = roller.parameters;

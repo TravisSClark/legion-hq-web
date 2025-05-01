@@ -81,9 +81,6 @@ function ControlPanel() {
         <Typography>
           Defender
         </Typography>
-        <Typography>
-          Defense Dice
-        </Typography>
           <FormControl sx={{m:1, minWidth:200}} size="medium">
             <InputLabel id="def-select-label">Defense Dice</InputLabel>
             <Select
