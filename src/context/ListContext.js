@@ -20,7 +20,6 @@ import {
   equipUpgrade,
   unequipUpgrade,
   countPoints,
-  consolidate
 } from 'components/listOperations';
 import listTemplate from 'constants/listTemplate';
 import { validateList } from 'components/listValidator';

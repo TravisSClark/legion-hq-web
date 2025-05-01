@@ -9917,12 +9917,12 @@
     ],
     "stats": {
       "minicount": 3,
-      "hp": null,
-      "defense": "w",
+      "hp": 1,
+      "defense": "r",
       "courage": 2,
-      "speed": null,
-      "hitsurge": "",
-      "defsurge": ""
+      "speed": 3,
+      "hitsurge": "h",
+      "defsurge": "b"
     },
     "weapons": [
       {
@@ -10008,12 +10008,12 @@
     ],
     "stats": {
       "minicount": 1,
-      "hp": null,
-      "defense": "w",
+      "hp": 2,
+      "defense": "r",
       "courage": 2,
-      "speed": null,
-      "hitsurge": "",
-      "defsurge": ""
+      "speed": 3,
+      "hitsurge": "h",
+      "defsurge": "b"
     },
     "weapons": [
       {
@@ -18972,11 +18972,15 @@
       "heavy weapon",
       "heavy weapon"
     ],
-    "defense": "red",
-    "surges": [],
-    "wounds": 2,
-    "courage": 3,
-    "speed": 2,
+   "stats": {
+      "minicount": 0,
+      "hp": 2,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    },
     "equip": [
       "xq",
       "xr",

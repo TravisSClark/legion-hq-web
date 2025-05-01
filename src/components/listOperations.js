@@ -455,12 +455,7 @@ export {
   unequipCounterpartUpgrade,
   incrementUnit,
   decrementUnit,
-  countPoints,
-
-  // TODO - these are *probably* unneeded by importing classes via redundancy or tbd consolidate refactor; reassess
   countPoints, 
   sortCommandIds,
   consolidate,
-  // TODO - *probably* unneeded by importing classes via redundancy or tbd consolidate refactor; reassess
-  consolidate
 };

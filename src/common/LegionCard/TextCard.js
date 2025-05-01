@@ -264,19 +264,25 @@ function UnitCardContent({ card, chipSize }) {
   const {
     cost,
     resilience,
-    upgradeBar
+    upgradeBar,
   } = card;
 
-  const defense = card.stats.defense === 'w' ? 'white' : 'red';
+
+  let stats = card.stats;
+  if(!stats){
+    stats = {};
+  }
+
+  const defense = stats.defense === 'w' ? 'white' : 'red';
   const surges = [];
-  if(card.stats.hitsurge === 'h'){
+  if(stats.hitsurge === 'h'){
     surges.push('hit');
   }
-  else if(card.stats.hitsurge === 'c'){
+  else if(stats.hitsurge === 'c'){
     surges.push('crit');
   }
 
-  if(card.stats.defsurge === 'b'){
+  if(stats.defsurge === 'b'){
     surges.push('block');
   }
 
@@ -293,13 +299,13 @@ function UnitCardContent({ card, chipSize }) {
           Stats
         </Typography>
         <div style={{ flexGrow: 1 }} />
-        <StatChip type="wounds" value={card.stats.hp} size={chipSize} />
+        <StatChip type="wounds" value={stats.hp} size={chipSize} />
         {resilience ? (
           <StatChip type="resilience" value={resilience} size={chipSize} />
         ) : (
-          <StatChip type="courage" value={card.stats.courage} size={chipSize} />
+          <StatChip type="courage" value={stats.courage} size={chipSize} />
         )}
-        <SpeedChip speed={card.stats.speed} size={chipSize} />
+        <SpeedChip speed={stats.speed} size={chipSize} />
         <DefenseChip type="defense" color={defense} size={chipSize} />
         <SurgeChip type="surges" surges={surges} size={chipSize} />
       </ReverseWrapper>
