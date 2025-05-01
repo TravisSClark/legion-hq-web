@@ -123,7 +123,7 @@ function NavigationDrawer() {
         </List>
         <Divider />
         <List dense={true}>
-          <NavDrawerLink
+          {/* <NavDrawerLink
             text="Roller"
             selected={pathname === '/roller'}
             icon={routes['/roller'].icon}
@@ -131,7 +131,7 @@ function NavigationDrawer() {
               setIsDrawerOpen(false);
               goToPage('/roller');
             }}
-          />
+          /> */}
           <NavDrawerLink
             text="Settings"
             selected={pathname === '/settings'}

@@ -3,7 +3,7 @@ import { Chip, Typography } from '@material-ui/core';
 import { DirectionsRun as SpeedIcon } from '@material-ui/icons';
 
 function SpeedChip({ size, speed }) {
-  const label = speed < 4 && speed > -1 ? speed : 'Error';
+  const label = (speed < 4 && speed > -1) ? speed : 'Error';
   return (
     <Chip
       size={size}

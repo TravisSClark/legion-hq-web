@@ -263,14 +263,23 @@ function UpgradeCardContent({ card, chipSize }) {
 function UnitCardContent({ card, chipSize }) {
   const {
     cost,
-    wounds,
     resilience,
-    courage,
-    speed,
-    defense,
-    surges,
     upgradeBar
   } = card;
+
+  const defense = card.stats.defense === 'w' ? 'white' : 'red';
+  const surges = [];
+  if(card.stats.hitsurge === 'h'){
+    surges.push('hit');
+  }
+  else if(card.stats.hitsurge === 'c'){
+    surges.push('crit');
+  }
+
+  if(card.stats.defsurge === 'b'){
+    surges.push('block');
+  }
+
   return (
     <CardContent style={{ padding: 8, textAlign: 'right' }}>
       <ReverseWrapper>
@@ -284,15 +293,15 @@ function UnitCardContent({ card, chipSize }) {
           Stats
         </Typography>
         <div style={{ flexGrow: 1 }} />
-        <StatChip type="wounds" value={wounds} size={chipSize} />
+        <StatChip type="wounds" value={card.stats.hp} size={chipSize} />
         {resilience ? (
           <StatChip type="resilience" value={resilience} size={chipSize} />
         ) : (
-          <StatChip type="courage" value={courage} size={chipSize} />
+          <StatChip type="courage" value={card.stats.courage} size={chipSize} />
         )}
-        <SpeedChip value={speed} size={chipSize} />
-        <DefenseChip type="defense" value={defense} size={chipSize} />
-        <SurgeChip type="surges" value={surges} size={chipSize} />
+        <SpeedChip speed={card.stats.speed} size={chipSize} />
+        <DefenseChip type="defense" color={defense} size={chipSize} />
+        <SurgeChip type="surges" surges={surges} size={chipSize} />
       </ReverseWrapper>
       <Divider style={{ marginBottom: 4 }} />
       <ReverseWrapper>
