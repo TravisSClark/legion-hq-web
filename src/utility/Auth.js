@@ -1,5 +1,5 @@
-import auth0 from 'auth0-js';
-import auth from 'constants/auth';
+import auth0 from "auth0-js";
+import auth from "constants/auth";
 
 const { returnTo, redirectUri } = auth.prod;
 const { domain, audience, clientID } = auth.v1;
@@ -7,9 +7,12 @@ const { domain, audience, clientID } = auth.v1;
 class Auth {
   constructor() {
     this.auth0 = new auth0.WebAuth({
-      redirectUri, domain, audience, clientID,
-      responseType: 'id_token',
-      scope: 'openid profile email'
+      redirectUri,
+      domain,
+      audience,
+      clientID,
+      responseType: "id_token",
+      scope: "openid profile email",
     });
     this.getProfile = this.getProfile.bind(this);
     this.handleAuthentication = this.handleAuthentication.bind(this);
@@ -19,17 +22,29 @@ class Auth {
     this.signOut = this.signOut.bind(this);
   }
 
-  getEmail() { return this.profile.email; }
+  getEmail() {
+    return this.profile.email;
+  }
 
-  getName() { return this.profile.name; }
+  getName() {
+    return this.profile.name;
+  }
 
-  getProfile() { return this.profile; }
+  getProfile() {
+    return this.profile;
+  }
 
-  getIdToken() { return this.idToken; }
+  getIdToken() {
+    return this.idToken;
+  }
 
-  isAuthenticated() { return new Date().getTime() < this.expiresAt; }
+  isAuthenticated() {
+    return new Date().getTime() < this.expiresAt;
+  }
 
-  signIn() { this.auth0.authorize(); }
+  signIn() {
+    this.auth0.authorize();
+  }
 
   handleAuthentication() {
     return new Promise((resolve, reject) => {
@@ -43,7 +58,7 @@ class Auth {
         this.expiresAt = authResult.idTokenPayload.exp * 1000;
         resolve();
       });
-    })
+    });
   }
 
   setSession(authResult) {

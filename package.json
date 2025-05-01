@@ -27,6 +27,7 @@
     "fs": "0.0.1-security",
     "html2canvas": "^1.0.0-rc.5",
     "https": "^1.0.0",
+    "jimp": "^0.16.13",
     "lodash": "^4.17.15",
     "merge-images": "^2.0.0",
     "pages": "./src/pages",

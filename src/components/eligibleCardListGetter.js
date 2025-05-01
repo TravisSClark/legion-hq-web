@@ -178,7 +178,7 @@ const stormTideCommands = {
   'storm tide: special forces': ['AD', 'AH', 'AI']
 };
 
-function getEligibleCcs(list, isContingencies = false){
+function getEligibleCcs(list){
   const validCcs = [];
   const pipCounts = { '1': 0, '2': 0, '3': 0 };
   list.commandCards.forEach(id => {
@@ -199,16 +199,15 @@ function getEligibleCcs(list, isContingencies = false){
 
     const card = cards[id];
 
-    if (!isContingencies && pipCounts[card.cardSubtype] > 1) return false; 
+    if (pipCounts[card.cardSubtype] > 1) return false; 
     if (!list.faction.includes(card.faction)) return false;
     if (card.battleForce && card.battleForce !== list.battleForce) return false;
 
     if (list.commandCards.includes(id)) return false;
-    if (list.contingencies && list.contingencies.includes(id)) return false;
 
     // For now, leave both in in case there's a card I'm not thinking of (...again, I don't think there is)
     if(card.commander){
-      let commanders = typeof Array.isArray(card.commander) ?  card.commander : [card.commander];
+      let commanders = Array.isArray(card.commander) ?  card.commander : [card.commander];
       if((!cardNames.some(c=> commanders.includes(c)) && !listCounterparts.some(c=>commanders.includes(c)))) return false;
     }
     if (card.isStormTide){
@@ -244,27 +243,6 @@ function getEligibleCommandsToAdd(list) {
   return {
     validIds: sortCommandIds(validCommandIds),
     invalidIds: [] // sortCommandIds(invalidCommandIds)
-  };
-}
-
-function getEligibleContingenciesToAdd(list) {
-  if (!list.contingencies) list.contingencies = [];
-  let validCommandIds = [];
-
-  let numContingencies = 0;
-  list.units.forEach((unit) => {
-    const unitCard = cards[unit.unitId];
-    if (unitCard.contingencies && unitCard.contingencies > 0)
-      numContingencies += unitCard.contingencies
-  });
-
-  if(list.contingencies.length < numContingencies){
-    validCommandIds = getEligibleCcs(list, true);
-  }
-
-  return {
-    validIds: sortCommandIds(validCommandIds),
-    invalidIds:[] 
   };
 }
 
@@ -322,36 +300,6 @@ function getEquippableUpgrades(
   return {
     validIds: sortUpgradeIds(validUpgradeIds),
     invalidIds: sortIds(invalidUpgradeIds)
-  };
-}
-
-
-function getEquippableLoadoutUpgrades(
-  list, upgradeType, id, upgradeIndex, upgradesEquipped
-) {
-  const upgrades = getEquippableUpgrades(
-    list, upgradeType, id, upgradesEquipped
-  );
-  const validIds = upgrades.validIds;
-  const invalidIds = upgrades.invalidIds;
-  const validLoadoutUpgradeIds = [];
-  const invalidLoadoutUpgradeIds = [...invalidIds];
-  const parentUpgradeCard = cards[upgradesEquipped[upgradeIndex]];
-  for (let i = 0; i < validIds.length; i++) {
-    const upgradeId = validIds[i]
-    const upgradeCard = cards[upgradeId];
-    if (
-      upgradeCard.cost <= parentUpgradeCard.cost &&
-      upgradeId !== parentUpgradeCard.id
-    ) {
-      validLoadoutUpgradeIds.push(upgradeCard.id);
-    } else {
-      invalidLoadoutUpgradeIds.push(upgradeCard.id);
-    }
-  }
-  return {
-    validIds: validLoadoutUpgradeIds,
-    invalidIds: invalidLoadoutUpgradeIds
   };
 }
 
@@ -451,9 +399,7 @@ function findUnitIndexInList(unit, list){
 export{
   getEligibleBattlesToAdd,
   getEligibleUnitsToAdd,
-  getEligibleContingenciesToAdd,
   getEligibleCommandsToAdd,
-  getEquippableLoadoutUpgrades,
   getEquippableUpgrades,
   unitHasUniques,
   getListUniques,

@@ -24,15 +24,11 @@ const CardSelector = () => {
     setCardPaneFilter,
     getEligibleUnitsToAdd,
     getEquippableUpgrades,
-    getEquippableLoadoutUpgrades,
     getEligibleCommandsToAdd,
-    getEligibleContingenciesToAdd,
     getEligibleBattlesToAdd,
     handleAddUnit,
     handleAddCommand,
-    handleAddContingency,
     handleRemoveCommand,
-    handleRemoveContingency,
     handleAddBattle,
     handleRemoveBattle,
     handleCardZoom,
@@ -113,85 +109,27 @@ const CardSelector = () => {
         </div>
       );
       break;
-    case 'UNIT_LOADOUT_UPGRADE':
-    case 'COUNTERPART_LOADOUT_UPGRADE':
-      let id = cardPaneFilter.unitId;
-      selectorIds = getEquippableLoadoutUpgrades(
-        currentList,
-        cardPaneFilter.upgradeType,
-        id,
-        cardPaneFilter.upgradeIndex,
-        cardPaneFilter.upgradesEquipped
-      );
-      clickHandler = (upgradeId) => handleEquipUpgrade(
-        action,
-        cardPaneFilter.unitIndex,
-        cardPaneFilter.upgradeIndex,
-        upgradeId
-      );
-      header = (
-        <div style={{display:'flex', flexDirection: 'row', justifyContent:'space-between', alignItems:"center", flex:1}} >
-          <Title title={"Add loadout upgrade"} />
-          <Button size="large" style={{marginLeft:20}} onClick={()=>{
-              setCardSelectorToNextUpgradeSlot(currentList, action, cardPaneFilter.unitIndex, cardPaneFilter.upgradeIndex, isApplyToAll, true)
-            }}>
-              Skip
-          </Button>
-        </div>
-      );
-      break;
     case 'COMMAND':
-    case 'CONTINGENCY':
-      let currentCards = null;
-      let handleDelete = null;
-      let headerText = "";
-
-      if(action == 'CONTINGENCY'){
-        selectorIds = getEligibleContingenciesToAdd(currentList);
-        clickHandler = (commandId) => handleAddContingency(commandId);
-        currentCards = currentList.contingencies;
-        handleDelete = (id)=>handleRemoveContingency(id);
-
-        if (!currentList.contingencies || currentList.contingencies.length === 0) {
-          headerText = "Add contingencies";
-        }else{
-          headerText = "Contingencies:";
-        } 
+      selectorIds = getEligibleCommandsToAdd(currentList);
+      clickHandler = (commandId) => handleAddCommand(commandId)
+      if (currentList.commandCards.length === 0) {
+        header = <Title title="Add command cards" />;
+      } else {
+        const currentCommands = currentList.commandCards.map((commandId, i) => (
+          <ChipCard
+            card={cards[commandId]}
+            key={commandId}
+            handleClick={()=>handleCardZoom(commandId)}
+            handleDelete={() => handleRemoveCommand(i)}
+          />
+        ));
+        header = (
+          <div style={{ display: 'flex', alignItems: 'center', flexFlow: 'row wrap' }}>
+            <Title title="Commands:" style={{ marginRight: 4 }} />
+            {currentCommands}
+          </div>
+        );
       }
-      else{
-        selectorIds = getEligibleCommandsToAdd(currentList);
-        clickHandler = (commandId) => handleAddCommand(commandId);
-        currentCards = currentList.commandCards;
-        handleDelete = (id)=>handleRemoveCommand(id);
-        
-        if (currentList.commandCards.length === 0) {
-          headerText = "Add commands";
-        }else{
-          headerText = "Commands:";
-        } 
-      }
-
-      const currentCommands = (
-        <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent:'flex-start', flexFlow: 'row wrap' }}>
-        {        
-          currentCards.map((commandId, i) => (
-            <ChipCard
-              card={cards[commandId]}
-              key={commandId}
-              handleClick={()=>handleCardZoom(commandId)}
-              handleDelete={() => handleDelete(i)}
-            />
-          ))
-        }
-        </div>);
-
-      header = (
-        <div style={{ display: 'flex', flex:1, alignItems: 'center', flexFlow: 'row wrap', justifyContent:'space-between' }}>
-          <Title title={headerText} style={{ marginRight: 4 }} />
-          <IconButton onClick={()=>{}}><FilterList/></IconButton>
-        </div>
-      );
-      moreHeaderContent= currentCommands;
       break;
     case 'BATTLE':
       selectorIds = getEligibleBattlesToAdd(currentList, cardPaneFilter.type);

@@ -18,15 +18,8 @@ function generateUnitComponent(unit, index) {
     for (let j = 0; j < unit.upgradesEquipped.length; j++) {
       if (unit.upgradesEquipped[j]) {
         const upgradeCard = cards[unit.upgradesEquipped[j]];
-        if (unit.loadoutUpgrades && unit.loadoutUpgrades[j]) {
-          const loadoutCard = cards[unit.loadoutUpgrades[j]];
-          unitText.push(` - ${upgradeCard.cardName} (${upgradeCard.cost})`);
-          unitText.push(`/${loadoutCard.cardName} (${loadoutCard.cost})`);
-          unitText.push(<br/>);
-        } else {
-          unitText.push(` - ${upgradeCard.cardName} (${upgradeCard.cost})`);
-          unitText.push(<br/>);
-        }
+        unitText.push(` - ${upgradeCard.cardName} (${upgradeCard.cost})`);
+        unitText.push(<br/>);
       }
     }
   }

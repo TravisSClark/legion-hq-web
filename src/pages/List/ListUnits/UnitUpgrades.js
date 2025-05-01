@@ -14,7 +14,6 @@ function UnitUpgrades({
   const addCounterpartButtons = [];
   const addUpgradesButtons = [];
   const upgradeChips = [];
-  const hasLoadout = unit.loadoutUpgrades ? unit.loadoutUpgrades.length > 0 : false;
 
   const {setCardPaneFilter, handleCardZoom} = useContext(ListContext);
 
@@ -37,7 +36,6 @@ function UnitUpgrades({
           upgradeIndex={upgradeIndex}
           key={upgradeId}
           upgradeId={upgradeId}
-          loadoutId={hasLoadout ? unit.loadoutUpgrades[upgradeIndex] : undefined}
           handleClick={() => handleCardZoom(upgradeId)}
         />
       );

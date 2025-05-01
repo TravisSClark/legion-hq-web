@@ -1,22 +1,34 @@
-import React, { useContext } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useContext, useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import Img from "react-image";
 import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   SwipeableDrawer,
   Divider,
   List,
   ListItem,
   ListItemText,
-  ListItemIcon
-} from '@material-ui/core';
-import DataContext from 'context/DataContext';
-import { Launch as LaunchIcon } from '@material-ui/icons';
+  ListItemIcon,
+  Typography,
+} from "@material-ui/core";
 
-function NavDrawerLink({ selected, icon, text, handleClick }) {
+import {
+  Launch as LaunchIcon,
+  ExpandMore,
+  Add as AddIcon,
+} from "@material-ui/icons";
+import cards from "constants/cards";
+import factions from "constants/factions";
+import urls from "constants/urls";
+import DataContext from "context/DataContext";
+import { findFirstCardId } from "pages/Home/ListChip";
+
+function NavDrawerLink({ selected, icon, avatar, text, handleClick }) {
   return (
     <ListItem button selected={selected} onClick={handleClick}>
-      <ListItemIcon>
-        {icon}
-      </ListItemIcon>
+      <ListItemIcon>{avatar ? avatar : icon}</ListItemIcon>
       <ListItemText primary={text} />
     </ListItem>
   );
@@ -28,17 +40,31 @@ function NavigationDrawer() {
   const {
     isDrawerOpen,
     routes,
-    faction,
+    userId,
+    userLists,
+    fetchUserLists,
     goToPage,
-    setIsDrawerOpen
+    setIsDrawerOpen,
   } = useContext(DataContext);
+  const listChips = {};
+  Object.keys(factions).forEach((faction) => (listChips[faction] = []));
+  if (userLists) {
+    userLists.forEach((userList) => {
+      if (userList.faction in listChips) {
+        listChips[userList.faction].push(userList);
+      }
+    });
+  }
+  useEffect(() => {
+    if (userId) fetchUserLists(userId);
+  }, [userId]);
   return (
     <SwipeableDrawer
       open={isDrawerOpen}
       onOpen={() => setIsDrawerOpen(true)}
       onClose={() => setIsDrawerOpen(false)}
     >
-      <div style={{ width: 250 }}>
+      <div style={{ width: "100%" }}>
         <List>
           <ListItem>
             <ListItemText primary="Legion HQ 2" secondary="Crit2Block" />
@@ -47,125 +73,168 @@ function NavigationDrawer() {
         <List dense={true}>
           <NavDrawerLink
             text="Home"
-            selected={pathname === '/'}
-            icon={routes['/'].icon}
+            selected={pathname === "/"}
+            icon={routes["/"].icon}
             handleClick={() => {
               setIsDrawerOpen(false);
-              goToPage('/');
+              goToPage("/");
             }}
           />
           <NavDrawerLink
             text="News"
-            selected={pathname === '/news'}
-            icon={routes['/news'].icon}
+            selected={pathname === "/news"}
+            icon={routes["/news"].icon}
             handleClick={() => {
               setIsDrawerOpen(false);
-              goToPage('/news');
+              goToPage("/news");
             }}
           />
           <NavDrawerLink
             text="Cards"
-            selected={pathname === '/cards'}
-            icon={routes['/cards'].icon}
+            selected={pathname === "/cards"}
+            icon={routes["/cards"].icon}
             handleClick={() => {
               setIsDrawerOpen(false);
-              goToPage('/cards');
+              goToPage("/cards");
             }}
           />
         </List>
         <Divider />
         <List dense={true}>
-          <NavDrawerLink
-            text="Rebels"
-            selected={pathname === '/list/rebels' || faction === 'rebels'}
-            icon={routes['/list/rebels'].icon}
-            handleClick={() => {
-              setIsDrawerOpen(false);
-              goToPage('/list/rebels');
-            }}
-          />
-          <NavDrawerLink
-            text="Empire"
-            selected={pathname === '/list/empire' || faction === 'empire'}
-            icon={routes['/list/empire'].icon}
-            handleClick={() => {
-              setIsDrawerOpen(false);
-              goToPage('/list/empire');
-            }}
-          />
-          <NavDrawerLink
-            text="Republic"
-            selected={pathname === '/list/republic' || faction === 'republic'}
-            icon={routes['/list/republic'].icon}
-            handleClick={() => {
-              setIsDrawerOpen(false);
-              goToPage('/list/republic');
-            }}
-          />
-          <NavDrawerLink
-            text="Separatists"
-            selected={pathname === '/list/separatists' || faction === 'separatists'}
-            icon={routes['/list/separatists'].icon}
-            handleClick={() => {
-              setIsDrawerOpen(false);
-              goToPage('/list/separatists');
-            }}
-          />
-          <NavDrawerLink
-            text="Shadow Collective"
-            selected={pathname === '/list/mercenary' || faction === 'mercenary'}
-            icon={routes['/list/mercenary'].icon}
-            handleClick={() => {
-              setIsDrawerOpen(false);
-              goToPage('/list/mercenary');
-            }}
-          />
+          {Object.keys(factions).map((faction) => {
+            return (
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMore />}
+                  dense={true}
+                  min-height={48}
+                >
+                  <ListItemIcon>{routes[`/list/${faction}`].icon}</ListItemIcon>
+                  <Typography component="span">
+                    {faction[0].toUpperCase() + faction.slice(1)}
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails style={{ paddingRight: 0, paddingTop: 0 }}>
+                  <List dense={true}>
+                    <NavDrawerLink
+                      text="New List"
+                      selected={pathname === `/list/${faction}`}
+                      icon={<AddIcon />}
+                      handleClick={() => {
+                        setIsDrawerOpen(false);
+                        goToPage(`/list/${faction}`);
+                      }}
+                    />
+                    {listChips[`${faction}`].map((userList) => {
+                      const card = cards[findFirstCardId(userList)];
+                      return (
+                        <NavDrawerLink
+                          text={
+                            userList.title.length > 64
+                              ? `${userList.title}...`
+                              : userList.title
+                          }
+                          selected={pathname === `/list/${userList.listId}`}
+                          icon={undefined}
+                          avatar={
+                            card ? (
+                              <Img
+                                alt={card.cardName}
+                                src={`${urls.cdn}/unitIcons/${card.imageName}`}
+                                style={{
+                                  marginLeft: 0,
+                                  width: 44,
+                                  height: 32,
+                                  borderRadius: 20,
+                                }}
+                              />
+                            ) : undefined
+                          }
+                          handleClick={() => {
+                            setIsDrawerOpen(false);
+                            goToPage(`/list/${userList.listId}`);
+                          }}
+                        />
+                      );
+                    })}
+                  </List>
+                </AccordionDetails>
+              </Accordion>
+            );
+          })}
         </List>
         <Divider />
         <List dense={true}>
           {/* <NavDrawerLink
             text="Roller"
-            selected={pathname === '/roller'}
-            icon={routes['/roller'].icon}
+            selected={pathname === "/roller"}
+            icon={routes["/roller"].icon}
             handleClick={() => {
               setIsDrawerOpen(false);
-              goToPage('/roller');
+              goToPage("/roller");
             }}
           /> */}
           <NavDrawerLink
             text="Settings"
-            selected={pathname === '/settings'}
-            icon={routes['/settings'].icon}
+            selected={pathname === "/settings"}
+            icon={routes["/settings"].icon}
             handleClick={() => {
               setIsDrawerOpen(false);
-              goToPage('/settings');
+              goToPage("/settings");
             }}
           />
           <NavDrawerLink
             text="Info"
-            selected={pathname === '/info'}
-            icon={routes['/info'].icon}
+            selected={pathname === "/info"}
+            icon={routes["/info"].icon}
             handleClick={() => {
               setIsDrawerOpen(false);
-              goToPage('/info');
+              goToPage("/info");
             }}
           />
         </List>
         <Divider />
         <List dense={true}>
-          <ListItem button onClick={() => window.open(" https://www.atomicmassgames.com/swlegiondocs/", "_blank", "noopener noreferrer")}>
+          <ListItem
+            button
+            onClick={() =>
+              window.open(
+                " https://www.atomicmassgames.com/swlegiondocs/",
+                "_blank",
+                "noopener noreferrer"
+              )
+            }
+          >
             <ListItemIcon>
               <LaunchIcon />
             </ListItemIcon>
             <ListItemText primary="AMG Legion Docs" />
           </ListItem>
-          <ListItem button onClick={() => window.open("https://legion.longshanks.org/", "_blank", "noopener noreferrer")}>
+          <ListItem
+            button
+            onClick={() =>
+              window.open(
+                "https://legion.longshanks.org/",
+                "_blank",
+                "noopener noreferrer"
+              )
+            }
+          >
             <ListItemIcon>
               <LaunchIcon />
             </ListItemIcon>
             <ListItemText primary="Longshanks" />
           </ListItem>
-          <ListItem button onClick={() => window.open("https://legionquickguide.com/", "_blank", "noopener noreferrer")}>
+          <ListItem
+            button
+            onClick={() =>
+              window.open(
+                "https://legionquickguide.com/",
+                "_blank",
+                "noopener noreferrer"
+              )
+            }
+          >
             <ListItemIcon>
               <LaunchIcon />
             </ListItemIcon>
@@ -174,19 +243,46 @@ function NavigationDrawer() {
         </List>
         <Divider />
         <List dense={true}>
-          <ListItem button onClick={() => window.open("https://www.youtube.com/@crit2block", "_blank", "noopener noreferrer")}>
+          <ListItem
+            button
+            onClick={() =>
+              window.open(
+                "https://www.youtube.com/@crit2block",
+                "_blank",
+                "noopener noreferrer"
+              )
+            }
+          >
             <ListItemIcon>
               <LaunchIcon />
             </ListItemIcon>
             <ListItemText primary="Crit2Block YouTube" />
           </ListItem>
-          <ListItem button onClick={() => window.open("https://www.crit2block.com/blog", "_blank", "noopener noreferrer")}>
+          <ListItem
+            button
+            onClick={() =>
+              window.open(
+                "https://www.crit2block.com/blog",
+                "_blank",
+                "noopener noreferrer"
+              )
+            }
+          >
             <ListItemIcon>
               <LaunchIcon />
             </ListItemIcon>
             <ListItemText primary="Carolina Holocronicles" />
           </ListItem>
-          <ListItem button onClick={() => window.open("https://www.youtube.com/@kokozula", "_blank", "noopener noreferrer")}>
+          <ListItem
+            button
+            onClick={() =>
+              window.open(
+                "https://www.youtube.com/@kokozula",
+                "_blank",
+                "noopener noreferrer"
+              )
+            }
+          >
             <ListItemIcon>
               <LaunchIcon />
             </ListItemIcon>
@@ -196,6 +292,6 @@ function NavigationDrawer() {
       </div>
     </SwipeableDrawer>
   );
-};
+}
 
 export default NavigationDrawer;

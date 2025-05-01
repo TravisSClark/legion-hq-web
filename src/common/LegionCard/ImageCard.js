@@ -67,7 +67,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
         <CardActionArea disableRipple={true}  onClick={()=>{handleClick(); flickerCard();}}>
           <CardMedia
             title={displayName ? displayName : cardName}
-            image={`${urls.cdn}/${cardType}Cards/${imageName}?${new Date().getTime()}`}
+            image={`${urls.cdn}/${cardType}Cards/${imageName}`}
             className={clsx(
               { [classes.unitImage]: cardType === 'unit' || cardType === 'counterpart'},
               { [classes.commandImage]: cardType === 'battle'},

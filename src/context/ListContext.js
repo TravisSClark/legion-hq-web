@@ -13,8 +13,6 @@ import {
   decrementUnit,
   addCommand,
   removeCommand,
-  addContingency,
-  removeContingency,
   addCounterpart,
   removeCounterpart,
   addBattle,
@@ -29,10 +27,8 @@ import { validateList } from 'components/listValidator';
 
 import {
   getEligibleCommandsToAdd,
-  getEligibleContingenciesToAdd,
   getEligibleUnitsToAdd,
   getEquippableUpgrades,
-  getEquippableLoadoutUpgrades,
   getEligibleBattlesToAdd,
 } from 'components/eligibleCardListGetter'
 
@@ -206,46 +202,6 @@ export function ListProvider({
           }
           break;
 
-        case "COUNTERPART_LOADOUT_UPGRADE":
-          // Punt for now - rather have non-function than a breaking change if/when a 
-          // counterpart with loadout and multiple slots appears in-game
-          upgradesEquipped = unit.counterpart.upgradesEquipped;
-          upgradeBar = cards[unit.counterpart.counterpartId].upgradeBar;
-          getFilter = () => null
-          break;
-
-        case "UNIT_LOADOUT_UPGRADE":
-          // If it's a laodout upgrade, return a UNIT_LOADOUT selector if the next upgrade is filled, return a UNIT_UPGRADE pick if not
-
-          getFilter = (index, getNewType) =>{
-            if(!getNewType || upgradeBar[upgradeIndex] !== upgradeBar[index]){
-
-              if (!upgradesEquipped[index]) {
-                return {
-                  action: "UNIT_UPGRADE",
-                  unitIndex,
-                  upgradeIndex: index,
-                  upgradeType: upgradeBar[index],
-                  unitId: unit.unitId,
-                  upgradesEquipped: unit.upgradesEquipped,
-                  additionalUpgradeSlots: unit.additionalUpgradeSlots
-                }
-              } else if(!unit.loadoutUpgrades[index]){
-                return {
-                  action: "UNIT_LOADOUT_UPGRADE",
-                  unitIndex,
-                  upgradeIndex: index,
-                  upgradeType: upgradeBar[index],
-                  unitId: unit.unitId,
-                  upgradesEquipped: unit.upgradesEquipped,
-                  additionalUpgradeSlots: unit.additionalUpgradeSlots
-                }
-              }
-            }
-            return null;
-          }
-          break;
-
         default:
           // If the next upgrade is empty on UNIT_UPGRADE, get me a selector for that next slot, if used, return null
           getFilter = (index, getNewType) =>{
@@ -316,16 +272,8 @@ export function ListProvider({
     const newList = addCommand(currentList, commandId);
     setCurrentList({ ...newList });
   }
-  const handleAddContingency = (commandId) => {
-    const newList = addContingency(currentList, commandId);
-    setCurrentList({ ...newList });
-  }
   const handleRemoveCommand = (commandIndex) => {
     const newList = removeCommand(currentList, commandIndex);
-    setCurrentList({ ...newList });
-  }
-  const handleRemoveContingency = (contingencyIndex) => {
-    const newList = removeContingency(currentList, contingencyIndex);
     setCurrentList({ ...newList });
   }
   const handleAddBattle = (type, battleId) => {
@@ -438,7 +386,6 @@ export function ListProvider({
   const unitProps = {
     getEligibleUnitsToAdd,
     getEquippableUpgrades,
-    getEquippableLoadoutUpgrades,
     handleAddUnit,
     handleAddCounterpart,
     handleRemoveCounterpart,
@@ -456,10 +403,7 @@ export function ListProvider({
   const commandProps = {
     getEligibleCommandsToAdd,
     handleAddCommand,
-    handleRemoveCommand,
-    getEligibleContingenciesToAdd,
-    handleAddContingency,
-    handleRemoveContingency
+    handleRemoveCommand
   };
   const listProps = {
     currentList,
