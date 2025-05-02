@@ -16,8 +16,8 @@ const upgradesProvidingAlliesOfConvenience = cardsIdsByType["upgrade"].filter(c=
  */
 function validateUpgrades(list, unitIndex, listUniqueUpgrades){
   const unit = list.units[unitIndex];
-  const card = cards[unit.unitId];
-  card.forceAffinity = unit.forceAffinity;
+  const unitCard = cards[unit.unitId];
+  unitCard.forceAffinity = unit.forceAffinity;
 
   unit.validationIssues = [];
 
@@ -32,10 +32,24 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
         unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" upgrade is not allowed in this battleforce." });
     }
   })
-  
-  // Validation for each of the 'must equip' keywords (that I know of)
 
-  if (card.flexResponse) {
+  if(unit.counterpart){
+    unit.counterpart.upgradesEquipped.forEach((id) => {
+      if(!id) return;
+      const card = cards[id];
+      if(card.uniqueCount || card.isUnique){
+        listUniqueUpgrades[id] = listUniqueUpgrades[id] ? listUniqueUpgrades[id] + 1 : 1;
+      }
+      if(list.battleForce && (card.isUnique)){
+        if(!battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id))
+          unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" upgrade is not allowed in this battleforce." });
+      }
+    });
+  }
+  
+  // Validation for each of the 'must equip' keywords
+
+  if (unitCard.flexResponse) {
     let heavyCount = 0;
     unit.upgradesEquipped.forEach((id)=>{
       if(id === null)
@@ -45,24 +59,24 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
         heavyCount++;
       }
     });
-    if(heavyCount < card.flexResponse){
-      let cardName = card.displayName ? card.displayName : card.cardName;
-      unit.validationIssues.push( { level:2, text: cardName + " needs " + card.flexResponse + " Heavy Weapon upgrades (Flexible Response)" });
+    if(heavyCount < unitCard.flexResponse){
+      let cardName = unitCard.displayName ? unitCard.displayName : unitCard.cardName;
+      unit.validationIssues.push( { level:2, text: cardName + " needs " + unitCard.flexResponse + " Heavy Weapon upgrades (Flexible Response)" });
     }
   }
 
   // Equip
-  if (card.equip){
-    card.equip.forEach((equipReq)=>{
+  if (unitCard.equip){
+    unitCard.equip.forEach((equipReq)=>{
       const equipCard = cards[equipReq];
       if(!unit.upgradesEquipped.includes(equipReq)){
-        let cardName = card.displayName ? card.displayName : card.cardName;
+        let cardName = unitCard.displayName ? unitCard.displayName : unitCard.cardName;
         unit.validationIssues.push( { level:2, text: cardName + " is missing " + equipCard.cardName + " (Equip)"});
       }
     });
   }
 
-    if(card.keywords.find(k=> k === "Heavy Weapon Team" || k.name === "Heavy Weapon Team")){
+    if(unitCard.keywords.find(k=> k === "Heavy Weapon Team" || k.name === "Heavy Weapon Team")){
 
     let hasHeavy = false;
     unit.upgradesEquipped.forEach((id)=>{
@@ -74,12 +88,12 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
       }
     });
     if(!hasHeavy){
-      let cardName = card.displayName ? card.displayName : card.cardName;
+      let cardName = unitCard.displayName ? unitCard.displayName : unitCard.cardName;
       unit.validationIssues.push( { level:2, text: cardName + " is missing a Heavy Weapon upgrade (Heavy Weapon Team)" });
     }
   }
 
-  if(card.keywords.find(k=> k === "Programmed" || k.name === "Programmed")){
+  if(unitCard.keywords.find(k=> k === "Programmed" || k.name === "Programmed")){
     let hasProto = false;
     unit.upgradesEquipped.forEach((id)=>{
       if(id === null)
@@ -90,7 +104,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
       }
     });
     if(!hasProto){
-      unit.validationIssues.push( { level:2, text: card.cardName + " is missing a Programming upgrade (Programmed)" });
+      unit.validationIssues.push( { level:2, text: unitCard.cardName + " is missing a Programming upgrade (Programmed)" });
     }
   }
 
@@ -108,16 +122,16 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
       leaderList.push(upgradeCard.cardName);
     }
 
-    else if (list.battleForce === 'Imperial Remnant' && upgradeCard.cardSubtype === 'heavy weapon' && card.cardSubtype === 'trooper') {
+    else if (list.battleForce === 'Imperial Remnant' && upgradeCard.cardSubtype === 'heavy weapon' && unitCard.cardSubtype === 'trooper') {
       if (impRemnantUpgrades.includes(id)) 
         return;
-    } else if (!areRequirementsMet(upgradeCard.requirements, card)) {
-      unit.validationIssues.push({level:2, text: card.cardName.toUpperCase() + " cannot equip " + upgradeCard.cardName.toUpperCase()})
+    } else if (!areRequirementsMet(upgradeCard.requirements, unitCard)) {
+      unit.validationIssues.push({level:2, text: unitCard.cardName.toUpperCase() + " cannot equip " + upgradeCard.cardName.toUpperCase()})
     }
   });
 
   if(leaderList.length > 1){
-    unit.validationIssues.push( { level:2, text: card.cardName + " has too many LEADER upgrades (" + leaderList.join(' and ') + ")"});
+    unit.validationIssues.push( { level:2, text: unitCard.cardName + " has too many LEADER upgrades (" + leaderList.join(' and ') + ")"});
   }
 }
 
