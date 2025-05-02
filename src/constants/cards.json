@@ -17170,6 +17170,7 @@
     "rank": "commander",
     "faction": "mercenary",
     "affiliation": "ewok",
+    "affiliations": [],
     "isUnique": true,
     "cost": 40,
     "keywords": [
@@ -18347,6 +18348,7 @@
     "id": "xf",
     "cardName": "Raddaugh Gnasp Fluttercraft",
     "title": "Attack Craft",
+    "displayName": "Raddaugh Gnasp Attack Craft",
     "imageName": "Raddaugh Gnasp Fluttercraft Attack Craft.webp",
     "cardType": "unit",
     "cardSubtype": "repulsor vehicle",

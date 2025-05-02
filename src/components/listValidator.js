@@ -355,16 +355,20 @@ function validateList(currentList, rankLimits){
     // side-effect of tallying list's unique upgrades to the passed in obj for use later
     validateUpgrades(currentList, index, listUniqueUpgrades);
 
-    if (battleForce && !battleForce[card.rank].includes(unit.unitId)){
+    // If battleforce, just use the whitelist for inclusion
+    if (battleForce){ 
+      if(!battleForce[card.rank].includes(unit.unitId)){
         unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" is not allowed in this battleforce." });
+      }
     }
-    else if( card.specialIssue && (!battleForce || card.specialIssue !== battleForce.name)){
-      unit.validationIssues.push({level:2, text: '"' + card.displayName + "\" is not allowed outside the " +card.specialIssue.toUpperCase() + " battleforce. (Special Issue)" });
+    // else, confirm we don't have a unit w specialIssue or a merc out of faction (e.g. BTV specials)
+    else if( card.specialIssue){
+      unit.validationIssues.push({level:2, text: '"' + (card.displayName?card.displayName:card.cardName) + "\" is not allowed outside the " +card.specialIssue.toUpperCase() + " battleforce. (Special Issue)" });
+    } else if(card.faction === "mercenary" && !card.affiliations.includes(faction)){
+      unit.validationIssues.push({level:2, text: card.cardName + " is not allowed in this faction/battleforce combo"})
     }
 
-    if(unit.validationIssues?.length > 0){
-      validationIssues = validationIssues.concat(unit.validationIssues);
-    }
+    validationIssues = validationIssues.concat(unit.validationIssues);
   });
 
   if(battleForcesDict[currentList.battleForce]?.rules?.buildsAsCorps){
