@@ -2,13 +2,6 @@
   "AA": {
     "id": "AA",
     "cardType": "unit",
-    "defense": "red",
-    "surges": [
-      "crit"
-    ],
-    "wounds": 5,
-    "courage": 2,
-    "speed": 2,
     "cardSubtype": "trooper",
     "cardName": "Storm Tide Commander",
     "isUnique": true,
@@ -25,6 +18,15 @@
       "gear",
       "armament"
     ],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "c",
+      "defsurge": ""
+    },
     "history": []
   },
   "AB": {
@@ -156,13 +158,7 @@
     "id": "AK",
     "isStormTide": true,
     "cardType": "unit",
-    "defense": "red",
-    "surges": [
-      "crit"
-    ],
-    "wounds": 5,
-    "courage": 2,
-    "speed": 2,
+    
     "cardSubtype": "trooper",
     "cardName": "Storm Tide Commander",
     "isUnique": true,
@@ -178,6 +174,15 @@
       "gear",
       "armament"
     ],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "c",
+      "defsurge": ""
+    },
     "history": []
   },
   "aa": {
@@ -1252,7 +1257,7 @@
       "minicount": 1,
       "hp": 6,
       "defense": "w",
-      "courage": null,
+      "courage": 4,
       "speed": 2,
       "hitsurge": "h",
       "defsurge": ""
@@ -1477,7 +1482,7 @@
       "minicount": 1,
       "hp": 8,
       "defense": "w",
-      "courage": null,
+      "courage": 0,
       "speed": 1,
       "hitsurge": "",
       "defsurge": ""
@@ -2459,7 +2464,7 @@
       "minicount": 2,
       "hp": 3,
       "defense": "w",
-      "courage": null,
+      "courage": 0,
       "speed": 3,
       "hitsurge": "h",
       "defsurge": "b"
@@ -5347,7 +5352,7 @@
       "minicount": 1,
       "hp": 9,
       "defense": "w",
-      "courage": null,
+      "courage": 6,
       "speed": 2,
       "hitsurge": "h",
       "defsurge": ""
@@ -6941,7 +6946,7 @@
       "minicount": 2,
       "hp": 3,
       "defense": "w",
-      "courage": null,
+      "courage": 0,
       "speed": 1,
       "hitsurge": "",
       "defsurge": "b"
@@ -7652,14 +7657,15 @@
     "upgradeBar": [
       "comms"
     ],
-    "defense": "white",
-    "surges": [
-      "hit",
-      "block"
-    ],
-    "courage": 2,
-    "wounds": 4,
-    "speed": 1,
+    "stats":{
+      "minicount": 1,
+      "hp": 4,
+      "defense": "w",
+      "courage": 2,
+      "speed": 1,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
     "history": [
       {
         "date": "19 November 2020",
@@ -8166,7 +8172,7 @@
     "cardSubtype": "trooper",
     "rank": "commander",
     "faction": "empire",
-    "isUniqueTitle": true,
+    "isUnique": true,
     "cost": 115,
     "keywords": [
       {
@@ -9488,11 +9494,11 @@
     ],
     "stats": {
       "minicount": 1,
-      "hp": null,
-      "defense": "w",
+      "hp": 5,
+      "defense": "r",
       "courage": 2,
-      "speed": null,
-      "hitsurge": "",
+      "speed": 2,
+      "hitsurge": "c",
       "defsurge": ""
     },
     "weapons": [
@@ -9635,13 +9641,15 @@
       "hardpoint",
       "comms"
     ],
-    "defense": "red",
-    "surges": [
-      "hit"
-    ],
-    "wounds": 6,
-    "resilience": 4,
-    "speed": 2,
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 4,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
     "history": [
       {
         "date": "27 October 2021",
@@ -9689,19 +9697,23 @@
     ],
     "stats": {
       "minicount": 2,
-      "hp": null,
+      "hp": 3,
       "defense": "w",
-      "courage": null,
-      "speed": null,
+      "courage": 0,
+      "speed": 3,
       "hitsurge": "",
       "defsurge": ""
     },
     "weapons": [
       {
-        "name": "Repeating Dual Blaster Cannons",
+        "name": "Dual Blaster Cannons",
         "keywords": [
           {
-            "name": "Critical 1, Fixed",
+            "name": "Critical",
+            "value": 1
+          },
+          {
+            "name": "Fixed",
             "value": "Front"
           }
         ],
@@ -9975,7 +9987,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "rebels",
-    "isUniqueTitle": true,
+    "isUnique": true,
     "cost": 30,
     "keywords": [
       {
@@ -10306,11 +10318,11 @@
     ],
     "stats": {
       "minicount": 4,
-      "hp": null,
-      "defense": "w",
+      "hp": 1,
+      "defense": "r",
       "courage": 2,
-      "speed": null,
-      "hitsurge": "",
+      "speed": 2,
+      "hitsurge": "h",
       "defsurge": ""
     },
     "weapons": [
@@ -10358,7 +10370,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "empire",
-    "isUniqueTitle": true,
+    "isUnique": true,
     "cost": 34,
     "keywords": [
       {
@@ -10391,11 +10403,11 @@
     ],
     "stats": {
       "minicount": 1,
-      "hp": null,
-      "defense": "w",
+      "hp": 2,
+      "defense": "r",
       "courage": 2,
-      "speed": null,
-      "hitsurge": "",
+      "speed": 2,
+      "hitsurge": "h",
       "defsurge": ""
     },
     "weapons": [
@@ -10585,10 +10597,10 @@
     ],
     "stats": {
       "minicount": 1,
-      "hp": null,
-      "defense": "w",
+      "hp": 6,
+      "defense": "r",
       "courage": 3,
-      "speed": null,
+      "speed": 2,
       "hitsurge": "",
       "defsurge": ""
     },
@@ -11637,7 +11649,7 @@
       "minicount": 1,
       "hp": 8,
       "defense": "w",
-      "courage": null,
+      "courage": 6,
       "speed": 2,
       "hitsurge": "",
       "defsurge": "b"
@@ -11699,13 +11711,15 @@
       "ordnance",
       "comms"
     ],
-    "defense": "white",
-    "surges": [
-      "block"
-    ],
-    "wounds": 8,
-    "resilience": 6,
-    "speed": 2,
+    "stats": {
+      "minicount": 1,
+      "hp": 8,
+      "defense": "w",
+      "courage": 6,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": "b"
+    },
     "history": [
       {
         "date": "27 October 2021",
@@ -14758,13 +14772,15 @@
       "hardpoint",
       "comms"
     ],
-    "defense": "white",
-    "surges": [
-      "block"
-    ],
-    "speed": 1,
-    "wounds": 8,
-    "resilience": 6,
+    "stats": {
+      "minicount": 1,
+      "hp": 8,
+      "defense": "w",
+      "courage": 6,
+      "speed": 1,
+      "hitsurge": "",
+      "defsurge": "b"
+    },
     "history": [
       {
         "date": "19 July 2024",
@@ -14864,7 +14880,7 @@
       "minicount": 2,
       "hp": 3,
       "defense": "w",
-      "courage": null,
+      "courage": 0,
       "speed": 3,
       "hitsurge": "h",
       "defsurge": "b"
@@ -15646,8 +15662,8 @@
     "stats": {
       "minicount": 3,
       "hp": 2,
-      "defense": "w",
-      "courage": null,
+      "defense": "r",
+      "courage": 0,
       "speed": 1,
       "hitsurge": "",
       "defsurge": ""
@@ -17177,9 +17193,9 @@
       "hp": 3,
       "defense": "w",
       "courage": 2,
-      "speed": null,
+      "speed": 2,
       "hitsurge": "",
-      "defsurge": ""
+      "defsurge": "b"
     },
     "weapons": []
   },
@@ -18368,7 +18384,7 @@
       "minicount": 1,
       "hp": 6,
       "defense": "w",
-      "courage": null,
+      "courage": 3,
       "speed": 2,
       "hitsurge": "h",
       "defsurge": "b"
@@ -18751,12 +18767,11 @@
     "cardSubtype": "clone trooper",
     "rank": "support",
     "faction": "republic",
-    "isUniqueTitle": true,
+    "isUnique": true,
     "cost": 105,
     "keywords": [
       {
-        "name": "Complete the",
-        "value": " Mission"
+        "name": "Complete the Mission"
       },
       {
         "name": "Equip",
@@ -18775,7 +18790,7 @@
       },
       {
         "name": "Target",
-        "value": 1
+        "value": 2
       },
       {
         "name": "Shielded",
@@ -18793,8 +18808,8 @@
     "stats": {
       "minicount": 4,
       "hp": 1,
-      "defense": "w",
-      "courage": null,
+      "defense": "r",
+      "courage": 0,
       "speed": 2,
       "hitsurge": "",
       "defsurge": ""
@@ -19056,18 +19071,21 @@
       "comms",
       "training"
     ],
-    "defense": "white",
-    "surges": [
-      "hit",
-      "block"
-    ],
-    "wounds": 1,
-    "courage": 2,
-    "speed": 2
+    "stats": {
+      "minicount": 6,
+      "hp": 1,
+      "defense": "w",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": "b"
+    }
   },
   "xz": {
     "id": "xz",
-    "cardName": "Riot Control Squad",
+    "cardName": "Stormtrooper Riot Squad",
+    "displayName":"Riot Control Squad",
+    "ttsName": "Riot Control Squad",
     "cardType": "unit",
     "cardSubtype": "trooper",
     "rank": "corps",
@@ -19085,11 +19103,15 @@
       "gear",
       "training"
     ],
-    "defense": "red",
-    "surges": [],
-    "wounds": 1,
-    "courage": 1,
-    "speed": 2
+    "stats": {
+      "minicount": 4,
+      "hp": 1,
+      "defense": "r",
+      "courage": 1,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    }
   },
   "ya": {
     "id": "ya",
@@ -19102,13 +19124,13 @@
     "cost": 70,
     "imageName": "LM-432 Crab Droid.webp",
     "keywords": [
-      "Armor",
+      {"name":"Armor", "value":2},
       "Climbing Vehicle",
       "Programmed",
       "Reposition",
       "Scale",
-      "Scout",
-      "Scouting Party",
+      {"name":"Scout", "value":1},
+      {"name":"Scouting Party", "value":1},
       "Impact",
       "Pierce"
     ],
@@ -19117,13 +19139,15 @@
       "hardpoint",
       "comms"
     ],
-    "defense": "red",
-    "surges": [
-      "hit"
-    ],
-    "wounds": 5,
-    "resistence": 3,
-    "speed": 2
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    }
   },
   "yb": {
     "id": "yb",
@@ -19137,7 +19161,7 @@
     ],
     "requirements": [
       {
-        "cardName": "Riot Control Squad"
+        "cardName": "Stormtrooper Riot Squad"
       }
     ]
   },
@@ -19185,7 +19209,7 @@
     "keywords": [],
     "requirements": [
       {
-        "cardName": "Riot Control Squad"
+        "cardName": "Stormtrooper Riot Squad"
       }
     ]
   },
@@ -19689,14 +19713,15 @@
       "heavy weapon",
       "comms"
     ],
-    "defense": "white",
-    "surges": [
-      "block",
-      "hit"
-    ],
-    "wounds": 3,
-    "resistence": -1,
-    "speed": 1
+    "stats": {
+      "minicount": 3,
+      "hp": 3,
+      "defense": "w",
+      "courage": 0,
+      "speed": 1,
+      "hitsurge": "h",
+      "defsurge": "b"
+    }
   },
   "Ax": {
     "id": "Ax",
@@ -19737,11 +19762,15 @@
       "training",
       "grenades"
     ],
-    "defense": "red",
-    "surges": [],
-    "wounds": 1,
-    "courage": 2,
-    "speed": 2
+    "stats": {
+      "minicount": 4,
+      "hp": 1,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    }
   },
   "Az": {
     "id": "Az",
@@ -19812,12 +19841,12 @@
     "cost": 110,
     "imageName": "Ahsoka Tano Padawan Commander.webp",
     "keywords": [
-      "Jump",
-      "Associate",
+      {"name": "Jump", "value":2},
+      {"name": "Associate", "value":"Anakin Skywalker"},
       "Deflect",
       "Immune: Pierce",
       "Independent",
-      "Scout",
+      {"name": "Scout", "value":1},
       "Shien Mastery"
     ],
     "upgradeBar": [
@@ -19826,13 +19855,15 @@
       "force"
     ],
     "associate": "na",
-    "defense": "red",
-    "surges": [
-      "crit"
-    ],
-    "wounds": 5,
-    "courage": 2,
-    "speed": 3
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "c",
+      "defsurge": ""
+    }
   },
   "Bd": {
     "id": "Bd",

@@ -10,8 +10,12 @@ async function cardsJsonCheck(){
     ["Associate", "associate"],
     ["Entourage", "entourage"],
     ["Mercenary", "affiliations"],
-    ["Special Issue", "specialIssue"]
+    ["Special Issue", "specialIssue"],
+    ["Detachment", "detachment"],
+    ["Equip", "equip"],
+
   ];
+  const isNumber = ["minicount", "hp", "courage", "speed"];
 
   console.log();
   const data = await fs.readFile('../src/constants/cards.json', 'utf8')
@@ -52,15 +56,28 @@ async function cardsJsonCheck(){
     switch(c.cardType){
       case "unit":
         c.keywords.forEach(k=>{
-          const idx = keywordsWithFields.findIndex(kwf =>kwf[0] === k)
-          if(idx > -1){
-            // console.log(k, c[keywordsWithFields[idx][1]]);
-
-            if(c[keywordsWithFields[idx][1]] == undefined){
-              console.log(c.cardName+",", c.id, ": cards.json entry is missing a rule for keyword:",k, '->', keywordsWithFields[idx][1]);
+          const kw = keywordsWithFields.find(kw =>kw[0] === k)
+          if(kw){
+            if(c[kw[1]] == undefined){
+              console.log(c.cardName+",", c.id, ": cards.json entry is missing a rule for keyword: ",k, '->', kw[1]);
             }
           }
         });
+
+        if(!c.stats){
+          console.log("missing stats for: ", c.cardName, c.id);
+        }else{
+          const stats = c.stats;
+
+          isNumber.forEach(k=>{
+            if(!stats[k] && stats[k] !== 0){
+              console.log(k, 'needs to be defined', c.id)
+            }
+            else if(!Number.isInteger(stats[k]))
+              console.log(k,'needs to be a number', c.id)
+          })
+        }
+
         break;
       // Look for 'orphaned' upgrades that don't map to any units
       case "upgrade":

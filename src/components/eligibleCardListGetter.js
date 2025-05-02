@@ -336,7 +336,7 @@ function unitHasUniques(unit){
     return true;
   }
   const unitCard = cards[unit.unitId] 
-  let hasUniques = unitCard.isUnique || unitCard.isUniqueTitle;
+  let hasUniques = unitCard.isUnique;
 
   if(!hasUniques){
     unit.upgradesEquipped.forEach(up=>{
@@ -354,9 +354,6 @@ function getListUniques(list, field){
   list.units.forEach(u => {
     if (cards[u.unitId]?.isUnique) {
       uniques.push(field === "id" ? u.unitId : cards[u.unitId].cardName);
-    }
-    if (cards[u.unitId]?.isUniqueTitle) {
-      uniques.push(field === "id" ? u.unitId : cards[u.unitId].title);
     }
     u.upgradesEquipped.forEach ( up => {
       if (cards[up]?.isUnique) {

@@ -24,10 +24,10 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
   unit.upgradesEquipped.forEach(id=>{
     if(!id) return;
     const card = cards[id];
-    if(card.uniqueCount || card.isUnique || card.isUniqueTitle){
+    if(card.uniqueCount || card.isUnique){
       listUniqueUpgrades[id] = listUniqueUpgrades[id] ? listUniqueUpgrades[id] + unit.count : unit.count;
     }
-    if(list.battleForce && (card.isUnique || card.isUniqueTitle)){
+    if(list.battleForce && (card.isUnique)){
       if(!battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id))
         unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" upgrade is not allowed in this battleforce." });
     }
@@ -379,7 +379,7 @@ function validateList(currentList, rankLimits){
         let cardName = (card.displayName ? card.displayName : card.cardName).toUpperCase();
         let parentName = (parent.displayName ? parent.displayName : parent.cardName).toUpperCase();
 
-        if(card.isUnique || card.isUniqueTitle){
+        if(card.isUnique){
           validationIssues.push({level:2, text:"In order to use " + cardName + ", you must include " + parentName + ". (DETACHMENT)" });
         }
         else{

@@ -137,7 +137,6 @@ function unequipCounterpartUpgrade(list, unitIndex, upgradeIndex) {
 function addCounterpart(list, unitIndex, counterpartId) {
   const counterpartCard = cards[counterpartId];
   const unit = list.units[unitIndex];
-  const unitCard = cards[unit.unitId];
   unit.counterpart = {
     count: 1,
     counterpartId: counterpartCard.id,
@@ -164,7 +163,7 @@ function addUnit(list, unitId, stackSize = 1) {
 
   const newUnitObject = {
     unitId,
-    count: unitCard.isUnique || unitCard.isUniqueTitle ? 1 : stackSize,
+    count: unitCard.isUnique ? 1 : stackSize,
     totalUnitCost: unitCard.cost * stackSize,
     upgradesEquipped: [],
     additionalUpgradeSlots: [],

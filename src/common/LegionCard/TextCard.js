@@ -57,7 +57,7 @@ function ReverseWrapper({ children }) {
 }
 
 function CounterpartCardHeader({ card, handleClick }) {
-  const { isUnique, isUniqueTitle, displayName, cardName } = card;
+  const { isUnique, displayName, cardName } = card;
   const avatar = (
     <CardIcon
       card={card}
@@ -71,7 +71,7 @@ function CounterpartCardHeader({ card, handleClick }) {
   return (
     <CardHeader
       avatar={avatar}
-      title={`${isUnique || isUniqueTitle ? '• ' : ''}${displayName ? displayName : cardName}`}
+      title={`${isUnique ? '• ' : ''}${displayName ? displayName : cardName}`}
       subheader={capitalizeFirstLetters(card.cardSubtype)}
       action={action}
       style={{ padding: 8 }}
@@ -133,7 +133,7 @@ function CommandCardHeader({ card, handleClick }) {
 }
 
 function UpgradeCardHeader({ card, handleClick }) {
-  const { isUnique, isUniqueTitle, displayName, cardName, cardSubtype } = card;
+  const { isUnique, displayName, cardName, cardSubtype } = card;
   const avatar = (
     <IconBadge
       upgradeType={cardSubtype}
@@ -152,7 +152,7 @@ function UpgradeCardHeader({ card, handleClick }) {
   return (
     <CardHeader
       avatar={avatar}
-      title={`${isUnique || isUniqueTitle ? '• ' : ''}${displayName ? displayName : cardName}`}
+      title={`${isUnique ? '• ' : ''}${displayName ? displayName : cardName}`}
       subheader={capitalizeFirstLetters(cardSubtype)}
       action={action}
       style={{ padding: 8 }}
@@ -161,7 +161,7 @@ function UpgradeCardHeader({ card, handleClick }) {
 }
 
 function UnitCardHeader({ card, handleClick }) {
-  const { rank, isUnique, isUniqueTitle, displayName, cardName, cardSubtype } = card;
+  const { rank, isUnique, displayName, cardName, cardSubtype } = card;
   const avatar = (
     <IconBadge
       rank={rank}
@@ -180,7 +180,7 @@ function UnitCardHeader({ card, handleClick }) {
   return (
     <CardHeader
       avatar={avatar}
-      title={`${isUnique || isUniqueTitle ? '• ' : ''}${displayName ? displayName : cardName}`}
+      title={`${isUnique ? '• ' : ''}${displayName ? displayName : cardName}`}
       subheader={capitalizeFirstLetters(cardSubtype)}
       action={action}
       style={{ padding: 8 }}
