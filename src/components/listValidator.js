@@ -5,6 +5,10 @@ import legionModes from 'constants/legionModes';
 import {areRequirementsMet, impRemnantUpgrades} from 'components/eligibleCardListGetter';
 
 const upgradesProvidingAlliesOfConvenience = cardsIdsByType["upgrade"].filter(c=>cards[c].keywords?.some(k=> k==='Allies of Convenience' || k.name ==="Allies of Convenience"));
+
+function isUniqueCard(card){
+  return card.isUnique || card.isUniqueTitle;
+}
 /**
  * Check validation ONLY for things pertaining to this unit's currently equipped upgrades. 
  * Generally, should *probably* not do things that have a further reach than upgrade bar itself (I think)
@@ -24,10 +28,10 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
   unit.upgradesEquipped.forEach(id=>{
     if(!id) return;
     const card = cards[id];
-    if(card.uniqueCount || card.isUnique){
+    if(card.uniqueCount || isUniqueCard(card)){
       listUniqueUpgrades[id] = listUniqueUpgrades[id] ? listUniqueUpgrades[id] + unit.count : unit.count;
     }
-    if(list.battleForce && (card.isUnique)){
+    if(list.battleForce && (isUniqueCard(card))){
       if(!battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id))
         unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" upgrade is not allowed in this battleforce." });
     }
@@ -397,7 +401,7 @@ function validateList(currentList, rankLimits){
         let cardName = (card.displayName ? card.displayName : card.cardName).toUpperCase();
         let parentName = (parent.displayName ? parent.displayName : parent.cardName).toUpperCase();
 
-        if(card.isUnique){
+        if(isUniqueCard(card)){
           validationIssues.push({level:2, text:"In order to use " + cardName + ", you must include " + parentName + ". (DETACHMENT)" });
         }
         else{

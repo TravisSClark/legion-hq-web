@@ -9987,7 +9987,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "rebels",
-    "isUnique": true,
+    "isUniqueTitle": true,
     "cost": 30,
     "keywords": [
       {
@@ -10370,7 +10370,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "empire",
-    "isUnique": true,
+    "isUniqueTitle": true,
     "cost": 34,
     "keywords": [
       {
@@ -18769,7 +18769,7 @@
     "cardSubtype": "clone trooper",
     "rank": "support",
     "faction": "republic",
-    "isUnique": true,
+    "isUniqueTitle": true,
     "cost": 105,
     "keywords": [
       {

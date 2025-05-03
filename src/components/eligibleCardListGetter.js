@@ -355,6 +355,9 @@ function getListUniques(list, field){
     if (cards[u.unitId]?.isUnique) {
       uniques.push(field === "id" ? u.unitId : cards[u.unitId].cardName);
     }
+    if (cards[u.unitId]?.isUniqueTitle) {
+      uniques.push(field === "id" ? u.unitId : cards[u.unitId].title);
+    }
     u.upgradesEquipped.forEach ( up => {
       if (cards[up]?.isUnique) {
         uniques.push(field === "id" ? up : cards[up].cardName);
