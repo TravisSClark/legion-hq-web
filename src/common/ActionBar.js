@@ -5,7 +5,8 @@ import {
   IconButton,
   InputBase
 } from '@mui/material';
-import { alpha, makeStyles } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
+import {alpha} from '@mui/material/styles';
 import { Menu as MenuIcon, Search as SearchIcon } from '@mui/icons-material';
 import DataContext from 'context/DataContext';
 import lhqLogoLight from 'assets/lhqLogoLight.svg';
@@ -14,26 +15,26 @@ import lhqLogoDark from 'assets/lhqLogoDark.svg';
 const useStyles = makeStyles(theme => ({
   grow: { flexGrow: 1 },
   menuButton: {
-    marginRight: theme.spacing(2),
+    // marginRight: theme.spacing(2),
   },
   search: {
     position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    // borderRadius: theme.shape.borderRadius,
+    // backgroundColor: alpha(theme.palette.common.white, 0.15),
     '&:hover': {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
+      // backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
-    marginRight: theme.spacing(2),
+    // marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
     flexGrow: 1,
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
-      width: 'auto',
-    },
+    // [theme.breakpoints.up('sm')]: {
+      // marginLeft: theme.spacing(3),
+      // width: 'auto',
+    // },
   },
   searchIcon: {
-    padding: theme.spacing(0, 2),
+    // padding: theme.spacing(0, 2),
     height: '100%',
     position: 'absolute',
     pointerEvents: 'none',
@@ -46,17 +47,17 @@ const useStyles = makeStyles(theme => ({
     width: '100%'
   },
   inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
+    // padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
+    // paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    // transition: theme.transitions.create('width'),
     width: '100%'
   },
   desktopOnly: {
     display: 'none',
-    [theme.breakpoints.up('sm')]: {
-      display: 'flex',
-    }
+    // [theme.breakpoints.up('sm')]: {
+      // display: 'flex',
+    // }
   }
 }));
 

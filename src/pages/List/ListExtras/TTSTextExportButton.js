@@ -4,7 +4,7 @@ import {
   Chip,
   TextField
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/styles';
 import { Description as TextIcon } from '@mui/icons-material';
 import { generateTTSJSONText } from 'components/printList';
 import DialogModal from './DialogModal';

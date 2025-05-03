@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
+import {DndContext} from '@dnd-kit/core';
+import { Draggable } from './Draggable';
+import { Droppable } from './Droppable';
 
 function reorder(list, startIndex, endIndex) {
   const result = Array.from(list);
@@ -41,7 +43,7 @@ function DragDropContainer({ items, reorderUnits }) {
     setDraggableItems(newItems);
   }
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
+    <DndContext onDragEnd={onDragEnd}>
       <Droppable droppableId="list">
         {provided => (
           <div ref={provided.innerRef} {...provided.droppableProps}>
@@ -50,7 +52,7 @@ function DragDropContainer({ items, reorderUnits }) {
           </div>
         )}
       </Droppable>
-    </DragDropContext>
+    </DndContext>
   );
 };
 

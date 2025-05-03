@@ -1,6 +1,6 @@
 import React from 'react';
 import { Chip, Typography, Badge, Menu, MenuItem } from '@mui/material';
-import { ThemeProvider, StyledEngineProvider } from '@mui/styles';
+import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import { createTheme, adaptV4Theme } from '@mui/material/styles';
 import DataContext from 'context/DataContext';
 import urls from 'constants/urls';

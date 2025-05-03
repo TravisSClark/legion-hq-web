@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Chip, Typography } from '@mui/material';
-import { ThemeProvider, StyledEngineProvider } from '@mui/styles';
+import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
 import { createTheme, adaptV4Theme } from '@mui/material/styles';
 import { Add as AddIcon } from '@mui/icons-material';
 import DataContext from 'context/DataContext';

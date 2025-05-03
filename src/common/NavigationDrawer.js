@@ -10,6 +10,7 @@ import {
   ListItem,
   ListItemText,
   ListItemIcon,
+  ListItemButton,
   Typography,
 } from "@mui/material";
 
@@ -26,10 +27,10 @@ import { findFirstCardId } from "pages/Home/ListChip";
 
 function NavDrawerLink({ selected, icon, avatar, text, handleClick }) {
   return (
-    <ListItem button selected={selected} onClick={handleClick}>
+    <ListItemButton selected={selected} onClick={handleClick}>
       <ListItemIcon>{avatar ? avatar : icon}</ListItemIcon>
       <ListItemText primary={text} />
-    </ListItem>
+    </ListItemButton>
   );
 }
 
@@ -47,6 +48,7 @@ function NavigationDrawer() {
   } = useContext(DataContext);
   const listChips = {};
   Object.keys(factions).forEach((faction) => (listChips[faction] = []));
+
   if (userLists) {
     userLists.forEach((userList) => {
       if (userList.faction in listChips) {
@@ -54,9 +56,11 @@ function NavigationDrawer() {
       }
     });
   }
+
   useEffect(() => {
     if (userId) fetchUserLists(userId);
   }, [userId]);
+
   return (
     <SwipeableDrawer
       open={isDrawerOpen}
@@ -105,7 +109,6 @@ function NavigationDrawer() {
               <Accordion>
                 <AccordionSummary
                   expandIcon={<ExpandMore />}
-                  dense={true}
                   min-height={48}
                 >
                   <ListItemIcon>{routes[`/list/${faction}`].icon}</ListItemIcon>
@@ -194,8 +197,7 @@ function NavigationDrawer() {
         </List>
         <Divider />
         <List dense={true}>
-          <ListItem
-            button
+          <ListItemButton
             onClick={() =>
               window.open(
                 " https://www.atomicmassgames.com/swlegiondocs/",
@@ -208,9 +210,8 @@ function NavigationDrawer() {
               <LaunchIcon />
             </ListItemIcon>
             <ListItemText primary="AMG Legion Docs" />
-          </ListItem>
-          <ListItem
-            button
+          </ListItemButton>
+          <ListItemButton
             onClick={() =>
               window.open(
                 "https://legion.longshanks.org/",
@@ -223,9 +224,8 @@ function NavigationDrawer() {
               <LaunchIcon />
             </ListItemIcon>
             <ListItemText primary="Longshanks" />
-          </ListItem>
-          <ListItem
-            button
+          </ListItemButton>
+          <ListItemButton
             onClick={() =>
               window.open(
                 "https://legionquickguide.com/",
@@ -238,12 +238,11 @@ function NavigationDrawer() {
               <LaunchIcon />
             </ListItemIcon>
             <ListItemText primary="Legion Quick Guide" />
-          </ListItem>
+          </ListItemButton>
         </List>
         <Divider />
         <List dense={true}>
-          <ListItem
-            button
+          <ListItemButton
             onClick={() =>
               window.open(
                 "https://www.youtube.com/@crit2block",
@@ -256,9 +255,8 @@ function NavigationDrawer() {
               <LaunchIcon />
             </ListItemIcon>
             <ListItemText primary="Crit2Block YouTube" />
-          </ListItem>
-          <ListItem
-            button
+          </ListItemButton>
+          <ListItemButton
             onClick={() =>
               window.open(
                 "https://www.crit2block.com/blog",
@@ -271,9 +269,8 @@ function NavigationDrawer() {
               <LaunchIcon />
             </ListItemIcon>
             <ListItemText primary="Carolina Holocronicles" />
-          </ListItem>
-          <ListItem
-            button
+          </ListItemButton>
+          <ListItemButton
             onClick={() =>
               window.open(
                 "https://www.youtube.com/@kokozula",
@@ -286,7 +283,7 @@ function NavigationDrawer() {
               <LaunchIcon />
             </ListItemIcon>
             <ListItemText primary="Kokozula YouTube" />
-          </ListItem>
+          </ListItemButton>
         </List>
       </div>
     </SwipeableDrawer>

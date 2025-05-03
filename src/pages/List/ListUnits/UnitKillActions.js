@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconButton } from '@mui/material';
-import { makeStyles } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import { Icon as IconifyIcon } from '@iconify/react';
 import {
   PlusOne as PlusOneIcon,

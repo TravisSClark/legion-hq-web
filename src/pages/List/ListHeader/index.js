@@ -10,7 +10,7 @@ import {
   DialogContentText,
   Link
 } from '@mui/material';
-import { makeStyles } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import { Info as InfoIcon, Warning as WarningIcon } from '@mui/icons-material';
 
 import ListContext from 'context/ListContext';

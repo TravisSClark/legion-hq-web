@@ -1,5 +1,5 @@
 import React from 'react';
-import { Skeleton } from '@mui/lab';
+import { Skeleton } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import cards from 'constants/cards';
 import urls from 'constants/urls';

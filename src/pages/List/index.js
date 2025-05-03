@@ -1,5 +1,4 @@
 import React from 'react';
-import { withWidth } from '@mui/material';
 import { ListProvider } from 'context/ListContext';
 import { ErrorBoundary } from 'react-error-boundary'
 import ErrorFallback from 'common/ErrorFallback';
@@ -21,4 +20,4 @@ function MainListPage({ width, slug, listHash, storedLists, updateStoredList }) 
   );
 }
 
-export default withWidth()(MainListPage);
+export default (MainListPage);

@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { makeStyles } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import ListContext from 'context/ListContext';
 import ranks from 'constants/ranks';
 import { Badge, IconButton, Avatar } from '@mui/material';

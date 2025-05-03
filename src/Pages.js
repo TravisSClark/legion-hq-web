@@ -1,5 +1,5 @@
-import React, { useState, Suspense, lazy } from 'react';
-import { Route, Routes, Redirect } from 'react-router-dom';
+import React, { useState, Suspense, lazy, useEffect } from 'react';
+import { Route, Routes, useNavigate} from 'react-router-dom';
 import LoadingWidget from 'common/LoadingWidget';
 import listTemplate from 'constants/listTemplate';
 const Home = lazy(() => import('pages/Home'));
@@ -25,6 +25,9 @@ function Pages() {
     storedLists[faction] = newList;
     setStoredLists({ ...storedLists });
   }
+  const navigate = useNavigate();
+  useEffect(()=>navigate('/'),[]);
+
   return (
     <Suspense fallback={<LoadingWidget />}>
       <Routes>
@@ -50,7 +53,6 @@ function Pages() {
         <Route path="/settings" element={Settings} />
         <Route path="/info" element={Info} />
         <Route path="/privacy" element={Privacy} />
-        <Redirect to="/" />
       </Routes>
     </Suspense>
   );

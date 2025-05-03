@@ -13,7 +13,7 @@ import {
   Tooltip
 } from '@mui/material';
 import clsx from 'clsx';
-import { makeStyles } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 import { PointsChip } from 'common/CardChip';
 import KeywordChips from 'common/KeywordChips';
@@ -24,9 +24,9 @@ const useStyles = makeStyles(theme => ({
   expand: {
     transform: 'rotate(0deg)',
     marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
-      duration: theme.transitions.duration.shortest,
-    })
+    // transition: theme.transitions.create('transform', {
+      // duration: theme.transitions.duration.shortest,
+    // })
   },
   expandOpen: { transform: 'rotate(180deg)' },
   selected: { border: '1px solid lightblue' },

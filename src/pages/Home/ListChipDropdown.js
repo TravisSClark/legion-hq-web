@@ -1,12 +1,14 @@
 import React from 'react';
 import { Popover, Chip, Typography } from '@mui/material';
-import { ThemeProvider, StyledEngineProvider } from '@mui/styles';
-import { createTheme, makeStyles, adaptV4Theme } from '@mui/material/styles';
+import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
+import { createTheme, adaptV4Theme } from '@mui/material/styles';
+import {  makeStyles } from '@mui/styles';
+
 import factions from 'constants/factions';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    padding: theme.spacing(1),
+    // padding: theme.spacing(1),
     background: '#1F2125'
   }
 }));

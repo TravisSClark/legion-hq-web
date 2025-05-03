@@ -1,7 +1,9 @@
 import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline'
-import { ThemeProvider as MuiThemeProvider, StyledEngineProvider } from '@mui/styles';
-import { createTheme, responsiveFontSizes, adaptV4Theme } from '@mui/material/styles';
+import { ThemeProvider as MuiThemeProvider, StyledEngineProvider } from '@mui/material/styles';
+
+import { createTheme, adaptV4Theme, responsiveFontSizes } from '@mui/material/styles';
+
 import themes from 'constants/themes';
 
 function ThemeWrapper({ children, themeColor }) {
@@ -21,10 +23,10 @@ function ThemeWrapper({ children, themeColor }) {
   })));
   return (
     <StyledEngineProvider injectFirst>
-      (<MuiThemeProvider theme={theme}>
+      <MuiThemeProvider theme={theme}>
         <CssBaseline />
         {children}
-      </MuiThemeProvider>)
+      </MuiThemeProvider>
     </StyledEngineProvider>
   );
 };

@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Axios from "axios";
 import {
   Home as HomeIcon,
@@ -10,7 +10,7 @@ import {
   Casino as DiceIcon,
 } from "@mui/icons-material";
 import { Snackbar } from "@mui/material";
-import { AlertTitle, Alert } from "@mui/lab";
+import { AlertTitle, Alert } from "@mui/material";
 // import ErrorFallback from 'common/ErrorFallback';
 import FactionIcon from "common/FactionIcon";
 import urls from "constants/urls";
@@ -104,7 +104,7 @@ function initializeLocalSettings() {
 }
 
 export function DataProvider({ children }) {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isAlertOpen, setIsAlertOpen] = useState(false);
   const [isAlertAllowed, setIsAlertAllowed] = useState(true);
@@ -165,7 +165,7 @@ export function DataProvider({ children }) {
       setUserSettings(newSettings);
     }
   };
-  const goToPage = (newRoute) => history.push(newRoute);
+  const goToPage = (newRoute) => navigate(newRoute);
   const fetchUserLists = (userId) => {
     if (userId) {
       httpClient

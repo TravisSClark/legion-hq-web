@@ -6,7 +6,7 @@ import {
   Typography,
   Link
 } from '@mui/material';
-import { makeStyles } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 
 import battleForcesDict from 'constants/battleForcesDict';
 

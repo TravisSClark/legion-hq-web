@@ -9,7 +9,7 @@ import {
   Button,
   Collapse
 } from '@mui/material';
-import { makeStyles } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import {
   Announcement as NewsIcon,
   ExpandMore as ExpandMoreIcon

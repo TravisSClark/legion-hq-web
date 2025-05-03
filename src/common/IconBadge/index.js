@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { makeStyles } from '@mui/material/styles';
+import { makeStyles } from '@mui/styles';
 import { Typography } from '@mui/material';
 import ranks from 'constants/ranks';
 import upgradeTypes from 'constants/upgradeTypes';
