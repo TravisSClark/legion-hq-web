@@ -54,37 +54,6 @@ function ListUnit({
     bgColor = "#550"
   }
 
-  // TODO trying to reclaim some space, doesn't look right yet
-  // return (
-  //   <div className={classes.unitColumn} style={{backgroundColor: bgColor, borderRadius:10}}>
-  //     <div className={classes.unitRow}>
-  //       <div className={classes.leftCell}>
-  //         <UnitAvatar
-  //           key="avatar"
-  //           id={unitCard.id}
-  //           count={unit.count}
-  //           handleClick={() => handleCardZoom(unit.unitId)}
-  //         />
-  //       </div>
-  //       <div className={classes.middleCell}>
-  //         <CardName key="name" id={unitCard.id} />
-  //         <UpgradeAddBar counterpartId={unitCard.counterpartId}
-  //           addCounterpartHandler={addCounterpartHandler}/>
-  //       </div>
-  //       <div className={classes.rightCell}>
-  //         <UnitPoints key="points" unit={unit} />
-  //         <UnitActions unit={unit} unitIndex={unitIndex} />
-  //       </div>
-  //     </div>
-  //     <UnitUpgrades
-  //       key="upgrades"
-  //       counterpartId={unitCard.counterpartId}
-  //       addCounterpartHandler={addCounterpartHandler}
-  //     />
-  //     {counterpartUnit}
-  //   </div>
-  // );
-
   return (
     <div className={classes.unitColumn} style={{backgroundColor: bgColor, borderRadius:10}}>
       <div className={classes.unitRow}>
