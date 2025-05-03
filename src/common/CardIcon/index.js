@@ -1,6 +1,5 @@
 import React from 'react';
 import clsx from 'clsx';
-import Img from 'react-image';
 import { makeStyles } from '@material-ui/core/styles';
 import { Skeleton } from '@material-ui/lab';
 import urls from 'constants/urls';
@@ -28,7 +27,7 @@ function CardIcon({
     />
   );
   return (
-    <Img
+    <img
       decode={false}
       alt={card.cardName}
       src={`${urls.cdn}/${card.cardType}Icons/${card.imageName}`}

@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'react-image';
 import { Chip, Typography, Badge, Menu, MenuItem } from '@material-ui/core';
 import { ThemeProvider } from '@material-ui/styles';
 import { createTheme  } from '@material-ui/core/styles';
@@ -38,7 +37,7 @@ function ListChip({ userList, deleteUserList }) {
               color="primary"
               style={{ margin: '0 5 5 0' }}
               avatar={card ? (
-                <Img
+                <img
                   alt={card.cardName}
                   src={`${urls.cdn}/unitIcons/${card.imageName}`}
                   style={{

@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'react-image';
 import {
   Typography,
   ExpansionPanel,
@@ -22,7 +21,7 @@ function ImagePanel({ card, extraCardImage = false }) {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails style={{ padding: '0px 24px 24px' }}>
           <div>
-            <Img
+            <img
               src={`${urls.cdn}/${cardType}Cards/${extraCardImage ? `extra-${imageName}` : imageName}`}
               style={{ width: '100%' }}
             />

@@ -1,6 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import Img from "react-image";
 import {
   Accordion,
   AccordionDetails,
@@ -138,7 +137,7 @@ function NavigationDrawer() {
                           icon={undefined}
                           avatar={
                             card ? (
-                              <Img
+                              <img
                                 alt={card.cardName}
                                 src={`${urls.cdn}/unitIcons/${card.imageName}`}
                                 style={{

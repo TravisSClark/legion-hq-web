@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'react-image';
 import LargerTooltip from 'common/LargerTooltip';
 import upgradeTypes from 'constants/upgradeTypes';
 
@@ -21,7 +20,7 @@ function UpgradeBar({ upgradeBar, iconHeight=24 }) {
     return (
         <div key={`${type}${i}`} style={{ display:'flex', marginRight: 4, marginBottom: 4, justifyContent:'center', alignItems:'center' }}>
           <LargerTooltip title={title}>
-            <Img alt={title} src={icon} style={imageStyles} />
+            <img alt={title} src={icon} style={imageStyles} />
           </LargerTooltip>
         </div>
     );

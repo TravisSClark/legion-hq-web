@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'react-image';
 import { Chip } from '@material-ui/core';
 import symbols from 'constants/symbols';
 
@@ -12,7 +11,7 @@ function DefenseChip({ size, color }) {
     />
   );
   const label  = (
-    <Img
+    <img
       alt={`${color} defense`}
       src={symbols.defense[color]}
       style={{ height: 18, width: 'auto', marginTop: 5 }}

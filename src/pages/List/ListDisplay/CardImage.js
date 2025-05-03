@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'react-image';
 import { Skeleton } from '@material-ui/lab';
 import { makeStyles } from '@material-ui/styles';
 import cards from 'constants/cards';
@@ -27,7 +26,7 @@ function CardImage({ id, handleClick }) {
   const classes = useStyles();
   return (
     <div className={classes.container}>
-      <Img
+      <img
         alt={card.cardName}
         src={`${urls.cdn}/${card.cardType}Cards/${card.imageName}`}
         loader={<Skeleton variant="rect" className={classes[card.cardType]} />}

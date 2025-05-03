@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import Img from 'react-image';
 import { Chip } from '@material-ui/core';
 import DataContext from 'context/DataContext';
 import symbols from 'constants/symbols';
@@ -8,7 +7,7 @@ function SurgeLabel({ type }) {
   const { userSettings } = useContext(DataContext);
   const themeType = userSettings.themeColor === 'light' ? 'dark' : 'light';
   return (
-    <Img
+    <img
       alt={`${type} surge`}
       src={symbols.surge[type][themeType]}
       style={{ width: 50, marginTop: 5 }}
