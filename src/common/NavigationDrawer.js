@@ -11,13 +11,13 @@ import {
   ListItemText,
   ListItemIcon,
   Typography,
-} from "@material-ui/core";
+} from "@mui/material";
 
 import {
   Launch as LaunchIcon,
   ExpandMore,
   Add as AddIcon,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 import cards from "constants/cards";
 import factions from "constants/factions";
 import urls from "constants/urls";

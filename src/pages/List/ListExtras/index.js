@@ -5,7 +5,7 @@ import {
   CallSplit as ForkIcon,
   Functions as CalculateIcon,
   ShareOutlined
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 import DataContext from 'context/DataContext';
 import ListContext from 'context/ListContext';
 import TemplateButton from './TemplateButton';

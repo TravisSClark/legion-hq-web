@@ -7,8 +7,8 @@ import {
   DialogContentText,
   DialogActions,
   Button
-} from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
+} from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import cards from 'constants/cards';
 import ImagePanel from './ImagePanel';
 import KeywordsPanel from './KeywordsPanel';
@@ -16,7 +16,7 @@ import HistoryPanel from './HistoryPanel';
 
 function CardModal({ id, isOpen, handleClose }) {
   const theme = useTheme();
-  const isFullscreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isFullscreen = useMediaQuery(theme.breakpoints.down('md'));
   if (!id) return null;
   const card = cards[id];
   return (

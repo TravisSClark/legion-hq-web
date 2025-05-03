@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import mergeImages from 'merge-images'
 import domtoimage from 'dom-to-image-more';
-import { Grid, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@mui/material';
 
 function ListImage() {
   const [isLoadingImage, setIsLoadingImage] = useState(true);
@@ -42,7 +42,7 @@ function ListImage() {
   }
 
   return (
-    <Grid container direction="column" justify="center">
+    <Grid container direction="column" justifyContent="center">
       {isLoadingImage ? (
         <Grid item>
           <Typography>

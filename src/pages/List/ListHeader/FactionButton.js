@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { IconButton } from '@material-ui/core';
+import { IconButton } from '@mui/material';
 import FactionIcon from 'common/FactionIcon';
 
 function FactionButton({ faction, handleFactionMenuOpen }) {

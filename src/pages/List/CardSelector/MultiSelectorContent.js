@@ -6,8 +6,8 @@ import {
   Typography,
   Divider,
   IconButton
-} from '@material-ui/core';
-import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
+} from '@mui/material';
+import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 import LegionCard from 'common/LegionCard';
 import ChipCard from 'common/LegionCard/ChipCard';
 import cards from 'constants/cards';

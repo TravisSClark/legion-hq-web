@@ -8,22 +8,22 @@ import {
   Select,
   MenuItem,
   Fade
-} from '@material-ui/core';
+} from '@mui/material';
 import DataContext from 'context/DataContext';
 import settings from 'constants/settings';
 
 function SettingDropdown({ id, name, value, options, handleClick }) {
   return (
-    <FormControl>
+    <FormControl variant="standard">
       <InputLabel htmlFor={`${id}-selector`}>
         {name}
       </InputLabel>
       <Select
+        variant="standard"
         id={id}
         value={value}
         onChange={handleClick}
-        style={{ minWidth: 200 }}
-      >
+        style={{ minWidth: 200 }}>
         {options.map(option => (
           <MenuItem key={option.key} value={option.key}>
             {option.name}

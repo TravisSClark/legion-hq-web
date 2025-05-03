@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconButton, Icon, Avatar } from '@material-ui/core';
+import { IconButton, Icon, Avatar } from '@mui/material';
 import upgradeTypes from 'constants/upgradeTypes';
 
 function AddUpgradeButton({ type, handleClick }) {

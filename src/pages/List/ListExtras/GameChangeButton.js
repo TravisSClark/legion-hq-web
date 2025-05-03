@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Chip, Menu, MenuItem } from '@material-ui/core';
+import { Chip, Menu, MenuItem } from '@mui/material';
 import ListContext from 'context/ListContext';
 
 export default function GameChangeButton() {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import domtoimage from 'dom-to-image-more';
-import { Chip } from '@material-ui/core';
-import { Image as ImageIcon } from '@material-ui/icons';
+import { Chip } from '@mui/material';
+import { Image as ImageIcon } from '@mui/icons-material';
 import favicon from 'assets/favicon.svg';
 import DialogModal from './DialogModal';
 

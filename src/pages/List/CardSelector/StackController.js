@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Typography, IconButton } from '@material-ui/core';
-import { Add as AddIcon, Remove as MinusIcon } from '@material-ui/icons';
+import { Typography, IconButton } from '@mui/material';
+import { Add as AddIcon, Remove as MinusIcon } from '@mui/icons-material';
 
 function StackController({
   handleChange
@@ -26,7 +26,7 @@ function StackController({
           setStackSize(newSize);
           handleChange(newSize);
         }}
-      >
+        size="large">
         <MinusIcon />
       </IconButton>
       <Typography variant="h6" style={rowItemStyle}>
@@ -40,7 +40,7 @@ function StackController({
           setStackSize(newSize);
           handleChange(newSize);
         }}
-      >
+        size="large">
         <AddIcon />
       </IconButton>
     </div>

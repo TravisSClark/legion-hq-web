@@ -1,5 +1,5 @@
 import React from 'react';
-import { Checkbox, FormGroup, FormControlLabel } from '@material-ui/core';
+import { Checkbox, FormGroup, FormControlLabel } from '@mui/material';
 
 function ToggleButton({ label, value, handleChange }) {
   return (

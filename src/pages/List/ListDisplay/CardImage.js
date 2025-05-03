@@ -1,6 +1,6 @@
 import React from 'react';
-import { Skeleton } from '@material-ui/lab';
-import { makeStyles } from '@material-ui/styles';
+import { Skeleton } from '@mui/lab';
+import { makeStyles } from '@mui/styles';
 import cards from 'constants/cards';
 import urls from 'constants/urls';
 
@@ -29,7 +29,7 @@ function CardImage({ id, handleClick }) {
       <img
         alt={card.cardName}
         src={`${urls.cdn}/${card.cardType}Cards/${card.imageName}`}
-        loader={<Skeleton variant="rect" className={classes[card.cardType]} />}
+        loader={<Skeleton variant="rectangular" className={classes[card.cardType]} />}
         className={classes[card.cardType]}
         onClick={handleClick}
       />

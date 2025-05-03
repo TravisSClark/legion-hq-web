@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Chip } from '@material-ui/core';
+import { Chip } from '@mui/material';
 import ListContext from 'context/ListContext';
 import CardIcon from 'common/CardIcon';
 import cards from 'constants/cards';

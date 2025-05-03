@@ -1,5 +1,5 @@
 import React  from 'react';
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 import LargerTooltip from 'common/LargerTooltip';
 import DataContext from 'context/DataContext';
 
@@ -12,12 +12,7 @@ function LoginButton({ auth }) {
   } = React.useContext(DataContext);
   return (
     <LargerTooltip arrow title={loginTooltipText}>
-      <Button
-        color="default"
-        variant="contained"
-        disabled={isLoginDisabled}
-        onClick={loginHandler}
-      >
+      <Button variant="contained" disabled={isLoginDisabled} onClick={loginHandler}>
         {loginButtonText}
       </Button>
     </LargerTooltip>

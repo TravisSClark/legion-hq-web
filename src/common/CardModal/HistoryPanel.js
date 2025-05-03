@@ -2,11 +2,11 @@ import React from 'react';
 import {
   Divider,
   Typography,
-  ExpansionPanel,
-  ExpansionPanelSummary,
-  ExpansionPanelDetails
-} from '@material-ui/core';
-import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
+  Accordion,
+  AccordionSummary,
+  AccordionDetails
+} from '@mui/material';
+import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 
 function HistoryPanel({ history }) {
   if (!(history instanceof Array)) return null;
@@ -17,11 +17,11 @@ function HistoryPanel({ history }) {
   };
   return (
     <React.Fragment>
-      <ExpansionPanel>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography>History</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails style={columnContainerStyles}>
+        </AccordionSummary>
+        <AccordionDetails style={columnContainerStyles}>
           {history.map(entry => (
             <div key={entry.description}>
               <Typography variant="caption" color="textSecondary">
@@ -34,8 +34,8 @@ function HistoryPanel({ history }) {
               <Divider />
             </div>
           ))}
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+        </AccordionDetails>
+      </Accordion>
     </React.Fragment>
   );
 };

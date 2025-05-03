@@ -8,9 +8,9 @@ import {
   ViewModule as CardsIcon,
   Announcement as NewsIcon,
   Casino as DiceIcon,
-} from "@material-ui/icons";
-import { Snackbar } from "@material-ui/core";
-import { AlertTitle, Alert } from "@material-ui/lab";
+} from "@mui/icons-material";
+import { Snackbar } from "@mui/material";
+import { AlertTitle, Alert } from "@mui/lab";
 // import ErrorFallback from 'common/ErrorFallback';
 import FactionIcon from "common/FactionIcon";
 import urls from "constants/urls";

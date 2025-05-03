@@ -1,6 +1,6 @@
 import React from 'react';
-import { Chip, TextField } from '@material-ui/core';
-import { Link as LinkIcon } from '@material-ui/icons';
+import { Chip, TextField } from '@mui/material';
+import { Link as LinkIcon } from '@mui/icons-material';
 import ClipboardButton from './ClipboardButton';
 import DialogModal from './DialogModal';
 import generateLink from './generateLink';
@@ -20,7 +20,7 @@ function LinkButton({ currentList }) {
       <DialogModal
         isOpen={isOpen}
         title="Legion HQ Link"
-        content={<TextField value={listLink} />}
+        content={<TextField variant="standard" value={listLink} />}
         actions={<ClipboardButton content={listLink} />}
         handleClose={() => setIsOpen(false)}
       />

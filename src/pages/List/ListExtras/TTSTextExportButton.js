@@ -3,9 +3,9 @@ import {
   useMediaQuery,
   Chip,
   TextField
-} from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
-import { Description as TextIcon } from '@material-ui/icons';
+} from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import { Description as TextIcon } from '@mui/icons-material';
 import { generateTTSJSONText } from 'components/printList';
 import DialogModal from './DialogModal';
 import ClipboardButton from './ClipboardButton';
@@ -32,7 +32,7 @@ function TTSTextExportButton({ currentList }) {
   const [textType] = useState(0);
   const ttsJSON = isOpen ? generateTTSJSONText(currentList) : null;
 
-  const isFullscreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isFullscreen = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <div style={{ marginRight: 4, marginBottom: 4 }}>
       <Chip

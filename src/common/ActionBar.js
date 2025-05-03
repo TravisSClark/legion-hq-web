@@ -4,9 +4,9 @@ import {
   Toolbar,
   IconButton,
   InputBase
-} from '@material-ui/core';
-import { alpha, makeStyles } from '@material-ui/core/styles';
-import { Menu as MenuIcon, Search as SearchIcon } from '@material-ui/icons';
+} from '@mui/material';
+import { alpha, makeStyles } from '@mui/material/styles';
+import { Menu as MenuIcon, Search as SearchIcon } from '@mui/icons-material';
 import DataContext from 'context/DataContext';
 import lhqLogoLight from 'assets/lhqLogoLight.svg';
 import lhqLogoDark from 'assets/lhqLogoDark.svg';
@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%'
   },
@@ -70,7 +70,7 @@ function DefaultBar() {
         edge="start"
         className={classes.menuButton}
         onClick={() => setIsDrawerOpen(true)}
-      >
+        size="large">
         <MenuIcon />
       </IconButton>
       <img

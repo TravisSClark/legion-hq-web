@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Avatar, Icon } from '@material-ui/core';
+import { Avatar, Icon } from '@mui/material';
 import DataContext from 'context/DataContext';
 import factions from 'constants/factions';
 import themes from 'constants/themes';

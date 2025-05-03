@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { Button, Grid, Chip } from '@material-ui/core';
-import { Add as AddIcon } from '@material-ui/icons';
+import { Button, Grid, Chip } from '@mui/material';
+import { Add as AddIcon } from '@mui/icons-material';
 import ListContext from 'context/ListContext';
 import CardIcon from 'common/CardIcon';
 import cards from 'constants/cards';

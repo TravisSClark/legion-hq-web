@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/material/styles';
 import {
   Typography,
   IconButton,
@@ -12,11 +12,11 @@ import {
   CardActions,
   Grow,
   Divider
-} from '@material-ui/core';
+} from '@mui/material';
 import {
   Add as AddIcon,
   ExpandMore as ExpandMoreIcon
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 import { DefenseChip, PointsChip, SpeedChip, StatChip, SurgeChip } from 'common/CardChip';
 import KeywordChips from 'common/KeywordChips';
 import CardIcon from 'common/CardIcon';
@@ -217,7 +217,7 @@ function CounterpartCardContent({ card, chipSize }) {
 
 function CommandCardContent({ card, chipSize }) {
   const { cardSubtype } = card;
-  return (null
+  return (
     // <CardContent style={{ padding: 8, textAlign: 'right' }}>
     //   <ReverseWrapper>
     //     <Typography variant="body2" color="textSecondary">
@@ -229,6 +229,7 @@ function CommandCardContent({ card, chipSize }) {
     //     </Typography>
     //   </ReverseWrapper>
     // </CardContent>
+    (null)
   );
 }
 

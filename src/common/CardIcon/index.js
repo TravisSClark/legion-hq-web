@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { Skeleton } from '@material-ui/lab';
+import { makeStyles } from '@mui/material/styles';
+import { Skeleton } from '@mui/lab';
 import urls from 'constants/urls';
 
 const useStyles = makeStyles(theme => ({
@@ -21,7 +21,7 @@ function CardIcon({
   const classes = useStyles();
   const placeholder = (
     <Skeleton
-      variant="rect"
+      variant="rectangular"
       className={classes[size]}
       style={{ borderRadius: 25 }}
     />

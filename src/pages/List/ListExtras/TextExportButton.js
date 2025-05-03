@@ -8,9 +8,9 @@ import {
   Box,
   Typography,
   TextField
-} from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
-import { Description as TextIcon } from '@material-ui/icons';
+} from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import { Description as TextIcon } from '@mui/icons-material';
 import {
   generateStandardText,
   generateMinimalText,
@@ -106,7 +106,7 @@ function TextExportButton({ currentList }) {
   useEffect(() => {
     setListText(generateListText(textType, currentList));
   }, [currentList, isOpen, textType]);
-  const isFullscreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isFullscreen = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <div style={{ marginRight: 4, marginBottom: 4 }}>
       <Chip

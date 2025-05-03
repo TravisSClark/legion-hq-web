@@ -9,9 +9,9 @@ import {
   DialogContent,
   DialogContentText,
   Link
-} from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { Info as InfoIcon, Warning as WarningIcon } from '@material-ui/icons';
+} from '@mui/material';
+import { makeStyles } from '@mui/material/styles';
+import { Info as InfoIcon, Warning as WarningIcon } from '@mui/icons-material';
 
 import ListContext from 'context/ListContext';
 import legionModes from 'constants/legionModes';
@@ -151,7 +151,7 @@ function ListHeader() {
         { validationIssues.length > 0 &&
           <div className={classes.battleForceContainer}>
 
-            <IconButton onClick={()=>setValidationDialogOpen(true)}>
+            <IconButton onClick={()=>setValidationDialogOpen(true)} size="large">
               <WarningIcon style={{color: minValidationError < 2 ? 'yellow':'red'}}/>
             </IconButton> 
 
@@ -184,29 +184,29 @@ function ListHeader() {
         )}
 
       </div>
-        <div className={classes.battleForceContainer}>
-          <Button
-            endIcon={<InfoIcon />}
-            variant="outlined"
-            size="small"
-            onClick={handleOpenBFDialog}
-          >
-            {currentList.battleForce ? currentList.battleForce : currentList.faction}
-          </Button>
-          <Dialog open={isBattleForceDialogOpen} onClose={handleCloseBFDialog}>
-            <DialogTitle style={{paddingBottom:8}}>{currentList.battleForce} List Requirements</DialogTitle>
-            <DialogContent>
-              
-              <RankLimits list={currentList}/>
-              <BFRules list={currentList}/>
+      <div className={classes.battleForceContainer}>
+        <Button
+          endIcon={<InfoIcon />}
+          variant="outlined"
+          size="small"
+          onClick={handleOpenBFDialog}
+        >
+          {currentList.battleForce ? currentList.battleForce : currentList.faction}
+        </Button>
+        <Dialog open={isBattleForceDialogOpen} onClose={handleCloseBFDialog}>
+          <DialogTitle style={{paddingBottom:8}}>{currentList.battleForce} List Requirements</DialogTitle>
+          <DialogContent>
+            
+            <RankLimits list={currentList}/>
+            <BFRules list={currentList}/>
 
-              <DialogContentText>
-                All Star Wars: Legion documents are located on the Atomic Mass Games{' '}
-                <Link underline="always" href="https://atomicmassgames.com/star-wars-legion-documents" target="_blank" rel="noreferrer noopener">website</Link>
-              </DialogContentText>
-            </DialogContent>
-          </Dialog>
-        </div>
+            <DialogContentText>
+              All Star Wars: Legion documents are located on the Atomic Mass Games{' '}
+              <Link underline="always" href="https://atomicmassgames.com/star-wars-legion-documents" target="_blank" rel="noreferrer noopener">website</Link>
+            </DialogContentText>
+          </DialogContent>
+        </Dialog>
+      </div>
     </div>
   );
 };

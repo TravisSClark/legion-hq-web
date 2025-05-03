@@ -3,7 +3,7 @@ import {
   Container,
   Grid,
   Fade
-} from '@material-ui/core';
+} from '@mui/material';
 
 function Privacy() {
   return (

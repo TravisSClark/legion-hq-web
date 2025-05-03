@@ -11,10 +11,10 @@ import {
   Chip,
   Typography,
   Tooltip
-} from '@material-ui/core';
+} from '@mui/material';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
+import { makeStyles } from '@mui/material/styles';
+import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 import { PointsChip } from 'common/CardChip';
 import KeywordChips from 'common/KeywordChips';
 import urls from 'constants/urls';

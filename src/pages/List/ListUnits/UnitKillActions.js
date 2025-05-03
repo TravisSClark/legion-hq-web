@@ -1,12 +1,12 @@
 import React from 'react';
-import { IconButton } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { IconButton } from '@mui/material';
+import { makeStyles } from '@mui/material/styles';
 import { Icon as IconifyIcon } from '@iconify/react';
 import {
   PlusOne as PlusOneIcon,
   ExposureNeg1 as MinusOneIcon,
   AcUnit as AcUnitIcon
-} from '@material-ui/icons';
+} from '@mui/icons-material';
 
 const useStyles = makeStyles(theme => ({
   buttons: {

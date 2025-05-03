@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Grid, Divider } from '@material-ui/core';
+import { Grid, Divider } from '@mui/material';
 import DataContext from 'context/DataContext';
 import ListContext from 'context/ListContext';
 import CardModal from 'common/CardModal';

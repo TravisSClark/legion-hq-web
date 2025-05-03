@@ -1,8 +1,8 @@
 import React from 'react';
 // import {QRCodeCanvas as QRCode} from 'qrcode.react';
 import QRCode from 'qrcode.react';
-import { Chip } from '@material-ui/core';
-import { CropFree as QRCodeIcon } from '@material-ui/icons';
+import { Chip } from '@mui/material';
+import { CropFree as QRCodeIcon } from '@mui/icons-material';
 import generateLink from './generateLink';
 import DialogModal from './DialogModal';
 

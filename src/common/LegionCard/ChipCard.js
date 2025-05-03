@@ -1,5 +1,5 @@
 import React from 'react';
-import { Chip } from '@material-ui/core';
+import { Chip } from '@mui/material';
 
 function ChipCard({ card, handleClick, chipSize='medium', handleDelete }) {
   const { cardName, displayName } = card;

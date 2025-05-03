@@ -1,6 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Alert from '@material-ui/lab/Alert';
+import { makeStyles } from '@mui/material/styles';
+import Alert from '@mui/lab/Alert';
 import CardModal from 'common/CardModal';
 import cards from 'constants/cards';
 import BasicCardChips from './BasicCardChips';

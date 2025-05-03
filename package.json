@@ -5,8 +5,11 @@
   "dependencies": {
     "@auth0/auth0-react": "^2.3.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@iconify/react": "^6.0.0",
     "@mui/icons-material": "^7.0.2",
+    "@mui/lab": "^7.0.0-beta.11",
     "@mui/material": "^7.0.2",
     "@mui/styles": "^6.4.11",
     "@widgetbot/react-embed": "^1.9.0",

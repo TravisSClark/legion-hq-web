@@ -1,6 +1,6 @@
 import React, { memo, useRef, useState } from 'react';
-import Fade from '@material-ui/core/Fade';
-import Typography from '@material-ui/core/Typography';
+import Fade from '@mui/material/Fade';
+import Typography from '@mui/material/Typography';
 import ListContext from 'context/ListContext';
 import SelectorHeader from './SelectorHeader';
 import SelectorContent from './SelectorContent';
@@ -8,9 +8,9 @@ import StackController from './StackController';
 import ToggleButton from './ToggleButton';
 import ChipCard from 'common/LegionCard/ChipCard';
 import cards from 'constants/cards';
-import { Button, IconButton } from '@material-ui/core';
+import { Button, IconButton } from '@mui/material';
 import { unitHasUniques } from 'components/eligibleCardListGetter';
-import { Clear, Filter, Filter1, FilterList, Usb } from '@material-ui/icons';
+import { Clear, Filter, Filter1, FilterList, Usb } from '@mui/icons-material';
 
 function Title({ title }) {
   return <Typography variant="body2">{title}</Typography>;

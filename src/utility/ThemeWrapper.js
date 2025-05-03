@@ -1,11 +1,11 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline'
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles'
-import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider as MuiThemeProvider, StyledEngineProvider } from '@mui/styles';
+import { createTheme, responsiveFontSizes, adaptV4Theme } from '@mui/material/styles';
 import themes from 'constants/themes';
 
 function ThemeWrapper({ children, themeColor }) {
-  const theme = responsiveFontSizes(createTheme({
+  const theme = responsiveFontSizes(createTheme(adaptV4Theme({
     typography: { useNextVariants: true },
     palette: themes.palettes[themeColor],
     MuiRadio: {
@@ -18,12 +18,14 @@ function ThemeWrapper({ children, themeColor }) {
         },
       },
     }
-  }));
+  })));
   return (
-    <MuiThemeProvider theme={theme}>
-      <CssBaseline />
-      {children}
-    </MuiThemeProvider>
+    <StyledEngineProvider injectFirst>
+      (<MuiThemeProvider theme={theme}>
+        <CssBaseline />
+        {children}
+      </MuiThemeProvider>)
+    </StyledEngineProvider>
   );
 };
 

@@ -1,5 +1,5 @@
 import React, { useState, Suspense, lazy } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Routes, Redirect } from 'react-router-dom';
 import LoadingWidget from 'common/LoadingWidget';
 import listTemplate from 'constants/listTemplate';
 const Home = lazy(() => import('pages/Home'));
@@ -27,13 +27,13 @@ function Pages() {
   }
   return (
     <Suspense fallback={<LoadingWidget />}>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/news" component={News} />
-        <Route path="/cards" component={Cards} />
+      <Routes>
+        <Route exact path="/" element={Home} />
+        <Route exact path="/news" element={News} />
+        <Route path="/cards" element={Cards} />
         <Route
           path="/list/:slug/:listHash?"
-          render={({ match }) => {
+          element={({ match }) => {
             const { params } = match;
             const { slug, listHash } = params;
             return (
@@ -46,12 +46,12 @@ function Pages() {
             );
           }}
         />
-        <Route path="/roller" component={Roller} />
-        <Route path="/settings" component={Settings} />
-        <Route path="/info" component={Info} />
-        <Route path="/privacy" component={Privacy} />
+        <Route path="/roller" element={Roller} />
+        <Route path="/settings" element={Settings} />
+        <Route path="/info" element={Info} />
+        <Route path="/privacy" element={Privacy} />
         <Redirect to="/" />
-      </Switch>
+      </Routes>
     </Suspense>
   );
 };

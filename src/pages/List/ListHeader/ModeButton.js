@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
-import { Chip, Menu, MenuItem, MenuList } from '@material-ui/core';
+import { Chip, Menu, MenuItem, MenuList } from '@mui/material';
 import LargerTooltip from 'common/LargerTooltip';
 import legionModes from 'constants/legionModes';
 import DataContext from 'context/DataContext';

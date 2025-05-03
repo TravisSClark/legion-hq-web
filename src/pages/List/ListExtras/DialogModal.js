@@ -5,7 +5,7 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions
-} from '@material-ui/core';
+} from '@mui/material';
 
 function DialogModal({
   isOpen, isMobile = false, title, content, actions, handleClose

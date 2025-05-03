@@ -1,6 +1,6 @@
 import React from 'react';
-import { Paper, IconButton } from '@material-ui/core';
-import { Clear as ClearIcon } from '@material-ui/icons';
+import { Paper, IconButton } from '@mui/material';
+import { Clear as ClearIcon } from '@mui/icons-material';
 
 function SelectorHeader({ headerContent, setCardPaneFilter, moreHeaderContent }) {
   const sticky = {
@@ -19,7 +19,7 @@ function SelectorHeader({ headerContent, setCardPaneFilter, moreHeaderContent })
       <div style={{flexDirection:'column', width:'100%'}}>
         <div style={{display:'flex', flex:1, alignItems:'center', flexDirection:'row', justifyContent:'space-between'}}>
           {headerContent}
-          <IconButton onClick={() => setCardPaneFilter({ action: 'DISPLAY' })}>
+          <IconButton onClick={() => setCardPaneFilter({ action: 'DISPLAY' })} size="large">
             <ClearIcon />
           </IconButton>
         </div>
