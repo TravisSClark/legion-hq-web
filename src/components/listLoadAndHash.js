@@ -141,9 +141,7 @@ function convertHashToList(faction, url) {
     return false;
   }
   try {
-    let commandCardSlots = 7;
     otherSegments.forEach(cardId => {
-      commandCardSlots -=1;
       if (cardId === '') return;
       const card = cards[cardId];
       if (card.cardType === 'command') {

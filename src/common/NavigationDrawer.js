@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Img from "react-image";
 import {

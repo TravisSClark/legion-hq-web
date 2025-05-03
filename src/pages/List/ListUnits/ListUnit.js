@@ -5,10 +5,9 @@ import CardName from 'common/CardName';
 import UnitPoints from 'common/UnitPoints';
 import UnitActions from './UnitActions';
 import UnitUpgrades from './UnitUpgrades';
-import UnitFlaw from './UnitFlaw';
 import UnitContext from 'context/UnitContext';
 import ListContext from 'context/ListContext';
-import UpgradeAddBar from './UpgradeAddbar';
+// import UpgradeAddBar from './UpgradeAddbar';
 
 const useStyles = makeStyles(theme => ({
   unitRow: {
@@ -49,11 +48,42 @@ function ListUnit({
   console.log(JSON.stringify(unit.validationIssues));
 
   let bgColor = 'transparent';
-  if(highestUnitError == 2){
+  if(highestUnitError === 2){
     bgColor ='#6e1303'
-  }else if(highestUnitError == 1){
+  }else if(highestUnitError === 1){
     bgColor = "#550"
   }
+
+  // TODO trying to reclaim some space, doesn't look right yet
+  // return (
+  //   <div className={classes.unitColumn} style={{backgroundColor: bgColor, borderRadius:10}}>
+  //     <div className={classes.unitRow}>
+  //       <div className={classes.leftCell}>
+  //         <UnitAvatar
+  //           key="avatar"
+  //           id={unitCard.id}
+  //           count={unit.count}
+  //           handleClick={() => handleCardZoom(unit.unitId)}
+  //         />
+  //       </div>
+  //       <div className={classes.middleCell}>
+  //         <CardName key="name" id={unitCard.id} />
+  //         <UpgradeAddBar counterpartId={unitCard.counterpartId}
+  //           addCounterpartHandler={addCounterpartHandler}/>
+  //       </div>
+  //       <div className={classes.rightCell}>
+  //         <UnitPoints key="points" unit={unit} />
+  //         <UnitActions unit={unit} unitIndex={unitIndex} />
+  //       </div>
+  //     </div>
+  //     <UnitUpgrades
+  //       key="upgrades"
+  //       counterpartId={unitCard.counterpartId}
+  //       addCounterpartHandler={addCounterpartHandler}
+  //     />
+  //     {counterpartUnit}
+  //   </div>
+  // );
 
   return (
     <div className={classes.unitColumn} style={{backgroundColor: bgColor, borderRadius:10}}>
@@ -68,19 +98,17 @@ function ListUnit({
         </div>
         <div className={classes.middleCell}>
           <CardName key="name" id={unitCard.id} />
-          <UpgradeAddBar counterpartId={unitCard.counterpartId}
-            addCounterpartHandler={addCounterpartHandler}/>
+          <UnitUpgrades
+            key="upgrades"
+            counterpartId={unitCard.counterpartId}
+            addCounterpartHandler={addCounterpartHandler}
+          />          
         </div>
         <div className={classes.rightCell}>
           <UnitPoints key="points" unit={unit} />
           <UnitActions unit={unit} unitIndex={unitIndex} />
         </div>
       </div>
-      <UnitUpgrades
-        key="upgrades"
-        counterpartId={unitCard.counterpartId}
-        addCounterpartHandler={addCounterpartHandler}
-      />
       {counterpartUnit}
     </div>
   );

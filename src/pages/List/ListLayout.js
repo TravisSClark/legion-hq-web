@@ -39,7 +39,6 @@ function ListLayout() {
     top: 0,
     zIndex: 2,
     position: '-webkit-sticky',
-    position: 'sticky',
     backgroundColor: palette ? palette.background.default : ''
   };
 

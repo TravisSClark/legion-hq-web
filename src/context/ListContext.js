@@ -99,7 +99,7 @@ export function ListProvider({
           setStatus('idle');
         });
     }
-  }, [slug]);
+  }, [slug]); // compiler warns about not using hash or loaded lists in this effect; doing so makes us do inf ops and freeze
   useEffect(() => {
     // Save list before unmount
     return () => { if (currentList && !currentList.listId) updateStoredList(currentList); }

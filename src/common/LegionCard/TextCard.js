@@ -102,7 +102,7 @@ function BattleCardHeader({ card, handleClick }) {
 }
 
 function CommandCardHeader({ card, handleClick }) {
-  const { cardName, cardType } = card;
+  const { cardName } = card;
   const{handleCardZoom} = useContext(ListContext);
 
   const avatar = (
@@ -216,7 +216,6 @@ function CounterpartCardContent({ card, chipSize }) {
 }
 
 function CommandCardContent({ card, chipSize }) {
-  const { cardSubtype } = card;
   return (null
     // <CardContent style={{ padding: 8, textAlign: 'right' }}>
     //   <ReverseWrapper>
@@ -413,6 +412,14 @@ function TextCard({ card, handleClick, handleCardZoom }) {
         <div>
           <BattleCardHeader card={card} handleClick={handleClick} />
           <BattleCardContent card={card} chipSize={chipSize} />
+        </div>
+      );
+      break;
+    default:
+      cardContents = (
+        <div>
+          <UnitCardHeader card={card} handleClick={handleClick} />
+          <UnitCardContent card={card} chipSize={chipSize} />
         </div>
       );
       break;

@@ -1,15 +1,11 @@
 import React, { useContext } from 'react';
-import { Divider, Chip, Button, IconButton, Icon, Typography } from '@material-ui/core';
-import { Clear as ClearIcon } from '@material-ui/icons';
+import { Chip, Button, Typography } from '@material-ui/core';
 import CardIcon from 'common/CardIcon';
 import cards from 'constants/cards';
 import ListContext from 'context/ListContext';
 import UnitContext from 'context/UnitContext';
 
 function UpgradeLabel({ card, handleSwapUpgrade }) {
-
-
-  const {unit} = useContext(UnitContext);
 
   return (
     <div style={{ display: 'flex', flex:0, alignItems: 'center' }}>

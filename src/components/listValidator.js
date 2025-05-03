@@ -212,7 +212,7 @@ function battleForceValidation(currentList, unitCounts){
     }
   }  
 
-  if(currentList.battleForce == "Tempest Force" && unitCounts["we"] !== 1){
+  if(currentList.battleForce === "Tempest Force" && unitCounts["we"] !== 1 && battleForcesDict[currentList.battleForce].commander.length === 0){
     validationIssues.push({level:2, text: "Until 'Imperial Officer' gets reworked, you'll need to include Major Marquand (under Heavies) to fulfill Commander requirements"})
   }
   

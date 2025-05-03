@@ -314,6 +314,8 @@ Gunslinger keyword can only be used once per attack sequence.",
 "Heavy Weapon Team" : "A unit with the Heavy Weapon Team keyword must equip a \
 Upgrade Card. The miniature added to the unit with this \
 Upgrade Card becomes the unit leader.",
+"Hold the Line":"While a unit with the Hold the Line keyword is engaged, it gains \
+SURGE:HIT and SURGE:BLOCK.",
 
 "Hover" : "A unit with the Hover: Ground or Hover: Air X keyword can \
 make Standby actions during the Make Actions step and can \
