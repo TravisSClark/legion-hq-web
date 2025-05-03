@@ -12,7 +12,7 @@ function UpgradeLabel({ card, handleSwapUpgrade }) {
   const {unit} = useContext(UnitContext);
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
+    <div style={{ display: 'flex', flex:0, alignItems: 'center' }}>
       <Button
         disableRipple
         size="small"
@@ -74,6 +74,12 @@ function UpgradeChip({
           })}
         />
       )}
+      sx={[{
+        "& .MuiChip-label": {
+          padding: 2,
+          backgroundColor:'red' 
+        }
+      }]}
       avatar={<UpgradeAvatar card={upgradeCard} handleClick={handleClick} />}
       style={{ marginRight: 4, marginTop: 4, marginBottom: 6, height: 'auto' }}
       onDelete={ () => handleUnequipUpgrade(

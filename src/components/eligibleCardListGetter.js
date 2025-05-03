@@ -123,6 +123,8 @@ function sortUpgradeIds(ids) {
 function getEligibleUnitsToAdd(list, rank, userSettings) {
   const validUnitIds = [];
   const cardsById = cardIdsByType.unit; // Object.keys(cards);
+  const uniqueCardNames = getListUniques(list, "name");
+
   for (let i = 0; i < cardsById.length; i++) {
     const id = cardsById[i];
     const card = cards[id];
@@ -151,7 +153,6 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
       continue;
     }
 
-    const uniqueCardNames = getListUniques(list, "name");
     if (uniqueCardNames.includes(card.cardName) || uniqueCardNames.includes(card.title)) continue;
 
     if (card.specialIssue && card.specialIssue !== list.battleForce)continue;
@@ -259,7 +260,10 @@ function getEquippableUpgrades(
   else if ( faction === 'mercenary') forceAffinity = battleForcesDict[list.battleForce].forceAffinity;
 
   if (!unitId) return { validUpgradeIds: [], invalidUpgradeIds: [] };
+
   const unitCard = cards[unitId];
+  const uniqueCardNames = getListUniques(list, "name");
+
   for (let i = 0; i < cardIdsByType['upgrade'].length; i++) {
     const id = cardIdsByType['upgrade'][i];
     const card = cards[id];
@@ -268,7 +272,6 @@ function getEquippableUpgrades(
     if (card.faction && card.faction !== '' && list.faction !== card.faction) continue;
 
     if(card.isUnique) {
-      const uniqueCardNames = getListUniques(list, "name");
       if (uniqueCardNames.includes(card.cardName)) continue;
     }
 
@@ -355,7 +358,7 @@ function getListUniques(list, field){
     if (cards[u.unitId]?.isUnique) {
       uniques.push(field === "id" ? u.unitId : cards[u.unitId].cardName);
     }
-    if (cards[u.unitId]?.isUniqueTitle) {
+    else if (cards[u.unitId]?.isUniqueTitle) {
       uniques.push(field === "id" ? u.unitId : cards[u.unitId].title);
     }
     u.upgradesEquipped.forEach ( up => {

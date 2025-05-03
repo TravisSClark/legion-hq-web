@@ -7,7 +7,10 @@ import {
   Card,
   CardMedia,
   CardActions,
-  CardActionArea
+  CardActionArea,
+  Chip,
+  Typography,
+  Tooltip
 } from '@material-ui/core';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -80,6 +83,13 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
         <CardActions disableSpacing>
           <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
             {(cost || cost === 0) && <PointsChip value={cost} size={chipSize} />}
+            { card.isUnreleased && 
+            <Tooltip title={`This unit/upgrade is unreleased, on the roadmap for a ${card.isUnreleased} release, not yet legal for organized play.\nPoints, keywords, or upgrades may be absent or incorrect.`}>
+              <Chip size={chipSize}
+                label={<Typography variant="body2">Unreleased</Typography>}
+                style={{ marginBottom: 4, marginRight: 4, backgroundColor:'green' }}/>
+                </Tooltip>
+            }
             {(cardType === "unit" || cardType === "counterpart") &&
             <UpgradeBar upgradeBar={upgradeBar} iconHeight={20}/>}
           </div>

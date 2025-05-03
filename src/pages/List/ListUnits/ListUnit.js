@@ -8,6 +8,7 @@ import UnitUpgrades from './UnitUpgrades';
 import UnitFlaw from './UnitFlaw';
 import UnitContext from 'context/UnitContext';
 import ListContext from 'context/ListContext';
+import UpgradeAddBar from './UpgradeAddbar';
 
 const useStyles = makeStyles(theme => ({
   unitRow: {
@@ -43,21 +44,21 @@ function ListUnit({
   const {unit, unitIndex, unitCard} = useContext(UnitContext);
   const {handleCardZoom} = useContext(ListContext);
 
-  const bgColor = (unit.validationIssues && unit.validationIssues.length > 0) ? '#6e1303' : 'transparent';
 
-  const upgrades = (
-    <UnitUpgrades
-      key="upgrades"
-      counterpartId={unitCard.counterpartId}
-      addCounterpartHandler={addCounterpartHandler}
-    />
-  );
-  const flaws = unitCard.flaw ? <UnitFlaw key="flaws" flawId={unitCard.flaw} /> : undefined;
+  const highestUnitError = unit.validationIssues ? unit.validationIssues.reduce((hi, i)=>{return i.level > hi ? i.level : hi}, 0) : 0;
+  console.log(JSON.stringify(unit.validationIssues));
+
+  let bgColor = 'transparent';
+  if(highestUnitError == 2){
+    bgColor ='#6e1303'
+  }else if(highestUnitError == 1){
+    bgColor = "#550"
+  }
+
   return (
     <div className={classes.unitColumn} style={{backgroundColor: bgColor, borderRadius:10}}>
       <div className={classes.unitRow}>
         <div className={classes.leftCell}>
-          <div style={{ marginTop: 2 }} />
           <UnitAvatar
             key="avatar"
             id={unitCard.id}
@@ -67,14 +68,19 @@ function ListUnit({
         </div>
         <div className={classes.middleCell}>
           <CardName key="name" id={unitCard.id} />
-          {upgrades}
-          {flaws}
+          <UpgradeAddBar counterpartId={unitCard.counterpartId}
+            addCounterpartHandler={addCounterpartHandler}/>
         </div>
         <div className={classes.rightCell}>
           <UnitPoints key="points" unit={unit} />
           <UnitActions unit={unit} unitIndex={unitIndex} />
         </div>
       </div>
+      <UnitUpgrades
+        key="upgrades"
+        counterpartId={unitCard.counterpartId}
+        addCounterpartHandler={addCounterpartHandler}
+      />
       {counterpartUnit}
     </div>
   );

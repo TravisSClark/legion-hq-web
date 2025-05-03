@@ -156,7 +156,7 @@ function ListHeader() {
             </IconButton> 
 
             <Dialog open={isValidationDialogOpen} onClose={() => setValidationDialogOpen(false)}>
-              <DialogTitle>List Errors</DialogTitle>
+              <DialogTitle>List Errors/Warnings</DialogTitle>
               <DialogContent>
                 {validationIssues.map((el, i) =>
                 <div key={i} className={classes.valError}>

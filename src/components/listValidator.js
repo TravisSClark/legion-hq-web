@@ -35,6 +35,10 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
       if(!battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id))
         unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" upgrade is not allowed in this battleforce." });
     }
+
+    if(card.isUnreleased){
+      unit.validationIssues.push({level:1, text: '"' + card.cardName + (card.title? ", " + card.title : "") + "\" is not released yet ("+card.isUnreleased+")"})
+    }
   })
 
   if(unit.counterpart){
@@ -50,6 +54,8 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
       }
     });
   }
+
+  
   
   // Validation for each of the 'must equip' keywords
 
@@ -370,6 +376,10 @@ function validateList(currentList, rankLimits){
       unit.validationIssues.push({level:2, text: '"' + (card.displayName?card.displayName:card.cardName) + "\" is not allowed outside the " +card.specialIssue.toUpperCase() + " battleforce. (Special Issue)" });
     } else if(card.faction === "mercenary" && !card.affiliations.includes(faction)){
       unit.validationIssues.push({level:2, text: card.cardName + " is not allowed in this faction/battleforce combo"})
+    } 
+    
+    if(card.isUnreleased){
+      unit.validationIssues.push({level:1, text: '"' + card.cardName + (card.title? ", " + card.title : "") + "\" is not released yet ("+card.isUnreleased+")"})
     }
 
     validationIssues = validationIssues.concat(unit.validationIssues);
