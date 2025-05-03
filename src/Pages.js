@@ -1,5 +1,5 @@
 import React, { useState, Suspense, lazy, useEffect } from 'react';
-import { Route, Routes, useNavigate} from 'react-router-dom';
+import { Route, Routes, useNavigate} from 'react-router';
 import LoadingWidget from 'common/LoadingWidget';
 import listTemplate from 'constants/listTemplate';
 const Home = lazy(() => import('pages/Home'));

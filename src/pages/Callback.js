@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import auth0Client from 'utility/Auth';
 import LoadingWidget from 'common/LoadingWidget';
 
