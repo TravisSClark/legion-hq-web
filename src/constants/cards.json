@@ -6708,6 +6708,7 @@
         "name": "Scale"
       }
     ],
+    "entourage": "px",
     "upgradeBar": [
       "command",
       "command",
@@ -8086,6 +8087,7 @@
     "faction": "rebels",
     "isUnique": true,
     "cost": 90,
+    "equip": ["kh"],
     "keywords": [
       {
         "name": "Danger Sense",
@@ -8270,7 +8272,7 @@
   },
   "kh": {
     "cardSubtype": "armament",
-    "displayName": "A280-CFE Config",
+    "displayName": "A280",
     "cardName": "A280-CFE Sniper Config",
     "cardType": "upgrade",
     "cost": 0,
@@ -16123,6 +16125,7 @@
     "faction": "empire",
     "isUnique": true,
     "cost": 100,
+    "entourage":"tm",
     "keywords": [
       {
         "name": "Observe",

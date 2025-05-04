@@ -56,7 +56,7 @@ async function cardsJsonCheck(){
     switch(c.cardType){
       case "unit":
         c.keywords.forEach(k=>{
-          const kw = keywordsWithFields.find(kw =>kw[0] === k)
+          const kw = keywordsWithFields.find(kw =>kw[0] === k.name || kw[0] === k)
           if(kw){
             if(c[kw[1]] == undefined){
               console.log(c.cardName+",", c.id, ": cards.json entry is missing a rule for keyword: ",k, '->', kw[1]);
