@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
-import { Skeleton } from '@mui/material';
+import { Avatar, Skeleton } from '@mui/material';
 import urls from 'constants/urls';
 
 const PREFIX = 'CardIcon';
@@ -42,15 +42,16 @@ function CardIcon({
     />
   );
   return (
-    <img
+    <Avatar
       decode={false}
       alt={card.cardName}
       src={`${urls.cdn}/${card.cardType}Icons/${card.imageName}`}
-      style={{ scale: 5 }}
+      // style={{ scale: 5 }}
+      size="medium"
       loader={placeholder}
-      className={clsx(classes.image, classes[size], {
-        [classes.imageHover]: handleClick !== undefined
-      })}
+      // className={clsx(classes.image, classes[size], {
+      //   [classes.imageHover]: handleClick !== undefined
+      // })}
       onClick={handleClick}
     />
   );

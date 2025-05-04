@@ -17,6 +17,7 @@ function ListUnits() {
   const equippedCounterparts = [];
   
   currentList.units.forEach(u => {
+    console.log(u.unitId);
     if(u.counterpart && u.counterpart.count > 0){
       equippedCounterparts.push(u.counterpart.counterpartId);
     }
@@ -81,7 +82,7 @@ function ListUnits() {
     }
   });
   return (
-    <div id="list-units" style={{ display: 'flex', flexFlow: 'column' }}>
+    <div id="list-units" style={{ display: 'flex', flex:1, flexFlow: 'column' }}>
       <DragDropContainer items={items} reorderUnits={reorderUnits} />
     </div>
   );

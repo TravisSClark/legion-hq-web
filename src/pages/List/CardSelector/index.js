@@ -154,7 +154,8 @@ const CardSelector = () => {
     }
 
   return (
-    <Fade unmountOnExit exit={false} in={cardPaneFilter.action !== 'DISPLAY'}>
+    // TODO MUI updates this is broken for now
+    // <Fade unmountOnExit exit={false} in={cardPaneFilter.action !== 'DISPLAY'}>
       <React.Fragment>
         <SelectorHeader
           headerContent={header}
@@ -169,7 +170,7 @@ const CardSelector = () => {
           handleCardZoom={handleCardZoom}
         />
       </React.Fragment>
-    </Fade>
+  //  </Fade>
   );
 };
 

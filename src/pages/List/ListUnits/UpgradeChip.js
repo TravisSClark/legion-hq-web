@@ -77,7 +77,6 @@ function UpgradeChip({
       sx={[{
         "& .MuiChip-label": {
           padding: 2,
-          backgroundColor:'red' 
         }
       }]}
       avatar={<UpgradeAvatar card={upgradeCard} handleClick={handleClick} />}

@@ -36,19 +36,10 @@ function Pages() {
         <Route path="/cards" element={<Cards/>} />
         <Route
           path="/list/:slug/:listHash?"
-          element={({ match }) => {
-            const { params } = match;
-            const { slug, listHash } = params;
-            console.log('route', JSON.stringify(match))
-            return (
+          element={
               <MainListPage
-                slug={slug}
-                listHash={listHash}
                 storedLists={storedLists}
-                updateStoredList={updateStoredList}
-              />
-            );
-          }}
+                updateStoredList={updateStoredList}/>}
         />
         <Route path="/roller" element={<Roller/>} />
         <Route path="/settings" element={<Settings/>} />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {DndContext} from '@dnd-kit/core';
+import {DndContext, PointerSensor, useSensor, useSensors} from '@dnd-kit/core';
 import { Draggable } from './Draggable';
 import { Droppable } from './Droppable';
 
@@ -10,18 +10,12 @@ function reorder(list, startIndex, endIndex) {
   return result;
 }
 
+
+
 const ItemList = React.memo(function ItemList({ draggableItems }) {
   return draggableItems.map((item, index) => (
-    <Draggable key={item.id} draggableId={item.id} index={index}>
-      {(provided) => (
-        <div
-          ref={provided.innerRef}
-          {...provided.draggableProps}
-          {...provided.dragHandleProps}
-        >
-          {item.component}
-        </div>
-      )}
+    <Draggable key={item.id} id={item.id} index={index}>
+      {item.component}
     </Draggable>
   ));
 });
@@ -31,7 +25,16 @@ function DragDropContainer({ items, reorderUnits }) {
   useEffect(() => {
     setDraggableItems(items);
   }, [items]);
+
+  const pointerSensor = useSensor(PointerSensor, {
+    activationConstraint: {
+      distance: 10,
+    },
+  });
+  const sensors = useSensors(pointerSensor);
+
   function onDragEnd(result) {
+    console.log('dragend', result);
     if (!result.destination) return;
     if (result.destination.index === result.source.index) return;
     const newItems = reorder(
@@ -43,14 +46,11 @@ function DragDropContainer({ items, reorderUnits }) {
     setDraggableItems(newItems);
   }
   return (
-    <DndContext onDragEnd={onDragEnd}>
+    <DndContext sensors={sensors} onDragEnd={onDragEnd}>
       <Droppable droppableId="list">
-        {provided => (
-          <div ref={provided.innerRef} {...provided.droppableProps}>
-            <ItemList draggableItems={draggableItems} />
-            {provided.placeholder}
+        <div style={{display:'flex', flexDirection:'column'}}>
+          <ItemList draggableItems={draggableItems} />
           </div>
-        )}
       </Droppable>
     </DndContext>
   );

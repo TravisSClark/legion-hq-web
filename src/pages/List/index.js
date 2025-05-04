@@ -3,13 +3,18 @@ import { ListProvider } from 'context/ListContext';
 import { ErrorBoundary } from 'react-error-boundary'
 import ErrorFallback from 'common/ErrorFallback';
 import ListLayout from './ListLayout';
+import {useParams} from "react-router"
 
-function MainListPage({ width, slug, listHash, storedLists, updateStoredList }) {
+function MainListPage({width, storedLists, updateStoredList}) {
+
+
+  let params = useParams();
+
   return (
     <ListProvider
       width={width}
-      slug={slug}
-      listHash={listHash}
+      slug={params.slug} 
+      listHash={params.listHash}
       storedLists={storedLists}
       updateStoredList={updateStoredList}
     >

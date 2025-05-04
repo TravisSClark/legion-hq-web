@@ -70,7 +70,7 @@ export function ListProvider({
 
 
   useEffect(() => {
-    console.log('slug processing');
+    console.log('slug processing', slug);
     // route '/list/rebels' fetches the rebel list from storage
     if (slug in factions) {
       if (listHash) {

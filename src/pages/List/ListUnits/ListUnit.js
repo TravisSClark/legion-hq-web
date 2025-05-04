@@ -5,7 +5,6 @@ import CardName from 'common/CardName';
 import UnitPoints from 'common/UnitPoints';
 import UnitActions from './UnitActions';
 import UnitUpgrades from './UnitUpgrades';
-import UnitFlaw from './UnitFlaw';
 import UnitContext from 'context/UnitContext';
 import ListContext from 'context/ListContext';
 import UpgradeAddBar from './UpgradeAddbar';
@@ -67,9 +66,9 @@ function ListUnit({
   console.log(JSON.stringify(unit.validationIssues));
 
   let bgColor = 'transparent';
-  if(highestUnitError == 2){
+  if(highestUnitError === 2){
     bgColor ='#6e1303'
-  }else if(highestUnitError == 1){
+  }else if(highestUnitError === 1){
     bgColor = "#550"
   }
 

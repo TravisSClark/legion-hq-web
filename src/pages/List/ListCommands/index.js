@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
-import { Button, Grid, Chip } from '@mui/material';
+import { Button, Grid, Chip, Avatar } from '@mui/material';
 import { Add as AddIcon } from '@mui/icons-material';
 import ListContext from 'context/ListContext';
 import CardIcon from 'common/CardIcon';
 import cards from 'constants/cards';
+import urls from 'constants/urls';
 
 const chipSize = 'medium';
 
@@ -74,14 +75,9 @@ function ListCommands() {
       <Grid item>
         <Chip
           label="•••• Standing Orders"
-          avatar={
-            <CardIcon
-              size="small"
-              card={cards['aa']}
-              handleClick={() => handleCardZoom('aa')}
-            />
-          }
-          style={chipStyle}
+          // size="medium"
+          avatar={ <Avatar src={`${urls.cdn}/commandIcons/${cards['aa'].imageName}`} alt="S" sx={{width: 50, height:18}}/> }
+          // style={chipStyle}
         />
       </Grid>
     </Grid>
