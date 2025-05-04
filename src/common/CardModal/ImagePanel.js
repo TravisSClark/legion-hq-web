@@ -1,15 +1,15 @@
-import React from 'react';
-import Img from 'react-image';
+import React from "react";
+import Img from "react-image";
 import {
   Typography,
   ExpansionPanel,
   ExpansionPanelSummary,
-  ExpansionPanelDetails
-} from '@material-ui/core';
-import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
-import urls from 'constants/urls';
-import UpgradeBar from '../UpgradeBar';
-import { PointsChip } from '../CardChip';
+  ExpansionPanelDetails,
+} from "@material-ui/core";
+import { ExpandMore as ExpandMoreIcon } from "@material-ui/icons";
+import urls from "constants/urls";
+import UpgradeBar from "../UpgradeBar";
+import { PointsChip } from "../CardChip";
 
 function ImagePanel({ card, extraCardImage = false }) {
   if (!card) return null;
@@ -18,23 +18,41 @@ function ImagePanel({ card, extraCardImage = false }) {
     <React.Fragment>
       <ExpansionPanel defaultExpanded={!extraCardImage}>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>{extraCardImage ? (card.cardType === "battle" ? 'Map': 'Card Back') : 'Card Image'}</Typography>
+          <Typography>
+            {extraCardImage
+              ? card.cardType === "battle"
+                ? "Map"
+                : "Card Back"
+              : "Card Image"}
+          </Typography>
         </ExpansionPanelSummary>
-        <ExpansionPanelDetails style={{ padding: '0px 24px 24px' }}>
+        <ExpansionPanelDetails style={{ padding: "0px 24px 24px" }}>
           <div>
             <Img
-              src={`${urls.cdn}/${cardType}Cards/${extraCardImage ? `extra-${imageName}` : imageName}`}
-              style={{ width: '100%' }}
+              src={`${urls.cdn}/${cardType}Cards/${
+                extraCardImage ? `extra-${imageName}` : imageName
+              }`}
+              style={{ width: "100%" }}
             />
-            <div style={{display:'flex', flexDirection:'row', justifyContent:'space-between'}}>
-              {(card.cost || card.cost === 0) && <PointsChip value={card.cost}/>}
-              <UpgradeBar upgradeBar={card.upgradeBar}/>
-            </div>
+            {!extraCardImage && (
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                }}
+              >
+                {(card.cost || card.cost === 0) && (
+                  <PointsChip value={card.cost} />
+                )}
+                <UpgradeBar upgradeBar={card.upgradeBar} />
+              </div>
+            )}
           </div>
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </React.Fragment>
   );
-};
+}
 
 export default ImagePanel;
