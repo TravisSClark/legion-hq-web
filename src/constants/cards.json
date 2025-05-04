@@ -2537,8 +2537,8 @@
         "value": 2
       },
       {
-        "name": "Weak Point 1",
-        "value": "Rear"
+        "name": "Weak Point",
+        "value": "1: Rear"
       }
     ],
     "upgradeBar": [
@@ -2641,8 +2641,8 @@
         "name": "Transport"
       },
       {
-        "name": "Weak Point 1",
-        "value": "Sides"
+        "name": "Weak Point",
+        "value": "1: Sides"
       }
     ],
     "upgradeBar": [
@@ -5331,14 +5331,15 @@
         "value": 2
       },
       {
-        "name": "Hover: Ground"
+        "name": "Hover",
+        "value":"Ground"
       },
       {
         "name": "Outmaneuver"
       },
       {
-        "name": "Weak Point 1",
-        "value": "Rear, Sides"
+        "name": "Weak Point",
+        "value": "1: Rear, Sides"
       }
     ],
     "upgradeBar": [
@@ -5413,11 +5414,12 @@
         "name": "Barrage"
       },
       {
-        "name": "Hover: Ground"
+        "name": "Hover",
+        "value":"Ground"      
       },
       {
-        "name": "Weak Point 2",
-        "value": "Rear"
+        "name": "Weak Point",
+        "value": "2: Rear"
       }
     ],
     "upgradeBar": [
@@ -5883,7 +5885,8 @@
         "name": "Deflect"
       },
       {
-        "name": "Guardian"
+        "name": "Guardian",
+        "value": 3
       },
       {
         "name": "Immune: Pierce"
@@ -8953,8 +8956,13 @@
       {
         "name": "Impervious"
       },
+      "Scale",
       {
-        "name": "Scale, Scout 3, Sharpshooter",
+        "name": "Scout",
+        "value": 3
+      },
+      {
+        "name": "Sharpshooter",
         "value": 1
       }
     ],
@@ -9049,8 +9057,13 @@
       {
         "name": "Impervious"
       },
+      "Scale",
       {
-        "name": "Scale, Scout 3, Sharpshooter",
+        "name": "Scout",
+        "value": 3
+      },
+      {
+        "name": "Sharpshooter",
         "value": 1
       }
     ],
@@ -9631,7 +9644,6 @@
     "cost": 60,
     "imageName": "AT-RT Rep.webp",
     "keywords": [
-      "Vehicle",
       "Armor",
       "Climbing Vehicle",
       "Expert Climber",
@@ -11566,7 +11578,8 @@
         "value": 5
       },
       {
-        "name": "Hover: Ground"
+        "name": "Hover",
+        "value":"Ground" 
       },
       {
         "name": "Reposition"
@@ -11575,8 +11588,8 @@
         "name": "Transport"
       },
       {
-        "name": "Weak Point 2",
-        "value": "Rear"
+        "name": "Weak Point",
+        "value": "2: Rear"
       }
     ],
     "upgradeBar": [
@@ -11699,7 +11712,10 @@
       "Armor",
       "Arsenal",
       "Cover",
-      {"name" : "Hover", "value":"Air"},
+      {
+        "name" : "Hover", 
+        "value":"Air 2"
+      },
       "Strafe",
       "Immune: Blast",
       "Immune: Melee",
@@ -12443,8 +12459,8 @@
         "value": 4
       },
       {
-        "name": "Guardian 2",
-        "value": "Commander"
+        "name": "Guardian",
+        "value": "2: Commander"
       },
       {
         "name": "Reliable",
@@ -12631,8 +12647,8 @@
         "name": "Charge"
       },
       {
-        "name": "Guardian 2",
-        "value": "Commander"
+        "name": "Guardian",
+        "value": "2: Commander"
       },
       {
         "name": "Immune: Melee Pierce"
@@ -13321,11 +13337,12 @@
         "value": 1
       },
       {
-        "name": "Hover: Ground"
+        "name": "Hover",
+        "value":"Ground"       
       },
       {
-        "name": "Weak Point 1",
-        "value": "Rear, Sides"
+        "name": "Weak Point",
+        "value": "1: Rear, Sides"
       }
     ],
     "upgradeBar": [
@@ -13389,8 +13406,8 @@
         "name": "Transport"
       },
       {
-        "name": "Weak Point 1",
-        "value": "Sides"
+        "name": "Weak Point",
+        "value": "1: Sides"
       },
       {
         "name": "Fixed",
@@ -14763,10 +14780,13 @@
     "imageName": "A-A5 Speeder Truck M.webp",
     "keywords": [
       "Armor",
-      "Hover: Ground",
+      {
+        "name": "Hover",
+        "value":"Ground" 
+      },
       "Reposition",
       "Transport",
-      "Weak Point"
+      {"name":"Weak Point", "value":"2: Rear"}
     ],
     "upgradeBar": [
       "pilot",
@@ -14954,7 +14974,7 @@
     "cost": 36,
     "keywords": [
       {
-        "name": "Flexible Reponse",
+        "name": "Flexible Response",
         "value": 2
       },
       {
@@ -14962,7 +14982,7 @@
         "value": 1
       },
       {
-        "name": "Speicial Issue",
+        "name": "Special Issue",
         "value": "Blizzard Force"
       },
       {
@@ -16051,8 +16071,8 @@
     "faction": "republic",
     "imageName": "Boil.webp",
     "keywords": [
-      "Guardian",
-      "Scout",
+      {"name": "Guardian", "value":1},
+      {"name": "Scout", "value":1},
       "Leader"
     ],
     "requirements": [
@@ -16775,8 +16795,8 @@
         "name": "Incognito"
       },
       {
-        "name": "Weak Point 1",
-        "value": "Rear"
+        "name": "Weak Point",
+        "value": "1: Rear"
       }
     ],
     "upgradeBar": [],
@@ -17406,7 +17426,7 @@
       "Field Commander",
       {
         "name": "Weak Point",
-        "value": "Rear 1"
+        "value": "1: Rear"
       },
       {
         "name": "Special Issue",
@@ -17841,7 +17861,7 @@
         "value": 1
       },
       {
-        "name": "Death From Above"
+        "name": "Death from Above"
       },
       {
         "name": "Direct",
@@ -17931,7 +17951,7 @@
         "name": "Scale"
       },
       {
-        "name": "Death From Above"
+        "name": "Death from Above"
       },
       {
         "name": "Weighed Down"
@@ -18287,8 +18307,8 @@
         "value": "Experimental Droids"
       },
       {
-        "name": "Weak Point 1",
-        "value": "Sides"
+        "name": "Weak Point",
+        "value": "1: Sides"
       }
     ],
     "upgradeBar": [
@@ -18601,8 +18621,7 @@
     "cost": 90,
     "keywords": [
       {
-        "name": "Complete the",
-        "value": " Mission"
+        "name": "Complete the Mission"
       },
       {
         "name": "Equip",
@@ -20064,7 +20083,7 @@
       "minicount": 1,
       "hp": 5,
       "defense": "w",
-      "courage": "X",
+      "courage": -1,
       "speed": 2,
       "hitsurge": "",
       "defsurge": ""
@@ -20072,12 +20091,7 @@
     "weapons": [
       {
         "name": "Weequay's Cunning",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "type": "a",
         "range": "- 1",
         "dice": {

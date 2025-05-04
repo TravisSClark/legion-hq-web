@@ -3,6 +3,10 @@
  */
 
 import fs from 'fs-extra';
+import appKeywords from '../src/constants/keywords.js';
+
+const args = process.argv.slice(2);
+
 // import {getEquippableUpgrades} from '../src/components/eligibleCardListGetter';
 async function cardsJsonCheck(){
 
@@ -62,6 +66,12 @@ async function cardsJsonCheck(){
               console.log(c.cardName+",", c.id, ": cards.json entry is missing a rule for keyword: ",k, '->', kw[1]);
             }
           }
+
+          const matchingKeyword = Object.getOwnPropertyNames(appKeywords).find(a => a === k || a === k.name);
+          if(!matchingKeyword){
+            console.log('could not find keyword entry',k,'in unit',c.cardName, c.id)
+          }
+
         });
 
         if(!c.stats){
@@ -74,7 +84,7 @@ async function cardsJsonCheck(){
               console.log(k, 'needs to be defined', c.id)
             }
             else if(!Number.isInteger(stats[k]))
-              console.log(k,'needs to be a number', c.id)
+              console.log(k,'needs to be a number', c.cardName, c.id)
           })
         }
 

@@ -15,6 +15,8 @@
 const fs = require('node:fs');
 
 
+const args = process.argv.slice(2);
+
 //let data = await fs.readFile('../src/constants/cards.json', 'utf8')
 
 fs.readFile('./cards.js', 'utf8', (err, data) => {

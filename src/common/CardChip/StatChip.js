@@ -6,7 +6,9 @@ import symbols from 'constants/symbols';
 function StatChip({ size, type, value }) {
   let label = 'Error';
   if (value > 0) label = value;
-  else if (value < 1) label = '-';
+  else if (value === 0) label = '-';
+  else if (value === -1) label = 'X';
+
   const icon = (
     <Img
       alt={type}
