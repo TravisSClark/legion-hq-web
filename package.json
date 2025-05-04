@@ -23,7 +23,6 @@
     "components": "./src/components",
     "constants": "./src/constants",
     "context": "./src/context",
-    "dnd-kit": "^0.0.2",
     "dom-to-image-more": "^3.5.0",
     "express": "^5.1.0",
     "fs": "0.0.1-security",

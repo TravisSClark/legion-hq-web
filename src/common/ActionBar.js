@@ -1,39 +1,59 @@
 import React, { useContext } from 'react';
+import { styled } from '@mui/material/styles';
 import {
   AppBar,
   Toolbar,
   IconButton,
   InputBase
 } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { useTheme } from '@mui/styles';
 import {alpha} from '@mui/material/styles';
 import { Menu as MenuIcon, Search as SearchIcon } from '@mui/icons-material';
 import DataContext from 'context/DataContext';
 import lhqLogoLight from 'assets/lhqLogoLight.svg';
 import lhqLogoDark from 'assets/lhqLogoDark.svg';
 
-const useStyles = makeStyles(theme => ({
-  grow: { flexGrow: 1 },
-  menuButton: {
-    // marginRight: theme.spacing(2),
+const PREFIX = 'ActionBar';
+
+const classes = {
+  grow: `${PREFIX}-grow`,
+  menuButton: `${PREFIX}-menuButton`,
+  search: `${PREFIX}-search`,
+  searchIcon: `${PREFIX}-searchIcon`,
+  inputRoot: `${PREFIX}-inputRoot`,
+  inputInput: `${PREFIX}-inputInput`,
+  desktopOnly: `${PREFIX}-desktopOnly`
+};
+
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`&.${classes.grow}`]: { flexGrow: 1 },
+
+  [`& .${classes.menuButton}`]: {
+    marginRight: theme.spacing(2),
   },
-  search: {
+
+  [`& .${classes.search}`]: {
     position: 'relative',
-    // borderRadius: theme.shape.borderRadius,
-    // backgroundColor: alpha(theme.palette.common.white, 0.15),
+    borderRadius: theme.shape.borderRadius,
+    backgroundColor: alpha(theme.palette.common.white, 0.15),
     '&:hover': {
-      // backgroundColor: alpha(theme.palette.common.white, 0.25),
+      backgroundColor: alpha(theme.palette.common.white, 0.25),
     },
-    // marginRight: theme.spacing(2),
+    marginRight: theme.spacing(2),
     marginLeft: 0,
     width: '100%',
     flexGrow: 1,
-    // [theme.breakpoints.up('sm')]: {
-      // marginLeft: theme.spacing(3),
-      // width: 'auto',
-    // },
+    [theme.breakpoints.up('sm')]: {
+      marginLeft: theme.spacing(3),
+      width: 'auto',
+    },
   },
-  searchIcon: {
+
+  [`& .${classes.searchIcon}`]: {
     // padding: theme.spacing(0, 2),
     height: '100%',
     position: 'absolute',
@@ -42,27 +62,31 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  inputRoot: {
+
+  [`& .${classes.inputRoot}`]: {
     color: 'inherit',
     width: '100%'
   },
-  inputInput: {
-    // padding: theme.spacing(1, 1, 1, 0),
+
+  [`& .${classes.inputInput}`]: {
+    padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
-    // paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    // transition: theme.transitions.create('width'),
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create('width'),
     width: '100%'
   },
-  desktopOnly: {
+
+  [`& .${classes.desktopOnly}`]: {
     display: 'none',
-    // [theme.breakpoints.up('sm')]: {
-      // display: 'flex',
-    // }
+    [theme.breakpoints.up('sm')]: {
+      display: 'flex',
+    }
   }
 }));
 
 function DefaultBar() {
-  const classes = useStyles();
+  const theme = useTheme();
+
   const { userSettings, setIsDrawerOpen } = useContext(DataContext);
   return (
     <Toolbar variant="dense">
@@ -79,7 +103,7 @@ function DefaultBar() {
         src={userSettings.themeColor === 'light' ? lhqLogoLight : lhqLogoDark}
         style={{ height: 35 }}
       />
-      <div className={classes.grow} />
+      <Root className={classes.grow} />
       {false && (
         <div className={classes.search}>
           <div className={classes.searchIcon}>
@@ -99,7 +123,7 @@ function DefaultBar() {
 }
 
 function ActionBar(props) {
-  const classes = useStyles();
+
   return (
     <div className={classes.grow}>
       <AppBar position="fixed" color="secondary">
@@ -108,6 +132,6 @@ function ActionBar(props) {
       <div style={{ height: 55 }} />
     </div>
   );
-};
+}
 
 export default ActionBar;

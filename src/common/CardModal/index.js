@@ -8,7 +8,7 @@ import {
   DialogActions,
   Button
 } from '@mui/material';
-import { useTheme } from '@mui/styles';
+import { useTheme } from '@mui/material/styles';
 import cards from 'constants/cards';
 import ImagePanel from './ImagePanel';
 import KeywordsPanel from './KeywordsPanel';

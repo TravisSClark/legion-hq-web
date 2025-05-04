@@ -16,7 +16,7 @@ function FactionChip({ faction }) {
   }));
   return (
     <StyledEngineProvider injectFirst>
-      (<ThemeProvider theme={factionTheme}>
+      <ThemeProvider theme={factionTheme}>
         <Chip
           clickable
           color="primary"
@@ -28,7 +28,7 @@ function FactionChip({ faction }) {
           )}
           onClick={() => goToPage(`/list/${faction}`)}
         />
-      </ThemeProvider>)
+      </ThemeProvider>
     </StyledEngineProvider>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
+import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
 import { ErrorBoundary } from 'react-error-boundary';
 import {
@@ -9,7 +10,6 @@ import {
   Button,
   Collapse
 } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import {
   Announcement as NewsIcon,
   ExpandMore as ExpandMoreIcon
@@ -26,15 +26,27 @@ import lhqLogoDark from 'assets/lhqLogoDark.svg';
 import releaseSchedule from 'assets/releaseSchedule.webp';
 import reissueSchedule from 'assets/reissueSchedule.webp';
 
-const useStyles = makeStyles(theme => ({
-  expand: {
+const PREFIX = 'Home';
+
+const classes = {
+  expand: `${PREFIX}-expand`,
+  expandOpen: `${PREFIX}-expandOpen`
+};
+
+const StyledErrorBoundary = styled(ErrorBoundary)((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.expand}`]: {
     transform: 'rotate(0deg)',
     marginLeft: 'auto',
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     })
   },
-  expandOpen: { transform: 'rotate(180deg)' },
+
+  [`& .${classes.expandOpen}`]: { transform: 'rotate(180deg)' }
 }));
 
 function Post({ title, date, body }) {
@@ -63,7 +75,7 @@ function Home() {
     fetchUserLists,
     deleteUserList
   } = useContext(DataContext);
-  const classes = useStyles();
+
   const listChips = {};
   const [isNewsOpen, setIsNewsOpen] = useState(true);
   Object.keys(factions).forEach(faction => listChips[faction] = []);
@@ -78,7 +90,7 @@ function Home() {
     if (userId) fetchUserLists(userId);
   }, [userId]);
   return (
-    <ErrorBoundary FallbackComponent={ErrorFallback}>
+    <StyledErrorBoundary FallbackComponent={ErrorFallback}>
       <Fade in={true}>
         <Container>
           <Grid
@@ -124,9 +136,6 @@ function Home() {
                 </Collapse>
               )}
             </Grid>
-            <Grid item>
-              <div style={{ height: 10 }} />
-            </Grid>
             {Object.keys(factions).map(faction => (
               <Grid
                 key={faction}
@@ -160,27 +169,20 @@ function Home() {
               </Grid>
             ))}
             <Grid item>
-              <div style={{ height: 10 }} />
-            </Grid>
-            <Grid item>
               <LoginButton auth={auth} />
             </Grid>
             <Grid item>
-              <div style={{ height: 10 }} />
-            </Grid>
-            <Grid item>
+              {/* TODO MUI update: parent div here resized to ~1150, making these no longer fit at 600w each until adjusted */}
               <img
                 alt="2025 Release Schedule"
                 src={releaseSchedule}
-                style={{ width: 600, height: 'auto' }}
+                style={{ width: 570, height: 'auto' }}
               />
                <img
                 alt="2025 Reissue Schedule"
                 src={reissueSchedule}
-                style={{ width: 600, height: 'auto' }}
+                style={{ width: 570, height: 'auto' }}
               />
-            </Grid>
-            <Grid item>           
             </Grid>
             <Grid item>
               <iframe
@@ -198,8 +200,8 @@ function Home() {
           </Grid>
         </Container>
       </Fade>
-    </ErrorBoundary>
+    </StyledErrorBoundary>
   );
-};
+}
 
 export default Home;

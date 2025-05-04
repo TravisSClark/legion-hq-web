@@ -1,30 +1,42 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
 import { makeStyles } from '@mui/material';
 import { geometry, attackDice } from 'constants/dice.js';
 import './spin.css';
 
-const sqrt3 = 1.732;
-const tilt = 35.27; // atan(1/sqrt(2))
-const triWidth = 20;
-const triHeight = (triWidth * sqrt3) - 0.5;
+const PREFIX = 'AttackDie';
 
-const useStyles = makeStyles(theme => ({
-  margin: {
+const classes = {
+  margin: `${PREFIX}-margin`,
+  solid: `${PREFIX}-solid`,
+  spinning: `${PREFIX}-spinning`,
+  side: `${PREFIX}-side`
+};
+
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`&.${classes.margin}`]: {
     marginRight: 12,
     marginTop: 12
   },
-  solid: {
+
+  [`& .${classes.solid}`]: {
     left: 0,
     bottom: '50%',
     width: `${triWidth * 2}px`,
     height: `${triWidth * 2}px`,
     transformStyle: 'preserve-3d'
   },
-  spinning: {
+
+  [`& .${classes.spinning}`]: {
     animation: 'spinning 1s infinite linear'
   },
-  side: {
+
+  [`& .${classes.side}`]: {
     position: 'absolute',
     left: 0,
     bottom: '50%',
@@ -34,8 +46,13 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const sqrt3 = 1.732;
+const tilt = 35.27; // atan(1/sqrt(2))
+const triWidth = 20;
+const triHeight = (triWidth * sqrt3) - 0.5;
+
 function AttackDie({ color, faceIndex = 0, isRolling = false }) {
-  const classes = useStyles();
+
   if (!attackDice[color]) return null;
   const { d8 } = geometry;
   const orientation = faceIndex < 8 ? 0 : 1;
@@ -46,7 +63,7 @@ function AttackDie({ color, faceIndex = 0, isRolling = false }) {
   };
   // setTimeout(() => { setIsSpinning(false); }, 1000 + (25 * getRandomInt(10)));
   return (
-    <div className={classes.margin}>
+    <Root className={classes.margin}>
       <div
         className={clsx(classes.solid, { [classes.spinning]: isRolling })}
         style={isRolling ? {} : rotationStyles}
@@ -75,8 +92,8 @@ function AttackDie({ color, faceIndex = 0, isRolling = false }) {
           );
         })}
       </div>
-    </div>
+    </Root>
   );
-};
+}
 
 export default AttackDie;

@@ -1,16 +1,31 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
-import { makeStyles } from '@mui/styles';
 import { Skeleton } from '@mui/material';
 import urls from 'constants/urls';
 
-const useStyles = makeStyles(theme => ({
-  card: { width: 315, marginRight: 4, marginBottom: 4 },
-  large: { width: 62.5, height: 50 },
-  medium: { width: 50, height: 40 },
-  small: { width: 40, height: 32 },
-  image: { objectFit: 'cover', marginLeft: 0, borderRadius: 25 },
-  imageHover: { '&:hover': { cursor: 'pointer' } }
+const PREFIX = 'CardIcon';
+
+const classes = {
+  card: `${PREFIX}-card`,
+  large: `${PREFIX}-large`,
+  medium: `${PREFIX}-medium`,
+  small: `${PREFIX}-small`,
+  image: `${PREFIX}-image`,
+  imageHover: `${PREFIX}-imageHover`
+};
+
+const Root = styled('img\r\n')((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.card}`]: { width: 315, marginRight: 4, marginBottom: 4 },
+  [`& .${classes.large}`]: { width: 62.5, height: 50 },
+  [`& .${classes.medium}`]: { width: 50, height: 40 },
+  [`& .${classes.small}`]: { width: 40, height: 32 },
+  [`& .${classes.image}`]: { objectFit: 'cover', marginLeft: 0, borderRadius: 25 },
+  [`& .${classes.imageHover}`]: { '&:hover': { cursor: 'pointer' } }
 }));
 
 function CardIcon({
@@ -18,7 +33,7 @@ function CardIcon({
   handleClick,
   card
 }) {
-  const classes = useStyles();
+
   const placeholder = (
     <Skeleton
       variant="rectangular"
@@ -39,6 +54,6 @@ function CardIcon({
       onClick={handleClick}
     />
   );
-};
+}
 
 export default CardIcon;

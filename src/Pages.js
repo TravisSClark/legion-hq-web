@@ -31,14 +31,15 @@ function Pages() {
   return (
     <Suspense fallback={<LoadingWidget />}>
       <Routes>
-        <Route exact path="/" element={Home} />
-        <Route exact path="/news" element={News} />
-        <Route path="/cards" element={Cards} />
+        <Route exact path="/" element={<Home/>} />
+        <Route exact path="/news" element={<News/>} />
+        <Route path="/cards" element={<Cards/>} />
         <Route
           path="/list/:slug/:listHash?"
           element={({ match }) => {
             const { params } = match;
             const { slug, listHash } = params;
+            console.log('route', JSON.stringify(match))
             return (
               <MainListPage
                 slug={slug}
@@ -49,10 +50,10 @@ function Pages() {
             );
           }}
         />
-        <Route path="/roller" element={Roller} />
-        <Route path="/settings" element={Settings} />
-        <Route path="/info" element={Info} />
-        <Route path="/privacy" element={Privacy} />
+        <Route path="/roller" element={<Roller/>} />
+        <Route path="/settings" element={<Settings/>} />
+        <Route path="/info" element={<Info/>} />
+        <Route path="/privacy" element={<Privacy/>} />
       </Routes>
     </Suspense>
   );

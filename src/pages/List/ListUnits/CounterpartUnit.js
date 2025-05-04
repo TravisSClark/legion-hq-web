@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { makeStyles } from '@mui/styles';
+import { styled } from '@mui/material/styles';
 import UnitAvatar from 'common/UnitAvatar';
 import CardName from 'common/CardName';
 import UnitPoints from 'common/UnitPoints';
@@ -8,15 +8,31 @@ import UnitUpgrades from './UnitUpgrades';
 import UnitContext from 'context/UnitContext';
 import ListContext from 'context/ListContext';
 
-const useStyles = makeStyles(theme => ({
-  unitRow: {
+const PREFIX = 'CounterpartUnit';
+
+const classes = {
+  unitRow: `${PREFIX}-unitRow`,
+  leftCell: `${PREFIX}-leftCell`,
+  counterpart: `${PREFIX}-counterpart`,
+  middleCell: `${PREFIX}-middleCell`,
+  rightCell: `${PREFIX}-rightCell`
+};
+
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`&.${classes.unitRow}`]: {
     marginLeft: 25,
     display: 'flex',
     flexFlow: 'row nowrap'
   },
-  leftCell: { marginRight: 4 },
-  counterpart: { marginLeft: 20 },
-  middleCell: {
+
+  [`& .${classes.leftCell}`]: { marginRight: 4 },
+  [`& .${classes.counterpart}`]: { marginLeft: 20 },
+
+  [`& .${classes.middleCell}`]: {
     flex: 1,
     marginRight: 2,
     display: 'flex',
@@ -24,7 +40,8 @@ const useStyles = makeStyles(theme => ({
     overflowX: 'auto',
     overflowY: 'hidden'
   },
-  rightCell: {
+
+  [`& .${classes.rightCell}`]: {
     display: 'flex',
     flexFlow: 'column nowrap',
     alignItems: 'center',
@@ -34,13 +51,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function CounterpartUnit() {
-  const classes = useStyles();
+
 
   const {unit, unitCard, unitIndex} = useContext(UnitContext);
   const {handleCardZoom} = useContext(ListContext);
 
   return (
-    <div className={classes.unitRow}>
+    <Root className={classes.unitRow}>
       <div className={classes.leftCell}>
         <UnitAvatar
             key="avatar"
@@ -58,8 +75,8 @@ function CounterpartUnit() {
         <UnitPoints key="points" unit={unit} parentheses={true}/>
         <UnitActions unit={unit} unitIndex={unitIndex} isCounterpart={true}/>
       </div>
-    </div>
+    </Root>
   );
-};
+}
 
 export default CounterpartUnit;

@@ -1,22 +1,41 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
-import { makeStyles } from '@mui/styles';
 import { Typography } from '@mui/material';
 import ranks from 'constants/ranks';
 import upgradeTypes from 'constants/upgradeTypes';
 
-const useStyles = makeStyles(theme => ({
-  outerRowContainer: {
+const PREFIX = 'IconBadge';
+
+const classes = {
+  outerRowContainer: `${PREFIX}-outerRowContainer`,
+  innerColumnContainer: `${PREFIX}-innerColumnContainer`,
+  numberSpan: `${PREFIX}-numberSpan`,
+  imageSpan: `${PREFIX}-imageSpan`,
+  typography: `${PREFIX}-typography`,
+  smallTypography: `${PREFIX}-smallTypography`,
+  image: `${PREFIX}-image`,
+  hidden: `${PREFIX}-hidden`
+};
+
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`&.${classes.outerRowContainer}`]: {
     display: 'flex',
     flexDirection: 'row',
     marginLeft: -10
   },
-  innerColumnContainer: {
+
+  [`& .${classes.innerColumnContainer}`]: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between'
   },
-  numberSpan: {
+
+  [`& .${classes.numberSpan}`]: {
     width: 22,
     height: 22,
     borderRadius: 25,
@@ -25,7 +44,8 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     border: '1px solid #1e2125'
   },
-  imageSpan: {
+
+  [`& .${classes.imageSpan}`]: {
     width: 22,
     height: 22,
     borderRadius: 25,
@@ -35,14 +55,15 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     border: '1px solid #1e2125'
   },
-  typography: { bottom: 2, left: 6, color: 'black', position: 'relative' },
-  smallTypography: { bottom: 2, left: 1.5, color: 'black', position: 'relative' },
-  image: { width: 20, height: 20 },
-  hidden: { visibility: 'hidden' }
+
+  [`& .${classes.typography}`]: { bottom: 2, left: 6, color: 'black', position: 'relative' },
+  [`& .${classes.smallTypography}`]: { bottom: 2, left: 1.5, color: 'black', position: 'relative' },
+  [`& .${classes.image}`]: { width: 20, height: 20 },
+  [`& .${classes.hidden}`]: { visibility: 'hidden' }
 }));
 
 function IconBadge({ avatar, count = 1, upgradeType, rank }) {
-  const classes = useStyles();
+
   let alt = ''; let src = '';
   if (upgradeType && upgradeType in upgradeTypes) {
     alt = upgradeType;
@@ -52,7 +73,7 @@ function IconBadge({ avatar, count = 1, upgradeType, rank }) {
     src = ranks[rank].icon;
   }
   return (
-    <div className={classes.outerRowContainer}>
+    <Root className={classes.outerRowContainer}>
       <div className={classes.innerColumnContainer}>
         <span
           className={clsx(classes.numberSpan, {
@@ -74,8 +95,8 @@ function IconBadge({ avatar, count = 1, upgradeType, rank }) {
         </span>
       </div>
       {avatar}
-    </div>
+    </Root>
   );
-};
+}
 
 export default IconBadge;

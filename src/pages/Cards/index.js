@@ -1,12 +1,22 @@
 import React from 'react';
-import { makeStyles } from '@mui/styles';
+import { styled } from '@mui/material/styles';
 import Alert from '@mui/material/Alert';
 import CardModal from 'common/CardModal';
 import cards from 'constants/cards';
 import BasicCardChips from './BasicCardChips';
 
-const useStyles = makeStyles(theme => ({
-  columnContainer: {
+const PREFIX = 'Cards';
+
+const classes = {
+  columnContainer: `${PREFIX}-columnContainer`
+};
+
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`&.${classes.columnContainer}`]: {
     padding: 8,
     display: 'flex',
     flexFlow: 'column nowrap'
@@ -14,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function Cards() {
-  const classes = useStyles();
+
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [modalContent, setModalContent] = React.useState();
   const handleCardZoom = (cardId) => {
@@ -81,7 +91,7 @@ function Cards() {
     }
   });
   return (
-    <div className={classes.columnContainer}>
+    <Root className={classes.columnContainer}>
       <Alert variant="filled" severity="info" style={{ marginBottom: 8 }}>
         This page is still under construction!
       </Alert>
@@ -90,28 +100,28 @@ function Cards() {
         isOpen={isModalOpen}
         handleClose={handleCloseModal}
       />
-        <BasicCardChips
-          title="Unit Cards"
-          cardDict={unitCards}
-          handleCardZoom={handleCardZoom}
-        />
-        <BasicCardChips
-          title="Upgrade Cards"
-          cardDict={upgradeCards}
-          handleCardZoom={handleCardZoom}
-        />
-        <BasicCardChips
-          title="Command Cards"
-          cardDict={commandCards}
-          handleCardZoom={handleCardZoom}
-        />
-        <BasicCardChips
-          title="Battle Cards"
-          cardDict={battleCards}
-          handleCardZoom={handleCardZoom}
-        />
-    </div>
+      <BasicCardChips
+        title="Unit Cards"
+        cardDict={unitCards}
+        handleCardZoom={handleCardZoom}
+      />
+      <BasicCardChips
+        title="Upgrade Cards"
+        cardDict={upgradeCards}
+        handleCardZoom={handleCardZoom}
+      />
+      <BasicCardChips
+        title="Command Cards"
+        cardDict={commandCards}
+        handleCardZoom={handleCardZoom}
+      />
+      <BasicCardChips
+        title="Battle Cards"
+        cardDict={battleCards}
+        handleCardZoom={handleCardZoom}
+      />
+    </Root>
   );
-};
+}
 
 export default Cards;

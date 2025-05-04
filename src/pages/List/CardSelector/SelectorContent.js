@@ -1,4 +1,5 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
 import {
   makeStyles,
@@ -12,35 +13,57 @@ import LegionCard from 'common/LegionCard';
 import cards from 'constants/cards';
 import ChipCard from 'common/LegionCard/ChipCard';
 
-const useStyles = makeStyles(theme => ({
-  expand: {
+const PREFIX = 'SelectorContent';
+
+const classes = {
+  expand: `${PREFIX}-expand`,
+  expandOpen: `${PREFIX}-expandOpen`,
+  rowContainerWrap: `${PREFIX}-rowContainerWrap`,
+  rowContainerNoWrap: `${PREFIX}-rowContainerNoWrap`,
+  columnContainer: `${PREFIX}-columnContainer`,
+  item: `${PREFIX}-item`,
+  divider: `${PREFIX}-divider`
+};
+
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.expand}`]: {
     transform: 'rotate(0deg)',
     marginLeft: 'auto',
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
   },
-  expandOpen: { transform: 'rotate(180deg)' },
-  rowContainerWrap: {
+
+  [`& .${classes.expandOpen}`]: { transform: 'rotate(180deg)' },
+
+  [`& .${classes.rowContainerWrap}`]: {
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'flex-start'
   },
-  rowContainerNoWrap: {
+
+  [`& .${classes.rowContainerNoWrap}`]: {
     display: 'flex',
     flexWrap: 'nowrap',
     alignItems: 'center',
     padding: 4
   },
-  columnContainer: {
+
+  [`&.${classes.columnContainer}`]: {
     display: 'flex',
     flexDirection: 'column'
   },
-  item: {
+
+  [`& .${classes.item}`]: {
     marginRight: 4,
     marginBottom: 4
   },
-  divider: {
+
+  [`& .${classes.divider}`]: {
     flexGrow: 1
   }
 }));
@@ -56,14 +79,14 @@ function CollapsedContent({ children, isExpanded }) {
 function SelectorContent({
   action, validIds = [], invalidIds = [], handleClick, handleCardZoom
 }) {
-  const classes = useStyles();
+
   const [isExpanded, setIsExpanded] = React.useState(false);
   const handleExpandClick = () => setIsExpanded(!isExpanded);
   if (validIds.length === 0) {
     return (
-      <div className={classes.columnContainer}>
+      <Root className={classes.columnContainer}>
         <Typography>No eligible cards found</Typography>
-      </div>
+      </Root>
     );
   } else if (!action.includes('UPGRADE')) {
     return (
@@ -128,7 +151,7 @@ function SelectorContent({
       </CollapsedContent>
     </div>
   );
-};
+}
 
 export default SelectorContent;
 

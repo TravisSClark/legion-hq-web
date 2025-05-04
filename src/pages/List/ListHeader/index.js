@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { styled } from '@mui/material/styles';
 import {
   Menu,
   MenuItem,
@@ -10,7 +11,6 @@ import {
   DialogContentText,
   Link
 } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import { Info as InfoIcon, Warning as WarningIcon } from '@mui/icons-material';
 
 import ListContext from 'context/ListContext';
@@ -23,36 +23,48 @@ import FactionButton from './FactionButton';
 
 import { BFRules, RankLimits } from './ListRulesModal';
 
-const useStyles = makeStyles({
-  container: {
+const PREFIX = 'ListHeader';
+
+const classes = {
+  container: `${PREFIX}-container`,
+  battleForceContainer: `${PREFIX}-battleForceContainer`,
+  columnContainer: `${PREFIX}-columnContainer`,
+  item: `${PREFIX}-item`,
+  valError: `${PREFIX}-valError`,
+  row: `${PREFIX}-row`,
+  bfRules: `${PREFIX}-bfRules`
+};
+
+const Root = styled('div')({
+  [`& .${classes.container}`]: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
   },
-  battleForceContainer: {
+  [`& .${classes.battleForceContainer}`]: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 4
   },
-  columnContainer: {
+  [`&.${classes.columnContainer}`]: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center'
   },
-  item: { marginRight: 6 },
-  valError: {
+  [`& .${classes.item}`]: { marginRight: 6 },
+  [`& .${classes.valError}`]: {
     display: 'flex',
     alignItems: 'start',
     justifyContent: 'start'
   },
-  row: {
+  [`& .${classes.row}`]: {
     display:'flex',
     flexDirection:'row',
     alignItems:'center'
   },
-  bfRules: {
+  [`& .${classes.bfRules}`]: {
     fontSize:14
   }
 });
@@ -67,7 +79,7 @@ function ListHeader() {
     handleChangeMode,
     validationIssues
   } = useContext(ListContext);
-  const classes = useStyles();
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [isBattleForceDialogOpen, setIsBattleForceDialogOpen] = React.useState(false);
   const [isValidationDialogOpen, setValidationDialogOpen ] = React.useState(false);
@@ -88,7 +100,7 @@ function ListHeader() {
 
 
   return (
-    <div id="list-header" className={classes.columnContainer}>
+    <Root id="list-header" className={classes.columnContainer}>
       <div className={classes.container}>
         <Menu
           keepMounted
@@ -207,8 +219,8 @@ function ListHeader() {
           </DialogContent>
         </Dialog>
       </div>
-    </div>
+    </Root>
   );
-};
+}
 
 export default ListHeader;

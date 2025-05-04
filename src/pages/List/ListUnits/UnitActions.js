@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
+import { styled } from '@mui/material/styles';
 import { Button, IconButton, Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import {
   PlusOne as PlusOneIcon,
   Add as PlusIcon,
@@ -12,14 +12,26 @@ import { Icon as IconifyIcon } from '@iconify/react';
 import ListContext from 'context/ListContext';
 import { unitHasUniques } from 'components/eligibleCardListGetter';
 
-const useStyles = makeStyles(theme => ({
-  buttons: {
+const PREFIX = 'UnitActions';
+
+const classes = {
+  buttons: `${PREFIX}-buttons`,
+  buttonsMobile: `${PREFIX}-buttonsMobile`
+};
+
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`&.${classes.buttons}`]: {
     display: 'flex',
     flexFlow: 'row nowrap',
     justifyContent: 'center',
     minWidth: '72px'
   },
-  buttonsMobile: {
+
+  [`& .${classes.buttonsMobile}`]: {
     display: 'flex',
     flexFlow: 'column',
     justifyContent: 'center',
@@ -37,7 +49,7 @@ function UnitActions({
   // TODO - at some point, might want to move this into listcontext; 
   // in current state (hah!), it doesn't handle a list edit while changing kill points
   const [numKilled, setNumKilled] = useState(0);
-  const classes = useStyles();
+
   const fontSize = 26;
 
   const {width, isKillPointMode, handleDecrementUnit, handleIncrementUnit, handleRemoveCounterpart, handleAddKillPoints} = useContext(ListContext);
@@ -91,10 +103,10 @@ function UnitActions({
 
     if(!isMobile){
       return (
-        <div className={classes.buttons}>
+        <Root className={classes.buttons}>
           {killPointsMinus}
           {killPointsPlus}
-        </div>
+        </Root>
       );
     } else {
       return (
@@ -143,6 +155,6 @@ function UnitActions({
       </div>
     );
   }
-};
+}
 
 export default UnitActions;

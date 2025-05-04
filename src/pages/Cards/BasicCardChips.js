@@ -1,4 +1,5 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
 import {
   Accordion,
@@ -14,16 +15,29 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import cards from 'constants/cards';
 import ChipCard from 'common/LegionCard/ChipCard';
 
-const useStyles = makeStyles(theme => ({
-  expand: {
+const PREFIX = 'BasicCardChips';
+
+const classes = {
+  expand: `${PREFIX}-expand`,
+  expandOpen: `${PREFIX}-expandOpen`,
+  divider: `${PREFIX}-divider`
+};
+
+const StyledAccordion = styled(Accordion)((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.expand}`]: {
     transform: 'rotate(0deg)',
     marginLeft: 'auto',
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
   },
-  expandOpen: { transform: 'rotate(180deg)' },
-  divider: { flexGrow: 1, margin: '0 8px' }
+
+  [`& .${classes.expandOpen}`]: { transform: 'rotate(180deg)' },
+  [`& .${classes.divider}`]: { flexGrow: 1, margin: '0 8px' }
 }));
 
 function capitalizeFirstLetters(words) {
@@ -35,7 +49,7 @@ function capitalizeFirstLetters(words) {
 
 
 function CollapsedContent({ label, cardIds, handleCardZoom }) {
-  const classes = useStyles();
+
   const [isExpanded, setIsExpanded] = React.useState(false);
   const handleExpandClick = () => setIsExpanded(!isExpanded);
   return (
@@ -72,7 +86,7 @@ function CollapsedContent({ label, cardIds, handleCardZoom }) {
 function BasicCardChips({ title, cardDict, handleCardZoom }) {
   const keys = Object.keys(cardDict);
   return (
-    <Accordion>
+    <StyledAccordion>
       <AccordionSummary expandIcon={<ExpandMoreIcon />}>
         <Typography>{title}</Typography>
       </AccordionSummary>
@@ -88,8 +102,8 @@ function BasicCardChips({ title, cardDict, handleCardZoom }) {
           ))}
         </div>
       </AccordionDetails>
-    </Accordion>
+    </StyledAccordion>
   );
-};
+}
 
 export default BasicCardChips;

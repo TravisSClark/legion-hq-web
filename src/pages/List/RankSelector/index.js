@@ -1,25 +1,31 @@
 import React, { useContext } from 'react';
-import { makeStyles } from '@mui/styles';
+import { styled } from '@mui/material/styles';
 import ListContext from 'context/ListContext';
 import ranks from 'constants/ranks';
 import { Badge, IconButton, Avatar } from '@mui/material';
 import LargerTooltip from 'common/LargerTooltip';
 
-const useStyles = makeStyles({
-  container: {
+const PREFIX = 'RankSelector';
+
+const classes = {
+  container: `${PREFIX}-container`
+};
+
+const Root = styled('div')({
+  [`&.${classes.container}`]: {
     display: 'flex',
     justifyContent: 'center'
   },
 });
 
 function RankSelector({style}) {
-  const classes = useStyles();
+
   const { currentList, setCardPaneFilter, rankLimits } = useContext(ListContext);
   
   const {unitCounts, gametimeUnitCounts, rankIssues} = currentList;
 
   return (
-    <div className={classes.container} style={style}>
+    <Root className={classes.container} style={style}>
       {Object.keys(rankLimits).map(rank => {
 
          // commOp is a non-array, non-displayed rank limit
@@ -66,9 +72,9 @@ function RankSelector({style}) {
           </LargerTooltip>
         );
       })}
-    </div>
+    </Root>
   );
-};
+}
 
 
 export default RankSelector;

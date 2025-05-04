@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
 import {
   Grow,
   IconButton,
@@ -13,37 +14,57 @@ import {
   Tooltip
 } from '@mui/material';
 import clsx from 'clsx';
-import { makeStyles } from '@mui/styles';
 import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 import { PointsChip } from 'common/CardChip';
 import KeywordChips from 'common/KeywordChips';
 import urls from 'constants/urls';
 import UpgradeBar from '../UpgradeBar';
 
-const useStyles = makeStyles(theme => ({
-  expand: {
+const PREFIX = 'ImageCard';
+
+const classes = {
+  expand: `${PREFIX}-expand`,
+  expandOpen: `${PREFIX}-expandOpen`,
+  selected: `${PREFIX}-selected`,
+  card: `${PREFIX}-card`,
+  unitCard: `${PREFIX}-unitCard`,
+  commandCard: `${PREFIX}-commandCard`,
+  upgradeCard: `${PREFIX}-upgradeCard`,
+  unitImage: `${PREFIX}-unitImage`,
+  upgradeImage: `${PREFIX}-upgradeImage`,
+  commandImage: `${PREFIX}-commandImage`,
+  doubleUpgrade: `${PREFIX}-doubleUpgrade`
+};
+
+const StyledGrow = styled(Grow)((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.expand}`]: {
     transform: 'rotate(0deg)',
     marginLeft: 'auto',
     // transition: theme.transitions.create('transform', {
       // duration: theme.transitions.duration.shortest,
     // })
   },
-  expandOpen: { transform: 'rotate(180deg)' },
-  selected: { border: '1px solid lightblue' },
-  card: { marginRight: 4, marginBottom: 4 },
-  unitCard: { maxWidth: 315 },
-  commandCard: { maxWidth: 225 },
-  upgradeCard: { maxWidth: 150 },
-  unitImage: { width: 315, height: 225 },
-  upgradeImage: { width: 150, height: 232.5 },
-  commandImage: { width: 225, height: 315 },
-  doubleUpgrade: { width: 300 }
+
+  [`& .${classes.expandOpen}`]: { transform: 'rotate(180deg)' },
+  [`& .${classes.selected}`]: { border: '1px solid lightblue' },
+  [`& .${classes.card}`]: { marginRight: 4, marginBottom: 4 },
+  [`& .${classes.unitCard}`]: { maxWidth: 315 },
+  [`& .${classes.commandCard}`]: { maxWidth: 225 },
+  [`& .${classes.upgradeCard}`]: { maxWidth: 150 },
+  [`& .${classes.unitImage}`]: { width: 315, height: 225 },
+  [`& .${classes.upgradeImage}`]: { width: 150, height: 232.5 },
+  [`& .${classes.commandImage}`]: { width: 225, height: 315 },
+  [`& .${classes.doubleUpgrade}`]: { width: 300 }
 }));
 
 function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
   const chipSize = 'small';
   const { cost, cardType, cardName, displayName, keywords, imageName, upgradeBar } = card;
-  const classes = useStyles();
+
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [isIn, setIn] = useState(true);
@@ -57,7 +78,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
   }
 
   return (
-    <Grow in={isIn}>
+    <StyledGrow in={isIn}>
       <Card
         className={clsx(classes.card,
           { [classes.selected]: isSelected },
@@ -121,8 +142,8 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
           </CardActions>
         </Collapse>
       </Card>
-    </Grow>
+    </StyledGrow>
   );
-};
+}
 
 export default ImageCard;

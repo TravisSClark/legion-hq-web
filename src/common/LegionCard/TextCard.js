@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
+import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
-import { makeStyles } from '@mui/styles';
 import {
   Typography,
   IconButton,
@@ -24,24 +24,37 @@ import IconBadge from 'common/IconBadge';
 import UpgradeBar from 'common/UpgradeBar';
 import ListContext from 'context/ListContext';
 
-function capitalizeFirstLetters(words) {
-  const strings = words.split(' ').map(string => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  });
-  return strings.join(' ');
-}
+const PREFIX = 'TextCard';
 
-const useStyles = makeStyles(theme => ({
-  expand: {
+const classes = {
+  expand: `${PREFIX}-expand`,
+  expandOpen: `${PREFIX}-expandOpen`,
+  card: `${PREFIX}-card`
+};
+
+const StyledGrow = styled(Grow)((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.expand}`]: {
     transform: 'rotate(0deg)',
     marginLeft: 'auto',
     transition: theme.transitions.create('transform', {
       duration: theme.transitions.duration.shortest,
     }),
   },
-  expandOpen: { transform: 'rotate(180deg)' },
-  card: { width: '100%', marginRight: 4, marginBottom: 4 }
+
+  [`& .${classes.expandOpen}`]: { transform: 'rotate(180deg)' },
+  [`& .${classes.card}`]: { width: '100%', marginRight: 4, marginBottom: 4 }
 }));
+
+function capitalizeFirstLetters(words) {
+  const strings = words.split(' ').map(string => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  });
+  return strings.join(' ');
+}
 
 function ReverseWrapper({ children }) {
   const containerStyle = {
@@ -327,7 +340,7 @@ function UnitCardContent({ card, chipSize }) {
 }
 
 function TextCardActions({ card, chipSize, isExpanded, handleExpandClick }) {
-  const classes = useStyles();
+
   return (
     <CardActions disableSpacing style={{ padding: '0 8px 8px' }}>
       <IconButton
@@ -367,7 +380,7 @@ function TextCardCollapsedContent({ card, chipSize, isExpanded, handleCardZoom }
 
 function TextCard({ card, handleClick, handleCardZoom }) {
   const chipSize = 'small';
-  const classes = useStyles();
+
   const [isExpanded, setIsExpanded] = React.useState(false);
   const handleExpandClick = () => setIsExpanded(!isExpanded);
 
@@ -420,7 +433,7 @@ function TextCard({ card, handleClick, handleCardZoom }) {
   }
 
   return (
-    <Grow unmountOnExit in={true}>
+    <StyledGrow unmountOnExit in={true}>
       <Card className={classes.card}>
         {/* <TextCardHeader card={card} handleClick={handleClick} />
         <TextCardContent card={card} chipSize={chipSize} /> */}
@@ -443,8 +456,8 @@ function TextCard({ card, handleClick, handleCardZoom }) {
           />
         }
       </Card>
-    </Grow>
+    </StyledGrow>
   );
-};
+}
 
 export default TextCard;

@@ -1,17 +1,30 @@
 import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
 import clsx from 'clsx';
 import { makeStyles, Typography } from '@mui/material';
 import ControlPanel from './ControlPanel';
 import AttackDie from './AttackDie';
 
-const useStyles = makeStyles(theme => ({
-  row: {
+const PREFIX = 'Stats';
+
+const classes = {
+  row: `${PREFIX}-row`,
+  column: `${PREFIX}-column`
+};
+
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.row}`]: {
     display: 'flex',
     flexFlow: 'row wrap',
     alignItems: 'center',
     justifyContent: 'center'
   },
-  column: {
+
+  [`&.${classes.column}`]: {
     display: 'flex',
     flexFlow: 'column nowrap',
     alignItems: 'center',
@@ -24,7 +37,7 @@ function getRandomInt(max) {
 }
 
 function Stats() {
-  const classes = useStyles();
+
   const [isRolling, setIsRolling] = useState(false);
   const [numRedAttackDice, setNumRedAttackDice] = useState(0);
   const [redAttackResults, setRedAttackResults] = useState([]);
@@ -71,7 +84,7 @@ function Stats() {
     setTimeout(() => setIsRolling(false), 500);
   }
   return (
-    <div className={classes.column}>
+    <Root className={classes.column}>
       <div className={classes.row}>
         <Typography variant="h5">
           Dice Roller
@@ -116,8 +129,8 @@ function Stats() {
           />
         ))}
       </div>
-    </div>
+    </Root>
   );
-};
+}
 
 export default Stats;

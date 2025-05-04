@@ -1,6 +1,6 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import { IconButton } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import { Icon as IconifyIcon } from '@iconify/react';
 import {
   PlusOne as PlusOneIcon,
@@ -8,8 +8,18 @@ import {
   AcUnit as AcUnitIcon
 } from '@mui/icons-material';
 
-const useStyles = makeStyles(theme => ({
-  buttons: {
+const PREFIX = 'UnitKillActions';
+
+const classes = {
+  buttons: `${PREFIX}-buttons`
+};
+
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`&.${classes.buttons}`]: {
     display: 'flex',
     flexFlow: 'row nowrap',
     justifyContent: 'center',
@@ -18,10 +28,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function UnitKillActions({ killUnit, restoreUnit }) {
-  const classes = useStyles();
+
   const fontSize = 26;
   return (
-    <div className={classes.buttons}>
+    <Root className={classes.buttons}>
       <React.Fragment>
         <IconButton
             size="small"
@@ -47,8 +57,8 @@ function UnitKillActions({ killUnit, restoreUnit }) {
           <PlusOneIcon style={{ fontSize }} />
         </IconButton>
       </React.Fragment>
-    </div>
+    </Root>
   );
-};
+}
 
 export default UnitKillActions;

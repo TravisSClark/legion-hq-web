@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { makeStyles } from '@mui/styles';
+import { styled } from '@mui/material/styles';
 import UnitAvatar from 'common/UnitAvatar';
 import CardName from 'common/CardName';
 import UnitPoints from 'common/UnitPoints';
@@ -10,16 +10,33 @@ import UnitContext from 'context/UnitContext';
 import ListContext from 'context/ListContext';
 import UpgradeAddBar from './UpgradeAddbar';
 
-const useStyles = makeStyles(theme => ({
-  unitRow: {
+const PREFIX = 'ListUnit';
+
+const classes = {
+  unitRow: `${PREFIX}-unitRow`,
+  unitColumn: `${PREFIX}-unitColumn`,
+  leftCell: `${PREFIX}-leftCell`,
+  counterpart: `${PREFIX}-counterpart`,
+  middleCell: `${PREFIX}-middleCell`,
+  rightCell: `${PREFIX}-rightCell`
+};
+
+const Root = styled('div')((
+  {
+    theme
+  }
+) => ({
+  [`& .${classes.unitRow}`]: {
     display: 'flex',
     flexFlow: 'row nowrap',
     borderTop: '1px solid rgba(255,255,255,0.12)'
   },
-  unitColumn: { display: 'flex', flexFlow: 'column nowrap' },
-  leftCell: { marginRight: 4 },
-  counterpart: { marginLeft: 20 },
-  middleCell: {
+
+  [`&.${classes.unitColumn}`]: { display: 'flex', flexFlow: 'column nowrap' },
+  [`& .${classes.leftCell}`]: { marginRight: 4 },
+  [`& .${classes.counterpart}`]: { marginLeft: 20 },
+
+  [`& .${classes.middleCell}`]: {
     flex: 1,
     marginRight: 2,
     display: 'flex',
@@ -27,7 +44,8 @@ const useStyles = makeStyles(theme => ({
     overflowX: 'auto',
     overflowY: 'hidden'
   },
-  rightCell: {
+
+  [`& .${classes.rightCell}`]: {
     display: 'flex',
     flexFlow: 'column nowrap',
     alignItems: 'center',
@@ -39,7 +57,7 @@ function ListUnit({
   counterpartUnit,
   addCounterpartHandler,
 }) {
-  const classes = useStyles();
+
 
   const {unit, unitIndex, unitCard} = useContext(UnitContext);
   const {handleCardZoom} = useContext(ListContext);
@@ -56,7 +74,7 @@ function ListUnit({
   }
 
   return (
-    <div className={classes.unitColumn} style={{backgroundColor: bgColor, borderRadius:10}}>
+    <Root className={classes.unitColumn} style={{backgroundColor: bgColor, borderRadius:10}}>
       <div className={classes.unitRow}>
         <div className={classes.leftCell}>
           <UnitAvatar
@@ -82,8 +100,8 @@ function ListUnit({
         addCounterpartHandler={addCounterpartHandler}
       />
       {counterpartUnit}
-    </div>
+    </Root>
   );
-};
+}
 
 export default ListUnit;

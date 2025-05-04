@@ -165,7 +165,9 @@ export function DataProvider({ children }) {
       setUserSettings(newSettings);
     }
   };
-  const goToPage = (newRoute) => navigate(newRoute);
+  const goToPage = (newRoute) => {
+    console.log('go to page', newRoute);
+    navigate(newRoute)};
   const fetchUserLists = (userId) => {
     if (userId) {
       httpClient
