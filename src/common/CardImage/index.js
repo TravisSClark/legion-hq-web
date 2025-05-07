@@ -1,24 +1,23 @@
-import React from 'react';
-import Img from 'react-image';
-import { Skeleton } from '@material-ui/lab';
-import { makeStyles } from '@material-ui/styles';
-import cards from 'constants/cards';
-import urls from 'constants/urls';
+import React from "react";
+import Img from "react-image";
+import { Skeleton } from "@material-ui/lab";
+import { makeStyles } from "@material-ui/styles";
+import cards from "constants/cards";
+import urls from "constants/urls";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   container: {
     marginRight: 4,
     zIndex: 1,
-    '&:hover': {
+    "&:hover": {
       opacity: 0.75,
-      transition: '.25s ease',
-      cursor: 'help'
-    }
+      transition: ".25s ease",
+      cursor: "help",
+    },
   },
   unit: { width: 210, height: 150 },
-  upgrade: { width: 'auto', height: 150 },
+  upgrade: { width: "auto", height: 150 },
   command: { width: 150, height: 210 },
-  flaw: { width: 'auto', height: 150 }
 }));
 
 function CardImage({ id, handleClick }) {
@@ -35,6 +34,6 @@ function CardImage({ id, handleClick }) {
       />
     </div>
   );
-};
+}
 
 export default CardImage;

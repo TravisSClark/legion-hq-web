@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import { Fade, Typography, Divider } from '@material-ui/core';
-import ListContext from 'context/ListContext';
-import factions from 'constants/factions';
-import cards from 'constants/cards';
-import CardImage from './CardImage';
+import React, { useContext } from "react";
+import { Fade, Typography, Divider } from "@material-ui/core";
+import ListContext from "context/ListContext";
+import factions from "constants/factions";
+import cards from "constants/cards";
+import CardImage from "./CardImage";
 
 function RowDisplay({ unit, faction, handleCardZoom }) {
   const counterStyles = {
@@ -12,25 +12,24 @@ function RowDisplay({ unit, faction, handleCardZoom }) {
     marginRight: 4,
     border: `1px solid ${factions[faction].primaryColor}`,
     borderRadius: 2.5,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center'
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
   };
   // ×
 
   const counter = (
     <div style={counterStyles}>
-      <Typography variant={unit.count > 9 ? 'caption' : 'button'}>
+      <Typography variant={unit.count > 9 ? "caption" : "button"}>
         {unit.count}
       </Typography>
     </div>
   );
   const { counterpart } = unit;
-  const { flawId } = unit;
   return (
-    <div style={{ display: 'flex', flexFlow: 'column nowrap' }}>
-      <div style={{ display: 'flex', flexFlow: 'row wrap' }}>
+    <div style={{ display: "flex", flexFlow: "column nowrap" }}>
+      <div style={{ display: "flex", flexFlow: "row wrap" }}>
         {unit.count > 1 && counter}
         <CardImage
           id={unit.unitId}
@@ -47,15 +46,9 @@ function RowDisplay({ unit, faction, handleCardZoom }) {
             );
           } else return null;
         })}
-        {flawId && (
-          <CardImage
-            id={flawId}
-            handleClick={() => handleCardZoom(flawId)}
-          />
-        )}
       </div>
       {counterpart && (
-        <div style={{ display: 'flex', flexFlow: 'row wrap' }}>
+        <div style={{ display: "flex", flexFlow: "row wrap" }}>
           <CardImage
             id={counterpart.counterpartId}
             handleClick={() => handleCardZoom(counterpart.counterpartId)}
@@ -79,14 +72,10 @@ function RowDisplay({ unit, faction, handleCardZoom }) {
 
 function CommandRow({ commandIds, handleCardZoom }) {
   return (
-    <div style={{ display: 'flex', flexFlow: 'row wrap' }}>
-      {commandIds.map(id => (
+    <div style={{ display: "flex", flexFlow: "row wrap" }}>
+      {commandIds.map((id) => (
         <div key={id}>
-          <CardImage
-            key={id}
-            id={id}
-            handleClick={() => handleCardZoom(id)}
-          />
+          <CardImage key={id} id={id} handleClick={() => handleCardZoom(id)} />
         </div>
       ))}
     </div>
@@ -94,14 +83,21 @@ function CommandRow({ commandIds, handleCardZoom }) {
 }
 
 function ListDisplay() {
-  const { currentList, cardPaneFilter, handleCardZoom } = useContext(ListContext);
+  const { currentList, cardPaneFilter, handleCardZoom } =
+    useContext(ListContext);
   return (
-    <Fade unmountOnExit exit={false} in={cardPaneFilter.action === 'DISPLAY'}>
-      <div style={{ display: 'flex', flexFlow: 'column nowrap', alignItems: 'stretch' }}>
-        {currentList.units.map(unit => (
-          <div key={unit.unitId + unit.upgradesEquipped.join('')}>
+    <Fade unmountOnExit exit={false} in={cardPaneFilter.action === "DISPLAY"}>
+      <div
+        style={{
+          display: "flex",
+          flexFlow: "column nowrap",
+          alignItems: "stretch",
+        }}
+      >
+        {currentList.units.map((unit) => (
+          <div key={unit.unitId + unit.upgradesEquipped.join("")}>
             <RowDisplay
-              unit={{ ...unit, flawId: cards[unit.unitId].flaw ? cards[unit.unitId].flaw : undefined }}
+              unit={{ unit }}
               faction={currentList.faction}
               handleCardZoom={handleCardZoom}
             />
@@ -115,6 +111,6 @@ function ListDisplay() {
       </div>
     </Fade>
   );
-};
+}
 
 export default ListDisplay;

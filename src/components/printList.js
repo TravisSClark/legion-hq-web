@@ -1,6 +1,6 @@
-import cards from 'constants/cards';
-import legionModes from 'constants/legionModes';
-import generateLink from 'pages/List/ListExtras/generateLink';
+import cards from "constants/cards";
+import legionModes from "constants/legionModes";
+import generateLink from "pages/List/ListExtras/generateLink";
 
 function getNumActivations(list) {
   return list.units.reduce((num, unit) => {
@@ -9,8 +9,8 @@ function getNumActivations(list) {
   }, 0);
 }
 
-function generateMissionCards(missionArray, label, html){
-  let lineBreak = html ? '<br>' : '\n';
+function generateMissionCards(missionArray, label, html) {
+  let lineBreak = html ? "<br>" : "\n";
   if (missionArray.length > 0) {
     let objectives = `${label}:${lineBreak}`;
     missionArray.forEach((id) => {
@@ -18,22 +18,26 @@ function generateMissionCards(missionArray, label, html){
     });
     return objectives;
   }
-  return '';
+  return "";
 }
 
 function generateTournamentText(list, html) {
-  let lineBreak = html ? '<br>' : '\n';
-  let header = `${list.title ? list.title : 'Untitled'}${lineBreak}`;
+  let lineBreak = html ? "<br>" : "\n";
+  let header = `${list.title ? list.title : "Untitled"}${lineBreak}`;
   header += `${list.pointTotal}/${legionModes[list.mode].maxPoints}`;
   const numActivations = getNumActivations(list);
-  header += ` (${numActivations} activation${numActivations === 1 ? '' : 's'})${lineBreak}`;
-  let units = '';
-  list.units.forEach(unit => {
+  header += ` (${numActivations} activation${
+    numActivations === 1 ? "" : "s"
+  })${lineBreak}`;
+  let units = "";
+  list.units.forEach((unit) => {
     const unitCard = cards[unit.unitId];
     if (unit.count === 1) {
-      if (unit.unitId === 'pz') { // Kraken
+      if (unit.unitId === "pz") {
+        // Kraken
         units += `${unitCard.cardName} - Kraken (${unit.totalUnitCost})${lineBreak}`;
-      } else if (unit.unitId === 'qa') { // Kalani
+      } else if (unit.unitId === "qa") {
+        // Kalani
         units += `${unitCard.cardName} - Kalani (${unit.totalUnitCost})${lineBreak}`;
       } else {
         units += `${unitCard.cardName} (${unit.totalUnitCost})${lineBreak}`;
@@ -57,7 +61,9 @@ function generateTournamentText(list, html) {
       }
     } else {
       for (let i = 0; i < unit.count; i++) {
-        units += `${unitCard.cardName} (${unit.totalUnitCost / unit.count})${lineBreak}`;
+        units += `${unitCard.cardName} (${
+          unit.totalUnitCost / unit.count
+        })${lineBreak}`;
         for (let j = 0; j < unit.upgradesEquipped.length; j++) {
           if (unit.upgradesEquipped[j]) {
             const upgradeCard = cards[unit.upgradesEquipped[j]];
@@ -67,49 +73,51 @@ function generateTournamentText(list, html) {
       }
     }
   });
-  let commands = '';
-  list.commandCards.forEach(commandId => {
-    let pips = '••••';
+  let commands = "";
+  list.commandCards.forEach((commandId) => {
+    let pips = "••••";
     const commandCard = cards[commandId];
-    if (commandCard.cardSubtype === '1') pips = '•';
-    else if (commandCard.cardSubtype === '2') pips = '••';
-    else if (commandCard.cardSubtype === '3') pips = '•••';
+    if (commandCard.cardSubtype === "1") pips = "•";
+    else if (commandCard.cardSubtype === "2") pips = "••";
+    else if (commandCard.cardSubtype === "3") pips = "•••";
     commands += `${pips}${commandCard.cardName}${lineBreak}`;
   });
-  if (commands !== '') {
+  if (commands !== "") {
     commands = `${lineBreak}Commands:${lineBreak}${commands}`;
     commands += `••••Standing Orders${lineBreak}`;
   }
 
-  let battleDeck = '';
+  let battleDeck = "";
   battleDeck += generateMissionCards(list.primaryCards, "Objectives", false);
   battleDeck += generateMissionCards(list.secondaryCards, "Secondaries", false);
   battleDeck += generateMissionCards(list.advantageCards, "Advantages", false);
 
-  if(battleDeck.length > 0){
+  if (battleDeck.length > 0) {
     battleDeck = `${lineBreak}Battle Deck${lineBreak}` + battleDeck;
   }
-  
+
   return header + units + commands + battleDeck;
 }
 
 // TODO: I really want to combine this logic with the one above somehow
 function generateStandardText(list) {
-  let header = list.title ? list.title : 'Untitled';
+  let header = list.title ? list.title : "Untitled";
   let points = `\n${list.pointTotal}/${legionModes[list.mode].maxPoints}`;
   const numActivations = getNumActivations(list);
-  points += ` (${numActivations} activation${numActivations === 1 ? '' : 's'})\n`;
-  let commander = '';
-  let counterpart = '';
-  let operative = '';
-  let corps = '';
-  let special = '';
-  let support = '';
-  let heavy = '';
+  points += ` (${numActivations} activation${
+    numActivations === 1 ? "" : "s"
+  })\n`;
+  let commander = "";
+  let counterpart = "";
+  let operative = "";
+  let corps = "";
+  let special = "";
+  let support = "";
+  let heavy = "";
   const unitLine = (unit) => {
     const id = unit.unitId ? unit.unitId : unit.counterpartId;
     const unitCard = cards[id];
-    let line = ' - ';
+    let line = " - ";
     if (unit.count > 1) line += `${unit.count}× `;
     line += unitCard.displayName ? unitCard.displayName : unitCard.cardName;
     if (unitCard.cost !== unit.totalUnitCost) {
@@ -117,81 +125,83 @@ function generateStandardText(list) {
       unit.upgradesEquipped.forEach((upgradeId, i) => {
         if (!upgradeId) return;
         const upgradeCard = cards[upgradeId];
-        line += upgradeCard.displayName ? upgradeCard.displayName : upgradeCard.cardName;
+        line += upgradeCard.displayName
+          ? upgradeCard.displayName
+          : upgradeCard.cardName;
         line += ` (${upgradeCard.cost}), `;
       });
-      line = line.substring(0, line.length - 2)
+      line = line.substring(0, line.length - 2);
       line += ` = ${unit.totalUnitCost}`;
     } else line += ` = ${unitCard.cost}`;
-    return line + '\n';
-  }
+    return line + "\n";
+  };
   list.units.forEach((unit, i) => {
     const unitCard = cards[unit.unitId];
     if (unit.counterpart) counterpart += unitLine(unit.counterpart);
-    if (unitCard.rank === 'commander') commander += unitLine(unit);
-    if (unitCard.rank === 'operative') operative += unitLine(unit);
-    if (unitCard.rank === 'corps') corps += unitLine(unit);
-    if (unitCard.rank === 'special') special += unitLine(unit);
-    if (unitCard.rank === 'support') support += unitLine(unit);
-    if (unitCard.rank === 'heavy') heavy += unitLine(unit);
+    if (unitCard.rank === "commander") commander += unitLine(unit);
+    if (unitCard.rank === "operative") operative += unitLine(unit);
+    if (unitCard.rank === "corps") corps += unitLine(unit);
+    if (unitCard.rank === "special") special += unitLine(unit);
+    if (unitCard.rank === "support") support += unitLine(unit);
+    if (unitCard.rank === "heavy") heavy += unitLine(unit);
   });
-  let units = '';
+  let units = "";
   if (commander) units += `Commanders:\n${commander}`;
-  if (counterpart && list.faction === 'empire') units += `Counterparts:\n${counterpart}`;
+  if (counterpart && list.faction === "empire")
+    units += `Counterparts:\n${counterpart}`;
   if (operative) units += `Operative:\n${operative}`;
-  if (counterpart && list.faction !== 'empire') units += `Counterparts:\n${counterpart}`;
+  if (counterpart && list.faction !== "empire")
+    units += `Counterparts:\n${counterpart}`;
   if (corps) units += `Corps:\n${corps}`;
   if (special) units += `Special Forces:\n${special}`;
   if (support) units += `Support:\n${support}`;
   if (heavy) units += `Heavy:\n${heavy}`;
 
-  let commands = '\nCommands: ';
-  list.commandCards.forEach(id => {
+  let commands = "\nCommands: ";
+  list.commandCards.forEach((id) => {
     const commandCard = cards[id];
-    if (commandCard.cardSubtype === '1') commands += '• ';
-    else if (commandCard.cardSubtype === '2') commands += '•• ';
-    else if (commandCard.cardSubtype === '3') commands += '••• ';
-    else commands += '•••• ';
+    if (commandCard.cardSubtype === "1") commands += "• ";
+    else if (commandCard.cardSubtype === "2") commands += "•• ";
+    else if (commandCard.cardSubtype === "3") commands += "••• ";
+    else commands += "•••• ";
     commands += `${commandCard.cardName}, `;
   });
-  if (commands !== '') commands += '•••• Standing Orders';
+  if (commands !== "") commands += "•••• Standing Orders";
   return header + points + units + commands;
 }
 
 function generateTTSJSONText(list) {
-  const ttsJSON = { author: 'Legion HQ' };
+  const ttsJSON = { author: "Legion HQ" };
 
-  const getTtsName = (card)=>{
-    if(card.ttsName){
+  const getTtsName = (card) => {
+    if (card.ttsName) {
       return card.ttsName;
-    }else if(card.title){
+    } else if (card.title) {
       return card.cardName + " " + card.title;
-    }else{
+    } else {
       return card.cardName;
     }
-  }
+  };
 
-  const writeCardsToJsonArray = (cardList, jsonArray) =>{
-    if(!cardList)
-      return;
+  const writeCardsToJsonArray = (cardList, jsonArray) => {
+    if (!cardList) return;
 
-    for (let i = 0; i < cardList.length; i++){
+    for (let i = 0; i < cardList.length; i++) {
       const card = cards[cardList[i]];
-      if(!card)
-        continue;
+      if (!card) continue;
       jsonArray.push(getTtsName(card));
     }
-  }
+  };
 
   ttsJSON.listname = list.title;
   ttsJSON.points = list.pointTotal;
   ttsJSON.numActivations = getNumActivations(list);
 
-  if (list.faction === 'rebels') ttsJSON.armyFaction = 'rebel';
-  else if (list.faction === 'empire') ttsJSON.armyFaction = 'empire';
-  else if (list.faction === 'republic') ttsJSON.armyFaction = 'republic';
-  else if (list.faction === 'separatists') ttsJSON.armyFaction = 'separatist';
-  else ttsJSON.armyFaction = '';
+  if (list.faction === "rebels") ttsJSON.armyFaction = "rebel";
+  else if (list.faction === "empire") ttsJSON.armyFaction = "empire";
+  else if (list.faction === "republic") ttsJSON.armyFaction = "republic";
+  else if (list.faction === "separatists") ttsJSON.armyFaction = "separatist";
+  else ttsJSON.armyFaction = "";
 
   if (list.battleForce) {
     ttsJSON.battleForce = list.battleForce;
@@ -200,49 +210,50 @@ function generateTTSJSONText(list) {
   ttsJSON.commandCards = [];
   writeCardsToJsonArray(list.commandCards, ttsJSON.commandCards);
 
-  ttsJSON.commandCards.push('Standing Orders');
+  ttsJSON.commandCards.push("Standing Orders");
   ttsJSON.contingencies = [];
 
   ttsJSON.units = [];
   for (let i = 0; i < list.units.length; i++) {
-    const unitJSON = { name: '', upgrades: [] };
+    const unitJSON = { name: "", upgrades: [] };
     const unit = list.units[i];
     const unitCard = cards[unit.unitId];
 
     unitJSON.name = getTtsName(unitCard);
-      
+
     writeCardsToJsonArray(unit.upgradesEquipped, unitJSON.upgrades);
 
     if (unit.counterpart) {
       const counterpart = unit.counterpart;
       unitJSON.upgrades.push(getTtsName(cards[counterpart.counterpartId]));
-      
+
       // Write counterpart to the units' arrays. FOR NOW, this doesn't cause any confusion (and is what TTS wants)
       // since only Iden has a counterpart with an upgrade, and said upgrade isn't a type Iden already has
       writeCardsToJsonArray(counterpart.upgradesEquipped, unitJSON.upgrades);
-    };
-    if (unitCard.flaw) unitJSON.upgrades.push(cards[unitCard.flaw].cardName);
-    
-    for (let j = 0; j < unit.count; j++) 
-      ttsJSON.units.push(unitJSON);
+    }
+
+    for (let j = 0; j < unit.count; j++) ttsJSON.units.push(unitJSON);
   }
 
   // TTS still uses the old names for battle cards
   ttsJSON.battlefieldDeck = { conditions: [], deployment: [], objective: [] };
   // ttsJSON.battlefieldDeck = { objective: [], secondary: [], advantage: [] };
-  
+
   if (list.mode === "500-point mode") {
-    ttsJSON.battlefieldDeck.scenario =  "recon";
+    ttsJSON.battlefieldDeck.scenario = "recon";
   } else if (list.mode.includes("storm tide")) {
-    ttsJSON.battlefieldDeck.scenario = "community"
+    ttsJSON.battlefieldDeck.scenario = "community";
   } else {
-    ttsJSON.battlefieldDeck.scenario =  "standard";
+    ttsJSON.battlefieldDeck.scenario = "standard";
   }
 
   // map the 'new' obj cards to the card type names TTS wants
   writeCardsToJsonArray(list.primaryCards, ttsJSON.battlefieldDeck.deployment);
   writeCardsToJsonArray(list.secondaryCards, ttsJSON.battlefieldDeck.objective);
-  writeCardsToJsonArray(list.advantageCards, ttsJSON.battlefieldDeck.conditions);
+  writeCardsToJsonArray(
+    list.advantageCards,
+    ttsJSON.battlefieldDeck.conditions
+  );
   // TODO maybe someday we update this to the 'actual' new names, need a TTS update for that
   // appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
   // appendMissionTTSJSON(list.secondaryCards, ttsJSON.battlefieldDeck.secondary);
@@ -255,37 +266,39 @@ function generateTTSJSONText(list) {
 
 function generateMinimalText(list) {
   let header = `${list.pointTotal}/${legionModes[list.mode].maxPoints}`;
-  const numActivations = getNumActivations(list)
-  header += ` (${numActivations} activation${numActivations === 1 ? '' : 's'})\n`;
-  let units = '';
-  list.units.forEach(unit => {
+  const numActivations = getNumActivations(list);
+  header += ` (${numActivations} activation${
+    numActivations === 1 ? "" : "s"
+  })\n`;
+  let units = "";
+  list.units.forEach((unit) => {
     const unitCard = cards[unit.unitId];
-    let line = '';
+    let line = "";
     if (unit.count > 1) line += `${unit.count}× `;
     line += `${unitCard.cardName} `;
 
     // TODO this should be a flag to append the unit subtitle to the card display
     // or maybe just use displayname or etc - rethink this format's name display
-    if (unit.unitId === 'pz') {
-      line += '- Kraken ';
-    } else if (unit.unitId === 'qa') {
-      line += '- Kalani';
+    if (unit.unitId === "pz") {
+      line += "- Kraken ";
+    } else if (unit.unitId === "qa") {
+      line += "- Kalani";
     }
 
-    let upgrades = '';
+    let upgrades = "";
     unit.upgradesEquipped.forEach((id, i) => {
       if (id) {
         const upgradeCard = cards[id];
         upgrades += `${upgradeCard.cardName}, `;
       }
     });
-    if (upgrades !== '') {
-      upgrades = upgrades.substring(0, upgrades.length - 2)
+    if (upgrades !== "") {
+      upgrades = upgrades.substring(0, upgrades.length - 2);
       line += `(${upgrades})`;
     }
-    let counterpart = '';
+    let counterpart = "";
     if (unit.counterpart) {
-      let cUpgrades = '';
+      let cUpgrades = "";
       const counterpartCard = cards[unit.counterpart.counterpartId];
       counterpart += `\n${counterpartCard.cardName}`;
       unit.counterpart.upgradesEquipped.forEach((id, i) => {
@@ -294,24 +307,24 @@ function generateMinimalText(list) {
           cUpgrades += `${upgradeCard.cardName}, `;
         }
       });
-      if (cUpgrades !== '') {
+      if (cUpgrades !== "") {
         cUpgrades = cUpgrades.substring(0, cUpgrades.length - 2);
         counterpart += ` (${cUpgrades})`;
       }
     }
     line += counterpart;
-    units += line + '\n';
+    units += line + "\n";
   });
-  let commands = list.commandCards.length > 0 ? 'Commands: ' : '';
+  let commands = list.commandCards.length > 0 ? "Commands: " : "";
   list.commandCards.forEach((id, i) => {
     const commandCard = cards[id];
-    if (commandCard.cardSubtype === '1') commands += '• ';
-    else if (commandCard.cardSubtype === '2') commands += '•• ';
-    else if (commandCard.cardSubtype === '3') commands += '••• ';
-    else commands += '•••• ';
+    if (commandCard.cardSubtype === "1") commands += "• ";
+    else if (commandCard.cardSubtype === "2") commands += "•• ";
+    else if (commandCard.cardSubtype === "3") commands += "••• ";
+    else commands += "•••• ";
     commands += `${commandCard.cardName}, `;
   });
-  if (commands !== '') commands += '•••• Standing Orders';
+  if (commands !== "") commands += "•••• Standing Orders";
   return header + units + commands;
 }
 
@@ -319,5 +332,5 @@ export {
   generateTTSJSONText,
   generateTournamentText,
   generateStandardText,
-  generateMinimalText
+  generateMinimalText,
 };
