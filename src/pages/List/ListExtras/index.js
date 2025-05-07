@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import {
   Clear as ClearIcon,
+  Delete as DeleteIcon,
   Save as SaveIcon,
   CallSplit as ForkIcon,
   Functions as CalculateIcon,
@@ -18,7 +19,7 @@ import SimpleButton from "./SimpleButton";
 import MenuButton from "common/MenuButton";
 
 function ListExtras() {
-  const { userId } = useContext(DataContext);
+  const { userId, deleteUserList } = useContext(DataContext);
   const {
     currentList,
     isKillPointMode,
@@ -65,6 +66,12 @@ function ListExtras() {
         icon={<ClearIcon />}
         label="Clear List"
         handleClick={handleClearList}
+      />
+      <SimpleButton
+        isDisabled={!Boolean(userId) || !Boolean(currentList.listId)}
+        icon={<DeleteIcon />}
+        label="Delete List"
+        handleClick={deleteUserList}
       />
       <SimpleButton
         icon={<CalculateIcon />}
