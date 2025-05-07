@@ -67,12 +67,12 @@ function ListExtras() {
         label="Clear List"
         handleClick={handleClearList}
       />
-      <SimpleButton
+      {/* <SimpleButton
         isDisabled={!Boolean(userId) || !Boolean(currentList.listId)}
         icon={<DeleteIcon />}
         label="Delete List"
         handleClick={deleteUserList}
-      />
+      /> */}
       <SimpleButton
         icon={<CalculateIcon />}
         label={

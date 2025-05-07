@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { Fade, Typography, Divider } from "@material-ui/core";
 import ListContext from "context/ListContext";
 import factions from "constants/factions";
-import cards from "constants/cards";
 import CardImage from "./CardImage";
 
 function RowDisplay({ unit, faction, handleCardZoom }) {
@@ -97,7 +96,7 @@ function ListDisplay() {
         {currentList.units.map((unit) => (
           <div key={unit.unitId + unit.upgradesEquipped.join("")}>
             <RowDisplay
-              unit={{ unit }}
+              unit={{ ...unit }}
               faction={currentList.faction}
               handleCardZoom={handleCardZoom}
             />
