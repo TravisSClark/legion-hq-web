@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import {
   Clear as ClearIcon,
-  Delete as DeleteIcon,
+  // Delete as DeleteIcon,
   Save as SaveIcon,
   CallSplit as ForkIcon,
   Functions as CalculateIcon,
@@ -15,11 +15,12 @@ import QRButton from "./QRButton";
 import TTSTextExportButton from "./TTSTextExportButton";
 import ImageExportButton from "./ImageExportButton";
 import TextExportButton from "./TextExportButton";
+import PrintExportButton from "./PrintExportButton";
 import SimpleButton from "./SimpleButton";
 import MenuButton from "common/MenuButton";
 
 function ListExtras() {
-  const { userId, deleteUserList } = useContext(DataContext);
+  const { userId } = useContext(DataContext);
   const {
     currentList,
     isKillPointMode,
@@ -43,11 +44,10 @@ function ListExtras() {
         <TTSTextExportButton currentList={currentList} />
         <ImageExportButton currentList={currentList} />
         <TextExportButton currentList={currentList} />
+        <PrintExportButton currentList={currentList} />
         <QRButton currentList={currentList} />
         <LinkButton currentList={currentList} />
       </MenuButton>
-      {/* TODO - hung indefinitely on debug, just gives a QR code in production */}
-      {/* <PrintExportButton currentList={currentList} /> */}
       <SimpleButton
         timeout={3000}
         timeoutMessage={listSaveMessage ? listSaveMessage : "Saving..."}
