@@ -3106,6 +3106,7 @@
   "dg": {
     "cardSubtype": "training",
     "cardName": "On The Hunt",
+    "ttsName":"Hunter",
     "cardType": "upgrade",
     "cost": 6,
     "imageName": "On The Hunt.webp",
@@ -4976,7 +4977,7 @@
   "gb": {
     "id": "gb",
     "cardName": "Saber-Class Tank",
-    "ttsName": "Saber-Class Tank",
+    "ttsName": "TX-130 Saber-Class Fighter Tank",
     "imageName": "Saber-Class Tank.webp",
     "cardType": "unit",
     "cardSubtype": "repulsor vehicle",
@@ -5212,6 +5213,7 @@
   "gk": {
     "cardSubtype": "gear",
     "cardName": "Sabine's Combat Shield",
+    "ttsName": "Personal Combat Shield",
     "cardType": "upgrade",
     "cost": 5,
     "imageName": "Personal Combat Shield.webp",
@@ -5290,6 +5292,7 @@
     "displayName": "E-11D Blaster",
     "cardSubtype": "armament",
     "cardName": "E-11D Focused Fire Configuration",
+    "ttsName": "E-11D Focused Fire Config",
     "cardType": "upgrade",
     "cost": 0,
     "imageName": "E-11D.webp",
@@ -5692,6 +5695,7 @@
   "hc": {
     "cardSubtype": "hardpoint",
     "cardName": "Pintle-Mounted DLT-19",
+    "ttsName": "DLT-19 Rifle Pintle",
     "cardType": "upgrade",
     "cost": 18,
     "imageName": "Pintle-Mounted DLT-19.webp",
@@ -5706,6 +5710,7 @@
   "hd": {
     "cardSubtype": "hardpoint",
     "cardName": "Pintle-Mounted RT-97C",
+    "ttsName": "RT-97C Rifle Pintle",
     "cardType": "upgrade",
     "cost": 14,
     "imageName": "Pintle-Mounted RT-97C.webp",
@@ -7786,6 +7791,7 @@
   "km": {
     "cardSubtype": "hardpoint",
     "cardName": "Beam Turret",
+    "ttsName": "TX-130 Beam Cannon Turret",
     "cardType": "upgrade",
     "cost": 15,
     "imageName": "Beam Turret.webp",
@@ -11712,6 +11718,7 @@
   "pu": {
     "id": "pu",
     "cardName": "Defiance",
+    "ttsName": "Grroooogrrraaaawrrrrrrrrmph",
     "cardSubtype": "1",
     "cardType": "command",
     "commander": "",
@@ -11728,6 +11735,7 @@
   "pv": {
     "id": "pv",
     "cardName": "Get In Position",
+    "ttsName": "MROWGH GHRRMROWRIG!",
     "cardSubtype": "2",
     "cardType": "command",
     "commander": "",
@@ -11744,6 +11752,7 @@
   "pw": {
     "id": "pw",
     "cardName": "Daring Defense",
+    "ttsName":"YHWARGGHHHHHHHHHH!",
     "cardSubtype": "3",
     "cardType": "command",
     "commander": "",
@@ -11838,6 +11847,7 @@
     "id": "pz",
     "title": "Super Tactical Droid",
     "cardName": "Kraken",
+    "ttsName": "Super Tactical Droid Kraken",
     "imageName": "Kraken.webp",
     "cardType": "unit",
     "cardSubtype": "droid trooper",
@@ -11919,6 +11929,7 @@
     "id": "qa",
     "title": "Super Tactical Droid",
     "cardName": "Kalani",
+    "ttsName": "Super Tactical Droid Kalani",
     "imageName": "Kalani.webp",
     "cardType": "unit",
     "cardSubtype": "droid trooper",
@@ -12437,6 +12448,7 @@
   "qt": {
     "id": "qt",
     "cardName": "Persuader-Class Tank Droid",
+    "ttsName": "NR-N99 Persuader-Class Tank Droid",
     "imageName": "Persuader-Class Tank Droid.webp",
     "cardType": "unit",
     "cardSubtype": "ground vehicle",
@@ -16944,6 +16956,7 @@
     "id": "xe",
     "cardName": "Persuader-Class Tank Droid",
     "title": "Prototype Tank Droid",
+    "ttsName": "NR-N99 Persuader-Class Tank Droid Prototype Tank Droid",
     "displayName": "Persuader-Class Tank Droid (Prototype)",
     "imageName": "Persuader-Class Tank Droid Prototype Tank Droid.webp",
     "cardType": "unit",

@@ -161,10 +161,6 @@ async function ttsCheckAsync() {
   // Generally, these are cards removed from the game
   // TODO - evaluate these w TTS
   let tts_exceptions = [
-    // TODO pull request made to TTS to fix typo
-    // "A BEAUTIFUL FRIENDSDHIP",
-    // TODO - figure out which wookiees are which, rename as needed
-    // "WOOKIEE WARRIORS",
     "COMMANDING PRESENCE",
     "INTEGRATED COMMS ANTENNA",
     "LONG-RANGE COMLINK",
@@ -175,13 +171,58 @@ async function ttsCheckAsync() {
     // "C-3PO",
     "NOT A STORY THE JEDI WOULD TELL",
     "FORCE LIFT",
-    // Leave this as a warning for now - we're about to get hit by it again once marskmen are out ;)
-    // "DC-15 CLONE TROOPER",
     "RECKLESS DRIVER",
-    // TODO - pull request made to TTS to change this to '\"Nanny\" Programming', which is what both we and TTA use
-    // "NANNY PROGRAMMING",
     // Ignore here - in this case, we export as 'offensive stance' so we're good
     "DEFENSIVE STANCE",
+
+    //    -- Wall of Fallen Upgrades --
+    //       - APRIL 15th 48 ABY -
+    //        Gone but not forgotten.
+    "And Now You Will Die",
+    "Give in to Your Anger",
+    "An Entire Legion",
+    // G A L AC T IC E MPIR E UNI T C A R D S
+    "Emperor Palpatine, Ruler of the Galactic Empire",
+    "Imperial Officer, Ruthless Commander",
+    "Imperial Royal Guards",
+    // G A L AC T IC E MPIR E UP GR A DE C A R D S
+    "Electrostaff Guard",
+    "Iden's DLT-20A Rifle",
+    "Iden's TL-50 Repeater",
+    "J-19 Bo-Rifle",
+    // G A L AC T IC E MPIR E COMM A ND C A R D S
+    "And Now You Will Die",
+    "Give in to Your Anger",
+    "An Entire Legion",
+    // G A L AC T IC R E P UBL IC UP GR A DE C A R D S
+    "JT-12 Jetpacks",
+    // ME RC E N A R Y COMM A ND C A R D S
+    "ZX-Flame Projector",
+    // R E BE L A L L I A NC E COMM A ND C A R D S
+    "All In",
+    "Complete the Mission",
+    "Rebellious",
+    // R E BE L A L L I A NC E UNI T C A R D S
+    "Rebel Officer, Resolute Commander",
+    "Rebel Pathfinders",
+    // R E BE L A L L I A NC E UP GR A DE C A R D S
+    "A-180",
+    "A-300",
+    "Bistan",
+    "Pao",
+    // SE PA R AT IS T A L L I A NC E UNI T C A R D S
+    "Super Tactical Droid, Commanding Controller",
+    // NE U T R A L UP GR A DE C A R D S
+    "Agressive Tactics",
+    "Battle Meditation",
+    "Commanding Presence",
+    "Comms Relay",
+    "Esteemed Leader",
+    "Force Lift",
+    "Integrated Comms Antenna",
+    "Long-Range Comlink",
+    "Reckless Driver",
+    "Refurbished \"Gonk\" Droid",
   ];
 
   let lhq_exceptions = [
@@ -253,10 +294,11 @@ async function ttsCheckAsync() {
   findAndRemoveAllFromTtsList(battle, "Battle");
   findAndRemoveAllFromTtsList(counterparts, "Counterpart");
 
-  findAndRemoveAllStringsFromTtsList(
-    tts_exceptions,
-    "Obsolete/Redundant cards"
-  );
+  // Enable only if you want to see a big list of dead cards
+  // findAndRemoveAllStringsFromTtsList(
+  //   tts_exceptions,
+  //   "Obsolete/Redundant cards"
+  // );
 
   console.log("\n\n");
 
