@@ -119,7 +119,7 @@ function TextExportButton({ currentList }) {
       <DialogModal
         isMobile={isFullscreen}
         isOpen={isOpen}
-        actions={<ClipboardButton content={listText} />}
+        actions={<ClipboardButton content={listText} autoCopy={false}/>}
         content={
           <DialogContent
             currentList={currentList}

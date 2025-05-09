@@ -103,7 +103,6 @@ fs.readFile("./cards.js", "utf8", (err, data) => {
       u.keywords = c.keywords;
       u.upgrades = c.upgradeBar;
 
-      //console.log(u.name);
       if (units.hasOwnProperty(unitName)) {
         if (u.subtitle)
           unitName += "_" + u.subtitle.toLowerCase().replaceAll(" ", "_");
@@ -152,8 +151,6 @@ fs.readFile("./cards.js", "utf8", (err, data) => {
         u.keywords = c.keywords;
       }
 
-      //console.log(u.name);
-
       upgrades.push(u);
     } else if (c.cardType == "command") {
       let u = {};
@@ -187,7 +184,6 @@ fs.readFile("./cards.js", "utf8", (err, data) => {
         u.keywords = c.keywords;
       }
 
-      //console.log(u.name);
       if (ccs.hasOwnProperty(cardName)) {
         if (u.subtitle)
           cardName += "_" + u.subtitle.toLowerCase().replaceAll(" ", "_");
@@ -199,7 +195,6 @@ fs.readFile("./cards.js", "utf8", (err, data) => {
     } else if (c.cardType == "battle") {
       battle.push(c);
     } else if (c.cardType == "counterpart") {
-      //console.log(c.cardName);
       counterparts.push(c);
     } else {
       console.log(c.cardName);

@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import cards, {cardsIdsByType as cardIdsByType} from 'constants/cards';
+import cards, {cardIdsByType, upgradeIdsBySubtype} from 'constants/cards';
 
 import interactions from 'components/cardInteractions';
 import battleForcesDict from 'constants/battleForcesDict';
@@ -89,13 +89,12 @@ function sortUnitIds(ids) {
     const cardA = cards[a];
     const cardB = cards[b];
 
+    // TODO breaks if we get a cross-faction battleforce or etc
     if(cardA.faction !== cardB.faction){
-      return cardA.faction === 'mercenary' ? 1 : 0;
+      return cardA.faction === 'mercenary' ? 1 : -1;
     }
 
-    const nameA = cardA.displayName ? cardA.displayName : cardA.cardName;
-    const nameB = cardB.displayName ? cardB.displayName : cardB.cardName;
-    return nameA > nameB ? 1 : -1;
+    return cardA.cardName > cardB.cardName ? 1 : -1;
   });
   return sortedIds;
 }
@@ -110,7 +109,7 @@ function sortUpgradeIds(ids) {
     // the top of Republic spec forces 'leader' slot since he has more reqs
     if(cardA.requirements && cardB.requirements){
       if(cardA.requirements.length !== cardB.requirements.length){
-        return cardA.requirements.length > cardB.requirements.length ? 0 : 1;
+        return cardA.requirements.length > cardB.requirements.length ? -1 : 1;
       }
     }
     const nameA = cardA.displayName ? cardA.displayName : cardA.cardName;
@@ -250,6 +249,7 @@ function getEligibleCommandsToAdd(list) {
 function getEquippableUpgrades(
   list, upgradeType, unitId, upgradesEquipped=[]
 ) {
+
   const validUpgradeIds = [];
   const invalidUpgradeIds = [];
 
@@ -264,8 +264,9 @@ function getEquippableUpgrades(
   const unitCard = cards[unitId];
   const uniqueCardNames = getListUniques(list, "name");
 
-  for (let i = 0; i < cardIdsByType['upgrade'].length; i++) {
-    const id = cardIdsByType['upgrade'][i];
+  // for (let i = 0; i < cardIdsByType['upgrade'].length; i++) {
+  for(let i=0; i<upgradeIdsBySubtype[upgradeType].length; i++){
+    const id = upgradeIdsBySubtype[upgradeType][i]; //cardIdsByType['upgrade'][i];
     const card = cards[id];
 
     if (card.cardSubtype !== upgradeType) continue;

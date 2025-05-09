@@ -45,7 +45,6 @@ function ListUnit({
 
 
   const highestUnitError = unit.validationIssues ? unit.validationIssues.reduce((hi, i)=>{return i.level > hi ? i.level : hi}, 0) : 0;
-  console.log(JSON.stringify(unit.validationIssues));
 
   let bgColor = 'transparent';
   if(highestUnitError === 2){

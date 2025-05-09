@@ -1,10 +1,10 @@
-import cards, { cardsIdsByType } from 'constants/cards';
+import cards, { cardIdsByType } from 'constants/cards';
 
 import battleForcesDict from 'constants/battleForcesDict';
 import legionModes from 'constants/legionModes';
 import {areRequirementsMet, impRemnantUpgrades} from 'components/eligibleCardListGetter';
 
-const upgradesProvidingAlliesOfConvenience = cardsIdsByType["upgrade"].filter(c=>cards[c].keywords?.some(k=> k==='Allies of Convenience' || k.name ==="Allies of Convenience"));
+const upgradesProvidingAlliesOfConvenience = cardIdsByType["upgrade"].filter(c=>cards[c].keywords?.some(k=> k==='Allies of Convenience' || k.name ==="Allies of Convenience"));
 
 function isUniqueCard(card){
   return card.isUnique || card.isUniqueTitle;

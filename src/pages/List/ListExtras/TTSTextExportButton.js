@@ -45,7 +45,7 @@ function TTSTextExportButton({ currentList }) {
       <DialogModal
         isMobile={isFullscreen}
         isOpen={isOpen}
-        actions={<ClipboardButton content={ttsJSON} />}
+        actions={<ClipboardButton content={ttsJSON} autoCopy={true}/>}
         content={
           <DialogContent
             currentList={currentList}

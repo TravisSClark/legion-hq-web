@@ -1,16 +1,30 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Button from '@material-ui/core/Button';
 
-function ClipboardButton({ content, variant = 'text' }) {
+function ClipboardButton({ content, variant = 'text', autoCopy=false }) {
   const [copySuccess, setCopySuccess] = useState(false);
+
+
+  const priorContent = useRef('');
+
+  const doCopy = ()=>{
+    navigator.clipboard.writeText(content);
+    setCopySuccess(true);
+    setTimeout(() => setCopySuccess(false), 1000); // 0.5 second cooldown
+
+    priorContent.current = content;
+  }
+
+  if(autoCopy && priorContent.current !== content){
+    doCopy();
+  }
+
   return (
     <Button
       variant={variant}
       disabled={copySuccess}
       onClick={() => {
-        navigator.clipboard.writeText(content);
-        setCopySuccess(true);
-        setTimeout(() => setCopySuccess(false), 500); // 0.5 second cooldown
+        doCopy();
       }}
     >
       {copySuccess ? 'Copied to clipboard!' : 'Copy to clipboard'}

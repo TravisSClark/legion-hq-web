@@ -8,12 +8,12 @@ import {
 } from '@material-ui/core';
 
 function DialogModal({
-  isOpen, isMobile = false, title, content, actions, handleClose
+  isOpen, isMobile = false, title, content, actions, handleClose, fullWidth = true
 }) {
   const dialogStyle = title ? {} : { padding: 0 };
   return (
     <Dialog
-      fullWidth={true}
+      fullWidth={fullWidth}
       maxWidth="md"
       open={isOpen}
       fullScreen={isMobile}

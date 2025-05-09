@@ -155,7 +155,6 @@ function convertHashToList(faction, url) {
       }
     });
   } catch (e) {
-    // console.log(e);
     return false;
   }
   if (list.faction === 'mercenary') list.battleForce = 'Shadow Collective';

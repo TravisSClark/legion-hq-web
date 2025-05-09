@@ -8652,6 +8652,10 @@
     "requirements": [],
     "history": [
       {
+        "date":"15 April 2025",
+        "description":"No longer has a higher points cost for SUPPORT units"
+      },
+      {
         "date": "8 December 2022",
         "description": "Cost increased from 2 to 4 points."
       }
