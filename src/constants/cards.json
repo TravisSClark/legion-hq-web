@@ -7893,6 +7893,7 @@
   "kr": {
     "cardSubtype": "hardpoint",
     "cardName": "Twin Laser Turret",
+    "ttsName": "TX-130 Twin Laser Turret",
     "cardType": "upgrade",
     "cost": 14,
     "imageName": "Twin Laser Turret.webp",
