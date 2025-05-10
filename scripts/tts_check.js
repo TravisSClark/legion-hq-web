@@ -259,7 +259,12 @@ async function ttsCheckAsync() {
     "FLANKING POSITIONS",
     "MEETING ENGAGEMENT",
     "IMPROVISED DEFENSES",
-    "DAWN"
+    "DAWN",
+
+    // Renamed wookiee cards
+    "GRROOOOGRRRAAAAWRRRRRRRRMPH",
+    "MROWGH GHRRMROWRIG!",
+    "YHWARGGHHHHHHHHHH!",
   ];
 
   let lhq_exceptions = [
