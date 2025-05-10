@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
   hidden: { visibility: 'hidden' }
 }));
 
-function IconBadge({ avatar, count = 1, upgradeType, rank }) {
+function IconBadge({ avatar, count = 1, upgradeType, rank, hidden }) {
   const classes = useStyles();
   let alt = ''; let src = '';
   if (upgradeType && upgradeType in upgradeTypes) {
@@ -69,9 +69,9 @@ function IconBadge({ avatar, count = 1, upgradeType, rank }) {
             {count}
           </Typography>
         </span>
-        <span className={classes.imageSpan}>
+       {!hidden && <span className={classes.imageSpan}>
           <img alt={alt} src={src} className={classes.image} />
-        </span>
+        </span>}
       </div>
       {avatar}
     </div>

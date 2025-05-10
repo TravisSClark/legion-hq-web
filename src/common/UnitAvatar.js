@@ -3,7 +3,7 @@ import IconBadge from 'common/IconBadge';
 import CardIcon from 'common/CardIcon';
 import cards from 'constants/cards';
 
-function UnitCardAvatar({ id, count = 1, handleClick }) {
+function UnitAvatar({ id, count = 1, handleClick }) {
   const card = cards[id];
   if (card.cardType === 'counterpart') {
     return (
@@ -28,4 +28,4 @@ function UnitCardAvatar({ id, count = 1, handleClick }) {
   );
 };
 
-export default UnitCardAvatar;
+export default UnitAvatar;
