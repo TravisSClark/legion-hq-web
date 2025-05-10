@@ -805,7 +805,6 @@
     "id": "aj",
     "cardName": "Wookiee Warriors",
     "title": "Freedom Fighters",
-    "tmpTtsName": "Wookiee Warriors",
     "imageName": "Wookiee Warriors Freedom Fighters.webp",
     "cardType": "unit",
     "cardSubtype": "wookiee trooper",
@@ -2457,7 +2456,6 @@
     "id": "bh",
     "cardName": "TX-225 GAVw Occupier Tank",
     "displayName": "TX-225 GAVw Tank",
-    "tmpTtsName": "TX-225 GAVw Occupier Combat Assault Tank",
     "imageName": "TX-225 GAVw Occupier Tank.webp",
     "cardType": "unit",
     "cardSubtype": "ground vehicle",
@@ -3106,7 +3104,6 @@
   "dg": {
     "cardSubtype": "training",
     "cardName": "On The Hunt",
-    "tmpTtsName":"Hunter",
     "cardType": "upgrade",
     "cost": 6,
     "imageName": "On The Hunt.webp",
@@ -4976,7 +4973,6 @@
   "gb": {
     "id": "gb",
     "cardName": "Saber-Class Tank",
-    "tmpTtsName": "TX-130 Saber-Class Fighter Tank",
     "imageName": "Saber-Class Tank.webp",
     "cardType": "unit",
     "cardSubtype": "repulsor vehicle",
@@ -5046,7 +5042,6 @@
   "gc": {
     "id": "gc",
     "cardName": "AAT Battle Tank",
-    "tmpTtsName": "AAT Trade Federation Battle Tank",
     "imageName": "AAT Battle Tank.webp",
     "cardType": "unit",
     "cardSubtype": "repulsor vehicle",
@@ -5212,7 +5207,6 @@
   "gk": {
     "cardSubtype": "gear",
     "cardName": "Sabine's Combat Shield",
-    "tmpTtsName": "Personal Combat Shield",
     "cardType": "upgrade",
     "cost": 5,
     "imageName": "Personal Combat Shield.webp",
@@ -5694,7 +5688,6 @@
   "hc": {
     "cardSubtype": "hardpoint",
     "cardName": "Pintle-Mounted DLT-19",
-    "tmpTtsName": "DLT-19 Rifle Pintle",
     "cardType": "upgrade",
     "cost": 18,
     "imageName": "Pintle-Mounted DLT-19.webp",
@@ -5709,7 +5702,6 @@
   "hd": {
     "cardSubtype": "hardpoint",
     "cardName": "Pintle-Mounted RT-97C",
-    "tmpTtsName": "RT-97C Rifle Pintle",
     "cardType": "upgrade",
     "cost": 14,
     "imageName": "Pintle-Mounted RT-97C.webp",
@@ -7682,8 +7674,7 @@
   "kh": {
     "cardSubtype": "armament",
     "displayName": "A280",
-    "cardName": "A280-CFE Sniper Config",
-    "ttsName":"A280, Rifle Config",
+    "cardName":"A280, Rifle Config",
     "cardType": "upgrade",
     "cost": 0,
     "imageName": "A280-CFE.webp",
@@ -7752,7 +7743,6 @@
   "km": {
     "cardSubtype": "hardpoint",
     "cardName": "Beam Turret",
-    "tmpTtsName": "TX-130 Beam Cannon Turret",
     "cardType": "upgrade",
     "cost": 15,
     "imageName": "Beam Turret.webp",
@@ -7855,7 +7845,6 @@
   "kr": {
     "cardSubtype": "hardpoint",
     "cardName": "Twin Laser Turret",
-    "tmpTtsName": "TX-130 Twin Laser Turret",
     "cardType": "upgrade",
     "cost": 14,
     "imageName": "Twin Laser Turret.webp",
@@ -11470,7 +11459,6 @@
     "cardName": "Wookiee Warriors",
     "title": "Noble Fighters",
     "displayName": "Wookiee Warriors Noble Fighters",
-    "tmpTtsName": "Wookiee Warriors",
     "imageName": "Wookiee Warriors Noble Fighters.webp",
     "cardType": "unit",
     "cardSubtype": "wookiee trooper",
@@ -11681,7 +11669,6 @@
   "pu": {
     "id": "pu",
     "cardName": "Defiance",
-    "tmpTtsName": "Grroooogrrraaaawrrrrrrrrmph",
     "cardSubtype": "1",
     "cardType": "command",
     "commander": "",
@@ -11698,7 +11685,6 @@
   "pv": {
     "id": "pv",
     "cardName": "Get In Position",
-    "tmpTtsName": "MROWGH GHRRMROWRIG!",
     "cardSubtype": "2",
     "cardType": "command",
     "commander": "",
@@ -11715,7 +11701,6 @@
   "pw": {
     "id": "pw",
     "cardName": "Daring Defense",
-    "tmpTtsName":"YHWARGGHHHHHHHHHH!",
     "cardSubtype": "3",
     "cardType": "command",
     "commander": "",
@@ -11810,7 +11795,6 @@
     "id": "pz",
     "title": "Super Tactical Droid",
     "cardName": "Kraken",
-    "tmpTtsName": "Super Tactical Droid Kraken",
     "imageName": "Kraken.webp",
     "cardType": "unit",
     "cardSubtype": "droid trooper",
@@ -11892,7 +11876,6 @@
     "id": "qa",
     "title": "Super Tactical Droid",
     "cardName": "Kalani",
-    "tmpTtsName": "Super Tactical Droid Kalani",
     "imageName": "Kalani.webp",
     "cardType": "unit",
     "cardSubtype": "droid trooper",
@@ -12411,7 +12394,6 @@
   "qt": {
     "id": "qt",
     "cardName": "Persuader-Class Tank Droid",
-    "tmpTtsName": "NR-N99 Persuader-Class Tank Droid",
     "imageName": "Persuader-Class Tank Droid.webp",
     "cardType": "unit",
     "cardSubtype": "ground vehicle",
@@ -16920,7 +16902,6 @@
     "id": "xe",
     "cardName": "Persuader-Class Tank Droid",
     "title": "Prototype Tank Droid",
-    "tmpTtsName": "NR-N99 Persuader-Class Tank Droid Prototype Tank Droid",
     "displayName": "Persuader-Class Tank Droid (Prototype)",
     "imageName": "Persuader-Class Tank Droid Prototype Tank Droid.webp",
     "cardType": "unit",
@@ -17513,7 +17494,6 @@
     "id": "xr",
     "cardSubtype": "heavy weapon",
     "cardName": "Hunter",
-    "tmpTtsName": "Hunter (The Bad Batch)",
     "isUnique": true,
     "cardType": "upgrade",
     "cost": 0,
@@ -17621,7 +17601,6 @@
   "xw": {
     "cardName": "Omega",
     "title": "Mascot of the 99th",
-    "tmpTtsName": "Omega",
     "faction": "mercenary",
     "affiliations": ["rebels"],
     "isUnique": true,
@@ -17678,8 +17657,6 @@
   "xz": {
     "id": "xz",
     "cardName": "Stormtrooper Riot Squad",
-    "displayName": "Riot Control Squad",
-    "tmpTtsName": "Riot Control Squad",
     "cardType": "unit",
     "cardSubtype": "trooper",
     "rank": "corps",
