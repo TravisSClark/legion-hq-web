@@ -161,39 +161,116 @@ async function ttsCheckAsync() {
   // Generally, these are cards removed from the game
   // TODO - evaluate these w TTS
   let tts_exceptions = [
-    // TODO pull request made to TTS to fix typo
-    // "A BEAUTIFUL FRIENDSDHIP",
-    // TODO - figure out which wookiees are which, rename as needed
-    // "WOOKIEE WARRIORS",
     "COMMANDING PRESENCE",
     "INTEGRATED COMMS ANTENNA",
     "LONG-RANGE COMLINK",
-    // TTS seems to just import 3po as one card?
-    // they do match re stats, so I guess that's fine
-    // also gets re-named to our cardName+subtitle via a lua map, so maybe should just
-    // uncomment this line for now
-    // "C-3PO",
-    "NOT A STORY THE JEDI WOULD TELL",
+    // TODO TTS Just imports 3po as one card for reb/rep
+    // Currently handles both variants to same card via cardName+subtitle, but
+    // in a Lua pre-calc step, not the js objects parse here and for 99% of cards
+    "C-3PO",
     "FORCE LIFT",
-    // Leave this as a warning for now - we're about to get hit by it again once marskmen are out ;)
-    // "DC-15 CLONE TROOPER",
     "RECKLESS DRIVER",
-    // TODO - pull request made to TTS to change this to '\"Nanny\" Programming', which is what both we and TTA use
-    // "NANNY PROGRAMMING",
     // Ignore here - in this case, we export as 'offensive stance' so we're good
     "DEFENSIVE STANCE",
+
+    //    -- Wall of Fallen Upgrades --
+    //       - APRIL 15th 48 ABY -
+    //        Gone but not forgotten.
+    "AND NOW YOU WILL DIE",
+    "GIVE IN TO YOUR ANGER",
+    "AN ENTIRE LEGION",
+    // G A L AC T IC E MPIR E UNI T C A R D S
+    "EMPEROR PALPATINE RULER OF THE GALACTIC EMPIRE",
+    "IMPERIAL OFFICER RUTHLESS COMMANDER",
+    "IMPERIAL ROYAL GUARDS",
+    // G A L AC T IC E MPIR E UP GR A DE C A R D S
+    "ELECTROSTAFF GUARD",
+    "IDEN'S DLT-20A RIFLE",
+    "IDEN'S TL-50 REPEATER",
+    "J-19 BO-RIFLE BLASTER",
+    // G A L AC T IC E MPIR E COMM A ND C A R D S
+    "AND NOW YOU WILL DIE",
+    "GIVE IN TO YOUR ANGER",
+    "AN ENTIRE LEGION",
+    // G A L AC T IC R E P UBL IC UP GR A DE C A R D S
+    "JT-12 JETPACKS",
+    // ME RC E N A R Y COMM A ND C A R D S
+    "ZX FLAME PROJECTOR",
+    // R E BE L A L L I A NC E COMM A ND C A R D S
+    "ALL IN",
+    "COMPLETE THE MISSION",
+    "REBELLIOUS",
+    // R E BE L A L L I A NC E UNI T C A R D S
+    "REBEL OFFICER RESOLUTE COMMANDER",
+    "REBEL PATHFINDERS",
+    // R E BE L A L L I A NC E UP GR A DE C A R D S
+    "A-180 RIFLE CONFIG",
+    "A-300 LONG RANGE CONFIG",
+    "BISTAN",
+    "PAO",
+    // SE PA R AT IS T A L L I A NC E UNI T C A R D S
+    "SUPER TACTICAL DROID",
+    // NE U T R A L UP GR A DE C A R D S
+    "AGGRESSIVE TACTICS",
+    "BATTLE MEDITATION",
+    "COMMANDING PRESENCE",
+    "COMMS RELAY",
+    "ESTEEMED LEADER",
+    "FORCE LIFT",
+    "INTEGRATED COMMS ANTENNA",
+    "LONG-RANGE COMLINK",
+    "RECKLESS DRIVER",
+    "REFURBISHED \"GONK\" DROID",
+
+    // Flaws
+    "DEVELOPING SYMPATHIES",
+    "I'VE ALTERED THE DEAL",
+    "NOT A STORY THE JEDI WOULD TELL",
+
+    // Old battle cards
+    "BOMBING RUN",
+    "HOSTAGE EXCHANGE",
+    "INTERCEPT THE TRANSMISSIONS",
+    "KEY POSITIONS",
+    "PAYLOAD",
+    "RECOVER THE SUPPLIES",
+    "SABOTAGE THE MOISTURE VAPORATORS",
+    "ADVANCED POSITIONS",
+    "BATTLE LINES",
+    "DANGER CLOSE",
+    "DISARRAY",
+    "HEMMED IN",
+    "THE LONG MARCH",
+    "MAJOR OFFENSIVE",
+    "ROLL OUT",
+    "CLEAR CONDITIONS",
+    "FORTIFIED POSITIONS",
+    "HOSTILE ENVIRONMENT",
+    "LIMITED VISIBILITY",
+    "MINEFIELD",
+    "RAPID REINFORCEMENTS",
+    "SUPPLY DROP",
+    "WAR WEARY",
+    "BREACH",
+    "CONTROL",
+    "ELIMINATION",
+    "PIVOTAL POSITIONS",
+    "FACEOFF",
+    "FLANKING POSITIONS",
+    "MEETING ENGAGEMENT",
+    "IMPROVISED DEFENSES",
+    "DAWN",
+
+    // Renamed wookiee cards
+    "GRROOOOGRRRAAAAWRRRRRRRRMPH",
+    "MROWGH GHRRMROWRIG!",
+    "YHWARGGHHHHHHHHHH!",
   ];
 
   let lhq_exceptions = [
     // Cards obsoleted by 2.6, removed in TTS, but that we support
-    "PHASE I CLONE TROOPER",
-    "PHASE II CLONE TROOPER",
     "Z-6 PHASE II CLONE TROOPER",
     "OFFENSIVE STANCE",
-
-    // Pending TTS code changes / pull requests - these should go away on their own...
-    // "\"NANNY\" PROGRAMMING",
-    // "A BEAUTIFUL FRIENDSHIP",
 
     // 3p0 cards are OK - they're remapped from these full names to "C-3P0" in the .lua script itself (not the JS we parse for this check)
     "C-3PO HUMAN-CYBORG RELATIONS",
@@ -217,13 +294,13 @@ async function ttsCheckAsync() {
     "SECURE THE INTEL (ACT 1)",
   ];
 
-  function findAndRemoveFromTtsList(name, type) {
+  function findAndRemoveFromTtsList(name, type, quiet=false) {
     if (!ttsNames.delete(name)) {
       // Check for multi-faction dupes like AT-RT and AA5
       if (!ttsOg.has(name)) {
         // console.log("LHQ " + type + " not found in TTS: " + name);
 
-        if (!lhq_exceptions.includes(name))
+        if (!quiet && !lhq_exceptions.includes(name))
           console.log('"' + name + '", // ' + type);
       }
     }
@@ -241,7 +318,7 @@ async function ttsCheckAsync() {
     // console.log(list.length + " cards");// + JSON.stringify(list));
 
     list.forEach((c) => {
-      findAndRemoveFromTtsList(c, typeName);
+      findAndRemoveFromTtsList(c, typeName, true);
     });
   }
 
