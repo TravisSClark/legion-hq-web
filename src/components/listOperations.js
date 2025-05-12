@@ -57,8 +57,8 @@ function countPoints(list) {
  * @param {} list
  * @returns
  */
- // TODO need to specialize this; should at least be a on-upgrade and on-unit fire, not this whole big thing
- // TODO make this modify-in-place (...among the bigger updates)
+// TODO need to specialize this; should at least be a on-upgrade and on-unit fire, not this whole big thing
+// TODO make this modify-in-place (...among the bigger updates)
 function consolidate(list) {
   // TODO see about moving these into validator
   const cardNames = list.units.map((u) => cards[u.unitId].cardName);
@@ -268,7 +268,7 @@ function sortUnitsByRank(list) {
   ];
   list.units.sort(
     (a, b) =>
-      ranks.indexOf(cards[a.unitId].rank) > ranks.indexOf(cards[b.unitId].rank)
+      ranks.indexOf(cards[a.unitId].rank) - ranks.indexOf(cards[b.unitId].rank)
   );
   return list;
 }
@@ -454,7 +454,7 @@ export {
   unequipCounterpartUpgrade,
   incrementUnit,
   decrementUnit,
-  countPoints, 
+  countPoints,
   sortCommandIds,
   consolidate,
 };
