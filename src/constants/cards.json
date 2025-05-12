@@ -4569,7 +4569,7 @@
       }
     ],
     "cardName": "T-21B Shoretrooper",
-    "displayName":"T-21B Trooper",
+    "displayName": "T-21B Trooper",
     "cardSubtype": "heavy weapon",
     "cardType": "upgrade",
     "cost": 32,
@@ -6836,7 +6836,7 @@
       }
     ],
     "cardName": "E-5s B1 Battle Droid",
-    "displayName":"E-5s B1",
+    "displayName": "E-5s B1",
     "cardSubtype": "heavy weapon",
     "cardType": "upgrade",
     "cost": 18,
@@ -7470,7 +7470,7 @@
   "ke": {
     "cardSubtype": "heavy weapon",
     "cardName": "B2-ACM Battle Droid",
-    "displayName":"B2-ACM",
+    "displayName": "B2-ACM",
     "cardType": "upgrade",
     "cost": 24,
     "imageName": "B2-ACM Trooper.webp",
@@ -7674,7 +7674,7 @@
   "kh": {
     "cardSubtype": "armament",
     "displayName": "A280",
-    "cardName":"A280, Rifle Config",
+    "cardName": "A280, Rifle Config",
     "cardType": "upgrade",
     "cost": 0,
     "imageName": "A280-CFE.webp",
@@ -7939,7 +7939,7 @@
         "value": 2
       }
     ],
-    "upgradeBar": ["command", "training", "gear", "armament"],
+    "upgradeBar": ["command", "training", "gear"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -7990,7 +7990,7 @@
       },
       {
         "date": "19 July 2024",
-        "description": "Cost reduced from 85 to 60 points. Gained Bolster 2, Agile 1, and Inspire 2, and lost Quick Thinking, Authoritative, and Exemplar keywords. Blaster changed from 3 black to 3 red and lost Pierce keyword."
+        "description": "Cost reduced from 85 to 60 points. Gained Bolster 2, Agile 1, and Inspire 2, and lost Quick Thinking, Authoritative, and Exemplar keywords. Blaster changed from 3 black to 3 red and lost Pierce keyword. Removed her armament."
       }
     ]
   },
@@ -8610,8 +8610,8 @@
     "requirements": [],
     "history": [
       {
-        "date":"15 April 2025",
-        "description":"No longer has a higher points cost for SUPPORT units"
+        "date": "15 April 2025",
+        "description": "No longer has a higher points cost for SUPPORT units"
       },
       {
         "date": "8 December 2022",
@@ -8644,20 +8644,6 @@
     "requirements": [
       {
         "cardName": "Cad Bane"
-      }
-    ]
-  },
-  "lm": {
-    "id": "lm",
-    "cardSubtype": "armament",
-    "cardName": "Looted E-5 Blaster",
-    "cardType": "upgrade",
-    "cost": 5,
-    "imageName": "Looted E-5 Blaster.webp",
-    "keywords": ["Pierce"],
-    "requirements": [
-      {
-        "cardName": "Padme Amidala"
       }
     ]
   },
@@ -12512,7 +12498,7 @@
     "id": "qv",
     "cardSubtype": "hardpoint",
     "cardName": "Twin Blaster Cannons",
-    "ttsName":"Twin Blaster Cannons (ISP)",
+    "ttsName": "Twin Blaster Cannons (ISP)",
     "cardType": "upgrade",
     "cost": 25,
     "imageName": "Twin Blaster Cannons ISP.webp",
@@ -18337,7 +18323,7 @@
     "isUnreleased": "Q2 2025",
     "title": "Jedi Padawan",
     "cardSubtype": "squad leader",
-    "ttsName":"Ahsoka Tano, Jedi Padawan",
+    "ttsName": "Ahsoka Tano, Jedi Padawan",
     "isUnique": true,
     "cardType": "upgrade",
     "cost": 35,
