@@ -18293,7 +18293,6 @@
     "rank": "commander",
     "faction": "republic",
     "isUnique": true,
-    "isUnreleased": "Q2 2025",
     "cost": 110,
     "imageName": "Ahsoka Tano Padawan Commander.webp",
     "keywords": [
@@ -18320,7 +18319,6 @@
   "Bd": {
     "id": "Bd",
     "cardName": "Ahsoka Tano",
-    "isUnreleased": "Q2 2025",
     "title": "Jedi Padawan",
     "cardSubtype": "squad leader",
     "ttsName": "Ahsoka Tano, Jedi Padawan",
