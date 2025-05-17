@@ -86,7 +86,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
     });
   }
 
-    if(unitCard.keywords.find(k=> k === "Heavy Weapon Team" || k.name === "Heavy Weapon Team")){
+  if(unitCard.keywords.find(k=> k === "Heavy Weapon Team" || k.name === "Heavy Weapon Team")){
 
     let hasHeavy = false;
     unit.upgradesEquipped.forEach((id)=>{

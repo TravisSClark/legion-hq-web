@@ -264,7 +264,6 @@ function getEquippableUpgrades(
   const unitCard = cards[unitId];
   const uniqueCardNames = getListUniques(list, "name");
 
-  // for (let i = 0; i < cardIdsByType['upgrade'].length; i++) {
   for(let i=0; i<upgradeIdsBySubtype[upgradeType].length; i++){
     const id = upgradeIdsBySubtype[upgradeType][i]; //cardIdsByType['upgrade'][i];
     const card = cards[id];

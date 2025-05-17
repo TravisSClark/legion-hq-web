@@ -1,4 +1,4 @@
-import CardsJson from './cards.json';
+import CardsJson from './cards.json'// with {type:'json'}
 
 const cards = JSON.parse(JSON.stringify(CardsJson));
 
