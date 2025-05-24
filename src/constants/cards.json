@@ -1447,7 +1447,11 @@
         "name": "Vader's Lightsaber",
         "keywords": [
           {
-            "name": "Impact 3, Pierce",
+            "name": "Impact",
+            "value": 3
+          },
+          {
+            "name": "Pierce",
             "value": 3
           }
         ],
@@ -2302,9 +2306,14 @@
       {
         "name": "E-Web Heavy Blaster",
         "keywords": [
+         "Cumbersome",
           {
-            "name": "Cumbersome, Fixed",
-            "value": "Front, Impact 1"
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": 1
           }
         ],
         "range": [
@@ -2550,8 +2559,9 @@
       {
         "name": "Twin Cannons",
         "keywords": [
+          "Suppressive",
           {
-            "name": "Suppressive, Fixed",
+            "name": "Fixed",
             "value": "Front"
           }
         ],
@@ -2569,7 +2579,11 @@
         "name": "Quad Cannons",
         "keywords": [
           {
-            "name": "Impact 2, Fixed",
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Fixed",
             "value": "Front"
           }
         ],
@@ -4451,7 +4465,11 @@
         "name": "Luke's Lightsaber",
         "keywords": [
           {
-            "name": "Impact 2, Pierce",
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
             "value": 2
           }
         ],
@@ -4750,7 +4768,17 @@
         "name": "DF-90 Mortar",
         "keywords": [
           {
-            "name": "Critical 1, Cumbersome, Suppressive, Fixed",
+            "name": "Critical",
+            "value": 1
+          },
+          {
+            "name": "Cumbersome"
+          },
+          {
+            "name": "Suppressive"
+          },
+          {
+            "name": "Fixed",
             "value": "Front"
           }
         ],
@@ -4912,7 +4940,11 @@
         "name": "Dooku's Lightsaber",
         "keywords": [
           {
-            "name": "Impact 2, Pierce",
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
             "value": 2
           }
         ],
@@ -4929,8 +4961,14 @@
         "name": "Force Lightning",
         "keywords": [
           {
-            "name": "Pierce 1, Scatter,",
-            "value": " Suppressive"
+            "name": "Pierce",
+            "value": 1
+          },
+          {
+            "name": "Scatter"
+          },
+          {
+            "name": "Suppressive"
           }
         ],
         "range": [
@@ -5246,8 +5284,16 @@
         "name": "Heavy Laser Cannons",
         "keywords": [
           {
-            "name": "Critical 1, Fixed",
-            "value": "Front, Impact 2"
+            "name": "Critical",
+            "value": 1
+          },
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": 2
           }
         ],
         "range": [
@@ -5344,7 +5390,14 @@
         "name": "Artillery Cannon",
         "keywords": [
           {
-            "name": "Critical 2, High Velocity, Impact",
+            "name": "Critical",
+            "value": 2
+          },
+          {
+            "name": "High Velocity"
+          },
+          {
+            "name": "Impact",
             "value": 2
           }
         ],
@@ -5801,7 +5854,15 @@
         "name": "Obi-Wan's Lightsaber",
         "keywords": [
           {
-            "name": "Critical 2, Impact 2, Pierce",
+            "name": "Critical",
+            "value": 2
+          },
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
             "value": 2
           }
         ],
@@ -5966,7 +6027,7 @@
       },
       {
         "date": "19 July 2024",
-        "description": "Cost increased from 25 to 28 points. No longer exhausts. Gained Critcal 1 keyword. Dice changed from 1 black and 4 white to 2 black and 2 white."
+        "description": "Cost increased from 25 to 28 points. No longer exhausts. Gained Critical 1 keyword. Dice changed from 1 black and 4 white to 2 black and 2 white."
       }
     ],
     "id": "hb"
@@ -6135,9 +6196,10 @@
         "name": "Razor Claws & Shock Prod",
         "keywords": [
           {
-            "name": "Critical 2,",
-            "value": " Suppressive"
-          }
+            "name": "Critical",
+            "value": 2
+          },
+          "Suppressive"
         ],
         "range": [
           0
@@ -6565,7 +6627,15 @@
         "name": "Trophy Lightsabers",
         "keywords": [
           {
-            "name": "Critical 1, Impact 2, Pierce",
+            "name": "Critical",
+            "value": 1
+          },
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
             "value": 2
           }
         ],
@@ -6582,9 +6652,14 @@
         "name": "\"\"",
         "keywords": [
           {
-            "name": "Critical 1, Pierce 1,",
-            "value": " Versatile"
-          }
+            "name": "Critical",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          },
+          "Versatile"
         ],
         "range": [
           0
@@ -6903,7 +6978,14 @@
         "name": "Mark II Medium Blaster",
         "keywords": [
           {
-            "name": "Critical 2, Cumbersome, Fixed",
+            "name": "Critical",
+            "value": 2
+          },
+          {
+            "name": "Cumbersome"
+          },
+          {
+            "name": "Fixed",
             "value": "Front"
           }
         ],
@@ -8064,7 +8146,7 @@
         "name": "Iden's TL-50 Repeater",
         "keywords": [
           {
-            "name": "Critcal",
+            "name": "Critical",
             "value": 1
           },
           {
@@ -10316,7 +10398,11 @@
         "name": "Anakin's Lightsaber",
         "keywords": [
           {
-            "name": "Impact 3, Pierce",
+            "name": "Impact",
+            "value": 3
+          },
+          {
+            "name": "Pierce",
             "value": 3
           }
         ],
@@ -10391,7 +10477,11 @@
         "name": "Maul's Double-bladed Lightsaber",
         "keywords": [
           {
-            "name": "Impact 2, Pierce",
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
             "value": 2
           }
         ],
@@ -10703,7 +10793,7 @@
         "name": "J-19 Bo-Rifle",
         "keywords": [
           {
-            "name": "Critcal",
+            "name": "Critical",
             "value": 1
           },
           {
@@ -11282,7 +11372,11 @@
         "name": "Yoda's Lightsaber",
         "keywords": [
           {
-            "name": "Impact 2, Pierce",
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
             "value": 2
           }
         ],
@@ -11299,9 +11393,9 @@
         "name": "Force Wave",
         "keywords": [
           {
-            "name": "Blast,",
-            "value": " Suppressive"
-          }
+            "name": "Blast"
+          },
+          "Suppressive"
         ],
         "range": [
           1,
@@ -11984,7 +12078,11 @@
         "name": "Chieftain's Bowcaster",
         "keywords": [
           {
-            "name": "Impact 1, Pierce",
+            "name": "Impact",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
             "value": 1
           }
         ],
@@ -12255,7 +12353,15 @@
         "name": "Chewbacca's Bowcaster",
         "keywords": [
           {
-            "name": "Critical 1, Impact 1, Pierce",
+            "name": "Critical",
+            "value": 1
+          },
+          {
+            "name": "Impact",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
             "value": 1
           }
         ],
@@ -13185,8 +13291,20 @@
         "name": "Ion Cannons",
         "keywords": [
           {
-            "name": "Critical 1, Fixed",
-            "value": "Front, Impact 1, Ion 1"
+            "name": "Critical",
+            "value": 1
+          },
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+           {
+            "name": "Impact",
+            "value": 1
+          },
+           {
+            "name": "Ion",
+            "value": 1
           }
         ],
         "range": [
@@ -13203,7 +13321,11 @@
         "name": "Heavy Blasters",
         "keywords": [
           {
-            "name": "Critical 1, Fixed",
+            "name": "Critical",
+            "value": 1
+          },
+          {
+            "name": "Fixed",
             "value": "Front"
           }
         ],
@@ -13697,7 +13819,11 @@
         "name": "Maul's Double-Bladed Lightsaber",
         "keywords": [
           {
-            "name": "Impact 2, Pierce",
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
             "value": 2
           }
         ],
@@ -15020,9 +15146,10 @@
         "name": "Modified E-11 Blaster",
         "keywords": [
           {
-            "name": "Pierce 1,",
-            "value": " Versatile"
-          }
+            "name": "Pierce",
+            "value": 1
+          },
+          "Versatile"
         ],
         "range": [
           1,
@@ -15228,9 +15355,14 @@
         "name": "Din's IB-94 Pistol",
         "keywords": [
           {
-            "name": "Lethal 1, Longshot 1,",
-            "value": " Versatile"
-          }
+            "name": "Lethal",
+            "value": 1
+          },
+          {
+            "name": "Long Shot",
+            "value": 1
+          },
+          "Versatile"
         ],
         "range": [
           1,
@@ -15737,7 +15869,11 @@
         "name": "Cody's DC-15A Blaster Rifle",
         "keywords": [
           {
-            "name": "Lethal 1, Impact",
+            "name": "Lethal",
+            "value": 1
+          },
+          {
+            "name": "Impact",
             "value": 1
           }
         ],
@@ -16124,7 +16260,11 @@
         "name": "Asajj Ventress' Lightsabers",
         "keywords": [
           {
-            "name": "Impact 2, Pierce",
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
             "value": 2
           }
         ],
@@ -16289,7 +16429,11 @@
         "name": "Ahsoka's Lightsabers",
         "keywords": [
           {
-            "name": "Impact 2, Pierce",
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
             "value": 2
           }
         ],
@@ -16382,9 +16526,10 @@
         "name": "Sling",
         "keywords": [
           {
-            "name": "Pierce 1,",
-            "value": " Primitive"
-          }
+            "name": "Pierce",
+            "value": 1
+          },
+          "Primitive"
         ],
         "range": [
           1,
@@ -16858,8 +17003,7 @@
         "name": "Slings",
         "keywords": [
           {
-            "name": "Primitiv",
-            "value": "e"
+            "name": "Primitive"
           }
         ],
         "range": [
@@ -17429,7 +17573,11 @@
         "name": "Spinning Lightsaber",
         "keywords": [
           {
-            "name": "Impact 2, Pierce",
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
             "value": 1
           }
         ],
@@ -17446,7 +17594,11 @@
         "name": "Thrown Spinning Lightsaber",
         "keywords": [
           {
-            "name": "Impact 2, Pierce",
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
             "value": 1
           }
         ],
@@ -18041,7 +18193,11 @@
         "name": "Heavy Blasters",
         "keywords": [
           {
-            "name": "Critical 1, Fixed",
+            "name": "Critical",
+            "value": 1
+          },
+          {
+            "name": "Fixed",
             "value": "Front"
           }
         ],
@@ -18355,7 +18511,7 @@
         "name": "DC-17m ICWS Blaster Carbine",
         "keywords": [
           {
-            "name": "Supressive"
+            "name": "Suppressive"
           }
         ],
         "range": [
@@ -18533,8 +18689,7 @@
         "name": "DC-17m ICWS Blaster Carbine",
         "keywords": [
           {
-            "name": "Supressiv",
-            "value": "e"
+            "name": "Suppressive"
           }
         ],
         "range": [

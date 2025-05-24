@@ -31,6 +31,16 @@ async function cardsJsonCheck() {
         i--;
         console.log('fix keyword for ', obj.name);
       }
+
+      if(kw.name &&  kw.name.includes(',')){
+        // console.log('split candidate', kw);
+        let split = kw.name.split(',');
+
+        obj.keywords[i] = {name: split[0], value:0}
+        for(let splitIdx=1; splitIdx<split.length; splitIdx++){
+          obj.keywords.push({name: split[splitIdx], value:0});
+        }
+      }
     }
   }
 
