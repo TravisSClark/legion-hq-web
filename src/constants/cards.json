@@ -18827,7 +18827,10 @@
         "name": "Mercenary",
         "value": "Rebels"
       },
-      "Equip",
+      { 
+        "name":"Equip",
+        "value": "Hunter, Wrecker, Echo, Tech"
+      },
       "Impervious",
       "Scale",
       "Steady",

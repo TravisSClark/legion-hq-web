@@ -40,7 +40,13 @@ async function cardsJsonCheck() {
         for(let splitIdx=1; splitIdx<split.length; splitIdx++){
           obj.keywords.push({name: split[splitIdx], value:0});
         }
+        console.log('split keyword text')
       }
+
+      if(kw.name && !kw.value){
+        console.log('name only', kw);
+      }
+
     }
   }
 
