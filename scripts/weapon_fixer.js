@@ -45,6 +45,7 @@ async function cardsJsonCheck() {
 
       if(kw.name && !kw.value){
         console.log('name only', kw);
+        keywords[i] = kw.name;
       }
 
     }

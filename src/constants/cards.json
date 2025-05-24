@@ -210,16 +210,12 @@
         "name": "Take Cover",
         "value": 2
       },
-      {
-        "name": "Exemplar"
-      },
+      "Exemplar",
       {
         "name": "Inspire",
         "value": 2
       },
-      {
-        "name": "Nimble"
-      },
+      "Nimble",
       {
         "name": "Sharpshooter",
         "value": 2
@@ -294,15 +290,9 @@
     "isUnique": true,
     "cost": 100,
     "keywords": [
-      {
-        "name": "Steady"
-      },
-      {
-        "name": "Low Profile"
-      },
-      {
-        "name": "Gunslinger"
-      },
+      "Steady",
+      "Low Profile",
+      "Gunslinger",
       {
         "name": "Sharpshooter",
         "value": 1
@@ -380,15 +370,9 @@
         "name": "Jump",
         "value": 1
       },
-      {
-        "name": "Block"
-      },
-      {
-        "name": "Charge"
-      },
-      {
-        "name": "Immune: Pierce"
-      },
+      "Block",
+      "Charge",
+      "Immune: Pierce",
       {
         "name": "Inspire",
         "value": 2
@@ -482,19 +466,13 @@
         "name": "Agile",
         "value": 1
       },
-      {
-        "name": "Disengage"
-      },
+      "Disengage",
       {
         "name": "Independent",
         "value": "Move"
       },
-      {
-        "name": "Infiltrate"
-      },
-      {
-        "name": "Nimble"
-      },
+      "Infiltrate",
+      "Nimble",
       {
         "name": "Sharpshooter",
         "value": 1
@@ -518,9 +496,7 @@
       {
         "name": "Collapsible Tonfa",
         "keywords": [
-          {
-            "name": "Suppressive"
-          }
+          "Suppressive"
         ],
         "range": [
           0
@@ -534,9 +510,7 @@
       {
         "name": "A-180 Blaster Pistol",
         "keywords": [
-          {
-            "name": "Long Shot"
-          },
+          "Long Shot",
           {
             "name": "Pierce",
             "value": 1
@@ -596,9 +570,7 @@
         "name": "Teamwork",
         "value": "Han Solo"
       },
-      {
-        "name": "Scale"
-      }
+      "Scale"
     ],
     "upgradeBar": [
       "training",
@@ -682,15 +654,9 @@
         "name": "Jump",
         "value": 2
       },
-      {
-        "name": "Gunslinger"
-      },
-      {
-        "name": "Impervious"
-      },
-      {
-        "name": "Nimble"
-      }
+      "Gunslinger",
+      "Impervious",
+      "Nimble"
     ],
     "upgradeBar": [
       "training",
@@ -742,9 +708,7 @@
         "name": "Agile",
         "value": 1
       },
-      {
-        "name": "Nimble"
-      }
+      "Nimble"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -805,9 +769,7 @@
     "faction": "rebels",
     "cost": 40,
     "keywords": [
-      {
-        "name": "Charge"
-      }
+      "Charge"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -861,18 +823,10 @@
     "faction": "rebels",
     "cost": 69,
     "keywords": [
-      {
-        "name": "Charge"
-      },
-      {
-        "name": "Duelist"
-      },
-      {
-        "name": "Indomitable"
-      },
-      {
-        "name": "Scale"
-      }
+      "Charge",
+      "Duelist",
+      "Indomitable",
+      "Scale"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -933,9 +887,7 @@
     "faction": "rebels",
     "cost": 48,
     "keywords": [
-      {
-        "name": "Low Profile"
-      },
+      "Low Profile",
       {
         "name": "Scout",
         "value": 2
@@ -1013,12 +965,8 @@
         "name": "Detachment",
         "value": "Rebel Commandos"
       },
-      {
-        "name": "Heavy Weapon Team"
-      },
-      {
-        "name": "Low Profile"
-      },
+      "Heavy Weapon Team",
+      "Low Profile",
       {
         "name": "Scout",
         "value": 2
@@ -1092,18 +1040,10 @@
     "faction": "rebels",
     "cost": 65,
     "keywords": [
-      {
-        "name": "Full Pivot"
-      },
-      {
-        "name": "Prepared Position"
-      },
-      {
-        "name": "Sentinel"
-      },
-      {
-        "name": "Stationary"
-      }
+      "Full Pivot",
+      "Prepared Position",
+      "Sentinel",
+      "Stationary"
     ],
     "upgradeBar": [
       "comms",
@@ -1190,12 +1130,8 @@
         "name": "Armor",
         "value": 2
       },
-      {
-        "name": "Climbing Vehicle"
-      },
-      {
-        "name": "Expert Climber"
-      },
+      "Climbing Vehicle",
+      "Expert Climber",
       {
         "name": "Scout",
         "value": 1
@@ -1262,15 +1198,9 @@
         "name": "Cover",
         "value": 1
       },
-      {
-        "name": "Immune: Blast"
-      },
-      {
-        "name": "Immune: Melee"
-      },
-      {
-        "name": "Immune: Range 1 Weapons"
-      },
+      "Immune: Blast",
+      "Immune: Melee",
+      "Immune: Range 1 Weapons",
       {
         "name": "Speeder",
         "value": 2
@@ -1409,19 +1339,13 @@
     "isUnique": true,
     "cost": 170,
     "keywords": [
-      {
-        "name": "Deflect"
-      },
-      {
-        "name": "Immune: Pierce"
-      },
+      "Deflect",
+      "Immune: Pierce",
       {
         "name": "Master of the Force",
         "value": 1
       },
-      {
-        "name": "Relentless"
-      },
+      "Relentless",
       {
         "name": "Compel",
         "value": "Corps"
@@ -1504,9 +1428,7 @@
         "name": "Spotter",
         "value": 2
       },
-      {
-        "name": "Exemplar"
-      },
+      "Exemplar",
       {
         "name": "Inspire",
         "value": 1
@@ -1587,19 +1509,13 @@
         "name": "Spotter",
         "value": 1
       },
-      {
-        "name": "Compel"
-      },
-      {
-        "name": "Cunning"
-      },
+      "Compel",
+      "Cunning",
       {
         "name": "Entourage",
         "value": "Imperial Death Troopers"
       },
-      {
-        "name": "Exemplar"
-      }
+      "Exemplar"
     ],
     "upgradeBar": [
       "command",
@@ -1677,12 +1593,8 @@
         "name": "Arsenal",
         "value": 2
       },
-      {
-        "name": "Bounty"
-      },
-      {
-        "name": "Impervious"
-      },
+      "Bounty",
+      "Impervious",
       {
         "name": "Independent",
         "value": "Aim 1 or Dodge 1"
@@ -1793,9 +1705,7 @@
         "name": "Mercenary",
         "value": "Empire, Separatists"
       },
-      {
-        "name": "Bounty"
-      },
+      "Bounty",
       {
         "name": "Enrage",
         "value": 3
@@ -1808,9 +1718,7 @@
         "name": "Regenerate",
         "value": 3
       },
-      {
-        "name": "Scale"
-      }
+      "Scale"
     ],
     "upgradeBar": [
       "training",
@@ -1947,9 +1855,7 @@
     "faction": "empire",
     "cost": 42,
     "keywords": [
-      {
-        "name": "Steady"
-      }
+      "Steady"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -2012,12 +1918,8 @@
     "faction": "empire",
     "cost": 48,
     "keywords": [
-      {
-        "name": "Low Profile"
-      },
-      {
-        "name": "Scout"
-      },
+      "Low Profile",
+      "Scout",
       {
         "name": "Sharpshooter",
         "value": 1
@@ -2087,12 +1989,8 @@
         "name": "Detachment",
         "value": "Scout Troopers"
       },
-      {
-        "name": "Heavy Weapon Team"
-      },
-      {
-        "name": "Low Profile"
-      },
+      "Heavy Weapon Team",
+      "Low Profile",
       {
         "name": "Scout",
         "value": 3
@@ -2254,15 +2152,9 @@
     "faction": "empire",
     "cost": 60,
     "keywords": [
-      {
-        "name": "Prepared Position"
-      },
-      {
-        "name": "Reposition"
-      },
-      {
-        "name": "Sentinel"
-      }
+      "Prepared Position",
+      "Reposition",
+      "Sentinel"
     ],
     "upgradeBar": [
       "comms",
@@ -2306,7 +2198,7 @@
       {
         "name": "E-Web Heavy Blaster",
         "keywords": [
-         "Cumbersome",
+          "Cumbersome",
           {
             "name": "Fixed",
             "value": "Front"
@@ -2530,12 +2422,8 @@
         "name": "Arsenal",
         "value": 2
       },
-      {
-        "name": "Reposition"
-      },
-      {
-        "name": "Transport"
-      },
+      "Reposition",
+      "Transport",
       {
         "name": "Weak Point",
         "value": "1: Sides"
@@ -4425,21 +4313,11 @@
     "isUnique": true,
     "cost": 165,
     "keywords": [
-      {
-        "name": "Jump"
-      },
-      {
-        "name": "Charge"
-      },
-      {
-        "name": "Deflect"
-      },
-      {
-        "name": "Disengage"
-      },
-      {
-        "name": "Immune: Pierce"
-      },
+      "Jump",
+      "Charge",
+      "Deflect",
+      "Disengage",
+      "Immune: Pierce",
       {
         "name": "Master of the Force",
         "value": 1
@@ -4510,22 +4388,14 @@
     "isUnique": true,
     "cost": 155,
     "keywords": [
-      {
-        "name": "Deflect"
-      },
-      {
-        "name": "Immune: Pierce"
-      },
-      {
-        "name": "Jedi Hunter"
-      },
+      "Deflect",
+      "Immune: Pierce",
+      "Jedi Hunter",
       {
         "name": "Master of the Force",
         "value": 1
       },
-      {
-        "name": "Relentless"
-      }
+      "Relentless"
     ],
     "upgradeBar": [
       "force",
@@ -4723,21 +4593,11 @@
         "name": "Detachment",
         "value": "Shoretroopers"
       },
-      {
-        "name": "Fire Support"
-      },
-      {
-        "name": "Full Pivot"
-      },
-      {
-        "name": "Prepared Position"
-      },
-      {
-        "name": "Reposition"
-      },
-      {
-        "name": "Sentinel"
-      }
+      "Fire Support",
+      "Full Pivot",
+      "Prepared Position",
+      "Reposition",
+      "Sentinel"
     ],
     "upgradeBar": [
       "comms"
@@ -4771,12 +4631,8 @@
             "name": "Critical",
             "value": 1
           },
-          {
-            "name": "Cumbersome"
-          },
-          {
-            "name": "Suppressive"
-          },
+          "Cumbersome",
+          "Suppressive",
           {
             "name": "Fixed",
             "value": "Front"
@@ -4899,22 +4755,14 @@
     "isUnique": true,
     "cost": 165,
     "keywords": [
-      {
-        "name": "Cunning"
-      },
-      {
-        "name": "Deflect"
-      },
+      "Cunning",
+      "Deflect",
       {
         "name": "Direct",
         "value": "Trooper Unit"
       },
-      {
-        "name": "Immune: Pierce"
-      },
-      {
-        "name": "Makashi Mastery"
-      },
+      "Immune: Pierce",
+      "Makashi Mastery",
       {
         "name": "Master of the Force",
         "value": 2
@@ -4964,12 +4812,8 @@
             "name": "Pierce",
             "value": 1
           },
-          {
-            "name": "Scatter"
-          },
-          {
-            "name": "Suppressive"
-          }
+          "Scatter",
+          "Suppressive"
         ],
         "range": [
           1,
@@ -5014,9 +4858,7 @@
     "isUnique": true,
     "cost": 95,
     "keywords": [
-      {
-        "name": "Gunslinger"
-      },
+      "Gunslinger",
       {
         "name": "Scout",
         "value": 1
@@ -5255,9 +5097,7 @@
         "name": "Hover",
         "value": "Ground"
       },
-      {
-        "name": "Outmaneuver"
-      },
+      "Outmaneuver",
       {
         "name": "Weak Point",
         "value": "1: Rear, Sides"
@@ -5340,9 +5180,7 @@
         "name": "Arsenal",
         "value": "2"
       },
-      {
-        "name": "Barrage"
-      },
+      "Barrage",
       {
         "name": "Hover",
         "value": "Ground"
@@ -5393,9 +5231,7 @@
             "name": "Critical",
             "value": 2
           },
-          {
-            "name": "High Velocity"
-          },
+          "High Velocity",
           {
             "name": "Impact",
             "value": 2
@@ -5740,12 +5576,8 @@
         "name": "Coordinate",
         "value": "Emplacement Trooper"
       },
-      {
-        "name": "Low Profile"
-      },
-      {
-        "name": "Prepared Position"
-      }
+      "Low Profile",
+      "Prepared Position"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -5813,26 +5645,18 @@
         "name": "Jump",
         "value": 1
       },
-      {
-        "name": "Charge"
-      },
-      {
-        "name": "Deflect"
-      },
+      "Charge",
+      "Deflect",
       {
         "name": "Guardian",
         "value": 3
       },
-      {
-        "name": "Immune: Pierce"
-      },
+      "Immune: Pierce",
       {
         "name": "Master of the Force",
         "value": 1
       },
-      {
-        "name": "Soresu Mastery"
-      }
+      "Soresu Mastery"
     ],
     "upgradeBar": [
       "force",
@@ -6076,19 +5900,13 @@
         "name": "Agile",
         "value": 1
       },
-      {
-        "name": "Relentless"
-      },
-      {
-        "name": "Reposition"
-      },
+      "Relentless",
+      "Reposition",
       {
         "name": "Sharpshooter",
         "value": 1
       },
-      {
-        "name": "Unhindered"
-      }
+      "Unhindered"
     ],
     "upgradeBar": [
       "training",
@@ -6164,18 +5982,10 @@
         "name": "Armor",
         "value": 1
       },
-      {
-        "name": "Relentless"
-      },
-      {
-        "name": "Reposition"
-      },
-      {
-        "name": "Spur"
-      },
-      {
-        "name": "Unhindered"
-      }
+      "Relentless",
+      "Reposition",
+      "Spur",
+      "Unhindered"
     ],
     "upgradeBar": [
       "training",
@@ -6236,9 +6046,7 @@
         "name": "Coordinate",
         "value": "Emplacement Trooper"
       },
-      {
-        "name": "Prepared Position"
-      }
+      "Prepared Position"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -6272,9 +6080,7 @@
       {
         "name": "E-22 Blaster Rifle",
         "keywords": [
-          {
-            "name": "Long Shot"
-          }
+          "Long Shot"
         ],
         "range": [
           1,
@@ -6586,25 +6392,15 @@
     "isUnique": true,
     "cost": 130,
     "keywords": [
-      {
-        "name": "Block"
-      },
+      "Block",
       {
         "name": "Entourage",
         "value": "IG-100"
       },
-      {
-        "name": "Immune: Pierce"
-      },
-      {
-        "name": "Jedi Hunter"
-      },
-      {
-        "name": "Relentless"
-      },
-      {
-        "name": "Scale"
-      }
+      "Immune: Pierce",
+      "Jedi Hunter",
+      "Relentless",
+      "Scale"
     ],
     "entourage": "px",
     "upgradeBar": [
@@ -6848,9 +6644,7 @@
         "name": "Shielded",
         "value": 4
       },
-      {
-        "name": "Wheel Mode"
-      }
+      "Wheel Mode"
     ],
     "upgradeBar": [
       "comms"
@@ -6920,21 +6714,11 @@
         "name": "Detachment",
         "value": "Rebel Veterans"
       },
-      {
-        "name": "Fire Support"
-      },
-      {
-        "name": "Full Pivot"
-      },
-      {
-        "name": "Reposition"
-      },
-      {
-        "name": "Sentinel"
-      },
-      {
-        "name": "Prepared Position"
-      }
+      "Fire Support",
+      "Full Pivot",
+      "Reposition",
+      "Sentinel",
+      "Prepared Position"
     ],
     "upgradeBar": [
       "comms"
@@ -6981,9 +6765,7 @@
             "name": "Critical",
             "value": 2
           },
-          {
-            "name": "Cumbersome"
-          },
+          "Cumbersome",
           {
             "name": "Fixed",
             "value": "Front"
@@ -7496,18 +7278,10 @@
         "name": "Repair",
         "value": "2 Capacity 2"
       },
-      {
-        "name": "Inconspicuous"
-      },
-      {
-        "name": "Infiltrate"
-      },
-      {
-        "name": "Secret Mission"
-      },
-      {
-        "name": "Suppressive"
-      }
+      "Inconspicuous",
+      "Infiltrate",
+      "Secret Mission",
+      "Suppressive"
     ],
     "upgradeBar": [
       "comms"
@@ -7525,9 +7299,7 @@
       {
         "name": "Electro-Shock",
         "keywords": [
-          {
-            "name": "Suppressive"
-          }
+          "Suppressive"
         ],
         "range": [
           0
@@ -8003,12 +7775,8 @@
         "value": "A280"
       },
       "Field Commander",
-      {
-        "name": "Infiltrate"
-      },
-      {
-        "name": "Marksman"
-      },
+      "Infiltrate",
+      "Marksman",
       {
         "name": "Sharpshooter",
         "value": 1
@@ -8080,18 +7848,10 @@
     "isUnique": true,
     "cost": 115,
     "keywords": [
-      {
-        "name": "Quick Thinking"
-      },
-      {
-        "name": "Infiltrate"
-      },
-      {
-        "name": "Marksman"
-      },
-      {
-        "name": "Nimble"
-      }
+      "Quick Thinking",
+      "Infiltrate",
+      "Marksman",
+      "Nimble"
     ],
     "upgradeBar": [
       "command",
@@ -8124,9 +7884,7 @@
       {
         "name": "Iden's DLT-20A Rifle",
         "keywords": [
-          {
-            "name": "High Velocity"
-          },
+          "High Velocity",
           {
             "name": "Pierce",
             "value": 1
@@ -8464,9 +8222,7 @@
     "isUnique": true,
     "cost": 60,
     "keywords": [
-      {
-        "name": "Bolster"
-      },
+      "Bolster",
       {
         "name": "Agile",
         "value": 1
@@ -8475,9 +8231,7 @@
         "name": "Inspire",
         "value": 2
       },
-      {
-        "name": "Nimble"
-      },
+      "Nimble",
       {
         "name": "Sharpshooter",
         "value": 2
@@ -8557,9 +8311,7 @@
         "name": "Jump",
         "value": 1
       },
-      {
-        "name": "Bounty"
-      },
+      "Bounty",
       {
         "name": "Danger Sense",
         "value": 3
@@ -8572,9 +8324,7 @@
         "name": "Sharpshooter",
         "value": 1
       },
-      {
-        "name": "Steady"
-      }
+      "Steady"
     ],
     "upgradeBar": [
       "training",
@@ -8652,22 +8402,14 @@
     "faction": "republic",
     "cost": 26,
     "keywords": [
-      {
-        "name": "Charge"
-      },
+      "Charge",
       {
         "name": "Detachment",
         "value": "ARC Troopers"
       },
-      {
-        "name": "Heavy Weapon Team"
-      },
-      {
-        "name": "Impervious"
-      },
-      {
-        "name": "Scale"
-      },
+      "Heavy Weapon Team",
+      "Impervious",
+      "Scale",
       {
         "name": "Scout",
         "value": 2
@@ -8742,15 +8484,9 @@
     "faction": "republic",
     "cost": 64,
     "keywords": [
-      {
-        "name": "Charge"
-      },
-      {
-        "name": "Impervious"
-      },
-      {
-        "name": "Scale"
-      },
+      "Charge",
+      "Impervious",
+      "Scale",
       {
         "name": "Scout",
         "value": 2
@@ -8837,9 +8573,7 @@
         "name": "AI",
         "value": "Dodge, Move"
       },
-      {
-        "name": "Impervious"
-      },
+      "Impervious",
       "Scale",
       {
         "name": "Scout",
@@ -8928,12 +8662,8 @@
         "name": "Detachment",
         "value": "BX-Series Droid Commandos"
       },
-      {
-        "name": "Heavy Weapon Team"
-      },
-      {
-        "name": "Impervious"
-      },
+      "Heavy Weapon Team",
+      "Impervious",
       "Scale",
       {
         "name": "Scout",
@@ -9355,9 +9085,7 @@
     "isUnique": true,
     "cost": 70,
     "keywords": [
-      {
-        "name": "Calculate Odds"
-      },
+      "Calculate Odds",
       {
         "name": "Armor",
         "value": 1
@@ -9366,12 +9094,8 @@
         "name": "Detachment",
         "value": "Cassian Andor"
       },
-      {
-        "name": "Incognito"
-      },
-      {
-        "name": "Infiltrate"
-      },
+      "Incognito",
+      "Infiltrate",
       {
         "name": "Teamwork",
         "value": "Cassian Andor"
@@ -9803,12 +9527,8 @@
         "name": "Jump",
         "value": 2
       },
-      {
-        "name": "Impervious"
-      },
-      {
-        "name": "Nimble"
-      }
+      "Impervious",
+      "Nimble"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -9882,12 +9602,8 @@
         "name": "Equip",
         "value": "Tristan Wren, Ursa Wren"
       },
-      {
-        "name": "Impervious"
-      },
-      {
-        "name": "Nimble"
-      },
+      "Impervious",
+      "Nimble",
       {
         "name": "Retinue",
         "value": "Sabine Wren"
@@ -10174,12 +9890,8 @@
     "faction": "empire",
     "cost": 68,
     "keywords": [
-      {
-        "name": "Infiltrate"
-      },
-      {
-        "name": "Marksman"
-      },
+      "Infiltrate",
+      "Marksman",
       {
         "name": "Reliable",
         "value": 1
@@ -10247,12 +9959,8 @@
         "name": "Equip",
         "value": "Del Meeko, Gideon Hask"
       },
-      {
-        "name": "Infiltrate"
-      },
-      {
-        "name": "Marksman"
-      },
+      "Infiltrate",
+      "Marksman",
       {
         "name": "Reliable",
         "value": 1
@@ -10358,25 +10066,15 @@
         "name": "Jump",
         "value": 1
       },
-      {
-        "name": "Charge"
-      },
-      {
-        "name": "Deflect"
-      },
-      {
-        "name": "Djem So Mastery"
-      },
-      {
-        "name": "Immune: Pierce"
-      },
+      "Charge",
+      "Deflect",
+      "Djem So Mastery",
+      "Immune: Pierce",
       {
         "name": "Master of the Force",
         "value": 1
       },
-      {
-        "name": "Tempted"
-      }
+      "Tempted"
     ],
     "upgradeBar": [
       "force",
@@ -10447,15 +10145,9 @@
         "name": "Jump",
         "value": 1
       },
-      {
-        "name": "Deflect"
-      },
-      {
-        "name": "Immune: Pierce"
-      },
-      {
-        "name": "Juyo Mastery"
-      }
+      "Deflect",
+      "Immune: Pierce",
+      "Juyo Mastery"
     ],
     "upgradeBar": [
       "force",
@@ -10619,9 +10311,7 @@
         "name": "Hover",
         "value": "Air 1"
       },
-      {
-        "name": "Incognito"
-      }
+      "Incognito"
     ],
     "upgradeBar": [
       "comms"
@@ -10639,9 +10329,7 @@
       {
         "name": "Electro-stun Micro Blaster",
         "keywords": [
-          {
-            "name": "Suppressive"
-          }
+          "Suppressive"
         ],
         "range": [
           0
@@ -10671,19 +10359,13 @@
         "name": "Guidance",
         "value": "Corps Trooper Unit"
       },
-      {
-        "name": "Allies of Convenience"
-      },
-      {
-        "name": "Steady"
-      },
+      "Allies of Convenience",
+      "Steady",
       {
         "name": "Uncanny Luck",
         "value": 2
       },
-      {
-        "name": "One Step Ahead"
-      }
+      "One Step Ahead"
     ],
     "upgradeBar": [
       "command",
@@ -10715,9 +10397,7 @@
       {
         "name": "Lando's X-8 Pistol",
         "keywords": [
-          {
-            "name": "Long Shot"
-          }
+          "Long Shot"
         ],
         "range": [
           1,
@@ -10757,22 +10437,14 @@
         "name": "Observe",
         "value": 2
       },
-      {
-        "name": "Bounty"
-      },
-      {
-        "name": "Charge"
-      },
+      "Bounty",
+      "Charge",
       {
         "name": "Direct",
         "value": "Corps Trooper Unit"
       },
-      {
-        "name": "Immune: Melee Pierce"
-      },
-      {
-        "name": "Interrogate"
-      }
+      "Immune: Melee Pierce",
+      "Interrogate"
     ],
     "upgradeBar": [
       "command",
@@ -10887,9 +10559,7 @@
         "name": "Direct",
         "value": "Corps Droid Trooper Unit"
       },
-      {
-        "name": "Exemplar"
-      }
+      "Exemplar"
     ],
     "upgradeBar": [
       "command",
@@ -10950,9 +10620,7 @@
     "faction": "republic",
     "cost": 60,
     "keywords": [
-      {
-        "name": "Bolster"
-      },
+      "Bolster",
       {
         "name": "Direct",
         "value": "Corps Clone Trooper"
@@ -11338,15 +11006,9 @@
         "name": "Guidance",
         "value": "Trooper"
       },
-      {
-        "name": "Ataru Mastery"
-      },
-      {
-        "name": "Deflect"
-      },
-      {
-        "name": "Immune: Pierce"
-      },
+      "Ataru Mastery",
+      "Deflect",
+      "Immune: Pierce",
       {
         "name": "Master of the Force",
         "value": 2
@@ -11392,9 +11054,7 @@
       {
         "name": "Force Wave",
         "keywords": [
-          {
-            "name": "Blast"
-          },
+          "Blast",
           "Suppressive"
         ],
         "range": [
@@ -11437,12 +11097,8 @@
         "name": "Hover",
         "value": "Ground"
       },
-      {
-        "name": "Reposition"
-      },
-      {
-        "name": "Transport"
-      },
+      "Reposition",
+      "Transport",
       {
         "name": "Weak Point",
         "value": "2: Rear"
@@ -11498,18 +11154,10 @@
         "name": "Hover",
         "value": "Air 2"
       },
-      {
-        "name": "Immune: Blast"
-      },
-      {
-        "name": "Immune: Melee"
-      },
-      {
-        "name": "Immune: Range 1 Weapons"
-      },
-      {
-        "name": "Transport"
-      }
+      "Immune: Blast",
+      "Immune: Melee",
+      "Immune: Range 1 Weapons",
+      "Transport"
     ],
     "upgradeBar": [
       "pilot",
@@ -11964,12 +11612,8 @@
     "faction": "republic",
     "cost": 72,
     "keywords": [
-      {
-        "name": "Indomitable"
-      },
-      {
-        "name": "Scale"
-      },
+      "Indomitable",
+      "Scale",
       {
         "name": "Sharpshooter",
         "value": 1
@@ -12033,18 +11677,10 @@
         "name": "Agile",
         "value": 1
       },
-      {
-        "name": "Charge"
-      },
-      {
-        "name": "Duelist"
-      },
-      {
-        "name": "Indomitable"
-      },
-      {
-        "name": "Scale"
-      }
+      "Charge",
+      "Duelist",
+      "Indomitable",
+      "Scale"
     ],
     "upgradeBar": [
       "command",
@@ -12147,12 +11783,8 @@
     "faction": "rebels",
     "cost": 72,
     "keywords": [
-      {
-        "name": "Indomitable"
-      },
-      {
-        "name": "Scale"
-      },
+      "Indomitable",
+      "Scale",
       {
         "name": "Sharpshooter",
         "value": 1
@@ -12213,18 +11845,10 @@
     "faction": "republic",
     "cost": 69,
     "keywords": [
-      {
-        "name": "Charge"
-      },
-      {
-        "name": "Duelist"
-      },
-      {
-        "name": "Indomitable"
-      },
-      {
-        "name": "Scale"
-      }
+      "Charge",
+      "Duelist",
+      "Indomitable",
+      "Scale"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -12310,12 +11934,8 @@
         "name": "Reliable",
         "value": 2
       },
-      {
-        "name": "Scale"
-      },
-      {
-        "name": "Lethal"
-      }
+      "Scale",
+      "Lethal"
     ],
     "upgradeBar": [
       "training",
@@ -12498,23 +12118,17 @@
         "name": "AI",
         "value": "Dodge, Move"
       },
-      {
-        "name": "Charge"
-      },
+      "Charge",
       {
         "name": "Guardian",
         "value": "2: Commander"
       },
-      {
-        "name": "Immune: Melee Pierce"
-      },
+      "Immune: Melee Pierce",
       {
         "name": "Retinue",
         "value": "Commander"
       },
-      {
-        "name": "Unhindered"
-      }
+      "Unhindered"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -12576,15 +12190,9 @@
         "name": "Strategize",
         "value": 1
       },
-      {
-        "name": "Charge"
-      },
-      {
-        "name": "Exemplar"
-      },
-      {
-        "name": "Override"
-      },
+      "Charge",
+      "Exemplar",
+      "Override",
       {
         "name": "Sharpshooter",
         "value": 1
@@ -12670,12 +12278,8 @@
         "name": "Direct",
         "value": "AI Unit"
       },
-      {
-        "name": "Exemplar"
-      },
-      {
-        "name": "Reinforcements"
-      },
+      "Exemplar",
+      "Reinforcements",
       {
         "name": "Sharpshooter",
         "value": 1
@@ -12864,9 +12468,7 @@
       "Immune: Blast",
       "Immune: Melee",
       "Immune: Range 1 Weapons",
-      {
-        "name": "Reposition"
-      },
+      "Reposition",
       {
         "name": "Speeder",
         "value": 2
@@ -12954,18 +12556,10 @@
         "name": "Armor",
         "value": 3
       },
-      {
-        "name": "Climbing Vehicle"
-      },
-      {
-        "name": "Expert Climber"
-      },
-      {
-        "name": "Programmed"
-      },
-      {
-        "name": "Blast"
-      }
+      "Climbing Vehicle",
+      "Expert Climber",
+      "Programmed",
+      "Blast"
     ],
     "upgradeBar": [
       "protocol",
@@ -13244,15 +12838,9 @@
         "name": "Arsenal",
         "value": 2
       },
-      {
-        "name": "Programmed"
-      },
-      {
-        "name": "Reposition"
-      },
-      {
-        "name": "Transport"
-      },
+      "Programmed",
+      "Reposition",
+      "Transport",
       {
         "name": "Weak Point",
         "value": "1: Sides"
@@ -13261,15 +12849,9 @@
         "name": "Fixed",
         "value": "Front"
       },
-      {
-        "name": "Impact"
-      },
-      {
-        "name": "Ion"
-      },
-      {
-        "name": "Critical"
-      }
+      "Impact",
+      "Ion",
+      "Critical"
     ],
     "upgradeBar": [
       "protocol",
@@ -13298,11 +12880,11 @@
             "name": "Fixed",
             "value": "Front"
           },
-           {
+          {
             "name": "Impact",
             "value": 1
           },
-           {
+          {
             "name": "Ion",
             "value": 1
           }
@@ -13540,16 +13122,12 @@
         "name": "Mercenary",
         "value": "All"
       },
-      {
-        "name": "Self-Preservation"
-      },
+      "Self-Preservation",
       {
         "name": "Danger Sense",
         "value": 2
       },
-      {
-        "name": "Outmaneuver"
-      },
+      "Outmaneuver",
       {
         "name": "Independent",
         "value": "Dodge 1"
@@ -13629,9 +13207,7 @@
         "name": "Aid",
         "value": "Black Sun"
       },
-      {
-        "name": "Dauntless"
-      },
+      "Dauntless",
       {
         "name": "Independent",
         "value": "Aim 1"
@@ -13697,16 +13273,12 @@
         "name": "Mercenary",
         "value": "Empire, Separatists"
       },
-      {
-        "name": "Dauntless"
-      },
+      "Dauntless",
       {
         "name": "Precise",
         "value": 1
       },
-      {
-        "name": "Self-Preservation"
-      },
+      "Self-Preservation",
       {
         "name": "Independent",
         "value": "Aim 1"
@@ -13781,18 +13353,10 @@
         "name": "Jump",
         "value": 1
       },
-      {
-        "name": "Allies of Convenience"
-      },
-      {
-        "name": "Deflect"
-      },
-      {
-        "name": "Immune: Pierce"
-      },
-      {
-        "name": "Juyo Mastery"
-      },
+      "Allies of Convenience",
+      "Deflect",
+      "Immune: Pierce",
+      "Juyo Mastery",
       {
         "name": "Wound",
         "value": 1
@@ -13861,15 +13425,9 @@
         "name": "Jump",
         "value": 2
       },
-      {
-        "name": "Allies of Convenience"
-      },
-      {
-        "name": "Compel"
-      },
-      {
-        "name": "Impervious"
-      },
+      "Allies of Convenience",
+      "Compel",
+      "Impervious",
       {
         "name": "Sharpshooter",
         "value": 1
@@ -13955,9 +13513,7 @@
         "name": "Defend",
         "value": 1
       },
-      {
-        "name": "Impervious"
-      },
+      "Impervious",
       {
         "name": "Independent",
         "value": "Aim 1"
@@ -14725,9 +14281,7 @@
         "name": "Independent",
         "value": "Aim 1 or Dodge 1"
       },
-      {
-        "name": "Reinforcements"
-      },
+      "Reinforcements",
       {
         "name": "Speeder",
         "value": 1
@@ -14820,9 +14374,7 @@
         "name": "Special Issue",
         "value": "Blizzard Force"
       },
-      {
-        "name": "Unhindered"
-      }
+      "Unhindered"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -15099,12 +14651,8 @@
         "name": "Armor",
         "value": 1
       },
-      {
-        "name": "Bounty"
-      },
-      {
-        "name": "Impervious"
-      },
+      "Bounty",
+      "Impervious",
       {
         "name": "Sharpshooter",
         "value": 1
@@ -15200,15 +14748,9 @@
         "name": "Armor",
         "value": 1
       },
-      {
-        "name": "Gunslinger"
-      },
-      {
-        "name": "Impervious"
-      },
-      {
-        "name": "Programmed"
-      },
+      "Gunslinger",
+      "Impervious",
+      "Programmed",
       {
         "name": "Sharpshooter",
         "value": 1
@@ -15301,12 +14843,8 @@
         "name": "Arsenal",
         "value": 2
       },
-      {
-        "name": "Bounty"
-      },
-      {
-        "name": "Impervious"
-      },
+      "Bounty",
+      "Impervious",
       {
         "name": "Independent",
         "value": "Aim 1 and Dodge 1"
@@ -15412,16 +14950,12 @@
         "name": "Arsenal",
         "value": 2
       },
-      {
-        "name": "Impervious"
-      },
+      "Impervious",
       {
         "name": "Independent",
         "value": "Standby"
       },
-      {
-        "name": "Sentinel"
-      },
+      "Sentinel",
       {
         "name": "Sharpshooter",
         "value": 1
@@ -15496,15 +15030,9 @@
         "name": "Armor",
         "value": 3
       },
-      {
-        "name": "Plodding"
-      },
-      {
-        "name": "Unconcerned"
-      },
-      {
-        "name": "Unstoppable"
-      }
+      "Plodding",
+      "Unconcerned",
+      "Unstoppable"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -15818,9 +15346,7 @@
     "isUnique": true,
     "cost": 105,
     "keywords": [
-      {
-        "name": "Observe"
-      },
+      "Observe",
       {
         "name": "Jump",
         "value": 1
@@ -15989,9 +15515,7 @@
         "name": "Entourage",
         "value": "Dark Troopers"
       },
-      {
-        "name": "Ruthless"
-      },
+      "Ruthless",
       {
         "name": "Sharpshooter",
         "value": 1
@@ -16220,25 +15744,15 @@
         "name": "Jump",
         "value": 2
       },
-      {
-        "name": "Deflect"
-      },
+      "Deflect",
       {
         "name": "Independent",
         "value": "Dodge 1"
       },
-      {
-        "name": "Indomitable"
-      },
-      {
-        "name": "Immune: Pierce"
-      },
-      {
-        "name": "Jar'Kai Mastery"
-      },
-      {
-        "name": "Relentless"
-      }
+      "Indomitable",
+      "Immune: Pierce",
+      "Jar'Kai Mastery",
+      "Relentless"
     ],
     "upgradeBar": [
       "force",
@@ -16392,22 +15906,14 @@
         "name": "Jump",
         "value": 2
       },
-      {
-        "name": "Charge"
-      },
+      "Charge",
       {
         "name": "Defend",
         "value": 1
       },
-      {
-        "name": "Deflect"
-      },
-      {
-        "name": "Immune: Pierce"
-      },
-      {
-        "name": "Jar'Kai Mastery"
-      }
+      "Deflect",
+      "Immune: Pierce",
+      "Jar'Kai Mastery"
     ],
     "upgradeBar": [
       "force",
@@ -16469,15 +15975,9 @@
         "name": "Independent",
         "value": "Dodge 1"
       },
-      {
-        "name": "Low Profile"
-      },
-      {
-        "name": "Nimble"
-      },
-      {
-        "name": "Relentless"
-      },
+      "Low Profile",
+      "Nimble",
+      "Relentless",
       {
         "name": "Scout",
         "value": 1
@@ -16486,9 +15986,7 @@
         "name": "Scouting Party",
         "value": 2
       },
-      {
-        "name": "Unhindered"
-      }
+      "Unhindered"
     ],
     "upgradeBar": [
       "training",
@@ -16637,9 +16135,7 @@
         "name": "Inspire",
         "value": 3
       },
-      {
-        "name": "Incognito"
-      },
+      "Incognito",
       {
         "name": "Weak Point",
         "value": "1: Rear"
@@ -16731,12 +16227,8 @@
         "name": "Mercenary",
         "value": "Rebels"
       },
-      {
-        "name": "Low Profile"
-      },
-      {
-        "name": "Unhindered"
-      }
+      "Low Profile",
+      "Unhindered"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -16963,9 +16455,7 @@
         "name": "Independent",
         "value": "Surge 1"
       },
-      {
-        "name": "Low Profile"
-      },
+      "Low Profile",
       {
         "name": "Target",
         "value": 1
@@ -17002,9 +16492,7 @@
       {
         "name": "Slings",
         "keywords": [
-          {
-            "name": "Primitive"
-          }
+          "Primitive"
         ],
         "range": [
           1,
@@ -17041,19 +16529,13 @@
     "isUnique": true,
     "cost": 40,
     "keywords": [
-      {
-        "name": "Master Storyteller"
-      },
+      "Master Storyteller",
       {
         "name": "Compel",
         "value": "Ewok Trooper"
       },
-      {
-        "name": "Infiltrate"
-      },
-      {
-        "name": "Divine Influence"
-      }
+      "Infiltrate",
+      "Divine Influence"
     ],
     "upgradeBar": [],
     "stats": {
@@ -17202,12 +16684,8 @@
         "name": "Inspire",
         "value": 2
       },
-      {
-        "name": "Low Profile"
-      },
-      {
-        "name": "Nimble"
-      }
+      "Low Profile",
+      "Nimble"
     ],
     "upgradeBar": [
       "command",
@@ -17228,9 +16706,7 @@
       {
         "name": "Staff",
         "keywords": [
-          {
-            "name": "Suppressive"
-          }
+          "Suppressive"
         ],
         "range": [
           0
@@ -17443,19 +16919,13 @@
     "isUnique": true,
     "cost": 105,
     "keywords": [
-      {
-        "name": "Dauntless"
-      },
-      {
-        "name": "Block"
-      },
+      "Dauntless",
+      "Block",
       {
         "name": "Enrage",
         "value": 2
       },
-      {
-        "name": "Immune: Pierce"
-      }
+      "Immune: Pierce"
     ],
     "upgradeBar": [
       "training",
@@ -17533,26 +17003,18 @@
     "isUnique": true,
     "cost": 110,
     "keywords": [
-      {
-        "name": "Jump"
-      },
+      "Jump",
       {
         "name": "Associate",
         "value": "Fifth Brother"
       },
-      {
-        "name": "Block"
-      },
-      {
-        "name": "Charge"
-      },
+      "Block",
+      "Charge",
       {
         "name": "Disciplined",
         "value": 1
       },
-      {
-        "name": "Interrogate"
-      }
+      "Interrogate"
     ],
     "upgradeBar": [
       "training",
@@ -17627,9 +17089,7 @@
     "isUnique": true,
     "cost": 80,
     "keywords": [
-      {
-        "name": "Jump"
-      },
+      "Jump",
       {
         "name": "Compel",
         "value": "Corps Separatist Alliance Trooper"
@@ -17638,12 +17098,8 @@
         "name": "Entourage",
         "value": "B2 Super Battle Droids"
       },
-      {
-        "name": "Override"
-      },
-      {
-        "name": "Weighed Down"
-      }
+      "Override",
+      "Weighed Down"
     ],
     "upgradeBar": [
       "command",
@@ -17715,9 +17171,7 @@
         "name": "Cover",
         "value": 1
       },
-      {
-        "name": "Death from Above"
-      },
+      "Death from Above",
       {
         "name": "Direct",
         "value": "Geonosian Warriors"
@@ -17726,12 +17180,8 @@
         "name": "Retinue",
         "value": "Poggle the Lesser"
       },
-      {
-        "name": "Scale"
-      },
-      {
-        "name": "Weighed Down"
-      }
+      "Scale",
+      "Weighed Down"
     ],
     "upgradeBar": [
       "training",
@@ -17768,9 +17218,7 @@
       {
         "name": "Sun Fac's Sonic Carbine",
         "keywords": [
-          {
-            "name": "Suppressive"
-          }
+          "Suppressive"
         ],
         "range": [
           1,
@@ -17805,15 +17253,9 @@
         "name": "Jump",
         "value": 3
       },
-      {
-        "name": "Scale"
-      },
-      {
-        "name": "Death from Above"
-      },
-      {
-        "name": "Weighed Down"
-      }
+      "Scale",
+      "Death from Above",
+      "Weighed Down"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -18053,19 +17495,13 @@
         "name": "AI",
         "value": "Dodge"
       },
-      {
-        "name": "Charge"
-      },
-      {
-        "name": "Immune: Melee Pierce"
-      },
+      "Charge",
+      "Immune: Melee Pierce",
       {
         "name": "Special Issue",
         "value": "Experimental Droids"
       },
-      {
-        "name": "Unhindered"
-      }
+      "Unhindered"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -18140,12 +17576,8 @@
         "name": "Direct",
         "value": "Corps Trooper Unit"
       },
-      {
-        "name": "Programmed"
-      },
-      {
-        "name": "Reposition"
-      },
+      "Programmed",
+      "Reposition",
       {
         "name": "Special Issue",
         "value": "Experimental Droids"
@@ -18232,9 +17664,7 @@
     "faction": "republic",
     "cost": 57,
     "keywords": [
-      {
-        "name": "Attack Run"
-      },
+      "Attack Run",
       {
         "name": "Cover",
         "value": 2
@@ -18242,9 +17672,7 @@
       "Immune: Blast",
       "Immune: Melee",
       "Immune: Range 1 Weapons",
-      {
-        "name": "Reposition"
-      },
+      "Reposition",
       {
         "name": "Speeder",
         "value": 2
@@ -18302,15 +17730,9 @@
         "name": "Armor",
         "value": 1
       },
-      {
-        "name": "Indomitable"
-      },
-      {
-        "name": "Scale"
-      },
-      {
-        "name": "Spur"
-      }
+      "Indomitable",
+      "Scale",
+      "Spur"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -18377,22 +17799,14 @@
         "name": "Equip",
         "value": "Hunter, Wrecker, Echo, Tech, Crosshair"
       },
-      {
-        "name": "Impervious"
-      },
-      {
-        "name": "Scale"
-      },
-      {
-        "name": "Steady"
-      },
+      "Impervious",
+      "Scale",
+      "Steady",
       {
         "name": "Sharpshooter",
         "value": 1
       },
-      {
-        "name": "We're Not Regs"
-      }
+      "We're Not Regs"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -18455,16 +17869,12 @@
     "faction": "republic",
     "cost": 90,
     "keywords": [
-      {
-        "name": "Complete the Mission"
-      },
+      "Complete the Mission",
       {
         "name": "Equip",
         "value": "Katarn Pattern Armor"
       },
-      {
-        "name": "Infiltrate"
-      },
+      "Infiltrate",
       {
         "name": "Recharge",
         "value": 1
@@ -18510,9 +17920,7 @@
       {
         "name": "DC-17m ICWS Blaster Carbine",
         "keywords": [
-          {
-            "name": "Suppressive"
-          }
+          "Suppressive"
         ],
         "range": [
           1,
@@ -18628,16 +18036,12 @@
     "isUniqueTitle": true,
     "cost": 105,
     "keywords": [
-      {
-        "name": "Complete the Mission"
-      },
+      "Complete the Mission",
       {
         "name": "Equip",
         "value": "Katarn Pattern Armor"
       },
-      {
-        "name": "Infiltrate"
-      },
+      "Infiltrate",
       {
         "name": "Independent",
         "value": "Recover"
@@ -18688,9 +18092,7 @@
       {
         "name": "DC-17m ICWS Blaster Carbine",
         "keywords": [
-          {
-            "name": "Suppressive"
-          }
+          "Suppressive"
         ],
         "range": [
           1,
@@ -18827,8 +18229,8 @@
         "name": "Mercenary",
         "value": "Rebels"
       },
-      { 
-        "name":"Equip",
+      {
+        "name": "Equip",
         "value": "Hunter, Wrecker, Echo, Tech"
       },
       "Impervious",
@@ -19831,12 +19233,8 @@
     "cost": 0,
     "imageName": "Clone Trooper Marksmen.webp",
     "keywords": [
-      {
-        "name": "Prepared Position"
-      },
-      {
-        "name": "Marksman"
-      }
+      "Prepared Position",
+      "Marksman"
     ],
     "upgradeBar": [],
     "stats": {
@@ -19864,10 +19262,7 @@
       {
         "name": "DC-15A Blaster Rifle",
         "keywords": [
-          {
-            "name": "Long Shot",
-            "value": ""
-          }
+          "Long Shot"
         ],
         "range": [
           1,
@@ -19903,19 +19298,13 @@
         "name": "Arsenal",
         "value": "X"
       },
-      {
-        "name": "Disengage"
-      },
+      "Disengage",
       {
         "name": "Independent",
         "value": "Dodge X"
       },
-      {
-        "name": "My Mood Is Based On Profit"
-      },
-      {
-        "name": "Nimble"
-      },
+      "My Mood Is Based On Profit",
+      "Nimble",
       {
         "name": "Reliable",
         "value": "X"
@@ -19951,10 +19340,7 @@
       {
         "name": "Hondo's Blaster",
         "keywords": [
-          {
-            "name": "Versatile",
-            "value": ""
-          }
+          "Versatile"
         ],
         "range": [
           1,
