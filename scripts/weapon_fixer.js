@@ -4,7 +4,7 @@
 
 import fs from "fs-extra";
 import appKeywords from "../src/constants/keywords.js";
-import cards, {cardIdsByType} from '../src/constants/cards.js'
+import cards, {cardIdsByType} from './script_cards.js'
 import _ from 'lodash';
 
 const args = process.argv.slice(2);
@@ -15,6 +15,25 @@ async function cardsJsonCheck() {
   const cardIds = Object.getOwnPropertyNames(cards);
   const cardTypes = Object.getOwnPropertyNames(cardIdsByType);
 
+  // modifies obj to remove empty keywords
+  const fixKeywords = (obj) => {
+    const keywords = obj.keywords;
+
+    if(!keywords || !Array.isArray(keywords)){
+      return;
+    }
+
+    for(let i =0; i< keywords.length; i++){
+      let kw = keywords[i];
+
+      if(kw.name == '' && kw.value == ''){
+        obj.keywords.splice(i, 1);
+        i--;
+        console.log('fix keyword for ', obj.name);
+      }
+    }
+  }
+
   const fixWeapon= (id)=>{
     const c = cards[id];
 
@@ -23,7 +42,16 @@ async function cardsJsonCheck() {
     if(weapons){
       weapons.forEach(w=>{
 
+        fixKeywords(w);
         let range = w.range;
+        if(Array.isArray(range)){
+          return;
+        }
+
+        if(!range || !range.split){
+          console.log('no range for weapon', w.id, w.name);
+          return;
+        }
         let newRange = range.split('-').map(r=>parseInt(r));
 
         if(w.type === 'a'){
@@ -37,27 +65,28 @@ async function cardsJsonCheck() {
           })
 
         w.range = newRange
-
-
       })
     }
 
   }
 
   cardIdsByType.unit.forEach(id=>{
+    const c = cards[id];
+    fixKeywords(c);
 
+    fixWeapon(id);
+  })
+
+  cardIdsByType.upgrade.forEach(id=>{
+    const c = cards[id];
+    fixKeywords(c);
     fixWeapon(id);
     
   })
 
-    cardIdsByType.upgrade.forEach(id=>{
-
-    fixWeapon(id);
-    
-  })
-
-    cardIdsByType.command.forEach(id=>{
-
+  cardIdsByType.command.forEach(id=>{
+    const c = cards[id];
+    fixKeywords(c);
     fixWeapon(id);
     
   })

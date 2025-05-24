@@ -243,8 +243,7 @@
     "weapons": [
       {
         "name": "Martial Arts",
-        "keywords": [
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -256,8 +255,7 @@
       },
       {
         "name": "Leia's Blaster",
-        "keywords": [
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -423,7 +421,7 @@
             "name": "Impact",
             "value": 2
           },
-           {
+          {
             "name": "Pierce",
             "value": 1
           }
@@ -766,8 +764,7 @@
     "weapons": [
       {
         "name": "Unarmed",
-        "keywords": [
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -779,8 +776,7 @@
       },
       {
         "name": "A-200 Blaster Rifle",
-        "keywords": [
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -831,10 +827,10 @@
     "weapons": [
       {
         "name": "DH-17 Blaster Pistol",
-        "keywords": [
-        ],
+        "keywords": [],
         "range": [
-          0,2
+          0,
+          2
         ],
         "dice": {
           "r": 0,
@@ -2199,12 +2195,7 @@
     "weapons": [
       {
         "name": "Close Quarters Combat",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -2216,12 +2207,7 @@
       },
       {
         "name": "SE-14a Light Blaster",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -2234,12 +2220,7 @@
       },
       {
         "name": "E-11D Blaster Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -2295,12 +2276,7 @@
     "weapons": [
       {
         "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -2312,12 +2288,7 @@
       },
       {
         "name": "Blaster Rifles",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -2392,12 +2363,7 @@
     "weapons": [
       {
         "name": "EC-17 Hold-Out Blaster",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -2484,12 +2450,7 @@
     "weapons": [
       {
         "name": "Fence-Cutting Blades",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           null
         ],
@@ -4775,12 +4736,7 @@
     "weapons": [
       {
         "name": "E-22 Blaster Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -5059,12 +5015,7 @@
     "weapons": [
       {
         "name": "Advanced Combat Training",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -5076,12 +5027,7 @@
       },
       {
         "name": "Dual DC-17 Hand Blasters",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -5139,12 +5085,7 @@
     "weapons": [
       {
         "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -5156,12 +5097,7 @@
       },
       {
         "name": "DC-15A Blaster Carbine",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -5237,12 +5173,7 @@
       },
       {
         "name": "Arm Cannons",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -5782,12 +5713,7 @@
     "weapons": [
       {
         "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -5799,12 +5725,7 @@
       },
       {
         "name": "A-280 Blaster Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -5942,12 +5863,7 @@
     "weapons": [
       {
         "name": "Bludgeon",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -5959,12 +5875,7 @@
       },
       {
         "name": "E-5 Blaster Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -6151,12 +6062,7 @@
       },
       {
         "name": "DL-44 Blaster Pistol",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -6291,12 +6197,7 @@
     "weapons": [
       {
         "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -6775,12 +6676,7 @@
     "weapons": [
       {
         "name": "DC-15A Blaster Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -6980,12 +6876,7 @@
     "weapons": [
       {
         "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -6997,12 +6888,7 @@
       },
       {
         "name": "A-280 Blaster Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -8069,12 +7955,7 @@
     "weapons": [
       {
         "name": "Advanced Combat Training",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -8148,12 +8029,7 @@
     "weapons": [
       {
         "name": "Martial Arts",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -8543,12 +8419,7 @@
     "weapons": [
       {
         "name": "Martial Arts",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -8560,12 +8431,7 @@
       },
       {
         "name": "Padme's Blaster",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -8648,12 +8514,7 @@
     "weapons": [
       {
         "name": "Martial Arts",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -8758,12 +8619,7 @@
     "weapons": [
       {
         "name": "DC-17 Hand Blasters",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -8847,12 +8703,7 @@
     "weapons": [
       {
         "name": "DC-17 Hand Blasters",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -8936,12 +8787,7 @@
     "weapons": [
       {
         "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -8953,12 +8799,7 @@
       },
       {
         "name": "Commando E-5 Blaster",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -9040,12 +8881,7 @@
     "weapons": [
       {
         "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -9057,12 +8893,7 @@
       },
       {
         "name": "Commando E-5 Blaster",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -9917,12 +9748,7 @@
     "weapons": [
       {
         "name": "Combat Training",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -9934,12 +9760,7 @@
       },
       {
         "name": "Westar 35 Blaster Pistols",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -10011,12 +9832,7 @@
     "weapons": [
       {
         "name": "Combat Training",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -10028,12 +9844,7 @@
       },
       {
         "name": "Westar 35 Blaster Pistols",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -10312,12 +10123,7 @@
     "weapons": [
       {
         "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -10329,12 +10135,7 @@
       },
       {
         "name": "Special Forces E-11 Blaster Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -10400,12 +10201,7 @@
     "weapons": [
       {
         "name": "Close Quarters Combat",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -10417,12 +10213,7 @@
       },
       {
         "name": "Inferno Squad E-11 Blaster Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -10821,12 +10612,7 @@
     "weapons": [
       {
         "name": "Backup Plan",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -11032,12 +10818,7 @@
     "weapons": [
       {
         "name": "Bludgeon",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -11049,12 +10830,7 @@
       },
       {
         "name": "Blaster Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -11113,12 +10889,7 @@
     "weapons": [
       {
         "name": "Advanced Combat Training",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -11130,12 +10901,7 @@
       },
       {
         "name": "Commander's DC-15 Blaster Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -12133,12 +11899,7 @@
     "weapons": [
       {
         "name": "Combat Training",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -12150,12 +11911,7 @@
       },
       {
         "name": "X1 Carbine",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -12214,12 +11970,7 @@
     "weapons": [
       {
         "name": "Ancestral Weapon",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -12327,12 +12078,7 @@
     "weapons": [
       {
         "name": "Combat Training",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -12344,12 +12090,7 @@
       },
       {
         "name": "X1 Carbine",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -12406,12 +12147,7 @@
     "weapons": [
       {
         "name": "Ryyk Blade",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -12423,12 +12159,7 @@
       },
       {
         "name": "Kashyyyk Pistol",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -12698,12 +12429,7 @@
     "weapons": [
       {
         "name": "Electrostaff",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -12715,12 +12441,7 @@
       },
       {
         "name": "Precision Laser Dart",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -12873,12 +12594,7 @@
     "weapons": [
       {
         "name": "Combat Expertise",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -13066,12 +12782,7 @@
     "weapons": [
       {
         "name": "Pilot's Kashyyyk Pistol",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -13167,12 +12878,7 @@
     "weapons": [
       {
         "name": "Wicked Kick",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -13401,12 +13107,7 @@
     "weapons": [
       {
         "name": "DC-15 Blaster Rifles",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -13665,12 +13366,7 @@
     "weapons": [
       {
         "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -13682,12 +13378,7 @@
       },
       {
         "name": "Capo's P13 Long Blaster",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -13760,12 +13451,7 @@
     "weapons": [
       {
         "name": "Stun Baton",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -13777,12 +13463,7 @@
       },
       {
         "name": "P13 Long Blaster",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -13850,12 +13531,7 @@
     "weapons": [
       {
         "name": "Martial Arts",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -13867,12 +13543,7 @@
       },
       {
         "name": "Vigo's BH-4 Double Blaster",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -13937,12 +13608,7 @@
     "weapons": [
       {
         "name": "Close Quarters Combat",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -13954,12 +13620,7 @@
       },
       {
         "name": "BH-4 Double Blaster",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -14109,12 +13770,7 @@
     "weapons": [
       {
         "name": "Advanced Combat Training",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -14201,12 +13857,7 @@
     "weapons": [
       {
         "name": "Combat Expertise",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -14218,12 +13869,7 @@
       },
       {
         "name": "Westar-35 Blaster Pistols",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -14236,12 +13882,7 @@
       },
       {
         "name": "Galar-15 Blaster Carbine",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -14998,12 +14639,7 @@
       },
       {
         "name": "Heavy Blaster Pistol",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -15078,12 +14714,7 @@
     "weapons": [
       {
         "name": "Bludgeon",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -15095,12 +14726,7 @@
       },
       {
         "name": "E-11 Blaster Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -15410,12 +15036,7 @@
       },
       {
         "name": "Modified DLT-20A Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           4
@@ -15484,12 +15105,7 @@
     "weapons": [
       {
         "name": "Overpower",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -15519,12 +15135,7 @@
       },
       {
         "name": "Modified DLT-20A Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           4
@@ -15706,12 +15317,7 @@
     "weapons": [
       {
         "name": "Fett's Gaderffii Stick",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -15786,12 +15392,7 @@
     "weapons": [
       {
         "name": "Crushing Punch",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -15803,12 +15404,7 @@
       },
       {
         "name": "E-11D Blaster",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -16127,12 +15723,7 @@
     "weapons": [
       {
         "name": "Advanced Combat Training",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -16293,12 +15884,7 @@
     "weapons": [
       {
         "name": "Advanced Combat Training",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -17025,12 +16611,7 @@
     "weapons": [
       {
         "name": "Spear",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -17263,12 +16844,7 @@
     "weapons": [
       {
         "name": "Stones",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -17935,12 +17511,7 @@
     "weapons": [
       {
         "name": "Staff of Command",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -17952,12 +17523,7 @@
       },
       {
         "name": "Concealed Blaster",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           3
@@ -18113,12 +17679,7 @@
     "weapons": [
       {
         "name": "Spears",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -18130,12 +17691,7 @@
       },
       {
         "name": "Sonic Blasters",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -18376,12 +17932,7 @@
     "weapons": [
       {
         "name": "Electrostaff",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -18393,12 +17944,7 @@
       },
       {
         "name": "Precision Laser Dart",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -18568,12 +18114,7 @@
     "weapons": [
       {
         "name": "Pilot's Kashyyyk Pistol",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -18633,12 +18174,7 @@
     "weapons": [
       {
         "name": "Gription Boot Kick",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           null
         ],
@@ -18650,12 +18186,7 @@
       },
       {
         "name": "E-10R Blaster Rifle",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           4
@@ -18726,12 +18257,7 @@
     "weapons": [
       {
         "name": "Advanced Combat Training",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -18743,12 +18269,7 @@
       },
       {
         "name": "DC-17 Hand Blaster",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           1,
           2
@@ -18820,12 +18341,7 @@
     "weapons": [
       {
         "name": "Gauntlet Vibroblade",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -19003,12 +18519,7 @@
     "weapons": [
       {
         "name": "Gauntlet Vibroblade",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],
@@ -20182,12 +19693,7 @@
     "weapons": [
       {
         "name": "Unarmed",
-        "keywords": [
-          {
-            "name": "",
-            "value": ""
-          }
-        ],
+        "keywords": [],
         "range": [
           0
         ],

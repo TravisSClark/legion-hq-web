@@ -4,7 +4,7 @@
 
 import fs from "fs-extra";
 import appKeywords from "../src/constants/keywords.js";
-import cards, {cardIdsByType} from '../src/constants/cards.js'
+import cards, {cardIdsByType} from './script_cards.js'
 import _ from 'lodash';
 
 const args = process.argv.slice(2);
