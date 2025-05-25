@@ -8867,7 +8867,10 @@
     "imageName": "Echo ARC Marksman.webp",
     "keywords": [
       "Leader",
-      "Reliable"
+      {"name":"Reliable", "value":1},
+      {"name":"Critical", "value":1},
+      "Immune: Deflect",
+      {"name":"Lethal", "value":1}
     ],
     "requirements": [
       "AND",
