@@ -9,7 +9,7 @@ import {
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import keywords from 'constants/keywords';
 
-function KeywordsPanel({ keywords:cardKeywords, variant=null }) {
+function KeywordsPanel({ keywords:cardKeywords, variant="inherit" }) {
   if (!(cardKeywords instanceof Array)) return null;
   else if (cardKeywords.length === 0) return null;
   const columnContainerStyles = {
