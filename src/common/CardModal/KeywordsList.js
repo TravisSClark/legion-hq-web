@@ -2,28 +2,15 @@ import React from 'react';
 import {
   Divider,
   Typography,
-  ExpansionPanel,
-  ExpansionPanelSummary,
-  ExpansionPanelDetails
 } from '@material-ui/core';
-import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import keywords from 'constants/keywords';
 
-function KeywordsPanel({ keywords:cardKeywords, variant=null }) {
+function KeywordsList({ keywords:cardKeywords }) {
   if (!(cardKeywords instanceof Array)) return null;
   else if (cardKeywords.length === 0) return null;
-  const columnContainerStyles = {
-    display: 'flex',
-    flexDirection: 'column',
-    padding: '0px 24px 24px'
-  };
+  
   return (
     <React.Fragment>
-      <ExpansionPanel>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography variant={variant}>Keywords</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails style={columnContainerStyles}>
           {cardKeywords.map(kw => {
             let keyword = kw
             if(typeof keyword === "string"){
@@ -42,10 +29,8 @@ function KeywordsPanel({ keywords:cardKeywords, variant=null }) {
               <Divider />
             </div>)
           })}
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
     </React.Fragment>
   );
 };
 
-export default KeywordsPanel;
+export default KeywordsList;

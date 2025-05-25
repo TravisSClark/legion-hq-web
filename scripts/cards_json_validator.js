@@ -15,7 +15,7 @@ const keywordNames =  Object.getOwnPropertyNames(appKeywords);
 
 const doesKeywordNeedValue = {
   "Advanced Targeting": true,
-  "Agile": false,
+  "Agile": true,
   "AI": true,
   "Aid": true,
   "Allies of Convenience": false,
@@ -46,7 +46,7 @@ const doesKeywordNeedValue = {
   "Demoralize": true,
   "Detachment": true,
   "Direct": true,
-  "Disciplined": false,
+  "Disciplined": true,
   "Disengage": false,
   "Distract": false,
   "Divine Influence": false,
@@ -63,7 +63,7 @@ const doesKeywordNeedValue = {
   "Full Pivot": false,
   "Generator": true,
   "Guardian": true,
-  "Guidance": false,
+  "Guidance": true,
   "Gunslinger": false,
   "Heavy Weapon Team": false,
   "Hold the Line": false,
@@ -96,6 +96,7 @@ const doesKeywordNeedValue = {
   "Master of the Force": true,
   "Master Storyteller": false,
   "Mercenary": true,
+  "My Mood Is Based On Profit": false,
   "Nimble": false,
   "Observe": true,
   "One Step Ahead": false,
@@ -111,10 +112,10 @@ const doesKeywordNeedValue = {
   "Recharge": true,
   "Reinforcements": false,
   "Regenerate": true,
-  "Reliable": false,
+  "Reliable": true,
   "Relentless": false,
   "Reposition": false,
-  "Retinue": false,
+  "Retinue": true,
   "Ruthless": false,
   "Scale": false,
   "Scout": true,
@@ -128,7 +129,7 @@ const doesKeywordNeedValue = {
   "Shien Mastery": false,
   "Smoke": false,
   "Special Issue": true,
-  "Soresu Mastery": true,
+  "Soresu Mastery": false,
   "Speeder": true,
   "Spotter": true,
   "Spur": false,
@@ -137,7 +138,7 @@ const doesKeywordNeedValue = {
   "Strategize": true,
   "Tactical": true,
   "Take Cover": true,
-  "Teamwork": false,
+  "Teamwork": true,
   "Target": true,
   "Tempted": false,
   "Transport": false,
@@ -150,11 +151,12 @@ const doesKeywordNeedValue = {
   "We're Not Regs": false,
   "Wheel Mode": false,
   "Wound": true,
+
   "Area Weapon": false,
   "Arm": true,
   "Beam": true,
   "Blast": false,
-  "Critical": false,
+  "Critical": true,
   "Cumbersome": false,
   "Detonate": true,
   "Fixed": true,
@@ -175,6 +177,7 @@ const doesKeywordNeedValue = {
   "Suppressive": false,
   "Tow Cable": false,
   "Versatile": false,
+
   "Bane Tokens": false,
   "Here I Am": false,
   "Smoke and Mirrors": false,
@@ -259,18 +262,17 @@ function validateKeywords(c, keywords){
         );
         return;
       }
+    }
 
-      let cwVal = doesKeywordNeedValue[kwName]
-      if(cwVal == undefined){
-        console.log('no kwval entry for', kwName);
-        return;
-      } else{
-        if(cwVal && k.value == undefined){
-          console.log('kw needs value', '"'+c.cardName+'"', ' "'+kwName+'"')
-        }else if(!cwVal && k.value !=undefined){
-          console.log('found kw.value when not expecting one', c.cardName, kwName)
-        }
-
+    let cwVal = doesKeywordNeedValue[kwName]
+    if(cwVal == undefined){
+      console.log('no kwval entry for', kwName);
+      return;
+    } else{
+      if(cwVal && k.value == undefined){
+        console.log('kw needs value', '"'+c.cardName+'"', ' "'+kwName+'"')
+      }else if(!cwVal && k.value !=undefined){
+        console.log('found kw.value when not expecting one', c.cardName, kwName)
       }
 
     }

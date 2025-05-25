@@ -504,6 +504,10 @@ battlefield. The chosen unit may make a Speed-1 Move.",
 "Outmaneuver" : "A unit with the Outmaneuver keyword can spend Dodge tokens \
 to cancel CRIT results during the Apply Dodge and Cover step.",
 
+"My Mood Is Based On Profit":"(UNOFFICIAL - rules text not released) X values \
+ on this unit's card are equal to the number of pips on the Command Card you played this turn.\
+ (You may want to discuss/houserule with your opponent what a 0-pip card would do)",
+
 "Override" : "When an allied unit begins its Activation while within 5 of \
 a unit that has the Override keyword, the unit that has the \
 Override keyword may gain 1 Suppression token. If it does, the \

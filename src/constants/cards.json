@@ -1919,7 +1919,10 @@
     "cost": 48,
     "keywords": [
       "Low Profile",
-      "Scout",
+      {
+        "name": "Scout",
+        "value": 3
+      },
       {
         "name": "Sharpshooter",
         "value": 1
@@ -4313,7 +4316,10 @@
     "isUnique": true,
     "cost": 165,
     "keywords": [
-      "Jump",
+      {
+        "name": "Jump",
+        "value": 1
+      },
       "Charge",
       "Deflect",
       "Disengage",
@@ -7276,7 +7282,7 @@
     "keywords": [
       {
         "name": "Repair",
-        "value": "2 Capacity 2"
+        "value": "2: Capacity 2"
       },
       "Inconspicuous",
       "Infiltrate",
@@ -7339,8 +7345,10 @@
     "cost": 55,
     "imageName": "R2-D2 Independent Astromech.webp",
     "keywords": [
-      "Repair",
-      "Secret Mission",
+      {
+        "name": "Repair",
+        "value": "2: Capacity 2"
+      },      "Secret Mission",
       "Inconspicuous",
       "Suppressive"
     ],
@@ -8222,7 +8230,10 @@
     "isUnique": true,
     "cost": 60,
     "keywords": [
-      "Bolster",
+      {
+        "name": "Bolster",
+        "value": 2
+      },      
       {
         "name": "Agile",
         "value": 1
@@ -9243,12 +9254,16 @@
     "cost": 60,
     "imageName": "AT-RT Rep.webp",
     "keywords": [
-      "Armor",
+      {
+        "name": "Armor",
+        "value": 2
+      },
       "Climbing Vehicle",
       "Expert Climber",
-      "Scout",
-      "Impact",
-      "Critical"
+      {
+        "name": "Scout",
+        "value": 1
+      }    
     ],
     "upgradeBar": [
       "hardpoint",
@@ -9548,18 +9563,6 @@
       "defsurge": "b"
     },
     "weapons": [
-      {
-        "name": "Combat Training",
-        "keywords": [],
-        "range": [
-          0
-        ],
-        "dice": {
-          "r": 0,
-          "b": 1,
-          "w": 1
-        }
-      },
       {
         "name": "Westar 35 Blaster Pistols",
         "keywords": [],
@@ -10620,10 +10623,13 @@
     "faction": "republic",
     "cost": 60,
     "keywords": [
-      "Bolster",
+      {
+        "name": "Bolster",
+        "value": 2
+      },     
       {
         "name": "Direct",
-        "value": "Corps Clone Trooper"
+        "value": "Corps Clone Trooper Unit"
       },
       {
         "name": "Sharpshooter",
@@ -11215,9 +11221,18 @@
     "cost": 100,
     "imageName": "LAAT Patrol Transport R.webp",
     "keywords": [
-      "Armor",
-      "Arsenal",
-      "Cover",
+      {
+        "name": "Armor",
+        "value": 5
+      },
+      {
+        "name": "Arsenal",
+        "value": 2
+      },
+      {
+        "name": "Cover",
+        "value": 1
+      },
       {
         "name": "Hover",
         "value": "Air 2"
@@ -11934,8 +11949,7 @@
         "name": "Reliable",
         "value": 2
       },
-      "Scale",
-      "Lethal"
+      "Scale"
     ],
     "upgradeBar": [
       "training",
@@ -12848,10 +12862,7 @@
       {
         "name": "Fixed",
         "value": "Front"
-      },
-      "Impact",
-      "Ion",
-      "Critical"
+      }
     ],
     "upgradeBar": [
       "protocol",
@@ -14169,7 +14180,10 @@
     "cost": 65,
     "imageName": "A-A5 Speeder Truck M.webp",
     "keywords": [
-      "Armor",
+      {
+        "name": "Armor",
+        "value": 5
+      },      
       {
         "name": "Hover",
         "value": "Ground"
@@ -14896,10 +14910,7 @@
             "name": "Lethal",
             "value": 1
           },
-          {
-            "name": "Long Shot",
-            "value": 1
-          },
+         "Long Shot",
           "Versatile"
         ],
         "range": [
@@ -15346,8 +15357,10 @@
     "isUnique": true,
     "cost": 105,
     "keywords": [
-      "Observe",
       {
+        "name": "Observe",
+        "value": 2
+      },      {
         "name": "Jump",
         "value": 1
       },
@@ -17003,7 +17016,10 @@
     "isUnique": true,
     "cost": 110,
     "keywords": [
-      "Jump",
+      {
+        "name": "Jump",
+        "value": 1
+      },      
       {
         "name": "Associate",
         "value": "Fifth Brother"
@@ -17014,6 +17030,7 @@
         "name": "Disciplined",
         "value": 1
       },
+      "Immune: Pierce",
       "Interrogate"
     ],
     "upgradeBar": [
@@ -17089,10 +17106,12 @@
     "isUnique": true,
     "cost": 80,
     "keywords": [
-      "Jump",
       {
+        "name": "Jump",
+        "value": 2
+      },      {
         "name": "Compel",
-        "value": "Corps Separatist Alliance Trooper"
+        "value": "Corps Separatist Trooper"
       },
       {
         "name": "Entourage",
@@ -18236,7 +18255,10 @@
       "Impervious",
       "Scale",
       "Steady",
-      "Sharpshooter",
+      {
+        "name": "Sharpshooter",
+        "value": 1
+      },      
       "We're Not Regs",
       "Fire Support"
     ],
@@ -18317,10 +18339,14 @@
     "imageName": "Rebel Sleeper Cell.webp",
     "keywords": [
       "Nimble",
-      "Scout",
-      "Tactical",
-      "Impact",
-      "Suppressive"
+      {
+        "name": "Scout",
+        "value": 2
+      },
+      {
+        "name": "Tactical",
+        "value": 1
+      }
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -18337,7 +18363,44 @@
       "speed": 2,
       "hitsurge": "h",
       "defsurge": "b"
-    }
+    },
+    "weapons":[
+      {
+        "name": "Det Packs",
+        "keywords": [
+          {"name":"Impact", "value":1}
+        ],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      },
+       {
+        "name": "Blaster Pistols",
+        "keywords": [
+          "Suppressive"
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 1
+        }
+      },
+       {
+        "name": "Blaster Pistols",
+        "keywords": [
+        ],
+        "range": [1,2],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ]
   },
   "xz": {
     "id": "xz",
@@ -18395,9 +18458,7 @@
       {
         "name": "Scouting Party",
         "value": 1
-      },
-      "Impact",
-      "Pierce"
+      }
     ],
     "upgradeBar": [
       "protocol",
@@ -18969,10 +19030,15 @@
     "cost": 65,
     "imageName": "Aqua Droids.webp",
     "keywords": [
-      "AI",
-      "Armor",
-      "Infiltrate",
-      "Impact"
+      {
+        "name": "AI",
+        "value": "Attack, Move"
+      },
+      {
+        "name": "Armor",
+        "value": 2
+      },
+      "Infiltrate"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -18986,7 +19052,37 @@
       "speed": 1,
       "hitsurge": "h",
       "defsurge": "b"
-    }
+    },
+    "weapons":[
+      {
+        "name": "Crushing Punch",
+        "keywords": [
+          {"name":"Impact", "value":1}
+        ],
+        "range": [
+          0
+        ],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      },
+      {
+        "name": "Laser Cannon",
+        "keywords": [
+        ],
+        "range": [
+          1,
+          3
+        ],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
   },
   "Ax": {
     "id": "Ax",
@@ -19014,8 +19110,14 @@
     "cost": 66,
     "imageName": "ARF Troopers.webp",
     "keywords": [
-      "Observe",
-      "Scout",
+      {
+        "name": "Observe",
+        "value": 2
+      },
+      {
+        "name": "Scout",
+        "value": 1
+      },
       "Low Profile",
       "Unhindered"
     ],
@@ -19035,7 +19137,37 @@
       "speed": 2,
       "hitsurge": "",
       "defsurge": ""
-    }
+    },
+    "weapons":[
+      {
+        "name": "Unarmed",
+        "keywords": [
+        ],
+        "range": [
+          0
+        ],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      },
+      {
+        "name": "DC-15A Blaster Rifle",
+        "keywords": [
+        ],
+        "range": [
+          1,
+          4
+        ],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      }
+
+    ]
   },
   "Az": {
     "id": "Az",
@@ -19117,7 +19249,10 @@
       },
       "Deflect",
       "Immune: Pierce",
-      "Independent",
+      {
+        "name": "Independent",
+        "value": "Recover"
+      },      
       {
         "name": "Scout",
         "value": 1

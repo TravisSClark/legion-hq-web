@@ -13,6 +13,7 @@ import cards from "constants/cards";
 import ImagePanel from "./ImagePanel";
 import KeywordsPanel from "./KeywordsPanel";
 import HistoryPanel from "./HistoryPanel";
+import WeaponsPanel from "./WeaponsPanel";
 
 function CardModal({ id, isOpen, handleClose }) {
   const theme = useTheme();
@@ -33,10 +34,11 @@ function CardModal({ id, isOpen, handleClose }) {
       )}
       <DialogContent style={{ padding: 8 }}>
         <ImagePanel card={card} />
-        {["unit", "battle"].includes(card.cardType) && (
+        <KeywordsPanel keywords={card.keywords} />
+        <WeaponsPanel weapons={card.weapons}/>
+         {["unit", "battle"].includes(card.cardType) && (
           <ImagePanel card={card} extraCardImage={true} />
         )}
-        <KeywordsPanel card={card} />
         {card.history && <HistoryPanel history={card.history.reverse()} />}
       </DialogContent>
       {isFullscreen && (
