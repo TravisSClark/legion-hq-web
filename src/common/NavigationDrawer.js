@@ -56,7 +56,7 @@ function NavigationDrawer() {
       }
     });
   }
-  const { currentList } = useContext(ListContext);
+  // const { currentList } = useContext(ListContext);
   useEffect(() => {
     if (userId) fetchUserLists(userId);
   }, [userId]);
