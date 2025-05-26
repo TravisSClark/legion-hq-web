@@ -60,7 +60,7 @@ function isUniqueCard(card){
   return card.isUnique || card.isUniqueTitle;
 }
 
-function TextCardHeader({ card, handleClick, handleExpandClick }) {
+function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand }) {
   const { displayName, cardName, cardType, cardSubtype } = card;
   const{handleCardZoom} = useContext(ListContext);
 
@@ -87,9 +87,9 @@ function TextCardHeader({ card, handleClick, handleExpandClick }) {
   const action = (
     <div>
     
-    <IconButton size="medium" onClick={handleExpandClick} style={{ margin: 8 }}>
+     {!hideExpand(card) && <IconButton size="medium" onClick={handleExpandClick} style={{ margin: 8 }}>
       <ExpandMoreIcon />
-    </IconButton>
+    </IconButton>}
     <IconButton size="medium" onClick={handleClick} style={{ margin: 8 }}>
       <AddIcon />
     </IconButton>
@@ -262,12 +262,16 @@ function TextCard({ card, handleClick, handleCardZoom, isExpanded:expandAtStart 
   const chipSize = 'small';
   const classes = useStyles();
   // default to open
-  const [isExpanded, setIsExpanded] = React.useState(expandAtStart !== undefined ? expandAtStart: true);
+  const [isExpanded, setIsExpanded] = React.useState(expandAtStart !== undefined ? expandAtStart: !hideExpand(card));
   const handleExpandClick = () => setIsExpanded(!isExpanded);
+
+  const hideExpand = c => c.cardType !== 'unit' && c.cardType !== 'upgrade' && !(c.keywords?.length)
 
   let cardContents = null;
   let showActions = true;
-  let header = <TextCardHeader card={card} handleClick={handleClick} handleExpandClick={handleExpandClick}/>;
+  let header = (<TextCardHeader hideExpand={hideExpand} 
+      card={card} handleClick={handleClick} handleExpandClick={handleExpandClick}
+  />);
 
   switch(card.cardType){
     case 'unit':
@@ -287,17 +291,11 @@ function TextCard({ card, handleClick, handleCardZoom, isExpanded:expandAtStart 
       );
       break;
     case 'command':
-      cardContents = (
-        <div>
-        </div>
-      );
+      cardContents = null;
       showActions = false;
       break;
     case 'battle':
-      cardContents = (
-        <div>
-        </div>
-      );
+      cardContents = null;
       break;
     default:
       cardContents = (
@@ -314,11 +312,9 @@ function TextCard({ card, handleClick, handleCardZoom, isExpanded:expandAtStart 
 
           {cardContents}
           
-          {card.keywords.length > 0 && (
             <CardContent style={{ padding: 8 }}>
               <KeywordChips size={chipSize} keywords={card.keywords} />
             </CardContent>
-          )}
         </Collapse>
       </Card>
     </Grow>
