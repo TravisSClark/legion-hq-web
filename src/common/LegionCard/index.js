@@ -30,6 +30,16 @@ function LegionCard({
         handleCardZoom={handleCardZoom}
       />
     );
+  } else if (userSettings.cardStyle === 'compact') {
+    return (
+      <TextCard
+        isExpanded={false}
+        isSelected={isSelected}
+        card={card}
+        handleClick={isSelected ? undefined : handleClick}
+        handleCardZoom={handleCardZoom}
+      />
+    );
   } else {
     return null;
   }

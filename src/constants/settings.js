@@ -6,7 +6,8 @@ const settings = {
     chipSize: 'medium',
     builderOrientation: 'right',
     cascadeUpgradeSelection: 'yes',
-    showStormTide:false
+    showStormTide:false,
+    dragDelayTime: 1
   },
   list: [
     {
@@ -22,7 +23,8 @@ const settings = {
       name: 'Card Style',
       values: [
         { key: 'images', name: 'Images' },
-        { key: 'text', name: 'Text' }
+        { key: 'text', name: 'Text' },
+        { key: 'compact', name: 'Compact' }
       ]
     },
     {
@@ -41,6 +43,13 @@ const settings = {
         { key: 'no', name: 'No' }
       ]
     },
+    // TODO looks like this needs either a custom component state on top of react-beautiful-dnd, or for that sunset lib to get replaced w something w a setting for this
+    // react-beautiful-dnd will be removed, eventually, when LHQ2, eventually, updates MUI and RN, so I'm inclined to punt this for now
+    // {
+    //   key: 'dragDelayTime',
+    //   name: 'Unit Drag Delay Time',
+    //   values: [{key:1, name:"1 second"},{key:2, name:"2 seconds"},{key:5, name:"5 seconds"} ]
+    // },
     {
       key: 'showStormTide',
       name: 'Show Storm Tide Options',

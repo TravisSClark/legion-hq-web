@@ -34,8 +34,8 @@ function CardModal({ id, isOpen, handleClose }) {
       )}
       <DialogContent style={{ padding: 8 }}>
         <ImagePanel card={card} />
-        <KeywordsPanel keywords={card.keywords} />
-        <WeaponsPanel weapons={card.weapons}/>
+        <KeywordsPanel card={card} />
+        {/* <WeaponsPanel weapons={card.weapons}/> */}
          {["unit", "battle"].includes(card.cardType) && (
           <ImagePanel card={card} extraCardImage={true} />
         )}

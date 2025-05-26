@@ -60,7 +60,7 @@ function isUniqueCard(card){
   return card.isUnique || card.isUniqueTitle;
 }
 
-function TextCardHeader({ card, handleClick }) {
+function TextCardHeader({ card, handleClick, handleExpandClick }) {
   const { displayName, cardName, cardType, cardSubtype } = card;
   const{handleCardZoom} = useContext(ListContext);
 
@@ -85,9 +85,15 @@ function TextCardHeader({ card, handleClick }) {
 
   // Add button, same for every type, simply passing thru the 'add this card' handler
   const action = (
+    <div>
+    
+    <IconButton size="medium" onClick={handleExpandClick} style={{ margin: 8 }}>
+      <ExpandMoreIcon />
+    </IconButton>
     <IconButton size="medium" onClick={handleClick} style={{ margin: 8 }}>
       <AddIcon />
     </IconButton>
+    </div>
   );
 
   // Header text. Add pips for uniques+CCs, add (Recon) if it's a recon battlecard
@@ -252,45 +258,37 @@ function TextCardCollapsedContent({ card, chipSize, isExpanded, handleCardZoom }
   );
 }
 
-function TextCard({ card, handleClick, handleCardZoom }) {
+function TextCard({ card, handleClick, handleCardZoom, isExpanded:expandAtStart }) {
   const chipSize = 'small';
   const classes = useStyles();
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  // default to open
+  const [isExpanded, setIsExpanded] = React.useState(expandAtStart !== undefined ? expandAtStart: true);
   const handleExpandClick = () => setIsExpanded(!isExpanded);
 
   let cardContents = null;
   let showActions = true;
-
+  let header = <TextCardHeader card={card} handleClick={handleClick} handleExpandClick={handleExpandClick}/>;
 
   switch(card.cardType){
     case 'unit':
+
       cardContents = (
-        <div>
-          <TextCardHeader card={card} handleClick={handleClick} />
           <UnitCardContent card={card} chipSize={chipSize} />
-        </div>
       );
       break;
     case 'upgrade':
       cardContents = (
-        <div>
-          <TextCardHeader card={card} handleClick={handleClick}/>
           <UpgradeCardContent card={card} chipSize={chipSize} />
-        </div>
       );
       break;
     case 'counterpart':
       cardContents = (
-        <div>
-          <TextCardHeader card={card} handleClick={handleClick} />
           <CounterpartCardContent card={card} chipSize={chipSize} />
-        </div>
       );
       break;
     case 'command':
       cardContents = (
         <div>
-          <TextCardHeader card={card} handleClick={handleClick} />
         </div>
       );
       showActions = false;
@@ -298,16 +296,12 @@ function TextCard({ card, handleClick, handleCardZoom }) {
     case 'battle':
       cardContents = (
         <div>
-          <TextCardHeader card={card} handleClick={handleClick} />
         </div>
       );
       break;
     default:
       cardContents = (
-        <div>
-          <TextCardHeader card={card} handleClick={handleClick} />
           <UnitCardContent card={card} chipSize={chipSize} />
-        </div>
       );
       break;
   }
@@ -315,24 +309,17 @@ function TextCard({ card, handleClick, handleCardZoom }) {
   return (
     <Grow unmountOnExit in={true}>
       <Card className={classes.card}>
-        {cardContents}
-        
-        { showActions &&
-          <TextCardActions
-            card={card}
-            chipSize={chipSize}
-            isExpanded={isExpanded}
-            handleExpandClick={handleExpandClick}
-          /> 
-        }
-        { showActions &&
-          <TextCardCollapsedContent
-            card={card}
-            isExpanded={isExpanded}
-            chipSize={chipSize}
-            handleCardZoom={handleCardZoom}
-          />
-        }
+        {header}
+        <Collapse in={isExpanded}>
+
+          {cardContents}
+          
+          {card.keywords.length > 0 && (
+            <CardContent style={{ padding: 8 }}>
+              <KeywordChips size={chipSize} keywords={card.keywords} />
+            </CardContent>
+          )}
+        </Collapse>
       </Card>
     </Grow>
   );
