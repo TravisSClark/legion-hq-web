@@ -1,30 +1,34 @@
-import React, { useState, Suspense, lazy } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-import LoadingWidget from 'common/LoadingWidget';
-import listTemplate from 'constants/listTemplate';
-const Home = lazy(() => import('pages/Home'));
-const News = lazy(() => import('pages/News'));
-const Cards = lazy(() => import('pages/Cards'));
-const Roller = lazy(() => import('pages/Roller'));
-const Privacy = lazy(() => import('pages/Privacy'));
-const MainListPage = lazy(() => import('pages/List'));
-const Settings = lazy(() => import('pages/Settings'));
-const Info = lazy(() => import('pages/Info'));
+import React, { useState, Suspense, lazy } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
+import LoadingWidget from "common/LoadingWidget";
+import listTemplate from "constants/listTemplate";
+const Home = lazy(() => import("pages/Home"));
+const News = lazy(() => import("pages/News"));
+const Cards = lazy(() => import("pages/Cards"));
+const Roller = lazy(() => import("pages/Roller"));
+const Privacy = lazy(() => import("pages/Privacy"));
+const MainListPage = lazy(() => import("pages/List"));
+const Settings = lazy(() => import("pages/Settings"));
+const Info = lazy(() => import("pages/Info"));
+export const initialLists = {
+  rebels: { ...listTemplate, faction: "rebels" },
+  empire: { ...listTemplate, faction: "empire" },
+  republic: { ...listTemplate, faction: "republic" },
+  separatists: { ...listTemplate, faction: "separatists" },
+  mercenary: {
+    ...listTemplate,
+    faction: "mercenary",
+    battleForce: "Shadow Collective",
+  },
+};
 
 function Pages() {
-  const initialLists = {
-    rebels: { ...listTemplate, faction: 'rebels' },
-    empire: { ...listTemplate, faction: 'empire' },
-    republic: { ...listTemplate, faction: 'republic' },
-    separatists: { ...listTemplate, faction: 'separatists' },
-    mercenary: { ...listTemplate, faction: 'mercenary', battleForce: 'Shadow Collective' }
-  };
   const [storedLists, setStoredLists] = useState(() => initialLists);
   const updateStoredList = (newList) => {
     const faction = newList.faction;
     storedLists[faction] = newList;
     setStoredLists({ ...storedLists });
-  }
+  };
   return (
     <Suspense fallback={<LoadingWidget />}>
       <Switch>
@@ -54,6 +58,6 @@ function Pages() {
       </Switch>
     </Suspense>
   );
-};
+}
 
 export default Pages;
