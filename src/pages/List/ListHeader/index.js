@@ -1,7 +1,5 @@
 import React, { useContext } from 'react';
 import {
-  Menu,
-  MenuItem,
   IconButton,
   Button,
   Dialog,
@@ -15,13 +13,13 @@ import { Info as InfoIcon, Warning as WarningIcon } from '@material-ui/icons';
 
 import ListContext from 'context/ListContext';
 import legionModes from 'constants/legionModes';
-import battleForcesDict from 'constants/battleForcesDict';
 import ModeButton from './ModeButton';
 import TitleField from './TitleField';
 import KillPointsField from './KillPointsField';
 import FactionButton from './FactionButton';
 
-import { BFRules, RankLimits } from './ListRulesModal';
+import BattleforceSelectorMenu from './BattleforceSelectorMenu';
+import { ListRulesModal } from './ListRulesModal';
 
 const useStyles = makeStyles({
   container: {
@@ -67,67 +65,33 @@ function ListHeader() {
     handleChangeMode,
     validationIssues
   } = useContext(ListContext);
+
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [isBattleForceDialogOpen, setIsBattleForceDialogOpen] = React.useState(false);
   const [isValidationDialogOpen, setValidationDialogOpen ] = React.useState(false);
-  const handleFactionMenuOpen = event => setAnchorEl(event.currentTarget);
-  const handleFactionMenuClose = () => setAnchorEl(null);
-  const handleOpenBFDialog = () => setIsBattleForceDialogOpen(true);
-  const handleCloseBFDialog = () => setIsBattleForceDialogOpen(false);
+
   const numActivations = currentList.units.reduce((num, unit) => {
     num += unit.count;
     return num;
   }, 0);
 
-  const validBattleForces = Object.values(battleForcesDict).filter(bf => bf.faction === currentList.faction);
-
   var minValidationError = validationIssues.reduce((highest, e)=>{
     return e.level > highest ? e.level : highest;
   }, 0)
 
-
   return (
     <div id="list-header" className={classes.columnContainer}>
       <div className={classes.container}>
-        <Menu
-          keepMounted
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={handleFactionMenuClose}
-        >
-          {currentList.faction !== 'mercenary' && (
-            <MenuItem
-              key="none"
-              selected={!currentList.battleForce || currentList.battleForce === ''}
-              onClick={() => {
-                handleSetBattleForce('');
-                handleFactionMenuClose();
-              }}
-            >
-              No Battle Force
-            </MenuItem>
-          )}
-          {validBattleForces.map(battleForce => {
-            return (
-              <MenuItem
-                key={battleForce.name}
-                selected={currentList.battleForce === battleForce.name}
-                onClick={() => {
-                  handleSetBattleForce(battleForce.name);
-                  handleFactionMenuClose();
-                }}
-              >
-                {battleForce.name}
-              </MenuItem>
-            );
-          })}
-        </Menu>
+        <BattleforceSelectorMenu currentList={currentList} anchorEl={anchorEl}
+          onClose={() => setAnchorEl(null)}
+          handleSetBattleForce={handleSetBattleForce}
+        />
         <div className={classes.item}>
           <FactionButton
             faction={currentList.faction}
-            handleFactionMenuOpen={handleFactionMenuOpen}
-            handleFactionMenuClose={handleFactionMenuClose}
+            handleFactionMenuOpen={event => setAnchorEl(event.currentTarget)}
+            handleFactionMenuClose={() => setAnchorEl(null)}
           />
         </div>
         <div className={classes.item}>
@@ -189,23 +153,12 @@ function ListHeader() {
             endIcon={<InfoIcon />}
             variant="outlined"
             size="small"
-            onClick={handleOpenBFDialog}
+            onClick={() => setIsBattleForceDialogOpen(true)}
           >
             {currentList.battleForce ? currentList.battleForce : currentList.faction}
           </Button>
-          <Dialog open={isBattleForceDialogOpen} onClose={handleCloseBFDialog}>
-            <DialogTitle style={{paddingBottom:8}}>{currentList.battleForce} List Requirements</DialogTitle>
-            <DialogContent>
-              
-              <RankLimits list={currentList}/>
-              <BFRules list={currentList}/>
-
-              <DialogContentText>
-                All Star Wars: Legion documents are located on the Atomic Mass Games{' '}
-                <Link underline="always" href="https://atomicmassgames.com/star-wars-legion-documents" target="_blank" rel="noreferrer noopener">website</Link>
-              </DialogContentText>
-            </DialogContent>
-          </Dialog>
+          <ListRulesModal open={isBattleForceDialogOpen} handleClose={() => setIsBattleForceDialogOpen(false)}/>
+          
         </div>
     </div>
   );

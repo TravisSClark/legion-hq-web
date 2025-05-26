@@ -1,5 +1,10 @@
 [
   {
+    "title": "Compact Mode",
+    "date": "26 May 2025",
+    "body": "Added a new \"Compact\" display mode for selecting cards to add. This should let listbuilding require *way* less scrolling overall. Check it out in Settings->Card Style!"
+  },
+  {
     "title": "Upgrade Cards & Print",
     "date": "4 May 2025",
     "body": "May the Forth be with you. Sadly, I added the picture-less upgrades (depending when you see this I think I missed a few). I will be trying to go back to pictures soon as I get better at editing."

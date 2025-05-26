@@ -1,3 +1,12 @@
+/**
+ * IOU a schema
+ * 
+ * 'rules' are for things that LHQ in particular cares about, ie things that affect listbuilding
+ * (For now) they are expanded inside the ListRulesModal, could def stand being more data-driven
+ * 
+ * 'plaintextRules' are for things we don't track, ie gametime-only rules
+ */
+
 const battleForcesDict = {
   'Echo Base Defenders': {
       name: 'Echo Base Defenders',
@@ -52,8 +61,13 @@ const battleForcesDict = {
       rules: {
         countMercs: true,
         take2NonEwokRebs:true, // lol
-        unitLimits:[{ids:['ah'], count:[0,2]},{ids:['ak'], count:[0,2]}]
+        unitLimits:[{ids:['ah'], count:[0,2]},{ids:['ak'], count:[0,2]}],
+        // gainAoC: 'rebels', // on 2nd thought, this doesn't matter since we already have the AoC listbuild benefit via countMercs... leave as reminder
       },
+      plainTextRules:[
+        "During the End Phase, EWOK units in this army remove 1 fewer Suppression token during the Remove Tokens step.",
+        "REBEL COMMANDER units in this army gain Allies of Convenience"
+      ],
 
       ruleUrl: 'cdn.svc.asmodee.net/production-amgcom/uploads/2023/07/StarWarsLegionBFRulesSheetBrightTreeVillage1',
       'standard mode': {
@@ -130,6 +144,14 @@ const battleForcesDict = {
       minOneOfEachCorps: true, // lol
       remnantEquipRules: true
     },
+    plainTextRules:[
+      "When issuing Orders, the nominated Commander can only issue Orders \
+        to allied units within 2 of them. Undeployed units or units not within \
+        2 of any allied COMMANDER units gain Independent: Aim 1 or Dodge 1. \
+        When an allied unit checks to see if it is Panicked, it may only use the \
+        Courage of an allied COMMANDER unit within 2 instead of 3"
+    ],
+
     ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ImperialRemnant-1.pdf',
     'standard mode': {
       commOp: 2,
@@ -164,6 +186,19 @@ const battleForcesDict = {
     heavy: ['we', 'bg'],
     allowedUniqueUpgrades: [],
     rules:{},
+    plainTextRules:[
+      "Vehicles in this army gain Scout 2.",
+      "Units that are not within 3 of an allied COMMANDER unit and do not have a COMMS \
+        upgrade equipped remove 1 less Suppression token during the Remove Tokens step.",
+      "During Setup, you may set aside 1 allied SPECIAL FORCES or HEAVY unit that is not \
+        holding an Asset Objective token, marking the unit with an Advantage \
+        token. The first time the set-aside unit would Activate this game, you \
+        must place that unit in cohesion onto the battlefield not within 2 \
+        of any enemy units, if able. If you do, that unit is treated as activated \
+        and its Order token is placed facedown. Then, the unit loses its \
+        Advantage token."
+
+    ],
     ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_TempestForce-1.pdf',
     'standard mode': {
       commOp:2,
@@ -229,12 +264,20 @@ const battleForcesDict = {
 
       rules: {
         buildsAsCorps:['pm'],
+        ccAsCorps: true, // adds in the "and Battle Cards" rule unique to Wookiee building rules
         unitLimits:[
           {ids:['kz'], count:[0,1]},
           {ids:['fz'], count:[0,2]},
           {ids:['ic'], count:[0,1]},
-        ]
+        ],
+        minimum3Wookiees: true // TODO between this and BTV, we ought to have rules for faction/affil/type counts...
       },
+      plainTextRules:[
+        "Your army must include at least 3 Wookiee Trooper units.", // TODO this is currently validated, but displayed via plaintext; this way is easier, should probably move rules to plaintext with common keys/formatters
+        "The first time 1 or more miniatures in each Wookiee Trooper unit are \
+          defeated each Round, that unit may make a Speed-1 Move. A unit can \
+          make this Move regardless of its speed."
+      ],
 
       ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_WookieesDefenders.pdf',
       'standard mode': {
@@ -324,6 +367,18 @@ const battleForcesDict = {
           {ids:['ga'], count:[0,2]}
         ]
       },
+      plainTextRules:[
+        "At the start of each Activation Phase, choose up to 1 of your COMMANDER units. \
+        If you do, put 3 Surge tokens on that unit’s Unit Card. Once during its \
+        Activation, an allied SPECIAL FORCES, CORPS, or HEAVY unit that has the AI keyword may \
+        make a free action to spend 1 Surge token on the chosen COMMANDER unit, if it \
+        is within 3. If it does, choose 1 of the following:\n\
+        • Increase their Speed by 1 during their next Move action this Turn.\n\
+        • Gain 1 Aim token or 1 Dodge token.\n\
+        • Add 1 black die and 1 white die to 1 of their Attack Pools during \
+        their next Attack action this turn.\n\
+        • Remove up to 2 Suppression tokens."
+      ],
 
       ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ExperimentalDroids.pdf',
       'standard mode': {
@@ -358,6 +413,10 @@ const battleForcesDict = {
       rules:{
         countMercs: true
       },
+      plainTextRules:[
+        "A Shadow Collective Battle Force is aligned with the Dark Side.",
+        "Units in this army with the Transport keyword may issue Orders to transported units regardless of Affiliation."
+      ],
 
       ruleUrl: 'https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ShadowCollective.pdf',
 

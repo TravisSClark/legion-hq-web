@@ -60,7 +60,7 @@ function isUniqueCard(card){
   return card.isUnique || card.isUniqueTitle;
 }
 
-function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand }) {
+function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand, isCardExpanded }) {
   const { displayName, cardName, cardType, cardSubtype } = card;
   const{handleCardZoom} = useContext(ListContext);
 
@@ -86,13 +86,13 @@ function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand }) {
   // Add button, same for every type, simply passing thru the 'add this card' handler
   const action = (
     <div>
-    
-     {!hideExpand(card) && <IconButton size="medium" onClick={handleExpandClick} style={{ margin: 8 }}>
-      <ExpandMoreIcon />
-    </IconButton>}
-    <IconButton size="medium" onClick={handleClick} style={{ margin: 8 }}>
-      <AddIcon />
-    </IconButton>
+      {!isCardExpanded && <PointsChip value={card.cost}></PointsChip>}
+      {!hideExpand(card) && <IconButton size="medium" onClick={handleExpandClick} style={{ margin: 8 }}>
+        <ExpandMoreIcon />
+      </IconButton>}
+      <IconButton size="medium" onClick={handleClick} style={{ margin: 8 }}>
+        <AddIcon />
+      </IconButton>
     </div>
   );
 
@@ -269,7 +269,7 @@ function TextCard({ card, handleClick, handleCardZoom, isExpanded:expandAtStart 
 
   let cardContents = null;
   let showActions = true;
-  let header = (<TextCardHeader hideExpand={hideExpand} 
+  let header = (<TextCardHeader hideExpand={hideExpand} isCardExpanded={isExpanded}
       card={card} handleClick={handleClick} handleExpandClick={handleExpandClick}
   />);
 

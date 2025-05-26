@@ -1,15 +1,18 @@
 import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
-import { Chip, Menu, MenuItem, MenuList } from '@material-ui/core';
+import { Button, ButtonBase, Chip, Icon, Menu, MenuItem, MenuList, Typography } from '@material-ui/core';
 import LargerTooltip from 'common/LargerTooltip';
 import legionModes from 'constants/legionModes';
 import DataContext from 'context/DataContext';
+import { ExpandMore } from '@material-ui/icons';
 
 function ModeButton({ currentMode, points, maxPoints, tooltip, handleChangeMode }) {
   const [anchorEl, setAnchorEl] = useState();
   const handleOpenMenu = event => setAnchorEl(event.currentTarget);
   const handleCloseMenu = () => setAnchorEl();
   const {userSettings} = useContext(DataContext);
+
+  const isOverPoints = points > maxPoints;
 
   return (
     <React.Fragment>
@@ -39,15 +42,15 @@ function ModeButton({ currentMode, points, maxPoints, tooltip, handleChangeMode 
         }
         </MenuList>
       </Menu>
-      <LargerTooltip title={legionModes[currentMode].name}>
-        <Chip
-          clickable
-          variant={points > maxPoints ? 'default' : 'outlined'}
-          label={`${points}/${maxPoints}`}
-          onClick={handleOpenMenu}
-          style={points > maxPoints ? { backgroundColor: '#f44336' } : {}}
-        />
-      </LargerTooltip>
+        <ButtonBase onClick={handleOpenMenu} >
+          <div style={{display:'flex', flexDirection:'column', alignItems:'center', backgroundColor:isOverPoints?'error':'transparent', borderRadius:10, borderWidth:1, paddingRight:7, paddingLeft:7, borderColor: isOverPoints ? 'transparent':'#aaa', borderStyle:'solid'}}>
+            <Typography variant='caption'>{points} / {maxPoints}</Typography>
+            <div style={{display:'flex', flex:0, flexDirection:'row', alignItems:'center'}}>
+              <Typography variant='caption' style={{fontSize:"0.5rem"}}>{legionModes[currentMode].name.toUpperCase()}</Typography>
+              <ExpandMore fontSize='small' sx={{ fontSize: 16 }}/>
+            </div>
+          </div>
+        </ButtonBase>
     </React.Fragment>
   );
 };
