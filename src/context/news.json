@@ -1,8 +1,8 @@
 [
   {
-    "title": "Compact Mode",
+    "title": "Compact Mode and Battleforce/Mode Swapping",
     "date": "26 May 2025",
-    "body": "Added a new \"Compact\" display mode for selecting cards to add. This should let listbuilding require *way* less scrolling overall. Check it out in Settings->Card Style! Made the 'mode change' button a litte more obvious, and a lot more ugly (...WIP). Added a new spot to swap battleforces and full rules text per BF."
+    "body": "Added a new \"Compact\" display mode for selecting cards to add. This should let listbuilding require *way* less scrolling overall. Check it out in Settings->Card Style! Made the 'mode change' button a litte more obvious... and a little more ugly (...WIP). Added a new spot to swap battleforces and full rules text per BF."
   },
   {
     "title": "Upgrade Cards & Print",
