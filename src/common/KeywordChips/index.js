@@ -18,6 +18,9 @@ function KeywordChips({ keywords, size = 'medium' }) {
         Keywords
       </Typography>
       <div style={{ flexGrow: 1 }} />
+
+      {(!keywords || keywords.length === 0) && <Typography>None</Typography> }
+
       {keywords.map(kw =>{ 
         let keyword = kw.name;
         if(typeof kw === "string"){

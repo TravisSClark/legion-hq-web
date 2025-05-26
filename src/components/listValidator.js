@@ -86,7 +86,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
     });
   }
 
-    if(unitCard.keywords.find(k=> k === "Heavy Weapon Team" || k.name === "Heavy Weapon Team")){
+  if(unitCard.keywords.find(k=> k === "Heavy Weapon Team" || k.name === "Heavy Weapon Team")){
 
     let hasHeavy = false;
     unit.upgradesEquipped.forEach((id)=>{
@@ -210,8 +210,22 @@ function battleForceValidation(currentList, unitCounts){
     if(hasNone && hasMoreThanOne){
       validationIssues.push({level:2, text:"You must have at least one of each Corps type before adding additional ones"});
     }
-  }  
+  }
+  
+  if( battleForcesDict[currentList.battleForce]?.rules?.minimum3Wookiees){
+    let wookCount = currentList.units.reduce((wookCount, unit)=>{
+      const card = cards[unit.unitId];
+      if (card.cardSubtype === "wookiee trooper")
+        return wookCount + unit.count;
+      else return wookCount;
+    }, 0);
 
+    if(wookCount < 3){
+      validationIssues.push({level:2, text:"Your army must include at least 3 Wookiee Trooper units. (" + wookCount + " found)" });
+    }
+  }
+
+  // TODO remove once we get custom Imp officer
   if(currentList.battleForce === "Tempest Force" && unitCounts["we"] !== 1 && battleForcesDict[currentList.battleForce].commander.length === 0){
     validationIssues.push({level:2, text: "Until 'Imperial Officer' gets reworked, you'll need to include Major Marquand (under Heavies) to fulfill Commander requirements"})
   }

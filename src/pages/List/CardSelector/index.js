@@ -40,7 +40,7 @@ const CardSelector = () => {
   let selectorIds = {validIds:[], invalidIds:[]};
   const { action } = cardPaneFilter;
 
-  const stackSize = useRef(1);
+  const [stackSize, setStackSize] = useState(1);
   const [isApplyToAll, setIsApplyToAll] = useState(false);
 
   let hasUniques = false;
@@ -53,11 +53,11 @@ const CardSelector = () => {
       case 'UNIT':
         selectorIds.validIds = getEligibleUnitsToAdd(currentList, cardPaneFilter.rank, userSettings);
         selectorIds.invalidIds = [];
-      clickHandler = (unitId) => handleAddUnit(unitId, stackSize.current);
+      clickHandler = (unitId) => {handleAddUnit(unitId, stackSize); setStackSize(1)}
       header = (
         <StackController
           stackSize={stackSize}
-          handleChange={(newValue)=>stackSize.current = newValue}
+          handleChange={(newValue)=>setStackSize(newValue)}
         />
       );
       break;

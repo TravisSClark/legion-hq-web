@@ -60,132 +60,60 @@ function isUniqueCard(card){
   return card.isUnique || card.isUniqueTitle;
 }
 
-function CounterpartCardHeader({ card, handleClick }) {
-  const { displayName, cardName } = card;
-  const avatar = (
-    <CardIcon
-      card={card}
-    />
-  );
-  const action = (
-    <IconButton size="medium" onClick={handleClick} style={{ margin: 8 }}>
-      <AddIcon />
-    </IconButton>
-  );
-  return (
-    <CardHeader
-      avatar={avatar}
-      title={`${isUniqueCard(card) ? '• ' : ''}${displayName ? displayName : cardName}`}
-      subheader={capitalizeFirstLetters(card.cardSubtype)}
-      action={action}
-      style={{ padding: 8 }}
-    />
-  );
-}
-
-function BattleCardHeader({ card, handleClick }) {
-  const { cardName, cardType } = card;
-  const action = (
-    <IconButton size="medium" onClick={handleClick} style={{ margin: 8 }}>
-      <AddIcon />
-    </IconButton>
-  );
-  const isRecon = card.keywords.includes('Recon');
-  return (
-    <CardHeader
-      title={cardName}
-      subheader={capitalizeFirstLetters(cardType) + 'Card' + isRecon ? '(Recon)' : ''}
-      action={action}
-      style={{ padding: 8 }}
-    />
-  );
-}
-
-function CommandCardHeader({ card, handleClick }) {
-  const { cardName } = card;
+function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand, isCardExpanded }) {
+  const { displayName, cardName, cardType, cardSubtype } = card;
   const{handleCardZoom} = useContext(ListContext);
 
+  const isRecon = card.keywords.includes('Recon');
+
+  // switch IconBadge props based on cardType
   const avatar = (
-    <CardIcon
-      card={card}
-      handleClick={()=>{
-        handleCardZoom(card.id)
-      }}
+    <IconBadge
+      upgradeType={cardType === 'upgrade' ? cardSubtype: null}
+      rank={cardType === 'unit' ? card.rank: null}
+      hidden={cardType === 'command' || cardType === 'counterpart' || cardType === 'battle'}
+      avatar={
+        <CardIcon
+          card={card}
+          handleClick={()=>{
+            handleCardZoom(card.id)
+          }}
+        />
+      }
     />
   );
+
+  // Add button, same for every type, simply passing thru the 'add this card' handler
   const action = (
-    <IconButton size="medium" onClick={handleClick} style={{ margin: 8 }}>
-      <AddIcon />
-    </IconButton>
+    <div>
+      {!isCardExpanded && <PointsChip value={card.cost}></PointsChip>}
+      {!hideExpand(card) && <IconButton size="medium" onClick={handleExpandClick} style={{ margin: 8 }}>
+        <ExpandMoreIcon />
+      </IconButton>}
+      <IconButton size="medium" onClick={handleClick} style={{ margin: 8 }}>
+        <AddIcon />
+      </IconButton>
+    </div>
   );
 
-  let pips = '';
-  const subtypeInt = parseInt(card.cardSubtype);
-  for(let i=0; subtypeInt && i<subtypeInt; i++){
-    pips += '•';
+  // Header text. Add pips for uniques+CCs, add (Recon) if it's a recon battlecard
+  let pipCount = parseInt(card.cardSubtype);
+  pipCount = isUniqueCard(card) ? 1 : pipCount;
+  pipCount = card.uniqueCount ? card.uniqueCount : pipCount;
+
+  let pips = '•'.repeat(pipCount) + (pipCount > 0 ? " ":"");
+
+  let subheader = capitalizeFirstLetters(cardSubtype) + (isRecon ? ' (Recon)' : '');
+  if(cardType === "command"){
+    subheader = "Command";
   }
 
+  // TODO see if there's a way to left-align the (+) and have no space on header; did not see one in ~5s of reviewing MUI page
   return (
     <CardHeader
       avatar={avatar}
-      title={pips + " " + cardName}
-      // subheader={capitalizeFirstLetters(cardType)}
-      action={action}
-      style={{ padding: 8 }}
-    />
-  );
-}
-
-function UpgradeCardHeader({ card, handleClick }) {
-  const { displayName, cardName, cardSubtype } = card;
-  const avatar = (
-    <IconBadge
-      upgradeType={cardSubtype}
-      avatar={
-        <CardIcon
-          card={card}
-        />
-      }
-    />
-  );
-  const action = (
-    <IconButton size="medium" onClick={handleClick} style={{ margin: 8 }}>
-      <AddIcon />
-    </IconButton>
-  );
-  return (
-    <CardHeader
-      avatar={avatar}
-      title={`${isUniqueCard(card) ? '• ' : ''}${displayName ? displayName : cardName}`}
-      subheader={capitalizeFirstLetters(cardSubtype)}
-      action={action}
-      style={{ padding: 8 }}
-    />
-  );
-}
-
-function UnitCardHeader({ card, handleClick }) {
-  const { rank, displayName, cardName, cardSubtype } = card;
-  const avatar = (
-    <IconBadge
-      rank={rank}
-      avatar={
-        <CardIcon
-          card={card}
-        />
-      }
-    />
-  );
-  const action = (
-    <IconButton size="medium" onClick={handleClick} style={{ margin: 8 }}>
-      <AddIcon />
-    </IconButton>
-  );
-  return (
-    <CardHeader
-      avatar={avatar}
-      title={`${isUniqueCard(card) ? '• ' : ''}${displayName ? displayName : cardName}`}
-      subheader={capitalizeFirstLetters(cardSubtype)}
+      title={`${pips}${displayName ? displayName : cardName}`}
+      subheader={subheader}
       action={action}
       style={{ padding: 8 }}
     />
@@ -210,39 +138,6 @@ function CounterpartCardContent({ card, chipSize }) {
         </Typography>
         <div style={{ flexGrow: 1 }} />
         <StatChip type="wounds" value={wounds} size={chipSize} />
-      </ReverseWrapper>
-    </CardContent>
-  );
-}
-
-function CommandCardContent({ card, chipSize }) {
-  return (null
-    // <CardContent style={{ padding: 8, textAlign: 'right' }}>
-    //   <ReverseWrapper>
-    //     <Typography variant="body2" color="textSecondary">
-    //       Pips
-    //     </Typography>
-    //     <div style={{ flexGrow: 1 }} />
-    //     <Typography variant="body1" style={{ marginRight: 16 }}>
-    //       {cardSubtype}
-    //     </Typography>
-    //   </ReverseWrapper>
-    // </CardContent>
-  );
-}
-
-function BattleCardContent({ card, chipSize }) {
-  const { cardSubtype } = card;
-  return (
-    <CardContent style={{ padding: 8, textAlign: 'right' }}>
-      <ReverseWrapper>
-        <Typography variant="body2" color="textSecondary">
-          Type
-        </Typography>
-        <div style={{ flexGrow: 1 }} />
-        <Typography variant="body1" style={{ marginRight: 16 }}>
-          {capitalizeFirstLetters(cardSubtype)}
-        </Typography>
       </ReverseWrapper>
     </CardContent>
   );
@@ -363,64 +258,48 @@ function TextCardCollapsedContent({ card, chipSize, isExpanded, handleCardZoom }
   );
 }
 
-function TextCard({ card, handleClick, handleCardZoom }) {
+function TextCard({ card, handleClick, handleCardZoom, isExpanded:expandAtStart }) {
   const chipSize = 'small';
   const classes = useStyles();
-  const [isExpanded, setIsExpanded] = React.useState(false);
+  // default to open
+  const [isExpanded, setIsExpanded] = React.useState(expandAtStart !== undefined ? expandAtStart: !hideExpand(card));
   const handleExpandClick = () => setIsExpanded(!isExpanded);
+
+  const hideExpand = c => c.cardType !== 'unit' && c.cardType !== 'upgrade' && !(c.keywords?.length)
 
   let cardContents = null;
   let showActions = true;
-
+  let header = (<TextCardHeader hideExpand={hideExpand} isCardExpanded={isExpanded}
+      card={card} handleClick={handleClick} handleExpandClick={handleExpandClick}
+  />);
 
   switch(card.cardType){
     case 'unit':
+
       cardContents = (
-        <div>
-          <UnitCardHeader card={card} handleClick={handleClick} />
           <UnitCardContent card={card} chipSize={chipSize} />
-        </div>
       );
       break;
     case 'upgrade':
       cardContents = (
-        <div>
-          <UpgradeCardHeader card={card} handleClick={handleClick} />
           <UpgradeCardContent card={card} chipSize={chipSize} />
-        </div>
       );
       break;
     case 'counterpart':
       cardContents = (
-        <div>
-          <CounterpartCardHeader card={card} handleClick={handleClick} />
           <CounterpartCardContent card={card} chipSize={chipSize} />
-        </div>
       );
       break;
     case 'command':
-      cardContents = (
-        <div>
-          <CommandCardHeader card={card} handleClick={handleClick} />
-          <CommandCardContent card={card} chipSize={chipSize} />
-        </div>
-      );
+      cardContents = null;
       showActions = false;
       break;
     case 'battle':
-      cardContents = (
-        <div>
-          <BattleCardHeader card={card} handleClick={handleClick} />
-          <BattleCardContent card={card} chipSize={chipSize} />
-        </div>
-      );
+      cardContents = null;
       break;
     default:
       cardContents = (
-        <div>
-          <UnitCardHeader card={card} handleClick={handleClick} />
           <UnitCardContent card={card} chipSize={chipSize} />
-        </div>
       );
       break;
   }
@@ -428,26 +307,15 @@ function TextCard({ card, handleClick, handleCardZoom }) {
   return (
     <Grow unmountOnExit in={true}>
       <Card className={classes.card}>
-        {/* <TextCardHeader card={card} handleClick={handleClick} />
-        <TextCardContent card={card} chipSize={chipSize} /> */}
-        {cardContents}
-        
-        { showActions &&
-          <TextCardActions
-            card={card}
-            chipSize={chipSize}
-            isExpanded={isExpanded}
-            handleExpandClick={handleExpandClick}
-          /> 
-        }
-        { showActions &&
-          <TextCardCollapsedContent
-            card={card}
-            isExpanded={isExpanded}
-            chipSize={chipSize}
-            handleCardZoom={handleCardZoom}
-          />
-        }
+        {header}
+        <Collapse in={isExpanded}>
+
+          {cardContents}
+          
+            <CardContent style={{ padding: 8 }}>
+              <KeywordChips size={chipSize} keywords={card.keywords} />
+            </CardContent>
+        </Collapse>
       </Card>
     </Grow>
   );

@@ -3,7 +3,7 @@ import { Typography, IconButton } from '@material-ui/core';
 import { Add as AddIcon, Remove as MinusIcon } from '@material-ui/icons';
 
 function StackController({
-  handleChange
+  handleChange, stackSize
 }) {
   const rowContainerStyle = {
     display: 'flex',
@@ -11,7 +11,6 @@ function StackController({
     alignItems: 'center'
   };
 
-  const [stackSize, setStackSize] = useState(1);
   const rowItemStyle = { marginRight: 4 };
   return (
     <div style={rowContainerStyle}>
@@ -23,7 +22,6 @@ function StackController({
         style={rowItemStyle}
         onClick={()=>{
           let newSize = stackSize - 1;
-          setStackSize(newSize);
           handleChange(newSize);
         }}
       >
@@ -37,7 +35,6 @@ function StackController({
         style={rowItemStyle}
         onClick={()=>{
           let newSize = stackSize + 1;
-          setStackSize(newSize);
           handleChange(newSize);
         }}
       >

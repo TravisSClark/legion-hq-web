@@ -9,8 +9,32 @@ import {
 import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
 import keywords from 'constants/keywords';
 
-function KeywordsPanel({ card }) {
-  let cardKeywords = card.keywords;
+
+function drawKeyword(kw){
+
+  let keyword = kw
+  if(typeof keyword === "string"){
+    keyword = {name:kw}
+  }
+
+  return(
+  <div key={keyword.name}>
+    <Typography variant="caption" color="textSecondary">
+      {keyword.name + (!keyword.value ? "" : (Number.isInteger(keyword.value) ? " " : ": " ) + keyword.value)}
+    </Typography>
+    <div style={{ flexGrow: 1 }} />
+    <Typography variant="body2">
+      {keyword.name in keywords ? keywords[keyword.name] : 'No definition found.'}
+    </Typography>
+    <Divider />
+  </div>)
+
+}
+
+function KeywordsPanel({ card, variant="inherit" }) {
+
+  const cardKeywords = card.keywords;
+
   if (!(cardKeywords instanceof Array)) return null;
   else if (cardKeywords.length === 0) return null;
   const columnContainerStyles = {
@@ -22,27 +46,12 @@ function KeywordsPanel({ card }) {
     <React.Fragment>
       <ExpansionPanel>
         <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>Keywords</Typography>
+          <Typography variant={variant}>Keywords</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails style={columnContainerStyles}>
-          {cardKeywords.map(kw => {
-            let keyword = kw
-            if(typeof keyword === "string"){
-              keyword = {name:kw}
-            }
+          {cardKeywords?.map(kw =>drawKeyword(kw))}
 
-            return(
-            <div key={keyword.name}>
-              <Typography variant="caption" color="textSecondary">
-                {keyword.name + (!keyword.value ? "" : (Number.isInteger(keyword.value) ? " " : ": " ) + keyword.value)}
-              </Typography>
-              <div style={{ flexGrow: 1 }} />
-              <Typography variant="body2">
-                {keyword.name in keywords ? keywords[keyword.name] : 'No definition found.'}
-              </Typography>
-              <Divider />
-            </div>)
-          })}
+          {card.weapons.map(w =>w.keywords?.map(kw=>drawKeyword(kw)))}
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </React.Fragment>
