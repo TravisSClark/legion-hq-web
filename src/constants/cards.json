@@ -8248,12 +8248,7 @@
         "value": 2
       }
     ],
-    "upgradeBar": [
-      "command",
-      "training",
-      "gear",
-      "armament"
-    ],
+    "upgradeBar": ["command", "training", "gear"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -8297,7 +8292,7 @@
       },
       {
         "date": "19 July 2024",
-        "description": "Cost reduced from 85 to 60 points. Gained Bolster 2, Agile 1, and Inspire 2, and lost Quick Thinking, Authoritative, and Exemplar keywords. Blaster changed from 3 black to 3 red and lost Pierce keyword."
+        "description": "Cost reduced from 85 to 60 points. Gained Bolster 2, Agile 1, and Inspire 2, and lost Quick Thinking, Authoritative, and Exemplar keywords. Blaster changed from 3 black to 3 red and lost Pierce keyword. Removed her armament."
       }
     ]
   },
@@ -8948,22 +8943,6 @@
     "requirements": [
       {
         "cardName": "Cad Bane"
-      }
-    ]
-  },
-  "lm": {
-    "id": "lm",
-    "cardSubtype": "armament",
-    "cardName": "Looted E-5 Blaster",
-    "cardType": "upgrade",
-    "cost": 5,
-    "imageName": "Looted E-5 Blaster.webp",
-    "keywords": [
-      "Pierce"
-    ],
-    "requirements": [
-      {
-        "cardName": "Padme Amidala"
       }
     ]
   },
@@ -19238,7 +19217,6 @@
     "rank": "commander",
     "faction": "republic",
     "isUnique": true,
-    "isUnreleased": "Q2 2025",
     "cost": 110,
     "imageName": "Ahsoka Tano Padawan Commander.webp",
     "keywords": [
@@ -19281,7 +19259,6 @@
   "Bd": {
     "id": "Bd",
     "cardName": "Ahsoka Tano",
-    "isUnreleased": "Q2 2025",
     "title": "Jedi Padawan",
     "cardSubtype": "squad leader",
     "ttsName": "Ahsoka Tano, Jedi Padawan",
