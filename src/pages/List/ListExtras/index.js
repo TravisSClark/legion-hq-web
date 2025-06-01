@@ -18,6 +18,7 @@ import TextExportButton from "./TextExportButton";
 import PrintExportButton from "./PrintExportButton";
 import SimpleButton from "./SimpleButton";
 import MenuButton from "common/MenuButton";
+import TTSTextImportButton from "./TTSTextImportButton";
 
 function ListExtras() {
   const { userId } = useContext(DataContext);
@@ -48,6 +49,7 @@ function ListExtras() {
         <QRButton currentList={currentList} />
         <LinkButton currentList={currentList} />
       </MenuButton>
+      <TTSTextImportButton/>
       <SimpleButton
         timeout={3000}
         timeoutMessage={listSaveMessage ? listSaveMessage : "Saving..."}

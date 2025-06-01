@@ -20,6 +20,7 @@ import {
   equipUpgrade,
   unequipUpgrade,
   countPoints,
+  consolidate,
 } from 'components/listOperations';
 import listTemplate from 'constants/listTemplate';
 import { validateList } from 'components/listValidator';
@@ -135,6 +136,12 @@ export function ListProvider({
     setValidationIssues(validateList(revisedList, rankLimits));
     setRankLimits(rankLimits);
     countPoints(revisedList);
+  }
+
+  // Allows entry from non-routed sources, e.g. JSON import
+  const loadList = (list) =>{
+    updateThenValidateList(consolidate(list));
+
   }
 
   const reorderUnits = (startIndex, endIndex) => {
@@ -409,6 +416,7 @@ export function ListProvider({
     reorderUnits,
     isKillPointMode,
     currentKillPoints,
+    loadList,
     handleClearList,
     handleChangeTitle,
     handleChangeMode,

@@ -5,6 +5,8 @@ import ClipboardButton from './ClipboardButton';
 import DialogModal from './DialogModal';
 import generateLink from './generateLink';
 
+
+
 function LinkButton({ currentList }) {
   const [isOpen, setIsOpen] = React.useState(false);
 

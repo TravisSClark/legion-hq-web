@@ -171,6 +171,7 @@ function generateStandardText(list) {
 }
 
 function generateTTSJSONText(list) {
+
   const ttsJSON = { author: "Legion HQ" };
 
   const getTtsName = (card) => {

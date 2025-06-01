@@ -18,7 +18,8 @@ Object.keys(cards).forEach(id=>{
     if(!upgradeIdsBySubtype[subtype]){
       upgradeIdsBySubtype[subtype] = [];
     }
-    upgradeIdsBySubtype[subtype].push(id);  }
+    upgradeIdsBySubtype[subtype].push(id);  
+  }
 
 });
 

@@ -1,9 +1,9 @@
 
 import legionModes from 'constants/legionModes';
-import { consolidate } from './listOperations';
+import { consolidate, sortUpgrades } from './listOperations';
 import listTemplate from 'constants/listTemplate';
 import battleForcesDict from 'constants/battleForcesDict';
-import cards from 'constants/cards';
+import cards, { cardIdsByType } from 'constants/cards';
 import { findUnitIndexInList, getListUniques, unitHasUniques } from './eligibleCardListGetter';
 
 
@@ -88,6 +88,103 @@ function segmentToUnitObject(unitIndex, segment) {
     };
   } else unit = processUnitSegment(segment);
   return unit;
+}
+
+
+function convertJsonToList(jsonText){
+  let newList = JSON.parse(JSON.stringify(listTemplate));
+  let importList = JSON.parse(jsonText);
+  console.log('list to import',JSON.stringify(importList));
+
+
+  if (importList.armyFaction === "rebel") newList.faction = "rebels";
+  else if (importList.armyFaction === "empire") newList.faction = "empire";
+  else if (importList.armyFaction === "republic") newList.faction = "republic";
+  else if (importList.armyFaction === "separatist") newList.faction = "separatists";
+  else newList.faction = "";
+
+
+  function findId(name, type){
+    let ids = cardIdsByType[type]
+
+
+    const uname = name.toUpperCase();
+
+    let foundId = '';
+    for(let i =0; i< ids.length && foundId === ''; i++){
+      let card = cards[ids[i]];
+
+      let nameTitle = card.cardName + (card.title ? " " + card.title : '');
+
+      // console.log(nameTitle)
+
+      if(uname === nameTitle.toUpperCase() || uname === card.ttsName?.toUpperCase()){
+        return ids[i];
+      }
+    }
+
+    return foundId;
+  }
+
+  importList.units?.forEach(u=>{
+    let id = findId(u.name, 'unit')
+
+    if(!id){
+      console.warn('unable to find ID for ' + u.name);
+      return;
+    }
+
+    let newUnit = {
+      unitId: id,
+      count:1, 
+      upgradesEquipped:[],
+      additionalUpgradeSlots:[]
+    }
+
+    newList.units.push(newUnit);
+
+    u.upgrades?.forEach(up=>{
+      let upId = findId(up, 'upgrade');
+
+      if(!upId){
+        // check for counterpart
+        // TODO need ID10 case or etc here
+
+        let counterpartId=findId(up,'counterpart')
+
+        if(counterpartId){
+          newUnit.counterpart = {
+            count: 1,
+            counterpartId,
+            upgradesEquipped: [],
+            additionalUpgradeSlots: []
+          };
+        }
+      }else{
+        newUnit.upgradesEquipped.push(upId);
+      } 
+    })
+
+    newUnit.upgradesEquipped = sortUpgrades(newUnit);
+
+  });
+  importList.commandCards?.forEach(cc=>{
+
+    if(cc == "Standing Orders"){
+      return;
+    }
+    let ccId = findId(cc, 'command');
+
+    if(ccId){
+      newList.commandCards.push(ccId);
+    }
+  })
+
+  newList.title = importList.title ? importList.title : "Untitled";
+
+  console.log('import',JSON.stringify(newList))
+  return newList;
+  // list.battleFieldDeck
 }
 
 function convertHashToList(faction, url) {
@@ -195,6 +292,7 @@ function setListMode(list, mode) {
 export{
   mergeLists,
   convertHashToList,
+  convertJsonToList,
   rehashList,
   changeListTitle,
   setListMode

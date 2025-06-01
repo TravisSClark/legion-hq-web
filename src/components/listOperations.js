@@ -106,7 +106,8 @@ function equipUnitUpgrade(
     list = decrementUnit(list, unitIndex, count);
   } else if (list.units[unitIndex].count === count) {
     list.units[unitIndex] = newUnit;
-  } else {
+  }
+   else {
     newUnit.count = count;
     list.units.splice(unitIndex + 1, 0, newUnit);
     newIndex = unitIndex + 1;
@@ -115,6 +116,14 @@ function equipUnitUpgrade(
 
   return [list, newIndex];
 }
+
+function condenseIdenticalUnits(list){
+  for(let i=0;i <list.units.length; i++){
+
+  }
+}
+
+
 
 function equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId) {
   // TODO: change if counterparts could ever equip unique upgrades
@@ -457,4 +466,5 @@ export {
   countPoints,
   sortCommandIds,
   consolidate,
+  sortUpgrades
 };

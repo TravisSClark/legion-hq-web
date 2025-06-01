@@ -1,19 +1,26 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import {
   useMediaQuery,
   Chip,
-  TextField
+  TextField,
+  Button
 } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles';
 import { Description as TextIcon } from '@material-ui/icons';
-import { generateTTSJSONText } from 'components/printList';
 import DialogModal from './DialogModal';
-import ClipboardButton from './ClipboardButton';
 
-function TTSTextExportButton({ currentList }) {
+import{
+  convertJsonToList
+} from 'components/listLoadAndHash'
+import ListContext from 'context/ListContext';
+
+
+function TTSTextImportButton({ currentList }) {
   const theme = useTheme();
   const [isOpen, setIsOpen] = useState(false);
-  const ttsJSON = isOpen ? generateTTSJSONText(currentList) : null;
+
+  const [jsonText, setJsonText] = useState('');
+  const {loadList} = useContext(ListContext);
 
   const isFullscreen = useMediaQuery(theme.breakpoints.down('sm'));
   return (
@@ -21,21 +28,31 @@ function TTSTextExportButton({ currentList }) {
       <Chip
         clickable
         variant="outlined"
-        label="TTS JSON"
+        label="Import JSON..."
         icon={<TextIcon />}
         onClick={() => setIsOpen(true)}
       />
       <DialogModal
         isMobile={isFullscreen}
+        title="Import JSON"
         isOpen={isOpen}
-        actions={<ClipboardButton content={ttsJSON} autoCopy={true}/>}
+        actions={[
+          <Button onClick={()=>{
+            let list = convertJsonToList(jsonText); 
+            loadList(list);
+            setIsOpen(false);
+          }}>Import</Button>
+        ]}
         content={
          <div style={{ display: 'flex', flexFlow: 'column nowrap', alignItems: 'center' }}>
             <TextField
               multiline
+              placeholder='Paste your .json here...'
+              value={jsonText}
+              minRows={10}
               size="small"
               variant="outlined"
-              value={ttsJSON}
+              onChange={(e)=>setJsonText(e.target.value)}
               style={{ padding: 8, width: '100%' }}
             />
           </div>
@@ -46,4 +63,4 @@ function TTSTextExportButton({ currentList }) {
   );
 };
 
-export default TTSTextExportButton;
+export default TTSTextImportButton;
