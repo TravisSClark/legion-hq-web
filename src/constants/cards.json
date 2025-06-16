@@ -17364,9 +17364,9 @@
     "keywords": ["Jar'Kai Mastery", "Shien Mastery"]
   },
   "Bh": {
-    "cardSubtype": "gear",
     "cardName": "Mandalorian Combat Shields",
     "cardType": "upgrade",
+    "cardSubtype": "gear",
     "cost": 10,
     "imageName": "Mandalorian Combat Shields.webp",
     "keywords": ["Shielded"],
@@ -17493,5 +17493,152 @@
       }
     ],
     "affiliations": ["empire", "rebels", "republic", "separatists"]
+  },
+  "Bk": {
+    "cardName": "Strike and Fade",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 5,
+    "imageName": "Strike and Fade.webp",
+    "keywords": [],
+    "requirements": [],
+    "id": "Bk",
+    "history": []
+  },
+  "Bl": {
+    "cardName": "Strike Team Leader",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 8,
+    "imageName": "Strike Team Leader.webp",
+    "isUnique": true,
+    "keywords": [],
+    "requirements": [],
+    "id": "Bl",
+    "history": []
+  },
+  "Bm": {
+    "cardName": "Mission Objective",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 6,
+    "imageName": "Mission Objective.webp",
+    "keywords": [],
+    "requirements": [],
+    "id": "Bm",
+    "history": []
+  },
+  "Bn": {
+    "cardName": "Trusted Agent",
+    "cardType": "upgrade",
+    "cardSubtype": "command",
+    "cost": 5,
+    "imageName": "Trusted Agent.webp",
+    "isUnique": true,
+    "keywords": [],
+    "requirements": [],
+    "id": "Bn",
+    "history": []
+  },
+  "Bo": {
+    "cardName": "Imperial March",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 6,
+    "imageName": "Imperial March.webp",
+    "keywords": ["Charge"],
+    "requirements": [
+      {
+        "faction": "empire",
+        "rank": "corps"
+      }
+    ],
+    "id": "Bo",
+    "history": []
+  },
+  "Bp": {
+    "cardName": "Terror",
+    "cardType": "upgrade",
+    "cardSubtype": "force",
+    "cost": 6,
+    "imageName": "Terror.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "forceAffinity": "dark side"
+      }
+    ],
+    "id": "Bp",
+    "history": []
+  },
+  "Bq": {
+    "cardName": "Dug In",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 6,
+    "imageName": "Terror.webp",
+    "keywords": [],
+    "requirements": [],
+    "id": "Bq",
+    "history": []
+  },
+  "Br": {
+    "cardName": "Tranquility",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 10,
+    "imageName": "Tranquility.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "forceAffinity": "light side"
+      }
+    ],
+    "id": "Br",
+    "history": []
+  },
+  "Bs": {
+    "cardName": "Extra Supplies",
+    "cardType": "upgrade",
+    "cardSubtype": "gear",
+    "cost": 5,
+    "imageName": "Extra Supplies.webp",
+    "keywords": [],
+    "requirements": [],
+    "id": "Bs",
+    "history": []
+  },
+  "Bt": {
+    "cardName": "Clairvoyance",
+    "cardType": "upgrade",
+    "cardSubtype": "force",
+    "cost": 10,
+    "imageName": "Clairvoyance.webp",
+    "keywords": [],
+    "requirements": [],
+    "id": "Bt",
+    "history": []
+  },
+  "Bu": {
+    "cardName": "Spotter Uplink",
+    "cardType": "upgrade",
+    "cardSubtype": "comms",
+    "cost": 3,
+    "imageName": "Spotter Uplink.webp",
+    "keywords": [],
+    "requirements": [],
+    "id": "Bu",
+    "history": []
+  },
+  "Bv": {
+    "cardName": "Door Gunners",
+    "cardType": "upgrade",
+    "cardSubtype": "crew",
+    "cost": 12,
+    "imageName": "Door Gunners.webp",
+    "keywords": [],
+    "requirements": [],
+    "id": "Bv",
+    "history": []
   }
 }
