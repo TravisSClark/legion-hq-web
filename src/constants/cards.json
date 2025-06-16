@@ -570,7 +570,7 @@
     "rank": "operative",
     "faction": "rebels",
     "isUnique": true,
-    "cost": 125,
+    "cost": 105,
     "keywords": [
       {
         "name": "Jump",
@@ -605,6 +605,12 @@
           "b": 1,
           "w": 1
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 125 to 105 points."
       }
     ]
   },
@@ -964,7 +970,7 @@
     "cardSubtype": "ground vehicle",
     "rank": "support",
     "faction": "rebels",
-    "cost": 50,
+    "cost": 54,
     "keywords": [
       {
         "name": "Armor",
@@ -1008,6 +1014,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 55 to 50 points. Gained Scout keyword and surge to block. Armor reduced to 2."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost increased from 50 to 54 points."
       }
     ]
   },
@@ -1787,7 +1797,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "empire",
-    "cost": 72,
+    "cost": 66,
     "keywords": [
       {
         "name": "Disciplined",
@@ -1855,6 +1865,10 @@
       {
         "date": "27 October 2021",
         "description": "Cost reduced from 76 to 72 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 72 to 66 points."
       }
     ]
   },
@@ -1940,7 +1954,7 @@
     "cardSubtype": "repulsor vehicle",
     "rank": "support",
     "faction": "empire",
-    "cost": 80,
+    "cost": 70,
     "keywords": [
       {
         "name": "Cover",
@@ -2000,6 +2014,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost increased from 70 to 80 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 80 to 70 points."
       }
     ]
   },
@@ -3016,7 +3034,7 @@
     "cardName": "The Darksaber",
     "isUnique": true,
     "cardType": "upgrade",
-    "cost": 15,
+    "cost": 5,
     "imageName": "Sabine The Darksaber.webp",
     "keywords": [
       "Dauntless",
@@ -3039,6 +3057,10 @@
       {
         "date": "19 November 2020",
         "description": "Cost reduced from 25 to 15 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 15 to 5 points."
       }
     ],
     "id": "eb"
@@ -3620,7 +3642,7 @@
     "cardSubtype": "hardpoint",
     "cardName": "AT-RT Rotary Blaster",
     "cardType": "upgrade",
-    "cost": 20,
+    "cost": 15,
     "imageName": "AT-RT Rotary Blaster.webp",
     "keywords": ["Fixed"],
     "requirements": [
@@ -3632,6 +3654,10 @@
       {
         "date": "12 September 2019",
         "description": "Cost reduced from 35 to 20 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 20 to 15 points."
       }
     ],
     "id": "fc"
@@ -3670,7 +3696,7 @@
     "cardSubtype": "hardpoint",
     "cardName": "AT-RT Laser Cannon",
     "cardType": "upgrade",
-    "cost": 10,
+    "cost": 15,
     "imageName": "AT-RT Laser Cannon.webp",
     "keywords": ["Impact", "Fixed"],
     "requirements": [
@@ -3686,6 +3712,10 @@
       {
         "date": "19 November 2020",
         "description": "Cost reduced from 20 to 10 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost increased from 10 to 15 points."
       }
     ],
     "id": "fe"
@@ -4042,15 +4072,10 @@
     "id": "fq"
   },
   "fr": {
-    "requirements": [
-      {
-        "cardName": "BARC Speeder"
-      }
-    ],
-    "cardSubtype": "crew",
     "cardName": "BARC Ion Gunner",
     "cardType": "upgrade",
-    "cost": 25,
+    "cardSubtype": "crew",
+    "cost": 21,
     "imageName": "BARC Ion Gunner.webp",
     "keywords": ["Critical", "Fixed", "Impact", "Ion", "Ion Token"],
     "history": [
@@ -4069,22 +4094,31 @@
       {
         "date": "6 November 2024",
         "description": "Cost reduced from 28 to 25 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 25 to 21 points."
       }
     ],
-    "id": "fr"
-  },
-  "fs": {
     "requirements": [
       {
         "cardName": "BARC Speeder"
       }
     ],
+    "id": "fr"
+  },
+  "fs": {
     "cardName": "BARC RPS-6 Gunner",
     "cardSubtype": "crew",
     "cardType": "upgrade",
-    "cost": 18,
+    "cost": 14,
     "imageName": "BARC RPS-6 Gunner.webp",
     "keywords": ["Impact"],
+    "requirements": [
+      {
+        "cardName": "BARC Speeder"
+      }
+    ],
     "history": [
       {
         "date": "19 November 2020",
@@ -4093,6 +4127,10 @@
       {
         "date": "6 November 2024",
         "description": "Cost reduced from 21 to 18 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 18 to 14 points."
       }
     ],
     "id": "fs"
@@ -4186,7 +4224,7 @@
     "displayName": "T-21B Trooper",
     "cardSubtype": "heavy weapon",
     "cardType": "upgrade",
-    "cost": 32,
+    "cost": 28,
     "imageName": "T-21B Trooper.webp",
     "keywords": ["Critical"],
     "history": [
@@ -4197,6 +4235,10 @@
       {
         "date": "27 October 2021",
         "description": "Cost reduced from 35 to 32 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 32 to 28 points."
       }
     ],
     "id": "fu"
@@ -5407,7 +5449,7 @@
     "cardSubtype": "trooper",
     "rank": "corps",
     "faction": "empire",
-    "cost": 52,
+    "cost": 46,
     "keywords": [
       {
         "name": "Coordinate",
@@ -5451,6 +5493,10 @@
       {
         "date": "19 July 2024",
         "description": "Speed reduced from 2 to 1. Lost Target, and gained Prepared Position and Long Shot keywords."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 52 to 46 points."
       }
     ]
   },
@@ -5841,7 +5887,7 @@
     "cardSubtype": "repulsor vehicle",
     "rank": "support",
     "faction": "republic",
-    "cost": 65,
+    "cost": 59,
     "keywords": [
       {
         "name": "Arsenal",
@@ -5905,14 +5951,18 @@
       {
         "date": "19 July 2024",
         "description": "Cost increased from 55 to 65 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 65 to 59 points."
       }
     ]
   },
   "id": {
-    "cardSubtype": "crew",
     "cardName": "BARC Twin Laser Gunner",
     "cardType": "upgrade",
-    "cost": 15,
+    "cardSubtype": "crew",
+    "cost": 12,
     "imageName": "BARC Twin Laser Gunner.webp",
     "keywords": ["Fixed"],
     "requirements": [
@@ -5932,6 +5982,10 @@
       {
         "date": "6 November 2024",
         "description": "Cost reduced from 18 to 15 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 15 to 12 points."
       }
     ],
     "id": "id"
@@ -5944,7 +5998,7 @@
     "cardSubtype": "ground vehicle",
     "rank": "support",
     "faction": "separatists",
-    "cost": 60,
+    "cost": 67,
     "keywords": [
       {
         "name": "AI",
@@ -6005,6 +6059,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 70 to 60 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost increased from 60 to 67 points."
       }
     ]
   },
@@ -6093,7 +6151,7 @@
     "cardName": "CM-0/93 Trooper",
     "cardSubtype": "heavy weapon",
     "cardType": "upgrade",
-    "cost": 26,
+    "cost": 22,
     "imageName": "CM-O 93 Trooper.webp",
     "keywords": ["Critical"],
     "requirements": [
@@ -6109,6 +6167,10 @@
       {
         "date": "19 November 2020",
         "description": "Range band incresed from 1-3 to 1-4."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 26 to 22 points."
       }
     ],
     "id": "ig"
@@ -7184,7 +7246,7 @@
     "cardName": "Beam Turret",
     "cardType": "upgrade",
     "cost": 15,
-    "imageName": "Beam Turret.webp",
+    "imageName": "TX-130 Beam Cannon Turret.webp",
     "keywords": ["Beam"],
     "requirements": [
       {
@@ -7286,7 +7348,7 @@
     "cardName": "Twin Laser Turret",
     "cardType": "upgrade",
     "cost": 14,
-    "imageName": "Twin Laser Turret.webp",
+    "imageName": "TX-130 Twin Laser Turret.webp",
     "keywords": ["Critical"],
     "requirements": [
       {
@@ -7357,7 +7419,7 @@
     "rank": "operative",
     "faction": "republic",
     "isUnique": true,
-    "cost": 60,
+    "cost": 52,
     "keywords": [
       {
         "name": "Bolster",
@@ -7417,6 +7479,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 85 to 60 points. Gained Bolster 2, Agile 1, and Inspire 2, and lost Quick Thinking, Authoritative, and Exemplar keywords. Blaster changed from 3 black to 3 red and lost Pierce keyword. Removed her armament."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 60 to 52 points."
       }
     ]
   },
@@ -7602,7 +7668,7 @@
     "cardSubtype": "clone trooper",
     "rank": "special",
     "faction": "republic",
-    "cost": 64,
+    "cost": 70,
     "keywords": [
       "Charge",
       "Impervious",
@@ -7670,6 +7736,10 @@
       {
         "date": "6 November 2024",
         "description": "Cost increased from 58 to 64 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost increased from 64 to 70 points."
       }
     ]
   },
@@ -7929,7 +7999,7 @@
     "ttsName": "Echo, ARC Marksman",
     "isUnique": true,
     "cardType": "upgrade",
-    "cost": 52,
+    "cost": 46,
     "imageName": "Echo ARC Marksman.webp",
     "keywords": [
       "Leader",
@@ -7961,6 +8031,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost increased from 42 to 52 points. Requirement now includes all clone trooper special forces."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 52 to 46 points."
       }
     ]
   },
@@ -8315,7 +8389,7 @@
     "cardSubtype": "repulsor vehicle",
     "rank": "support",
     "faction": "separatists",
-    "cost": 80,
+    "cost": 70,
     "keywords": [
       {
         "name": "Agile",
@@ -8377,6 +8451,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost increased from 75 to 80 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 80 to 70 points."
       }
     ]
   },
@@ -8532,7 +8610,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "rebels",
-    "cost": 68,
+    "cost": 62,
     "keywords": [
       {
         "name": "Jump",
@@ -8574,6 +8652,10 @@
       {
         "date": "5 June 2023",
         "description": "Cost reduced from 72 to 68 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 68 to 62 points."
       }
     ]
   },
@@ -9860,7 +9942,7 @@
     "rank": "commander",
     "faction": "republic",
     "isUnique": true,
-    "cost": 170,
+    "cost": 150,
     "keywords": [
       {
         "name": "Guidance",
@@ -9923,6 +10005,10 @@
       {
         "date": "6 November 2024",
         "description": "Cost reduced from 180 to 170 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 170 to 150 points."
       }
     ]
   },
@@ -10045,7 +10131,7 @@
     "cardSubtype": "repulsor vehicle",
     "rank": "heavy",
     "faction": "republic",
-    "cost": 100,
+    "cost": 90,
     "imageName": "LAAT Patrol Transport R.webp",
     "keywords": [
       {
@@ -10100,6 +10186,10 @@
       {
         "date": "19 July 2024",
         "description": "Armor reduced to 5. Gained a second Ordance upgrade. Laser cannons gained Impact 1 and changed from 1 red and 3 black to 2 red and 2 black."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 100 to 90 points."
       }
     ]
   },
@@ -11718,7 +11808,7 @@
     "rank": "corps",
     "faction": "mercenary",
     "affiliation": "pyke",
-    "cost": 44,
+    "cost": 42,
     "keywords": [
       {
         "name": "Mercenary",
@@ -11771,6 +11861,10 @@
       {
         "date": "8 December 2022",
         "description": "Cost increased from 40 to 44 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 44 to 42 points."
       }
     ],
     "affiliations": ["empire", "rebels", "separatists", "republic"]
@@ -12053,7 +12147,7 @@
     "rank": "special",
     "faction": "mercenary",
     "affiliation": "maul loyalist",
-    "cost": 70,
+    "cost": 66,
     "keywords": [
       {
         "name": "Jump",
@@ -12122,6 +12216,10 @@
       {
         "date": "5 June 2023",
         "description": "Cost reduced from 75 to 70 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 70 to 66 points."
       }
     ]
   },
@@ -12140,12 +12238,18 @@
     "cardSubtype": "heavy weapon",
     "cardName": "P13-M Disruptor Soldier",
     "cardType": "upgrade",
-    "cost": 24,
+    "cost": 22,
     "imageName": "P13-M Disruptor Soldier.webp",
     "keywords": ["Impact"],
     "requirements": [
       {
         "cardName": "Pyke Syndicate Foot Soldiers"
+      }
+    ],
+    "history": [
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 24 to 22 points."
       }
     ]
   },
@@ -12302,13 +12406,19 @@
     "cardName": "The Darksaber (Maul)",
     "isUnique": true,
     "cardType": "upgrade",
-    "cost": 10,
+    "cost": 0,
     "imageName": "Maul The Darksaber.webp",
     "keywords": ["Cunning", "Sidearm", "Ranged", "Impact", "Pierce"],
     "requirements": [
       {
         "cardName": "Maul",
         "title": "A Rival"
+      }
+    ],
+    "history": [
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 10 to 0 points."
       }
     ]
   },
@@ -13667,7 +13777,7 @@
     "rank": "commander",
     "faction": "republic",
     "isUnique": true,
-    "cost": 105,
+    "cost": 95,
     "keywords": [
       {
         "name": "Observe",
@@ -13729,6 +13839,12 @@
           "b": 1,
           "w": 1
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 105 to 95 points."
       }
     ]
   },
@@ -14021,7 +14137,7 @@
     "rank": "operative",
     "faction": "separatists",
     "isUnique": true,
-    "cost": 130,
+    "cost": 115,
     "keywords": [
       {
         "name": "Jump",
@@ -14072,6 +14188,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 150 to 130 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 130 to 115 points."
       }
     ]
   },
@@ -14171,7 +14291,7 @@
     "rank": "operative",
     "faction": "rebels",
     "isUnique": true,
-    "cost": 145,
+    "cost": 115,
     "keywords": [
       {
         "name": "Jump",
@@ -14215,6 +14335,12 @@
           "b": 2,
           "w": 2
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 145 to 115 points."
       }
     ]
   },
@@ -15238,7 +15364,7 @@
     "rank": "commander",
     "faction": "separatists",
     "isUnique": true,
-    "cost": 80,
+    "cost": 55,
     "keywords": [
       {
         "name": "Jump",
@@ -15291,6 +15417,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 85 to 80 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 80 to 55 points."
       }
     ],
     "entourage": "ga"
@@ -15305,7 +15435,7 @@
     "rank": "operative",
     "faction": "separatists",
     "isUnique": true,
-    "cost": 80,
+    "cost": 55,
     "keywords": [
       {
         "name": "Jump",
@@ -15368,6 +15498,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 90 to 80 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 80 to 55 points."
       }
     ]
   },
@@ -16315,7 +16449,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "rebels",
-    "cost": 70,
+    "cost": 77,
     "imageName": "Rebel Sleeper Cell.webp",
     "keywords": [
       "Nimble",
@@ -16369,6 +16503,12 @@
           "w": 0
         }
       }
+    ],
+    "history": [
+      {
+        "date": "16 June 2025",
+        "description": "Cost increased from 70 to 77 points."
+      }
     ]
   },
   "xz": {
@@ -16378,7 +16518,7 @@
     "cardSubtype": "trooper",
     "rank": "corps",
     "faction": "empire",
-    "cost": 50,
+    "cost": 44,
     "imageName": "Riot Control Squad.webp",
     "keywords": ["Charge", "Hold the Line", "Suppressive"],
     "upgradeBar": ["heavy weapon", "heavy weapon", "gear", "training"],
@@ -16390,7 +16530,13 @@
       "speed": 2,
       "hitsurge": "",
       "defsurge": ""
-    }
+    },
+    "history": [
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 50 to 44 points."
+      }
+    ]
   },
   "ya": {
     "id": "ya",
@@ -16436,12 +16582,18 @@
     "cardSubtype": "heavy weapon",
     "cardName": "KX-Series Security Droids",
     "cardType": "upgrade",
-    "cost": 30,
+    "cost": 18,
     "imageName": "KX-Series Security Droids.webp",
     "keywords": ["Impact"],
     "requirements": [
       {
         "cardName": "Stormtrooper Riot Squad"
+      }
+    ],
+    "history": [
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 30 to 18 points."
       }
     ]
   },
@@ -16450,12 +16602,18 @@
     "cardSubtype": "personnel",
     "cardName": "Shoretrooper Squad",
     "cardType": "upgrade",
-    "cost": 70,
+    "cost": 52,
     "imageName": "Shoretrooper Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
       {
         "cardName": "Shoretroopers"
+      }
+    ],
+    "history": [
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 70 to 52 points."
       }
     ]
   },
@@ -16492,12 +16650,18 @@
     "cardSubtype": "personnel",
     "cardName": "Stormtrooper Squad",
     "cardType": "upgrade",
-    "cost": 46,
+    "cost": 40,
     "imageName": "Stormtrooper Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
       {
         "cardName": "Stormtroopers"
+      }
+    ],
+    "history": [
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 46 to 40 points."
       }
     ]
   },
@@ -16506,12 +16670,18 @@
     "cardSubtype": "personnel",
     "cardName": "Astromech",
     "cardType": "upgrade",
-    "cost": 5,
+    "cost": 10,
     "imageName": "Astromech.webp",
     "keywords": ["Noncombatant"],
     "requirements": [
       {
         "cardName": "Rebel Sleeper Cell"
+      }
+    ],
+    "history": [
+      {
+        "date": "16 June 2025",
+        "description": "Cost increased from 5 to 10 points."
       }
     ]
   },
@@ -16832,12 +17002,18 @@
     "cardSubtype": "personnel",
     "cardName": "Rebel Veteran Squad",
     "cardType": "upgrade",
-    "cost": 63,
+    "cost": 50,
     "imageName": "Rebel Veteran Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
       {
         "cardName": "Rebel Veterans"
+      }
+    ],
+    "history": [
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 63 to 50 points."
       }
     ]
   },
