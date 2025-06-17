@@ -12004,6 +12004,7 @@
     "rank": "operative",
     "faction": "mercenary",
     "affiliation": "maul loyalist",
+    "isUnique": true,
     "cost": 150,
     "keywords": [
       {
