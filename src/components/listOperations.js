@@ -61,7 +61,13 @@ function countPoints(list) {
 // TODO make this modify-in-place (...among the bigger updates)
 function consolidate(list) {
   // TODO see about moving these into validator
-  const cardNames = list.units.map((u) => cards[u.unitId].cardName);
+  let cardNames = [];
+  list.units.forEach((u) => {
+    cardNames.push(cards[u.unitId].cardName);
+    if (u.counterpart) {
+      cardNames.push(cards[u.counterpart.counterpartId].cardName);
+    }
+  });
 
   for (let i = list.commandCards.length - 1; i > -1; i--) {
     let { commander } = cards[list.commandCards[i]];
