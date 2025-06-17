@@ -58,18 +58,6 @@ const interactions = {
         checkUpgradeName(upgrade, ["Strike and Fade"]),
     },
     bf: {
-      // Landspeeder + Strike and Fade
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Strike and Fade"]),
-    },
-    ac: {
-      // Landspeeder + Strike and Fade
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Strike and Fade"]),
-    },
-    bf: {
       // Speeder Bike + Strike and Fade
       conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
       resultFunction: (upgrade) =>
@@ -136,9 +124,10 @@ const interactions = {
       resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Dug In"]),
     },
     ft: {
-      // Mortar + Dug In
+      // Mortar + Dug In & Imperial March
       conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Dug In"]),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Dug In", "Imperial March"]),
     },
     if: {
       // Mark II + Dug In

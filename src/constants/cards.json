@@ -4155,7 +4155,7 @@
       "Reposition",
       "Sentinel"
     ],
-    "upgradeBar": ["comms", "training"],
+    "upgradeBar": ["comms", "training", "training"],
     "stats": {
       "minicount": 1,
       "hp": 3,
