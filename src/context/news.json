@@ -1,5 +1,10 @@
 [
   {
+    "title": "June Points Update, Generic Upgrades, and Card Images",
+    "date": "26 May 2025",
+    "body": "All June points and upgrades have been uploaded. Ive got about 35 upgrade card images left, but huge shouts to Zegami and Crit2Block Chris for their help with photo editing."
+  },
+  {
     "title": "Compact Mode and Battleforce/Mode Swapping",
     "date": "26 May 2025",
     "body": "Added a new \"Compact\" display mode for selecting cards to add. This should let listbuilding require *way* less scrolling overall. Check it out in Settings->Card Style! Made the 'mode change' button a litte more obvious... and a little more ugly (...WIP). Added a new spot to swap battleforces and full rules text per BF."
