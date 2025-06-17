@@ -1,11 +1,13 @@
-
-import legionModes from 'constants/legionModes';
-import { consolidate } from './listOperations';
-import listTemplate from 'constants/listTemplate';
-import battleForcesDict from 'constants/battleForcesDict';
-import cards from 'constants/cards';
-import { findUnitIndexInList, getListUniques, unitHasUniques } from './eligibleCardListGetter';
-
+import legionModes from "constants/legionModes";
+import { consolidate } from "./listOperations";
+import listTemplate from "constants/listTemplate";
+import battleForcesDict from "constants/battleForcesDict";
+import cards from "constants/cards";
+import {
+  findUnitIndexInList,
+  getListUniques,
+  unitHasUniques,
+} from "./eligibleCardListGetter";
 
 // Functions which act upon lists wholesale, rather than tweaking data inside a list
 
@@ -19,7 +21,7 @@ function mergeLists(primaryList, secondaryList) {
     if (unitHasUniques(unit)) {
       if (primaryUniques.includes(unit.unitId)) continue;
       let isValid = true;
-      unit.upgradesEquipped.forEach(upgradeId => {
+      unit.upgradesEquipped.forEach((upgradeId) => {
         if (upgradeId && primaryUniques.includes(upgradeId)) isValid = false;
       });
       if (!isValid) continue;
@@ -30,10 +32,9 @@ function mergeLists(primaryList, secondaryList) {
       unitsToAdd.push(unit);
     }
   }
-  unitsToAdd.forEach(unitToAdd => primaryList.units.push(unitToAdd));
+  unitsToAdd.forEach((unitToAdd) => primaryList.units.push(unitToAdd));
   return consolidate(primaryList);
 }
-
 
 function processUnitSegment(segment) {
   const unitSegment = segment.slice(0, 3);
@@ -46,19 +47,21 @@ function processUnitSegment(segment) {
     count: unitCount,
     totalUnitCost: unitCard.cost * unitCount,
     upgradesEquipped: [],
-    additionalUpgradeSlots: []
+    additionalUpgradeSlots: [],
   };
   let upgradeIndex = 0;
   for (let i = 0; i < upgradeSegment.length; i++) {
-    if (upgradeSegment.charAt(i) === '0') {
+    if (upgradeSegment.charAt(i) === "0") {
       newUnit.upgradesEquipped[upgradeIndex] = null;
       upgradeIndex++;
     } else {
       const upgradeId = upgradeSegment.charAt(i) + upgradeSegment.charAt(i + 1);
       const upgradeCard = cards[upgradeId];
       newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
-      if ('additionalUpgradeSlots' in upgradeCard) {
-        newUnit.additionalUpgradeSlots = [upgradeCard.additionalUpgradeSlots[0]];
+      if ("additionalUpgradeSlots" in upgradeCard && upgradeId !== "jn") {
+        newUnit.additionalUpgradeSlots = [
+          upgradeCard.additionalUpgradeSlots[0],
+        ];
         newUnit.upgradesEquipped.push(null);
       }
       i++;
@@ -69,22 +72,19 @@ function processUnitSegment(segment) {
 }
 
 function segmentToUnitObject(unitIndex, segment) {
-  let unit; let counterpart;
-  if (segment.includes('+')) {
-    unit = processUnitSegment(segment.split('+')[0]);
-    counterpart = processUnitSegment(segment.split('+')[1]);
-    const {
-      unitId,
-      totalUnitCost,
-      upgradesEquipped,
-      additionalUpgradeSlots
-    } = counterpart;
+  let unit;
+  let counterpart;
+  if (segment.includes("+")) {
+    unit = processUnitSegment(segment.split("+")[0]);
+    counterpart = processUnitSegment(segment.split("+")[1]);
+    const { unitId, totalUnitCost, upgradesEquipped, additionalUpgradeSlots } =
+      counterpart;
     unit.counterpart = {
       count: 1,
       counterpartId: unitId,
       totalUnitCost,
       upgradesEquipped,
-      additionalUpgradeSlots
+      additionalUpgradeSlots,
     };
   } else unit = processUnitSegment(segment);
   return unit;
@@ -94,38 +94,42 @@ function convertHashToList(faction, url) {
   let list = JSON.parse(JSON.stringify(listTemplate));
   list.faction = faction;
   let segments;
-  if (url.includes(':')) {
-    segments = url.split(':');
+  if (url.includes(":")) {
+    segments = url.split(":");
 
-    let idx=0;
+    let idx = 0;
     let points = parseInt(segments[idx]);
 
-    if(points){
+    if (points) {
       idx++;
-      let mode = Object.getOwnPropertyNames(legionModes).find(n => legionModes[n].maxPoints === points);
-      if(mode){
+      let mode = Object.getOwnPropertyNames(legionModes).find(
+        (n) => legionModes[n].maxPoints === points
+      );
+      if (mode) {
         list.mode = mode;
       }
     }
 
-    let bfCode = Object.getOwnPropertyNames(battleForcesDict).find(k=>battleForcesDict[k].linkId === segments[idx]);
-    if(bfCode){
+    let bfCode = Object.getOwnPropertyNames(battleForcesDict).find(
+      (k) => battleForcesDict[k].linkId === segments[idx]
+    );
+    if (bfCode) {
       list.battleForce = bfCode;
     }
 
-    segments = segments[segments.length-1].split(',');
+    segments = segments[segments.length - 1].split(",");
   } else {
-    list.battleForce = '';
-    segments = url.split(',');
+    list.battleForce = "";
+    segments = url.split(",");
   }
   const unitSegments = [];
   const otherSegments = [];
   try {
-    let oldCounterparts = ['lw', 'ji', 'jj'];
-    segments.forEach(segment => {
+    let oldCounterparts = ["lw", "ji", "jj"];
+    segments.forEach((segment) => {
       // TODO - this is *probably* defunct, unless there's a gameuplink archive out there
       let hasOldCounterpart = false;
-      oldCounterparts.forEach(id => {
+      oldCounterparts.forEach((id) => {
         if (segment === `1${id}`) hasOldCounterpart = true;
       });
       if (hasOldCounterpart) return;
@@ -136,30 +140,35 @@ function convertHashToList(faction, url) {
     return false;
   }
   try {
-    list.units = unitSegments.map((segment, i) => segmentToUnitObject(i, segment));
+    list.units = unitSegments.map((segment, i) =>
+      segmentToUnitObject(i, segment)
+    );
   } catch (e) {
     return false;
   }
   try {
-    otherSegments.forEach(cardId => {
-      if (cardId === '') return;
+    otherSegments.forEach((cardId) => {
+      if (cardId === "") return;
       const card = cards[cardId];
-      if (card.cardType === 'command') {
+      if (card.cardType === "command") {
         list.commandCards.push(cardId);
-      } else if (card.cardSubtype === 'primary') {
+      } else if (card.cardSubtype === "primary") {
         list.primaryCards.push(cardId);
-      } else if (card.cardSubtype === 'secondary') {
+      } else if (card.cardSubtype === "secondary") {
         list.secondaryCards.push(cardId);
-      } else if (card.cardSubtype === 'advantage') {
+      } else if (card.cardSubtype === "advantage") {
         list.advantageCards.push(cardId);
       }
     });
   } catch (e) {
     return false;
   }
-  if (list.faction === 'mercenary') list.battleForce = 'Shadow Collective';
-  if (list.faction === 'separatists' && list.battleForce === 'Echo Base Defenders') {
-    list.battleForce = 'Separatist Invasion';
+  if (list.faction === "mercenary") list.battleForce = "Shadow Collective";
+  if (
+    list.faction === "separatists" &&
+    list.battleForce === "Echo Base Defenders"
+  ) {
+    list.battleForce = "Separatist Invasion";
   }
   return consolidate(list);
 }
@@ -192,10 +201,10 @@ function setListMode(list, mode) {
   return list;
 }
 
-export{
+export {
   mergeLists,
   convertHashToList,
   rehashList,
   changeListTitle,
-  setListMode
-}
+  setListMode,
+};

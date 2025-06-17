@@ -332,11 +332,12 @@ function getEquippableUpgrades(
     // TODO not great, still better than alternatives I can think of rn
     unitCard.forceAffinity = forceAffinity;
 
-    const rMet = areRequirementsMet(card.requirements, unitCard);
+    // const rMet = areRequirementsMet(card.requirements, unitCard);
 
     if (
       unitCard.id in interactions.eligibility &&
-      interactions.eligibility[unitCard.id].conditionFunction(card)
+      interactions.eligibility[unitCard.id].conditionFunction(card) &&
+      !upgradesEquipped.includes("jn")
     ) {
       const interaction = interactions.eligibility[unitCard.id];
       if (interaction.resultFunction(card)) {
@@ -350,7 +351,7 @@ function getEquippableUpgrades(
       unitCard.cardSubtype === "trooper"
     ) {
       if (impRemnantUpgrades.includes(id)) validUpgradeIds.push(id);
-    } else if (rMet) {
+    } else if (areRequirementsMet(card.requirements, unitCard)) {
       validUpgradeIds.push(id);
     } else {
       invalidUpgradeIds.push(id);

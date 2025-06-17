@@ -92,7 +92,8 @@ function equipUnitUpgrade(
   const newUnit = JSON.parse(JSON.stringify(unit));
   newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
 
-  if ("additionalUpgradeSlots" in upgradeCard) {
+  // Ignoring Stormtrooper Captain because of imperial march
+  if ("additionalUpgradeSlots" in upgradeCard && upgradeId !== "jn") {
     newUnit.additionalUpgradeSlots = [...upgradeCard.additionalUpgradeSlots];
     newUnit.upgradesEquipped.push(null);
   }
@@ -163,7 +164,7 @@ function addUnit(list, unitId, stackSize = 1) {
 
   const newUnitObject = {
     unitId,
-    count: (unitCard.isUnique || unitCard.isUniqueTitle)? 1 : stackSize,
+    count: unitCard.isUnique || unitCard.isUniqueTitle ? 1 : stackSize,
     totalUnitCost: unitCard.cost * stackSize,
     upgradesEquipped: [],
     additionalUpgradeSlots: [],
