@@ -1,9 +1,9 @@
-import cards from 'constants/cards';
+import cards from "constants/cards";
 
 function checkUpgradeName(upgrade, values) {
   if (Array.isArray(values)) {
     let isConditionMet = false;
-    values.forEach(value => {
+    values.forEach((value) => {
       if (upgrade.cardName.includes(value)) isConditionMet = true;
     });
     return isConditionMet;
@@ -21,17 +21,31 @@ const interactions = {
   upgradePoints: {
     lu: {
       // Jyn's Blaster + Jyn Erso
-      isConditionMet: (list, unit) => list.units.map(u=>u.unitId).includes('ae'),
-      pointDelta: -5
-    }
+      isConditionMet: (list, unit) =>
+        list.units.map((u) => u.unitId).includes("ae"),
+      pointDelta: -5,
+    },
   },
   eligibility: {
     gx: {
       // B1 Battle droids + Electrobinoculars
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, 'gear'),
-      resultFunction: (upgrade) => checkUpgradeName(upgrade, ['Electrobinoculars', 'Portable Scanner'])
-    }
-  }
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "gear"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Electrobinoculars", "Portable Scanner"]),
+    },
+    az: {
+      // Snows + Imperial March
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Imperial March"]),
+    },
+    ay: {
+      // Storms + Imperial March
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Imperial March"]),
+    },
+  },
 };
 
-export default interactions
+export default interactions;

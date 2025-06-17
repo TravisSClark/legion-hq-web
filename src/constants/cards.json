@@ -1574,7 +1574,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["heavy weapon", "personnel", "gear", "grenades"],
+    "upgradeBar": ["heavy weapon", "personnel", "gear", "grenades", "training"],
     "stats": {
       "minicount": 4,
       "hp": 1,
@@ -1621,7 +1621,7 @@
     "faction": "empire",
     "cost": 42,
     "keywords": ["Steady"],
-    "upgradeBar": ["heavy weapon", "personnel", "gear", "grenades"],
+    "upgradeBar": ["heavy weapon", "personnel", "gear", "grenades", "training"],
     "stats": {
       "minicount": 4,
       "hp": 1,
@@ -17501,7 +17501,11 @@
     "cost": 5,
     "imageName": "Strike and Fade.webp",
     "keywords": [],
-    "requirements": [],
+    "requirements": [
+      {
+        "keywords": { "name": "Speeder" }
+      }
+    ],
     "id": "Bk",
     "history": []
   },
@@ -17513,7 +17517,11 @@
     "imageName": "Strike Team Leader.webp",
     "isUnique": true,
     "keywords": [],
-    "requirements": [],
+    "requirements": [
+      {
+        "rank": "operative"
+      }
+    ],
     "id": "Bl",
     "history": []
   },
@@ -17524,7 +17532,27 @@
     "cost": 6,
     "imageName": "Mission Objective.webp",
     "keywords": [],
-    "requirements": [],
+    "requirements": [
+      "OR",
+      {
+        "cardSubtype": "trooper"
+      },
+      {
+        "cardSubtype": "clone trooper"
+      },
+      {
+        "cardSubtype": "creature trooper"
+      },
+      {
+        "cardSubtype": "droid trooper"
+      },
+      {
+        "cardSubtype": "emplacement trooper"
+      },
+      {
+        "cardSubtype": "wookiee trooper"
+      }
+    ],
     "id": "Bm",
     "history": []
   },
@@ -17576,16 +17604,45 @@
     "cardType": "upgrade",
     "cardSubtype": "training",
     "cost": 6,
-    "imageName": "Terror.webp",
+    "imageName": "Dug In.webp",
     "keywords": [],
-    "requirements": [],
+    "requirements": [
+      "OR",
+      {
+        "cardSubtype": "emplacement trooper"
+      },
+      [
+        "AND",
+        {
+          "keywords": { "name": "Prepared Position" }
+        },
+        [
+          "OR",
+          {
+            "cardSubtype": "trooper"
+          },
+          {
+            "cardSubtype": "clone trooper"
+          },
+          {
+            "cardSubtype": "creature trooper"
+          },
+          {
+            "cardSubtype": "droid trooper"
+          },
+          {
+            "cardSubtype": "wookiee trooper"
+          }
+        ]
+      ]
+    ],
     "id": "Bq",
     "history": []
   },
   "Br": {
     "cardName": "Tranquility",
     "cardType": "upgrade",
-    "cardSubtype": "training",
+    "cardSubtype": "force",
     "cost": 10,
     "imageName": "Tranquility.webp",
     "keywords": [],
@@ -17625,7 +17682,7 @@
     "cardSubtype": "comms",
     "cost": 3,
     "imageName": "Spotter Uplink.webp",
-    "keywords": [],
+    "keywords": ["Sharpshooter"],
     "requirements": [],
     "id": "Bu",
     "history": []
@@ -17637,7 +17694,11 @@
     "cost": 12,
     "imageName": "Door Gunners.webp",
     "keywords": [],
-    "requirements": [],
+    "requirements": [
+      {
+        "keywords": { "name": "Transport" }
+      }
+    ],
     "id": "Bv",
     "history": []
   }
