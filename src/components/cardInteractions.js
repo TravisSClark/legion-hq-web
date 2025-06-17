@@ -45,6 +45,106 @@ const interactions = {
       resultFunction: (upgrade) =>
         checkUpgradeName(upgrade, ["Imperial March"]),
     },
+    ap: {
+      // Airspeeder + Strike and Fade
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Strike and Fade"]),
+    },
+    aq: {
+      // Landspeeder + Strike and Fade
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Strike and Fade"]),
+    },
+    bf: {
+      // Landspeeder + Strike and Fade
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Strike and Fade"]),
+    },
+    ac: {
+      // Landspeeder + Strike and Fade
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Strike and Fade"]),
+    },
+    bf: {
+      // Speeder Bike + Strike and Fade
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Strike and Fade"]),
+    },
+    ic: {
+      // BARC + Strike and Fade
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Strike and Fade"]),
+    },
+    mc: {
+      // STAP + Strike and Fade
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Strike and Fade"]),
+    },
+    qh: {
+      // Flutter + Strike and Fade
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Strike and Fade"]),
+    },
+    sq: {
+      // Swoop + Strike and Fade
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Strike and Fade"]),
+    },
+    xf: {
+      // Attack Craft + Strike and Fade
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Strike and Fade"]),
+    },
+    bh: {
+      // GAV + Door Gunners
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "crew"),
+      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Door Gunners"]),
+    },
+    on: {
+      // LAATe + Door Gunners
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "crew"),
+      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Door Gunners"]),
+    },
+    oo: {
+      // LAATr + Door Gunners
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "crew"),
+      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Door Gunners"]),
+    },
+    qt: {
+      // Snail + Door Gunners
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "crew"),
+      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Door Gunners"]),
+    },
+    an: {
+      // FD + Dug In
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Dug In"]),
+    },
+    be: {
+      // EWeb + Dug In
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Dug In"]),
+    },
+    ft: {
+      // Mortar + Dug In
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Dug In"]),
+    },
+    if: {
+      // Mark II + Dug In
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Dug In"]),
+    },
   },
 };
 

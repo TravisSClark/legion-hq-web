@@ -902,7 +902,7 @@
     "faction": "rebels",
     "cost": 65,
     "keywords": ["Full Pivot", "Prepared Position", "Sentinel", "Stationary"],
-    "upgradeBar": ["comms", "generator"],
+    "upgradeBar": ["comms", "generator", "training"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -1051,7 +1051,7 @@
         "value": 2
       }
     ],
-    "upgradeBar": ["pilot", "hardpoint", "comms"],
+    "upgradeBar": ["pilot", "hardpoint", "comms", "training"],
     "stats": {
       "minicount": 1,
       "hp": 7,
@@ -1124,7 +1124,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["pilot", "crew", "crew", "hardpoint", "comms"],
+    "upgradeBar": ["pilot", "crew", "crew", "hardpoint", "comms", "training"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -1883,7 +1883,7 @@
     "faction": "empire",
     "cost": 60,
     "keywords": ["Prepared Position", "Reposition", "Sentinel"],
-    "upgradeBar": ["comms", "generator"],
+    "upgradeBar": ["comms", "generator", "training"],
     "stats": {
       "minicount": 1,
       "hp": 4,
@@ -1965,7 +1965,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["comms"],
+    "upgradeBar": ["comms", "training"],
     "stats": {
       "minicount": 2,
       "hp": 3,
@@ -2130,7 +2130,7 @@
         "value": "1: Sides"
       }
     ],
-    "upgradeBar": ["pilot", "hardpoint", "comms"],
+    "upgradeBar": ["pilot", "hardpoint", "comms", "crew"],
     "stats": {
       "minicount": 1,
       "hp": 8,
@@ -4155,7 +4155,7 @@
       "Reposition",
       "Sentinel"
     ],
-    "upgradeBar": ["comms"],
+    "upgradeBar": ["comms", "training"],
     "stats": {
       "minicount": 1,
       "hp": 3,
@@ -5902,7 +5902,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["crew", "comms"],
+    "upgradeBar": ["crew", "comms", "training"],
     "stats": {
       "minicount": 1,
       "hp": 5,
@@ -6087,7 +6087,7 @@
       "Sentinel",
       "Prepared Position"
     ],
-    "upgradeBar": ["comms"],
+    "upgradeBar": ["comms", "training"],
     "stats": {
       "minicount": 1,
       "hp": 4,
@@ -8412,7 +8412,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["comms"],
+    "upgradeBar": ["comms", "training"],
     "stats": {
       "minicount": 2,
       "hp": 3,
@@ -10086,7 +10086,7 @@
       "Immune: Range 1 Weapons",
       "Transport"
     ],
-    "upgradeBar": ["pilot", "ordnance", "ordnance", "comms"],
+    "upgradeBar": ["pilot", "ordnance", "ordnance", "comms", "crew"],
     "stats": {
       "minicount": 1,
       "hp": 8,
@@ -10164,7 +10164,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["pilot", "ordnance", "ordnance", "comms"],
+    "upgradeBar": ["pilot", "ordnance", "ordnance", "comms", "crew"],
     "stats": {
       "minicount": 1,
       "hp": 8,
@@ -11252,7 +11252,7 @@
         "value": 2
       }
     ],
-    "upgradeBar": ["crew", "comms"],
+    "upgradeBar": ["crew", "comms", "training"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -11580,7 +11580,7 @@
         "value": "Front"
       }
     ],
-    "upgradeBar": ["protocol", "ordnance", "ordnance", "comms"],
+    "upgradeBar": ["protocol", "ordnance", "ordnance", "comms", "crew"],
     "stats": {
       "minicount": 1,
       "hp": 11,
@@ -12866,7 +12866,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["comms"],
+    "upgradeBar": ["comms", "training"],
     "stats": {
       "minicount": 2,
       "hp": 3,
@@ -15901,7 +15901,7 @@
         "value": "Wookiee Defenders"
       }
     ],
-    "upgradeBar": ["crew", "comms"],
+    "upgradeBar": ["crew", "comms", "training"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -17389,7 +17389,7 @@
     "cost": 0,
     "imageName": "Clone Trooper Marksmen.webp",
     "keywords": ["Prepared Position", "Marksman"],
-    "upgradeBar": [],
+    "upgradeBar": ["training"],
     "stats": {
       "minicount": 4,
       "hp": 1,
@@ -17503,7 +17503,7 @@
     "keywords": [],
     "requirements": [
       {
-        "keywords": { "name": "Speeder" }
+        "keywords": [{ "name": "Speeder" }]
       }
     ],
     "id": "Bk",
@@ -17614,7 +17614,7 @@
       [
         "AND",
         {
-          "keywords": { "name": "Prepared Position" }
+          "keywords": ["Prepared Position"]
         },
         [
           "OR",
@@ -17696,7 +17696,7 @@
     "keywords": [],
     "requirements": [
       {
-        "keywords": { "name": "Transport" }
+        "keywords": ["Transport"]
       }
     ],
     "id": "Bv",
