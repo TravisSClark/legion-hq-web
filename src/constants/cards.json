@@ -12946,7 +12946,7 @@
       },
       "Unhindered"
     ],
-    "upgradeBar": ["heavy weapon", "heavy weapon"],
+    "upgradeBar": ["heavy weapon", "heavy weapon", "training"],
     "stats": {
       "minicount": 4,
       "hp": 1,
