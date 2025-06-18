@@ -23,6 +23,7 @@ import cards from "constants/cards";
 import factions from "constants/factions";
 import urls from "constants/urls";
 import DataContext from "context/DataContext";
+import ListContext from "context/ListContext";
 import { findFirstCardId } from "pages/Home/ListChip";
 
 function NavDrawerLink({ selected, icon, avatar, text, handleClick }) {
@@ -55,6 +56,7 @@ function NavigationDrawer() {
       }
     });
   }
+  // const { currentList } = useContext(ListContext);
   useEffect(() => {
     if (userId) fetchUserLists(userId);
   }, [userId]);
@@ -122,6 +124,9 @@ function NavigationDrawer() {
                       icon={<AddIcon />}
                       handleClick={() => {
                         setIsDrawerOpen(false);
+                        // if (pathname === `/list/${faction}`) {
+                        //   window.location.reload();
+                        // }
                         goToPage(`/list/${faction}`);
                       }}
                     />
