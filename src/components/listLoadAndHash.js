@@ -1,8 +1,8 @@
 import legionModes from "constants/legionModes";
-import { consolidate } from "./listOperations";
+import { consolidate, sortUpgrades } from "./listOperations";
 import listTemplate from "constants/listTemplate";
 import battleForcesDict from "constants/battleForcesDict";
-import cards from "constants/cards";
+import cards, {cardIdsByType} from "constants/cards";
 import {
   findUnitIndexInList,
   getListUniques,
@@ -106,7 +106,6 @@ function convertJsonToList(jsonText){
 
   function findId(name, type){
     let ids = cardIdsByType[type]
-
 
     const uname = name.toUpperCase();
 

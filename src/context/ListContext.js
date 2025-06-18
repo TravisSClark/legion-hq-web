@@ -24,7 +24,7 @@ import {
   consolidate,
 } from 'components/listOperations';
 import listTemplate from 'constants/listTemplate';
-import { validateList } from 'components/listValidator';
+import { validateList, checkValidCards, getRankLimits } from 'components/listValidator';
 
 import {
   getEligibleCommandsToAdd,
