@@ -45,6 +45,12 @@ const interactions = {
       resultFunction: (upgrade) =>
         checkUpgradeName(upgrade, ["Imperial March"]),
     },
+    sr: {
+      // HRUs + Imperial March
+      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
+      resultFunction: (upgrade) =>
+        checkUpgradeName(upgrade, ["Imperial March"]),
+    },
     ap: {
       // Airspeeder + Strike and Fade
       conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
