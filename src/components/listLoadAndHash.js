@@ -94,7 +94,7 @@ function segmentToUnitObject(unitIndex, segment) {
 function convertJsonToList(jsonText){
   let newList = JSON.parse(JSON.stringify(listTemplate));
   let importList = JSON.parse(jsonText);
-  console.log('list to import',JSON.stringify(importList));
+  // console.log('list to import',JSON.stringify(importList));
 
 
   if (importList.armyFaction === "rebel") newList.faction = "rebels";
@@ -102,6 +102,8 @@ function convertJsonToList(jsonText){
   else if (importList.armyFaction === "republic") newList.faction = "republic";
   else if (importList.armyFaction === "separatist") newList.faction = "separatists";
   else newList.faction = "";
+
+  if(importList.battleForce) newList.battleForce = importList.battleForce;
 
 
   function findId(name, type){
@@ -178,6 +180,30 @@ function convertJsonToList(jsonText){
       newList.commandCards.push(ccId);
     }
   })
+
+  if(importList.battleFieldDeck){
+
+    let bDeck = importList.battleFieldDeck;
+
+    bDeck.conditions?.forEach(c=>{
+      let bcId = findId(c, 'battle');
+      if(bcId)
+        newList.advantageCards.push(bcId);
+    })
+
+     bDeck.deployment?.forEach(c=>{
+      let bcId = findId(c, 'battle');
+      if(bcId)
+        newList.primaryCards.push(bcId);
+    })
+
+     bDeck.objective?.forEach(c=>{
+      let bcId = findId(c, 'battle');
+      if(bcId)
+        newList.secondaryCards.push(bcId);
+    })
+
+  }
 
   newList.title = importList.title ? importList.title : "Untitled";
 
