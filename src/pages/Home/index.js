@@ -104,7 +104,7 @@ function Home() {
             <Grid item>
               <Button size="small" onClick={() => setIsNewsOpen(!isNewsOpen)}>
                 <NewsIcon fontSize="small" style={{ marginRight: 4 }} />
-                Latest news
+                Latest News
                 <ExpandMoreIcon
                   fontSize="small"
                   className={clsx(classes.expand, {

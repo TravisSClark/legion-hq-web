@@ -1,5 +1,10 @@
 [
   {
+    "title": "JSON Import(beta) and Compact View fixes",
+    "date": "18 June 2025",
+    "body": "Added an 'Import JSON' button! Please let us know if you find edge cases that don't quite work right (try removing and adding things back if they don't import right; most should be OK). Fixed up Compact view's points and Command display, made it a little more compact."
+  },
+  {
     "title": "June Points Update, Generic Upgrades, and Card Images",
     "date": "18 June 2025",
     "body": "All June points and upgrades have been uploaded. Basically all upgrades should have images, but huge shouts to Zegami and Crit2Block Chris for their help with photo editing."
