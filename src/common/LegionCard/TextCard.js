@@ -5,13 +5,12 @@ import {
   Typography,
   IconButton,
   Collapse,
-  Button,
   Card,
   CardHeader,
   CardContent,
-  CardActions,
   Grow,
-  Divider
+  Divider,
+  Avatar
 } from '@material-ui/core';
 import {
   Add as AddIcon,
@@ -60,20 +59,25 @@ function isUniqueCard(card){
   return card.isUnique || card.isUniqueTitle;
 }
 
+// TODO a lot of this would be better if it shrunk based on screen width. For now, shave some space off to make mobile easier to use
+// (ie Compact is made with mobile first in mind)
 function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand, isCardExpanded }) {
-  const { displayName, cardName, cardType, cardSubtype } = card;
+  const { cardName, cardType, cardSubtype } = card;
   const{handleCardZoom} = useContext(ListContext);
 
   const isRecon = card.keywords.includes('Recon');
 
+  let showPoints = !['battle', 'command'].includes(card.cardType);
+
   // switch IconBadge props based on cardType
-  const avatar = (
+  let avatar = (
     <IconBadge
       upgradeType={cardType === 'upgrade' ? cardSubtype: null}
       rank={cardType === 'unit' ? card.rank: null}
       hidden={cardType === 'command' || cardType === 'counterpart' || cardType === 'battle'}
       avatar={
         <CardIcon
+          size="medium" // default large
           card={card}
           handleClick={()=>{
             handleCardZoom(card.id)
@@ -83,14 +87,32 @@ function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand, isCa
     />
   );
 
+  if(cardType === "battle"){
+    // TODO stop repeating this code/color map
+    let bgColor = "#953233";
+    let textColor = "#eee"
+    if(cardSubtype === 'secondary'){
+      bgColor = "#E68646";
+      textColor="#000"
+    }else if(cardSubtype === 'advantage'){
+      bgColor = '#306036';
+    }
+
+    let avatarText = card.cardName.split(' ').map(s=>s.substring(0,1)).filter(s=>s.toUpperCase()===s).slice(0,2).join('');
+
+    avatar = <Avatar style={{ backgroundColor: bgColor, color:textColor }}  onClick={()=>{
+      handleCardZoom(card.id)
+    }}>{avatarText}</Avatar>;
+  }
+
   // Add button, same for every type, simply passing thru the 'add this card' handler
   const action = (
-    <div>
-      {!isCardExpanded && <PointsChip value={card.cost}></PointsChip>}
-      {!hideExpand(card) && <IconButton size="medium" onClick={handleExpandClick} style={{ margin: 8 }}>
+    <div style={{flex:1, display:'flex', alignItems:'center', justifyContent:'center'}}>
+      { showPoints && !isCardExpanded && <PointsChip compact={true} value={card.cost}></PointsChip>}
+      {!hideExpand(card) && <IconButton size="medium" onClick={handleExpandClick}>
         <ExpandMoreIcon />
       </IconButton>}
-      <IconButton size="medium" onClick={handleClick} style={{ margin: 8 }}>
+      <IconButton size="medium" onClick={handleClick}>
         <AddIcon />
       </IconButton>
     </div>
@@ -108,11 +130,16 @@ function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand, isCa
     subheader = "Command";
   }
 
+  const title = <Typography onClick={()=>{
+    handleCardZoom(card.id)
+  }}>{pips}{cardName}</Typography>
+
   // TODO see if there's a way to left-align the (+) and have no space on header; did not see one in ~5s of reviewing MUI page
   return (
     <CardHeader
       avatar={avatar}
-      title={`${pips}${displayName ? displayName : cardName}`}
+      // title={`${pips}${displayName ? displayName : cardName}`}
+      title={title}
       subheader={subheader}
       action={action}
       style={{ padding: 8 }}
@@ -219,63 +246,19 @@ function UnitCardContent({ card, chipSize }) {
   );
 }
 
-function TextCardActions({ card, chipSize, isExpanded, handleExpandClick }) {
-  const classes = useStyles();
-  return (
-    <CardActions disableSpacing style={{ padding: '0 8px 8px' }}>
-      <IconButton
-        size="medium"
-        className={clsx(classes.expand, {
-          [classes.expandOpen]: isExpanded,
-        })}
-        onClick={handleExpandClick}
-      >
-        <ExpandMoreIcon />
-      </IconButton>
-    </CardActions>
-  );
-}
-
-function TextCardCollapsedContent({ card, chipSize, isExpanded, handleCardZoom }) {
-  const { keywords } = card;
-  return (
-    <Collapse unmountOnExit timeout="auto" in={isExpanded}>
-      {keywords.length > 0 && (
-        <CardContent style={{ padding: 8 }}>
-          <KeywordChips size={chipSize} keywords={keywords} />
-        </CardContent>
-      )}
-      <CardActions>
-        <Button
-          size="medium"
-          style={{ marginLeft: 'auto' }}
-          onClick={handleCardZoom}
-        >
-          Show more
-        </Button>
-      </CardActions>
-    </Collapse>
-  );
-}
-
-function TextCard({ card, handleClick, handleCardZoom, isExpanded:expandAtStart }) {
+function TextCard({ card, handleClick, isExpanded:expandAtStart }) {
   const chipSize = 'small';
   const classes = useStyles();
+  const hideExpand = c => c.cardType !== 'unit' && c.cardType !== 'upgrade' && !(c.keywords?.length)
+
   // default to open
   const [isExpanded, setIsExpanded] = React.useState(expandAtStart !== undefined ? expandAtStart: !hideExpand(card));
   const handleExpandClick = () => setIsExpanded(!isExpanded);
 
-  const hideExpand = c => c.cardType !== 'unit' && c.cardType !== 'upgrade' && !(c.keywords?.length)
-
   let cardContents = null;
-  let showActions = true;
-  let header = (<TextCardHeader hideExpand={hideExpand} isCardExpanded={isExpanded}
-      card={card} handleClick={handleClick} handleExpandClick={handleExpandClick}
-  />);
 
   switch(card.cardType){
     case 'unit':
-
       cardContents = (
           <UnitCardContent card={card} chipSize={chipSize} />
       );
@@ -292,7 +275,6 @@ function TextCard({ card, handleClick, handleCardZoom, isExpanded:expandAtStart 
       break;
     case 'command':
       cardContents = null;
-      showActions = false;
       break;
     case 'battle':
       cardContents = null;
@@ -307,14 +289,16 @@ function TextCard({ card, handleClick, handleCardZoom, isExpanded:expandAtStart 
   return (
     <Grow unmountOnExit in={true}>
       <Card className={classes.card}>
-        {header}
+        <TextCardHeader hideExpand={hideExpand} isCardExpanded={isExpanded}
+          card={card} handleClick={handleClick} handleExpandClick={handleExpandClick}
+        />
         <Collapse in={isExpanded}>
 
           {cardContents}
           
-            <CardContent style={{ padding: 8 }}>
-              <KeywordChips size={chipSize} keywords={card.keywords} />
-            </CardContent>
+          <CardContent style={{ padding: 8 }}>
+            <KeywordChips size={chipSize} keywords={card.keywords} />
+          </CardContent>
         </Collapse>
       </Card>
     </Grow>
