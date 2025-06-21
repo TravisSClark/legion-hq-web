@@ -20,6 +20,7 @@ const impRemnantUpgrades = [
   "em",
   "en",
   "ja",
+  "Bo", // cheating ;)
 ];
 
 /** 
@@ -334,6 +335,16 @@ function getEquippableUpgrades(
 
     // const rMet = areRequirementsMet(card.requirements, unitCard);
 
+    // Imp remnant's mixed heavies rule (and a cheat to get Imp March working)
+    if ( list.battleForce === "Imperial Remnant" &&
+      // card.cardSubtype === "heavy weapon" &&
+      unitCard.cardSubtype === "trooper" &&
+      impRemnantUpgrades.includes(id)
+    ) {
+      validUpgradeIds.push(id);
+      continue;
+    }
+
     if (
       unitCard.id in interactions.eligibility &&
       interactions.eligibility[unitCard.id].conditionFunction(card) &&
@@ -344,14 +355,7 @@ function getEquippableUpgrades(
         validUpgradeIds.push(id);
       }
     }
-    // Special case for Imp remnant's mixed heavies rule
-    else if (
-      list.battleForce === "Imperial Remnant" &&
-      card.cardSubtype === "heavy weapon" &&
-      unitCard.cardSubtype === "trooper"
-    ) {
-      if (impRemnantUpgrades.includes(id)) validUpgradeIds.push(id);
-    } else if (areRequirementsMet(card.requirements, unitCard)) {
+    else if (areRequirementsMet(card.requirements, unitCard)) {
       validUpgradeIds.push(id);
     } else {
       invalidUpgradeIds.push(id);
