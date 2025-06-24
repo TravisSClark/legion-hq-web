@@ -9,7 +9,6 @@ import _ from 'lodash';
 
 const args = process.argv.slice(2);
 
-// import {getEquippableUpgrades} from '../src/components/eligibleCardListGetter';
 async function cardsJsonCheck() {
 
   const cardIds = Object.getOwnPropertyNames(cards);

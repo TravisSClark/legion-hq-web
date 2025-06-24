@@ -292,7 +292,6 @@ function validateKeywords(c, keywords){
   })
 }
 
-// import {getEquippableUpgrades} from '../src/components/eligibleCardListGetter';
 async function cardsJsonCheck() {
   
   const isNumber = ["minicount", "hp", "courage", "speed"];
