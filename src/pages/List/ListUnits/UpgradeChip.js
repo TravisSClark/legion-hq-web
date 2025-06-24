@@ -62,7 +62,6 @@ function UpgradeChip({
               upgradeIndex,
               unitId: unitCard.id,
               upgradesEquipped: unit.upgradesEquipped,
-              additionalUpgradeSlots: unit.additionalUpgradeSlots,
             })
           }
         />

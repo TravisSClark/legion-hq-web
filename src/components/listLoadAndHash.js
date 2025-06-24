@@ -58,10 +58,8 @@ function processUnitSegment(segment) {
       const upgradeId = upgradeSegment.charAt(i) + upgradeSegment.charAt(i + 1);
       const upgradeCard = cards[upgradeId];
       newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
-      if ("additionalUpgradeSlots" in upgradeCard && upgradeId !== "jn") {
-        newUnit.additionalUpgradeSlots = [
-          upgradeCard.additionalUpgradeSlots[0],
-        ];
+      if ("additionalUpgradeSlots" in upgradeCard) {
+        newUnit.additionalUpgradeSlots.concat(upgradeCard.additionalUpgradeSlots);
         newUnit.upgradesEquipped.push(null);
       }
       i++;
@@ -73,12 +71,11 @@ function processUnitSegment(segment) {
 
 function segmentToUnitObject(unitIndex, segment) {
   let unit;
-  let counterpart;
   if (segment.includes("+")) {
     unit = processUnitSegment(segment.split("+")[0]);
-    counterpart = processUnitSegment(segment.split("+")[1]);
-    const { unitId, totalUnitCost, upgradesEquipped, additionalUpgradeSlots } =
-      counterpart;
+    const counterpart = processUnitSegment(segment.split("+")[1]);
+    const { unitId, totalUnitCost, upgradesEquipped, additionalUpgradeSlots } = counterpart;
+
     unit.counterpart = {
       count: 1,
       counterpartId: unitId,

@@ -9,7 +9,7 @@ import ToggleButton from './ToggleButton';
 import ChipCard from 'common/LegionCard/ChipCard';
 import cards from 'constants/cards';
 import { Button } from '@material-ui/core';
-import { unitHasUniques } from 'components/eligibleCardListGetter';
+import { getEligibleBattlesToAdd, getEligibleCommandsToAdd, getEligibleUnitsToAdd, getEquippableUpgrades, getUpgradeBar, unitHasUniques } from 'components/eligibleCardListGetter';
 
 function Title({ title }) {
   return <Typography variant="body2">{title}</Typography>;
@@ -21,10 +21,6 @@ const CardSelector = () => {
     currentList,
     cardPaneFilter,
     setCardPaneFilter,
-    getEligibleUnitsToAdd,
-    getEquippableUpgrades,
-    getEligibleCommandsToAdd,
-    getEligibleBattlesToAdd,
     handleAddUnit,
     handleAddCommand,
     handleRemoveCommand,
@@ -71,22 +67,30 @@ const CardSelector = () => {
       break;
     case 'UNIT_UPGRADE':
     case 'COUNTERPART_UPGRADE':
+    case 'UNIT_UPGRADE_SPECIAL':
       let upgradeTargetId = cardPaneFilter.unitId;
 
       let title = action === 'COUNTERPART_UPGRADE' ? "Add counterpart upgrade" : "Add upgrade";
-      selectorIds = getEquippableUpgrades(
-        currentList,
-        cardPaneFilter.upgradeType,
-        upgradeTargetId,
-        cardPaneFilter.upgradesEquipped,
-      );
-      clickHandler = (upgradeId) => handleEquipUpgrade(
-        action,
-        cardPaneFilter.unitIndex,
-        cardPaneFilter.upgradeIndex,
-        upgradeId,
-        isApplyToAll
-      );
+
+      const unit = currentList.units[cardPaneFilter.unitIndex]
+
+      console.log('upgrades sel', JSON.stringify(cardPaneFilter.upgrades), getUpgradeBar(unit), cardPaneFilter.upgradeIndex)
+      selectorIds = typeof getUpgradeBar(unit)[cardPaneFilter.upgradeIndex] === "object" ? {validIds: cardPaneFilter.upgrades} : 
+        getEquippableUpgrades(
+          currentList,
+          cardPaneFilter.upgradeType,
+          upgradeTargetId,
+          cardPaneFilter.upgradesEquipped,
+        );
+
+      clickHandler = (upgradeId) => {
+        handleEquipUpgrade(
+          action,
+          cardPaneFilter.unitIndex,
+          cardPaneFilter.upgradeIndex,
+          upgradeId,
+          isApplyToAll
+        );}
       header = (
       
       <div style={{display:'flex', flexDirection: 'row', justifyContent:'space-between', alignItems:"center", flex:1}} >

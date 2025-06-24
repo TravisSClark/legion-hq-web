@@ -20,7 +20,7 @@ const impRemnantUpgrades = [
   "em",
   "en",
   "ja",
-  "Bo", // cheating ;)
+  // "Bo", // cheating ;)
 ];
 
 /** 
@@ -121,6 +121,8 @@ function sortUpgradeIds(ids) {
     const cardB = cards[b];
 
     // TODO: might need another look, but I think it's ok overall (and convenient!)
+    // By putting stuff with a longer req count at the top, you tend to get your units' unique upgrades at the top
+    // e.g. Mando Super Commandos are often going to pick their Shield Equip
     // only non-human-intuitive thing I've seen at a quick look is that 'Jedi Guardian' becomes
     // the top of Republic spec forces 'leader' slot since he has more reqs
     if (cardA.requirements && cardB.requirements) {
@@ -333,8 +335,6 @@ function getEquippableUpgrades(
     // TODO not great, still better than alternatives I can think of rn
     unitCard.forceAffinity = forceAffinity;
 
-    // const rMet = areRequirementsMet(card.requirements, unitCard);
-
     // Imp remnant's mixed heavies rule (and a cheat to get Imp March working)
     if ( list.battleForce === "Imperial Remnant" &&
       // card.cardSubtype === "heavy weapon" &&
@@ -344,18 +344,9 @@ function getEquippableUpgrades(
       validUpgradeIds.push(id);
       continue;
     }
-
-    if (
-      unitCard.id in interactions.eligibility &&
-      interactions.eligibility[unitCard.id].conditionFunction(card) &&
-      !upgradesEquipped.includes("jn")
-    ) {
-      const interaction = interactions.eligibility[unitCard.id];
-      if (interaction.resultFunction(card)) {
-        validUpgradeIds.push(id);
-      }
-    }
-    else if (areRequirementsMet(card.requirements, unitCard)) {
+    
+    // The 'normal' way to check for an upgrade - see if the unit meets the upgrade's requirements
+    if (areRequirementsMet(card.requirements, unitCard)) {
       validUpgradeIds.push(id);
     } else {
       invalidUpgradeIds.push(id);
@@ -453,6 +444,19 @@ function findUnitIndexInList(unit, list) {
   return index;
 }
 
+// NOT a strict match for this file, going to call "good enough"
+function getUpgradeBar(unit){
+
+
+  if(!unit){
+    return [];
+  }
+
+  const unitCard = cards[unit.unitId];
+
+  return [...unitCard.upgradeBar, ...unit.additionalUpgradeSlots, ...unit.specialUpgradeSlots];
+}
+
 export {
   getEligibleBattlesToAdd,
   getEligibleUnitsToAdd,
@@ -463,4 +467,5 @@ export {
   findUnitIndexInList,
   areRequirementsMet,
   impRemnantUpgrades,
+  getUpgradeBar
 };

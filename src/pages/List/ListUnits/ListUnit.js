@@ -7,7 +7,6 @@ import UnitActions from './UnitActions';
 import UnitUpgrades from './UnitUpgrades';
 import UnitContext from 'context/UnitContext';
 import ListContext from 'context/ListContext';
-// import UpgradeAddBar from './UpgradeAddbar';
 
 const useStyles = makeStyles(theme => ({
   unitRow: {

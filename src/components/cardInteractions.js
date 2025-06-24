@@ -1,4 +1,5 @@
 import cards from "constants/cards";
+import _ from "lodash";
 
 function checkUpgradeName(upgrade, values) {
   if (Array.isArray(values)) {
@@ -16,6 +17,18 @@ function checkUpgradeType(upgrade, value) {
   return upgrade.cardSubtype === value;
 }
 
+function getSpecialSlots(unitCard){
+
+  let specialSlots = [];
+  interactions.specialSlotEligibility.forEach(slot=>{
+    if(_.isMatch(unitCard, slot.eligibility)|| (slot.keyword && _.find(unitCard.keywords, (k)=>slot.keyword === k || slot.keyword === k.name))){
+      specialSlots.push(slot);
+    }
+  })
+
+  return specialSlots;
+}
+
 // TODO see about either moving these or getting the pointDeltas to show in builder
 const interactions = {
   upgradePoints: {
@@ -26,121 +39,57 @@ const interactions = {
       pointDelta: -5,
     },
   },
-  eligibility: {
-    gx: {
-      // B1 Battle droids + Electrobinoculars
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "gear"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Electrobinoculars", "Portable Scanner"]),
+
+  // Determines if a unit gets a bonus slot for a given upgrade type, the 'may equip even if you don't have slot' thing for binocs and imp march
+  specialSlotEligibility:[
+    {
+      // Imperial March
+      eligibility:{
+        "rank" :"corps",
+        "faction":"empire"
+      }, 
+      type:"training",
+      upgrades:["Bo"]
     },
-    az: {
-      // Snows + Imperial March
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Imperial March"]),
+
+    {
+      // B1s + Binocs
+      eligibility:{
+        "cardName" :"B1 Battle Droids",
+      }, 
+      type:"gear",
+      upgrades:["hy"]
     },
-    ay: {
-      // Storms + Imperial March
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Imperial March"]),
+    {
+      // B1s + Scanner
+      eligibility:{
+        "cardName" :"B1 Battle Droids",
+      }, 
+      type:"gear",
+      upgrades:["mr"]
     },
-    sr: {
-      // HRUs + Imperial March
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Imperial March"]),
+    // {
+    //   // Unit with Speeder + Strike and Fade
+    //   keyword:"Speeder", 
+    //   type:"training",
+    //   upgrades:["Bk"]
+    // },
+    // {
+    //   // Unit with Transport + Door Gunners
+    //   keyword:"Transport", 
+    //   type:"crew",
+    //   upgrades:["Bv"]
+    // },
+    {
+      // TODO this breaks if we get a non-trooper with PP
+      // Emplacement Trooper OR Trooper w prepared position + Dug in
+      keyword:"Prepared Position", 
+      type:"training",
+      eligibility:{cardSubtype:"emplacement trooper"},
+      upgrades:["Bq"]
     },
-    ap: {
-      // Airspeeder + Strike and Fade
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Strike and Fade"]),
-    },
-    aq: {
-      // Landspeeder + Strike and Fade
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Strike and Fade"]),
-    },
-    bf: {
-      // Speeder Bike + Strike and Fade
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Strike and Fade"]),
-    },
-    ic: {
-      // BARC + Strike and Fade
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Strike and Fade"]),
-    },
-    mc: {
-      // STAP + Strike and Fade
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Strike and Fade"]),
-    },
-    qh: {
-      // Flutter + Strike and Fade
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Strike and Fade"]),
-    },
-    sq: {
-      // Swoop + Strike and Fade
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Strike and Fade"]),
-    },
-    xf: {
-      // Attack Craft + Strike and Fade
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Strike and Fade"]),
-    },
-    bh: {
-      // GAV + Door Gunners
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "crew"),
-      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Door Gunners"]),
-    },
-    on: {
-      // LAATe + Door Gunners
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "crew"),
-      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Door Gunners"]),
-    },
-    oo: {
-      // LAATr + Door Gunners
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "crew"),
-      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Door Gunners"]),
-    },
-    qt: {
-      // Snail + Door Gunners
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "crew"),
-      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Door Gunners"]),
-    },
-    an: {
-      // FD + Dug In
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Dug In"]),
-    },
-    be: {
-      // EWeb + Dug In
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Dug In"]),
-    },
-    ft: {
-      // Mortar + Dug In & Imperial March
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) =>
-        checkUpgradeName(upgrade, ["Dug In", "Imperial March"]),
-    },
-    if: {
-      // Mark II + Dug In
-      conditionFunction: (upgrade) => checkUpgradeType(upgrade, "training"),
-      resultFunction: (upgrade) => checkUpgradeName(upgrade, ["Dug In"]),
-    },
-  },
+  ],
 };
 
 export default interactions;
+export {getSpecialSlots}

@@ -27,10 +27,7 @@ import listTemplate from 'constants/listTemplate';
 import { validateList, checkValidCards, getRankLimits } from 'components/listValidator';
 
 import {
-  getEligibleCommandsToAdd,
-  getEligibleUnitsToAdd,
-  getEquippableUpgrades,
-  getEligibleBattlesToAdd,
+  getUpgradeBar
 } from "components/eligibleCardListGetter";
 import {
   mergeLists,
@@ -189,7 +186,7 @@ export function ListProvider({
 
     // These might be a bad pattern, but they sort of are needed for confirming we haven't exceeded the total upgrade count when cascading
     let upgradesEquipped = unit.upgradesEquipped;
-    let upgradeBar = unitCard.upgradeBar.concat(unit.additionalUpgradeSlots);
+    let upgradeBar = getUpgradeBar(unit);
 
     let filter = null;
 
@@ -213,7 +210,6 @@ export function ListProvider({
                 upgradeType: upgradeBar[index],
                 unitId: unit.unitId,
                 upgradesEquipped,
-                additionalUpgradeSlots: [],
               };
             }
             return null;
@@ -235,7 +231,6 @@ export function ListProvider({
                   upgradeType: upgradeBar[index],
                   unitId: unit.unitId,
                   upgradesEquipped: unit.upgradesEquipped,
-                  additionalUpgradeSlots: unit.additionalUpgradeSlots,
                 };
               }
             }
@@ -439,8 +434,6 @@ export function ListProvider({
   };
 
   const unitProps = {
-    getEligibleUnitsToAdd,
-    getEquippableUpgrades,
     handleAddUnit,
     handleAddCounterpart,
     handleRemoveCounterpart,
@@ -451,12 +444,10 @@ export function ListProvider({
     handleSetBattleForce,
   };
   const battleProps = {
-    getEligibleBattlesToAdd,
     handleAddBattle,
     handleRemoveBattle,
   };
   const commandProps = {
-    getEligibleCommandsToAdd,
     handleAddCommand,
     handleRemoveCommand,
   };

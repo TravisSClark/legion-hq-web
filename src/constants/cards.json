@@ -902,7 +902,7 @@
     "faction": "rebels",
     "cost": 65,
     "keywords": ["Full Pivot", "Prepared Position", "Sentinel", "Stationary"],
-    "upgradeBar": ["comms", "generator", "training"],
+    "upgradeBar": ["comms", "generator"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -1051,7 +1051,7 @@
         "value": 2
       }
     ],
-    "upgradeBar": ["pilot", "hardpoint", "comms", "training"],
+    "upgradeBar": ["pilot", "hardpoint", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 7,
@@ -1124,7 +1124,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["pilot", "crew", "crew", "hardpoint", "comms", "training"],
+    "upgradeBar": ["pilot", "crew", "crew", "hardpoint", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -1574,7 +1574,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["heavy weapon", "personnel", "gear", "grenades", "training"],
+    "upgradeBar": ["heavy weapon", "personnel", "gear", "grenades"],
     "stats": {
       "minicount": 4,
       "hp": 1,
@@ -1621,7 +1621,7 @@
     "faction": "empire",
     "cost": 42,
     "keywords": ["Steady"],
-    "upgradeBar": ["heavy weapon", "personnel", "gear", "grenades", "training"],
+    "upgradeBar": ["heavy weapon", "personnel", "gear", "grenades"],
     "stats": {
       "minicount": 4,
       "hp": 1,
@@ -1883,7 +1883,7 @@
     "faction": "empire",
     "cost": 60,
     "keywords": ["Prepared Position", "Reposition", "Sentinel"],
-    "upgradeBar": ["comms", "generator", "training"],
+    "upgradeBar": ["comms", "generator"],
     "stats": {
       "minicount": 1,
       "hp": 4,
@@ -1965,7 +1965,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["comms", "training"],
+    "upgradeBar": ["comms"],
     "stats": {
       "minicount": 2,
       "hp": 3,
@@ -2130,7 +2130,7 @@
         "value": "1: Sides"
       }
     ],
-    "upgradeBar": ["pilot", "hardpoint", "comms", "crew"],
+    "upgradeBar": ["pilot", "hardpoint", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 8,
@@ -4155,7 +4155,7 @@
       "Reposition",
       "Sentinel"
     ],
-    "upgradeBar": ["comms", "training", "training"],
+    "upgradeBar": ["comms"],
     "stats": {
       "minicount": 1,
       "hp": 3,
@@ -5175,7 +5175,7 @@
         "value": "Droid Trooper"
       }
     ],
-    "upgradeBar": ["heavy weapon", "personnel", "comms", "gear"],
+    "upgradeBar": ["heavy weapon", "personnel", "comms"],
     "stats": {
       "minicount": 6,
       "hp": 1,
@@ -5902,7 +5902,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["crew", "comms", "training"],
+    "upgradeBar": ["crew", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 5,
@@ -8412,7 +8412,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["comms", "training"],
+    "upgradeBar": ["comms"],
     "stats": {
       "minicount": 2,
       "hp": 3,
@@ -10086,7 +10086,7 @@
       "Immune: Range 1 Weapons",
       "Transport"
     ],
-    "upgradeBar": ["pilot", "ordnance", "ordnance", "comms", "crew"],
+    "upgradeBar": ["pilot", "ordnance", "ordnance", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 8,
@@ -10164,7 +10164,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["pilot", "ordnance", "ordnance", "comms", "crew"],
+    "upgradeBar": ["pilot", "ordnance", "ordnance", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 8,
@@ -11252,7 +11252,7 @@
         "value": 2
       }
     ],
-    "upgradeBar": ["crew", "comms", "training"],
+    "upgradeBar": ["crew", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -11580,7 +11580,7 @@
         "value": "Front"
       }
     ],
-    "upgradeBar": ["protocol", "ordnance", "ordnance", "comms", "crew"],
+    "upgradeBar": ["protocol", "ordnance", "ordnance", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 11,
@@ -12867,7 +12867,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["comms", "training"],
+    "upgradeBar": ["comms"],
     "stats": {
       "minicount": 2,
       "hp": 3,
@@ -12946,7 +12946,7 @@
       },
       "Unhindered"
     ],
-    "upgradeBar": ["heavy weapon", "heavy weapon", "training"],
+    "upgradeBar": ["heavy weapon", "heavy weapon"],
     "stats": {
       "minicount": 4,
       "hp": 1,
@@ -15902,7 +15902,7 @@
         "value": "Wookiee Defenders"
       }
     ],
-    "upgradeBar": ["crew", "comms", "training"],
+    "upgradeBar": ["crew", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -17390,7 +17390,7 @@
     "cost": 0,
     "imageName": "Clone Trooper Marksmen.webp",
     "keywords": ["Prepared Position", "Marksman"],
-    "upgradeBar": ["training"],
+    "upgradeBar": [],
     "stats": {
       "minicount": 4,
       "hp": 1,

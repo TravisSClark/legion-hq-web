@@ -5,6 +5,7 @@ import ListUnit from './ListUnit';
 import CounterpartUnit from './CounterpartUnit';
 import cards from 'constants/cards';
 import UnitContext from 'context/UnitContext';
+import { getUpgradeBar } from 'components/eligibleCardListGetter';
 
 function ListUnits() {
   const {
@@ -50,7 +51,7 @@ function ListUnits() {
               unit: unit.counterpart,
               unitIndex,
               unitCard: counterpartCard,
-              totalUpgradeBar:[...counterpartCard.upgradeBar, ...unit.counterpart.additionalUpgradeSlots],
+              totalUpgradeBar:[...counterpartCard.upgradeBar],
               // TODO: this is not *great*; relies on card funcs following "COUNTERPART_UPGRADE" et al to work
               actionPrefix:"COUNTERPART"
           }}>
@@ -68,8 +69,8 @@ function ListUnits() {
             unit,
             unitIndex,
             unitCard,
-            totalUpgradeBar:[...unitCard.upgradeBar, ...unit.additionalUpgradeSlots],
-            // TODO: this is not *great*; relies on card funcs following "UNIT_UPGRADE" et al to work
+            totalUpgradeBar:getUpgradeBar(unit),
+            // TODO: this is not *great*; relies on card funcs following "UNIT_UPGRADE" et al to work (...also makes it tough to find the full action key in source ;) )
             actionPrefix:"UNIT"
         }}>
           <ListUnit

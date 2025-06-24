@@ -1,9 +1,10 @@
 import cards from "constants/cards";
 
-import interactions from "components/cardInteractions";
+import interactions, { getSpecialSlots } from "components/cardInteractions";
 import {
   findUnitIndexInList,
   getEquippableUpgrades,
+  getUpgradeBar,
 } from "./eligibleCardListGetter";
 
 const battleTypes = ["primary", "secondary", "advantage"];
@@ -58,7 +59,6 @@ function countPoints(list) {
  * @returns
  */
 // TODO need to specialize this; should at least be a on-upgrade and on-unit fire, not this whole big thing
-// TODO make this modify-in-place (...among the bigger updates)
 function consolidate(list) {
   // TODO see about moving these into validator
   let cardNames = [];
@@ -98,10 +98,8 @@ function equipUnitUpgrade(
   const newUnit = JSON.parse(JSON.stringify(unit));
   newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
 
-  // Ignoring Stormtrooper Captain because of imperial march
-  if ("additionalUpgradeSlots" in upgradeCard && upgradeId !== "jn") {
-    newUnit.additionalUpgradeSlots = [...upgradeCard.additionalUpgradeSlots];
-    newUnit.upgradesEquipped.push(null);
+  if ("additionalUpgradeSlots" in upgradeCard) {
+    addAdditionalUpgradeSlots(newUnit, upgradeCard.additionalUpgradeSlots)
   }
 
   newUnit.upgradesEquipped = sortUpgrades(newUnit);
@@ -123,14 +121,6 @@ function equipUnitUpgrade(
 
   return [list, newIndex];
 }
-
-function condenseIdenticalUnits(list){
-  for(let i=0;i <list.units.length; i++){
-
-  }
-}
-
-
 
 function equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId) {
   // TODO: change if counterparts could ever equip unique upgrades
@@ -158,7 +148,6 @@ function addCounterpart(list, unitIndex, counterpartId) {
     counterpartId: counterpartCard.id,
     totalUnitCost: counterpartCard.cost,
     upgradesEquipped: [],
-    additionalUpgradeSlots: [],
   };
 
   if (counterpartCard.upgradeBar) {
@@ -174,6 +163,62 @@ function removeCounterpart(list, unitIndex) {
   return consolidate(list);
 }
 
+
+/* 
+  Update special upgrade slots for upgrades like Electrobinoculars and Imperial March:
+  1. see if this unit has eligibility for special slots
+  2. If it has no upgradebar or additional slot types matching the special slot, add it
+    a. Special upgrade slots go on the end for a unit, after upgradebar and after addtl slots
+    b. Add a new null element on upgrades equipped
+*/
+function updateSpecialUpgradeSlots(unit){
+
+  unit.specialUpgradeSlots = [];
+  const unitCard = cards[unit.unitId];
+
+  let specialSlots = getSpecialSlots(unitCard);
+
+  specialSlots.forEach(s=>{
+    const {type, upgrades} = s;
+    if(!unitCard.upgradeBar.includes(type) && !unit.additionalUpgradeSlots.includes(type)){
+      unit.specialUpgradeSlots.push({type, upgrades});
+      unit.upgradesEquipped.push(null);
+    }
+  })
+}
+
+// TODO lots of bad shortcuts here that don't extend well
+// Check for special slots; remove or append them to end of unit bar accordingly
+function addAdditionalUpgradeSlots(unit, slots){
+
+  unit.additionalUpgradeSlots = unit.additionalUpgradeSlots.concat(slots);
+
+  let offset = unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
+
+  let newSlot = null;
+
+  if(unit.specialUpgradeSlots.map(u=>u.type).includes(slots[0])){
+    console.log('duplicate')
+    newSlot = unit.upgradesEquipped.pop();
+    unit.specialUpgradeSlots=[];
+  } 
+
+  unit.upgradesEquipped.splice(offset, 0, newSlot)
+
+}
+
+function removeAdditionalUpgradeSlot(unit){
+
+   unit.additionalUpgradeSlots = [];
+
+  let offset = unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
+
+  unit.upgradesEquipped.splice(offset, 1)
+
+  updateSpecialUpgradeSlots(unit);
+  
+}
+
 function addUnit(list, unitId, stackSize = 1) {
   const unitCard = cards[unitId];
 
@@ -182,14 +227,15 @@ function addUnit(list, unitId, stackSize = 1) {
     count: unitCard.isUnique || unitCard.isUniqueTitle ? 1 : stackSize,
     totalUnitCost: unitCard.cost * stackSize,
     upgradesEquipped: [],
-    additionalUpgradeSlots: [],
+    additionalUpgradeSlots: [], // for slots added by things like ST Captain and Comms Tech
+    specialUpgradeSlots: [], // for slots we get for 'free' from upgrades themselves, like binoculars and Imperial March
   };
 
-  if (newUnitObject.upgradesEquipped.length === 0) {
-    for (let i = 0; i < unitCard.upgradeBar.length; i++) {
-      newUnitObject.upgradesEquipped.push(null);
-    }
+  for (let i = 0; i < unitCard.upgradeBar.length; i++) {
+    newUnitObject.upgradesEquipped.push(null);
   }
+
+  updateSpecialUpgradeSlots(newUnitObject);
 
   let unitIndex = findUnitIndexInList(newUnitObject, list);
 
@@ -233,7 +279,7 @@ function addUnit(list, unitId, stackSize = 1) {
         let eligibleUpgrades = getEquippableUpgrades(list, upgradeType, unitId);
         if (eligibleUpgrades.validIds.length === 1) {
           let freeSoloId = eligibleUpgrades.validIds[0];
-          if (cards[freeSoloId].cost === 0) {
+          if (cards[freeSoloId].cost === 0 && freeSoloId !== 'rq') {
             // If this card was already added via equip above, it'll break things if added again
             // (currently a futureproof w no known case)
             if (!unitCard.equip?.find((u) => u === freeSoloId)) {
@@ -344,7 +390,6 @@ function removeBattle(list, type, index) {
   return list;
 }
 
-// TODO remove these routers in favor of calling the right action type directly from the click handler
 function equipUpgrade(
   list,
   action,
@@ -353,7 +398,7 @@ function equipUpgrade(
   upgradeId,
   isApplyToAll = false
 ) {
-  if (action === "UNIT_UPGRADE") {
+  if (action === "UNIT_UPGRADE" || action === "UNIT_UPGRADE_SPECIAL") {
     let newIndex;
     [list, newIndex] = equipUnitUpgrade(
       list,
@@ -374,7 +419,7 @@ function equipUpgrade(
 // TODO remove these routers in favor of calling the right action type directly from the click handler
 function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
   // const upgradeId = list.units[unitIndex].upgradesEquipped[upgradeIndex];
-  if (action === "UNIT_UPGRADE") {
+  if (action === "UNIT_UPGRADE" || action == "UNIT_UPGRADE_SPECIAL") {
     list = unequipUnitUpgrade(list, unitIndex, upgradeIndex);
   } else if (action === "COUNTERPART_UPGRADE") {
     list = unequipCounterpartUpgrade(list, unitIndex, upgradeIndex);
@@ -388,7 +433,7 @@ function sortUpgrades(unit) {
   const unitCard = cards[unit.unitId];
   const { upgradesEquipped } = unit;
 
-  const upgradeBar = unitCard.upgradeBar.concat(unit.additionalUpgradeSlots);
+  const upgradeBar = getUpgradeBar(unit).map(u=>u.type?u.type:u);
   const sortedUpgrades = Array(upgradeBar.length).fill(null);
   const upgradesByType = {};
 
@@ -437,9 +482,9 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
   newUnit.count = 1;
   newUnit.upgradesEquipped[upgradeIndex] = null;
 
+  // TODO does not work if additionalUpgradeSlots has a config where >1 upgrade card provides aUS
   if ("additionalUpgradeSlots" in upgradeCard) {
-    newUnit.additionalUpgradeSlots = [];
-    newUnit.upgradesEquipped.pop();
+    removeAdditionalUpgradeSlot(newUnit);
   }
 
   newUnit.upgradesEquipped = sortUpgrades(newUnit);

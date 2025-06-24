@@ -40,26 +40,46 @@ function UnitUpgrades({
         />
       );
     } else {
+
+      let normalHandler = ()=> {
+                console.log('normal upgrade');
+
+        setCardPaneFilter({
+        action: actionPrefix + '_UPGRADE',
+        upgradeType, 
+        unitIndex, 
+        upgradeIndex,
+        unitId: unitCard.id,
+        upgradesEquipped: unit.upgradesEquipped,
+      })};
+
+      // console.log('upgradetype', JSON.stringify(upgradeType));
+      let specialHandler = ()=>{
+        console.log('special upgrade');
+          setCardPaneFilter({
+          action: actionPrefix + "_UPGRADE_SPECIAL",
+          upgradeType: upgradeType.type, 
+          unitIndex, 
+          upgradeIndex,
+          upgrades: upgradeType.upgrades,
+          unitId: unitCard.id,
+          upgradesEquipped: unit.upgradesEquipped,
+        })}
+
+      const isSpecial = typeof upgradeType === 'object'
+      const clickHandler = isSpecial ? specialHandler : normalHandler;
       addUpgradesButtons.push(
         <AddUpgradeButton
           key={`${totalUpgradeBar[upgradeIndex]}_${upgradeIndex}`}
-          type={totalUpgradeBar[upgradeIndex]}
+          type={isSpecial ? totalUpgradeBar[upgradeIndex].type : totalUpgradeBar[upgradeIndex]}
           // handleClick={addUpgradeHandlers[upgradeIndex]}
-          handleClick={
-            () =>{ 
-              setCardPaneFilter({
-                action: actionPrefix + '_UPGRADE',
-                upgradeType, unitIndex, upgradeIndex,
-                unitId: unitCard.id,
-                upgradesEquipped: unit.upgradesEquipped,
-                additionalUpgradeSlots: unit.additionalUpgradeSlots
-              })
-          }
-          }
+          handleClick={clickHandler}
+          special={isSpecial}
         />
       );
     }
   });
+
   return (
     <div style={{ flex: 'display', flexFlow: 'row wrap', alignItems: 'center' }}>
       {addCounterpartButtons}
