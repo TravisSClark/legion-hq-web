@@ -78,7 +78,7 @@ function DefaultBar() {
         />
       </NavLink>
       <div className={classes.grow} />
-      <a href="https://www.crit2block.com/">
+      <a href="https://www.youtube.com/@crit2block">
         <img alt="Crit2Block Logo" src={crit2block} style={{ height: 45 }} />
       </a>
       {/* {false && (
