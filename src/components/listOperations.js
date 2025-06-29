@@ -6,6 +6,7 @@ import {
   getEquippableUpgrades,
   getUpgradeBar,
 } from "./eligibleCardListGetter";
+import battleForcesDict from "constants/battleForcesDict";
 
 const battleTypes = ["primary", "secondary", "advantage"];
 
@@ -99,7 +100,7 @@ function equipUnitUpgrade(
   newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
 
   if ("additionalUpgradeSlots" in upgradeCard) {
-    addAdditionalUpgradeSlots(newUnit, upgradeCard.additionalUpgradeSlots)
+    addAdditionalUpgradeSlots(newUnit, upgradeCard)
   }
 
   newUnit.upgradesEquipped = sortUpgrades(newUnit);
@@ -171,7 +172,7 @@ function removeCounterpart(list, unitIndex) {
     a. Special upgrade slots go on the end for a unit, after upgradebar and after addtl slots
     b. Add a new null element on upgrades equipped
 */
-function updateSpecialUpgradeSlots(unit){
+function updateSpecialUpgradeSlots(unit, list){
 
   unit.specialUpgradeSlots = [];
   const unitCard = cards[unit.unitId];
@@ -189,20 +190,26 @@ function updateSpecialUpgradeSlots(unit){
 
 // TODO lots of bad shortcuts here that don't extend well
 // Check for special slots; remove or append them to end of unit bar accordingly
-function addAdditionalUpgradeSlots(unit, slots){
+function addAdditionalUpgradeSlots(unit, upgradeCard){
+
+  if(!upgradeCard.additionalUpgradeSlots || upgradeCard.additionalUpgradeSlots.length == 0)
+    return;
+
+  const slots = upgradeCard.additionalUpgradeSlots;
 
   unit.additionalUpgradeSlots = unit.additionalUpgradeSlots.concat(slots);
 
+  // insert before special upgrades; they're always last (granted, that's mostly arbitrary, still looks nicer imo to have them at end of bar)
   let offset = unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
 
   let newSlot = null;
 
   if(unit.specialUpgradeSlots.map(u=>u.type).includes(slots[0])){
-    console.log('duplicate')
     newSlot = unit.upgradesEquipped.pop();
     unit.specialUpgradeSlots=[];
   } 
 
+  // uE is a [null, null...] until sth equipped. Hence, null by default, move the popped special upgrade over if there was one
   unit.upgradesEquipped.splice(offset, 0, newSlot)
 
 }
@@ -236,6 +243,15 @@ function addUnit(list, unitId, stackSize = 1) {
   }
 
   updateSpecialUpgradeSlots(newUnitObject);
+
+  // TODO will need something *like* this to do buildsAsCorps 'right' if we get interactions that don't slot nicely with existing rules
+  // ie, thought this was needed for Imp March + Imp Remnant, it isn't *yet* since Scouts+Deaths already have the Training slot and can therefore
+  // get Imp March eligibility via getEquippableUpgrades changes alone
+  if(list.battleForce){
+    if(battleForcesDict[list.battleForce]?.rules?.buildsAsCorps?.includes(newUnitObject.unitId)){
+      newUnitObject.effectiveRank = "corps";
+    }
+  }
 
   let unitIndex = findUnitIndexInList(newUnitObject, list);
 
@@ -518,5 +534,7 @@ export {
   countPoints,
   sortCommandIds,
   consolidate,
-  sortUpgrades
+  sortUpgrades,
+  updateSpecialUpgradeSlots,
+  addAdditionalUpgradeSlots
 };

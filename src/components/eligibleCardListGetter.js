@@ -312,7 +312,21 @@ function getEquippableUpgrades(
   if (!unitId) return { validUpgradeIds: [], invalidUpgradeIds: [] };
 
   const unitCard = cards[unitId];
+  const unitCardCopy = Object.assign({}, unitCard);
+
   const uniqueCardNames = getListUniques(list, "name");
+
+
+  // TODO not great, still better than alternatives I can think of rn
+  // should be assigned at unit construction
+  unitCardCopy.forceAffinity = forceAffinity;
+
+  // TODO worse; quick+dirty way to get imp remnant working; should probably have an 'effectiveRank' field
+  if(list.battleForce){
+    if(battleForcesDict[list.battleForce]?.rules?.buildsAsCorps?.includes(unitId)){
+      unitCardCopy.rank = "corps";
+    }
+  }
 
   for (let i = 0; i < upgradeIdsBySubtype[upgradeType].length; i++) {
     const id = upgradeIdsBySubtype[upgradeType][i]; //cardIdsByType['upgrade'][i];
@@ -332,13 +346,12 @@ function getEquippableUpgrades(
     )
       continue;
 
-    // TODO not great, still better than alternatives I can think of rn
-    unitCard.forceAffinity = forceAffinity;
+   
 
     // Imp remnant's mixed heavies rule (and a cheat to get Imp March working)
     if ( list.battleForce === "Imperial Remnant" &&
       // card.cardSubtype === "heavy weapon" &&
-      unitCard.cardSubtype === "trooper" &&
+      unitCardCopy.cardSubtype === "trooper" &&
       impRemnantUpgrades.includes(id)
     ) {
       validUpgradeIds.push(id);
@@ -346,7 +359,7 @@ function getEquippableUpgrades(
     }
     
     // The 'normal' way to check for an upgrade - see if the unit meets the upgrade's requirements
-    if (areRequirementsMet(card.requirements, unitCard)) {
+    if (areRequirementsMet(card.requirements, unitCardCopy)) {
       validUpgradeIds.push(id);
     } else {
       invalidUpgradeIds.push(id);

@@ -54,8 +54,6 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
       }
     });
   }
-
-  
   
   // Validation for each of the 'must equip' keywords
 
@@ -123,6 +121,17 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
   // For now, this just confirms we don't have 2+ Leader cards
 
   let leaderList = [];
+
+
+  const unitCardCopy = Object.assign({}, unitCard);
+
+  // TODO worse; quick+dirty way to get imp remnant working; should probably have an 'effectiveRank' field
+  if(list.battleForce){
+    if(battleForcesDict[list.battleForce]?.rules?.buildsAsCorps?.includes(unitCard.id)){
+      unitCardCopy.rank = "corps";
+    }
+  }
+
   unit.upgradesEquipped.forEach(id=>{
 
     if(!id) return;
@@ -135,7 +144,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
     else if (list.battleForce === 'Imperial Remnant' && upgradeCard.cardSubtype === 'heavy weapon' && unitCard.cardSubtype === 'trooper') {
       if (impRemnantUpgrades.includes(id)) 
         return;
-    } else if (!areRequirementsMet(upgradeCard.requirements, unitCard)) {
+    } else if (!areRequirementsMet(upgradeCard.requirements, unitCardCopy)) {
       unit.validationIssues.push({level:2, text: unitCard.cardName.toUpperCase() + " cannot equip " + upgradeCard.cardName.toUpperCase()})
     }
   });

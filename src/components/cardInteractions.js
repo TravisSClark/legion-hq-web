@@ -1,27 +1,12 @@
-import cards from "constants/cards";
 import _ from "lodash";
-
-function checkUpgradeName(upgrade, values) {
-  if (Array.isArray(values)) {
-    let isConditionMet = false;
-    values.forEach((value) => {
-      if (upgrade.cardName.includes(value)) isConditionMet = true;
-    });
-    return isConditionMet;
-  } else {
-    return upgrade.cardName.includes(values);
-  }
-}
-
-function checkUpgradeType(upgrade, value) {
-  return upgrade.cardSubtype === value;
-}
 
 function getSpecialSlots(unitCard){
 
   let specialSlots = [];
   interactions.specialSlotEligibility.forEach(slot=>{
-    if(_.isMatch(unitCard, slot.eligibility)|| (slot.keyword && _.find(unitCard.keywords, (k)=>slot.keyword === k || slot.keyword === k.name))){
+
+    if(slot.eligibility && _.isMatch(unitCard, slot.eligibility) || 
+      (slot.keyword && _.find(unitCard.keywords, (k)=>slot.keyword === k || slot.keyword === k.name))){
       specialSlots.push(slot);
     }
   })
@@ -41,6 +26,7 @@ const interactions = {
   },
 
   // Determines if a unit gets a bonus slot for a given upgrade type, the 'may equip even if you don't have slot' thing for binocs and imp march
+  // *Maybe* these should be tied to the upgrade card data, but I think it's better to use this array instead of rifling the upgrade deck
   specialSlotEligibility:[
     {
       // Imperial March
@@ -68,18 +54,18 @@ const interactions = {
       type:"gear",
       upgrades:["mr"]
     },
-    // {
-    //   // Unit with Speeder + Strike and Fade
-    //   keyword:"Speeder", 
-    //   type:"training",
-    //   upgrades:["Bk"]
-    // },
-    // {
-    //   // Unit with Transport + Door Gunners
-    //   keyword:"Transport", 
-    //   type:"crew",
-    //   upgrades:["Bv"]
-    // },
+    {
+      // Unit with Speeder + Strike and Fade
+      keyword:"Speeder", 
+      type:"training",
+      upgrades:["Bk"]
+    },
+    {
+      // Unit with Transport + Door Gunners
+      keyword:"Transport", 
+      type:"crew",
+      upgrades:["Bv"]
+    },
     {
       // TODO this breaks if we get a non-trooper with PP
       // Emplacement Trooper OR Trooper w prepared position + Dug in

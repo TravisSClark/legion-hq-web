@@ -1,5 +1,5 @@
 import legionModes from "constants/legionModes";
-import { consolidate, sortUpgrades } from "./listOperations";
+import { addAdditionalUpgradeSlots, consolidate, sortUpgrades, updateSpecialUpgradeSlots } from "./listOperations";
 import listTemplate from "constants/listTemplate";
 import battleForcesDict from "constants/battleForcesDict";
 import cards, {cardIdsByType} from "constants/cards";
@@ -48,7 +48,11 @@ function processUnitSegment(segment) {
     totalUnitCost: unitCard.cost * unitCount,
     upgradesEquipped: [],
     additionalUpgradeSlots: [],
+    specialUpgradeSlots: [],
   };
+
+  updateSpecialUpgradeSlots(newUnit);
+
   let upgradeIndex = 0;
   for (let i = 0; i < upgradeSegment.length; i++) {
     if (upgradeSegment.charAt(i) === "0") {
@@ -58,10 +62,8 @@ function processUnitSegment(segment) {
       const upgradeId = upgradeSegment.charAt(i) + upgradeSegment.charAt(i + 1);
       const upgradeCard = cards[upgradeId];
       newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
-      if ("additionalUpgradeSlots" in upgradeCard) {
-        newUnit.additionalUpgradeSlots.concat(upgradeCard.additionalUpgradeSlots);
-        newUnit.upgradesEquipped.push(null);
-      }
+      addAdditionalUpgradeSlots(newUnit, upgradeCard)
+
       i++;
       upgradeIndex++;
     }
@@ -132,14 +134,17 @@ function convertJsonToList(jsonText){
       return;
     }
 
-    let newUnit = {
+    const newUnit = {
       unitId: id,
       count:1, 
       upgradesEquipped:[],
-      additionalUpgradeSlots:[]
+      additionalUpgradeSlots:[],
+      specialUpgradeSlots: [],
     }
 
     newList.units.push(newUnit);
+
+    updateSpecialUpgradeSlots(newUnit);
 
     u.upgrades?.forEach(up=>{
       let upId = findId(up, 'upgrade');
@@ -147,7 +152,6 @@ function convertJsonToList(jsonText){
       if(!upId){
         // check for counterpart
         // TODO need ID10 case or etc here
-
         let counterpartId=findId(up,'counterpart')
 
         if(counterpartId){
@@ -158,9 +162,13 @@ function convertJsonToList(jsonText){
             additionalUpgradeSlots: []
           };
         }
-      }else{
-        newUnit.upgradesEquipped.push(upId);
-      } 
+        }else{
+          const upgradeCard = cards[upId];
+          newUnit.upgradesEquipped.push(upId);
+          if(upgradeCard.additionalUpgradeSlots){
+            addAdditionalUpgradeSlots(newUnit, upgradeCard);
+          }
+        } 
     })
 
     newUnit.upgradesEquipped = sortUpgrades(newUnit);
