@@ -172,7 +172,7 @@ function removeCounterpart(list, unitIndex) {
     a. Special upgrade slots go on the end for a unit, after upgradebar and after addtl slots
     b. Add a new null element on upgrades equipped
 */
-function updateSpecialUpgradeSlots(unit, list){
+function updateSpecialUpgradeSlots(unit){
 
   unit.specialUpgradeSlots = [];
   const unitCard = cards[unit.unitId];
