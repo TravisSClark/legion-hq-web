@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Grow,
   IconButton,
@@ -10,26 +10,26 @@ import {
   CardActionArea,
   Chip,
   Typography,
-  Tooltip
-} from '@material-ui/core';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
-import { ExpandMore as ExpandMoreIcon } from '@material-ui/icons';
-import { PointsChip } from 'common/CardChip';
-import KeywordChips from 'common/KeywordChips';
-import urls from 'constants/urls';
-import UpgradeBar from '../UpgradeBar';
+  Tooltip,
+} from "@material-ui/core";
+import clsx from "clsx";
+import { makeStyles } from "@material-ui/core/styles";
+import { ExpandMore as ExpandMoreIcon } from "@material-ui/icons";
+import { PointsChip } from "common/CardChip";
+import KeywordChips from "common/KeywordChips";
+import urls from "constants/urls";
+import UpgradeBar from "../UpgradeBar";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
+    transform: "rotate(0deg)",
+    marginLeft: "auto",
+    transition: theme.transitions.create("transform", {
       duration: theme.transitions.duration.shortest,
-    })
+    }),
   },
-  expandOpen: { transform: 'rotate(180deg)' },
-  selected: { border: '1px solid lightblue' },
+  expandOpen: { transform: "rotate(180deg)" },
+  selected: { border: "1px solid lightblue" },
   card: { marginRight: 4, marginBottom: 4 },
   unitCard: { maxWidth: 315 },
   commandCard: { maxWidth: 225 },
@@ -37,61 +37,100 @@ const useStyles = makeStyles(theme => ({
   unitImage: { width: 315, height: 225 },
   upgradeImage: { width: 150, height: 232.5 },
   commandImage: { width: 225, height: 315 },
-  doubleUpgrade: { width: 300 }
+  battleImage: { width: 225, height: 450 },
+  doubleUpgrade: { width: 300 },
 }));
 
 function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
-  const chipSize = 'small';
-  const { cost, cardType, cardName, displayName, keywords, imageName, upgradeBar } = card;
+  const chipSize = "small";
+  const {
+    cost,
+    cardType,
+    cardName,
+    displayName,
+    keywords,
+    imageName,
+    upgradeBar,
+  } = card;
   const classes = useStyles();
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [isIn, setIn] = useState(true);
 
   const handleExpandClick = () => setIsExpanded(!isExpanded);
-  const isDoubleSided = cardType === 'upgrade' && card.isDoubleSided;
+  const isDoubleSided = cardType === "upgrade" && card.isDoubleSided;
 
-  let flickerCard = ()=>{
+  let flickerCard = () => {
     setIn(false);
-    setTimeout(()=>setIn(true), 200);
-  }
+    setTimeout(() => setIn(true), 200);
+  };
 
   return (
     <Grow in={isIn}>
       <Card
-        className={clsx(classes.card,
+        className={clsx(
+          classes.card,
           { [classes.selected]: isSelected },
-          { [classes.unitCard]: cardType === 'unit' },
-          { [classes.upgradeCard]: cardType === 'upgrade' && ! isDoubleSided },
+          { [classes.unitCard]: cardType === "unit" },
+          { [classes.upgradeCard]: cardType === "upgrade" && !isDoubleSided },
           { [classes.doubleUpgrade]: isDoubleSided },
-          { [classes.commandCard]: cardType === 'command' || cardType === 'battle'},
+          {
+            [classes.commandCard]:
+              cardType === "command" || cardType === "battle",
+          }
         )}
       >
-        <CardActionArea disableRipple={true}  onClick={()=>{handleClick(); flickerCard();}}>
+        <CardActionArea
+          disableRipple={true}
+          onClick={() => {
+            handleClick();
+            flickerCard();
+          }}
+        >
           <CardMedia
             title={displayName ? displayName : cardName}
             image={`${urls.cdn}/${cardType}Cards/${imageName}`}
             className={clsx(
-              { [classes.unitImage]: cardType === 'unit' || cardType === 'counterpart'},
-              { [classes.commandImage]: cardType === 'battle'},
-              { [classes.upgradeImage]: cardType === 'upgrade' },
-              { [classes.commandImage]: cardType === 'command' },
+              {
+                [classes.unitImage]:
+                  cardType === "unit" || cardType === "counterpart",
+              },
+              { [classes.battleImage]: cardType === "battle" },
+              { [classes.upgradeImage]: cardType === "upgrade" },
+              { [classes.commandImage]: cardType === "command" },
               { [classes.doubleUpgrade]: isDoubleSided }
             )}
           />
         </CardActionArea>
         <CardActions disableSpacing>
-          <div style={{display:'flex', flexDirection:'row', alignItems:'center'}}>
-            {(cost || cost === 0) && <PointsChip value={cost} size={chipSize} />}
-            { card.isUnreleased && 
-            <Tooltip title={`This unit/upgrade is unreleased, on the roadmap for a ${card.isUnreleased} release, not yet legal for organized play.\nPoints, keywords, or upgrades may be absent or incorrect.`}>
-              <Chip size={chipSize}
-                label={<Typography variant="body2">Unreleased</Typography>}
-                style={{ marginBottom: 4, marginRight: 4, backgroundColor:'green' }}/>
-                </Tooltip>
-            }
-            {(cardType === "unit" || cardType === "counterpart") &&
-            <UpgradeBar upgradeBar={upgradeBar} iconHeight={20}/>}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
+            {(cost || cost === 0) && (
+              <PointsChip value={cost} size={chipSize} />
+            )}
+            {card.isUnreleased && (
+              <Tooltip
+                title={`This unit/upgrade is unreleased, on the roadmap for a ${card.isUnreleased} release, not yet legal for organized play.\nPoints, keywords, or upgrades may be absent or incorrect.`}
+              >
+                <Chip
+                  size={chipSize}
+                  label={<Typography variant="body2">Unreleased</Typography>}
+                  style={{
+                    marginBottom: 4,
+                    marginRight: 4,
+                    backgroundColor: "green",
+                  }}
+                />
+              </Tooltip>
+            )}
+            {(cardType === "unit" || cardType === "counterpart") && (
+              <UpgradeBar upgradeBar={upgradeBar} iconHeight={20} />
+            )}
           </div>
           <IconButton
             size="small"
@@ -113,7 +152,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
           <CardActions>
             <Button
               size="small"
-              style={{ marginLeft: 'auto' }}
+              style={{ marginLeft: "auto" }}
               onClick={handleCardZoom}
             >
               Show More
@@ -123,6 +162,6 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
       </Card>
     </Grow>
   );
-};
+}
 
 export default ImageCard;
