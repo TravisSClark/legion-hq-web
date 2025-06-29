@@ -179,6 +179,36 @@ export function ListProvider({
   const updateThenValidateList = (list) => {
     let revisedList = checkValidCards(list); // checks for bad stuff coming from URL/JSON
     const rankLimits = getRankLimits(revisedList);
+
+    // little gross, but fixes issue with 'legacy' lists before specialSlots were added
+    // should be a one-time op per list
+    revisedList.units.forEach(u => {
+      if(!u.specialUpgradeSlots){
+
+        let unitCard = cards[u.unitId]
+        let maxUnitUpgrades = unitCard.upgradeBar.length + u.additionalUpgradeSlots.length;
+        let popped = [];
+
+        while(u.upgradesEquipped.length > maxUnitUpgrades){
+          popped.push(u.upgradesEquipped.pop());
+        }
+        popped = popped.filter(u=>u!==null);
+
+        u.specialUpgradeSlots = [];
+        updateSpecialUpgradeSlots(u);
+
+        popped.forEach(p=>{
+          u.specialUpgradeSlots.forEach((s,i)=>{
+            if(s.upgrades.contains(p)){
+              u.upgradesEquipped[maxUnitUpgrades + i] = p;
+            }
+          })
+        })
+
+        console.log(JSON.stringify(u))
+      }
+    });
+
     revisedList = countPoints(revisedList);
     setCurrentList(revisedList);
     setValidationIssues(validateList(revisedList, rankLimits));
