@@ -23,13 +23,15 @@ import {
   countPoints,
   consolidate,
   updateSpecialUpgradeSlots,
-} from 'components/listOperations';
-import listTemplate from 'constants/listTemplate';
-import { validateList, checkValidCards, getRankLimits } from 'components/listValidator';
-
+} from "components/listOperations";
+import listTemplate from "constants/listTemplate";
 import {
-  getUpgradeBar
-} from "components/eligibleCardListGetter";
+  validateList,
+  checkValidCards,
+  getRankLimits,
+} from "components/listValidator";
+
+import { getUpgradeBar } from "components/eligibleCardListGetter";
 import {
   mergeLists,
   convertHashToList,
@@ -140,30 +142,30 @@ export function ListProvider({
 
     // little gross, but fixes issue with 'legacy' lists before specialSlots were added
     // should be a one-time op per list
-    revisedList.units.forEach(u => {
-      if(!u.specialUpgradeSlots){
-
-        let unitCard = cards[u.unitId]
-        let maxUnitUpgrades = unitCard.upgradeBar.length + u.additionalUpgradeSlots.length;
+    revisedList.units.forEach((u) => {
+      if (!u.specialUpgradeSlots) {
+        let unitCard = cards[u.unitId];
+        let maxUnitUpgrades =
+          unitCard.upgradeBar.length + u.additionalUpgradeSlots.length;
         let popped = [];
 
-        while(u.upgradesEquipped.length > maxUnitUpgrades){
+        while (u.upgradesEquipped.length > maxUnitUpgrades) {
           popped.push(u.upgradesEquipped.pop());
         }
-        popped = popped.filter(u=>u!==null);
+        popped = popped.filter((u) => u !== null);
 
         u.specialUpgradeSlots = [];
         updateSpecialUpgradeSlots(u);
 
-        popped.forEach(p=>{
-          u.specialUpgradeSlots.forEach((s,i)=>{
-            if(s.upgrades.contains(p)){
+        popped.forEach((p) => {
+          u.specialUpgradeSlots.forEach((s, i) => {
+            if (s.upgrades.includes(p)) {
               u.upgradesEquipped[maxUnitUpgrades + i] = p;
             }
-          })
-        })
+          });
+        });
 
-        console.log(JSON.stringify(u))
+        console.log(JSON.stringify(u));
       }
     });
 
@@ -174,10 +176,9 @@ export function ListProvider({
   };
 
   // Allows entry from non-routed sources, e.g. JSON import
-  const loadList = (list) =>{
+  const loadList = (list) => {
     updateThenValidateList(consolidate(list));
-
-  }
+  };
 
   const reorderUnits = (startIndex, endIndex) => {
     function reorder(arr) {
