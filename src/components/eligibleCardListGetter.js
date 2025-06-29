@@ -12,7 +12,6 @@ import { sortCommandIds } from "./listOperations";
 const impRemnantUpgrades = [
   "ej",
   "ek",
-  "fv",
   "iy",
   "fu",
   "gm",
@@ -316,14 +315,15 @@ function getEquippableUpgrades(
 
   const uniqueCardNames = getListUniques(list, "name");
 
-
   // TODO not great, still better than alternatives I can think of rn
   // should be assigned at unit construction
   unitCardCopy.forceAffinity = forceAffinity;
 
   // TODO worse; quick+dirty way to get imp remnant working; should probably have an 'effectiveRank' field
-  if(list.battleForce){
-    if(battleForcesDict[list.battleForce]?.rules?.buildsAsCorps?.includes(unitId)){
+  if (list.battleForce) {
+    if (
+      battleForcesDict[list.battleForce]?.rules?.buildsAsCorps?.includes(unitId)
+    ) {
       unitCardCopy.rank = "corps";
     }
   }
@@ -346,10 +346,9 @@ function getEquippableUpgrades(
     )
       continue;
 
-   
-
     // Imp remnant's mixed heavies rule (and a cheat to get Imp March working)
-    if ( list.battleForce === "Imperial Remnant" &&
+    if (
+      list.battleForce === "Imperial Remnant" &&
       // card.cardSubtype === "heavy weapon" &&
       unitCardCopy.cardSubtype === "trooper" &&
       impRemnantUpgrades.includes(id)
@@ -357,7 +356,7 @@ function getEquippableUpgrades(
       validUpgradeIds.push(id);
       continue;
     }
-    
+
     // The 'normal' way to check for an upgrade - see if the unit meets the upgrade's requirements
     if (areRequirementsMet(card.requirements, unitCardCopy)) {
       validUpgradeIds.push(id);
@@ -458,16 +457,18 @@ function findUnitIndexInList(unit, list) {
 }
 
 // NOT a strict match for this file, going to call "good enough"
-function getUpgradeBar(unit){
-
-
-  if(!unit){
+function getUpgradeBar(unit) {
+  if (!unit) {
     return [];
   }
 
   const unitCard = cards[unit.unitId];
 
-  return [...unitCard.upgradeBar, ...unit.additionalUpgradeSlots, ...unit.specialUpgradeSlots];
+  return [
+    ...unitCard.upgradeBar,
+    ...unit.additionalUpgradeSlots,
+    ...unit.specialUpgradeSlots,
+  ];
 }
 
 export {
@@ -480,5 +481,5 @@ export {
   findUnitIndexInList,
   areRequirementsMet,
   impRemnantUpgrades,
-  getUpgradeBar
+  getUpgradeBar,
 };
