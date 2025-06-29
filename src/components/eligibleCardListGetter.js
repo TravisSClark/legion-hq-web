@@ -1,29 +1,21 @@
 import _ from "lodash";
 import cards, { cardIdsByType, upgradeIdsBySubtype } from "constants/cards";
 
-import interactions from "components/cardInteractions";
 import battleForcesDict from "constants/battleForcesDict";
 import { sortCommandIds } from "./listOperations";
 
+// List out all imp heavies available under Imp Remnant's special rule
+// could be made into requirements kung-fu, but this is fine imo
+const impRemnantUpgrades = [ "ej", "ek", "fv", "iy", "fu", "gm", "gl", "em", "en", "ja"];
+
 /**
  * Functions for getting the lists of eligible cards that can be added based on list state
- *
  */
-const impRemnantUpgrades = [
-  "ej",
-  "ek",
-  "fv",
-  "iy",
-  "fu",
-  "gm",
-  "gl",
-  "em",
-  "en",
-  "ja",
-  // "Bo", // cheating ;)
-];
 
-/** 
+
+/**
+ * Checks if a unit is eligible for a given upgrade, based on said upgrade's requirements[].
+ *  
  * Items in the requirements array or subarrays must be one of the following:
  * 
  * A SINGLE lodash match object (shortcut so we don't need to lead with AND for a single req or etc)
@@ -50,8 +42,6 @@ const impRemnantUpgrades = [
                 }
             ]
         ],
- * 
- * 
  */
 function areRequirementsMet(requirements, unitCard) {
   const operator = requirements[0];
@@ -100,6 +90,7 @@ function sortIds(ids) {
   return sortedIds;
 }
 
+// Sort units first by if they're part of the list's faction, then abc (ie mercs end up on bottom of selector list)
 function sortUnitIds(ids) {
   const sortedIds = ids.sort((a, b) => {
     const cardA = cards[a];

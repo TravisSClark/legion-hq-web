@@ -122,7 +122,6 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
 
   let leaderList = [];
 
-
   const unitCardCopy = Object.assign({}, unitCard);
 
   // TODO worse; quick+dirty way to get imp remnant working; should probably have an 'effectiveRank' field
@@ -567,6 +566,8 @@ function getOriginalRankLimits(currentList){
   return rankReqs;
 }
 
+// Removes any unit or upgrade ids that we don't have entries for
+// Should only be hit if user gives bad JSON/URL
 function checkValidCards(currentList) {
   for (let i = 0; i < currentList.units.length; i++) {
     let unit = currentList.units[i];

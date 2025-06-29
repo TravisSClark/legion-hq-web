@@ -1,5 +1,5 @@
 import legionModes from "constants/legionModes";
-import { addAdditionalUpgradeSlots, consolidate, sortUpgrades, updateSpecialUpgradeSlots } from "./listOperations";
+import { addAdditionalUpgradeSlots, sortUpgrades, updateSpecialUpgradeSlots } from "./listOperations";
 import listTemplate from "constants/listTemplate";
 import battleForcesDict from "constants/battleForcesDict";
 import cards, {cardIdsByType} from "constants/cards";
@@ -33,7 +33,7 @@ function mergeLists(primaryList, secondaryList) {
     }
   }
   unitsToAdd.forEach((unitToAdd) => primaryList.units.push(unitToAdd));
-  return consolidate(primaryList);
+  return primaryList;
 }
 
 function processUnitSegment(segment) {
@@ -176,7 +176,7 @@ function convertJsonToList(jsonText){
   });
   importList.commandCards?.forEach(cc=>{
 
-    if(cc == "Standing Orders"){
+    if(cc === "Standing Orders"){
       return;
     }
     let ccId = findId(cc, 'command');
@@ -297,7 +297,7 @@ function convertHashToList(faction, url) {
   ) {
     list.battleForce = "Separatist Invasion";
   }
-  return consolidate(list);
+  return list;
 }
 
 function rehashList(list) {

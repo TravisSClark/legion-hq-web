@@ -18,10 +18,10 @@ import {
   removeCounterpart,
   addBattle,
   removeBattle,
-  equipUpgrade,
-  unequipUpgrade,
-  countPoints,
-  consolidate,
+  equipUnitUpgrade,
+  equipCounterpartUpgrade,
+  unequipUnitUpgrade,
+  unequipCounterpartUpgrade,
 } from 'components/listOperations';
 import listTemplate from 'constants/listTemplate';
 import { validateList, checkValidCards, getRankLimits } from 'components/listValidator';
@@ -35,6 +35,7 @@ import {
   changeListTitle,
   setListMode,
 } from "components/listLoadAndHash";
+import interactions from "components/cardInteractions";
 
 const ListContext = createContext();
 const httpClient = Axios.create();
@@ -44,6 +45,47 @@ let config = {
     "x-api-key": xapikey,
   },
 };
+
+function countPoints(list) {
+  list.pointTotal = 0;
+  list.units.forEach((unit, unitIndex) => {
+    const unitCard = cards[unit.unitId];
+    unit.totalUnitCost = unitCard.cost;
+
+    unit.upgradeInteractions = {};
+    unit.upgradesEquipped.forEach((upgradeId) => {
+      if (upgradeId) {
+        const upgradeCard = cards[upgradeId];
+        unit.totalUnitCost += upgradeCard.cost;
+        if (upgradeId in interactions.upgradePoints) {
+          const interaction = interactions.upgradePoints[upgradeId];
+          if (interaction.isConditionMet(list, unit)) {
+            unit.totalUnitCost += interaction.pointDelta;
+            unit.upgradeInteractions[upgradeId] = interaction.pointDelta;
+          }
+        }
+      }
+    });
+    if (unit.counterpart) {
+      const counterpartCard = cards[unit.counterpart.counterpartId];
+      unit.counterpart.totalUnitCost = counterpartCard.cost;
+
+      unit.counterpart.upgradesEquipped.forEach((upgradeId) => {
+        if (upgradeId) {
+          const upgradeCard = cards[upgradeId];
+          unit.counterpart.totalUnitCost += upgradeCard.cost;
+        }
+      });
+
+      unit.totalUnitCost += unit.counterpart.totalUnitCost;
+    }
+
+    unit.totalUnitCost *= unit.count;
+    list.pointTotal += unit.totalUnitCost;
+  });
+
+  return list;
+}
 
 export function ListProvider({
   width,
@@ -130,22 +172,44 @@ export function ListProvider({
     }
   }, [width, cardPaneFilter]);
 
+  // TODO reduceValidate
   // TODO needs some intelligence/context to know WHAT needs validation after a given list change.
   // There are edges all over and it doesn't *seem* like this "check everything" check chugs too hard,
   // but it's still bad from a performance perspective
   const updateThenValidateList = (list) => {
-    let revisedList = checkValidCards(list);
+    let revisedList = checkValidCards(list); // checks for bad stuff coming from URL/JSON
     const rankLimits = getRankLimits(revisedList);
+    revisedList = countPoints(revisedList);
     setCurrentList(revisedList);
     setValidationIssues(validateList(revisedList, rankLimits));
     setRankLimits(rankLimits);
-    countPoints(revisedList);
   };
+
+
+  // After a list change, confirm that ranks and any BF unit count reqs are met
+  // TODO see about reusing/parameterizing pieces of updateThenValidateList
+  // for now, copy, code, and see where commonalities are after implementing
+  const doListUnitsValidate = (list, validatorFunc)=>{
+    const rankLimits = getRankLimits(revisedList);
+    revisedList = countPoints(revisedList);
+    setCurrentList(revisedList);
+    setValidationIssues(validateList(revisedList, rankLimits));
+    setRankLimits(rankLimits);
+  }
+
+  // TODO see about reusing/parameterizing pieces of updateThenValidateList
+  // for now, copy, code, and see where commonalities are after implementing
+  const doListSingleUnitValidate = (list, validatorFunc)=>{
+    const rankLimits = getRankLimits(revisedList);
+    revisedList = countPoints(revisedList);
+    setCurrentList(revisedList);
+    setValidationIssues(validateList(revisedList, rankLimits));
+    setRankLimits(rankLimits);
+  }
 
   // Allows entry from non-routed sources, e.g. JSON import
   const loadList = (list) =>{
-    updateThenValidateList(consolidate(list));
-
+    updateThenValidateList(list);
   }
 
   const reorderUnits = (startIndex, endIndex) => {
@@ -182,7 +246,6 @@ export function ListProvider({
     getNewType = false
   ) => {
     const unit = list.units[unitIndex];
-    const unitCard = cards[unit.unitId];
 
     // These might be a bad pattern, but they sort of are needed for confirming we haven't exceeded the total upgrade count when cascading
     let upgradesEquipped = unit.upgradesEquipped;
@@ -255,6 +318,7 @@ export function ListProvider({
     }
   };
 
+  // Adds upgrade to list, then cascades upgrade bar accordingly
   const handleEquipUpgrade = (
     action,
     unitIndex,
@@ -262,15 +326,26 @@ export function ListProvider({
     upgradeId,
     isApplyToAll
   ) => {
-    const { list: newList, unitIndex: newUnitIndex } = equipUpgrade(
-      currentList,
-      action,
-      unitIndex,
-      upgradeIndex,
-      upgradeId,
-      isApplyToAll
-    );
 
+    let newList;
+    let newUnitIndex = unitIndex;
+    let needsRankCount = false;
+
+    if (action === "UNIT_UPGRADE" || action === "UNIT_UPGRADE_SPECIAL") {
+      let newIndex;
+      [newList, newIndex, needsRankCount] = equipUnitUpgrade(
+        currentList,
+        unitIndex,
+        upgradeIndex,
+        upgradeId,
+        isApplyToAll
+      );
+      newUnitIndex = newIndex;
+    } else if (action === "COUNTERPART_UPGRADE") {
+      newList = equipCounterpartUpgrade(currentList, unitIndex, upgradeIndex, upgradeId);
+      // newUnitIndex stays at unitIndex; currently, counterpart changes don't cause new list entries/indices since they're all unique
+    }
+  
     setCardSelectorToNextUpgradeSlot(
       newList,
       action,
@@ -278,17 +353,22 @@ export function ListProvider({
       upgradeIndex
     );
 
+    // TODO reduceValidate
     updateThenValidateList({ ...newList });
   };
 
   const handleUnequipUpgrade = (action, unitIndex, upgradeIndex) => {
     setCardPaneFilter({ action: "DISPLAY" });
-    const newList = unequipUpgrade(
-      currentList,
-      action,
-      unitIndex,
-      upgradeIndex
-    );
+
+    let newList;
+
+    if (action === "UNIT_UPGRADE" || action === "UNIT_UPGRADE_SPECIAL") {
+      newList = unequipUnitUpgrade(currentList, unitIndex, upgradeIndex);
+    } else if (action === "COUNTERPART_UPGRADE") {
+      newList = unequipCounterpartUpgrade(currentList, unitIndex, upgradeIndex);
+    }
+  
+    // TODO reduceValidate
     updateThenValidateList({ ...newList });
   };
   const handleAddUnit = (unitId, stackSize) => {
@@ -296,6 +376,8 @@ export function ListProvider({
       setCardPaneFilter({ action: "DISPLAY" });
     }
     const newList = addUnit(currentList, unitId, stackSize);
+        // TODO reduceValidate
+
     updateThenValidateList({ ...newList });
   };
   const handleAddCommand = (commandId) => {
@@ -335,15 +417,21 @@ export function ListProvider({
   const handleAddCounterpart = (unitIndex, counterpartId) => {
     setCardPaneFilter({ action: "DISPLAY" });
     const newList = addCounterpart(currentList, unitIndex, counterpartId);
+        // TODO reduceValidate
+
     updateThenValidateList({ ...newList });
   };
   const handleRemoveCounterpart = (unitIndex) => {
     setCardPaneFilter({ action: "DISPLAY" });
     const newList = removeCounterpart(currentList, unitIndex);
+        // TODO reduceValidate
+
     updateThenValidateList({ ...newList });
   };
   const handleIncrementUnit = (index) => {
     let newList = incrementUnit(currentList, index);
+        // TODO reduceValidate
+
     updateThenValidateList({ ...newList });
   };
   const handleDecrementUnit = (index) => {
@@ -351,6 +439,8 @@ export function ListProvider({
       setCardPaneFilter({ action: "DISPLAY" });
     }
     let newList = decrementUnit(currentList, index);
+        // TODO reduceValidate
+
     updateThenValidateList({ ...newList });
   };
 

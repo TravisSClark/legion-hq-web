@@ -13,55 +13,11 @@ const battleTypes = ["primary", "secondary", "advantage"];
 // Contains and only contains functions which modify the contents of the Legion list
 // (split other things into appropriate helpers in components so this doesn't go to 2k+ LOC again XD)
 
-function countPoints(list) {
-  list.pointTotal = 0;
-  list.units.forEach((unit, unitIndex) => {
-    const unitCard = cards[unit.unitId];
-    unit.totalUnitCost = unitCard.cost;
 
-    unit.upgradeInteractions = {};
-    unit.upgradesEquipped.forEach((upgradeId) => {
-      if (upgradeId) {
-        const upgradeCard = cards[upgradeId];
-        unit.totalUnitCost += upgradeCard.cost;
-        if (upgradeId in interactions.upgradePoints) {
-          const interaction = interactions.upgradePoints[upgradeId];
-          if (interaction.isConditionMet(list, unit)) {
-            unit.totalUnitCost += interaction.pointDelta;
-            unit.upgradeInteractions[upgradeId] = interaction.pointDelta;
-          }
-        }
-      }
-    });
-    if (unit.counterpart) {
-      const counterpartCard = cards[unit.counterpart.counterpartId];
-      unit.counterpart.totalUnitCost = counterpartCard.cost;
 
-      unit.counterpart.upgradesEquipped.forEach((upgradeId) => {
-        if (upgradeId) {
-          const upgradeCard = cards[upgradeId];
-          unit.counterpart.totalUnitCost += upgradeCard.cost;
-        }
-      });
 
-      unit.totalUnitCost += unit.counterpart.totalUnitCost;
-    }
-
-    unit.totalUnitCost *= unit.count;
-    list.pointTotal += unit.totalUnitCost;
-  });
-
-  return list;
-}
-
-/**
- * Removes command cards if commander is removed
- * @param {} list
- * @returns
- */
-// TODO need to specialize this; should at least be a on-upgrade and on-unit fire, not this whole big thing
-function consolidate(list) {
-  // TODO see about moving these into validator
+function removeCommandIfNoCommander(list){
+  // Get names of all units+counterparts
   let cardNames = [];
   list.units.forEach((u) => {
     cardNames.push(cards[u.unitId].cardName);
@@ -79,7 +35,6 @@ function consolidate(list) {
   }
 
   list.commandCards = sortCommandIds(list.commandCards);
-  return countPoints(list);
 }
 
 function equipUnitUpgrade(
@@ -94,6 +49,7 @@ function equipUnitUpgrade(
   const upgradeCard = cards[upgradeId];
 
   let newIndex = unitIndex;
+  let needsRankCount = false;
   const count = isApplyToAll && !upgradeCard.isUnique ? unit.count : 1;
 
   const newUnit = JSON.parse(JSON.stringify(unit));
@@ -120,7 +76,7 @@ function equipUnitUpgrade(
     list = decrementUnit(list, unitIndex, count);
   }
 
-  return [list, newIndex];
+  return [list, newIndex, needsRankCount];
 }
 
 function equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId) {
@@ -156,12 +112,13 @@ function addCounterpart(list, unitIndex, counterpartId) {
       unit.counterpart.upgradesEquipped.push(null);
     }
   }
-  return consolidate(list);
+  return list;
 }
 
 function removeCounterpart(list, unitIndex) {
   delete list.units[unitIndex].counterpart;
-  return consolidate(list);
+  removeCommandIfNoCommander(list);
+  return list;
 }
 
 
@@ -192,7 +149,7 @@ function updateSpecialUpgradeSlots(unit, list){
 // Check for special slots; remove or append them to end of unit bar accordingly
 function addAdditionalUpgradeSlots(unit, upgradeCard){
 
-  if(!upgradeCard.additionalUpgradeSlots || upgradeCard.additionalUpgradeSlots.length == 0)
+  if(!upgradeCard.additionalUpgradeSlots || upgradeCard.additionalUpgradeSlots.length === 0)
     return;
 
   const slots = upgradeCard.additionalUpgradeSlots;
@@ -317,12 +274,12 @@ function addUnit(list, unitId, stackSize = 1) {
     }
   }
   sortUnitsByRank(list);
-  return consolidate(list);
+  return list;
 }
 
 function incrementUnit(list, index, count = 1) {
   list.units[index].count += count;
-  return consolidate(list);
+  return list;
 }
 
 function decrementUnit(list, index, count = 1) {
@@ -332,7 +289,8 @@ function decrementUnit(list, index, count = 1) {
   } else {
     list.units[index].count -= count;
   }
-  return consolidate(list);
+  list = removeCommandIfNoCommander(list);
+  return list;
 }
 
 function sortUnitsByRank(list) {
@@ -406,47 +364,8 @@ function removeBattle(list, type, index) {
   return list;
 }
 
-function equipUpgrade(
-  list,
-  action,
-  unitIndex,
-  upgradeIndex,
-  upgradeId,
-  isApplyToAll = false
-) {
-  if (action === "UNIT_UPGRADE" || action === "UNIT_UPGRADE_SPECIAL") {
-    let newIndex;
-    [list, newIndex] = equipUnitUpgrade(
-      list,
-      unitIndex,
-      upgradeIndex,
-      upgradeId,
-      isApplyToAll
-    );
-    unitIndex = newIndex;
-  } else if (action === "COUNTERPART_UPGRADE") {
-    list = equipCounterpartUpgrade(list, unitIndex, upgradeIndex, upgradeId);
-  }
-
-  list = consolidate(list);
-  return { list, unitIndex };
-}
-
-// TODO remove these routers in favor of calling the right action type directly from the click handler
-function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
-  // const upgradeId = list.units[unitIndex].upgradesEquipped[upgradeIndex];
-  if (action === "UNIT_UPGRADE" || action == "UNIT_UPGRADE_SPECIAL") {
-    list = unequipUnitUpgrade(list, unitIndex, upgradeIndex);
-  } else if (action === "COUNTERPART_UPGRADE") {
-    list = unequipCounterpartUpgrade(list, unitIndex, upgradeIndex);
-  }
-
-  return consolidate(list);
-}
-
 // Returns a sorted list of upgrades so we can consolidate identical stacks regardless of add order
 function sortUpgrades(unit) {
-  const unitCard = cards[unit.unitId];
   const { upgradesEquipped } = unit;
 
   const upgradeBar = getUpgradeBar(unit).map(u=>u.type?u.type:u);
@@ -519,22 +438,21 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
 
 export {
   addUnit,
+  incrementUnit,
+  decrementUnit,
   addCounterpart,
   removeCounterpart,
   addBattle,
   removeBattle,
   addCommand,
   removeCommand,
-  equipUpgrade,
-  unequipUpgrade,
+  removeCommandIfNoCommander,
+  equipUnitUpgrade,
+  unequipUnitUpgrade,
   equipCounterpartUpgrade,
   unequipCounterpartUpgrade,
-  incrementUnit,
-  decrementUnit,
-  countPoints,
   sortCommandIds,
-  consolidate,
   sortUpgrades,
   updateSpecialUpgradeSlots,
-  addAdditionalUpgradeSlots
+  addAdditionalUpgradeSlots,
 };
