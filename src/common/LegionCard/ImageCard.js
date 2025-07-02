@@ -46,6 +46,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
   const {
     cost,
     cardType,
+    cardSubtype,
     cardName,
     displayName,
     keywords,
@@ -95,9 +96,16 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
                 [classes.unitImage]:
                   cardType === "unit" || cardType === "counterpart",
               },
-              { [classes.battleImage]: cardType === "battle" },
+              {
+                [classes.battleImage]:
+                  cardType === "battle" && cardSubtype == "primary",
+              },
               { [classes.upgradeImage]: cardType === "upgrade" },
-              { [classes.commandImage]: cardType === "command" },
+              {
+                [classes.commandImage]:
+                  cardType === "command" ||
+                  (cardType === "battle" && cardSubtype !== "primary"),
+              },
               { [classes.doubleUpgrade]: isDoubleSided }
             )}
           />

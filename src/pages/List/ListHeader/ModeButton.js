@@ -28,6 +28,7 @@ function ModeButton({
   const { userSettings } = useContext(DataContext);
 
   const isOverPoints = points > maxPoints;
+  const pointsDiff = Math.abs(maxPoints - points);
 
   return (
     <React.Fragment>
@@ -74,7 +75,7 @@ function ModeButton({
           }}
         >
           <Typography variant="caption">
-            {points} / {maxPoints}
+            {points} / {maxPoints} ({pointsDiff})
           </Typography>
           <div
             style={{

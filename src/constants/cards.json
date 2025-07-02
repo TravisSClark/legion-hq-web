@@ -6712,6 +6712,7 @@
     "faction": "republic",
     "title": "Made to Suffer",
     "cardName": "C-3PO",
+    "ttsName": "C-3PO Human Cyborg Relations (GAR)",
     "isUnique": true,
     "cost": 15,
     "wounds": 2,
