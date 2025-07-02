@@ -3456,6 +3456,7 @@
   "et": {
     "cardSubtype": "personnel",
     "cardName": "R5 Astromech Droid",
+    "ttsName": "Astromech Droid",
     "cardType": "upgrade",
     "cost": 8,
     "imageName": "R5 Astromech Droid.webp",
