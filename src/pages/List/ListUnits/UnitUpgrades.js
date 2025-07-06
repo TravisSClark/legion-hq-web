@@ -42,8 +42,6 @@ function UnitUpgrades({
     } else {
 
       let normalHandler = ()=> {
-                console.log('normal upgrade');
-
         setCardPaneFilter({
         action: actionPrefix + '_UPGRADE',
         upgradeType, 
@@ -53,9 +51,7 @@ function UnitUpgrades({
         upgradesEquipped: unit.upgradesEquipped,
       })};
 
-      // console.log('upgradetype', JSON.stringify(upgradeType));
       let specialHandler = ()=>{
-        console.log('special upgrade');
           setCardPaneFilter({
           action: actionPrefix + "_UPGRADE_SPECIAL",
           upgradeType: upgradeType.type, 

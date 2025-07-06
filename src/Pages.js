@@ -11,14 +11,16 @@ const MainListPage = lazy(() => import("pages/List"));
 const Settings = lazy(() => import("pages/Settings"));
 const Info = lazy(() => import("pages/Info"));
 export const initialLists = {
-  rebels: { ...listTemplate, faction: "rebels" },
-  empire: { ...listTemplate, faction: "empire" },
-  republic: { ...listTemplate, faction: "republic" },
-  separatists: { ...listTemplate, faction: "separatists" },
-  mercenary: {
+  rebels: { ...listTemplate, faction: "rebels", forceAffinity:"light side" },
+  empire: { ...listTemplate, faction: "empire", forceAffinity:"dark side" },
+  republic: { ...listTemplate, faction: "republic", forceAffinity:"light side" },
+  separatists: { ...listTemplate, faction: "separatists", forceAffinity:"dark side" },
+  mercenary: { 
     ...listTemplate,
     faction: "mercenary",
+    // TODO; we'll want this to parameterize roughly when Weequays come out (I think/hope)
     battleForce: "Shadow Collective",
+    forceAffinity:"dark side"
   },
 };
 

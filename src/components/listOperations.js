@@ -1,6 +1,6 @@
 import cards from "constants/cards";
 
-import interactions, { getSpecialSlots } from "components/cardInteractions";
+import { getSpecialSlots } from "components/cardInteractions";
 import {
   findUnitIndexInList,
   getEquippableUpgrades,
@@ -12,9 +12,6 @@ const battleTypes = ["primary", "secondary", "advantage"];
 
 // Contains and only contains functions which modify the contents of the Legion list
 // (split other things into appropriate helpers in components so this doesn't go to 2k+ LOC again XD)
-
-
-
 
 function removeCommandIfNoCommander(list){
   // Get names of all units+counterparts
@@ -35,6 +32,8 @@ function removeCommandIfNoCommander(list){
   }
 
   list.commandCards = sortCommandIds(list.commandCards);
+
+  return list;
 }
 
 function equipUnitUpgrade(
@@ -76,6 +75,8 @@ function equipUnitUpgrade(
     list = decrementUnit(list, unitIndex, count);
   }
 
+  addUniqueCard(list, "upgrade", upgradeId, count)
+
   return [list, newIndex, needsRankCount];
 }
 
@@ -112,15 +113,20 @@ function addCounterpart(list, unitIndex, counterpartId) {
       unit.counterpart.upgradesEquipped.push(null);
     }
   }
+
+  addUniqueCard(list, "upgrade", counterpartCard.id);
+
   return list;
 }
 
 function removeCounterpart(list, unitIndex) {
+
+  removeUniqueCard(list, "upgrade", list.units[unitIndex].counterpart.counterPartId);
+
   delete list.units[unitIndex].counterpart;
   removeCommandIfNoCommander(list);
   return list;
 }
-
 
 /* 
   Update special upgrade slots for upgrades like Electrobinoculars and Imperial March:
@@ -177,10 +183,10 @@ function removeAdditionalUpgradeSlot(unit){
 
   let offset = unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
 
+  // removeUniqueCard(list, "upgrade", unit.upgradesEquipped[offset])
   unit.upgradesEquipped.splice(offset, 1)
 
   updateSpecialUpgradeSlots(unit);
-  
 }
 
 function addUnit(list, unitId, stackSize = 1) {
@@ -278,17 +284,36 @@ function addUnit(list, unitId, stackSize = 1) {
 }
 
 function incrementUnit(list, index, count = 1) {
-  list.units[index].count += count;
+  const unit = list.units[index];
+  unit.count += count;
+
+  addUniqueCard(list, "unit", unit.unitId, count);
+
+  unit.upgradesEquipped.forEach(u=>{
+    if(u===null) return;
+
+    addUniqueCard(list, "upgrade", cards[u].id, count)
+  })
+
   return list;
 }
 
 function decrementUnit(list, index, count = 1) {
   const unitObject = list.units[index];
+  const unitCard = cards[unitObject.unitId];
+
+  removeUniqueCard(list, "unit", unitCard.id, count)
+  unitObject.upgradesEquipped.forEach(u=>{
+    if(u===null) return;
+    removeUniqueCard(list, "upgrade", cards[u].id, count)
+  })
+
   if (unitObject.count <= count) {
     list.units.splice(index, 1);
   } else {
     list.units[index].count -= count;
   }
+
   list = removeCommandIfNoCommander(list);
   return list;
 }
@@ -415,6 +440,7 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
 
   const newUnit = JSON.parse(JSON.stringify(unit));
   newUnit.count = 1;
+  removeUniqueCard(list, "upgrade", newUnit.upgradesEquipped[upgradeIndex]);
   newUnit.upgradesEquipped[upgradeIndex] = null;
 
   // TODO does not work if additionalUpgradeSlots has a config where >1 upgrade card provides aUS
@@ -431,9 +457,47 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
   } else {
     list.units.splice(unitIndex + 1, 0, newUnit);
   }
+
   list = decrementUnit(list, unitIndex);
 
   return list;
+}
+
+
+function removeUniqueCard(list, type, id, count=1){
+
+  let card = cards[id];
+  if((!card.isUnique && !card.uniqueCount) || id === null)
+    return;
+
+
+  let listItemIdx = list.uniqueCardIds[type].findIndex(i=> i.id === id || i === id)
+
+  if(listItemIdx === -1){
+    console.warn('tried to remove ' + id + ' ' + type +' from list uniques, but not found');
+    return;
+  }
+
+  list.uniqueCardIds[type][listItemIdx].count -= count;
+
+  if(list.uniqueCardIds[type][listItemIdx].count <= 0){
+    list.uniqueCardIds[type].splice(listItemIdx,1);
+  }
+}
+
+function addUniqueCard(list, type, id, count=1){
+
+  let card = cards[id];
+  if(!card.isUnique && !card.uniqueCount)
+    return;
+
+  let listItem = list.uniqueCardIds[type].find(i=> i.id === id || i === id)
+
+  if( listItem){
+    listItem.count += count;
+  } else{
+    list.uniqueCardIds[type].push({id, count})
+  }
 }
 
 export {

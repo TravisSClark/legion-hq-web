@@ -93,8 +93,6 @@ function segmentToUnitObject(unitIndex, segment) {
 function convertJsonToList(jsonText){
   let newList = JSON.parse(JSON.stringify(listTemplate));
   let importList = JSON.parse(jsonText);
-  // console.log('list to import',JSON.stringify(importList));
-
 
   if (importList.armyFaction === "rebel") newList.faction = "rebels";
   else if (importList.armyFaction === "empire") newList.faction = "empire";
@@ -115,8 +113,6 @@ function convertJsonToList(jsonText){
       let card = cards[ids[i]];
 
       let nameTitle = card.cardName + (card.title ? " " + card.title : '');
-
-      // console.log(nameTitle)
 
       if(uname === nameTitle.toUpperCase() || uname === card.ttsName?.toUpperCase()){
         return ids[i];
@@ -212,9 +208,7 @@ function convertJsonToList(jsonText){
 
   newList.title = importList.title ? importList.title : "Untitled";
 
-  console.log('import',JSON.stringify(newList))
   return newList;
-  // list.battleFieldDeck
 }
 
 function convertHashToList(faction, url) {

@@ -18,7 +18,7 @@ function isUniqueCard(card){
  * @param {*} upgradeIndex 
  * @param {*} upgradeId 
  */
-function validateUpgrades(list, unitIndex, listUniqueUpgrades){
+function validateUpgrades(list, unitIndex){
   const unit = list.units[unitIndex];
   const unitCard = cards[unit.unitId];
   unitCard.forceAffinity = unit.forceAffinity;
@@ -28,9 +28,6 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
   unit.upgradesEquipped.forEach(id=>{
     if(!id) return;
     const card = cards[id];
-    if(card.uniqueCount || isUniqueCard(card)){
-      listUniqueUpgrades[id] = listUniqueUpgrades[id] ? listUniqueUpgrades[id] + unit.count : unit.count;
-    }
     if(list.battleForce && (isUniqueCard(card))){
       if(!battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id))
         unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" upgrade is not allowed in this battleforce." });
@@ -45,9 +42,6 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
     unit.counterpart.upgradesEquipped.forEach((id) => {
       if(!id) return;
       const card = cards[id];
-      if(card.uniqueCount || card.isUnique){
-        listUniqueUpgrades[id] = listUniqueUpgrades[id] ? listUniqueUpgrades[id] + 1 : 1;
-      }
       if(list.battleForce && (card.isUnique)){
         if(!battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id))
           unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" upgrade is not allowed in this battleforce." });
@@ -62,8 +56,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades){
     unit.upgradesEquipped.forEach((id)=>{
       if(id === null)
         return;
-      const equipCard = cards[id];
-      if(equipCard.cardSubtype === 'heavy weapon'){
+      if(cards[id].cardSubtype === 'heavy weapon'){
         heavyCount++;
       }
     });
@@ -327,83 +320,107 @@ function rankValidation(currentList, currentRanks, rankLimits, mercs, rankIssues
   return validationIssues;
 }
 
-// Would be better to move some of this into the proper unit/upgrade modify steps instead of 
-// iterating everything every time something's changed
-// See if anyone complains about LHQ chugging first then go from there ;)
-function validateList(currentList, rankLimits){
-  let validationIssues = [];
+// count units, ranks, count up them mercs
 
-  const battleForce = currentList.battleForce ? battleForcesDict[currentList.battleForce] : null;
+function getUnitAndRankCounts(currentList){
 
-  let currentRanks = {commander:0, operative:0, corps:0, special:0, heavy:0, support:0 };
-  let rankIssues = {commander:[], operative:[], corps:[], special:[], heavy:[], support:[]}
+  const unitCounts = {};
+  const currentRanks = {commander:0, operative:0, corps:0, special:0, heavy:0, support:0 };
 
-  let gameTimeRanks = {...currentRanks};
-  let mercs = {...currentRanks };
+  const gameTimeRanks = {...currentRanks};
+  const mercCounts = {...currentRanks };
 
-  // Determine what our rank requirements are, warn if unknown
-  if (battleForce && !battleForce[currentList.mode]){
-      validationIssues.push({level:1, text:"Playing a battleforce in a mode with no defined battleforce construction rules (Defaulting to 1000pt)"});
-  } 
-
-  const faction = currentList.faction;
-
-  let forceAffinity = 'dark side';
-  if (faction === 'rebels' || faction === 'republic') forceAffinity = 'light side';
-  else if ( faction === 'mercenary') forceAffinity = battleForcesDict[currentList.battleForce].forceAffinity;
-  
-  const listUniqueUpgrades = {};
-  let unitCounts = {};
-
-  // count units, count up them mercs, pull in any unit-specific issues
   currentList.units.forEach((unit, index)=>{
     const card = cards[unit.unitId];
-    unit.validationIssues = [];
 
     if(!unitCounts[unit.unitId]){
       unitCounts[unit.unitId] = 0;
     }
+
     unitCounts[unit.unitId] += unit.count;
+
     if(card.faction === 'mercenary'){
-      mercs[card.rank] += unit.count;
+      mercCounts[card.rank] += unit.count;
     }
 
     currentRanks[card.rank] += unit.count;
-    gameTimeRanks[card.rank] += unit.count; // DON'T update this using the buildsAsCorps rules below so we see what our gametime counts are
+    gameTimeRanks[card.rank] += unit.count; 
+
+    // update for 'buildsAsCorps' units in rank counts
+    if(battleForcesDict[currentList.battleForce]?.rules?.buildsAsCorps?.includes(unit.unitId)){
+      currentRanks[card.rank] -= unit.count;
+      currentRanks['corps'] += unit.count;
+    } 
 
     // Maul + Darksaber interaction - TODO, make it data/rules-driven
     if (unit.unitId === 'rc' && unit.upgradesEquipped.includes('rq')) { 
       currentRanks['commander']++;
       currentRanks['operative']--;
     }
+  });
 
-    if(battleForcesDict[currentList.battleForce]?.rules?.buildsAsCorps?.includes(unit.unitId)){
-      currentRanks[card.rank] -= unit.count;
-      currentRanks['corps'] += unit.count;
-    } 
+  return {unitCounts, mercCounts, currentRanks, gameTimeRanks}
+}
 
-    unit.forceAffinity = forceAffinity;
+// Would be better to move some of this into the proper unit/upgrade modify steps instead of 
+// iterating everything every time something's changed
+// See if anyone complains about LHQ chugging first then go from there ;)
+function validateList(currentList, rankLimits){
+  let validationIssues = validateListUnits(currentList, rankLimits);
 
-    // side-effect of tallying list's unique upgrades to the passed in obj for use later
-    validateUpgrades(currentList, index, listUniqueUpgrades);
+  return validationIssues;
+}
 
-    // If battleforce, just use the whitelist for inclusion
-    if (battleForce){ 
-      if(!battleForce[card.rank].includes(unit.unitId)){
-        unit.validationIssues.push({level:2, text: '"' + card.cardName + "\" is not allowed in this battleforce." });
-      }
+function validateSingleUnit(currentList, unitIndex){
+
+  const {battleForce, faction} = currentList;
+  const validationIssues = [];
+  const unit = currentList.units[unitIndex];
+  const card = cards[unit.unitId];
+
+  unit.forceAffinity = currentList.forceAffinity;
+
+  validateUpgrades(currentList, unitIndex);
+
+  // If battleforce, just use the whitelist for inclusion 
+  if (battleForce){ 
+    if(!battleForce[card.rank].includes(unit.unitId)){
+      validationIssues.push({level:2, text: '"' + card.cardName + "\" is not allowed in this battleforce." });
     }
-    // else, confirm we don't have a unit w specialIssue or a merc out of faction (e.g. BTV specials)
-    else if( card.specialIssue){
-      unit.validationIssues.push({level:2, text: '"' + (card.displayName?card.displayName:card.cardName) + "\" is not allowed outside the " +card.specialIssue.toUpperCase() + " battleforce. (Special Issue)" });
-    } else if(card.faction === "mercenary" && !card.affiliations.includes(faction)){
-      unit.validationIssues.push({level:2, text: card.cardName + " is not allowed in this faction/battleforce combo"})
-    } 
-    
-    if(card.isUnreleased){
-      unit.validationIssues.push({level:1, text: '"' + card.cardName + (card.title? ", " + card.title : "") + "\" is not released yet ("+card.isUnreleased+")"})
-    }
+  }
+  // else, confirm we don't have a unit w specialIssue or a merc out of faction (e.g. BTV specials)
+  else if( card.specialIssue){
+    validationIssues.push({level:2, text: '"' + (card.displayName?card.displayName:card.cardName) + "\" is not allowed outside the " +card.specialIssue.toUpperCase() + " battleforce. (Special Issue)" });
+  } else if(card.faction === "mercenary" && !card.affiliations.includes(faction)){
+    validationIssues.push({level:2, text: card.cardName + " is not allowed in this faction/battleforce combo"})
+  } 
+  
+  if(card.isUnreleased){
+    validationIssues.push({level:1, text: '"' + card.cardName + (card.title? ", " + card.title : "") + "\" is not released yet ("+card.isUnreleased+")"})
+  }
 
+  return validationIssues;
+}
+
+function validateListUnits(currentList, rankLimits){
+
+  let validationIssues = [];
+  const battleForce = currentList.battleForce ? battleForcesDict[currentList.battleForce] : null;
+
+  let rankIssues = {commander:[], operative:[], corps:[], special:[], heavy:[], support:[]}
+
+  const {unitCounts, mercCounts, currentRanks, gameTimeRanks} = getUnitAndRankCounts(currentList);
+
+  // Determine what our rank requirements are, warn if unknown
+  if (battleForce && !battleForce[currentList.mode]){
+      validationIssues.push({level:1, text:"Playing a battleforce in a mode with no defined battleforce construction rules (Defaulting to 1000pt)"});
+  } 
+
+  const listUniqueUpgrades = {};
+
+  // count units, count up them mercs, pull in any unit-specific issues
+  currentList.units.forEach((unit, index)=>{
+    unit.validationIssues = validateSingleUnit(currentList, index);
     validationIssues = validationIssues.concat(unit.validationIssues);
   });
 
@@ -446,8 +463,8 @@ function validateList(currentList, rankLimits){
 
   // ranks gets decorated with issues here so the tooltip/top-bar can indicate issues
   validationIssues.push(...battleForceValidation(currentList, unitCounts));
-  validationIssues.push(...rankValidation(currentList, currentRanks, rankLimits, mercs, rankIssues));
-  validationIssues.push(...mercValidation(currentList, currentRanks, mercs, rankIssues));
+  validationIssues.push(...rankValidation(currentList, currentRanks, rankLimits, mercCounts, rankIssues));
+  validationIssues.push(...mercValidation(currentList, currentRanks, mercCounts, rankIssues));
 
   // TODO confusing naming - unit counts is more like 'rank counts' irt currentList
   // TODO at some point, adding to currentList like it's a plain ol' object will come back to bite me

@@ -18,6 +18,10 @@ const listTemplate = {
     special: 0,
     support: 0,
     heavy: 0
+  },
+  uniqueCardIds:{
+    unit:[], // string("id") | {id:string("id"), count:number}
+    upgrade:[] // string("id") | {id:string("id"), count:number}
   }
 };
 
