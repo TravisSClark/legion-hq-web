@@ -22,6 +22,7 @@ import {
   equipCounterpartUpgrade,
   unequipUnitUpgrade,
   unequipCounterpartUpgrade,
+  updateSpecialUpgradeSlots,
 } from 'components/listOperations';
 import listTemplate from 'constants/listTemplate';
 import { validateList, checkValidCards, getRankLimits } from 'components/listValidator';
@@ -204,8 +205,6 @@ export function ListProvider({
             }
           })
         })
-
-        console.log(JSON.stringify(u))
       }
     });
 
@@ -219,22 +218,22 @@ export function ListProvider({
   // After a list change, confirm that ranks and any BF unit count reqs are met
   // TODO see about reusing/parameterizing pieces of updateThenValidateList
   // for now, copy, code, and see where commonalities are after implementing
-  const doListUnitsValidate = (list, validatorFunc)=>{
-    const rankLimits = getRankLimits(revisedList);
-    revisedList = countPoints(revisedList);
-    setCurrentList(revisedList);
-    setValidationIssues(validateList(revisedList, rankLimits));
-    setRankLimits(rankLimits);
+  const doListUnitsValidate = (list)=>{
+    // const rankLimits = getRankLimits(revisedList);
+    // revisedList = countPoints(revisedList);
+    // setCurrentList(revisedList);
+    // setValidationIssues(validateList(revisedList, rankLimits));
+    // setRankLimits(rankLimits);
   }
 
   // TODO see about reusing/parameterizing pieces of updateThenValidateList
   // for now, copy, code, and see where commonalities are after implementing
-  const doListSingleUnitValidate = (list, validatorFunc)=>{
-    const rankLimits = getRankLimits(revisedList);
-    revisedList = countPoints(revisedList);
-    setCurrentList(revisedList);
-    setValidationIssues(validateList(revisedList, rankLimits));
-    setRankLimits(rankLimits);
+  const doListSingleUnitValidate = (list, unitIndex)=>{
+    // const rankLimits = getRankLimits(revisedList);
+    // revisedList = countPoints(revisedList);
+    // setCurrentList(revisedList);
+    // setValidationIssues(validateList(revisedList, rankLimits));
+    // setRankLimits(rankLimits);
   }
 
   // Allows entry from non-routed sources, e.g. JSON import
@@ -397,7 +396,6 @@ export function ListProvider({
     } else if (action === "COUNTERPART_UPGRADE") {
       newList = unequipCounterpartUpgrade(currentList, unitIndex, upgradeIndex);
     }
-  
     // TODO reduceValidate
     updateThenValidateList({ ...newList });
   };
