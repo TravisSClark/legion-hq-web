@@ -193,7 +193,7 @@ function updateSpecialUpgradeSlots(unit) {
 function addAdditionalUpgradeSlots(unit, upgradeCard) {
   if (
     !upgradeCard.additionalUpgradeSlots ||
-    upgradeCard.additionalUpgradeSlots.length == 0
+    upgradeCard.additionalUpgradeSlots.length === 0
   )
     return;
 
@@ -440,7 +440,7 @@ function equipUpgrade(
 // TODO remove these routers in favor of calling the right action type directly from the click handler
 function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
   // const upgradeId = list.units[unitIndex].upgradesEquipped[upgradeIndex];
-  if (action === "UNIT_UPGRADE" || action == "UNIT_UPGRADE_SPECIAL") {
+  if (action === "UNIT_UPGRADE" || action === "UNIT_UPGRADE_SPECIAL") {
     list = unequipUnitUpgrade(list, unitIndex, upgradeIndex);
   } else if (action === "COUNTERPART_UPGRADE") {
     list = unequipCounterpartUpgrade(list, unitIndex, upgradeIndex);
@@ -451,7 +451,6 @@ function unequipUpgrade(list, action, unitIndex, upgradeIndex) {
 
 // Returns a sorted list of upgrades so we can consolidate identical stacks regardless of add order
 function sortUpgrades(unit) {
-  const unitCard = cards[unit.unitId];
   const { upgradesEquipped } = unit;
 
   const upgradeBar = getUpgradeBar(unit).map((u) => (u.type ? u.type : u));

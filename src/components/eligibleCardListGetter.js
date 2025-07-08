@@ -330,7 +330,6 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
     if (card.cardSubtype !== upgradeType) continue;
     if (card.faction && card.faction !== "" && list.faction !== card.faction)
       continue;
-
     if (card.isUnique) {
       if (uniqueCardNames.includes(card.cardName)) continue;
     } else if (upgradesEquipped.includes(id)) continue;
