@@ -291,12 +291,7 @@ function getEligibleCommandsToAdd(list) {
   };
 }
 
-function getEquippableUpgrades(
-  list,
-  upgradeType,
-  unitId,
-  upgradesEquipped = []
-) {
+function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
   const validUpgradeIds = [];
   const invalidUpgradeIds = [];
 
@@ -475,7 +470,7 @@ export {
   getEligibleBattlesToAdd,
   getEligibleUnitsToAdd,
   getEligibleCommandsToAdd,
-  getEquippableUpgrades,
+  getEligibleUpgrades,
   unitHasUniques,
   getListUniques,
   findUnitIndexInList,

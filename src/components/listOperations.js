@@ -3,7 +3,7 @@ import cards from "constants/cards";
 import interactions, { getSpecialSlots } from "components/cardInteractions";
 import {
   findUnitIndexInList,
-  getEquippableUpgrades,
+  getEligibleUpgrades,
   getUpgradeBar,
 } from "./eligibleCardListGetter";
 import battleForcesDict from "constants/battleForcesDict";
@@ -100,7 +100,7 @@ function equipUnitUpgrade(
   newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
 
   if ("additionalUpgradeSlots" in upgradeCard) {
-    addAdditionalUpgradeSlots(newUnit, upgradeCard)
+    addAdditionalUpgradeSlots(newUnit, upgradeCard);
   }
 
   newUnit.upgradesEquipped = sortUpgrades(newUnit);
@@ -112,8 +112,7 @@ function equipUnitUpgrade(
     list = decrementUnit(list, unitIndex, count);
   } else if (list.units[unitIndex].count === count) {
     list.units[unitIndex] = newUnit;
-  }
-   else {
+  } else {
     newUnit.count = count;
     list.units.splice(unitIndex + 1, 0, newUnit);
     newIndex = unitIndex + 1;
@@ -164,7 +163,6 @@ function removeCounterpart(list, unitIndex) {
   return consolidate(list);
 }
 
-
 /* 
   Update special upgrade slots for upgrades like Electrobinoculars and Imperial March:
   1. see if this unit has eligibility for special slots
@@ -172,27 +170,31 @@ function removeCounterpart(list, unitIndex) {
     a. Special upgrade slots go on the end for a unit, after upgradebar and after addtl slots
     b. Add a new null element on upgrades equipped
 */
-function updateSpecialUpgradeSlots(unit){
-
+function updateSpecialUpgradeSlots(unit) {
   unit.specialUpgradeSlots = [];
   const unitCard = cards[unit.unitId];
 
   let specialSlots = getSpecialSlots(unitCard);
 
-  specialSlots.forEach(s=>{
-    const {type, upgrades} = s;
-    if(!unitCard.upgradeBar.includes(type) && !unit.additionalUpgradeSlots.includes(type)){
-      unit.specialUpgradeSlots.push({type, upgrades});
+  specialSlots.forEach((s) => {
+    const { type, upgrades } = s;
+    if (
+      !unitCard.upgradeBar.includes(type) &&
+      !unit.additionalUpgradeSlots.includes(type)
+    ) {
+      unit.specialUpgradeSlots.push({ type, upgrades });
       unit.upgradesEquipped.push(null);
     }
-  })
+  });
 }
 
 // TODO lots of bad shortcuts here that don't extend well
 // Check for special slots; remove or append them to end of unit bar accordingly
-function addAdditionalUpgradeSlots(unit, upgradeCard){
-
-  if(!upgradeCard.additionalUpgradeSlots || upgradeCard.additionalUpgradeSlots.length == 0)
+function addAdditionalUpgradeSlots(unit, upgradeCard) {
+  if (
+    !upgradeCard.additionalUpgradeSlots ||
+    upgradeCard.additionalUpgradeSlots.length == 0
+  )
     return;
 
   const slots = upgradeCard.additionalUpgradeSlots;
@@ -200,30 +202,29 @@ function addAdditionalUpgradeSlots(unit, upgradeCard){
   unit.additionalUpgradeSlots = unit.additionalUpgradeSlots.concat(slots);
 
   // insert before special upgrades; they're always last (granted, that's mostly arbitrary, still looks nicer imo to have them at end of bar)
-  let offset = unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
+  let offset =
+    unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
 
   let newSlot = null;
 
-  if(unit.specialUpgradeSlots.map(u=>u.type).includes(slots[0])){
+  if (unit.specialUpgradeSlots.map((u) => u.type).includes(slots[0])) {
     newSlot = unit.upgradesEquipped.pop();
-    unit.specialUpgradeSlots=[];
-  } 
+    unit.specialUpgradeSlots = [];
+  }
 
   // uE is a [null, null...] until sth equipped. Hence, null by default, move the popped special upgrade over if there was one
-  unit.upgradesEquipped.splice(offset, 0, newSlot)
-
+  unit.upgradesEquipped.splice(offset, 0, newSlot);
 }
 
-function removeAdditionalUpgradeSlot(unit){
+function removeAdditionalUpgradeSlot(unit) {
+  unit.additionalUpgradeSlots = [];
 
-   unit.additionalUpgradeSlots = [];
+  let offset =
+    unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
 
-  let offset = unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
-
-  unit.upgradesEquipped.splice(offset, 1)
+  unit.upgradesEquipped.splice(offset, 1);
 
   updateSpecialUpgradeSlots(unit);
-  
 }
 
 function addUnit(list, unitId, stackSize = 1) {
@@ -246,9 +247,13 @@ function addUnit(list, unitId, stackSize = 1) {
 
   // TODO will need something *like* this to do buildsAsCorps 'right' if we get interactions that don't slot nicely with existing rules
   // ie, thought this was needed for Imp March + Imp Remnant, it isn't *yet* since Scouts+Deaths already have the Training slot and can therefore
-  // get Imp March eligibility via getEquippableUpgrades changes alone
-  if(list.battleForce){
-    if(battleForcesDict[list.battleForce]?.rules?.buildsAsCorps?.includes(newUnitObject.unitId)){
+  // get Imp March eligibility via getEligibleUpgrades changes alone
+  if (list.battleForce) {
+    if (
+      battleForcesDict[list.battleForce]?.rules?.buildsAsCorps?.includes(
+        newUnitObject.unitId
+      )
+    ) {
       newUnitObject.effectiveRank = "corps";
     }
   }
@@ -292,10 +297,10 @@ function addUnit(list, unitId, stackSize = 1) {
       let upgradeIndex = unitCard.upgradeBar.indexOf(upgradeType);
 
       if (upgradeIndex > -1) {
-        let eligibleUpgrades = getEquippableUpgrades(list, upgradeType, unitId);
+        let eligibleUpgrades = getEligibleUpgrades(list, upgradeType, unitId);
         if (eligibleUpgrades.validIds.length === 1) {
           let freeSoloId = eligibleUpgrades.validIds[0];
-          if (cards[freeSoloId].cost === 0 && freeSoloId !== 'rq') {
+          if (cards[freeSoloId].cost === 0 && freeSoloId !== "rq") {
             // If this card was already added via equip above, it'll break things if added again
             // (currently a futureproof w no known case)
             if (!unitCard.equip?.find((u) => u === freeSoloId)) {
@@ -449,7 +454,7 @@ function sortUpgrades(unit) {
   const unitCard = cards[unit.unitId];
   const { upgradesEquipped } = unit;
 
-  const upgradeBar = getUpgradeBar(unit).map(u=>u.type?u.type:u);
+  const upgradeBar = getUpgradeBar(unit).map((u) => (u.type ? u.type : u));
   const sortedUpgrades = Array(upgradeBar.length).fill(null);
   const upgradesByType = {};
 
@@ -536,5 +541,5 @@ export {
   consolidate,
   sortUpgrades,
   updateSpecialUpgradeSlots,
-  addAdditionalUpgradeSlots
+  addAdditionalUpgradeSlots,
 };
