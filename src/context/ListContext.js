@@ -41,21 +41,14 @@ import {
 
 const ListContext = createContext();
 const httpClient = Axios.create();
-httpClient.defaults.timeout = 10000;
+httpClient.defaults.timeout = 100000;
 let config = {
   headers: {
     "x-api-key": xapikey,
   },
 };
 
-export function ListProvider({
-  width,
-  children,
-  slug,
-  listHash,
-  storedLists,
-  updateStoredList,
-}) {
+export function ListProvider({ width, children, slug, listHash }) {
   const { userId, userSettings, goToPage } = useContext(DataContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [status, setStatus] = useState("idle");
@@ -78,8 +71,6 @@ export function ListProvider({
       if (listHash) {
         const convertedList = convertHashToList(slug, listHash);
         if (convertedList) updateThenValidateList({ ...convertedList });
-        else
-          updateThenValidateList(JSON.parse(JSON.stringify(storedLists[slug])));
       } else
         updateThenValidateList(JSON.parse(JSON.stringify(initialLists[slug])));
     }
@@ -106,12 +97,6 @@ export function ListProvider({
         });
     }
   }, [slug]); // compiler warns about not using hash or loaded lists in this effect; doing so makes us do inf ops and freeze
-  useEffect(() => {
-    // Save list before unmount
-    return () => {
-      if (currentList && !currentList.listId) updateStoredList(currentList);
-    };
-  }, [currentList]);
   useEffect(() => {
     if (width === "xs" || width === "sm") {
       setLeftPaneWidth(12);

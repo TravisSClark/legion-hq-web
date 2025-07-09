@@ -23,12 +23,6 @@ export const initialLists = {
 };
 
 function Pages() {
-  const [storedLists, setStoredLists] = useState(() => initialLists);
-  const updateStoredList = (newList) => {
-    const faction = newList.faction;
-    storedLists[faction] = newList;
-    setStoredLists({ ...storedLists });
-  };
   return (
     <Suspense fallback={<LoadingWidget />}>
       <Switch>
@@ -40,14 +34,7 @@ function Pages() {
           render={({ match }) => {
             const { params } = match;
             const { slug, listHash } = params;
-            return (
-              <MainListPage
-                slug={slug}
-                listHash={listHash}
-                storedLists={storedLists}
-                updateStoredList={updateStoredList}
-              />
-            );
+            return <MainListPage slug={slug} listHash={listHash} />;
           }}
         />
         <Route path="/roller" component={Roller} />

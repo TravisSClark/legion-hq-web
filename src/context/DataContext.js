@@ -23,7 +23,7 @@ const { returnTo } = auth.prod;
 
 const DataContext = createContext();
 const httpClient = Axios.create();
-httpClient.defaults.timeout = 10000;
+httpClient.defaults.timeout = 100000;
 let config = {
   headers: {
     "x-api-key": xapikey,
