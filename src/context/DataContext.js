@@ -113,6 +113,7 @@ export function DataProvider({ children }) {
   const [message, setMessage] = useState();
   const [userLists, setUserLists] = useState([]);
   const [userSettings, setUserSettings] = useState(initializeLocalSettings());
+  const [isNewList, setIsNewList] = useState(false);
 
   const { user, loginWithRedirect, logout, isAuthenticated } = useAuth0();
   let isLoginDisabled = true;
@@ -250,11 +251,13 @@ export function DataProvider({ children }) {
           routes,
           userLists,
           userSettings,
+          isNewList,
           goToPage,
           fetchUserLists,
           setUserLists,
           setUserSettingsValue,
           setIsDrawerOpen,
+          setIsNewList,
           deleteUserList,
           isLoginDisabled,
           loginTooltipText,

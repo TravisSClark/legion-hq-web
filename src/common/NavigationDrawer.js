@@ -45,6 +45,7 @@ function NavigationDrawer() {
     fetchUserLists,
     goToPage,
     setIsDrawerOpen,
+    setIsNewList,
   } = useContext(DataContext);
   const listChips = {};
   Object.keys(factions).forEach((faction) => (listChips[faction] = []));
@@ -122,7 +123,8 @@ function NavigationDrawer() {
                       icon={<AddIcon />}
                       handleClick={() => {
                         setIsDrawerOpen(false);
-                        goToPage(`/list/${faction}`);
+                        if (pathname === `/list/${faction}`) setIsNewList(true);
+                        else goToPage(`/list/${faction}`);
                       }}
                     />
                     {listChips[`${faction}`].map((userList) => {

@@ -49,7 +49,8 @@ let config = {
 };
 
 export function ListProvider({ width, children, slug, listHash }) {
-  const { userId, userSettings, goToPage } = useContext(DataContext);
+  const { userId, userSettings, goToPage, isNewList, setIsNewList } =
+    useContext(DataContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState();
@@ -117,6 +118,12 @@ export function ListProvider({ width, children, slug, listHash }) {
       }
     }
   }, [width, cardPaneFilter]);
+  useEffect(() => {
+    if (isNewList) {
+      updateThenValidateList(JSON.parse(JSON.stringify(initialLists[slug])));
+      setIsNewList(false);
+    }
+  }, [isNewList, slug]);
 
   // TODO needs some intelligence/context to know WHAT needs validation after a given list change.
   // There are edges all over and it doesn't *seem* like this "check everything" check chugs too hard,
