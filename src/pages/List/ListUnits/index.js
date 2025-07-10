@@ -31,8 +31,8 @@ function ListUnits() {
       // Show counterpart add icon(s) if unit has a counterpart option, it's not already in list, and it shares affiliation
       if (
         !equippedCounterparts.includes(counterpartId) &&
-        cards[counterpartId].affiliations &&
-        cards[counterpartId].affiliations.includes(currentList.faction)
+        (!cards[counterpartId].affiliations ||
+          cards[counterpartId].affiliations.includes(currentList.faction))
       ) {
         // Special case for IG-11 (tj) + 'Nanny Programming' (tp)
         if (unit.unitId === "tj" && !unit.upgradesEquipped.includes("tp")) {

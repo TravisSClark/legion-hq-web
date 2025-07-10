@@ -122,9 +122,6 @@ function NavigationDrawer() {
                       icon={<AddIcon />}
                       handleClick={() => {
                         setIsDrawerOpen(false);
-                        // if (pathname === `/list/${faction}`) {
-                        //   window.location.reload();
-                        // }
                         goToPage(`/list/${faction}`);
                       }}
                     />

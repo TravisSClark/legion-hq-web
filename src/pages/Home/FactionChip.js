@@ -4,12 +4,10 @@ import { ThemeProvider } from "@material-ui/styles";
 import { createTheme } from "@material-ui/core/styles";
 import { Add as AddIcon } from "@material-ui/icons";
 import DataContext from "context/DataContext";
-import ListContext from "context/ListContext";
 import factions from "constants/factions";
 
 function FactionChip({ faction }) {
   const { goToPage } = useContext(DataContext);
-  // const { currentList } = useContext(ListContext);
   const factionTheme = createTheme({
     palette: {
       primary: { main: factions[faction].primaryColor },
