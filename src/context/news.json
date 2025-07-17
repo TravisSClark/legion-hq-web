@@ -1,5 +1,10 @@
 [
   {
+    "title": "Upcoming Releases",
+    "date": "17 July 2025",
+    "body": "Added a dropdown to the front page with all of the upcoming releases, their dates, and prices."
+  },
+  {
     "title": "June Points Update, Generic Upgrades, Card Images, JSON Import(beta) and Compact View fixes",
     "date": "18 June 2025",
     "body": "Added an 'Import JSON' button! Fixed up Compact view's points and Command display, made it a little more compact. All June points and upgrades have been uploaded. Basically all upgrades should have images, but huge shouts to Zegami and Crit2Block Chris for their help with photo editing."
