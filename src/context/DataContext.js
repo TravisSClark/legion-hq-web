@@ -19,6 +19,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import xapikey from "constants/ssl";
 import auth from "constants/auth";
 import NewsJson from "./news.json";
+import ReleaseJson from "./releases.json";
 const { returnTo } = auth.prod;
 
 const DataContext = createContext();
@@ -91,6 +92,7 @@ const routes = {
 };
 
 const newsPosts = JSON.parse(JSON.stringify(NewsJson));
+const releaseList = JSON.parse(JSON.stringify(ReleaseJson));
 
 function initializeLocalSettings() {
   if (typeof Storage !== "undefined") {
@@ -247,6 +249,7 @@ export function DataProvider({ children }) {
         value={{
           isDrawerOpen,
           newsPosts,
+          releaseList,
           userId,
           routes,
           userLists,

@@ -1,0 +1,177 @@
+{
+  "Rebels": [
+    {
+      "name": "Outer Rim Outlaws [Boba and Din]",
+      "date": "Jul 25",
+      "price": "$40"
+    },
+    {
+      "name": "IG-Series Assassin Droids",
+      "date": "Jul 25",
+      "price": "$35"
+    },
+    {
+      "name": "Rebellion Card Pack (Unit & Upgrade)",
+      "date": "Aug 15",
+      "price": "$27"
+    },
+    {
+      "name": "Rebel Alliance Command Card Pack",
+      "date": "Aug 15",
+      "price": "$23"
+    },
+    {
+      "name": "A-A5 Speeder Truck",
+      "date": "Aug 15",
+      "price": "$75"
+    },
+    {
+      "name": "Rebel Alliance Starter Set",
+      "date": "Sep 19",
+      "price": "$100"
+    },
+    {
+      "name": "Customizable Rebel Officer & Agent",
+      "date": "Oct 10",
+      "price": "$40"
+    },
+    {
+      "name": "Heroes of the Rebellion Character Pack",
+      "date": "Oct 10",
+      "price": "$70"
+    }
+  ],
+  "Empire": [
+    {
+      "name": "Outer Rim Outlaws [Boba]",
+      "date": "Jul 25",
+      "price": "$40"
+    },
+    {
+      "name": "IG-Series Assassin Droids",
+      "date": "Jul 25",
+      "price": "$35"
+    },
+    {
+      "name": "Empire Card Pack (Unit & Upgrade)",
+      "date": "Aug 15",
+      "price": "$27"
+    },
+    {
+      "name": "Galactic Empire Command Card Pack",
+      "date": "Aug 15",
+      "price": "$23"
+    },
+    {
+      "name": "Galactic Empire Starter Set",
+      "date": "Sep 19",
+      "price": "$100"
+    },
+    {
+      "name": "Customizable Imperial Officer & Agent",
+      "date": "Oct 10",
+      "price": "$40"
+    },
+    {
+      "name": "Darth Vader & General Veers",
+      "date": "Oct 10",
+      "price": "$35"
+    }
+  ],
+  "Republic": [
+    {
+      "name": "Galactic Republic Card Pack (Unit & Upgrade)",
+      "date": "Aug 15",
+      "price": "$22"
+    },
+    {
+      "name": "Galactic Republic Command Card Pack",
+      "date": "Aug 15",
+      "price": "$18"
+    },
+    {
+      "name": "ARC Troopers",
+      "date": "Oct 31",
+      "price": "$55"
+    },
+    {
+      "name": "Galactic Republic Starter Set",
+      "date": "Nov 7",
+      "price": "$100"
+    },
+    {
+      "name": "Customizable Jedi General and Knight",
+      "date": "Nov 7",
+      "price": "$40"
+    },
+    {
+      "name": "Clone Troopers Infantry",
+      "date": "Nov 7",
+      "price": "$55"
+    },
+    {
+      "name": "Clone Trooper Marksmen",
+      "date": "Nov 7",
+      "price": "$55"
+    }
+  ],
+  "Separatists": [
+    {
+      "name": "Separatist Alliance Card Pack (Unit & Upgrade)",
+      "date": "Aug 15",
+      "price": "$22"
+    },
+    {
+      "name": "Separatist Alliance Command Card Pack ",
+      "date": "Aug 15",
+      "price": "$18"
+    },
+    {
+      "name": "Separatist Alliance Starter Set",
+      "date": "Nov 7",
+      "price": "$100"
+    },
+    {
+      "name": "Customizable Super Tactical Command Droid",
+      "date": "Nov 7",
+      "price": "$40"
+    },
+    {
+      "name": "General Grievous' TSMEU-6 Wheel Bike",
+      "date": "Nov 7",
+      "price": "$60"
+    },
+    {
+      "name": "B1 Battle Droids ",
+      "date": "Nov 7",
+      "price": "$55"
+    }
+  ],
+  "Other": [
+    {
+      "name": "Essentials Pack",
+      "date": "Aug 15",
+      "price": "$30"
+    },
+    {
+      "name": "Mercenary Card Pack",
+      "date": "Aug 15",
+      "price": "$23"
+    },
+    {
+      "name": "Battle Card Pack",
+      "date": "Sept 19",
+      "price": "$30"
+    },
+    {
+      "name": "Upgrades Card Pack",
+      "date": "Sept 19",
+      "price": "$30"
+    },
+    {
+      "name": "3D Objective Tokens",
+      "date": "Oct 31",
+      "price": "$45"
+    }
+  ]
+}
