@@ -11,19 +11,19 @@
       "price": "$35"
     },
     {
-      "name": "Rebellion Card Pack (Unit & Upgrade)",
+      "name": "A-A5 Speeder Truck",
       "date": "Aug 15",
+      "price": "$75"
+    },
+    {
+      "name": "Rebellion Card Pack (Unit & Upgrade)",
+      "date": "Sep 19",
       "price": "$27"
     },
     {
       "name": "Rebel Alliance Command Card Pack",
-      "date": "Aug 15",
+      "date": "Sep 19",
       "price": "$23"
-    },
-    {
-      "name": "A-A5 Speeder Truck",
-      "date": "Aug 15",
-      "price": "$75"
     },
     {
       "name": "Rebel Alliance Starter Set",
@@ -54,12 +54,12 @@
     },
     {
       "name": "Empire Card Pack (Unit & Upgrade)",
-      "date": "Aug 15",
+      "date": "Sep 19",
       "price": "$27"
     },
     {
       "name": "Galactic Empire Command Card Pack",
-      "date": "Aug 15",
+      "date": "Sep 19",
       "price": "$23"
     },
     {
@@ -81,12 +81,12 @@
   "Republic": [
     {
       "name": "Galactic Republic Card Pack (Unit & Upgrade)",
-      "date": "Aug 15",
+      "date": "Sep 19",
       "price": "$22"
     },
     {
       "name": "Galactic Republic Command Card Pack",
-      "date": "Aug 15",
+      "date": "Sep 19",
       "price": "$18"
     },
     {
@@ -118,12 +118,12 @@
   "Separatists": [
     {
       "name": "Separatist Alliance Card Pack (Unit & Upgrade)",
-      "date": "Aug 15",
+      "date": "Sep 19",
       "price": "$22"
     },
     {
       "name": "Separatist Alliance Command Card Pack ",
-      "date": "Aug 15",
+      "date": "Sep 19",
       "price": "$18"
     },
     {
@@ -150,17 +150,17 @@
   "Other": [
     {
       "name": "Essentials Pack",
-      "date": "Aug 15",
+      "date": "Sep 19",
       "price": "$30"
     },
     {
       "name": "Mercenary Card Pack",
-      "date": "Aug 15",
+      "date": "Sep 19",
       "price": "$23"
     },
     {
       "name": "Battle Card Pack",
-      "date": "Sept 19",
+      "date": "Sep 19",
       "price": "$30"
     },
     {
