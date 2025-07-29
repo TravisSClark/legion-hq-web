@@ -1,16 +1,6 @@
 {
   "Rebels": [
     {
-      "name": "Outer Rim Outlaws [Boba and Din]",
-      "date": "Jul 25",
-      "price": "$40"
-    },
-    {
-      "name": "IG-Series Assassin Droids",
-      "date": "Jul 25",
-      "price": "$35"
-    },
-    {
       "name": "A-A5 Speeder Truck",
       "date": "Aug 15",
       "price": "$75"
@@ -42,16 +32,6 @@
     }
   ],
   "Empire": [
-    {
-      "name": "Outer Rim Outlaws [Boba]",
-      "date": "Jul 25",
-      "price": "$40"
-    },
-    {
-      "name": "IG-Series Assassin Droids",
-      "date": "Jul 25",
-      "price": "$35"
-    },
     {
       "name": "Empire Card Pack (Unit & Upgrade)",
       "date": "Sep 19",
