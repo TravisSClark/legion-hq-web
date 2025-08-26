@@ -17704,5 +17704,779 @@
     ],
     "id": "Bv",
     "history": []
+  },
+  "Bw": {
+    "id": "Bw",
+    "cardName": "That's Just Good Business",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "Hondo Ohnaka",
+    "imageName": "That's Just Good Business.webp",
+    "faction": "mercenary",
+    "keywords": []
+  },
+  "Bx": {
+    "id": "Bx",
+    "cardName": "Stories, So Many of Them True",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "Hondo Ohnaka",
+    "imageName": "Stories, So Many of Them True.webp",
+    "faction": "mercenary",
+    "keywords": []
+  },
+  "By": {
+    "id": "By",
+    "cardName": "Rebel Agent",
+    "title": "Defender of Democracy",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "operative",
+    "faction": "rebels",
+    "cost": 50,
+    "imageName": "Rebel Agent.webp",
+    "equipUpgradeSlot": "doctrine",
+    "keywords": [
+      "Nimble",
+      {
+        "name": "Independent",
+        "value": "Dodge 1"
+      },
+      {
+        "name": "Equip",
+        "value": "Doctrine"
+      }
+    ],
+    "upgradeBar": [
+      "doctrine",
+      "command",
+      "training",
+      "armament",
+      "gear",
+      "grenades"
+    ],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "w",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      },
+      {
+        "name": "Blaster Pistol",
+        "keywords": [],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Bz": {
+    "id": "Bz",
+    "cardName": "Rebel Officer",
+    "title": "Fighting for Freedom",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "commander",
+    "faction": "rebels",
+    "cost": 55,
+    "imageName": "Rebel Officer.webp",
+    "equipUpgradeSlot": "doctrine",
+    "keywords": [
+      {
+        "name": "Inspire",
+        "value": 1
+      },
+      {
+        "name": "Equip",
+        "value": "Doctrine"
+      }
+    ],
+    "upgradeBar": [
+      "doctrine",
+      "command",
+      "training",
+      "training",
+      "armament",
+      "gear",
+      "grenades"
+    ],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "w",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      },
+      {
+        "name": "Blaster Pistol",
+        "keywords": [],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Ca": {
+    "id": "Ca",
+    "cardName": "Imperial Agent",
+    "title": "Bringing Order to the Galaxy",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "operative",
+    "faction": "empire",
+    "cost": 50,
+    "imageName": "Imperial Agent.webp",
+    "equipUpgradeSlot": "doctrine",
+    "keywords": [
+      "Relentless",
+      {
+        "name": "Equip",
+        "value": "Doctrine"
+      }
+    ],
+    "upgradeBar": [
+      "doctrine",
+      "command",
+      "training",
+      "armament",
+      "gear",
+      "gear"
+    ],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "w",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      },
+      {
+        "name": "Blaster Pistol",
+        "keywords": [],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Cb": {
+    "id": "Cb",
+    "cardName": "Imperial Officer",
+    "title": "Ruthless Efficiency",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "commander",
+    "faction": "empire",
+    "cost": 55,
+    "imageName": "Imperial Officer.webp",
+    "equipUpgradeSlot": "doctrine",
+    "keywords": [
+      {
+        "name": "Inspire",
+        "value": 1
+      },
+      {
+        "name": "Equip",
+        "value": "Doctrine"
+      }
+    ],
+    "upgradeBar": [
+      "doctrine",
+      "command",
+      "training",
+      "training",
+      "armament",
+      "gear",
+      "gear"
+    ],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "w",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      },
+      {
+        "name": "Blaster Pistol",
+        "keywords": [],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Cc": {
+    "id": "Cc",
+    "cardName": "Combat Armor",
+    "cardType": "upgrade",
+    "cardSubtype": "gear",
+    "cost": 15,
+    "imageName": "Combat Armor Reb.webp",
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Rebel Agent"
+      },
+      {
+        "cardName": "Rebel Officer"
+      }
+    ],
+    "history": []
+  },
+  "Cd": {
+    "id": "Cd",
+    "cardName": "Combat Armor",
+    "cardType": "upgrade",
+    "cardSubtype": "gear",
+    "cost": 15,
+    "imageName": "Combat Armor E.webp",
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Imperial Agent"
+      },
+      {
+        "cardName": "Imperial Officer"
+      }
+    ],
+    "history": []
+  },
+  "Ce": {
+    "id": "Ce",
+    "cardName": "Academy Trained",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 10,
+    "imageName": "Academy Trained.webp",
+    "isUnique": true,
+    "keywords": [
+      "Exemplar",
+      {
+        "name": "Inspire",
+        "value": 1
+      },
+      {
+        "name": "Strategize",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "cardName": "Imperial Officer"
+      }
+    ],
+    "history": []
+  },
+  "Cf": {
+    "id": "Cf",
+    "cardName": "Tip of the Spear",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 8,
+    "imageName": "Tip of the Spear.webp",
+    "isUnique": true,
+    "keywords": [
+      {
+        "name": "Aid",
+        "value": "Empire Trooper Unit"
+      },
+      {
+        "name": "Direct",
+        "value": "Core Trooper Unit"
+      },
+      {
+        "name": "Tactical",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Imperial Agent"
+      },
+      {
+        "cardName": "Imperial Officer"
+      }
+    ],
+    "history": []
+  },
+  "Cg": {
+    "id": "Cg",
+    "cardName": "Defend in Depth",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 10,
+    "imageName": "Defend in Depth.webp",
+    "isUnique": true,
+    "keywords": [
+      {
+        "name": "Aid",
+        "value": "Emplacement Trooper"
+      },
+      "Prepared Position",
+      {
+        "name": "Spotter",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Imperial Agent"
+      },
+      {
+        "cardName": "Imperial Officer"
+      }
+    ],
+    "history": []
+  },
+  "Ch": {
+    "id": "Ch",
+    "cardName": "Platoon Commander",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 8,
+    "imageName": "Platoon Commander.webp",
+    "isUnique": true,
+    "keywords": [
+      {
+        "name": "Retinue",
+        "value": "Imperial Agent"
+      },
+      {
+        "name": "Sharpshooter",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "cardName": "Imperial Agent"
+      }
+    ],
+    "history": []
+  },
+  "Ci": {
+    "id": "Ci",
+    "cardName": "Seeker Droid",
+    "cardType": "upgrade",
+    "cardSubtype": "gear",
+    "cost": 8,
+    "imageName": "Seeker Droid.webp",
+    "keywords": [
+      {
+        "name": "Recharge",
+        "value": 1
+      },
+      {
+        "name": "Shielded",
+        "value": 1
+      },
+      {
+        "name": "Observe",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Imperial Agent"
+      },
+      {
+        "cardName": "Imperial Officer"
+      }
+    ],
+    "history": []
+  },
+  "Cj": {
+    "id": "Cj",
+    "cardName": "Command and Control Uplink",
+    "cardType": "upgrade",
+    "cardSubtype": "gear",
+    "cost": 8,
+    "isUnique": true,
+    "imageName": "Command and Control Uplink.webp",
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Imperial Agent"
+      },
+      {
+        "cardName": "Imperial Officer"
+      }
+    ],
+    "history": []
+  },
+  "Ck": {
+    "id": "Ck",
+    "cardName": "Heavy Blaster Pistol",
+    "cardType": "upgrade",
+    "cardSubtype": "armament",
+    "cost": 5,
+    "imageName": "Heavy Blaster Pistol.webp",
+    "keywords": [
+      {
+        "name": "Sharpshooter",
+        "value": 1
+      },
+      {
+        "name": "Target",
+        "value": 1
+      },
+      {
+        "name": "Lethal",
+        "value": 1
+      },
+      "Long Shot"
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Imperial Agent"
+      },
+      {
+        "cardName": "Imperial Officer"
+      }
+    ],
+    "history": []
+  },
+  "Cl": {
+    "id": "Cl",
+    "cardName": "Stun Baton",
+    "cardType": "upgrade",
+    "cardSubtype": "armament",
+    "cost": 8,
+    "imageName": "Stun Baton.webp",
+    "keywords": [
+      {
+        "name": "Demoralize",
+        "value": 1
+      },
+      {
+        "name": "Immobilize",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Imperial Agent"
+      },
+      {
+        "cardName": "Imperial Officer"
+      }
+    ],
+    "history": []
+  },
+  "Cm": {
+    "id": "Cm",
+    "cardName": "Z-6 Riot Baton",
+    "cardType": "upgrade",
+    "cardSubtype": "armament",
+    "cost": 5,
+    "imageName": "Z-6 Riot Baton.webp",
+    "keywords": ["Immune: Melee Pierce", "Suppressive"],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Imperial Agent"
+      },
+      {
+        "cardName": "Imperial Officer"
+      }
+    ],
+    "history": []
+  },
+  "Cn": {
+    "id": "Cn",
+    "cardName": "Inexorable Advance",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "Imperial Officer",
+    "imageName": "Inexorable Advance.jpeg",
+    "faction": "empire",
+    "keywords": ["Suppressive"]
+  },
+  "Co": {
+    "id": "Co",
+    "cardName": "Fearsome Oration",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "Imperial Agent",
+    "imageName": "Fearsome Oration.jpeg",
+    "faction": "empire",
+    "keywords": [
+      {
+        "name": "Demoralize",
+        "value": 2
+      },
+      {
+        "name": "Inspire",
+        "value": 2
+      }
+    ]
+  },
+  "Cp": {
+    "id": "Cp",
+    "cardName": "Frontline Commander",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 8,
+    "imageName": "Frontline Commander.webp",
+    "isUnique": true,
+    "keywords": [
+      "Dauntless",
+      {
+        "name": "Aid",
+        "value": "Rebel Trooper Unit"
+      },
+      "Indomitable",
+      "Spur",
+      {
+        "name": "Tactical",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "cardName": "Rebel Officer"
+      }
+    ],
+    "history": []
+  },
+  "Cq": {
+    "id": "Cq",
+    "cardName": "Unseen Saboteur",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 5,
+    "imageName": "Unseen Saboteur.webp",
+    "isUnique": true,
+    "keywords": ["Prepared Position", "Low Profile"],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Rebel Agent"
+      },
+      {
+        "cardName": "Rebel Officer"
+      }
+    ],
+    "history": []
+  },
+  "Cr": {
+    "id": "Cr",
+    "cardName": "Proven Tactician",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 10,
+    "imageName": "Proven Tactician.webp",
+    "isUnique": true,
+    "keywords": ["Reinforcements", "Quick Thinking", "Exemplar"],
+    "requirements": [
+      {
+        "cardName": "Rebel Officer"
+      }
+    ],
+    "history": []
+  },
+  "Cs": {
+    "id": "Cs",
+    "cardName": "Reluctant Hero",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 10,
+    "imageName": "Reluctant Hero.webp",
+    "isUnique": true,
+    "keywords": [
+      {
+        "name": "Critical",
+        "value": 1
+      },
+      "Infiltrate",
+      "Relentless"
+    ],
+    "requirements": [
+      {
+        "cardName": "Rebel Agent"
+      }
+    ],
+    "history": []
+  },
+  "Ct": {
+    "id": "Ct",
+    "cardName": "Repeating Blaster",
+    "cardType": "upgrade",
+    "cardSubtype": "armament",
+    "cost": 25,
+    "imageName": "Repeating Blaster.webp",
+    "keywords": [
+      {
+        "name": "Precise",
+        "value": 2
+      },
+      {
+        "name": "Critical",
+        "value": 1
+      },
+      {
+        "name": "Impact",
+        "value": 1
+      },
+      "Long Shot"
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Rebel Agent"
+      },
+      {
+        "cardName": "Rebel Officer"
+      }
+    ],
+    "history": []
+  },
+  "Cu": {
+    "id": "Cu",
+    "cardName": "Heavy Blaster Pistol",
+    "cardType": "upgrade",
+    "cardSubtype": "armament",
+    "cost": 8,
+    "imageName": "Heavy Blaster Pistol.webp",
+    "keywords": [
+      {
+        "name": "Arsenal",
+        "value": 2
+      },
+      {
+        "name": "Lethal",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Rebel Agent"
+      },
+      {
+        "cardName": "Rebel Officer"
+      }
+    ],
+    "history": []
+  },
+  "Cv": {
+    "id": "Cv",
+    "cardName": "Vibro Axe",
+    "cardType": "upgrade",
+    "cardSubtype": "armament",
+    "cost": 8,
+    "imageName": "Vibro Axe.webp",
+    "keywords": [
+      "Charge",
+      {
+        "name": "Impact",
+        "value": 1
+      },
+      {
+        "name": "Lethal",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Rebel Agent"
+      },
+      {
+        "cardName": "Rebel Officer"
+      }
+    ],
+    "history": []
+  },
+  "Cw": {
+    "id": "Cw",
+    "cardName": "Diversionary Tactics",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "Rebel Officer",
+    "imageName": "Diversionary Tactics.jpeg",
+    "faction": "rebels",
+    "keywords": []
+  },
+  "Cx": {
+    "id": "Cx",
+    "cardName": "Battlefield Reconnaissance",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "Rebel Agent",
+    "imageName": "Battlefield Reconnaissance.jpeg",
+    "faction": "rebels",
+    "keywords": []
   }
 }

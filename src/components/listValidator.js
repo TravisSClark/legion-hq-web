@@ -186,6 +186,26 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
     }
   }
 
+  if (unitCard.equipUpgradeSlot) {
+    let hasSlotFilled = false;
+    unit.upgradesEquipped.forEach((id) => {
+      if (id === null) return;
+      const equipCard = cards[id];
+      if (equipCard.cardSubtype === unitCard.equipUpgradeSlot) {
+        hasSlotFilled = true;
+      }
+    });
+    if (!hasSlotFilled) {
+      let cardName = unitCard.displayName
+        ? unitCard.displayName
+        : unitCard.cardName;
+      unit.validationIssues.push({
+        level: 2,
+        text: `${cardName} is missing a ${unitCard.equipUpgradeSlot} upgrade from Equip`,
+      });
+    }
+  }
+
   // Loop upgrades for checks
   // For now, this just confirms we don't have 2+ Leader cards
 
