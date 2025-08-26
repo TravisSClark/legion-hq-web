@@ -18266,7 +18266,7 @@
     "cardSubtype": "3",
     "cardType": "command",
     "commander": "Imperial Officer",
-    "imageName": "Inexorable Advance.jpeg",
+    "imageName": "Inexorable Advance.webp",
     "faction": "empire",
     "keywords": ["Suppressive"]
   },
@@ -18276,7 +18276,7 @@
     "cardSubtype": "1",
     "cardType": "command",
     "commander": "Imperial Agent",
-    "imageName": "Fearsome Oration.jpeg",
+    "imageName": "Fearsome Oration.webp",
     "faction": "empire",
     "keywords": [
       {
@@ -18473,7 +18473,7 @@
     "cardSubtype": "3",
     "cardType": "command",
     "commander": "Rebel Officer",
-    "imageName": "Diversionary Tactics.jpeg",
+    "imageName": "Diversionary Tactics.webp",
     "faction": "rebels",
     "keywords": []
   },
@@ -18483,7 +18483,7 @@
     "cardSubtype": "2",
     "cardType": "command",
     "commander": "Rebel Agent",
-    "imageName": "Battlefield Reconnaissance.jpeg",
+    "imageName": "Battlefield Reconnaissance.webp",
     "faction": "rebels",
     "keywords": []
   }
