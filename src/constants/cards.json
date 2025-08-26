@@ -17736,6 +17736,7 @@
     "cost": 50,
     "imageName": "Rebel Agent.webp",
     "equipUpgradeSlot": "doctrine",
+    "isUnreleased": "Q4 2025",
     "keywords": [
       "Nimble",
       {
@@ -17798,6 +17799,7 @@
     "cost": 55,
     "imageName": "Rebel Officer.webp",
     "equipUpgradeSlot": "doctrine",
+    "isUnreleased": "Q4 2025",
     "keywords": [
       {
         "name": "Inspire",
@@ -17860,6 +17862,7 @@
     "cost": 50,
     "imageName": "Imperial Agent.webp",
     "equipUpgradeSlot": "doctrine",
+    "isUnreleased": "Q4 2025",
     "keywords": [
       "Relentless",
       {
@@ -17918,6 +17921,7 @@
     "cost": 55,
     "imageName": "Imperial Officer.webp",
     "equipUpgradeSlot": "doctrine",
+    "isUnreleased": "Q4 2025",
     "keywords": [
       {
         "name": "Inspire",
@@ -17972,6 +17976,7 @@
   "Cc": {
     "id": "Cc",
     "cardName": "Combat Armor",
+    "ttsName": "Combat Armor (Rebel)",
     "cardType": "upgrade",
     "cardSubtype": "gear",
     "cost": 15,
@@ -17991,6 +17996,7 @@
   "Cd": {
     "id": "Cd",
     "cardName": "Combat Armor",
+    "ttsName": "Combat Armor (Empire)",
     "cardType": "upgrade",
     "cardSubtype": "gear",
     "cost": 15,
@@ -18176,10 +18182,11 @@
   "Ck": {
     "id": "Ck",
     "cardName": "Heavy Blaster Pistol",
+    "ttsName": "Heavy Blaster Pistol (Empire)",
     "cardType": "upgrade",
     "cardSubtype": "armament",
     "cost": 5,
-    "imageName": "Heavy Blaster Pistol.webp",
+    "imageName": "Heavy Blaster Pistol E.webp",
     "keywords": [
       {
         "name": "Sharpshooter",
@@ -18405,10 +18412,11 @@
   "Cu": {
     "id": "Cu",
     "cardName": "Heavy Blaster Pistol",
+    "ttsName": "Heavy Blaster Pistol (Rebel)",
     "cardType": "upgrade",
     "cardSubtype": "armament",
     "cost": 8,
-    "imageName": "Heavy Blaster Pistol.webp",
+    "imageName": "Heavy Blaster Pistol Reb.webp",
     "keywords": [
       {
         "name": "Arsenal",
