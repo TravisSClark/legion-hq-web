@@ -8,84 +8,35 @@
  */
 
 const battleForcesDict = {
-  "Echo Base Defenders": {
-    name: "Echo Base Defenders",
-    faction: "rebels",
-    linkId: "ebd",
-    commander: ["ab", "ad", "ac", "Bz"],
-    operative: ["jg", "ji", "af", "By"],
-    corps: ["gv", "if"],
-    special: [],
-    support: ["an", "he"],
-    heavy: ["ap"],
-    allowedUniqueUpgrades: ["fk", "Cp", "Cq", "Cr", "Cs"],
-    rules: {
-      noFieldComm: true,
-    },
+  "501st Legion": {
+    name: "501st Legion",
+    faction: "republic",
+    linkId: "5t",
+    commander: ["na", "fy", "ns", "Bc"],
+    operative: [],
+    corps: ["fz", "Bi"],
+    special: ["kz", "ky", "Ay"],
+    support: ["mb", "ic", "xj", "xp"],
+    heavy: ["oo"],
+    allowedUniqueUpgrades: ["lh", "lg", "Bd"],
+    rules: {},
     ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_EchoBaseDefenders.pdf",
+      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_501st.pdf",
     "standard mode": {
-      commOp: 4,
-      commander: [1, 4],
-      operative: [0, 3],
-      corps: [3, 6],
-      special: [0, 0],
-      support: [1, 4],
-      heavy: [0, 2],
-    },
-    "500-point mode": {
-      commOp: 3,
-      commander: [1, 3],
+      commOp: 2,
+      commander: [1, 2],
       operative: [0, 2],
-      corps: [2, 4],
-      special: [0, 0],
-      support: [1, 3],
-      heavy: [0, 1],
-    },
-  },
-  "Bright Tree Village": {
-    name: "Bright Tree Village",
-    faction: "rebels",
-    linkId: "btv",
-    commander: ["vv", "ac", "ab", "ve", "wd"],
-    operative: ["af"],
-    corps: ["vk", "ah"],
-    special: ["vu", "ak"],
-    support: [],
-    heavy: ["vj"],
-    allowedUniqueUpgrades: ["vq", "wa", "wb", "wc"],
-    rules: {
-      countMercs: true,
-      take2NonEwokRebs: true, // lol
-      unitLimits: [
-        { ids: ["ah"], count: [0, 2] },
-        { ids: ["ak"], count: [0, 2] },
-      ],
-      // gainAoC: 'rebels', // on 2nd thought, this doesn't matter since we already have the AoC listbuild benefit via countMercs... leave as reminder
-    },
-    plainTextRules: [
-      "During the End Phase, EWOK units in this army remove 1 fewer Suppression token during the Remove Tokens step.",
-      "REBEL COMMANDER units in this army gain Allies of Convenience",
-    ],
-
-    ruleUrl:
-      "cdn.svc.asmodee.net/production-amgcom/uploads/2023/07/StarWarsLegionBFRulesSheetBrightTreeVillage1",
-    "standard mode": {
-      commOp: 5,
-      commander: [1, 5],
-      operative: [0, 1],
-      corps: [3, 6],
-      special: [0, 3],
-      support: [0, 0],
+      corps: [1, 4],
+      special: [1, 4],
+      support: [1, 2],
       heavy: [0, 1],
     },
     "500-point mode": {
-      commOp: 4,
-      commander: [1, 4],
+      commander: [1, 1],
       operative: [0, 1],
-      corps: [2, 4],
-      special: [0, 3],
-      support: [0, 0],
+      corps: [1, 4],
+      special: [1, 4],
+      support: [0, 2],
       heavy: [0, 1],
     },
   },
@@ -124,221 +75,85 @@ const battleForcesDict = {
       heavy: [0, 1],
     },
   },
-  "Imperial Remnant": {
-    name: "Imperial Remnant",
-    faction: "empire",
-    linkId: "ir",
-    commander: ["ui", "Cb"],
-    operative: ["Ca"],
-    corps: ["ay", "hg", "ba", "bd"],
-    special: ["ba", "bd"],
-    support: ["bf", "be"],
-    heavy: ["tm"],
-    allowedUniqueUpgrades: ["uj", "gm", "Ce", "Cf", "Cg", "Ch", "Cj"],
+  "Bright Tree Village": {
+    name: "Bright Tree Village",
+    faction: "rebels",
+    linkId: "btv",
+    commander: ["vv", "ac", "ab", "ve", "wd"],
+    operative: ["af"],
+    corps: ["vk", "ah"],
+    special: ["vu", "ak"],
+    support: [],
+    heavy: ["vj"],
+    allowedUniqueUpgrades: ["wa", "wb", "wc"],
     rules: {
+      countMercs: true,
+      take2NonEwokRebs: true, // lol
       unitLimits: [
-        { ids: ["ay"], count: [1, 2] },
-        { ids: ["hg"], count: [1, 2] },
+        { ids: ["ah"], count: [0, 2] },
+        { ids: ["ak"], count: [0, 2] },
       ],
-      buildsAsCorps: ["ba", "bd"],
-      minOneOfEachCorps: true, // lol
-      remnantEquipRules: true,
+      // gainAoC: 'rebels', // on 2nd thought, this doesn't matter since we already have the AoC listbuild benefit via countMercs... leave as reminder
     },
     plainTextRules: [
-      "When issuing Orders, the nominated Commander can only issue Orders \
-        to allied units within 2 of them. Undeployed units or units not within \
-        2 of any allied COMMANDER units gain Independent: Aim 1 or Dodge 1. \
-        When an allied unit checks to see if it is Panicked, it may only use the \
-        Courage of an allied COMMANDER unit within 2 instead of 3",
+      "During the End Phase, EWOK units in this army remove 1 fewer Suppression token during the Remove Tokens step.",
+      "REBEL COMMANDER units in this army gain Allies of Convenience",
     ],
+
     ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ImperialRemnant-1.pdf",
+      "cdn.svc.asmodee.net/production-amgcom/uploads/2023/07/StarWarsLegionBFRulesSheetBrightTreeVillage1",
     "standard mode": {
-      commOp: 2,
-      commander: [1, 2],
-      operative: [0, 0],
+      commOp: 5,
+      commander: [1, 5],
+      operative: [0, 5],
       corps: [3, 6],
-      special: [0, 0],
-      support: [0, 2],
+      special: [0, 3],
+      support: [0, 0],
       heavy: [0, 2],
     },
     "500-point mode": {
-      commOp: 2,
-      commander: [1, 2],
-      operative: [0, 0],
+      commOp: 4,
+      commander: [1, 4],
+      operative: [0, 4],
       corps: [2, 4],
-      special: [0, 0],
-      support: [0, 1],
+      special: [0, 3],
+      support: [0, 0],
       heavy: [0, 1],
     },
   },
-  "Tempest Force": {
-    name: "Tempest Force",
-    faction: "empire",
-    linkId: "tf",
-    commander: ["Cb"],
-    operative: ["Ca"],
-    corps: ["ay"],
-    special: ["ba"],
-    support: ["bf"],
-    heavy: ["we", "bg"],
-    allowedUniqueUpgrades: [, "Ce", "Cf", "Ch", "Cj"],
-    rules: {},
-    plainTextRules: [
-      "Vehicles in this army gain Scout 2.",
-      "Units that are not within 3 of an allied COMMANDER unit and do not have a COMMS \
-        upgrade equipped remove 1 less Suppression token during the Remove Tokens step.",
-      "During Setup, you may set aside 1 allied SPECIAL FORCES or HEAVY unit that is not \
-        holding an Asset Objective token, marking the unit with an Advantage \
-        token. The first time the set-aside unit would Activate this game, you \
-        must place that unit in cohesion onto the battlefield not within 2 \
-        of any enemy units, if able. If you do, that unit is treated as activated \
-        and its Order token is placed facedown. Then, the unit loses its \
-        Advantage token.",
-    ],
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_TempestForce-1.pdf",
-    "standard mode": {
-      commOp: 2,
-      commander: [1, 1],
-      operative: [0, 0],
-      corps: [1, 3],
-      special: [2, 6],
-      support: [0, 3],
-      heavy: [0, 3],
-    },
-    "500-point mode": {
-      commOp: 2,
-      commander: [1, 2],
-      operative: [0, 0],
-      corps: [1, 2],
-      special: [1, 4],
-      support: [0, 2],
-      heavy: [0, 2],
-    },
-  },
-  "501st Legion": {
-    name: "501st Legion",
-    faction: "republic",
-    linkId: "5t",
-    commander: ["na", "fy", "ns", "Bc"],
-    operative: [],
-    corps: ["fz"],
-    special: ["kz", "ky", "Ay"],
-    support: ["mb", "ic", "xj", "xp"],
-    heavy: ["oo"],
-    allowedUniqueUpgrades: ["lh", "lg", "Bd"],
-    rules: {},
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_501st.pdf",
-    "standard mode": {
-      commander: [1, 2],
-      operative: [0, 0],
-      corps: [1, 4],
-      special: [1, 4],
-      support: [1, 2],
-      heavy: [0, 1],
-    },
-    "500-point mode": {
-      commander: [1, 1],
-      operative: [0, 0],
-      corps: [1, 4],
-      special: [1, 4],
-      support: [0, 2],
-      heavy: [0, 1],
-    },
-  },
-  "Wookiee Defenders": {
-    name: "Wookiee Defenders",
-    faction: "republic",
-    linkId: "wd",
-    commander: ["ol", "po", "ph"],
-    operative: [],
-    corps: ["fz", "pm"],
-    special: ["kz", "pg", "pm"],
-    support: ["qh", "xf", "ic"],
-    heavy: ["gb", "qs"],
-    allowedUniqueUpgrades: [],
-    rules: {
-      buildsAsCorps: ["pm"],
-      ccAsCorps: true, // adds in the "and Battle Cards" rule unique to Wookiee building rules
-      unitLimits: [
-        { ids: ["kz"], count: [0, 1] },
-        { ids: ["fz"], count: [0, 2] },
-        { ids: ["ic"], count: [0, 1] },
-      ],
-      minimum3Wookiees: true, // TODO between this and BTV, we ought to have rules for faction/affil/type counts...
-    },
-    plainTextRules: [
-      "Your army must include at least 3 Wookiee Trooper units.", // TODO this is currently validated, but displayed via plaintext; this way is easier, should probably move rules to plaintext with common keys/formatters
-      "The first time 1 or more miniatures in each Wookiee Trooper unit are \
-          defeated each Round, that unit may make a Speed-1 Move. A unit can \
-          make this Move regardless of its speed.",
-    ],
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_WookieesDefenders.pdf",
-    "standard mode": {
-      commOp: 2,
-      commander: [1, 2],
-      operative: [0, 0],
-      corps: [3, 6],
-      special: [0, 4],
-      support: [0, 3],
-      heavy: [0, 1],
-    },
-    //TODO these match 1000pt mode - typo on AMG doc?
-    "500-point mode": {
-      commOp: 2,
-      commander: [1, 2],
-      operative: [0, 0],
-      corps: [3, 6],
-      special: [0, 4],
-      support: [0, 3],
-      heavy: [0, 1],
-    },
-    // '500-point mode': {
-    //   commander: [1, 2],
-    //   operative: [0, 0],
-    //   corps: [2, 4],
-    //   special: [0, 3],
-    //   support: [0, 1],
-    //   heavy: [0, 1]
-    // }
-  },
-  "Separatist Invasion": {
-    name: "Separatist Invasion",
-    faction: "separatists",
-    linkId: "si",
-    commander: ["fx", "ia", "nr"],
-    operative: ["nb"],
-    corps: ["gx"],
-    special: ["px"],
-    support: ["ie", "mc"],
-    heavy: ["gc"],
+  "Echo Base Defenders": {
+    name: "Echo Base Defenders",
+    faction: "rebels",
+    linkId: "ebd",
+    commander: ["ab", "ad", "ac", "Bz"],
+    operative: ["jg", "ji", "af", "By"],
+    corps: ["gv", "if"],
+    special: [],
+    support: ["an", "he"],
+    heavy: ["ap"],
+    allowedUniqueUpgrades: ["fk", "Cp", "Cq", "Cr", "Cs"],
     rules: {
       noFieldComm: true,
     },
-    allowedUniqueUpgrades: ["il"],
     ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2022/10/StarWarsLegionBFRulesSheetSI.pdf",
-
+      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_EchoBaseDefenders.pdf",
     "standard mode": {
-      commOp: 2,
-      commander: [1, 2],
-      operative: [0, 1],
-      corps: [4, 8],
-      special: [0, 2],
-      support: [0, 3],
-      heavy: [1, 2],
+      commOp: 4,
+      commander: [1, 4],
+      operative: [0, 4],
+      corps: [3, 6],
+      special: [0, 0],
+      support: [1, 4],
+      heavy: [0, 2],
     },
     "500-point mode": {
-      commOp: 2,
-      commander: [1, 2],
-      operative: [0, 1],
-      corps: [2, 6],
-      special: [0, 1],
-      support: [0, 2],
-      heavy: [1, 1],
+      commOp: 3,
+      commander: [1, 3],
+      operative: [0, 3],
+      corps: [2, 4],
+      special: [0, 0],
+      support: [1, 3],
+      heavy: [0, 1],
     },
   },
   "Experimental Droids": {
@@ -388,12 +203,96 @@ const battleForcesDict = {
       heavy: [0, 2],
     },
     "500-point mode": {
-      commander: [1, 2],
-      operative: [0, 0],
+      commander: [1, 1],
+      operative: [0, 1],
       corps: [2, 4],
       special: [0, 3],
       support: [0, 1],
       heavy: [0, 1],
+    },
+  },
+  "Imperial Remnant": {
+    name: "Imperial Remnant",
+    faction: "empire",
+    linkId: "ir",
+    commander: ["ui", "Cb"],
+    operative: ["Ca"],
+    corps: ["ay", "hg", "ba", "bd"],
+    special: ["ba", "bd"],
+    support: ["bf", "be"],
+    heavy: ["tm"],
+    allowedUniqueUpgrades: ["uj", "Ce", "Cf", "Cg", "Ch", "Cj"],
+    rules: {
+      unitLimits: [
+        { ids: ["ay"], count: [1, 2] },
+        { ids: ["hg"], count: [1, 2] },
+      ],
+      buildsAsCorps: ["ba", "bd"],
+      minOneOfEachCorps: true, // lol
+      remnantEquipRules: true,
+    },
+    plainTextRules: [
+      "When issuing Orders, the nominated Commander can only issue Orders \
+        to allied units within 2 of them. Undeployed units or units not within \
+        2 of any allied COMMANDER units gain Independent: Aim 1 or Dodge 1. \
+        When an allied unit checks to see if it is Panicked, it may only use the \
+        Courage of an allied COMMANDER unit within 2 instead of 3",
+    ],
+    ruleUrl:
+      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ImperialRemnant-1.pdf",
+    "standard mode": {
+      commOp: 2,
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [3, 6],
+      special: [0, 0],
+      support: [0, 2],
+      heavy: [0, 2],
+    },
+    "500-point mode": {
+      commOp: 2,
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [2, 4],
+      special: [0, 0],
+      support: [0, 1],
+      heavy: [0, 1],
+    },
+  },
+  "Separatist Invasion": {
+    name: "Separatist Invasion",
+    faction: "separatists",
+    linkId: "si",
+    commander: ["fx", "ia", "nr"],
+    operative: ["nb"],
+    corps: ["gx"],
+    special: ["px"],
+    support: ["ie", "mc"],
+    heavy: ["gc"],
+    rules: {
+      noFieldComm: true,
+    },
+    allowedUniqueUpgrades: [],
+    ruleUrl:
+      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2022/10/StarWarsLegionBFRulesSheetSI.pdf",
+
+    "standard mode": {
+      commOp: 2,
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [4, 8],
+      special: [0, 2],
+      support: [0, 3],
+      heavy: [1, 2],
+    },
+    "500-point mode": {
+      commOp: 2,
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [2, 6],
+      special: [0, 1],
+      support: [0, 2],
+      heavy: [1, 1],
     },
   },
   "Shadow Collective": {
@@ -421,7 +320,7 @@ const battleForcesDict = {
     "standard mode": {
       commOp: 4,
       commander: [1, 4],
-      operative: [0, 3],
+      operative: [0, 4],
       corps: [2, 6],
       special: [0, 4],
       support: [0, 3],
@@ -429,14 +328,117 @@ const battleForcesDict = {
     },
     "500-point mode": {
       commOp: 2,
-
       commander: [1, 2],
-      operative: [0, 1],
+      operative: [0, 2],
       corps: [1, 4],
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 1],
     },
+  },
+  "Tempest Force": {
+    name: "Tempest Force",
+    faction: "empire",
+    linkId: "tf",
+    commander: ["Cb"],
+    operative: ["Ca"],
+    corps: ["ay"],
+    special: ["ba"],
+    support: ["bf"],
+    heavy: ["we", "bg"],
+    allowedUniqueUpgrades: [, "Ce", "Cf", "Ch", "Cj"],
+    rules: {},
+    plainTextRules: [
+      "Vehicles in this army gain Scout 2.",
+      "Units that are not within 3 of an allied COMMANDER unit and do not have a COMMS \
+        upgrade equipped remove 1 less Suppression token during the Remove Tokens step.",
+      "During Setup, you may set aside 1 allied SPECIAL FORCES or HEAVY unit that is not \
+        holding an Asset Objective token, marking the unit with an Advantage \
+        token. The first time the set-aside unit would Activate this game, you \
+        must place that unit in cohesion onto the battlefield not within 2 \
+        of any enemy units, if able. If you do, that unit is treated as activated \
+        and its Order token is placed facedown. Then, the unit loses its \
+        Advantage token.",
+    ],
+    ruleUrl:
+      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_TempestForce-1.pdf",
+    "standard mode": {
+      commOp: 2,
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [1, 3],
+      special: [2, 6],
+      support: [0, 3],
+      heavy: [0, 3],
+    },
+    "500-point mode": {
+      commOp: 2,
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [1, 2],
+      special: [1, 4],
+      support: [0, 2],
+      heavy: [0, 2],
+    },
+  },
+  "Wookiee Defenders": {
+    name: "Wookiee Defenders",
+    faction: "republic",
+    linkId: "wd",
+    commander: ["ol", "po", "ph"],
+    operative: [],
+    corps: ["fz", "pm"],
+    special: ["kz", "pg", "pm"],
+    support: ["qh", "xf", "ic"],
+    heavy: ["gb", "qs"],
+    allowedUniqueUpgrades: [],
+    rules: {
+      buildsAsCorps: ["pm"],
+      ccAsCorps: true, // adds in the "and Battle Cards" rule unique to Wookiee building rules
+      unitLimits: [
+        { ids: ["kz"], count: [0, 1] },
+        { ids: ["fz"], count: [0, 2] },
+        { ids: ["ic"], count: [0, 1] },
+        { ids: ["qs"], count: [0, 1] },
+        { ids: ["gb"], count: [0, 1] },
+      ],
+      minimum3Wookiees: true, // TODO between this and BTV, we ought to have rules for faction/affil/type counts...
+    },
+    plainTextRules: [
+      "Your army must include at least 3 Wookiee Trooper units.", // TODO this is currently validated, but displayed via plaintext; this way is easier, should probably move rules to plaintext with common keys/formatters
+      "The first time 1 or more miniatures in each Wookiee Trooper unit are \
+          defeated each Round, that unit may make a Speed-1 Move. A unit can \
+          make this Move regardless of its speed.",
+    ],
+    ruleUrl:
+      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_WookieesDefenders.pdf",
+    "standard mode": {
+      commOp: 2,
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [3, 6],
+      special: [0, 4],
+      support: [0, 3],
+      heavy: [0, 1],
+    },
+    //TODO these match 1000pt mode - typo on AMG doc?
+    "500-point mode": {
+      commOp: 2,
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [3, 6],
+      special: [0, 4],
+      support: [0, 3],
+      heavy: [0, 1],
+    },
+    // '500-point mode': {
+    //   commander: [1, 2],
+    //   operative: [0, 0],
+    //   corps: [2, 4],
+    //   special: [0, 3],
+    //   support: [0, 1],
+    //   heavy: [0, 1]
+    // }
   },
 };
 
