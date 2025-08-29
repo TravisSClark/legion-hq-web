@@ -18494,7 +18494,6 @@
     "cardSubtype": "grenades",
     "cost": 3,
     "imageName": "Thermal Detonator.webp",
-    "isUnique": true,
     "keywords": [
       "Blast",
       {
