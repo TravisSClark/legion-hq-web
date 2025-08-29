@@ -1,8 +1,13 @@
 import legionModes from "constants/legionModes";
-import { addAdditionalUpgradeSlots, consolidate, sortUpgrades, updateSpecialUpgradeSlots } from "./listOperations";
+import {
+  addAdditionalUpgradeSlots,
+  consolidate,
+  sortUpgrades,
+  updateSpecialUpgradeSlots,
+} from "./listOperations";
 import listTemplate from "constants/listTemplate";
 import battleForcesDict from "constants/battleForcesDict";
-import cards, {cardIdsByType} from "constants/cards";
+import cards, { cardIdsByType } from "constants/cards";
 import {
   findUnitIndexInList,
   getListUniques,
@@ -39,6 +44,7 @@ function mergeLists(primaryList, secondaryList) {
 function processUnitSegment(segment) {
   const unitSegment = segment.slice(0, 3);
   let upgradeSegment = segment.slice(3);
+  let additionalUpgradeCards = [];
   const unitCount = Number.parseInt(unitSegment.charAt(0));
   const unitId = unitSegment.charAt(1) + unitSegment.charAt(2);
   const unitCard = cards[unitId];
@@ -62,11 +68,20 @@ function processUnitSegment(segment) {
       const upgradeId = upgradeSegment.charAt(i) + upgradeSegment.charAt(i + 1);
       const upgradeCard = cards[upgradeId];
       newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
-      addAdditionalUpgradeSlots(newUnit, upgradeCard)
-
+      if (
+        upgradeCard.additionalUpgradeSlots &&
+        upgradeCard.additionalUpgradeSlots.length > 0
+      ) {
+        additionalUpgradeCards.push(upgradeCard);
+      }
       i++;
       upgradeIndex++;
     }
+  }
+  if (additionalUpgradeCards) {
+    additionalUpgradeCards.map(function (upgradeCard) {
+      addAdditionalUpgradeSlots(newUnit, upgradeCard);
+    });
   }
   return newUnit;
 }
@@ -76,7 +91,8 @@ function segmentToUnitObject(unitIndex, segment) {
   if (segment.includes("+")) {
     unit = processUnitSegment(segment.split("+")[0]);
     const counterpart = processUnitSegment(segment.split("+")[1]);
-    const { unitId, totalUnitCost, upgradesEquipped, additionalUpgradeSlots } = counterpart;
+    const { unitId, totalUnitCost, upgradesEquipped, additionalUpgradeSlots } =
+      counterpart;
 
     unit.counterpart = {
       count: 1,
@@ -89,36 +105,37 @@ function segmentToUnitObject(unitIndex, segment) {
   return unit;
 }
 
-
-function convertJsonToList(jsonText){
+function convertJsonToList(jsonText) {
   let newList = JSON.parse(JSON.stringify(listTemplate));
   let importList = JSON.parse(jsonText);
   // console.log('list to import',JSON.stringify(importList));
 
-
   if (importList.armyFaction === "rebel") newList.faction = "rebels";
   else if (importList.armyFaction === "empire") newList.faction = "empire";
   else if (importList.armyFaction === "republic") newList.faction = "republic";
-  else if (importList.armyFaction === "separatist") newList.faction = "separatists";
+  else if (importList.armyFaction === "separatist")
+    newList.faction = "separatists";
   else newList.faction = "";
 
-  if(importList.battleForce) newList.battleForce = importList.battleForce;
+  if (importList.battleForce) newList.battleForce = importList.battleForce;
 
-
-  function findId(name, type){
-    let ids = cardIdsByType[type]
+  function findId(name, type) {
+    let ids = cardIdsByType[type];
 
     const uname = name.toUpperCase();
 
-    let foundId = '';
-    for(let i =0; i< ids.length && foundId === ''; i++){
+    let foundId = "";
+    for (let i = 0; i < ids.length && foundId === ""; i++) {
       let card = cards[ids[i]];
 
-      let nameTitle = card.cardName + (card.title ? " " + card.title : '');
+      let nameTitle = card.cardName + (card.title ? " " + card.title : "");
 
       // console.log(nameTitle)
 
-      if(uname === nameTitle.toUpperCase() || uname === card.ttsName?.toUpperCase()){
+      if (
+        uname === nameTitle.toUpperCase() ||
+        uname === card.ttsName?.toUpperCase()
+      ) {
         return ids[i];
       }
     }
@@ -126,93 +143,86 @@ function convertJsonToList(jsonText){
     return foundId;
   }
 
-  importList.units?.forEach(u=>{
-    let id = findId(u.name, 'unit')
+  importList.units?.forEach((u) => {
+    let id = findId(u.name, "unit");
 
-    if(!id){
-      console.warn('unable to find ID for ' + u.name);
+    if (!id) {
+      console.warn("unable to find ID for " + u.name);
       return;
     }
 
     const newUnit = {
       unitId: id,
-      count:1, 
-      upgradesEquipped:[],
-      additionalUpgradeSlots:[],
+      count: 1,
+      upgradesEquipped: [],
+      additionalUpgradeSlots: [],
       specialUpgradeSlots: [],
-    }
+    };
 
     newList.units.push(newUnit);
 
     updateSpecialUpgradeSlots(newUnit);
 
-    u.upgrades?.forEach(up=>{
-      let upId = findId(up, 'upgrade');
+    u.upgrades?.forEach((up) => {
+      let upId = findId(up, "upgrade");
 
-      if(!upId){
+      if (!upId) {
         // check for counterpart
         // TODO need ID10 case or etc here
-        let counterpartId=findId(up,'counterpart')
+        let counterpartId = findId(up, "counterpart");
 
-        if(counterpartId){
+        if (counterpartId) {
           newUnit.counterpart = {
             count: 1,
             counterpartId,
             upgradesEquipped: [],
-            additionalUpgradeSlots: []
+            additionalUpgradeSlots: [],
           };
         }
-        }else{
-          const upgradeCard = cards[upId];
-          newUnit.upgradesEquipped.push(upId);
-          if(upgradeCard.additionalUpgradeSlots){
-            addAdditionalUpgradeSlots(newUnit, upgradeCard);
-          }
-        } 
-    })
+      } else {
+        const upgradeCard = cards[upId];
+        newUnit.upgradesEquipped.push(upId);
+        if (upgradeCard.additionalUpgradeSlots) {
+          addAdditionalUpgradeSlots(newUnit, upgradeCard);
+        }
+      }
+    });
 
     newUnit.upgradesEquipped = sortUpgrades(newUnit);
-
   });
-  importList.commandCards?.forEach(cc=>{
-
-    if(cc == "Standing Orders"){
+  importList.commandCards?.forEach((cc) => {
+    if (cc == "Standing Orders") {
       return;
     }
-    let ccId = findId(cc, 'command');
+    let ccId = findId(cc, "command");
 
-    if(ccId){
+    if (ccId) {
       newList.commandCards.push(ccId);
     }
-  })
+  });
 
-  if(importList.battleFieldDeck){
-
+  if (importList.battleFieldDeck) {
     let bDeck = importList.battleFieldDeck;
 
-    bDeck.conditions?.forEach(c=>{
-      let bcId = findId(c, 'battle');
-      if(bcId)
-        newList.advantageCards.push(bcId);
-    })
+    bDeck.conditions?.forEach((c) => {
+      let bcId = findId(c, "battle");
+      if (bcId) newList.advantageCards.push(bcId);
+    });
 
-     bDeck.deployment?.forEach(c=>{
-      let bcId = findId(c, 'battle');
-      if(bcId)
-        newList.primaryCards.push(bcId);
-    })
+    bDeck.deployment?.forEach((c) => {
+      let bcId = findId(c, "battle");
+      if (bcId) newList.primaryCards.push(bcId);
+    });
 
-     bDeck.objective?.forEach(c=>{
-      let bcId = findId(c, 'battle');
-      if(bcId)
-        newList.secondaryCards.push(bcId);
-    })
-
+    bDeck.objective?.forEach((c) => {
+      let bcId = findId(c, "battle");
+      if (bcId) newList.secondaryCards.push(bcId);
+    });
   }
 
   newList.title = importList.title ? importList.title : "Untitled";
 
-  console.log('import',JSON.stringify(newList))
+  console.log("import", JSON.stringify(newList));
   return newList;
   // list.battleFieldDeck
 }

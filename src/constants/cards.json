@@ -18486,5 +18486,31 @@
     "imageName": "Battlefield Reconnaissance.webp",
     "faction": "rebels",
     "keywords": []
+  },
+  "Cy": {
+    "id": "Cy",
+    "cardName": "Thermal Detonator",
+    "cardType": "upgrade",
+    "cardSubtype": "grenades",
+    "cost": 3,
+    "imageName": "Thermal Detonator.webp",
+    "isUnique": true,
+    "keywords": [
+      "Blast",
+      {
+        "name": "Impact",
+        "value": 4
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Rebel Agent"
+      },
+      {
+        "cardName": "Rebel Officer"
+      }
+    ],
+    "history": []
   }
 }
