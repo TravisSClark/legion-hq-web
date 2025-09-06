@@ -14,6 +14,7 @@ import {
   Announcement as NewsIcon,
   ExpandMore as ExpandMoreIcon,
   Event as ReleaseIcon,
+  SupervisorAccount as TorunamentsIcon,
 } from "@material-ui/icons";
 import LoginButton from "./LoginButton";
 import ListChip from "./ListChip";
@@ -26,6 +27,8 @@ import lhqLogoLight from "assets/lhqLogoLight.svg";
 import lhqLogoDark from "assets/lhqLogoDark.svg";
 import releaseSchedule from "assets/releaseSchedule.webp";
 import reissueSchedule from "assets/reissueSchedule.webp";
+import naTournaments from "assets/2025 NA Tournaments.png";
+import euTournaments from "assets/2025 Eurasia Tournaments.png";
 
 const useStyles = makeStyles((theme) => ({
   expand: {
@@ -88,6 +91,7 @@ function Home() {
   const listChips = {};
   const [isNewsOpen, setIsNewsOpen] = useState(true);
   const [isReleasesOpen, setIsReleasesOpen] = useState(true);
+  const [isTournamentsOpen, setIsTournamentsOpen] = useState(true);
   Object.keys(factions).forEach((faction) => (listChips[faction] = []));
   if (userLists) {
     userLists.forEach((userList) => {
@@ -243,6 +247,35 @@ function Home() {
                   </h6>
                 </Collapse>
               )}
+            </Grid>
+            <Grid item>
+              <Button
+                size="small"
+                onClick={() => setIsTournamentsOpen(!isTournamentsOpen)}
+              >
+                <TorunamentsIcon fontSize="small" style={{ marginRight: 4 }} />
+                Grand Tournaments
+                <ExpandMoreIcon
+                  fontSize="small"
+                  className={clsx(classes.expand, {
+                    [classes.expandOpen]: isTournamentsOpen,
+                  })}
+                />
+              </Button>
+            </Grid>
+            <Grid item>
+              <Collapse in={isTournamentsOpen}>
+                <img
+                  alt="NA Tournaments"
+                  src={naTournaments}
+                  style={{ width: 600, height: "auto" }}
+                />
+                <img
+                  alt="Eurasia Tournaments"
+                  src={euTournaments}
+                  style={{ width: 600, height: "auto" }}
+                />
+              </Collapse>
             </Grid>
             <Grid item></Grid>
             <Grid item>
