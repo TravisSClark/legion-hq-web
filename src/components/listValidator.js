@@ -832,6 +832,12 @@ function applyRankAdjustments(currentList, rankReqs) {
     if (extraRankCounts[unit.unitId]) {
       let allowance = Math.min(unit.count, extraRankCounts[unit.unitId]);
       rankReqs[card.rank][1] += allowance;
+      if (
+        rankReqs.commOp &&
+        (card.rank === "commander" || card.rank === "operative")
+      ) {
+        rankReqs.commOp += allowance;
+      }
       extraRankCounts[unit.unitId] -= allowance;
     }
   });
