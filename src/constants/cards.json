@@ -17437,7 +17437,7 @@
     "faction": "mercenary",
     "affiliation": "raider",
     "isUnique": true,
-    "cost": 0,
+    "cost": 85,
     "keywords": [
       {
         "name": "Mercenary",
@@ -17463,7 +17463,7 @@
         "value": "X"
       }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["gear", "grenades", "grenades", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 5,
