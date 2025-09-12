@@ -17712,7 +17712,7 @@
     "cardType": "command",
     "commander": "Hondo Ohnaka",
     "imageName": "That's Just Good Business.webp",
-    "faction": "mercenary",
+    "faction": "",
     "keywords": []
   },
   "Bx": {
@@ -17722,7 +17722,7 @@
     "cardType": "command",
     "commander": "Hondo Ohnaka",
     "imageName": "Stories, So Many of Them True.webp",
-    "faction": "mercenary",
+    "faction": "",
     "keywords": []
   },
   "By": {
