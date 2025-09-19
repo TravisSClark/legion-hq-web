@@ -191,7 +191,7 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
 
     if (card.specialIssue && card.specialIssue !== list.battleForce) continue;
 
-    if (card.detachment) {
+    if (card.detachment && !(battleForce?.rules?.ignoreDetach === id)) {
       for (let i = 0; i < list.units.length; i++) {
         const unit = list.units[i];
         if (unit.unitId === card.detachment) {

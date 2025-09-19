@@ -690,7 +690,7 @@ function validateList(currentList, rankLimits) {
   Object.getOwnPropertyNames(unitCounts).forEach((id) => {
     const card = cards[id];
 
-    if (card.detachment) {
+    if (card.detachment && !(battleForce?.rules?.ignoreDetach === id)) {
       let parent = cards[card.detachment];
       let parentCount = unitCounts[card.detachment]
         ? unitCounts[card.detachment]

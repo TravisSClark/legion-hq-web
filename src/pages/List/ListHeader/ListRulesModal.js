@@ -78,7 +78,7 @@ function BFRules({list}){
     <Typography style={{marginBottom:0}} variant="subtitle1" gutterBottom>Special Rules:</Typography>
     <DialogContent>
       { bfRules.noFieldComm && 
-          <Typography className={classes.bfRules}>The Field Commander keyword canno be used in {article} {list.battleForce} army.</Typography>
+          <Typography className={classes.bfRules}>The Field Commander keyword cannot be used in {article} {list.battleForce} army.</Typography>
       }
       { bfRules.countMercs && 
           <div>
@@ -100,6 +100,9 @@ function BFRules({list}){
       }
       { bfRules.remnantEquipRules && 
         <Typography className={classes.bfRules}>Any non-droid trooper unit in this army with a HEAVY WEAPON upgrade icon may equip a HEAVY WEAPON upgrade with one of the following unit requirements, ignoring that requirement: Stormtroopers only, Shoretroopers only, Scout Troopers only, or Imperial Death Troopers only.</Typography>
+      }
+      { bfRules.ignoreDetach && 
+        <Typography className={classes.bfRules}>{cards[bfRules.ignoreDetach].cardName} units in this army do not have the DETACHMENT keyword.</Typography>
       }
       {battleForcesDict[list.battleForce].plainTextRules?.map(r=> <Typography className={classes.bfRules}>{r}</Typography>)}
     </DialogContent>

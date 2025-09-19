@@ -18,7 +18,7 @@ const battleForcesDict = {
     special: ["kz", "ky", "Ay"],
     support: ["mb", "ic", "xj", "xp"],
     heavy: ["oo"],
-    allowedUniqueUpgrades: ["lh", "lg", "Bd"],
+    allowedUniqueUpgrades: ["lh", "lg", "Bd"], // TODO CC Rex incoming!
     rules: {},
     ruleUrl:
       "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_501st.pdf",
@@ -32,6 +32,7 @@ const battleForcesDict = {
       heavy: [0, 1],
     },
     "500-point mode": {
+      commOp: 1,
       commander: [1, 1],
       operative: [0, 1],
       corps: [1, 4],
@@ -47,7 +48,7 @@ const battleForcesDict = {
     commander: ["at", "au", "Cb"],
     operative: [],
     corps: ["az", "ay", "sr"],
-    special: [],
+    special: [], // TODO add Imperial Probe Droids
     support: ["bf", "be"],
     heavy: ["bg"],
     allowedUniqueUpgrades: ["fl", "Ce", "Cf", "Cg"],
@@ -55,6 +56,8 @@ const battleForcesDict = {
     rules: {
       noFieldComm: true,
       unitLimits: [{ ids: ["ay", "sr"], count: [0, 2] }],
+      // TODO add Probe id here
+      // ignoreDetach:""
     },
     ruleUrl:
       "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_BlizzardForce.pdf",
@@ -62,7 +65,7 @@ const battleForcesDict = {
       commander: [1, 2],
       operative: [0, 0],
       corps: [3, 6],
-      special: [0, 0],
+      special: [0, 3],
       support: [1, 4],
       heavy: [0, 2],
     },
@@ -70,7 +73,7 @@ const battleForcesDict = {
       commander: [1, 2],
       operative: [0, 0],
       corps: [2, 4],
-      special: [0, 0],
+      special: [0, 3],
       support: [1, 3],
       heavy: [0, 1],
     },
@@ -131,7 +134,7 @@ const battleForcesDict = {
     special: [],
     support: ["an", "he"],
     heavy: ["ap"],
-    allowedUniqueUpgrades: ["fk", "Cp", "Cq", "Cr", "Cs"],
+    allowedUniqueUpgrades: ["fk", "Cp", "Cq", "Cr", "Cs", "Bn"], // TODO needs "Squadron Leader" once card available
     rules: {
       noFieldComm: true,
     },
@@ -166,9 +169,10 @@ const battleForcesDict = {
     special: ["la", "xd"],
     support: ["ie"],
     heavy: ["xe"],
-    allowedUniqueUpgrades: [],
+    allowedUniqueUpgrades: ["Bl"], // TODO add "Kraken" once his upgrade comes out
     rules: {
       buildsAsCorps: ["xd"],
+      ccAsCorps: true, // adds in the "and Battle Cards" rule to printout
       unitLimits: [
         { ids: ["gx"], count: [0, 2] },
         { ids: ["ga"], count: [0, 2] },
@@ -221,7 +225,7 @@ const battleForcesDict = {
     special: ["ba", "bd"],
     support: ["bf", "be"],
     heavy: ["tm"],
-    allowedUniqueUpgrades: ["uj", "Ce", "Cf", "Cg", "Ch", "Cj"],
+    allowedUniqueUpgrades: ["uj", "Ce", "Cf", "Cg", "Ch", "Cj", "Bl", "Bn"],
     rules: {
       unitLimits: [
         { ids: ["ay"], count: [1, 2] },
@@ -272,7 +276,7 @@ const battleForcesDict = {
     rules: {
       noFieldComm: true,
     },
-    allowedUniqueUpgrades: [],
+    allowedUniqueUpgrades: [], // TODO add "Squadron Leader"
     ruleUrl:
       "https://cdn.svc.asmodee.net/production-amgcom/uploads/2022/10/StarWarsLegionBFRulesSheetSI.pdf",
 
@@ -301,12 +305,12 @@ const battleForcesDict = {
     forceAffinity: "dark side",
     linkId: "sc",
     commander: ["ra", "rd", "qy"],
-    operative: ["rc", "kx", "ax"],
-    corps: ["rb", "qz"],
+    operative: ["rc", "kx", "ax"], // TODO add "Savage Oppress"!!
+    corps: ["rb", "qz"], // TODO add Weequay Pirates
     special: ["re"],
     support: ["sq"],
-    heavy: ["sm"],
-    allowedUniqueUpgrades: ["rq", "so", "se", "sp", "sg", "sh", "si"],
+    heavy: ["sm"], // TODO add WLO-5 Speeder Tank
+    allowedUniqueUpgrades: ["rq", "so", "se", "sp", "sg", "sh", "si", "Bn"], // TODO add "Gang Boss"
     rules: {
       countMercs: true,
     },
@@ -346,7 +350,7 @@ const battleForcesDict = {
     special: ["ba"],
     support: ["bf"],
     heavy: ["we", "bg"],
-    allowedUniqueUpgrades: [, "Ce", "Cf", "Ch", "Cj"],
+    allowedUniqueUpgrades: [, "Ce", "Cf", "Ch", "Cj"], // TODO add "Squadron Leader"
     rules: {},
     plainTextRules: [
       "Vehicles in this army gain Scout 2.",
@@ -391,7 +395,7 @@ const battleForcesDict = {
     special: ["kz", "pg", "pm"],
     support: ["qh", "xf", "ic"],
     heavy: ["gb", "qs"],
-    allowedUniqueUpgrades: [],
+    allowedUniqueUpgrades: ["Bl"], // TODO add all the 'Custom Jedi' Cards
     rules: {
       buildsAsCorps: ["pm"],
       ccAsCorps: true, // adds in the "and Battle Cards" rule unique to Wookiee building rules
