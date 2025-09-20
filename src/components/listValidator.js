@@ -28,7 +28,29 @@ function isUniqueCard(card) {
  */
 function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
   const unit = list.units[unitIndex];
-  const unitCard = cards[unit.unitId];
+  const unitCardOriginal = cards[unit.unitId];
+
+  const unitCard = JSON.parse(JSON.stringify(unitCardOriginal))
+
+   unit.upgradesEquipped.forEach(id=>{
+    if(id == null) return;
+    let upgradeCard = cards[id];
+    upgradeCard.keywords.forEach(k=>{
+      if(k!==null){
+        if(k.isPermanent){
+          unitCard.keywords.push(k);
+        }
+      }
+    })
+  })
+
+  // TODO bad...
+  for(let i=0; i<unitCard.keywords.length; i++){
+    if(unitCard.keywords[i].name){
+      unitCard.keywords[i] = unitCard.keywords[i].name;
+    }
+  }
+
   unitCard.forceAffinity = unit.forceAffinity;
 
   unit.validationIssues = [];

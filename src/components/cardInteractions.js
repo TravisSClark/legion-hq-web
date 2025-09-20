@@ -5,8 +5,13 @@ function getSpecialSlots(unitCard){
   let specialSlots = [];
   interactions.specialSlotEligibility.forEach(slot=>{
 
+    let hasSlot = false;
     if(slot.eligibility && _.isMatch(unitCard, slot.eligibility) || 
       (slot.keyword && _.find(unitCard.keywords, (k)=>slot.keyword === k || slot.keyword === k.name))){
+      hasSlot = true;
+    }
+
+    if(hasSlot){
       specialSlots.push(slot);
     }
   })

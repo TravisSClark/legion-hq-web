@@ -18085,7 +18085,10 @@
         "name": "Aid",
         "value": "Emplacement Trooper"
       },
-      "Prepared Position",
+      {
+        "name":"Prepared Position",
+        "isPermanent":true
+      },
       {
         "name": "Spotter",
         "value": 1
@@ -18325,7 +18328,13 @@
     "cost": 5,
     "imageName": "Unseen Saboteur.webp",
     "isUnique": true,
-    "keywords": ["Prepared Position", "Low Profile"],
+    "keywords": [
+      {
+        "name":"Prepared Position",
+        "isPermanent":true
+      }, 
+      "Low Profile"
+    ],
     "requirements": [
       "OR",
       {

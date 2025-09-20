@@ -306,7 +306,7 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
   if (!unitId) return { validUpgradeIds: [], invalidUpgradeIds: [] };
 
   const unitCard = cards[unitId];
-  const unitCardCopy = Object.assign({}, unitCard);
+  const unitCardCopy = JSON.parse(JSON.stringify(unitCard));
 
   const uniqueCardNames = getListUniques(list, "name");
 
@@ -320,6 +320,27 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
       battleForcesDict[list.battleForce]?.rules?.buildsAsCorps?.includes(unitId)
     ) {
       unitCardCopy.rank = "corps";
+    }
+  }
+
+  // TODO maybe this should be something done 'regularly' and displayed by upgrades, e.g. when Situational Awareness gives a unit Outmaneuver
+  // problem is, there's no real distinction, afaik, between keyword tags where keys get permanantly added vs contextually added or just referred to
+  upgradesEquipped.forEach(id=>{
+    if(id == null) return;
+    let upgradeCard = cards[id];
+    upgradeCard.keywords.forEach(k=>{
+      if(k!==null){
+        if(k.isPermanent){
+          unitCardCopy.keywords.push(k);
+        }
+      }
+    })
+  })
+
+  // TODO bad...
+  for(let i=0; i<unitCardCopy.keywords.length; i++){
+    if(unitCardCopy.keywords[i].name){
+      unitCardCopy.keywords[i] = unitCardCopy.keywords[i].name;
     }
   }
 
