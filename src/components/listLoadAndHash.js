@@ -331,18 +331,10 @@ function changeListTitle(list, title) {
   return { ...list, title: title.substring(0, 64) };
 }
 
-function setListMode(list, mode) {
-  if (legionModes[mode]) {
-    list.mode = mode;
-  }
-  return list;
-}
-
 export {
   mergeLists,
   convertHashToList,
   convertJsonToList,
   rehashList,
   changeListTitle,
-  setListMode,
 };

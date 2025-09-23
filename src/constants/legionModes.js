@@ -83,6 +83,19 @@ const legionModes = {
       heavy: [0, 2],
     },
   },
+  "tour-of-duty": {
+    name: "Tour of Duty",
+    maxPoints: 2000,
+    rankReqs: {
+      commander: [1, 3],
+      operative: [0, 2],
+      corps: [2, 6],
+      special: [0, 5],
+      support: [0, 2],
+      heavy: [0, 2],
+    },
+
+  }
 };
 
 export default legionModes;

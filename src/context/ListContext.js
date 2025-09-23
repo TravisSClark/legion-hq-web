@@ -36,8 +36,8 @@ import {
   mergeLists,
   convertHashToList,
   changeListTitle,
-  setListMode,
 } from "components/listLoadAndHash";
+import legionModes from "constants/legionModes";
 
 const ListContext = createContext();
 const httpClient = Axios.create();
@@ -65,6 +65,7 @@ export function ListProvider({ width, children, slug, listHash }) {
   const [currentKillPoints, setCurrentKillPoints] = useState(0);
   const [validationIssues, setValidationIssues] = useState([]);
   const [rankLimits, setRankLimits] = useState();
+  const [mode, setMode] = useState();
 
   useEffect(() => {
     // route '/list/rebels' fetches the rebel list from storage
@@ -195,7 +196,10 @@ export function ListProvider({ width, children, slug, listHash }) {
     setCurrentList({ ...changeListTitle(currentList, title) });
 
   const handleChangeMode = (mode) => {
-    updateThenValidateList({ ...setListMode(currentList, mode) });
+    if (legionModes[mode]) {
+      setMode(mode);
+    }
+    updateThenValidateList({ ...currentList });
   };
 
   const setCardSelectorToNextUpgradeSlot = (
@@ -526,6 +530,7 @@ export function ListProvider({ width, children, slug, listHash }) {
           ...messageProps,
           validationIssues,
           rankLimits,
+          mode
         }}
       >
         {children}
