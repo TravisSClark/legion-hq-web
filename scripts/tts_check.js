@@ -149,7 +149,6 @@ async function ttsCheckAsync() {
       name += " " + c.title;
     }
     if (c.ttsName) {
-      // console.log("Mapping \"" + name + "\" to \"" + c.ttsName + "\"");
       name = c.ttsName;
     }
     return toKey(name);

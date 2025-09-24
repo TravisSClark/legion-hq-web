@@ -11328,7 +11328,7 @@
       "Programmed",
       "Blast"
     ],
-    "upgradeBar": ["protocol", "hardpoint", "comms"],
+    "upgradeBar": ["programming", "hardpoint", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -11363,7 +11363,7 @@
   },
   "ql": {
     "id": "ql",
-    "cardSubtype": "protocol",
+    "cardSubtype": "programming",
     "cardName": "Engagement Protocols",
     "cardType": "upgrade",
     "cost": 3,
@@ -11383,7 +11383,7 @@
   },
   "qm": {
     "id": "qm",
-    "cardSubtype": "protocol",
+    "cardSubtype": "programming",
     "cardName": "Defense Protocols",
     "cardType": "upgrade",
     "cost": 8,
@@ -11403,7 +11403,7 @@
   },
   "qn": {
     "id": "qn",
-    "cardSubtype": "protocol",
+    "cardSubtype": "programming",
     "cardName": "Attack Protocols",
     "cardType": "upgrade",
     "cost": 8,
@@ -11579,7 +11579,7 @@
         "value": "Front"
       }
     ],
-    "upgradeBar": ["protocol", "ordnance", "ordnance", "comms"],
+    "upgradeBar": ["programming", "ordnance", "ordnance", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 11,
@@ -13285,7 +13285,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["training", "comms", "gear", "protocol"],
+    "upgradeBar": ["training", "comms", "gear", "programming"],
     "stats": {
       "minicount": 1,
       "hp": 5,
@@ -13517,7 +13517,7 @@
       "Unconcerned",
       "Unstoppable"
     ],
-    "upgradeBar": ["heavy weapon", "heavy weapon", "personnel", "protocol"],
+    "upgradeBar": ["heavy weapon", "heavy weapon", "personnel", "programming"],
     "stats": {
       "minicount": 3,
       "hp": 2,
@@ -13598,7 +13598,7 @@
   },
   "tp": {
     "id": "tp",
-    "cardSubtype": "protocol",
+    "cardSubtype": "programming",
     "cardName": "\"Nanny\" Programming",
     "cardType": "upgrade",
     "cost": 0,
@@ -13743,7 +13743,7 @@
   },
   "ub": {
     "id": "ub",
-    "cardSubtype": "protocol",
+    "cardSubtype": "programming",
     "cardName": "\"Bounty\" Programming",
     "cardType": "upgrade",
     "cost": 5,
@@ -14115,7 +14115,7 @@
   },
   "us": {
     "id": "us",
-    "cardSubtype": "protocol",
+    "cardSubtype": "programming",
     "cardName": "Programmed Loyalty",
     "cardType": "upgrade",
     "cost": 5,
@@ -15817,7 +15817,7 @@
         "value": "1: Sides"
       }
     ],
-    "upgradeBar": ["protocol", "ordnance", "ordnance", "comms"],
+    "upgradeBar": ["programming", "ordnance", "ordnance", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 11,
@@ -16562,7 +16562,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": ["protocol", "hardpoint", "comms"],
+    "upgradeBar": ["programming", "hardpoint", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 5,
@@ -18936,6 +18936,294 @@
       }
     ],    
     "id": "Dl",
+    "history": []
+  },
+
+
+
+
+  "Dm": {
+    "id": "Dm",
+    "cardName": "Super Tactical Command Droid",
+    "title": "Command and Control Droid",
+    "cardType": "unit",
+    "cardSubtype": "droid trooper",
+    "rank": "commander",
+    "faction": "separatists",
+    "cost": 70,
+    "imageName": "Rebel Agent.webp",
+    "isUnreleased": "7 Nov 2025",
+    "keywords": [
+      {
+        "name": "Equip",
+        "value": "Doctrine"
+      },
+     "Override"
+    ],
+    "upgradeBar": [
+      "doctrine",
+      "programming",
+      "programming",
+      "programming",
+      "command",
+      "comms",
+      "gear",
+      "armament"
+    ],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons":[
+      {
+        "name": "Aggression Protocol",
+        "keywords": [
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 1
+        }
+      },
+      {
+        "name": "E-5 Blaster Rifle",
+        "keywords": [
+        ],
+        "range": [1,3],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Dn": {
+    "id": "Dn",
+    "cardName": "Super Tactical Command Droid",
+    "title": "Auxiliary Command Droid",
+    "cardType": "unit",
+    "cardSubtype": "droid trooper",
+    "rank": "operative",
+    "faction": "separatists",
+    "cost": 60,
+    "imageName": "Rebel Agent.webp",
+    "isUnreleased": "7 Nov 2025",
+    "keywords": [
+      {"name":"Aid", "value":"Droid Trooper"},
+      {
+        "name": "Equip",
+        "value": "Doctrine"
+      },
+     "Override"
+    ],
+    "upgradeBar": [
+      "doctrine",
+      "programming",
+      "programming",
+      "comms",
+      "gear",
+      "armament",
+      "armament"
+    ],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons":[
+      {
+        "name": "Aggression Protocol",
+        "keywords": [
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 1
+        }
+      },
+      {
+        "name": "E-5 Blaster Rifle",
+        "keywords": [
+        ],
+        "range": [1,3],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Do": {
+    "id": "Do",
+    "cardName": "Tyrannical Taskmaster",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 8,
+    "imageName": "Academy Trained.webp",
+    "additionalUpgradeSlots":["programming"],
+    "uniqueCount": 2,
+    "keywords": [
+    ],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "history": []
+  },
+  "Dp": {
+    "id": "Dp",
+    "cardName": "Seek and Destroy",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 5,
+    "imageName": "Academy Trained.webp",
+    "additionalUpgradeSlots":["training"],
+    "uniqueCount": 2,
+    "keywords": [
+      {"name":"Demoralize", "value":1},
+      "Marksman",
+      {"name":"Target", "value":1}
+    ],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "history": []
+  },
+  "Dq": {
+    "id": "Dq",
+    "cardName": "Sliced Comms",
+    "cardType": "upgrade",
+    "cardSubtype": "programming",
+    "cost": 8,
+    "imageName": "Academy Trained.webp",
+    "uniqueCount": 2,
+    "keywords": [
+    ],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "history": []
+  },
+  "Dr": {
+    "id": "Dr",
+    "cardName": "Overclock",
+    "cardType": "upgrade",
+    "cardSubtype": "programming",
+    "cost": 5,
+    "imageName": "Academy Trained.webp",
+    "uniqueCount": 2,
+    "keywords": [
+    ],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "history": []
+  },
+  "Ds": {
+    "id": "Ds",
+    "cardName": "Targeting Relay",
+    "cardType": "upgrade",
+    "cardSubtype": "programming",
+    "cost": 5,
+    "imageName": "Academy Trained.webp",
+    "uniqueCount": 2,
+    "keywords": [
+    ],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "history": []
+  },
+  "Dt": {
+    "id": "Dt",
+    "cardName": "Limiter Override",
+    "cardType": "upgrade",
+    "cardSubtype": "programming",
+    "cost": 5,
+    "imageName": "Academy Trained.webp",
+    "uniqueCount": 2,
+    "keywords": [
+    ],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "history": []
+  },
+  "Du": {
+    "Du":"hast",
+    "id": "Du",
+    "cardName": "Optimized Task Flow",
+    "cardType": "upgrade",
+    "cardSubtype": "programming",
+    "cost": 8,
+    "imageName": "Academy Trained.webp",
+    "keywords": [
+      {"name":"Direct","value":"AI Unit"}
+    ],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "history": []
+  },
+  "Dv": {
+    "id": "Dv",
+    "cardName": "Strategic Programming",
+    "cardType": "upgrade",
+    "cardSubtype": "programming",
+    "cost": 8,
+    "imageName": "Academy Trained.webp",
+    "keywords": [
+      {"name":"Strategize","value":1}
+    ],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "history": []
+  },
+  "Dw": {
+    "id": "Dw",
+    "cardName": "Enhanced Combat Subroutines",
+    "cardType": "upgrade",
+    "cardSubtype": "programming",
+    "cost": 5,
+    "imageName": "Academy Trained.webp",
+    "keywords": [
+      {"name":"Sharpshooter","value":1},
+      {"name":"Lethal","value":1}
+    ],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
     "history": []
   }
 }

@@ -73,8 +73,8 @@ const upgradeTypes = {
     name: "Ordnance",
     icon: ordnance,
   },
-  protocol: {
-    name: "Protocol",
+  programming: {
+    name: "Programming",
     icon: protocol,
   },
   "squad leader": {

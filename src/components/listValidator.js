@@ -180,7 +180,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
         validateEquipForCategory(unit, keywordName, "heavy weapon");
         break;
       case "Programmed":
-        validateEquipForCategory(unit, keywordName, "protocol");
+        validateEquipForCategory(unit, keywordName, "programming");
         break;        
     }
   })
