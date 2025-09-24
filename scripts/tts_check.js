@@ -194,6 +194,7 @@ async function ttsCheckAsync() {
     "AN ENTIRE LEGION",
     // G A L AC T IC R E P UBL IC UP GR A DE C A R D S
     "JT-12 JETPACKS",
+    "LOOTED E-5 BLASTER",
     // ME RC E N A R Y COMM A ND C A R D S
     "ZX FLAME PROJECTOR",
     // R E BE L A L L I A NC E COMM A ND C A R D S
