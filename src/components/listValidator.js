@@ -148,7 +148,6 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
   // Validation for each of the 'must equip' keywords
   unitCard.keywords.forEach(keyword=>{
 
-    console.log('kw:', keyword);
     let keywordName = keyword.name ? keyword.name : keyword;
     switch(keywordName){
       case "Equip":
