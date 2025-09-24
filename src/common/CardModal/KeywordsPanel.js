@@ -38,7 +38,7 @@ function KeywordsPanel({ card, variant = "inherit" }) {
   const cardKeywords = card.keywords;
 
   if (!(cardKeywords instanceof Array)) return null;
-  else if (cardKeywords.length === 0) return null;
+  else if (cardKeywords.length === 0 && card.weapons === undefined) return null;
   const columnContainerStyles = {
     display: "flex",
     flexDirection: "column",

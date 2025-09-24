@@ -351,9 +351,22 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
     if (card.cardSubtype !== upgradeType) continue;
     if (card.faction && card.faction !== "" && list.faction !== card.faction)
       continue;
+
     if (card.isUnique) {
       if (uniqueCardNames.includes(card.cardName)) continue;
-    } else if (upgradesEquipped.includes(id)) continue;
+    } 
+
+    let alreadyEquipped = false;
+    upgradesEquipped.forEach(u=>{
+      if(u == null) return;
+
+      let uCard = cards[u];
+      if(id === u || uCard.cardName === card.cardName){
+        alreadyEquipped = true;
+      }
+    })
+    if(alreadyEquipped) continue;
+
     if (
       card.isUnique &&
       list.battleForce &&

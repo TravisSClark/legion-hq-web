@@ -239,8 +239,8 @@ const battleForcesDict = {
       "When issuing Orders, the nominated Commander can only issue Orders \
         to allied units within 2 of them. Undeployed units or units not within \
         2 of any allied COMMANDER units gain Independent: Aim 1 or Dodge 1. \
-        When an allied unit checks to see if it is Panicked, it may only use the \
-        Courage of an allied COMMANDER unit within 2 instead of 3",
+        When an allied unit checks to see if it is Panicked, it can never use the \
+        Courage of an allied unit that is not within 2",
     ],
     ruleUrl:
       "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ImperialRemnant-1.pdf",
@@ -390,12 +390,13 @@ const battleForcesDict = {
     faction: "republic",
     linkId: "wd",
     commander: ["ol", "po", "ph"],
-    operative: [],
+    operative: ["Da"],
     corps: ["fz", "pm"],
     special: ["kz", "pg", "pm"],
     support: ["qh", "xf", "ic"],
     heavy: ["gb", "qs"],
-    allowedUniqueUpgrades: ["Bl"], // TODO add all the 'Custom Jedi' Cards
+    // TODO remove Di-Dk to cut clutter if 'Tactical Acumen' is also allowed. ie it means Jedi Training were redundantly listed as they're limited, not unique
+    allowedUniqueUpgrades: ["Bl","Dc","Dd","De","Di","Dj","Dk"],
     rules: {
       buildsAsCorps: ["pm"],
       ccAsCorps: true, // adds in the "and Battle Cards" rule unique to Wookiee building rules
@@ -425,14 +426,13 @@ const battleForcesDict = {
       support: [0, 3],
       heavy: [0, 1],
     },
-    //TODO these match 1000pt mode - typo on AMG doc?
     "500-point mode": {
       commOp: 2,
       commander: [1, 2],
       operative: [0, 2],
-      corps: [3, 6],
-      special: [0, 4],
-      support: [0, 3],
+      corps: [2, 5],
+      special: [0, 3],
+      support: [0, 2],
       heavy: [0, 1],
     },
     // '500-point mode': {

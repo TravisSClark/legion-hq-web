@@ -7036,7 +7036,6 @@
     "faction": "rebels",
     "isUnique": true,
     "cost": 90,
-    "equip": ["kh"],
     "keywords": [
       {
         "name": "Danger Sense",
@@ -8734,8 +8733,7 @@
         "date": "5 June 2023",
         "description": "Cost reduced from 34 to 30 points."
       }
-    ],
-    "equip": ["mp", "mo"]
+    ]
   },
   "mm": {
     "id": "mm",
@@ -9047,8 +9045,7 @@
           "w": 0
         }
       }
-    ],
-    "equip": ["mf", "me"]
+    ]
   },
   "mz": {
     "id": "mz",
@@ -16051,8 +16048,7 @@
           "w": 1
         }
       }
-    ],
-    "equip": ["xr", "xs", "xq", "xt", "xu"]
+    ]
   },
   "xj": {
     "id": "xj",
@@ -16120,8 +16116,7 @@
         "date": "6 November 2024",
         "description": "Cost increased from 75 to 90 points."
       }
-    ],
-    "equip": ["xl"]
+    ]
   },
   "xk": {
     "displayName": "DC-17m ICWS",
@@ -16275,8 +16270,7 @@
         "date": "6 November 2024",
         "description": "Cost increased from 100 to 105 points."
       }
-    ],
-    "equip": ["xl"]
+    ]
   },
   "xq": {
     "id": "xq",
@@ -16407,7 +16401,6 @@
       "hitsurge": "",
       "defsurge": ""
     },
-    "equip": ["xq", "xr", "xs", "xt"],
     "counterpartId": "xw"
   },
   "xw": {
@@ -17735,7 +17728,6 @@
     "faction": "rebels",
     "cost": 50,
     "imageName": "Rebel Agent.webp",
-    "equipUpgradeSlot": "doctrine",
     "isUnreleased": "Q4 2025",
     "keywords": [
       "Nimble",
@@ -17798,7 +17790,6 @@
     "faction": "rebels",
     "cost": 55,
     "imageName": "Rebel Officer.webp",
-    "equipUpgradeSlot": "doctrine",
     "isUnreleased": "Q4 2025",
     "keywords": [
       {
@@ -17861,7 +17852,6 @@
     "faction": "empire",
     "cost": 50,
     "imageName": "Imperial Agent.webp",
-    "equipUpgradeSlot": "doctrine",
     "isUnreleased": "Q4 2025",
     "keywords": [
       "Relentless",
@@ -17920,7 +17910,6 @@
     "faction": "empire",
     "cost": 55,
     "imageName": "Imperial Officer.webp",
-    "equipUpgradeSlot": "doctrine",
     "isUnreleased": "Q4 2025",
     "keywords": [
       {
@@ -18519,6 +18508,434 @@
         "cardName": "Rebel Officer"
       }
     ],
+    "history": []
+  },
+
+  "Cz": {
+    "id": "Cz",
+    "cardName": "Jedi Knight General",
+    "title": "Strong in the Force",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "commander",
+    "faction": "republic",
+    "cost": 105,
+    "imageName": "Rebel Agent.webp",
+    "isUnreleased": "7 Nov 2025",
+    "keywords": [
+      "Deflect",
+      {
+        "name": "Equip",
+        "value": "Armament"
+      },
+      {
+        "name": "Equip",
+        "value": "Doctrine"
+      },
+      "Immune: Pierce",
+      {
+        "name": "Master of the Force",
+        "value": 1
+      }
+    ],
+    "upgradeBar": [
+      "doctrine",
+      "force",
+      "force",
+      "training",
+      "training",
+      "armament"
+    ],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    }
+  },
+  "Da": {
+    "id": "Da",
+    "cardName": "Jedi Knight",
+    "title": "Keeper of the Peace",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "operative",
+    "faction": "republic",
+    "cost": 85,
+    "imageName": "Rebel Officer.webp",
+    "isUnreleased": "7 Nov 2025",
+    "keywords": [
+      "Deflect",
+      {
+        "name": "Equip",
+        "value": "Armament"
+      },
+      {
+        "name": "Equip",
+        "value": "Doctrine"
+      },
+      "Immune: Pierce"
+    ],
+    "upgradeBar": [
+      "doctrine",
+      "force",
+      "training",
+      "armament"
+    ],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    }
+  },
+  "Db": {
+    "id": "Db",
+    "cardName": "General of the Republic",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 5,
+    "imageName": "Academy Trained.webp",
+    "additionalUpgradeSlots":["command"],
+    "isUnique": true,
+    "keywords": [
+      {
+        "name": "Bolster",
+        "value": 2
+      },
+      {
+        "name": "Direct",
+        "value": "Clone Trooper"
+      },
+      {
+        "name": "Inspire",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "cardName": "Jedi Knight General"
+      }
+    ],
+    "history": []
+  },
+  "Dc": {
+    "id": "Dc",
+    "cardName": "Jedi Consular",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 8,
+    "imageName": "Tip of the Spear.webp",
+    "isUnique": true,
+    "additionalUpgradeSlots": ["force"],
+    "keywords": [
+      "Steady"
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Jedi Knight"
+      },
+      {
+        "cardName": "Jedi Knight General"
+      }
+    ],
+    "weapons":[
+      {
+        "name": "Force Blast",
+        "keywords": [
+          "Blast", 
+          {"name":"Impact", "value":2} 
+        ],
+        "range": [1,2],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      }
+    ],
+    "history": []
+  },
+  "Dd": {
+    "id": "Dd",
+    "cardName": "Jedi Negotiator",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 5,
+    "imageName": "Tip of the Spear.webp",
+    "isUnique": true,
+    "additionalUpgradeSlots": ["training"],
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Jedi Knight"
+      },
+      {
+        "cardName": "Jedi Knight General"
+      }
+    ],
+    "weapons":[
+      {
+        "name": "Force Shove",
+        "keywords": [
+          "Blast",
+          "Spray",
+          "Suppressive" 
+        ],
+        "range": [1,2],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 1
+        }
+      }
+    ],
+    "history": []
+  },
+  "De": {
+    "id": "De",
+    "cardName": "Jedi Guardian",
+    "ttsName": "Jedi Guardian (Doctrine)",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 10,
+    "imageName": "Tip of the Spear.webp",
+    "isUnique": true,
+    "TODO": "ADD SURGE: HIT",
+    "keywords": [
+      "Charge",
+      {"name":"Lethal", "value":1}
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Jedi Knight"
+      },
+      {
+        "cardName": "Jedi Knight General"
+      }
+    ],
+    "history": []
+  },
+  "Df": {
+    "id": "Df",
+    "cardName": "Lightsaber",
+    "cardType": "upgrade",
+    "cardSubtype": "armament",
+    "cost": 0,
+    "imageName": "Tip of the Spear.webp",
+    "keywords": [
+      {"name":"Block", "isPermanent":true}
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Jedi Knight"
+      },
+      {
+        "cardName": "Jedi Knight General"
+      }
+    ],
+    "weapons":[
+      {
+        "name": "Lightsaber",
+        "keywords": [
+        {"name":"Critical", "value":1},
+        {"name":"Impact", "value":2},
+        {"name":"Pierce", "value":1}
+        ],
+        "range": [0],
+        "dice": {
+          "r": 2,
+          "b": 1,
+          "w": 3
+        }
+      }
+    ],
+    "history": []
+  },
+  "Dg": {
+    "id": "Dg",
+    "cardName": "Twin Lightsabers",
+    "cardType": "upgrade",
+    "cardSubtype": "armament",
+    "cost": 0,
+    "imageName": "Tip of the Spear.webp",
+    "keywords": [
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Jedi Knight"
+      },
+      {
+        "cardName": "Jedi Knight General"
+      }
+    ],
+    "weapons":[
+      {
+        "name": "Twin Lightsabers",
+        "keywords": [
+          "High Velocity",
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":1}
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 4,
+          "w": 4
+        }
+      }
+    ],
+    "history": []
+  },
+  "Dh": {
+    "id": "Dg",
+    "cardName": "Double-Bladed Lightsaber",
+    "cardType": "upgrade",
+    "cardSubtype": "armament",
+    "cost": 0,
+    "imageName": "Tip of the Spear.webp",
+    "keywords": [
+      {"name":"Tactical", "value":1},
+      "Charge"
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Jedi Knight"
+      },
+      {
+        "cardName": "Jedi Knight General"
+      }
+    ],
+    "weapons":[
+      {
+        "name": "Double-Bladed Lightsaber",
+        "keywords": [
+          {"name":"Ram", "value":1},
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":1}
+        ],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 3
+        }
+      }
+    ],
+    "history": []
+  },
+  "Di": {
+    "cardName": "Jedi Training",
+    "title": "Master Duelist",
+    "displayName":"Jedi, Master Duelist",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 8,
+    "uniqueCount":2,
+    "imageName": "On The Hunt.webp",
+    "keywords": [
+      "Block", 
+      "Outmaneuver", 
+      {"name":"Critical", "value":1}, 
+      {"name":"Jump", "value":1}
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Jedi Knight"
+      },
+      {
+        "cardName": "Jedi Knight General"
+      }
+    ],    
+    "id": "Di",
+    "history": []
+  },
+  "Dj": {
+    "cardName": "Jedi Training",
+    "title": "Peacekeeping Mission",
+    "displayName":"Jedi, Peace Mission",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 8,
+    "uniqueCount":2,
+    "imageName": "On The Hunt.webp",
+    "keywords": [
+      {"name":"Prepared Position", "isPermanent":true}, 
+      {"name":"Reliable", "value":2},
+      "Sentinel" 
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Jedi Knight"
+      },
+      {
+        "cardName": "Jedi Knight General"
+      }
+    ],    
+    "id": "Dj",
+    "history": []
+  },
+  "Dk": {
+    "cardName": "Jedi Training",
+    "title": "Force Adept",
+    "displayName":"Jedi, Force Adept",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 5,
+    "uniqueCount":2,
+    "imageName": "On The Hunt.webp",
+    "additionalUpgradeSlots": ["force"],
+    "keywords": [
+      {"name":"Jump", "value":2} 
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Jedi Knight"
+      },
+      {
+        "cardName": "Jedi Knight General"
+      }
+    ],    
+    "id": "Dk",
+    "history": []
+  },
+  "Dl": {
+    "cardName": "Jedi Training",
+    "title": "Tactical Acumen",
+    "displayName":"Jedi, Tactical Acumen",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 8,
+    "uniqueCount":2,
+    "imageName": "On The Hunt.webp",
+    "keywords": [
+      {"name":"Guidance", "value":"Corps Trooper"} 
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Jedi Knight"
+      },
+      {
+        "cardName": "Jedi Knight General"
+      }
+    ],    
+    "id": "Dl",
     "history": []
   }
 }
