@@ -1,0 +1,116 @@
+{
+  "commendations":[
+
+    {
+      "name":"Resilient",
+      "text":"During the Post-Battle Sequence, if this unit would roll 2 or more black attack dice when making a Casualty Check, it may reroll 1 of those dice."
+    },
+    {
+      "name":"Veteran Leader",
+      "text":"This unit gains INSPIRE 2"
+    },
+    {
+      "name":"Special Munitions",
+      "text":"Once per Game, when this unit makes an attack during its Activation, choose 1 of its Attack Pools before rolling dice. The chosen Attack Pool gains Anti-Materiel 2 and Impact 1.",
+      "requirements":{}
+    },
+    {
+      "name":"Well-Stocked",
+      "text":"This unit may use the effect of its Special Munitions Commendation once per Round, instead of once per Game.",
+      "requirements":{}
+    },
+    {
+      "name":"One in a Million",
+      "text":"Once per Game, when this unit makes an attack during its Activation, choose 1 of its Attack Pools before rolling dice. Upgrade 2 dice in the chosen Attack Pool.",
+      "requirements":{}
+    },
+    {
+      "name":"Sterner Stuff",
+      "text":"Once per game, when this unit would remove its last miniature from the battlefield after suffering Wounds from an attack, roll 1 black attack die. On a CRIT or HIT result, do not remove that miniature. It survives with 1 Wound remaining.",
+      "requirements":{}
+    },
+    {
+      "name":"Strongpoint Expertise",
+      "text":"This unit gains Prepared Position. While this unit is completely within allied Territory, it rolls red defense dice instead of white defense dice when rolling its Cover Pool.",
+      "requirements":{}
+    },
+    {
+      "name":"Marksmanship Badge",
+      "text":"This unit gains Precise 1",
+      "requirements":{}
+    },
+    {
+      "name":"Harsh Environments Gear",
+      "text":"This unit gains Unhindered",
+      "requirements":{}
+    },
+    {
+      "name":"Advanced Drill",
+      "text":"This unit gains a TRAINING upgrade slot.",
+      "requirements":[{"cardSubtype":"trooper"}],
+      "additionalUpgradeSlots":["training"]
+    },
+    {
+      "name":"Forward Patrol",
+      "text":"This unit gains a COMMS upgrade slot.",
+      "requirements":{}
+    },
+    {
+      "name":"Extra Equipment",
+      "text":"This unit gains a GEAR and GRENADE upgrade slot",
+      "requirements":{}
+    },
+    {
+      "name":"Field Modifications",
+      "text":"This unit increases its Wound Threshold by 1 and its Resiliency by 1, if it has Resiliency",
+      "requirements":{}
+    },
+    {
+      "name":"Flexible Response",
+      "text":"This unit gains a HEAVY WEAPON upgrade slot and Flexible Response X, where X is the number of upgrade slots this unit has.",
+      "requirements":{}
+    },
+    {
+      "name":"Recon Badge",
+      "text":"This unit gains Scout 1",
+      "requirements":{}
+    },
+    {
+      "name":"Assault Badge",
+      "text":"This unit gains Tactical 1",
+      "requirements":{}
+    },
+    {
+      "name":"Personal Shields",
+      "text":"This unit gains Recharge 1 and Shielded 1",
+      "requirements":{}
+    },
+    {
+      "name":"Feats of Valor",
+      "text":"This unit increases its Courage by 1",
+      "requirements":{}
+    },
+    {
+      "name":"Self-Sufficient",
+      "text":"This unit gains Independent: Aim 1 or Dodge 1. If this unit already had the Independent keyword, it may increase the X value of that keyword by 1 instead.",
+      "requirements":{}
+    },
+    {
+      "name":"Fearsome",
+      "text":"This unit gains Demoralize 1",
+      "requirements":{}
+    },
+    {
+      "name":"Urban Assault Experts",
+      "text":"When this unit attacks an enemy unit that has Cover due to being Obscured by terrain, this unit has Sharpshooter 1 until the end of that attack. ",
+      "requirements":{}
+    },
+    {
+      "name":"Expert Pilot",
+      "text":"This unit gains Nimble and Outmaneuver.",
+      "requirements":{}
+    }
+  ],
+
+  "high_commendations":[]
+}

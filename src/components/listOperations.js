@@ -504,7 +504,7 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
 
   // TODO does not work if additionalUpgradeSlots has a config where >1 upgrade card provides aUS
   if ("additionalUpgradeSlots" in upgradeCard) {
-    removeAdditionalUpgradeSlot(newUnit);
+    removeAdditionalUpgradeSlot(newUnit, upgradeCard);
   }
 
   newUnit.upgradesEquipped = sortUpgrades(newUnit);
@@ -517,6 +517,40 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
     list.units.splice(unitIndex + 1, 0, newUnit);
   }
   list = decrementUnit(list, unitIndex);
+
+  return list;
+}
+
+
+function getUnitDossier(list, unitIndex){
+
+  if(unitIndex >= list.units.length){
+    return null;
+  }
+
+  let unit = list.units[unitIndex];
+
+  if(!unit.dossier){
+    unit.dossier = {
+      xp: 0,
+      setbacks:[],
+      commendations:[]
+    };
+  }
+
+  return unit.dossier;
+
+}
+
+function addUpdateDossierItem(list, unitIndex, type, dossierItem){
+  
+  console.log('dossier add!' + unitIndex);
+
+  let dossier = getUnitDossier(list, unitIndex);
+  dossier[type].push(dossierItem.name);
+
+  console.log(JSON.stringify(dossier));
+
 
   return list;
 }
@@ -541,4 +575,7 @@ export {
   sortUpgrades,
   updateSpecialUpgradeSlots,
   addAdditionalUpgradeSlots,
+
+  getUnitDossier,
+  addUpdateDossierItem
 };

@@ -23,6 +23,7 @@ import {
   countPoints,
   consolidate,
   updateSpecialUpgradeSlots,
+  addUpdateDossierItem,
 } from "components/listOperations";
 import listTemplate from "constants/listTemplate";
 import {
@@ -199,6 +200,7 @@ export function ListProvider({ width, children, slug, listHash }) {
     if (legionModes[mode]) {
       setMode(mode);
     }
+    currentList.mode = mode;
     updateThenValidateList({ ...currentList });
   };
 
@@ -461,6 +463,16 @@ export function ListProvider({ width, children, slug, listHash }) {
     updateThenValidateList({ ...currentList, battleForce });
   };
 
+  const handleAddDossierItem = ( unitIndex,
+    type,
+    dossierItem,
+    )=>{
+      const newList = addUpdateDossierItem(currentList, unitIndex, type, dossierItem );
+
+      // TODO - nasty thing wherein LHQ doesn't repaint from a list update alone
+      setCurrentList({...newList});
+  }
+
   const unitProps = {
     handleAddUnit,
     handleAddCounterpart,
@@ -511,6 +523,9 @@ export function ListProvider({ width, children, slug, listHash }) {
     setLeftPaneWidth,
     setRightPaneWidth,
   };
+  const dossierProps={
+    handleAddDossierItem
+  }
   const messageProps = {
     listSaveMessage,
   };
@@ -528,6 +543,7 @@ export function ListProvider({ width, children, slug, listHash }) {
           ...modalProps,
           ...viewProps,
           ...messageProps,
+          ...dossierProps,
           validationIssues,
           rankLimits,
           mode

@@ -55,7 +55,6 @@ function UnitUpgrades({
 
       // console.log('upgradetype', JSON.stringify(upgradeType));
       let specialHandler = ()=>{
-        console.log('special upgrade');
           setCardPaneFilter({
           action: actionPrefix + "_UPGRADE_SPECIAL",
           upgradeType: upgradeType.type, 

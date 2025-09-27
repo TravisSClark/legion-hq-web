@@ -7,7 +7,8 @@ import UnitActions from './UnitActions';
 import UnitUpgrades from './UnitUpgrades';
 import UnitContext from 'context/UnitContext';
 import ListContext from 'context/ListContext';
-import { Grid, Input, Paper, TextField, Typography } from '@material-ui/core';
+import { Grid, Input, Paper, TextField, Typography, Box } from '@material-ui/core';
+import Dossier from './Dossier';
 
 const useStyles = makeStyles(theme => ({
   unitRow: {
@@ -42,8 +43,6 @@ function ListUnit({
 
   const {unit, unitIndex, unitCard} = useContext(UnitContext);
   const {handleCardZoom, mode} = useContext(ListContext);
-
-  console.log('unit is ', JSON.stringify(unit));
 
   const highestUnitError = unit.validationIssues ? unit.validationIssues.reduce((hi, i)=>{return i.level > hi ? i.level : hi}, 0) : 0;
 
@@ -85,46 +84,9 @@ function ListUnit({
   if(mode !== "tour-of-duty"){
     return unitListItem;
   }
-
-  let dossier = (
-    <div >
-      <TextField
-        value={unit.dossierName}
-        // onChange={handleChange}
-      />      
-      {unitListItem}
-      {/* <div style={{diplay:'flex', flex:1, flexDirection:"row"}}>
-        
-        <div style={{display:'flex',  flex:'0 1', flexGrow:0, flexDirection:"column"}}>
-          <div style={{display:"flex", flex:'0 1'}}>Commendations</div>
-        </div>
-        <div style={{display:'flex', flex:"0 1", flexGrow:0, flexDirection:"column"}}>
-          <div style={{display:"flex", flex:'0 1'}}>Setbacks</div>
-        </div>
-      </div> */}
-
-      <Grid container spacing={4}>
-        <Grid size={6}>
-            <Paper>Commendations</Paper>
-        </Grid>
-        <Grid size={6}>
-          <Paper>Setbacks</Paper>
-        </Grid>
-
-      </Grid>
-
-      <div style={{flex:1, flexFlow:"row"}}>
-        <Typography>Veteran Level</Typography>
-        <TextField></TextField>
-
-        <Typography>XP</Typography>
-        <Input variant="number"></Input>
-
-      </div>
-    </div>
-  )
-
-  return dossier;
+  else{
+    return <Dossier unitListItem={unitListItem}></Dossier>
+  }
 };
 
 export default ListUnit;

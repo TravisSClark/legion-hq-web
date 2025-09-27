@@ -12,11 +12,15 @@ import { Button } from "@material-ui/core";
 import {
   getEligibleBattlesToAdd,
   getEligibleCommandsToAdd,
+  getEligibleCommendations,
   getEligibleUnitsToAdd,
   getEligibleUpgrades,
   getUpgradeBar,
   unitHasUniques,
 } from "components/eligibleCardListGetter";
+import RegisterSelector from "./RegisterSelector";
+import register from "constants/register";
+import { addUpdateDossierItem } from "components/listOperations";
 
 function Title({ title }) {
   return <Typography variant="body2">{title}</Typography>;
@@ -37,6 +41,7 @@ const CardSelector = () => {
     handleAddCounterpart,
     setCardSelectorToNextUpgradeSlot,
     userSettings,
+    handleAddDossierItem
   } = React.useContext(ListContext);
   let header;
   let clickHandler;
@@ -211,6 +216,14 @@ const CardSelector = () => {
         >
           {currentBattles}
         </div>
+      );
+      break;
+
+    case "SETBACK":
+    case "COMMENDATIONS":
+    case "DEFINING_TRAIT":
+      return (
+        <RegisterSelector items={getEligibleCommendations(currentList, cardPaneFilter.unitIndex)} onClick={(item)=>handleAddDossierItem(cardPaneFilter.unitIndex, cardPaneFilter.action.toLowerCase(), item)}/>
       );
       break;
     default:
