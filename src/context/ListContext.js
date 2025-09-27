@@ -159,7 +159,7 @@ export function ListProvider({ width, children, slug, listHash }) {
           });
         });
 
-        console.log(JSON.stringify(u));
+        // console.log(JSON.stringify(u));
       }
     });
 

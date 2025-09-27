@@ -58,7 +58,7 @@ const useStyles = makeStyles({
 
 function BFRules({list}){
   
-  const bfPdf = "https://cdn.svc.asmodee.net/production-amgcom/uploads/2025/04/DOC13_BattleForces.pdf"
+  const bfPdf = "https://cdn.svc.asmodee.net/production-amgcom/uploads/2025/09/DOC13_BattleForces_v1_3.pdf"
   const classes = useStyles();
 
   if(!list.battleForce){

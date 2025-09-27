@@ -125,7 +125,7 @@ function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand, isCa
 
   let pips = '•'.repeat(pipCount) + (pipCount > 0 ? " ":"");
 
-  let subheader = capitalizeFirstLetters(cardSubtype) + (isRecon ? ' (Recon)' : '');
+  let subheader = card.title; //capitalizeFirstLetters(cardSubtype) + (isRecon ? ' (Recon)' : '');
   if(cardType === "command"){
     subheader = "Command";
   }

@@ -31,6 +31,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
   const unitCardOriginal = cards[unit.unitId];
 
   const unitCard = JSON.parse(JSON.stringify(unitCardOriginal))
+  unit.validationIssues = [];
 
    unit.upgradesEquipped.forEach(id=>{
     if(id == null) return;
@@ -38,22 +39,16 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
     upgradeCard.keywords.forEach(k=>{
       if(k!==null){
         if(k.isPermanent){
-          unitCard.keywords.push(k);
+          // TODO this will break things later, probably, need to get _ to look at String AND obj.name for keywords (...or blow out all keywords to {})
+          unitCard.keywords.push(k.name);
         }
       }
     })
   })
 
-  // TODO bad...
-  for(let i=0; i<unitCard.keywords.length; i++){
-    if(unitCard.keywords[i].name){
-      unitCard.keywords[i] = unitCard.keywords[i].name;
-    }
-  }
+  
 
   unitCard.forceAffinity = unit.forceAffinity;
-
-  unit.validationIssues = [];
 
   unit.upgradesEquipped.forEach((id) => {
     if (!id) return;
@@ -121,112 +116,75 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
     });
   }
 
+  function capitalizeFirstLetters(words) {
+    const strings = words.split(' ').map(string => {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    });
+    return strings.join(' ');
+  }
+
+  const validateEquipForCategory = (unit, keywordName, subtype, count = 1)=>{
+    let equipCount = 0;
+    unit.upgradesEquipped.forEach((id) => {
+      if (id === null) return;
+      const equipCard = cards[id];
+      if (equipCard.cardSubtype === subtype) {
+        equipCount++;
+      }
+    });
+
+    if (equipCount < count) {
+      let cardName = unitCard.displayName
+        ? unitCard.displayName
+        : unitCard.cardName;
+      unit.validationIssues.push({
+        level: 2,
+        text:
+          cardName + " must equip at least " + count + " " + capitalizeFirstLetters(subtype) + " upgrade" + (count > 1 ? "s":"") +" ("+ keywordName + ")",
+      });
+    }
+  }
+
   // Validation for each of the 'must equip' keywords
+  unitCard.keywords.forEach(keyword=>{
 
-  if (unitCard.flexResponse) {
-    let heavyCount = 0;
-    unit.upgradesEquipped.forEach((id) => {
-      if (id === null) return;
-      const equipCard = cards[id];
-      if (equipCard.cardSubtype === "heavy weapon") {
-        heavyCount++;
-      }
-    });
-    if (heavyCount < unitCard.flexResponse) {
-      let cardName = unitCard.displayName
-        ? unitCard.displayName
-        : unitCard.cardName;
-      unit.validationIssues.push({
-        level: 2,
-        text:
-          cardName +
-          " needs " +
-          unitCard.flexResponse +
-          " Heavy Weapon upgrades (Flexible Response)",
-      });
+    let keywordName = keyword.name ? keyword.name : keyword;
+    switch(keywordName){
+      case "Equip":
+
+        let vals = keyword.value.split(", ");
+        vals.forEach(val=>{ 
+          let hasSlotFilled = false;
+          let v = val.toLowerCase();
+
+          unit.upgradesEquipped.forEach(u=>{
+            if(u != null && cards[u] != undefined){
+              if(cards[u].cardName.toLowerCase() === v || cards[u].cardSubtype.toLowerCase() === v){
+                hasSlotFilled = true;
+              }
+            }
+          })
+
+          if(!hasSlotFilled){
+            unit.validationIssues.push({
+              level: 2,
+              text: unitCard.cardName + " is missing " + val + " (Equip)",
+            });
+          }
+        })
+        break;
+      case "Flexible Response":
+        validateEquipForCategory(unit, keywordName, "heavy weapon", keyword.value);
+        break;
+      case "Heavy Weapon Team":
+        validateEquipForCategory(unit, keywordName, "heavy weapon");
+        break;
+      case "Programmed":
+        validateEquipForCategory(unit, keywordName, "programming");
+        break;        
     }
-  }
+  })
 
-  // Equip
-  if (unitCard.equip) {
-    unitCard.equip.forEach((equipReq) => {
-      const equipCard = cards[equipReq];
-      if (!unit.upgradesEquipped.includes(equipReq)) {
-        let cardName = unitCard.displayName
-          ? unitCard.displayName
-          : unitCard.cardName;
-        unit.validationIssues.push({
-          level: 2,
-          text: cardName + " is missing " + equipCard.cardName + " (Equip)",
-        });
-      }
-    });
-  }
-
-  if (
-    unitCard.keywords.find(
-      (k) => k === "Heavy Weapon Team" || k.name === "Heavy Weapon Team"
-    )
-  ) {
-    let hasHeavy = false;
-    unit.upgradesEquipped.forEach((id) => {
-      if (id === null) return;
-      const equipCard = cards[id];
-      if (equipCard.cardSubtype === "heavy weapon") {
-        hasHeavy = true;
-      }
-    });
-    if (!hasHeavy) {
-      let cardName = unitCard.displayName
-        ? unitCard.displayName
-        : unitCard.cardName;
-      unit.validationIssues.push({
-        level: 2,
-        text:
-          cardName + " is missing a Heavy Weapon upgrade (Heavy Weapon Team)",
-      });
-    }
-  }
-
-  if (
-    unitCard.keywords.find((k) => k === "Programmed" || k.name === "Programmed")
-  ) {
-    let hasProto = false;
-    unit.upgradesEquipped.forEach((id) => {
-      if (id === null) return;
-      const equipCard = cards[id];
-      if (equipCard.cardSubtype === "protocol") {
-        hasProto = true;
-      }
-    });
-    if (!hasProto) {
-      unit.validationIssues.push({
-        level: 2,
-        text:
-          unitCard.cardName + " is missing a Programming upgrade (Programmed)",
-      });
-    }
-  }
-
-  if (unitCard.equipUpgradeSlot) {
-    let hasSlotFilled = false;
-    unit.upgradesEquipped.forEach((id) => {
-      if (id === null) return;
-      const equipCard = cards[id];
-      if (equipCard.cardSubtype === unitCard.equipUpgradeSlot) {
-        hasSlotFilled = true;
-      }
-    });
-    if (!hasSlotFilled) {
-      let cardName = unitCard.displayName
-        ? unitCard.displayName
-        : unitCard.cardName;
-      unit.validationIssues.push({
-        level: 2,
-        text: `${cardName} is missing a ${unitCard.equipUpgradeSlot} upgrade from Equip`,
-      });
-    }
-  }
 
   // Loop upgrades for checks
   // For now, this just confirms we don't have 2+ Leader cards

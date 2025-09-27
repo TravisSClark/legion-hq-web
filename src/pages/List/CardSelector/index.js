@@ -98,12 +98,12 @@ const CardSelector = () => {
 
       const unit = currentList.units[cardPaneFilter.unitIndex];
 
-      console.log(
-        "upgrades sel",
-        JSON.stringify(cardPaneFilter.upgrades),
-        getUpgradeBar(unit),
-        cardPaneFilter.upgradeIndex
-      );
+      // console.log(
+      //   "upgrades sel",
+      //   JSON.stringify(cardPaneFilter.upgrades),
+      //   getUpgradeBar(unit),
+      //   cardPaneFilter.upgradeIndex
+      // );
       selectorIds =
         typeof getUpgradeBar(unit)[cardPaneFilter.upgradeIndex] === "object"
           ? { validIds: cardPaneFilter.upgrades }

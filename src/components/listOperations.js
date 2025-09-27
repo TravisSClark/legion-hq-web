@@ -213,7 +213,10 @@ function addAdditionalUpgradeSlots(unit, upgradeCard) {
   }
 
   // uE is a [null, null...] until sth equipped. Hence, null by default, move the popped special upgrade over if there was one
-  unit.upgradesEquipped.splice(offset, 0, newSlot);
+  let card = cards[unit.unitId];
+  if(unit.upgradesEquipped.length < (card.upgradeBar.length + unit.additionalUpgradeSlots.length + unit.specialUpgradeSlots.length) )
+    unit.upgradesEquipped.splice(offset, 0, newSlot);
+
 }
 
 function removeAdditionalUpgradeSlot(unit) {

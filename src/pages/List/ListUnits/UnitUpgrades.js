@@ -42,8 +42,6 @@ function UnitUpgrades({
     } else {
 
       let normalHandler = ()=> {
-                console.log('normal upgrade');
-
         setCardPaneFilter({
         action: actionPrefix + '_UPGRADE',
         upgradeType, 
