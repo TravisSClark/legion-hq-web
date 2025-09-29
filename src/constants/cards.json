@@ -17421,7 +17421,6 @@
   "Bj": {
     "id": "Bj",
     "cardName": "Hondo Ohnaka",
-    "isUnreleased": "Q1 2026",
     "title": "Trustworthy Compatriot",
     "imageName": "Hondo Ohnaka.webp",
     "cardType": "unit",
@@ -17728,7 +17727,6 @@
     "faction": "rebels",
     "cost": 50,
     "imageName": "Rebel Agent.webp",
-    "isUnreleased": "Q4 2025",
     "keywords": [
       "Nimble",
       {
@@ -17790,7 +17788,6 @@
     "faction": "rebels",
     "cost": 55,
     "imageName": "Rebel Officer.webp",
-    "isUnreleased": "Q4 2025",
     "keywords": [
       {
         "name": "Inspire",
@@ -17852,7 +17849,6 @@
     "faction": "empire",
     "cost": 50,
     "imageName": "Imperial Agent.webp",
-    "isUnreleased": "Q4 2025",
     "keywords": [
       "Relentless",
       {
@@ -17910,7 +17906,6 @@
     "faction": "empire",
     "cost": 55,
     "imageName": "Imperial Officer.webp",
-    "isUnreleased": "Q4 2025",
     "keywords": [
       {
         "name": "Inspire",
@@ -18075,8 +18070,8 @@
         "value": "Emplacement Trooper"
       },
       {
-        "name":"Prepared Position",
-        "isPermanent":true
+        "name": "Prepared Position",
+        "isPermanent": true
       },
       {
         "name": "Spotter",
@@ -18319,9 +18314,9 @@
     "isUnique": true,
     "keywords": [
       {
-        "name":"Prepared Position",
-        "isPermanent":true
-      }, 
+        "name": "Prepared Position",
+        "isPermanent": true
+      },
       "Low Profile"
     ],
     "requirements": [
@@ -18579,12 +18574,7 @@
       },
       "Immune: Pierce"
     ],
-    "upgradeBar": [
-      "doctrine",
-      "force",
-      "training",
-      "armament"
-    ],
+    "upgradeBar": ["doctrine", "force", "training", "armament"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -18602,7 +18592,7 @@
     "cardSubtype": "doctrine",
     "cost": 5,
     "imageName": "Academy Trained.webp",
-    "additionalUpgradeSlots":["command"],
+    "additionalUpgradeSlots": ["command"],
     "isUnique": true,
     "keywords": [
       {
@@ -18634,9 +18624,7 @@
     "imageName": "Tip of the Spear.webp",
     "isUnique": true,
     "additionalUpgradeSlots": ["force"],
-    "keywords": [
-      "Steady"
-    ],
+    "keywords": ["Steady"],
     "requirements": [
       "OR",
       {
@@ -18646,14 +18634,11 @@
         "cardName": "Jedi Knight General"
       }
     ],
-    "weapons":[
+    "weapons": [
       {
         "name": "Force Blast",
-        "keywords": [
-          "Blast", 
-          {"name":"Impact", "value":2} 
-        ],
-        "range": [1,2],
+        "keywords": ["Blast", { "name": "Impact", "value": 2 }],
+        "range": [1, 2],
         "dice": {
           "r": 0,
           "b": 3,
@@ -18682,15 +18667,11 @@
         "cardName": "Jedi Knight General"
       }
     ],
-    "weapons":[
+    "weapons": [
       {
         "name": "Force Shove",
-        "keywords": [
-          "Blast",
-          "Spray",
-          "Suppressive" 
-        ],
-        "range": [1,2],
+        "keywords": ["Blast", "Spray", "Suppressive"],
+        "range": [1, 2],
         "dice": {
           "r": 0,
           "b": 0,
@@ -18710,10 +18691,7 @@
     "imageName": "Tip of the Spear.webp",
     "isUnique": true,
     "TODO": "ADD SURGE: HIT",
-    "keywords": [
-      "Charge",
-      {"name":"Lethal", "value":1}
-    ],
+    "keywords": ["Charge", { "name": "Lethal", "value": 1 }],
     "requirements": [
       "OR",
       {
@@ -18732,9 +18710,7 @@
     "cardSubtype": "armament",
     "cost": 0,
     "imageName": "Tip of the Spear.webp",
-    "keywords": [
-      {"name":"Block", "isPermanent":true}
-    ],
+    "keywords": [{ "name": "Block", "isPermanent": true }],
     "requirements": [
       "OR",
       {
@@ -18744,13 +18720,13 @@
         "cardName": "Jedi Knight General"
       }
     ],
-    "weapons":[
+    "weapons": [
       {
         "name": "Lightsaber",
         "keywords": [
-        {"name":"Critical", "value":1},
-        {"name":"Impact", "value":2},
-        {"name":"Pierce", "value":1}
+          { "name": "Critical", "value": 1 },
+          { "name": "Impact", "value": 2 },
+          { "name": "Pierce", "value": 1 }
         ],
         "range": [0],
         "dice": {
@@ -18769,8 +18745,7 @@
     "cardSubtype": "armament",
     "cost": 0,
     "imageName": "Tip of the Spear.webp",
-    "keywords": [
-    ],
+    "keywords": [],
     "requirements": [
       "OR",
       {
@@ -18780,13 +18755,13 @@
         "cardName": "Jedi Knight General"
       }
     ],
-    "weapons":[
+    "weapons": [
       {
         "name": "Twin Lightsabers",
         "keywords": [
           "High Velocity",
-          {"name":"Impact", "value":2},
-          {"name":"Pierce", "value":1}
+          { "name": "Impact", "value": 2 },
+          { "name": "Pierce", "value": 1 }
         ],
         "range": [0],
         "dice": {
@@ -18805,10 +18780,7 @@
     "cardSubtype": "armament",
     "cost": 0,
     "imageName": "Tip of the Spear.webp",
-    "keywords": [
-      {"name":"Tactical", "value":1},
-      "Charge"
-    ],
+    "keywords": [{ "name": "Tactical", "value": 1 }, "Charge"],
     "requirements": [
       "OR",
       {
@@ -18818,13 +18790,13 @@
         "cardName": "Jedi Knight General"
       }
     ],
-    "weapons":[
+    "weapons": [
       {
         "name": "Double-Bladed Lightsaber",
         "keywords": [
-          {"name":"Ram", "value":1},
-          {"name":"Impact", "value":2},
-          {"name":"Pierce", "value":1}
+          { "name": "Ram", "value": 1 },
+          { "name": "Impact", "value": 2 },
+          { "name": "Pierce", "value": 1 }
         ],
         "range": [0],
         "dice": {
@@ -18839,17 +18811,17 @@
   "Di": {
     "cardName": "Jedi Training",
     "title": "Master Duelist",
-    "displayName":"Jedi, Master Duelist",
+    "displayName": "Jedi, Master Duelist",
     "cardType": "upgrade",
     "cardSubtype": "training",
     "cost": 8,
-    "uniqueCount":2,
+    "uniqueCount": 2,
     "imageName": "On The Hunt.webp",
     "keywords": [
-      "Block", 
-      "Outmaneuver", 
-      {"name":"Critical", "value":1}, 
-      {"name":"Jump", "value":1}
+      "Block",
+      "Outmaneuver",
+      { "name": "Critical", "value": 1 },
+      { "name": "Jump", "value": 1 }
     ],
     "requirements": [
       "OR",
@@ -18859,23 +18831,23 @@
       {
         "cardName": "Jedi Knight General"
       }
-    ],    
+    ],
     "id": "Di",
     "history": []
   },
   "Dj": {
     "cardName": "Jedi Training",
     "title": "Peacekeeping Mission",
-    "displayName":"Jedi, Peace Mission",
+    "displayName": "Jedi, Peace Mission",
     "cardType": "upgrade",
     "cardSubtype": "training",
     "cost": 8,
-    "uniqueCount":2,
+    "uniqueCount": 2,
     "imageName": "On The Hunt.webp",
     "keywords": [
-      {"name":"Prepared Position", "isPermanent":true}, 
-      {"name":"Reliable", "value":2},
-      "Sentinel" 
+      { "name": "Prepared Position", "isPermanent": true },
+      { "name": "Reliable", "value": 2 },
+      "Sentinel"
     ],
     "requirements": [
       "OR",
@@ -18885,23 +18857,21 @@
       {
         "cardName": "Jedi Knight General"
       }
-    ],    
+    ],
     "id": "Dj",
     "history": []
   },
   "Dk": {
     "cardName": "Jedi Training",
     "title": "Force Adept",
-    "displayName":"Jedi, Force Adept",
+    "displayName": "Jedi, Force Adept",
     "cardType": "upgrade",
     "cardSubtype": "training",
     "cost": 5,
-    "uniqueCount":2,
+    "uniqueCount": 2,
     "imageName": "On The Hunt.webp",
     "additionalUpgradeSlots": ["force"],
-    "keywords": [
-      {"name":"Jump", "value":2} 
-    ],
+    "keywords": [{ "name": "Jump", "value": 2 }],
     "requirements": [
       "OR",
       {
@@ -18910,22 +18880,20 @@
       {
         "cardName": "Jedi Knight General"
       }
-    ],    
+    ],
     "id": "Dk",
     "history": []
   },
   "Dl": {
     "cardName": "Jedi Training",
     "title": "Tactical Acumen",
-    "displayName":"Jedi, Tactical Acumen",
+    "displayName": "Jedi, Tactical Acumen",
     "cardType": "upgrade",
     "cardSubtype": "training",
     "cost": 8,
-    "uniqueCount":2,
+    "uniqueCount": 2,
     "imageName": "On The Hunt.webp",
-    "keywords": [
-      {"name":"Guidance", "value":"Corps Trooper"} 
-    ],
+    "keywords": [{ "name": "Guidance", "value": "Corps Trooper" }],
     "requirements": [
       "OR",
       {
@@ -18934,13 +18902,10 @@
       {
         "cardName": "Jedi Knight General"
       }
-    ],    
+    ],
     "id": "Dl",
     "history": []
   },
-
-
-
 
   "Dm": {
     "id": "Dm",
@@ -18958,7 +18923,7 @@
         "name": "Equip",
         "value": "Doctrine"
       },
-     "Override"
+      "Override"
     ],
     "upgradeBar": [
       "doctrine",
@@ -18979,11 +18944,10 @@
       "hitsurge": "h",
       "defsurge": ""
     },
-    "weapons":[
+    "weapons": [
       {
         "name": "Aggression Protocol",
-        "keywords": [
-        ],
+        "keywords": [],
         "range": [0],
         "dice": {
           "r": 0,
@@ -18993,9 +18957,8 @@
       },
       {
         "name": "E-5 Blaster Rifle",
-        "keywords": [
-        ],
-        "range": [1,3],
+        "keywords": [],
+        "range": [1, 3],
         "dice": {
           "r": 0,
           "b": 3,
@@ -19016,12 +18979,12 @@
     "imageName": "Rebel Agent.webp",
     "isUnreleased": "7 Nov 2025",
     "keywords": [
-      {"name":"Aid", "value":"Droid Trooper"},
+      { "name": "Aid", "value": "Droid Trooper" },
       {
         "name": "Equip",
         "value": "Doctrine"
       },
-     "Override"
+      "Override"
     ],
     "upgradeBar": [
       "doctrine",
@@ -19041,11 +19004,10 @@
       "hitsurge": "h",
       "defsurge": ""
     },
-    "weapons":[
+    "weapons": [
       {
         "name": "Aggression Protocol",
-        "keywords": [
-        ],
+        "keywords": [],
         "range": [0],
         "dice": {
           "r": 0,
@@ -19055,9 +19017,8 @@
       },
       {
         "name": "E-5 Blaster Rifle",
-        "keywords": [
-        ],
-        "range": [1,3],
+        "keywords": [],
+        "range": [1, 3],
         "dice": {
           "r": 0,
           "b": 3,
@@ -19073,10 +19034,9 @@
     "cardSubtype": "doctrine",
     "cost": 8,
     "imageName": "Academy Trained.webp",
-    "additionalUpgradeSlots":["programming"],
+    "additionalUpgradeSlots": ["programming"],
     "uniqueCount": 2,
-    "keywords": [
-    ],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Super Tactical Command Droid"
@@ -19091,12 +19051,12 @@
     "cardSubtype": "doctrine",
     "cost": 5,
     "imageName": "Academy Trained.webp",
-    "additionalUpgradeSlots":["training"],
+    "additionalUpgradeSlots": ["training"],
     "uniqueCount": 2,
     "keywords": [
-      {"name":"Demoralize", "value":1},
+      { "name": "Demoralize", "value": 1 },
       "Marksman",
-      {"name":"Target", "value":1}
+      { "name": "Target", "value": 1 }
     ],
     "requirements": [
       {
@@ -19113,8 +19073,7 @@
     "cost": 8,
     "imageName": "Academy Trained.webp",
     "uniqueCount": 2,
-    "keywords": [
-    ],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Super Tactical Command Droid"
@@ -19130,8 +19089,7 @@
     "cost": 5,
     "imageName": "Academy Trained.webp",
     "uniqueCount": 2,
-    "keywords": [
-    ],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Super Tactical Command Droid"
@@ -19147,8 +19105,7 @@
     "cost": 5,
     "imageName": "Academy Trained.webp",
     "uniqueCount": 2,
-    "keywords": [
-    ],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Super Tactical Command Droid"
@@ -19164,8 +19121,7 @@
     "cost": 5,
     "imageName": "Academy Trained.webp",
     "uniqueCount": 2,
-    "keywords": [
-    ],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Super Tactical Command Droid"
@@ -19174,16 +19130,14 @@
     "history": []
   },
   "Du": {
-    "Du":"hast",
+    "Du": "hast",
     "id": "Du",
     "cardName": "Optimized Task Flow",
     "cardType": "upgrade",
     "cardSubtype": "programming",
     "cost": 8,
     "imageName": "Academy Trained.webp",
-    "keywords": [
-      {"name":"Direct","value":"AI Unit"}
-    ],
+    "keywords": [{ "name": "Direct", "value": "AI Unit" }],
     "requirements": [
       {
         "cardName": "Super Tactical Command Droid"
@@ -19198,9 +19152,7 @@
     "cardSubtype": "programming",
     "cost": 8,
     "imageName": "Academy Trained.webp",
-    "keywords": [
-      {"name":"Strategize","value":1}
-    ],
+    "keywords": [{ "name": "Strategize", "value": 1 }],
     "requirements": [
       {
         "cardName": "Super Tactical Command Droid"
@@ -19216,8 +19168,8 @@
     "cost": 5,
     "imageName": "Academy Trained.webp",
     "keywords": [
-      {"name":"Sharpshooter","value":1},
-      {"name":"Lethal","value":1}
+      { "name": "Sharpshooter", "value": 1 },
+      { "name": "Lethal", "value": 1 }
     ],
     "requirements": [
       {

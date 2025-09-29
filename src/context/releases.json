@@ -1,21 +1,6 @@
 {
   "Rebels": [
     {
-      "name": "Rebellion Card Pack (Unit & Upgrade)",
-      "date": "Sep 19",
-      "price": "$27"
-    },
-    {
-      "name": "Rebel Alliance Command Card Pack",
-      "date": "Sep 19",
-      "price": "$23"
-    },
-    {
-      "name": "Rebel Alliance Starter Set",
-      "date": "Sep 19",
-      "price": "$100"
-    },
-    {
       "name": "Customizable Rebel Officer & Agent",
       "date": "Oct 3",
       "price": "$40"
@@ -28,21 +13,6 @@
   ],
   "Empire": [
     {
-      "name": "Empire Card Pack (Unit & Upgrade)",
-      "date": "Sep 19",
-      "price": "$27"
-    },
-    {
-      "name": "Galactic Empire Command Card Pack",
-      "date": "Sep 19",
-      "price": "$23"
-    },
-    {
-      "name": "Galactic Empire Starter Set",
-      "date": "Sep 19",
-      "price": "$100"
-    },
-    {
       "name": "Customizable Imperial Officer & Agent",
       "date": "Oct 3",
       "price": "$40"
@@ -54,16 +24,6 @@
     }
   ],
   "Republic": [
-    {
-      "name": "Galactic Republic Card Pack (Unit & Upgrade)",
-      "date": "Sep 19",
-      "price": "$22"
-    },
-    {
-      "name": "Galactic Republic Command Card Pack",
-      "date": "Sep 19",
-      "price": "$18"
-    },
     {
       "name": "Galactic Republic Starter Set",
       "date": "Oct 17",
@@ -92,16 +52,6 @@
   ],
   "Separatists": [
     {
-      "name": "Separatist Alliance Card Pack (Unit & Upgrade)",
-      "date": "Sep 19",
-      "price": "$22"
-    },
-    {
-      "name": "Separatist Alliance Command Card Pack ",
-      "date": "Sep 19",
-      "price": "$18"
-    },
-    {
       "name": "Separatist Alliance Starter Set",
       "date": "Oct 17",
       "price": "$100"
@@ -123,26 +73,6 @@
     }
   ],
   "Other": [
-    {
-      "name": "Essentials Pack",
-      "date": "Sep 19",
-      "price": "$30"
-    },
-    {
-      "name": "Mercenary Card Pack",
-      "date": "Sep 19",
-      "price": "$23"
-    },
-    {
-      "name": "Battle Card Pack",
-      "date": "Sep 19",
-      "price": "$30"
-    },
-    {
-      "name": "Upgrades Card Pack",
-      "date": "Sept 19",
-      "price": "$30"
-    },
     {
       "name": "3D Objective Tokens",
       "date": "Jan 31",
