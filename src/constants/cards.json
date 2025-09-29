@@ -21343,7 +21343,7 @@
     "rank": "commander",
     "faction": "separatists",
     "cost": 70,
-    "imageName": "",
+    "imageName": "Command and Control Droid.webp",
     "isUnreleased": "7 Nov 2025",
     "keywords": [
       "Override",
@@ -21403,7 +21403,7 @@
     "rank": "operative",
     "faction": "separatists",
     "cost": 60,
-    "imageName": "",
+    "imageName": "Auxiliary Command Droid.webp",
     "isUnreleased": "7 Nov 2025",
     "keywords": [
       "Override",
