@@ -21701,7 +21701,7 @@
     "cardType": "upgrade",
     "cardSubtype": "gear",
     "cost": 8,
-    "imageName": "",
+    "imageName": "Mobility Upgrade.webp",
     "keywords": ["Scale", "Steady"],
     "requirements": [
       {
@@ -21714,7 +21714,7 @@
     "id": "Ec",
     "cardName": "Expanded Databanks",
     "cardType": "upgrade",
-    "cardSubtype": "armament",
+    "cardSubtype": "gear",
     "cost": 5,
     "imageName": "Expanded Databanks.webp",
     "keywords": [],
