@@ -84,7 +84,7 @@ const legionModes = {
     },
   },
   "tour-of-duty": {
-    name: "Tour of Duty",
+    name: "Tour of Duty (Battle)",
     maxPoints: 2000,
     rankReqs: {
       commander: [1, 3],

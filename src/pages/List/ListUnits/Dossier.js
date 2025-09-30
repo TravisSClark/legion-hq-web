@@ -4,10 +4,10 @@ import UnitAvatar from 'common/UnitAvatar';
 import CardName from 'common/CardName';
 import UnitPoints from 'common/UnitPoints';
 import UnitActions from './UnitActions';
-import UnitUpgrades from './UnitUpgrades';
 import UnitContext from 'context/UnitContext';
 import ListContext from 'context/ListContext';
 import { Grid, Input, Paper, TextField, Typography, Box, Button } from '@material-ui/core';
+import DossierUpgrades from './DossierUpgrades';
 
 const useStyles = makeStyles(theme => ({
   unitRow: {
@@ -76,7 +76,32 @@ function Dossier({
         label="Dossier Name"
         // onChange={handleChange}
       />      
-      {unitListItem}
+      {/* TODO for now this is a copy of unitListItem - maybe fold it back in, probably not with how upgrades work */}
+      <div className={classes.unitColumn} style={{backgroundColor: bgColor, borderRadius:10}}>
+        <div className={classes.unitRow}>
+          <div className={classes.leftCell}>
+            <UnitAvatar
+              key="avatar"
+              id={unitCard.id}
+              count={unit.count}
+              handleClick={() => handleCardZoom(unit.unitId)}
+            />
+          </div>
+          <div className={classes.middleCell}>
+            <CardName key="name" id={unitCard.id} />
+            <DossierUpgrades
+              key="upgrades"
+              counterpartId={unitCard.counterpartId}
+              addCounterpartHandler={addCounterpartHandler}
+            />          
+          </div>
+          <div className={classes.rightCell}>
+            <UnitPoints key="points" unit={unit} />
+            <UnitActions unit={unit} unitIndex={unitIndex} />
+          </div>
+        </div>
+        {counterpartUnit}
+      </div>
 
       <Grid
         container

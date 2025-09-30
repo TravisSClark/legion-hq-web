@@ -205,27 +205,31 @@ function addAdditionalUpgradeSlots(unit, upgradeCard) {
   let offset =
     unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
 
-  let newSlot = null;
-
-  if (unit.specialUpgradeSlots.map((u) => u.type).includes(slots[0])) {
-    newSlot = unit.upgradesEquipped.pop();
-    unit.specialUpgradeSlots = [];
-  }
 
   // uE is a [null, null...] until sth equipped. Hence, null by default, move the popped special upgrade over if there was one
   let card = cards[unit.unitId];
   if(unit.upgradesEquipped.length < (card.upgradeBar.length + unit.additionalUpgradeSlots.length + unit.specialUpgradeSlots.length) )
-    unit.upgradesEquipped.splice(offset, 0, newSlot);
+    unit.upgradesEquipped.splice(offset, 0, ...Array(2).fill(null));
+
+  updateSpecialUpgradeSlots(unit);
 
 }
 
-function removeAdditionalUpgradeSlot(unit) {
-  unit.additionalUpgradeSlots = [];
+function removeAdditionalUpgradeSlot(unit, upgradeCard) {
 
-  let offset =
-    unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
-
-  unit.upgradesEquipped.splice(offset, 1);
+  upgradeCard.additionalUpgradeSlots.forEach(u=>{
+    // go from back to front in hopes we don't remove something equipped.
+    // maybe someday get more picky, for now, just do back->front
+    let found=false;
+    for(let i=unit.additionalUpgradeSlots.length-1; i>=0 && !found; i--){
+      if(unit.additionalUpgradeSlots[i] === u){
+        found = true;
+        let offset = unit.upgradesEquipped.length + i - unit.additionalUpgradeSlots.length -  unit.specialUpgradeSlots.length;
+        unit.upgradesEquipped.splice(offset, 1);
+        unit.additionalUpgradeSlots.splice(i, 1);
+      }
+    }
+  })
 
   updateSpecialUpgradeSlots(unit);
 }
@@ -547,13 +551,8 @@ function getUnitDossier(list, unitIndex){
 
 function addUpdateDossierItem(list, unitIndex, type, dossierItem){
   
-  console.log('dossier add!' + unitIndex);
-
   let dossier = getUnitDossier(list, unitIndex);
   dossier[type].push(dossierItem.name);
-
-  console.log(JSON.stringify(dossier));
-
 
   return list;
 }
