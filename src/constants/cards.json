@@ -7930,8 +7930,8 @@
   },
   "kh": {
     "cardSubtype": "armament",
-    "displayName": "A280",
-    "cardName": "A280, Rifle Config",
+    "cardName": "A280",
+    "ttsName":"A280, Rifle Config",
     "cardType": "upgrade",
     "cost": 0,
     "imageName": "A280-CFE.webp",
