@@ -7931,7 +7931,7 @@
   "kh": {
     "cardSubtype": "armament",
     "cardName": "A280",
-    "ttsName":"A280, Rifle Config",
+    "ttsName": "A280, Rifle Config",
     "cardType": "upgrade",
     "cost": 0,
     "imageName": "A280-CFE.webp",
@@ -19926,7 +19926,7 @@
     "cardType": "command",
     "commander": "Hondo Ohnaka",
     "imageName": "That's Just Good Business.webp",
-    "faction": "mercenary",
+    "faction": "",
     "keywords": []
   },
   "Bx": {
@@ -19936,7 +19936,7 @@
     "cardType": "command",
     "commander": "Hondo Ohnaka",
     "imageName": "Stories, So Many of Them True.webp",
-    "faction": "mercenary",
+    "faction": "",
     "keywords": []
   },
   "By": {
@@ -21750,5 +21750,116 @@
     "imageName": "Tactical Download.webp",
     "faction": "separatists",
     "keywords": []
+  },
+  "Ef": {
+    "id": "Ef",
+    "cardName": "General Grievous",
+    "title": "Wheel Bike Warlord",
+    "cardType": "unit",
+    "cardSubtype": "ground vehicle",
+    "rank": "commander",
+    "faction": "separatists",
+    "cost": 0,
+    "imageName": "General Grievous Wheel Bike Warlord.webp",
+    "isUnreleased": "7 Nov 2025",
+    "keywords": [
+      {
+        "name": "Armor",
+        "value": 1
+      },
+      "Climbing Vehicle",
+      {
+        "name": "Command Vehicle",
+        "value": 2
+      },
+      {
+        "name": "Entourage",
+        "value": "TSMEU-6 Wheel Bikes"
+      },
+      {
+        "name": "Immune",
+        "value": "Melee Pierce"
+      },
+      "Mobile"
+    ],
+    "entourage": "Eg",
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 8,
+      "defense": "r",
+      "courage": 0,
+      "speed": 2,
+      "hitsurge": "c",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Trophy Lightsabers",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Overrun",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          },
+          {
+            "name": "Ram",
+            "value": 1
+          },
+          "Scatter"
+        ],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 3,
+          "w": 1
+        }
+      },
+      {
+        "name": "",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Eg": {
+    "id": "Eg",
+    "cardName": "TSMEU-6 Wheel Bikes",
+    "imageName": "TSMEU-6 Wheel Bikes.webp",
+    "cardType": "unit",
+    "cardSubtype": "repulsor vehicle",
+    "rank": "",
+    "faction": "",
+    "cost": 0,
+    "keywords": [],
+    "upgradeBar": [],
+    "stats": {},
+    "weapons": [],
+    "history": []
   }
 }
