@@ -166,7 +166,6 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
             if (u !== null && cards[u] !== undefined) {
               if (
                 cards[u].cardName.toLowerCase() === v ||
-                cards[u].displayName.toLowerCase() === v ||
                 cards[u].cardSubtype.toLowerCase() === v
               ) {
                 hasSlotFilled = true;
