@@ -171,7 +171,6 @@ function generateStandardText(list) {
 }
 
 function generateTTSJSONText(list) {
-
   const ttsJSON = { author: "Legion HQ" };
 
   const getTtsName = (card) => {
@@ -242,8 +241,6 @@ function generateTTSJSONText(list) {
 
   if (list.mode === "500-point mode") {
     ttsJSON.battlefieldDeck.scenario = "recon";
-  } else if (list.mode.includes("storm tide")) {
-    ttsJSON.battlefieldDeck.scenario = "community";
   } else {
     ttsJSON.battlefieldDeck.scenario = "standard";
   }

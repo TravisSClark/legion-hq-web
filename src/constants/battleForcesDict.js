@@ -356,7 +356,7 @@ const battleForcesDict = {
       "Vehicles in this army gain Scout 2.",
       "Units that are not within 3 of an allied COMMANDER unit and do not have a COMMS \
         upgrade equipped remove 1 less Suppression token during the Remove Tokens step.",
-      "During Setup, you may set aside 1 allied SPECIAL FORCES or HEAVY unit that is not \
+      "During Setup, you may set aside 1 allied SPECIAL FORCES or SUPPORT unit that is not \
         holding an Asset Objective token, marking the unit with an Advantage \
         token. The first time the set-aside unit would Activate this game, you \
         must place that unit in cohesion onto the battlefield not within 2 \
@@ -396,7 +396,7 @@ const battleForcesDict = {
     support: ["qh", "xf", "ic"],
     heavy: ["gb", "qs"],
     // TODO remove Di-Dk to cut clutter if 'Tactical Acumen' is also allowed. ie it means Jedi Training were redundantly listed as they're limited, not unique
-    allowedUniqueUpgrades: ["Bl","Dc","Dd","De","Di","Dj","Dk"],
+    allowedUniqueUpgrades: ["Bl", "Dc", "Dd", "De", "Di", "Dj", "Dk"],
     rules: {
       buildsAsCorps: ["pm"],
       ccAsCorps: true, // adds in the "and Battle Cards" rule unique to Wookiee building rules
