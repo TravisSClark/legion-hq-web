@@ -38,9 +38,12 @@ function Info() {
           Disney.
         </Typography>
         <Typography>
-          Full art upgrade cards helped by{" "}
-          <a href="" style={{ textDecoration: "none", color: "lightblue" }}>
-            Zegami and Crit2Block Chris
+          Full art upgrade cards created by{" "}
+          <a
+            href="https://legion.takras.net/print/upgrade"
+            style={{ textDecoration: "none", color: "lightblue" }}
+          >
+            Legion Helper
           </a>
           .
         </Typography>
