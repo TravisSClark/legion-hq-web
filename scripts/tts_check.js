@@ -10,6 +10,23 @@ function toKey(name) {
   return name.toUpperCase();
 }
 
+function getTtsName(card){
+  let name;
+  if (card.ttsName) {
+    name = card.ttsName;
+  } else if (card.title) {
+    if(card.cardType == 'upgrade'){
+      name = card.cardName + ", " + card.title;
+    }else{
+      name = card.cardName + " " + card.title;
+    }
+  } else {
+    name = card.cardName;
+  }
+
+  return toKey(name);
+};
+
 async function getTtsCards() {
   const ttsPathBase = "../tts/contrib/cards";
 
@@ -141,18 +158,6 @@ async function ttsCheckAsync() {
       console.log(c.cardType);
     }
   });
-
-  function getName(c) {
-    let name = c.cardName;
-
-    if (c.title) {
-      name += " " + c.title;
-    }
-    if (c.ttsName) {
-      name = c.ttsName;
-    }
-    return toKey(name);
-  }
 
   let ttsOg = new Set();
   ttsNames.values().forEach((v) => ttsOg.add(v));
@@ -293,7 +298,7 @@ async function ttsCheckAsync() {
     // console.log(list.length + " cards");// + JSON.stringify(list));
 
     list.forEach((c) => {
-      findAndRemoveFromTtsList(getName(c), typeName);
+      findAndRemoveFromTtsList(getTtsName(c), typeName);
     });
   }
 

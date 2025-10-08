@@ -170,18 +170,25 @@ function generateStandardText(list) {
   return header + points + units + commands;
 }
 
-function generateTTSJSONText(list) {
-  const ttsJSON = { author: "Legion HQ" };
 
-  const getTtsName = (card) => {
+function getTtsName(card){
     if (card.ttsName) {
       return card.ttsName;
     } else if (card.title) {
-      return card.cardName + " " + card.title;
+      if(card.cardType == 'upgrade'){
+        return card.cardName + ", " + card.title;
+      }else{
+        return card.cardName + " " + card.title;
+      }
     } else {
       return card.cardName;
     }
-  };
+};
+
+function generateTTSJSONText(list) {
+  const ttsJSON = { author: "Legion HQ" };
+
+  
 
   const writeCardsToJsonArray = (cardList, jsonArray) => {
     if (!cardList) return;
@@ -331,4 +338,5 @@ export {
   generateTournamentText,
   generateStandardText,
   generateMinimalText,
+  getTtsName
 };
