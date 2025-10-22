@@ -1,22 +1,29 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { IconButton } from '@material-ui/core';
-import FactionIcon from 'common/FactionIcon';
+import PropTypes from "prop-types";
+import { Button } from "@material-ui/core";
+import FactionIcon from "common/FactionIcon";
 
-function FactionButton({ faction, handleFactionMenuOpen }) {
+function FactionButton({ currentList, handleFactionMenuOpen }) {
   return (
-    <IconButton
+    <Button
       size="medium"
+      variant="outlined"
+      startIcon={<FactionIcon faction={currentList.faction} />}
       onClick={handleFactionMenuOpen}
     >
-      <FactionIcon faction={faction} />
-    </IconButton>
+      {currentList.battleForce ? currentList.battleForce : currentList.faction}
+    </Button>
   );
-};
+}
 
 FactionButton.propTypes = {
   handleClick: PropTypes.func,
-  faction: PropTypes.oneOf(['rebels', 'empire', 'republic', 'separatists', 'mercenary']).isRequired
+  faction: PropTypes.oneOf([
+    "rebels",
+    "empire",
+    "republic",
+    "separatists",
+    "mercenary",
+  ]).isRequired,
 };
 
 export default FactionButton;
