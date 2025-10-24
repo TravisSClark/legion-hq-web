@@ -21896,11 +21896,11 @@
   },
   "Ek": {
     "id": "Ek",
-    "cardName": "Turbo Charge",
+    "cardName": "Turbo-Charge",
     "cardType": "upgrade",
     "cardSubtype": "gear",
     "cost": 5,
-    "imageName": "Turbo Charge.webp",
+    "imageName": "Turbo-Charge.webp",
     "keywords": [],
     "requirements": [
       "OR",
