@@ -21758,6 +21758,7 @@
     "faction": "separatists",
     "cost": 150,
     "imageName": "General Grievous Wheel Bike Warlord.webp",
+    "isUnique": true,
     "isUnreleased": "7 Nov 2025",
     "keywords": [
       {
