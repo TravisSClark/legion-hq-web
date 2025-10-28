@@ -19597,10 +19597,16 @@
     "cardSubtype": "clone trooper",
     "rank": "corps",
     "faction": "republic",
-    "cost": 0,
+    "cost": 50,
     "imageName": "Clone Trooper Marksmen.webp",
     "keywords": ["Prepared Position", "Marksman"],
-    "upgradeBar": [],
+    "upgradeBar": [
+      "squad leader",
+      "heavy weapon",
+      "personnel",
+      "training",
+      "gear"
+    ],
     "stats": {
       "minicount": 4,
       "hp": 1,
@@ -21910,6 +21916,36 @@
       },
       {
         "title": "Wheel Bike Warlord"
+      }
+    ],
+    "history": []
+  },
+  "El": {
+    "id": "El",
+    "cardName": "Clone Trooper Marksmen Squad",
+    "cardType": "upgrade",
+    "cardSubtype": "personnel",
+    "cost": 53,
+    "imageName": "Clone Trooper Marksmen Squad.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Clone Trooper Marksmen"
+      }
+    ],
+    "history": []
+  },
+  "Em": {
+    "id": "Em",
+    "cardName": "Clone Trooper Marksmen",
+    "cardType": "upgrade",
+    "cardSubtype": "personnel",
+    "cost": 14,
+    "imageName": "Clone Trooper Marksmen.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Clone Trooper Marksmen"
       }
     ],
     "history": []
