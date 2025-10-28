@@ -19597,10 +19597,16 @@
     "cardSubtype": "clone trooper",
     "rank": "corps",
     "faction": "republic",
-    "cost": 0,
+    "cost": 50,
     "imageName": "Clone Trooper Marksmen.webp",
     "keywords": ["Prepared Position", "Marksman"],
-    "upgradeBar": [],
+    "upgradeBar": [
+      "squad leader",
+      "heavy weapon",
+      "personnel",
+      "training",
+      "gear"
+    ],
     "stats": {
       "minicount": 4,
       "hp": 1,
@@ -21756,8 +21762,9 @@
     "cardSubtype": "ground vehicle",
     "rank": "commander",
     "faction": "separatists",
-    "cost": 0,
+    "cost": 150,
     "imageName": "General Grievous Wheel Bike Warlord.webp",
+    "isUnique": true,
     "isUnreleased": "7 Nov 2025",
     "keywords": [
       {
@@ -21780,7 +21787,7 @@
       "Mobile"
     ],
     "entourage": "Eg",
-    "upgradeBar": [],
+    "upgradeBar": ["command", "training", "gear", "grenades"],
     "stats": {
       "minicount": 1,
       "hp": 8,
@@ -21857,6 +21864,90 @@
     "upgradeBar": [],
     "stats": {},
     "weapons": [],
+    "history": []
+  },
+  "Eh": {
+    "id": "Eh",
+    "cardName": "Full Throttle",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "General Grievous",
+    "imageName": "Full Throttle.webp",
+    "faction": "separatists",
+    "keywords": []
+  },
+  "Ei": {
+    "id": "Ei",
+    "cardName": "Pincer Attack",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "General Grievous",
+    "imageName": "Pincer Attack.webp",
+    "faction": "separatists",
+    "keywords": []
+  },
+  "Ej": {
+    "id": "Ej",
+    "cardName": "I'll Do it Myself!",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "General Grievous",
+    "imageName": "I'll Do it Myself.webp",
+    "faction": "separatists",
+    "keywords": [
+      {
+        "name": "Tactical",
+        "value": 1
+      }
+    ]
+  },
+  "Ek": {
+    "id": "Ek",
+    "cardName": "Turbo-Charge",
+    "cardType": "upgrade",
+    "cardSubtype": "gear",
+    "cost": 5,
+    "imageName": "Turbo-Charge.webp",
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "TSMEU-6 Wheel Bikes"
+      },
+      {
+        "title": "Wheel Bike Warlord"
+      }
+    ],
+    "history": []
+  },
+  "El": {
+    "id": "El",
+    "cardName": "Clone Trooper Marksmen Squad",
+    "cardType": "upgrade",
+    "cardSubtype": "personnel",
+    "cost": 53,
+    "imageName": "Clone Trooper Marksmen Squad.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Clone Trooper Marksmen"
+      }
+    ],
+    "history": []
+  },
+  "Em": {
+    "id": "Em",
+    "cardName": "Clone Trooper Marksmen",
+    "cardType": "upgrade",
+    "cardSubtype": "personnel",
+    "cost": 14,
+    "imageName": "Clone Trooper Marksmen.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Clone Trooper Marksmen"
+      }
+    ],
     "history": []
   }
 }
