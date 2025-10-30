@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import {
+  Box,
   IconButton,
   Button,
   Dialog,
@@ -7,6 +8,7 @@ import {
   DialogContent,
   DialogContentText,
   Link,
+  Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Info as InfoIcon, Warning as WarningIcon } from "@material-ui/icons";
@@ -95,15 +97,6 @@ function ListHeader() {
             }}
           />
         </div>
-        <div className={classes.battleForceContainer}>
-          <IconButton onClick={() => setIsBattleForceDialogOpen(true)}>
-            <InfoIcon />
-          </IconButton>
-          <ListRulesModal
-            open={isBattleForceDialogOpen}
-            handleClose={() => setIsBattleForceDialogOpen(false)}
-          />
-        </div>
         {validationIssues.length > 0 && (
           <div className={classes.battleForceContainer}>
             <IconButton onClick={() => setValidationDialogOpen(true)}>
@@ -151,27 +144,56 @@ function ListHeader() {
         )}
       </div>
       <div className={classes.container}>
-        Battleforce:
         <BattleforceSelectorMenu
           currentList={currentList}
           anchorEl={anchorEl}
           onClose={() => setAnchorEl(null)}
           handleSetBattleForce={handleSetBattleForce}
         />
-        <div className={classes.item}>
-          <FactionButton
-            currentList={currentList}
-            handleFactionMenuOpen={(event) => setAnchorEl(event.currentTarget)}
-            handleFactionMenuClose={() => setAnchorEl(null)}
-          />
-        </div>
-        <div className={classes.item}>
-          Mode:
-          <ModeButton
-            currentMode={currentList.mode}
-            points={currentList.pointTotal}
-            maxPoints={legionModes[currentList.mode].maxPoints}
-            handleChangeMode={handleChangeMode}
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Typography variant="subtitle1" component="label" htmlFor="my-button">
+            Battleforce:
+          </Typography>
+          <div className={classes.item}>
+            <FactionButton
+              currentList={currentList}
+              handleFactionMenuOpen={(event) =>
+                setAnchorEl(event.currentTarget)
+              }
+              handleFactionMenuClose={() => setAnchorEl(null)}
+            />
+          </div>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <Typography variant="subtitle1" component="label" htmlFor="my-button">
+            Mode:
+          </Typography>
+          <div className={classes.item}>
+            <ModeButton
+              currentMode={currentList.mode}
+              points={currentList.pointTotal}
+              maxPoints={legionModes[currentList.mode].maxPoints}
+              handleChangeMode={handleChangeMode}
+            />
+          </div>
+        </Box>
+        <div className={classes.battleForceContainer}>
+          <IconButton onClick={() => setIsBattleForceDialogOpen(true)}>
+            <InfoIcon />
+          </IconButton>
+          <ListRulesModal
+            open={isBattleForceDialogOpen}
+            handleClose={() => setIsBattleForceDialogOpen(false)}
           />
         </div>
       </div>
