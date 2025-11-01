@@ -86,7 +86,7 @@ function ListHeader() {
 
   return (
     <div id="list-header" className={classes.columnContainer}>
-      <div className={classes.container} style={{ width: "55%" }}>
+      <div className={classes.container} style={{ width: "50%" }}>
         <TitleField
           activations={numActivations}
           title={currentList.title}
