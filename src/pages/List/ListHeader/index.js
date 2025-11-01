@@ -28,6 +28,7 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    width: "65%",
   },
   battleForceContainer: {
     display: "flex",
