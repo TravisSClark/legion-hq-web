@@ -31,6 +31,7 @@ function ListLayout() {
 
   const paneStyles = {
     padding: "0 2px 2px",
+    overflow: "auto",
     height: `calc(100vh - ${isMobile ? "125px" : "75px"})`,
   };
 
@@ -48,8 +49,6 @@ function ListLayout() {
           <ListHeader />
           <div style={{ marginTop: 8 }} />
           <Divider style={{ marginBottom: 4 }} />
-          <ListExtras />
-          <Divider style={{ marginBottom: 4 }} />
           <RankSelector />
         </div>
         <ListUnits />
@@ -58,6 +57,8 @@ function ListLayout() {
         <Divider style={{ marginBottom: 4 }} />
         <ListObjectives />
       </div>
+      <Divider style={{ marginBottom: 4 }} />
+      <ListExtras />
       <ListId />
       <div style={{ marginTop: 24 }} />
     </Grid>

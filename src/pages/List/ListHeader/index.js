@@ -28,7 +28,6 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    width: "65%",
   },
   battleForceContainer: {
     display: "flex",
@@ -87,17 +86,15 @@ function ListHeader() {
 
   return (
     <div id="list-header" className={classes.columnContainer}>
-      <div className={classes.container}>
-        <div className={classes.item}>
-          <TitleField
-            activations={numActivations}
-            title={currentList.title}
-            handleChange={(e) => {
-              e.persist();
-              handleChangeTitle(e.target.value);
-            }}
-          />
-        </div>
+      <div className={classes.container} style={{ width: "55%" }}>
+        <TitleField
+          activations={numActivations}
+          title={currentList.title}
+          handleChange={(e) => {
+            e.persist();
+            handleChangeTitle(e.target.value);
+          }}
+        />
         {validationIssues.length > 0 && (
           <div className={classes.battleForceContainer}>
             <IconButton onClick={() => setValidationDialogOpen(true)}>
