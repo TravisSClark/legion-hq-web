@@ -1,34 +1,7 @@
 {
-  "Rebels": [
-    {
-      "name": "Customizable Rebel Officer & Agent",
-      "date": "Oct 3",
-      "price": "$40"
-    },
-    {
-      "name": "Heroes of the Rebellion Character Pack",
-      "date": "Oct 3",
-      "price": "$70"
-    }
-  ],
-  "Empire": [
-    {
-      "name": "Customizable Imperial Officer & Agent",
-      "date": "Oct 3",
-      "price": "$40"
-    },
-    {
-      "name": "Darth Vader & General Veers",
-      "date": "Oct 3",
-      "price": "$35"
-    }
-  ],
+  "Rebels": [],
+  "Empire": [],
   "Republic": [
-    {
-      "name": "Galactic Republic Starter Set",
-      "date": "Oct 17",
-      "price": "$100"
-    },
     {
       "name": "ARC Troopers",
       "date": "Nov 7",
@@ -51,11 +24,6 @@
     }
   ],
   "Separatists": [
-    {
-      "name": "Separatist Alliance Starter Set",
-      "date": "Oct 17",
-      "price": "$100"
-    },
     {
       "name": "Customizable Super Tactical Command Droid",
       "date": "Nov 7",
