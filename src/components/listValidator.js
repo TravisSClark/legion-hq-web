@@ -647,6 +647,13 @@ function validateList(currentList, rankLimits) {
           ")",
       });
     }
+     if (card.isHondo) {
+      unit.validationIssues.push({
+        level: 1,
+        text:
+          "This *legitimate businessman* may not be allowed at some events yet! Consult your event's rules and organizers. (" + card.cardName+", " + card.isHondo + ")",
+      });
+    }
 
     validationIssues = validationIssues.concat(unit.validationIssues);
   });

@@ -22,6 +22,7 @@ import FactionButton from "./FactionButton";
 
 import BattleforceSelectorMenu from "./BattleforceSelectorMenu";
 import { ListRulesModal } from "./ListRulesModal";
+import DataContext from "context/DataContext";
 
 const useStyles = makeStyles({
   container: {
@@ -74,6 +75,7 @@ function ListHeader() {
     React.useState(false);
   const [isValidationDialogOpen, setValidationDialogOpen] =
     React.useState(false);
+  const { userSettings } = useContext(DataContext);
 
   const numActivations = currentList.units.reduce((num, unit) => {
     num += unit.count;
@@ -83,6 +85,8 @@ function ListHeader() {
   var minValidationError = validationIssues.reduce((highest, e) => {
     return e.level > highest ? e.level : highest;
   }, 0);
+
+  const showHeaderLabel = userSettings.showHeaderLabel !== "off";
 
   return (
     <div id="list-header" className={classes.columnContainer}>
@@ -154,9 +158,9 @@ function ListHeader() {
             flexDirection: "column",
           }}
         >
-          <Typography variant="subtitle1" component="label" htmlFor="my-button">
+          {showHeaderLabel && <Typography variant="subtitle1" component="label" htmlFor="my-button">
             Battleforce:
-          </Typography>
+          </Typography>}
           <div className={classes.item}>
             <FactionButton
               currentList={currentList}
@@ -173,9 +177,9 @@ function ListHeader() {
             flexDirection: "column",
           }}
         >
-          <Typography variant="subtitle1" component="label" htmlFor="my-button">
+          {showHeaderLabel && <Typography variant="subtitle1" component="label" htmlFor="my-button">
             Mode:
-          </Typography>
+          </Typography>}
           <div className={classes.item}>
             <ModeButton
               currentMode={currentList.mode}

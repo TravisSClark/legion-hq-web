@@ -6,6 +6,7 @@ const settings = {
     builderOrientation: "right",
     cascadeUpgradeSelection: "yes",
     dragDelayTime: 1,
+    showHeaderLabel:"on"
   },
   list: [
     {
@@ -23,6 +24,14 @@ const settings = {
         { key: "images", name: "Images" },
         { key: "text", name: "Text" },
         { key: "compact", name: "Compact" },
+      ],
+    },
+    {
+      key: "showHeaderLabel",
+      name: "Header Labels",
+      values: [
+        { key: "on", name: "On" },
+        { key: "off", name: "Off" },
       ],
     },
     {
