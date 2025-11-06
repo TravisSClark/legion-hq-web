@@ -19592,7 +19592,6 @@
   "Bi": {
     "id": "Bi",
     "cardName": "Clone Trooper Marksmen",
-    "isUnreleased": "7 Nov 2025",
     "cardType": "unit",
     "cardSubtype": "clone trooper",
     "rank": "corps",
@@ -19640,7 +19639,7 @@
     ]
   },
   "Bj": {
-    "isHondo":"Q1 2026",
+    "isHondo": "Q1 2026",
     "id": "Bj",
     "cardName": "Hondo Ohnaka",
     "title": "Trustworthy Compatriot",
@@ -20866,7 +20865,6 @@
     "faction": "republic",
     "cost": 105,
     "imageName": "Jedi Knight General.webp",
-    "isUnreleased": "7 Nov 2025",
     "keywords": [
       "Deflect",
       {
@@ -20911,7 +20909,6 @@
     "faction": "republic",
     "cost": 85,
     "imageName": "Jedi Knight.webp",
-    "isUnreleased": "7 Nov 2025",
     "keywords": [
       "Deflect",
       {
@@ -21348,7 +21345,6 @@
     "faction": "separatists",
     "cost": 70,
     "imageName": "Command and Control Droid.webp",
-    "isUnreleased": "7 Nov 2025",
     "keywords": [
       "Override",
       {
@@ -21408,7 +21404,6 @@
     "faction": "separatists",
     "cost": 60,
     "imageName": "Auxiliary Command Droid.webp",
-    "isUnreleased": "7 Nov 2025",
     "keywords": [
       "Override",
       {
@@ -21766,7 +21761,6 @@
     "cost": 150,
     "imageName": "General Grievous Wheel Bike Warlord.webp",
     "isUnique": true,
-    "isUnreleased": "7 Nov 2025",
     "keywords": [
       {
         "name": "Armor",
