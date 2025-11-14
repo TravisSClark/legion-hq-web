@@ -267,7 +267,7 @@ const battleForcesDict = {
     name: "Separatist Invasion",
     faction: "separatists",
     linkId: "si",
-    commander: ["fx", "ia", "nr"],
+    commander: ["fx", "ia", "nr", "Ef"],
     operative: ["nb"],
     corps: ["gx"],
     special: ["px"],
