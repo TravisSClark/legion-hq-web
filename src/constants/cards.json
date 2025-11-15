@@ -3405,7 +3405,7 @@
     "cardSubtype": "heavy weapon",
     "cardName": "DLT-19x Sniper",
     "cardType": "upgrade",
-    "cost": 38,
+    "cost": 35,
     "imageName": "DLT-19x Sniper.webp",
     "keywords": ["High Velocity", "Pierce"],
     "requirements": [
@@ -3417,6 +3417,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost increased from 28 to 38 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 38 to 35 points."
       }
     ],
     "id": "em",
@@ -4532,8 +4536,8 @@
         "range": [3, 4],
         "dice": {
           "r": 0,
-          "b": 0,
-          "w": 3
+          "b": 2,
+          "w": 0
         }
       }
     ],
@@ -4549,6 +4553,10 @@
       {
         "date": "15 April 2025",
         "description": "Gained Prepared Position keyword. Blaster now works in melee"
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Ranged attack changed from 3 white to 2 black."
       }
     ],
     "detachment": "hg"
@@ -4644,7 +4652,7 @@
     "cardName": "CR-24 Flame Rifle",
     "cardSubtype": "armament",
     "cardType": "upgrade",
-    "cost": 10,
+    "cost": 14,
     "imageName": "CR-24 Flame Rifle.webp",
     "keywords": ["Blast", "Spray"],
     "history": [
@@ -4655,6 +4663,10 @@
       {
         "date": "5 June 2023",
         "description": "Cost reduced from 15 to 10 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 10 to 14 points."
       }
     ],
     "id": "fw",
@@ -5051,7 +5063,7 @@
     "cardSubtype": "repulsor vehicle",
     "rank": "heavy",
     "faction": "separatists",
-    "cost": 165,
+    "cost": 150,
     "keywords": [
       {
         "name": "AI",
@@ -5130,6 +5142,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 175 to 165 points. Gained surge to hit. Armor reduced to 5. Laser Cannon Impact changed from 1 to 2."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 165 to 150 points."
       }
     ]
   },
@@ -5274,7 +5290,7 @@
     "cardSubtype": "heavy weapon",
     "cardName": "DLT-19D Trooper",
     "cardType": "upgrade",
-    "cost": 30,
+    "cost": 28,
     "imageName": "DLT-19D Trooper.webp",
     "keywords": ["Impact"],
     "requirements": [
@@ -5294,6 +5310,10 @@
       {
         "date": "12 December 2022",
         "description": "Cost reduced from 34 to 30 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 30 to 28 points."
       }
     ],
     "id": "gm",
@@ -5762,7 +5782,7 @@
     "cardSubtype": "hardpoint",
     "cardName": "Pintle-Mounted DLT-19",
     "cardType": "upgrade",
-    "cost": 18,
+    "cost": 14,
     "imageName": "DLT-19 Rifle Pintle.webp",
     "keywords": ["Impact"],
     "requirements": [
@@ -5787,13 +5807,19 @@
           "w": 0
         }
       }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 18 to 14 points."
+      }
     ]
   },
   "hd": {
     "cardSubtype": "hardpoint",
     "cardName": "Pintle-Mounted RT-97C",
     "cardType": "upgrade",
-    "cost": 14,
+    "cost": 10,
     "imageName": "RT-97C Rifle Pintle.webp",
     "keywords": [],
     "requirements": [
@@ -5812,6 +5838,12 @@
           "b": 0,
           "w": 3
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 14 to 10 points."
       }
     ]
   },
@@ -6657,7 +6689,7 @@
     "cardSubtype": "emplacement trooper",
     "rank": "corps",
     "faction": "rebels",
-    "cost": 38,
+    "cost": 40,
     "keywords": [
       {
         "name": "Detachment",
@@ -6725,6 +6757,10 @@
       {
         "date": "19 November 2020",
         "description": "Wound threshold increased from 3 to 4."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 38 to 40 points."
       }
     ],
     "detachment": "gv"
@@ -9118,7 +9154,7 @@
     "cardSubtype": "armament",
     "cardName": "Electro Gauntlets",
     "cardType": "upgrade",
-    "cost": 10,
+    "cost": 3,
     "imageName": "Electro Gauntlets.webp",
     "keywords": ["Immobilize", "Suppressive"],
     "requirements": [
@@ -9142,6 +9178,12 @@
           "b": 0,
           "w": 0
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 10 to 3 points."
       }
     ]
   },
@@ -10148,7 +10190,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "empire",
-    "cost": 68,
+    "cost": 62,
     "keywords": [
       "Infiltrate",
       "Marksman",
@@ -10194,6 +10236,12 @@
           "b": 1,
           "w": 0
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 68 to 62 points."
       }
     ]
   },
@@ -10273,7 +10321,7 @@
     "displayName": "T-21 Trooper",
     "cardName": "T-21 Special Forces Trooper",
     "cardType": "upgrade",
-    "cost": 27,
+    "cost": 24,
     "imageName": "T-21 Special Forces Trooper.webp",
     "keywords": ["Critical"],
     "requirements": [
@@ -10292,6 +10340,10 @@
       {
         "date": "27 October 2021",
         "description": "Cost reduced from 29 to 27 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 27 to 24 points."
       }
     ],
     "weapons": [
@@ -11268,7 +11320,7 @@
     "cardSubtype": "repulsor vehicle",
     "rank": "heavy",
     "faction": "rebels",
-    "cost": 65,
+    "cost": 75,
     "keywords": [
       {
         "name": "Armor",
@@ -11300,6 +11352,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 75 to 65 points. Armor reduced to 5."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 65 to 75 points."
       }
     ]
   },
@@ -11311,7 +11367,7 @@
     "cardSubtype": "repulsor vehicle",
     "rank": "heavy",
     "faction": "empire",
-    "cost": 100,
+    "cost": 90,
     "keywords": [
       {
         "name": "Armor",
@@ -11373,6 +11429,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 105 to 100 points. Armor reduced to 5. Gained a second Ordance upgrade. Laser cannons gained Impact 1 and changed from 1 red and 3 black to 2 red and 2 black."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 100 to 90 points."
       }
     ]
   },
@@ -11471,7 +11531,7 @@
     "cardSubtype": "hardpoint",
     "cardName": "Heavy Laser Retrofit",
     "cardType": "upgrade",
-    "cost": 12,
+    "cost": 7,
     "imageName": "Heavy Laser Retrofit.webp",
     "keywords": ["Critical"],
     "requirements": [
@@ -11483,6 +11543,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 16 to 12 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 12 to 7 points."
       }
     ],
     "weapons": [
@@ -11602,7 +11666,7 @@
     "cardSubtype": "hardpoint",
     "cardName": "AG-2G Quad Laser",
     "cardType": "upgrade",
-    "cost": 20,
+    "cost": 10,
     "imageName": "AG-2G Quad Laser.webp",
     "keywords": ["Impact"],
     "requirements": [
@@ -11622,6 +11686,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 25 to 20 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 20 to 10 points."
       }
     ],
     "weapons": [
@@ -11682,7 +11750,7 @@
     "cardSubtype": "crew",
     "cardName": "Unstable Astromech",
     "cardType": "upgrade",
-    "cost": 6,
+    "cost": 16,
     "imageName": "Unstable R5 Astromech.webp",
     "keywords": [],
     "requirements": [
@@ -11692,6 +11760,12 @@
       },
       {
         "cardName": "A-A5 Speeder Truck"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 6 to 16 points."
       }
     ]
   },
@@ -13581,7 +13655,7 @@
     "faction": "mercenary",
     "affiliation": "maul loyalist",
     "isUnique": true,
-    "cost": 95,
+    "cost": 90,
     "keywords": [
       {
         "name": "Jump",
@@ -13648,6 +13722,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 100 to 95 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 95 to 90 points."
       }
     ]
   },
@@ -14358,7 +14436,7 @@
     "cardName": "Saxon's Galar-90 Rifle",
     "isUnique": true,
     "cardType": "upgrade",
-    "cost": 15,
+    "cost": 10,
     "imageName": "Saxon's Galar-90 Rifle.webp",
     "keywords": ["High Velocity", "Lethal", "Long Shot"],
     "requirements": [
@@ -14383,6 +14461,12 @@
           "b": 1,
           "w": 1
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 15 to 10 points."
       }
     ]
   },
@@ -15688,7 +15772,7 @@
     "rank": "commander",
     "faction": "empire",
     "isUnique": true,
-    "cost": 100,
+    "cost": 80,
     "entourage": "tm",
     "keywords": [
       {
@@ -15744,6 +15828,12 @@
           "b": 2,
           "w": 0
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 100 to 80 points."
       }
     ]
   },
@@ -15829,7 +15919,7 @@
     "cardSubtype": "heavy weapon",
     "cardName": "XS-IV Assault Cannon",
     "cardType": "upgrade",
-    "cost": 55,
+    "cost": 49,
     "imageName": "XS-IV Assault Cannon.webp",
     "keywords": ["Critical"],
     "requirements": [
@@ -15841,6 +15931,10 @@
       {
         "date": "5 June 2023",
         "description": "Cost increased from 48 to 55 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 55 to 49 points."
       }
     ],
     "weapons": [
@@ -15866,7 +15960,7 @@
     "cardSubtype": "heavy weapon",
     "cardName": "SM-9 Frag Launcher",
     "cardType": "upgrade",
-    "cost": 45,
+    "cost": 40,
     "imageName": "SM-9 Frag Launcher.webp",
     "keywords": ["Blast", "Impact", "Cycle"],
     "requirements": [
@@ -15878,6 +15972,10 @@
       {
         "date": "5 June 2023",
         "description": "Cost increased from 40 to 45 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 45 to 40 points."
       }
     ],
     "weapons": [
@@ -15905,7 +16003,7 @@
     "cardSubtype": "heavy weapon",
     "cardName": "Mertalizer",
     "cardType": "upgrade",
-    "cost": 36,
+    "cost": 30,
     "imageName": "Mertalizer.webp",
     "keywords": ["Suppressive"],
     "requirements": [
@@ -15913,7 +16011,12 @@
         "cardName": "Imperial Dark Troopers"
       }
     ],
-    "history": [],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 36 to 30 points."
+      }
+    ],
     "weapons": [
       {
         "name": "Mertalizer",
@@ -15932,12 +16035,18 @@
     "cardSubtype": "personnel",
     "cardName": "Imperial Dark Trooper",
     "cardType": "upgrade",
-    "cost": 32,
+    "cost": 28,
     "imageName": "Imperial Dark Trooper.webp",
     "keywords": [],
     "requirements": [
       {
         "cardName": "Imperial Dark Troopers"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 32 to 28 points."
       }
     ]
   },
@@ -16639,7 +16748,7 @@
     "rank": "special",
     "faction": "mercenary",
     "affiliation": "ewok",
-    "cost": 35,
+    "cost": 38,
     "keywords": [
       {
         "name": "Mercenary",
@@ -16691,6 +16800,10 @@
       {
         "date": "19 July 2024",
         "description": "Gained Mercenary: Rebels keyword. Gained a second Personnel upgrade."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 35 to 38 points."
       }
     ],
     "affiliations": ["rebels"]
@@ -17136,7 +17249,7 @@
     "rank": "operative",
     "faction": "empire",
     "isUnique": true,
-    "cost": 110,
+    "cost": 102,
     "keywords": [
       {
         "name": "Jump",
@@ -17203,6 +17316,12 @@
           "b": 3,
           "w": 0
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 110 to 102 points."
       }
     ],
     "associate": "wl"
@@ -18688,12 +18807,18 @@
     "cardSubtype": "personnel",
     "cardName": "Snowtrooper Squad",
     "cardType": "upgrade",
-    "cost": 46,
+    "cost": 40,
     "imageName": "Snowtrooper Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
       {
         "cardName": "Snowtroopers"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 46 to 40 points."
       }
     ]
   },
@@ -18770,12 +18895,18 @@
     "cardSubtype": "personnel",
     "cardName": "Ewok Slinger Squad",
     "cardType": "upgrade",
-    "cost": 23,
+    "cost": 27,
     "imageName": "Ewok Slinger Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
       {
         "cardName": "Ewok Slingers"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 23 to 27 points."
       }
     ]
   },
@@ -18784,12 +18915,18 @@
     "cardSubtype": "personnel",
     "cardName": "Fleet Trooper Squad",
     "cardType": "upgrade",
-    "cost": 45,
+    "cost": 40,
     "imageName": "Fleet Trooper Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
       {
         "cardName": "Fleet Troopers"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 45 to 40 points."
       }
     ]
   },
@@ -18812,12 +18949,18 @@
     "cardSubtype": "personnel",
     "cardName": "Rebel Trooper Squad",
     "cardType": "upgrade",
-    "cost": 45,
+    "cost": 40,
     "imageName": "Rebel Trooper Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
       {
         "cardName": "Rebel Troopers"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 45 to 40 points."
       }
     ]
   },
@@ -18934,12 +19077,18 @@
     "cardSubtype": "personnel",
     "cardName": "Clone Trooper Infantry Squad",
     "cardType": "upgrade",
-    "cost": 56,
+    "cost": 53,
     "imageName": "Clone Trooper Infantry Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
       {
         "cardName": "Clone Trooper Infantry"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 56 to 53 points."
       }
     ]
   },
