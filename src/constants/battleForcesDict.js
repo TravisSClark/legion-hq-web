@@ -8,6 +8,47 @@
  */
 
 const battleForcesDict = {
+  "212th Attack Battalion": {
+    name: "212th Attack Battalion",
+    faction: "republic",
+    linkId: "2t",
+    commander: ["gw", "ue"],
+    operative: ["Da"],
+    corps: ["fz", "Bi"],
+    special: ["Ay"],
+    support: ["mb"],
+    heavy: ["gb", "oo", "qs"],
+    allowedUniqueUpgrades: [
+      "uf",
+      "Dc",
+      "De",
+      "Dd",
+      "Di",
+      "Dk",
+      "Dl",
+      "Bl",
+      "ug",
+    ],
+    rules: {},
+    ruleUrl:
+      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2025/11/DOC41_BattleForces.pdf",
+    "standard mode": {
+      commander: [1, 2],
+      operative: [0, 1],
+      corps: [1, 4],
+      special: [0, 3],
+      support: [0, 3],
+      heavy: [1, 3],
+    },
+    "500-point mode": {
+      commander: [1, 2],
+      operative: [0, 1],
+      corps: [1, 3],
+      special: [0, 2],
+      support: [0, 3],
+      heavy: [1, 2],
+    },
+  },
   "501st Legion": {
     name: "501st Legion",
     faction: "republic",
@@ -18,7 +59,7 @@ const battleForcesDict = {
     special: ["kz", "ky", "Ay"],
     support: ["mb", "ic", "xj", "xp"],
     heavy: ["oo"],
-    allowedUniqueUpgrades: ["lh", "lg", "Bd"], // TODO CC Rex incoming!
+    allowedUniqueUpgrades: ["lh", "lg", "Bd", "Ep"],
     rules: {},
     ruleUrl:
       "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_501st.pdf",
@@ -48,7 +89,7 @@ const battleForcesDict = {
     commander: ["at", "au", "Cb"],
     operative: [],
     corps: ["az", "ay", "sr"],
-    special: [], // TODO add Imperial Probe Droids
+    special: ["Fa"],
     support: ["bf", "be"],
     heavy: ["bg"],
     allowedUniqueUpgrades: ["fl", "Ce", "Cf", "Cg"],
@@ -169,7 +210,7 @@ const battleForcesDict = {
     special: ["la", "xd"],
     support: ["ie"],
     heavy: ["xe"],
-    allowedUniqueUpgrades: ["Bl"], // TODO add "Kraken" once his upgrade comes out
+    allowedUniqueUpgrades: ["Bl", "En"], // TODO add "Kraken" once his upgrade comes out
     rules: {
       buildsAsCorps: ["xd"],
       ccAsCorps: true, // adds in the "and Battle Cards" rule to printout
@@ -306,10 +347,10 @@ const battleForcesDict = {
     linkId: "sc",
     commander: ["ra", "rd", "qy"],
     operative: ["rc", "kx", "ax"], // TODO add "Savage Oppress"!!
-    corps: ["rb", "qz"], // TODO add Weequay Pirates
+    corps: ["rb", "qz", "Fd"],
     special: ["re"],
     support: ["sq"],
-    heavy: ["sm"], // TODO add WLO-5 Speeder Tank
+    heavy: ["sm", "Fe"],
     allowedUniqueUpgrades: ["rq", "so", "se", "sp", "sg", "sh", "si", "Bn"], // TODO add "Gang Boss"
     rules: {
       countMercs: true,
@@ -340,6 +381,42 @@ const battleForcesDict = {
       heavy: [0, 1],
     },
   },
+  "Stormtrooper Battalion": {
+    name: "Stormtrooper Battalion",
+    faction: "empire",
+    linkId: "sb",
+    commander: ["at", "Cb"],
+    operative: ["Ca"],
+    corps: ["xz", "ay"],
+    special: ["Fa", "ba"],
+    support: ["bf", "be"],
+    heavy: ["bg", "bh", "on"],
+    allowedUniqueUpgrades: ["Ce", "Eo", "Cf", "Cg", "Ch", "Cj", "Bn"],
+    rules: {},
+    plainTextRules: [
+      "Non-unique COMMANDER and non-unique OPERATIVE units in this army gain Target 2. \
+      When a non-unique COMMANDER or non-unique OPERATIVE unit in this army is issued an Order, it gains 1 Surge token \
+      COMMANDER units in this army have Compel while they are the nominated Commander.",
+    ],
+    ruleUrl:
+      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2025/11/DOC41_BattleForces.pdf",
+    "standard mode": {
+      commander: [1, 3],
+      operative: [0, 2],
+      corps: [4, 7],
+      special: [0, 2],
+      support: [0, 3],
+      heavy: [0, 2],
+    },
+    "500-point mode": {
+      commander: [1, 3],
+      operative: [0, 1],
+      corps: [4, 6],
+      special: [0, 2],
+      support: [0, 2],
+      heavy: [0, 1],
+    },
+  },
   "Tempest Force": {
     name: "Tempest Force",
     faction: "empire",
@@ -347,10 +424,10 @@ const battleForcesDict = {
     commander: ["Cb"],
     operative: ["Ca"],
     corps: ["ay"],
-    special: ["ba"],
+    special: ["Fa", "ba"],
     support: ["bf"],
     heavy: ["we", "bg"],
-    allowedUniqueUpgrades: [, "Ce", "Cf", "Ch", "Cj"], // TODO add "Squadron Leader"
+    allowedUniqueUpgrades: ["Ce", "Cf", "Ch", "Cj"], // TODO add "Squadron Leader"
     rules: {},
     plainTextRules: [
       "Vehicles in this army gain Scout 2.",

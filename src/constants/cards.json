@@ -12607,7 +12607,7 @@
     "cardSubtype": "heavy weapon",
     "cardName": "RPS-6 MagnaGuard",
     "cardType": "upgrade",
-    "cost": 40,
+    "cost": 32,
     "imageName": "RPS-6 MagnaGuard.webp",
     "keywords": ["Critical", "Impact"],
     "requirements": [
@@ -12623,6 +12623,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost increased from 34 to 40 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 40 to 32 points."
       }
     ],
     "weapons": [
@@ -13544,7 +13548,7 @@
     "stats": {
       "minicount": 4,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 1,
       "speed": 2,
       "hitsurge": "",
@@ -19349,7 +19353,7 @@
     "cardSubtype": "ground vehicle",
     "rank": "heavy",
     "faction": "separatists",
-    "cost": 65,
+    "cost": 78,
     "imageName": "Aqua Droids.webp",
     "keywords": [
       {
@@ -19372,6 +19376,12 @@
       "hitsurge": "h",
       "defsurge": "b"
     },
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 65 to 78 points."
+      }
+    ],
     "weapons": [
       {
         "name": "Crushing Punch",
@@ -22132,7 +22142,8 @@
     "cardType": "upgrade",
     "cost": 28,
     "imageName": "Agent Kallus Upgrade.webp",
-    "keywords": ["Leader", "Demoralize", "Sidearm"],
+    "additionalUpgradeSlots": ["heavy"],
+    "keywords": ["Leader", { "name": "Demoralize", "value": "1" }, "Sidearm"],
     "requirements": [
       "OR",
       {
@@ -22195,6 +22206,7 @@
     "cardType": "upgrade",
     "cost": 25,
     "imageName": "Cassian Andor Upgrade.webp",
+    "additionalUpgradeSlots": ["heavy"],
     "keywords": [
       "Leader",
       "Low Profile",
@@ -22334,5 +22346,331 @@
     "faction": "republic",
     "battleForce": "212th Attack Battalion",
     "keywords": []
+  },
+  "Fa": {
+    "id": "Fa",
+    "cardName": "Imperial Probe Droid",
+    "imageName": "Imperial Probe Droid.webp",
+    "cardType": "unit",
+    "cardSubtype": "droid trooper",
+    "rank": "special",
+    "faction": "empire",
+    "cost": 0,
+    "keywords": [
+      {
+        "name": "Observe",
+        "value": 3
+      },
+      {
+        "name": "Self-Destruct",
+        "value": 3
+      },
+      {
+        "name": "Detachment",
+        "value": "Special Forces"
+      },
+      "Disengage",
+      "Infiltrate",
+      {
+        "name": "Hover",
+        "value": "Air 1"
+      }
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 4,
+      "defense": "w",
+      "courage": 1,
+      "speed": 1,
+      "hitsurge": "",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Light Blaster",
+        "keywords": [],
+        "range": [0, 1],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Fb": {
+    "id": "Fb",
+    "cardName": "Luke Skywalker",
+    "title": "Commander Skywalker",
+    "imageName": "Luke Skywalker Commander Skywalker.webp",
+    "cardType": "unit",
+    "cardSubtype": "creature trooper",
+    "rank": "commander",
+    "faction": "rebels",
+    "cost": 0,
+    "keywords": [
+      {
+        "name": "Spotter",
+        "value": 1
+      },
+      {
+        "name": "Take Cover",
+        "value": 1
+      },
+      {
+        "name": "Immune",
+        "value": "Pierce"
+      },
+      {
+        "name": "Inspire",
+        "value": 2
+      },
+      "Relentless",
+      "Reposition",
+      "Spur",
+      "Unhindered"
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Lightsaber & Horn",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Lethal",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          },
+          {
+            "name": "Ram",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 3
+        }
+      },
+      {
+        "name": "Luke's Blaster",
+        "keywords": ["Long Shot"],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 3,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Fc": {
+    "id": "Fc",
+    "cardName": "Han Solo",
+    "title": "Reluctant Hero",
+    "imageName": "Han Solo Reluctant Hero.webp",
+    "cardType": "unit",
+    "cardSubtype": "creature trooper",
+    "rank": "operative",
+    "faction": "rebels",
+    "cost": 0,
+    "keywords": [
+      {
+        "name": "Arsenal",
+        "value": 2
+      },
+      "Charge",
+      {
+        "name": "Independent",
+        "value": "Aim 1 and Dodge 1"
+      },
+      "Reposition",
+      "Spur",
+      {
+        "name": "Uncanny Luck",
+        "value": 3
+      },
+      "Unhindered"
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "w",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "c",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Stampede",
+        "keywords": [
+          {
+            "name": "Ram",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 1
+        }
+      },
+      {
+        "name": "Han's DL-44 Blaster",
+        "keywords": [{ "name": "Pierce", "value": 1 }, "Versatile"],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
+  },
+  "Fd": {
+    "id": "Fd",
+    "cardName": "Weekway Pirates",
+    "imageName": "Weekway Pirates.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "corps",
+    "faction": "mercenary",
+    "affiliation": "black sun",
+    "cost": 0,
+    "keywords": [
+      {
+        "name": "Mercenary",
+        "value": "Empire, Rebels, Republics, Separatists"
+      },
+      "Charge",
+      {
+        "name": "Independent",
+        "value": "Aim 1"
+      },
+      "Self-Preservation",
+      "Swashbuckler"
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 4,
+      "hp": 1,
+      "defense": "w",
+      "courage": 1,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Vibroblade",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      },
+      {
+        "name": "Weequay Blaster",
+        "keywords": ["Versatile"],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ],
+    "history": [],
+    "affiliations": ["empire", "rebels", "republic", "separatists"]
+  },
+  "Fe": {
+    "id": "Fe",
+    "cardName": "WLO-5 Speeder Tank",
+    "imageName": "WLO-5 Speeder Tan.webp",
+    "cardType": "unit",
+    "cardSubtype": "repulsor vehicle",
+    "rank": "heavy",
+    "faction": "mercenary",
+    "affiliation": "raider",
+    "cost": 0,
+    "keywords": [
+      {
+        "name": "Mercenary",
+        "value": "Empire, Rebels, Republics, Separatists"
+      },
+      {
+        "name": "Armor",
+        "value": "5"
+      },
+      {
+        "name": "Arsenal",
+        "value": "2"
+      },
+      {
+        "name": "Hover",
+        "value": "Ground"
+      },
+      "Transport",
+      {
+        "name": "Weak Point",
+        "value": "2: Rear"
+      }
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 10,
+      "defense": "w",
+      "courage": 6,
+      "speed": 1,
+      "hitsurge": "",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Anti-Personnel Lasers",
+        "keywords": [{ "name": "Fixed", "value": "Front" }],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 2
+        }
+      },
+      {
+        "name": "Heavy Laser Cannon",
+        "keywords": [{ "name": "Impact", "value": "2" }],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 2
+        }
+      }
+    ],
+    "history": [],
+    "affiliations": ["empire", "rebels", "republic", "separatists"]
   }
 }
