@@ -22233,5 +22233,106 @@
         }
       }
     ]
+  },
+  "Er": {
+    "cardSubtype": "advantage",
+    "cardName": "Black Ops",
+    "cardType": "battle",
+    "faction": "empire",
+    "imageName": "Black Ops.webp",
+    "keywords": ["Infiltrate"],
+    "id": "Er"
+  },
+  "Es": {
+    "cardSubtype": "advantage",
+    "cardName": "Coordinated Strike",
+    "cardType": "battle",
+    "faction": "republic",
+    "imageName": "Coordinated Strike.webp",
+    "keywords": [
+      {
+        "name": "Coordinate",
+        "value": "Clone Trooper or Coordinate Vehicle"
+      }
+    ],
+    "id": "Es"
+  },
+  "Et": {
+    "cardSubtype": "advantage",
+    "cardName": "Command Override",
+    "cardType": "battle",
+    "faction": "separatists",
+    "imageName": "Command Override.webp",
+    "keywords": ["AI"],
+    "id": "Et"
+  },
+  "Eu": {
+    "cardSubtype": "advantage",
+    "cardName": "No Time to Lose",
+    "cardType": "battle",
+    "faction": "rebels",
+    "imageName": "No Time to Lose.webp",
+    "keywords": [],
+    "id": "Eu"
+  },
+  "Ev": {
+    "cardSubtype": "primary",
+    "cardName": "Outflank",
+    "cardType": "battle",
+    "imageName": "Outflank.webp",
+    "keywords": [],
+    "id": "Ev"
+  },
+  "Ew": {
+    "cardSubtype": "secondary",
+    "cardName": "No Time to Lose",
+    "cardType": "battle",
+    "imageName": "No Time to Lose.webp",
+    "keywords": [],
+    "id": "Ew"
+  },
+  "Ex": {
+    "id": "Ex",
+    "cardName": "Sneak Attack",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "",
+    "imageName": "Sneak Attack.webp",
+    "faction": "republic",
+    "battleForce": "212th Attack Battalion",
+    "keywords": [
+      "Infiltrate",
+      {
+        "name": "Scout",
+        "value": "1"
+      }
+    ]
+  },
+  "Ey": {
+    "id": "Ey",
+    "cardName": "Recon Division",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "",
+    "imageName": "Recon Division.webp",
+    "faction": "republic",
+    "battleForce": "212th Attack Battalion",
+    "keywords": [
+      {
+        "name": "Observe",
+        "value": "1"
+      }
+    ]
+  },
+  "Ez": {
+    "id": "Ez",
+    "cardName": "Flexible Strategy",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "",
+    "imageName": "Flexible Strategy.webp",
+    "faction": "republic",
+    "battleForce": "212th Attack Battalion",
+    "keywords": []
   }
 }

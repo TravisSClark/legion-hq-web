@@ -376,6 +376,7 @@ function getEligibleBattlesToAdd(list, type) {
     const card = cards[id];
     if (card.cardSubtype !== type) return;
     if (currentCards.includes(id)) return;
+    if (card.faction && card.faction !== list.faction) return;
     if (currentCards.length >= 3) {
       invalidIds.push(id);
     } else if (list.mode === "500-point mode") {
