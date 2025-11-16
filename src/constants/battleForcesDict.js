@@ -100,6 +100,11 @@ const battleForcesDict = {
       // TODO add Probe id here
       // ignoreDetach:""
     },
+    plainTextRules: [
+      "When an allied non-COMMANDER non-OPERATIVE Vehicle unit is attacking or defending, \
+        it may spend up to 1 Aim token, Dodge token, or Surge token belonging to a non-COMMANDER non-OPERATIVE allied Vehicle unit within 2 and in LOS, \
+        or up to 1 Aim or Dodge token belonging to an allied Clone Trooper unit within 2 and in LOS, as if the attacking or defending vehicle unit had that token.",
+    ],
     ruleUrl:
       "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_BlizzardForce.pdf",
     "standard mode": {
