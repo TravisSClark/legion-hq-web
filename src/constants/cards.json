@@ -3188,7 +3188,7 @@
     "cardSubtype": "heavy weapon",
     "cardName": "DH-447 Sniper",
     "cardType": "upgrade",
-    "cost": 38,
+    "cost": 35,
     "imageName": "DH-447 Sniper.webp",
     "keywords": ["High Velocity", "Pierce"],
     "weapons": [
@@ -3218,6 +3218,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost increased from 28 to 38 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 38 to 35 points."
       }
     ],
     "id": "eg"
@@ -17178,7 +17182,7 @@
     "rank": "operative",
     "faction": "empire",
     "isUnique": true,
-    "cost": 105,
+    "cost": 97,
     "keywords": [
       "Dauntless",
       "Block",
@@ -17240,6 +17244,12 @@
           "b": 3,
           "w": 0
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 105 to 97 points."
       }
     ]
   },
