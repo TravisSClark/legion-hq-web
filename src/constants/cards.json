@@ -21981,7 +21981,7 @@
         }
       },
       {
-        "name": "",
+        "name": "Laser Cannon and Pistol",
         "keywords": [
           {
             "name": "Fixed",
@@ -22010,14 +22010,63 @@
     "cardName": "TSMEU-6 Wheel Bikes",
     "imageName": "TSMEU-6 Wheel Bikes.webp",
     "cardType": "unit",
-    "cardSubtype": "repulsor vehicle",
-    "rank": "",
-    "faction": "",
+    "cardSubtype": "ground vehicle",
+    "rank": "special",
+    "faction": "separatists",
+    "isUnreleased": true,
     "cost": 0,
-    "keywords": [],
+    "keywords": [
+      { "name": "AI", "value": "Dodge" },
+      { "name": "Armor", "value": "1" },
+      "Climbing Vehicle",
+      "Mobile"
+    ],
     "upgradeBar": [],
-    "stats": {},
-    "weapons": [],
+    "stats": {
+      "minicount": 2,
+      "hp": 3,
+      "defense": "r",
+      "courage": 0,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Spiked Wheel",
+        "keywords": [
+          {
+            "name": "Overrun",
+            "value": 2
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      },
+      {
+        "name": "Double Laser Cannon",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": 1
+          }
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 1
+        }
+      }
+    ],
     "history": []
   },
   "Eh": {
@@ -22116,7 +22165,7 @@
     "additionalUpgradeSlots": ["heavy"],
     "requirements": [
       {
-        "faction": "empire",
+        "faction": "separatists",
         "rank": "corps",
         "cardSubtype": "droid trooper"
       }
@@ -22142,7 +22191,7 @@
     "cardType": "upgrade",
     "cost": 28,
     "imageName": "Agent Kallus Upgrade.webp",
-    "additionalUpgradeSlots": ["heavy"],
+    "additionalUpgradeSlots": ["heavy weapon"],
     "keywords": ["Leader", { "name": "Demoralize", "value": "1" }, "Sidearm"],
     "requirements": [
       "OR",
@@ -22206,7 +22255,7 @@
     "cardType": "upgrade",
     "cost": 25,
     "imageName": "Cassian Andor Upgrade.webp",
-    "additionalUpgradeSlots": ["heavy"],
+    "additionalUpgradeSlots": ["heavy weapon"],
     "keywords": [
       "Leader",
       "Low Profile",
@@ -22356,6 +22405,7 @@
     "rank": "special",
     "faction": "empire",
     "cost": 0,
+    "isUnreleased": true,
     "keywords": [
       {
         "name": "Observe",
@@ -22409,6 +22459,7 @@
     "rank": "commander",
     "faction": "rebels",
     "cost": 0,
+    "isUnreleased": true,
     "keywords": [
       {
         "name": "Spotter",
@@ -22491,6 +22542,7 @@
     "rank": "operative",
     "faction": "rebels",
     "cost": 0,
+    "isUnreleased": true,
     "keywords": [
       {
         "name": "Arsenal",
@@ -22557,6 +22609,7 @@
     "faction": "mercenary",
     "affiliation": "black sun",
     "cost": 0,
+    "isUnreleased": true,
     "keywords": [
       {
         "name": "Mercenary",
@@ -22615,6 +22668,7 @@
     "faction": "mercenary",
     "affiliation": "raider",
     "cost": 0,
+    "isUnreleased": true,
     "keywords": [
       {
         "name": "Mercenary",
@@ -22672,5 +22726,132 @@
     ],
     "history": [],
     "affiliations": ["empire", "rebels", "republic", "separatists"]
+  },
+  "Ff": {
+    "id": "Ff",
+    "cardName": "Grand Admiral Thrawn",
+    "title": "Imperial High Command",
+    "imageName": "Grand Admiral Thrawn.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "commander",
+    "faction": "empire",
+    "isUnique": true,
+    "cost": 0,
+    "isUnreleased": true,
+    "keywords": [
+      {
+        "name": "Strategize",
+        "value": 2
+      },
+      "Cunning",
+      {
+        "name": "Direct",
+        "value": "Empire Unit"
+      },
+      "Duelist",
+      "Exemplar",
+      "One Step Ahead",
+      {
+        "name": "Tactical",
+        "value": 1
+      }
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Chiss Martial Arts",
+        "range": [0],
+        "dice": {
+          "r": 4,
+          "b": 0,
+          "w": 0
+        }
+      },
+      {
+        "name": "Thrawn's Blaster",
+        "range": [1, 2],
+        "dice": {
+          "r": 3,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Fg": {
+    "id": "Fg",
+    "cardName": "Grand Moff Tarkin",
+    "title": "Imperial High Command",
+    "imageName": "Grand Moff Tarkin.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "commander",
+    "faction": "empire",
+    "isUnique": true,
+    "cost": 0,
+    "isUnreleased": true,
+    "keywords": [
+      {
+        "name": "Pull The Strings",
+        "value": "Empire Trooper"
+      },
+      {
+        "name": "Entourage",
+        "value": "Darth Vader"
+      }
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "w",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Contempt",
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 1
+        }
+      }
+    ]
+  },
+  "Fh": {
+    "cardSubtype": "2",
+    "cardName": "We Must Wait and Watch",
+    "commander": "Grand Admiral Thrawn",
+    "cardType": "command",
+    "faction": "empire",
+    "imageName": "We Must Wait and Watch.webp",
+    "keywords": ["Divulge", "Reinforcements"],
+    "history": [],
+    "id": "Fh"
+  },
+  "Fi": {
+    "cardSubtype": "3",
+    "cardName": "Fear Will Keep Them in Line",
+    "commander": "Grand Moff Tarkin",
+    "cardType": "command",
+    "faction": "empire",
+    "imageName": "Fear Will Keep Them in Line.webp",
+    "keywords": ["Divulge", { "name": "Demoralize", "value": 1 }],
+    "history": [],
+    "id": "Fi"
   }
 }
