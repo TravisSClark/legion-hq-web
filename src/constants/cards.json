@@ -22162,7 +22162,7 @@
     "cost": 30,
     "imageName": "Kraken Upgrade.webp",
     "keywords": ["Leader", "AI"],
-    "additionalUpgradeSlots": ["heavy"],
+    "additionalUpgradeSlots": ["heavy weapon"],
     "requirements": [
       {
         "faction": "separatists",
