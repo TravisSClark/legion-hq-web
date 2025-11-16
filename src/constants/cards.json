@@ -22601,8 +22601,8 @@
   },
   "Fd": {
     "id": "Fd",
-    "cardName": "Weekway Pirates",
-    "imageName": "Weekway Pirates.webp",
+    "cardName": "Weequay Pirates",
+    "imageName": "Weequay Pirates.webp",
     "cardType": "unit",
     "cardSubtype": "trooper",
     "rank": "corps",
@@ -22661,7 +22661,7 @@
   "Fe": {
     "id": "Fe",
     "cardName": "WLO-5 Speeder Tank",
-    "imageName": "WLO-5 Speeder Tan.webp",
+    "imageName": "WLO-5 Speeder Tank.webp",
     "cardType": "unit",
     "cardSubtype": "repulsor vehicle",
     "rank": "heavy",
