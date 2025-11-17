@@ -208,18 +208,6 @@ function Home() {
               <div style={{ height: 10 }} />
             </Grid>
             <Grid item>
-              <img
-                alt="2025 Release Schedule"
-                src={releaseSchedule}
-                style={{ width: 600, height: "auto" }}
-              />
-              <img
-                alt="2025 Reissue Schedule"
-                src={reissueSchedule}
-                style={{ width: 600, height: "auto" }}
-              />
-            </Grid>
-            <Grid item>
               <Button
                 size="small"
                 onClick={() => setIsReleasesOpen(!isReleasesOpen)}
