@@ -7119,7 +7119,7 @@
       },
       {
         "date": "19 July 2024",
-        "description": "Cost increased from 21 to 23 points. Requirement changed from Phase Is to Clone Trooper Infantry or Clone Marksman."
+        "description": "Cost increased from 21 to 23 points. Requirement changed from Phase Is to Clone Trooper Infantry or Clone Trooper Marksmen."
       }
     ],
     "weapons": [
@@ -8167,7 +8167,7 @@
       },
       {
         "date": "19 July 2024",
-        "description": "Cost increased from 18 to 20 points. Requirement changed from Phase IIs to Clone Trooper Infantry or Clone Marksman."
+        "description": "Cost increased from 18 to 20 points. Requirement changed from Phase IIs to Clone Trooper Infantry or Clone Trooper Marksmen."
       }
     ],
     "weapons": [
@@ -22154,11 +22154,11 @@
   },
   "Em": {
     "id": "Em",
-    "cardName": "Clone Trooper Marksmen",
+    "cardName": "Clone Trooper Marksman",
     "cardType": "upgrade",
     "cardSubtype": "personnel",
     "cost": 14,
-    "imageName": "Clone Trooper Marksmen.webp",
+    "imageName": "Clone Trooper Marksman.webp",
     "keywords": [],
     "requirements": [
       {
