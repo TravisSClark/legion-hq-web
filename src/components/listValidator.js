@@ -30,23 +30,21 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
   const unit = list.units[unitIndex];
   const unitCardOriginal = cards[unit.unitId];
 
-  const unitCard = JSON.parse(JSON.stringify(unitCardOriginal))
+  const unitCard = JSON.parse(JSON.stringify(unitCardOriginal));
   unit.validationIssues = [];
 
-   unit.upgradesEquipped.forEach(id=>{
-    if(id == null) return;
+  unit.upgradesEquipped.forEach((id) => {
+    if (id == null) return;
     let upgradeCard = cards[id];
-    upgradeCard.keywords.forEach(k=>{
-      if(k!==null){
-        if(k.isPermanent){
+    upgradeCard.keywords.forEach((k) => {
+      if (k !== null) {
+        if (k.isPermanent) {
           // TODO this will break things later, probably, need to get _ to look at String AND obj.name for keywords (...or blow out all keywords to {})
           unitCard.keywords.push(k.name);
         }
       }
-    })
-  })
-
-  
+    });
+  });
 
   unitCard.forceAffinity = unit.forceAffinity;
 
@@ -117,13 +115,13 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
   }
 
   function capitalizeFirstLetters(words) {
-    const strings = words.split(' ').map(string => {
+    const strings = words.split(" ").map((string) => {
       return string.charAt(0).toUpperCase() + string.slice(1);
     });
-    return strings.join(' ');
+    return strings.join(" ");
   }
 
-  const validateEquipForCategory = (unit, keywordName, subtype, count = 1)=>{
+  const validateEquipForCategory = (unit, keywordName, subtype, count = 1) => {
     let equipCount = 0;
     unit.upgradesEquipped.forEach((id) => {
       if (id === null) return;
@@ -140,51 +138,65 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
       unit.validationIssues.push({
         level: 2,
         text:
-          cardName + " must equip at least " + count + " " + capitalizeFirstLetters(subtype) + " upgrade" + (count > 1 ? "s":"") +" ("+ keywordName + ")",
+          cardName +
+          " must equip at least " +
+          count +
+          " " +
+          capitalizeFirstLetters(subtype) +
+          " upgrade" +
+          (count > 1 ? "s" : "") +
+          " (" +
+          keywordName +
+          ")",
       });
     }
-  }
+  };
 
   // Validation for each of the 'must equip' keywords
-  unitCard.keywords.forEach(keyword=>{
-
+  unitCard.keywords.forEach((keyword) => {
     let keywordName = keyword.name ? keyword.name : keyword;
-    switch(keywordName){
+    switch (keywordName) {
       case "Equip":
-
         let vals = keyword.value.split(", ");
-        vals.forEach(val=>{ 
+        vals.forEach((val) => {
           let hasSlotFilled = false;
           let v = val.toLowerCase();
 
-          unit.upgradesEquipped.forEach(u=>{
-            if(u != null && cards[u] != undefined){
-              if(cards[u].cardName.toLowerCase() === v || cards[u].cardSubtype.toLowerCase() === v){
+          unit.upgradesEquipped.forEach((u) => {
+            if (u !== null && cards[u] !== undefined) {
+              if (
+                cards[u].cardName.toLowerCase() === v ||
+                cards[u].cardSubtype.toLowerCase() === v
+              ) {
                 hasSlotFilled = true;
               }
             }
-          })
+          });
 
-          if(!hasSlotFilled){
+          if (!hasSlotFilled) {
             unit.validationIssues.push({
               level: 2,
               text: unitCard.cardName + " is missing " + val + " (Equip)",
             });
           }
-        })
+        });
         break;
       case "Flexible Response":
-        validateEquipForCategory(unit, keywordName, "heavy weapon", keyword.value);
+        validateEquipForCategory(
+          unit,
+          keywordName,
+          "heavy weapon",
+          keyword.value
+        );
         break;
       case "Heavy Weapon Team":
         validateEquipForCategory(unit, keywordName, "heavy weapon");
         break;
       case "Programmed":
         validateEquipForCategory(unit, keywordName, "programming");
-        break;        
+        break;
     }
-  })
-
+  });
 
   // Loop upgrades for checks
   // For now, this just confirms we don't have 2+ Leader cards
@@ -633,6 +645,13 @@ function validateList(currentList, rankLimits) {
           '" is not released yet (' +
           card.isUnreleased +
           ")",
+      });
+    }
+     if (card.isHondo) {
+      unit.validationIssues.push({
+        level: 1,
+        text:
+          "This *legitimate businessman* may not be allowed at some events yet! Consult your event's rules and organizers. (" + card.cardName+", " + card.isHondo + ")",
       });
     }
 

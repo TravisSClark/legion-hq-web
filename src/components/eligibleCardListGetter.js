@@ -166,24 +166,6 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
       else if (card.rank !== rank) continue;
     }
 
-    if (!userSettings.showStormTide && card.isStormTide) {
-      continue;
-    }
-    // TODO - idk stormtide, but it seems odd that the 0pt one is the one shown in the mode, and the 60pt one is the one outside it
-    else if (
-      userSettings.showStormTide &&
-      list.mode.includes("storm tide") &&
-      id === "AA"
-    ) {
-      continue;
-    } else if (
-      userSettings.showStormTide &&
-      !list.mode.includes("storm tide") &&
-      id === "AK"
-    ) {
-      continue;
-    }
-
     if (
       uniqueCardNames.includes(card.cardName) ||
       uniqueCardNames.includes(card.title)
@@ -206,13 +188,6 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
   }
   return sortUnitIds(validUnitIds);
 }
-
-const stormTideCommands = {
-  // There are 9 total stormtide cards, 3 each valid in their respective modes
-  "storm tide: infantry": ["AC", "AE", "AG"],
-  "storm tide: armored": ["AB", "AF", "AJ"],
-  "storm tide: special forces": ["AD", "AH", "AI"],
-};
 
 function getEligibleCcs(list) {
   const validCcs = [];
@@ -250,16 +225,6 @@ function getEligibleCcs(list) {
         !listCounterparts.some((c) => commanders.includes(c))
       )
         return false;
-    }
-    if (card.isStormTide) {
-      if (
-        stormTideCommands[list.mode] &&
-        stormTideCommands[list.mode].includes(id)
-      ) {
-        return true;
-      }
-      // filter out stormtide commands not in the current mode
-      return false;
     }
     if (card.requirements) {
       let requirementsMet = false;
@@ -326,21 +291,21 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
 
   // TODO maybe this should be something done 'regularly' and displayed by upgrades, e.g. when Situational Awareness gives a unit Outmaneuver
   // problem is, there's no real distinction, afaik, between keyword tags where keys get permanantly added vs contextually added or just referred to
-  upgradesEquipped.forEach(id=>{
-    if(id == null) return;
+  upgradesEquipped.forEach((id) => {
+    if (id == null) return;
     let upgradeCard = cards[id];
-    upgradeCard.keywords.forEach(k=>{
-      if(k!==null){
-        if(k.isPermanent){
+    upgradeCard.keywords.forEach((k) => {
+      if (k !== null) {
+        if (k.isPermanent) {
           unitCardCopy.keywords.push(k);
         }
       }
-    })
-  })
+    });
+  });
 
   // TODO bad...
-  for(let i=0; i<unitCardCopy.keywords.length; i++){
-    if(unitCardCopy.keywords[i].name){
+  for (let i = 0; i < unitCardCopy.keywords.length; i++) {
+    if (unitCardCopy.keywords[i].name) {
       unitCardCopy.keywords[i] = unitCardCopy.keywords[i].name;
     }
   }
@@ -355,18 +320,18 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
 
     if (card.isUnique) {
       if (uniqueCardNames.includes(card.cardName)) continue;
-    } 
+    }
 
     let alreadyEquipped = false;
-    upgradesEquipped.forEach(u=>{
-      if(u == null) return;
+    upgradesEquipped.forEach((u) => {
+      if (u == null) return;
 
       let uCard = cards[u];
-      if(id === u || uCard.cardName === card.cardName){
+      if (id === u || uCard.cardName === card.cardName) {
         alreadyEquipped = true;
       }
-    })
-    if(alreadyEquipped) continue;
+    });
+    if (alreadyEquipped) continue;
 
     if (
       card.isUnique &&
@@ -412,6 +377,7 @@ function getEligibleBattlesToAdd(list, type) {
     const card = cards[id];
     if (card.cardSubtype !== type) return;
     if (currentCards.includes(id)) return;
+    if (card.faction && card.faction !== list.faction) return;
     if (currentCards.length >= 3) {
       invalidIds.push(id);
     } else if (list.mode === "500-point mode") {

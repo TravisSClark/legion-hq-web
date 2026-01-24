@@ -10,6 +10,23 @@ function toKey(name) {
   return name.toUpperCase();
 }
 
+function getTtsName(card){
+  let name;
+  if (card.ttsName) {
+    name = card.ttsName;
+  } else if (card.title) {
+    if(card.cardType == 'upgrade'){
+      name = card.cardName + ", " + card.title;
+    }else{
+      name = card.cardName + " " + card.title;
+    }
+  } else {
+    name = card.cardName;
+  }
+
+  return toKey(name);
+};
+
 async function getTtsCards() {
   const ttsPathBase = "../tts/contrib/cards";
 
@@ -142,18 +159,6 @@ async function ttsCheckAsync() {
     }
   });
 
-  function getName(c) {
-    let name = c.cardName;
-
-    if (c.title) {
-      name += " " + c.title;
-    }
-    if (c.ttsName) {
-      name = c.ttsName;
-    }
-    return toKey(name);
-  }
-
   let ttsOg = new Set();
   ttsNames.values().forEach((v) => ttsOg.add(v));
 
@@ -220,7 +225,7 @@ async function ttsCheckAsync() {
     "INTEGRATED COMMS ANTENNA",
     "LONG-RANGE COMLINK",
     "RECKLESS DRIVER",
-    "REFURBISHED \"GONK\" DROID",
+    'REFURBISHED "GONK" DROID',
 
     // Flaws
     "DEVELOPING SYMPATHIES",
@@ -275,26 +280,9 @@ async function ttsCheckAsync() {
     // 3p0 cards are OK - they're remapped from these full names to "C-3P0" in the .lua script itself (not the JS we parse for this check)
     "C-3PO HUMAN-CYBORG RELATIONS",
     "C-3PO MADE TO SUFFER",
-
-    // Storm tide stuff
-    "STORM TIDE COMMANDER",
-    "ARMORED ASSAULT",
-    "BROTHERS IN ARMS",
-    "DOORS AND CORNERS",
-    "KEEP THEM DOWN",
-    "MAN THE GUNS",
-    "SOMEBODY HAS TO BE A HERO",
-    "STEALTH TEAM",
-    "SURGICAL STRIKE",
-    "TANK SHOCK",
-
-    // Idk what these are - stormtide? store kit scenario?
-    // did not find a way to get them to show w 2min of playing around
-    "FORCES CONVERGE (ACT 1)",
-    "SECURE THE INTEL (ACT 1)",
   ];
 
-  function findAndRemoveFromTtsList(name, type, quiet=false) {
+  function findAndRemoveFromTtsList(name, type, quiet = false) {
     if (!ttsNames.delete(name)) {
       // Check for multi-faction dupes like AT-RT and AA5
       if (!ttsOg.has(name)) {
@@ -310,7 +298,7 @@ async function ttsCheckAsync() {
     // console.log(list.length + " cards");// + JSON.stringify(list));
 
     list.forEach((c) => {
-      findAndRemoveFromTtsList(getName(c), typeName);
+      findAndRemoveFromTtsList(getTtsName(c), typeName);
     });
   }
 

@@ -231,7 +231,7 @@ function NavigationDrawer() {
             button
             onClick={() =>
               window.open(
-                "https://legionquickguide.com/",
+                "https://legion.takras.net/",
                 "_blank",
                 "noopener noreferrer"
               )
@@ -240,7 +240,7 @@ function NavigationDrawer() {
             <ListItemIcon>
               <LaunchIcon />
             </ListItemIcon>
-            <ListItemText primary="Legion Quick Guide" />
+            <ListItemText primary="Legion Helper" />
           </ListItem>
         </List>
         <Divider />

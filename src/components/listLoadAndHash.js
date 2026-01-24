@@ -129,13 +129,25 @@ function convertJsonToList(jsonText) {
       let card = cards[ids[i]];
 
       let nameTitle = card.cardName + (card.title ? " " + card.title : "");
+      let echoRule = card.cardName + (card.title ? ", " + card.title : "");
 
       // console.log(nameTitle)
 
       if (
         uname === nameTitle.toUpperCase() ||
-        uname === card.ttsName?.toUpperCase()
+        uname === card.ttsName?.toUpperCase() ||
+        uname === echoRule.toUpperCase()
       ) {
+        if (
+          !card.affiliations &&
+          card.faction &&
+          card.faction !== newList.faction
+        ) {
+          continue;
+        }
+        if (card.affiliations && !card.affiliations.includes(newList.faction)) {
+          continue;
+        }
         return ids[i];
       }
     }
@@ -158,8 +170,6 @@ function convertJsonToList(jsonText) {
       additionalUpgradeSlots: [],
       specialUpgradeSlots: [],
     };
-
-    newList.units.push(newUnit);
 
     updateSpecialUpgradeSlots(newUnit);
 
@@ -189,6 +199,15 @@ function convertJsonToList(jsonText) {
     });
 
     newUnit.upgradesEquipped = sortUpgrades(newUnit);
+
+    let unitIndex = newList.units.length - 1;
+    let newUnitIndex = findUnitIndexInList(newUnit, newList); // <- TODO
+    // If this unit already exists...
+    if (newUnitIndex > -1) {
+      newList.units[newUnitIndex].count += newUnit.count;
+    } else {
+      newList.units.push(newUnit);
+    }
   });
   importList.commandCards?.forEach((cc) => {
     if (cc == "Standing Orders") {
@@ -223,7 +242,7 @@ function convertJsonToList(jsonText) {
   newList.title = importList.title ? importList.title : "Untitled";
 
   console.log("import", JSON.stringify(newList));
-  return newList;
+  return consolidate(newList);
   // list.battleFieldDeck
 }
 

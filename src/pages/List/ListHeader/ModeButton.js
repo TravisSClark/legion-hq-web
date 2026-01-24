@@ -41,9 +41,6 @@ function ModeButton({
           {Object.getOwnPropertyNames(legionModes).map((modeName) => {
             const mode = legionModes[modeName];
 
-            if (!userSettings.showStormTide && modeName.includes("storm tide"))
-              return null;
-
             return (
               <MenuItem
                 key={"mn-" + modeName}

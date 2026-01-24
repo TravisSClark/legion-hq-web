@@ -97,6 +97,11 @@ function equipUnitUpgrade(
   const count = isApplyToAll && !upgradeCard.isUnique ? unit.count : 1;
 
   const newUnit = JSON.parse(JSON.stringify(unit));
+
+  if(unit.upgradesEquipped[upgradeIndex] != null){
+    unequipUpgradeFromUnit(newUnit, upgradeIndex);
+  }
+
   newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
 
   if ("additionalUpgradeSlots" in upgradeCard) {
@@ -500,21 +505,32 @@ function sortUpgrades(unit) {
   return sortedUpgrades;
 }
 
-function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
-  const unit = list.units[unitIndex];
+
+function unequipUpgradeFromUnit(unit, upgradeIndex){
   const upgradeId = unit.upgradesEquipped[upgradeIndex];
+
+  if(upgradeId == null)
+    return;
+
   const upgradeCard = cards[upgradeId];
 
-  const newUnit = JSON.parse(JSON.stringify(unit));
-  newUnit.count = 1;
-  newUnit.upgradesEquipped[upgradeIndex] = null;
+  unit.upgradesEquipped[upgradeIndex] = null;
 
   // TODO does not work if additionalUpgradeSlots has a config where >1 upgrade card provides aUS
   if ("additionalUpgradeSlots" in upgradeCard) {
     removeAdditionalUpgradeSlot(newUnit, upgradeCard);
   }
 
-  newUnit.upgradesEquipped = sortUpgrades(newUnit);
+  unit.upgradesEquipped = sortUpgrades(unit);
+}
+
+function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
+  const unit = list.units[unitIndex];
+
+  const newUnit = JSON.parse(JSON.stringify(unit));
+  newUnit.count = 1;
+
+  unequipUpgradeFromUnit(newUnit, upgradeIndex);
 
   let newUnitHashIndex = findUnitIndexInList(newUnit, list);
 

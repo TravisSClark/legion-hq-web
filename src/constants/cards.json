@@ -1,160 +1,4 @@
 {
-  "AA": {
-    "id": "AA",
-    "cardType": "unit",
-    "cardSubtype": "trooper",
-    "cardName": "Storm Tide Commander",
-    "isUnique": true,
-    "rank": "commander",
-    "cost": 60,
-    "faction": "",
-    "imageName": "Storm Tide Commander1.webp",
-    "isStormTide": true,
-    "keywords": ["Inspire"],
-    "upgradeBar": ["training", "gear", "armament"],
-    "stats": {
-      "minicount": 1,
-      "hp": 5,
-      "defense": "r",
-      "courage": 2,
-      "speed": 2,
-      "hitsurge": "c",
-      "defsurge": ""
-    },
-    "history": []
-  },
-  "AB": {
-    "id": "AB",
-    "isStormTide": true,
-    "cardName": "Armored Assault",
-    "cardSubtype": "1",
-    "cardType": "command",
-    "commander": "Storm Tide Commander",
-    "imageName": "Armored Assault.jpeg",
-    "products": [],
-    "faction": "",
-    "keywords": ["Barrage", "Steady"]
-  },
-  "AC": {
-    "id": "AC",
-    "isStormTide": true,
-    "cardName": "Brothers in Arms",
-    "cardSubtype": "3",
-    "cardType": "command",
-    "commander": "Storm Tide Commander",
-    "imageName": "Brothers in Arms.jpeg",
-    "products": [],
-    "faction": "",
-    "keywords": ["Inspire"]
-  },
-  "AD": {
-    "id": "AD",
-    "isStormTide": true,
-    "cardName": "Doors and Corners",
-    "cardSubtype": "1",
-    "cardType": "command",
-    "commander": "Storm Tide Commander",
-    "imageName": "Doors and Corners.jpeg",
-    "products": [],
-    "faction": "",
-    "keywords": ["Tactical", "Nimble"]
-  },
-  "AE": {
-    "id": "AE",
-    "isStormTide": true,
-    "cardName": "Keep Them Down",
-    "cardSubtype": "2",
-    "cardType": "command",
-    "commander": "Storm Tide Commander",
-    "imageName": "Keep Them Down.jpeg",
-    "products": [],
-    "faction": "",
-    "keywords": ["Suppressive"]
-  },
-  "AF": {
-    "id": "AF",
-    "isStormTide": true,
-    "cardName": "Man the Guns",
-    "cardSubtype": "3",
-    "cardType": "command",
-    "commander": "Storm Tide Commander",
-    "imageName": "Man the Guns.jpeg",
-    "products": [],
-    "faction": "",
-    "keywords": []
-  },
-  "AG": {
-    "id": "AG",
-    "isStormTide": true,
-    "cardName": "Somebody Has To Be a Hero",
-    "cardSubtype": "1",
-    "cardType": "command",
-    "commander": "Storm Tide Commander",
-    "imageName": "Somebody Has To Be a Hero.jpeg",
-    "products": [],
-    "faction": "",
-    "keywords": ["Dauntless", "Steady"]
-  },
-  "AH": {
-    "id": "AH",
-    "isStormTide": true,
-    "cardName": "Stealth Team",
-    "cardSubtype": "3",
-    "cardType": "command",
-    "commander": "Storm Tide Commander",
-    "imageName": "Stealth Team.jpeg",
-    "products": [],
-    "faction": "",
-    "keywords": ["Infiltrate", "Scout", "Low Profile"]
-  },
-  "AI": {
-    "id": "AI",
-    "isStormTide": true,
-    "cardName": "Surgical Strike",
-    "cardSubtype": "2",
-    "cardType": "command",
-    "commander": "Storm Tide Commander",
-    "imageName": "Surgical Strike.jpeg",
-    "products": [],
-    "faction": "",
-    "keywords": []
-  },
-  "AJ": {
-    "id": "AJ",
-    "isStormTide": true,
-    "cardName": "Tank Shock",
-    "cardSubtype": "2",
-    "cardType": "command",
-    "commander": "Storm Tide Commander",
-    "imageName": "Tank Shock.jpeg",
-    "products": [],
-    "faction": "",
-    "keywords": []
-  },
-  "AK": {
-    "id": "AK",
-    "isStormTide": true,
-    "cardType": "unit",
-    "cardSubtype": "trooper",
-    "cardName": "Storm Tide Commander",
-    "isUnique": true,
-    "rank": "commander",
-    "cost": 0,
-    "faction": "",
-    "imageName": "Storm Tide Commander1.webp",
-    "keywords": ["Inspire"],
-    "upgradeBar": ["training", "gear", "armament"],
-    "stats": {
-      "minicount": 1,
-      "hp": 5,
-      "defense": "r",
-      "courage": 2,
-      "speed": 2,
-      "hitsurge": "c",
-      "defsurge": ""
-    },
-    "history": []
-  },
   "aa": {
     "cardSubtype": "4",
     "cardName": "Standing Orders",
@@ -1634,6 +1478,7 @@
     "weapons": [
       {
         "name": "Bludgeon",
+        "keywords": [],
         "range": [0],
         "dice": {
           "r": 0,
@@ -1643,6 +1488,7 @@
       },
       {
         "name": "E-11 Blaster Rifle",
+        "keywords": [],
         "range": [1, 3],
         "dice": {
           "r": 0,
@@ -1696,6 +1542,7 @@
       {
         "name": "Unarmed",
         "range": [0],
+        "keywords": [],
         "dice": {
           "r": 0,
           "b": 1,
@@ -1705,6 +1552,7 @@
       {
         "name": "EC-17 Hold-Out Blaster",
         "range": [1, 2],
+        "keywords": [],
         "dice": {
           "r": 0,
           "b": 2,
@@ -1856,7 +1704,7 @@
         "range": [1, 3],
         "dice": {
           "r": 0,
-          "b": 0,
+          "b": 1,
           "w": 0
         }
       }
@@ -2806,6 +2654,18 @@
     "imageName": "Fragmentation Grenades.webp",
     "keywords": [],
     "requirements": [],
+    "weapons": [
+      {
+        "name": "Frag Grenade",
+        "keywords": [],
+        "range": [1],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ],
     "id": "dj"
   },
   "dk": {
@@ -2815,6 +2675,23 @@
     "cost": 3,
     "imageName": "Impact Grenades.webp",
     "keywords": ["Impact"],
+    "weapons": [
+      {
+        "name": "Impact Grenade",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 4
+          }
+        ],
+        "range": [0, 1],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ],
     "requirements": [],
     "history": [
       {
@@ -2840,6 +2717,18 @@
       {
         "date": "19 November 2020",
         "description": "Cost reduced from 5 to 3 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Concussion Grenade",
+        "keywords": ["Blast"],
+        "range": [1],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
       }
     ],
     "id": "dl"
@@ -2884,6 +2773,27 @@
     "cost": 3,
     "imageName": "Overcharged Generator.webp",
     "keywords": ["Fixed", "Impact"],
+    "weapons": [
+      {
+        "name": "Overcharged Generator",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 1
+          },
+          {
+            "name": "Fixed",
+            "value": "Front"
+          }
+        ],
+        "range": [],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ],
     "requirements": [],
     "history": [
       {
@@ -2904,6 +2814,18 @@
     "cost": 3,
     "imageName": "Barrage Generator.webp",
     "keywords": ["Fixed", "Suppressive"],
+    "weapons": [
+      {
+        "name": "Barrage Generator",
+        "keywords": ["Suppressive"],
+        "range": [],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 2
+        }
+      }
+    ],
     "requirements": [],
     "history": [
       {
@@ -3048,6 +2970,27 @@
         "value": 1
       }
     ],
+    "weapons": [
+      {
+        "name": "The Darksaber",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 5,
+          "w": 0
+        }
+      }
+    ],
     "requirements": [
       {
         "cardName": "Sabine Wren"
@@ -3072,6 +3015,31 @@
     "cost": 27,
     "imageName": "MPL-57 Ion Trooper.webp",
     "keywords": ["Critical", "Impact", "Ion", "Ion Token"],
+    "weapons": [
+      {
+        "name": "MPL-57 Ion Blaster",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": 1
+          },
+          {
+            "name": "Impact",
+            "value": 1
+          },
+          {
+            "name": "Ion",
+            "value": 1
+          }
+        ],
+        "range": [0, 3],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 1
+        }
+      }
+    ],
     "requirements": [
       {
         "cardName": "Rebel Troopers"
@@ -3115,7 +3083,19 @@
         "description": "Cost reduced from 22 to 20 points."
       }
     ],
-    "id": "ed"
+    "id": "ed",
+    "weapons": [
+      {
+        "name": "Z-6 Rotary Blaster",
+        "keywords": [],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 6
+        }
+      }
+    ]
   },
   "ee": {
     "cardSubtype": "heavy weapon",
@@ -3124,6 +3104,27 @@
     "cost": 31,
     "imageName": "Bowcaster Wookiee.webp",
     "keywords": ["Impact", "Pierce"],
+    "weapons": [
+      {
+        "name": "Bowcaster",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [0, 3],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 1
+        }
+      }
+    ],
     "requirements": [
       {
         "cardName": "Wookiee Warriors"
@@ -3144,6 +3145,28 @@
     "cost": 20,
     "imageName": "Proton Charge Saboteur.webp",
     "keywords": ["Blast", "Critical", "Impact"],
+    "weapons": [
+      {
+        "name": "Proton Charge",
+        "keywords": [
+          "Blast",
+          {
+            "name": "Critical",
+            "value": 2
+          },
+          {
+            "name": "Impact",
+            "value": 3
+          }
+        ],
+        "range": [0, 1],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ],
     "requirements": [
       {
         "cardName": "Rebel Commandos"
@@ -3165,9 +3188,27 @@
     "cardSubtype": "heavy weapon",
     "cardName": "DH-447 Sniper",
     "cardType": "upgrade",
-    "cost": 38,
+    "cost": 35,
     "imageName": "DH-447 Sniper.webp",
     "keywords": ["High Velocity", "Pierce"],
+    "weapons": [
+      {
+        "name": "DH-447 Sniper Rifle",
+        "keywords": [
+          "High Velocity",
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [1, 5],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ],
     "requirements": [
       {
         "cardName": "Rebel Commandos"
@@ -3177,6 +3218,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost increased from 28 to 38 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 38 to 35 points."
       }
     ],
     "id": "eg"
@@ -3199,7 +3244,24 @@
         "description": "Cost reduced from 23 to 22 points. Now can be used in melee."
       }
     ],
-    "id": "eh"
+    "id": "eh",
+    "weapons": [
+      {
+        "name": "Scatter Gun",
+        "keywords": [
+          {
+            "name": "Pierce",
+            "value": "1"
+          }
+        ],
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
   "ei": {
     "displayName": "Barrage Trooper",
@@ -3232,7 +3294,25 @@
         "description": "Cost increased from 19 to 22 points. Now cycles."
       }
     ],
-    "id": "ei"
+    "id": "ei",
+    "weapons": [
+      {
+        "name": "MPL-57 Barrage",
+        "keywords": [
+          "Blast",
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 2
+        }
+      }
+    ]
   },
   "ej": {
     "cardSubtype": "heavy weapon",
@@ -3256,7 +3336,24 @@
         "description": "Cost reduced from 22 to 20 points."
       }
     ],
-    "id": "ej"
+    "id": "ej",
+    "weapons": [
+      {
+        "name": "DLT-19 Blaster Rifle",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "1"
+          }
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
   "ek": {
     "cardSubtype": "heavy weapon",
@@ -3288,13 +3385,31 @@
         "description": "Cost increased from 16 to 22 points, but no longer exhausts."
       }
     ],
-    "id": "ek"
+    "id": "ek",
+    "weapons": [
+      {
+        "name": "HH-12 Rocket Launcher",
+        "keywords": [
+          "Cumbersome",
+          {
+            "name": "Impact",
+            "value": "3"
+          }
+        ],
+        "range": [2, 4],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      }
+    ]
   },
   "em": {
     "cardSubtype": "heavy weapon",
     "cardName": "DLT-19x Sniper",
     "cardType": "upgrade",
-    "cost": 38,
+    "cost": 35,
     "imageName": "DLT-19x Sniper.webp",
     "keywords": ["High Velocity", "Pierce"],
     "requirements": [
@@ -3306,9 +3421,31 @@
       {
         "date": "19 July 2024",
         "description": "Cost increased from 28 to 38 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 38 to 35 points."
       }
     ],
-    "id": "em"
+    "id": "em",
+    "weapons": [
+      {
+        "name": "DLT-19x Sniper Rifle",
+        "keywords": [
+          "High Velocity",
+          {
+            "name": "Pierce",
+            "value": "1"
+          }
+        ],
+        "range": [1, 5],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ]
   },
   "en": {
     "cardSubtype": "heavy weapon",
@@ -3328,7 +3465,26 @@
         "description": "Cost reduced from 26 to 23 points. No longer surges to crit. Now works in melee. Dice increased from a red and a black to a red, 2 black, and a white. Gained Impact 2 and lost Arm and Detonate keywords."
       }
     ],
-    "id": "en"
+    "id": "en",
+    "weapons": [
+      {
+        "name": "Sonic Charge",
+        "keywords": [
+          "Blast",
+          {
+            "name": "Impact",
+            "value": "2"
+          },
+          "Suppressive"
+        ],
+        "range": [0, 1],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 2
+        }
+      }
+    ]
   },
   "eo": {
     "displayName": "Ion Snowtrooper",
@@ -3361,7 +3517,32 @@
         "description": "Cost increased from 18 to 24 points. No longer exhausts. Dice increased from 2 white and 1 black to 1 white and 2 black. Gained Critical 1 keyword."
       }
     ],
-    "id": "eo"
+    "id": "eo",
+    "weapons": [
+      {
+        "name": "T-7 Ion Rifle",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": 1
+          },
+          {
+            "name": "Impact",
+            "value": 1
+          },
+          {
+            "name": "Ion",
+            "value": 1
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 1
+        }
+      }
+    ]
   },
   "ep": {
     "cardSubtype": "heavy weapon",
@@ -3381,7 +3562,19 @@
         "description": "Now can be used in melee."
       }
     ],
-    "id": "ep"
+    "id": "ep",
+    "weapons": [
+      {
+        "name": "Flamethrower",
+        "keywords": ["Blast", "Spray"],
+        "range": [0, 1],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ]
   },
   "eq": {
     "displayName": "Comms Technician",
@@ -3661,7 +3854,24 @@
         "description": "Cost reduced from 20 to 15 points."
       }
     ],
-    "id": "fc"
+    "id": "fc",
+    "weapons": [
+      {
+        "name": "Rotary Blaster",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 5,
+          "w": 0
+        }
+      }
+    ]
   },
   "fd": {
     "displayName": "Flamethrower",
@@ -3690,7 +3900,26 @@
         "description": "Now can be used in melee."
       }
     ],
-    "id": "fd"
+    "id": "fd",
+    "weapons": [
+      {
+        "name": "Flamethrower",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          "Blast",
+          "Spray"
+        ],
+        "range": [0, 1],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ]
   },
   "fe": {
     "displayName": "Laser Cannon",
@@ -3719,7 +3948,28 @@
         "description": "Cost increased from 10 to 15 points."
       }
     ],
-    "id": "fe"
+    "id": "fe",
+    "weapons": [
+      {
+        "name": "Laser Cannon",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": "3"
+          }
+        ],
+        "range": [2, 4],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ]
   },
   "ff": {
     "displayName": "Ground Buzzer",
@@ -3740,7 +3990,24 @@
         "description": "Cost reduced from 20 to 10 points."
       }
     ],
-    "id": "ff"
+    "id": "ff",
+    "weapons": [
+      {
+        "name": "Ax-108 \"Ground Buzzer\"",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Rear"
+          }
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 4,
+          "w": 0
+        }
+      }
+    ]
   },
   "fg": {
     "displayName": "Power Harpoon",
@@ -3765,7 +4032,29 @@
         "description": "Cost reduced from 3 to 0 points."
       }
     ],
-    "id": "fg"
+    "id": "fg",
+    "weapons": [
+      {
+        "name": "MO/DK Power Harpoon",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Rear"
+          },
+          {
+            "name": "Impact",
+            "value": "1"
+          },
+          "Tow Cable"
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
   "fh": {
     "cardSubtype": "hardpoint",
@@ -3785,7 +4074,28 @@
         "description": "Cost reduced from 20 to 10 points."
       }
     ],
-    "id": "fh"
+    "id": "fh",
+    "weapons": [
+      {
+        "name": "88i Twin Light Blaster",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": "1"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
   },
   "fi": {
     "displayName": "Mortar Launcher",
@@ -3806,7 +4116,25 @@
         "description": "Cost reduced from 10 to 5 points."
       }
     ],
-    "id": "fi"
+    "id": "fi",
+    "weapons": [
+      {
+        "name": "AT-ST Mortar Launcher",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          "Suppressive"
+        ],
+        "range": [4, 12],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 3
+        }
+      }
+    ]
   },
   "fj": {
     "cardSubtype": "hardpoint",
@@ -3826,7 +4154,25 @@
         "description": "Cost reduced from 15 to 8 points."
       }
     ],
-    "id": "fj"
+    "id": "fj",
+    "weapons": [
+      {
+        "name": "DW-3 Grenade Launcher",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          "Blast"
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ]
   },
   "fk": {
     "cardSubtype": "pilot",
@@ -4194,8 +4540,8 @@
         "range": [3, 4],
         "dice": {
           "r": 0,
-          "b": 0,
-          "w": 3
+          "b": 2,
+          "w": 0
         }
       }
     ],
@@ -4211,6 +4557,10 @@
       {
         "date": "15 April 2025",
         "description": "Gained Prepared Position keyword. Blaster now works in melee"
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Ranged attack changed from 3 white to 2 black."
       }
     ],
     "detachment": "hg"
@@ -4242,7 +4592,24 @@
         "description": "Cost reduced from 32 to 28 points."
       }
     ],
-    "id": "fu"
+    "id": "fu",
+    "weapons": [
+      {
+        "name": "T-21B Repeating Blaster",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": "1"
+          }
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 2
+        }
+      }
+    ]
   },
   "fv": {
     "requirements": [
@@ -4266,7 +4633,19 @@
         "description": "Cost reduced from 10 to 5 points."
       }
     ],
-    "id": "fv"
+    "id": "fv",
+    "weapons": [
+      {
+        "name": "RT-97C Blaster Rifle",
+        "keywords": [],
+        "range": [1, 4],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 3
+        }
+      }
+    ]
   },
   "fw": {
     "requirements": [
@@ -4277,7 +4656,7 @@
     "cardName": "CR-24 Flame Rifle",
     "cardSubtype": "armament",
     "cardType": "upgrade",
-    "cost": 10,
+    "cost": 14,
     "imageName": "CR-24 Flame Rifle.webp",
     "keywords": ["Blast", "Spray"],
     "history": [
@@ -4288,9 +4667,25 @@
       {
         "date": "5 June 2023",
         "description": "Cost reduced from 15 to 10 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 10 to 14 points."
       }
     ],
-    "id": "fw"
+    "id": "fw",
+    "weapons": [
+      {
+        "name": "CR-24 Flame Rifle",
+        "keywords": ["Blast", "Spray"],
+        "range": [0, 1],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
   },
   "fx": {
     "id": "fx",
@@ -4672,7 +5067,7 @@
     "cardSubtype": "repulsor vehicle",
     "rank": "heavy",
     "faction": "separatists",
-    "cost": 165,
+    "cost": 150,
     "keywords": [
       {
         "name": "AI",
@@ -4751,6 +5146,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 175 to 165 points. Gained surge to hit. Armor reduced to 5. Laser Cannon Impact changed from 1 to 2."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 165 to 150 points."
       }
     ]
   },
@@ -4877,13 +5276,25 @@
         "description": "Cost reduced from 22 to 15 points."
       }
     ],
-    "id": "gl"
+    "id": "gl",
+    "weapons": [
+      {
+        "name": "E-11D Blaster Rifle",
+        "keywords": [],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
   },
   "gm": {
     "cardSubtype": "heavy weapon",
     "cardName": "DLT-19D Trooper",
     "cardType": "upgrade",
-    "cost": 30,
+    "cost": 28,
     "imageName": "DLT-19D Trooper.webp",
     "keywords": ["Impact"],
     "requirements": [
@@ -4903,9 +5314,30 @@
       {
         "date": "12 December 2022",
         "description": "Cost reduced from 34 to 30 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 30 to 28 points."
       }
     ],
-    "id": "gm"
+    "id": "gm",
+    "weapons": [
+      {
+        "name": "DLT-19D Trooper",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "1"
+          }
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 1
+        }
+      }
+    ]
   },
   "gn": {
     "displayName": "E-11D Blaster",
@@ -4928,7 +5360,29 @@
       }
     ],
     "isDoubleSided": true,
-    "id": "gn"
+    "id": "gn",
+    "weapons": [
+      {
+        "name": "E-11D Focused Fire Configuration",
+        "keywords": ["Suppressive"],
+        "range": [1, 4],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      },
+      {
+        "name": "E-11D Grenade Launcher Configuration",
+        "keywords": ["Blast"],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
   "go": {
     "displayName": "Elite Armor Pilot",
@@ -5252,7 +5706,24 @@
         "description": "Cost reduced from 26 to 21 points."
       }
     ],
-    "id": "ha"
+    "id": "ha",
+    "weapons": [
+      {
+        "name": "Mark II Medium Blaster",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 4,
+          "w": 0
+        }
+      }
+    ]
   },
   "hb": {
     "cardSubtype": "hardpoint",
@@ -5280,13 +5751,42 @@
         "description": "Cost increased from 25 to 28 points. No longer exhausts. Gained Critical 1 keyword. Dice changed from 1 black and 4 white to 2 black and 2 white."
       }
     ],
-    "id": "hb"
+    "id": "hb",
+    "weapons": [
+      {
+        "name": "M-45 Ion Blaster",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Critical",
+            "value": "1"
+          },
+          {
+            "name": "Impact",
+            "value": "1"
+          },
+          {
+            "name": "Ion",
+            "value": "1"
+          }
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 2
+        }
+      }
+    ]
   },
   "hc": {
     "cardSubtype": "hardpoint",
     "cardName": "Pintle-Mounted DLT-19",
     "cardType": "upgrade",
-    "cost": 18,
+    "cost": 14,
     "imageName": "DLT-19 Rifle Pintle.webp",
     "keywords": ["Impact"],
     "requirements": [
@@ -5294,13 +5794,36 @@
         "cardName": "TX-225 GAVw Occupier Tank"
       }
     ],
-    "id": "hc"
+    "id": "hc",
+    "weapons": [
+      {
+        "name": "DLT-19 Blaster Rifle",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "1"
+          }
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 18 to 14 points."
+      }
+    ]
   },
   "hd": {
     "cardSubtype": "hardpoint",
     "cardName": "Pintle-Mounted RT-97C",
     "cardType": "upgrade",
-    "cost": 14,
+    "cost": 10,
     "imageName": "RT-97C Rifle Pintle.webp",
     "keywords": [],
     "requirements": [
@@ -5308,7 +5831,25 @@
         "cardName": "TX-225 GAVw Occupier Tank"
       }
     ],
-    "id": "hd"
+    "id": "hd",
+    "weapons": [
+      {
+        "name": "RT-97C Blaster Rifle",
+        "keywords": [],
+        "range": [1, 4],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 3
+        }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 14 to 10 points."
+      }
+    ]
   },
   "he": {
     "id": "he",
@@ -5611,7 +6152,19 @@
         "description": "Cost reduced from 18 to 16 points."
       }
     ],
-    "id": "ho"
+    "id": "ho",
+    "weapons": [
+      {
+        "name": "E-5C Blaster Rifle",
+        "keywords": [],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      }
+    ]
   },
   "hp": {
     "displayName": "Z-6 Trooper",
@@ -5640,7 +6193,19 @@
         "description": "Requirement changed from Phase Is to Clone Trooper Infantry."
       }
     ],
-    "id": "hp"
+    "id": "hp",
+    "weapons": [
+      {
+        "name": "Z-6 Rotary Blaster",
+        "keywords": [],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 6
+        }
+      }
+    ]
   },
   "hq": {
     "displayName": "DC-15 Trooper",
@@ -5669,7 +6234,24 @@
         "description": "Cost reduced from 26 to 24 points."
       }
     ],
-    "id": "hq"
+    "id": "hq",
+    "weapons": [
+      {
+        "name": "DC-15 Clone Trooper",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": "1"
+          }
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
   "hr": {
     "displayName": "E-60R B1",
@@ -5694,7 +6276,25 @@
         "description": "No longer exhausts. Gained Cumbersome keyword. Dice changed from 1 red and 2 black to a single rainbow."
       }
     ],
-    "id": "hr"
+    "id": "hr",
+    "weapons": [
+      {
+        "name": "E-60R B1 Battle Droid",
+        "keywords": [
+          "Cumbersome",
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [2, 4],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
   },
   "hs": {
     "cardSubtype": "armament",
@@ -5714,7 +6314,24 @@
         "description": "Cost reduced from 10 to 5 points."
       }
     ],
-    "id": "hs"
+    "id": "hs",
+    "weapons": [
+      {
+        "name": "T-21 Blaster Rifle",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": "2"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 4
+        }
+      }
+    ]
   },
   "hx": {
     "cardSubtype": "force",
@@ -6076,7 +6693,7 @@
     "cardSubtype": "emplacement trooper",
     "rank": "corps",
     "faction": "rebels",
-    "cost": 38,
+    "cost": 40,
     "keywords": [
       {
         "name": "Detachment",
@@ -6144,6 +6761,10 @@
       {
         "date": "19 November 2020",
         "description": "Wound threshold increased from 3 to 4."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 38 to 40 points."
       }
     ],
     "detachment": "gv"
@@ -6174,7 +6795,24 @@
         "description": "Cost reduced from 26 to 22 points."
       }
     ],
-    "id": "ig"
+    "id": "ig",
+    "weapons": [
+      {
+        "name": "CM-0/93",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": "2"
+          }
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 4
+        }
+      }
+    ]
   },
   "ih": {
     "cardSubtype": "gear",
@@ -6350,7 +6988,24 @@
     "cost": 26,
     "imageName": "DLT-20A Trooper.webp",
     "keywords": ["Critical"],
-    "id": "iu"
+    "id": "iu",
+    "weapons": [
+      {
+        "name": "DLT-20A Trooper",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": "1"
+          }
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 1
+        }
+      }
+    ]
   },
   "iv": {
     "requirements": [
@@ -6383,7 +7038,24 @@
         "description": "Cost increased from 20 to 22 points. Requirement changed from Phase Is to Clone Trooper Infantry. Can now be used in melee. Diced changed from 2 black and 1 white to 2 red."
       }
     ],
-    "id": "iv"
+    "id": "iv",
+    "weapons": [
+      {
+        "name": "DP-23 Clone Trooper",
+        "keywords": [
+          {
+            "name": "Pierce",
+            "value": "1"
+          }
+        ],
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
   "iw": {
     "requirements": [
@@ -6404,7 +7076,24 @@
         "description": "Cost reduced from 20 to 18 points."
       }
     ],
-    "id": "iw"
+    "id": "iw",
+    "weapons": [
+      {
+        "name": "E-5s Sniper Rifle",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": "1"
+          }
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ]
   },
   "ix": {
     "requirements": [
@@ -6433,6 +7122,24 @@
         "description": "Cost increased from 21 to 23 points. Requirement changed from Phase Is to Clone Trooper Infantry or Clone Marksman."
       }
     ],
+    "weapons": [
+      {
+        "name": "RPS-6 Rocket Launcher",
+        "keywords": [
+          "Cumbersome",
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [2, 4],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ],
     "id": "ix"
   },
   "iy": {
@@ -6457,7 +7164,19 @@
         "description": "Cost reduced from 24 to 22 points."
       }
     ],
-    "id": "iy"
+    "id": "iy",
+    "weapons": [
+      {
+        "name": "RT-97C Blaster Rifle",
+        "keywords": [],
+        "range": [1, 4],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 3
+        }
+      }
+    ]
   },
   "iz": {
     "requirements": [
@@ -6485,7 +7204,24 @@
         "description": "Cost reduced from 15 to 13 points."
       }
     ],
-    "id": "iz"
+    "id": "iz",
+    "weapons": [
+      {
+        "name": "SX-21 Scatter Blaster",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "1"
+          }
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 2
+        }
+      }
+    ]
   },
   "ja": {
     "requirements": [
@@ -6513,7 +7249,24 @@
         "description": "Cost reduced from 22 to 20 points."
       }
     ],
-    "id": "ja"
+    "id": "ja",
+    "weapons": [
+      {
+        "name": "T-21 Repeating Blaster",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": "2"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 4
+        }
+      }
+    ]
   },
   "jb": {
     "requirements": [],
@@ -6677,6 +7430,18 @@
       "hitsurge": "h",
       "defsurge": "b"
     },
+    "weapons": [
+      {
+        "name": "Electro-Shock",
+        "keywords": ["Suppressive"],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 3
+        }
+      }
+    ],
     "history": [
       {
         "date": "19 November 2020",
@@ -6918,7 +7683,24 @@
         "description": "Cost reduced from 22 to 16 points."
       }
     ],
-    "id": "jw"
+    "id": "jw",
+    "weapons": [
+      {
+        "name": "Radiation Cannon",
+        "keywords": [
+          {
+            "name": "Poison",
+            "value": "1"
+          }
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
   "jx": {
     "cardSubtype": "squad leader",
@@ -7023,7 +7805,19 @@
         "description": "Cost reduced from 26 to 24 points."
       }
     ],
-    "id": "ke"
+    "id": "ke",
+    "weapons": [
+      {
+        "name": "Heavy Arm Cannon",
+        "keywords": [],
+        "range": [1, 2],
+        "dice": {
+          "r": 3,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
   "kf": {
     "id": "kf",
@@ -7036,6 +7830,7 @@
     "faction": "rebels",
     "isUnique": true,
     "cost": 90,
+    "equip": ["kh"],
     "keywords": [
       {
         "name": "Danger Sense",
@@ -7175,8 +7970,8 @@
   },
   "kh": {
     "cardSubtype": "armament",
-    "displayName": "A280",
-    "cardName": "A280, Rifle Config",
+    "cardName": "A280",
+    "ttsName": "A280, Rifle Config",
     "cardType": "upgrade",
     "cost": 0,
     "imageName": "A280-CFE.webp",
@@ -7193,7 +7988,42 @@
       }
     ],
     "isDoubleSided": true,
-    "id": "kh"
+    "id": "kh",
+    "weapons": [
+      {
+        "name": "A280 Pistol",
+        "keywords": [
+          "Long Shot",
+          {
+            "name": "Pierce",
+            "value": "1"
+          }
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 2,
+          "b": 1,
+          "w": 0
+        }
+      },
+      {
+        "name": "A280 Rifle",
+        "keywords": [
+          "Cumbersome",
+          "High Velocity",
+          {
+            "name": "Pierce",
+            "value": "1"
+          }
+        ],
+        "range": [1, 14],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ]
   },
   "kj": {
     "cardName": "Crack Shot",
@@ -7260,6 +8090,23 @@
         "date": "5 June 2023",
         "description": "Cost reduced from 30 to 15 points."
       }
+    ],
+    "weapons": [
+      {
+        "name": "Beam Cannon",
+        "keywords": [
+          {
+            "name": "Beam",
+            "value": 2
+          }
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
     ]
   },
   "kn": {
@@ -7270,7 +8117,28 @@
     "imageName": "Armor-Piercing Shells.webp",
     "keywords": ["Cycle", "Fixed", "Impact"],
     "requirements": [],
-    "id": "kn"
+    "id": "kn",
+    "weapons": [
+      {
+        "name": "Armor-Piercing Shells",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": "3"
+          }
+        ],
+        "range": [2, 3],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ]
   },
   "ko": {
     "cardSubtype": "heavy weapon",
@@ -7302,6 +8170,25 @@
         "description": "Cost increased from 18 to 20 points. Requirement changed from Phase IIs to Clone Trooper Infantry or Clone Marksman."
       }
     ],
+    "weapons": [
+      {
+        "name": "Mortar",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": 1
+          },
+          "Cumbersome",
+          "Suppressive"
+        ],
+        "range": [2, 4],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ],
     "id": "ko"
   },
   "kp": {
@@ -7327,7 +8214,26 @@
         "description": "Cost increased from 30 to 32 points."
       }
     ],
-    "id": "kp"
+    "id": "kp",
+    "weapons": [
+      {
+        "name": "B2-HA Cannon",
+        "keywords": [
+          "Blast",
+          "Cycle",
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [2, 3],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 1
+        }
+      }
+    ]
   },
   "kq": {
     "id": "kq",
@@ -7356,7 +8262,24 @@
         "cardName": "Saber-Class Tank"
       }
     ],
-    "id": "kr"
+    "id": "kr",
+    "weapons": [
+      {
+        "name": "Twin Laser Cannon",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": "1"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      }
+    ]
   },
   "ks": {
     "cardSubtype": "pilot",
@@ -7382,7 +8305,26 @@
     "cost": 12,
     "imageName": "Bunker Buster Shells.webp",
     "keywords": ["Blast", "Cycle", "Fixed", "Scatter"],
-    "requirements": []
+    "requirements": [],
+    "weapons": [
+      {
+        "name": "Bunker Buster Shells",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          "Blast",
+          "Scatter"
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 3
+        }
+      }
+    ]
   },
   "ku": {
     "id": "ku",
@@ -7392,7 +8334,29 @@
     "cost": 8,
     "imageName": "High-Energy Shells.webp",
     "keywords": ["Critical", "Cycle", "High Velocity", "Fixed"],
-    "requirements": []
+    "requirements": [],
+    "weapons": [
+      {
+        "name": "High-Energy Shells",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Critical",
+            "value": "1"
+          },
+          "High Velocity"
+        ],
+        "range": [2, 4],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 1
+        }
+      }
+    ]
   },
   "kv": {
     "id": "kv",
@@ -7934,6 +8898,27 @@
         "date": "19 July 2024",
         "description": "Cost increased from 30 to 40 points."
       }
+    ],
+    "weapons": [
+      {
+        "name": "BX Sniper Rifle",
+        "keywords": [
+          {
+            "name": "Immune",
+            "value": "Deflect"
+          },
+          {
+            "name": "Lethal",
+            "value": "1"
+          }
+        ],
+        "range": [1, 5],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
     ]
   },
   "le": {
@@ -7945,7 +8930,24 @@
     "cost": 3,
     "imageName": "EMP Droid Poppers.webp",
     "keywords": ["Ion"],
-    "requirements": []
+    "requirements": [],
+    "weapons": [
+      {
+        "name": "EMP Droid Poppers",
+        "keywords": [
+          {
+            "name": "Ion",
+            "value": 1
+          }
+        ],
+        "range": [1],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ]
   },
   "lf": {
     "id": "lf",
@@ -7964,6 +8966,27 @@
       {
         "date": "19 July 2024",
         "description": "Cost increased from 31 to 37 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "DC-15x ARC Trooper",
+        "keywords": [
+          {
+            "name": "Immune",
+            "value": "Deflect"
+          },
+          {
+            "name": "Lethal",
+            "value": "1"
+          }
+        ],
+        "range": [1, 5],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 0
+        }
       }
     ]
   },
@@ -7990,6 +9013,18 @@
         "date": "19 July 2024",
         "description": "Now works in melee. Upgrade type changed from heavy weapon to squad leader. Gained Charge keyword."
       }
+    ],
+    "weapons": [
+      {
+        "name": "Fives",
+        "keywords": [],
+        "range": [0, 3],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      }
     ]
   },
   "lh": {
@@ -7997,17 +9032,25 @@
     "cardSubtype": "heavy weapon",
     "cardName": "Echo",
     "title": "ARC Marksman",
-    "ttsName": "Echo, ARC Marksman",
     "isUnique": true,
     "cardType": "upgrade",
     "cost": 46,
     "imageName": "Echo ARC Marksman.webp",
     "keywords": [
       "Leader",
-      { "name": "Reliable", "value": 1 },
-      { "name": "Critical", "value": 1 },
+      {
+        "name": "Reliable",
+        "value": 1
+      },
+      {
+        "name": "Critical",
+        "value": 1
+      },
       "Immune: Deflect",
-      { "name": "Lethal", "value": 1 }
+      {
+        "name": "Lethal",
+        "value": 1
+      }
     ],
     "requirements": [
       "AND",
@@ -8036,6 +9079,31 @@
       {
         "date": "16 June 2025",
         "description": "Cost reduced from 52 to 46 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Echo's DC-15x",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": 1
+          },
+          {
+            "name": "Immune",
+            "value": "Deflect"
+          },
+          {
+            "name": "Lethal",
+            "value": 1
+          }
+        ],
+        "range": [1, 5],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
       }
     ]
   },
@@ -8071,6 +9139,18 @@
       {
         "cardName": "BX-Series Droid Commandos"
       }
+    ],
+    "weapons": [
+      {
+        "name": "BX Vibroswords",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 1
+        }
+      }
     ]
   },
   "ll": {
@@ -8078,12 +9158,36 @@
     "cardSubtype": "armament",
     "cardName": "Electro Gauntlets",
     "cardType": "upgrade",
-    "cost": 10,
+    "cost": 3,
     "imageName": "Electro Gauntlets.webp",
     "keywords": ["Immobilize", "Suppressive"],
     "requirements": [
       {
         "cardName": "Cad Bane"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Electro Gauntlets",
+        "keywords": [
+          {
+            "name": "Immobilize",
+            "value": "3"
+          },
+          "Suppressive"
+        ],
+        "range": [0],
+        "dice": {
+          "r": 4,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 10 to 3 points."
       }
     ]
   },
@@ -8193,6 +9297,24 @@
     "requirements": [
       {
         "cardName": "K-2SO"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "SE-14 Blaster",
+        "keywords": [
+          {
+            "name": "Pierce",
+            "value": "1"
+          },
+          "Suppressive"
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 5
+        }
       }
     ]
   },
@@ -8371,6 +9493,28 @@
       "hitsurge": "h",
       "defsurge": ""
     },
+    "weapons": [
+      {
+        "name": "Grappling Claws",
+        "keywords": ["Impact 1"],
+        "range": [0],
+        "dice": {
+          "r": 3,
+          "b": 0,
+          "w": 0
+        }
+      },
+      {
+        "name": "Rocket Launcher",
+        "keywords": ["Critical 1", "Impact 1"],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 2
+        }
+      }
+    ],
     "history": [
       {
         "date": "27 October 2021",
@@ -8505,6 +9649,18 @@
         "date": "27 October 2021",
         "description": "Cost reduced from 38 to 29 points."
       }
+    ],
+    "weapons": [
+      {
+        "name": "Gideon's E-11",
+        "keywords": [],
+        "range": [1, 3],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
     ]
   },
   "mf": {
@@ -8538,6 +9694,24 @@
       {
         "date": "19 July 2024",
         "description": "Cost increased from 25 to 35 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Del's DLT-19x",
+        "keywords": [
+          "High Velocity",
+          {
+            "name": "Lethal",
+            "value": 1
+          }
+        ],
+        "range": [1, 5],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
       }
     ]
   },
@@ -8600,6 +9774,24 @@
       {
         "date": "19 July 2024",
         "description": "Can now be used in melee. Lost Arm and Detonate keywords.Card lost surge to hit. Dice changed from 1 black and 2 white to a single rainbow."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Dioxis Mine Saboteur",
+        "keywords": [
+          "Blast",
+          {
+            "name": "Poison",
+            "value": "1"
+          }
+        ],
+        "range": [0, 1],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
       }
     ]
   },
@@ -8733,7 +9925,8 @@
         "date": "5 June 2023",
         "description": "Cost reduced from 34 to 30 points."
       }
-    ]
+    ],
+    "equip": ["mp", "mo"]
   },
   "mm": {
     "id": "mm",
@@ -8752,6 +9945,24 @@
       {
         "date": "5 June 2023",
         "description": "Cost reduced from 8 to 5 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Jetpack Rockets",
+        "keywords": [
+          "Blast",
+          {
+            "name": "Impact",
+            "value": "1"
+          }
+        ],
+        "range": [3, 4],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
       }
     ]
   },
@@ -8772,6 +9983,18 @@
       {
         "date": "5 June 2023",
         "description": "Cost reduced from 28 to 24 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Vibroblade",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
       }
     ]
   },
@@ -8794,6 +10017,18 @@
         "date": "5 June 2023",
         "description": "Cost reduced from 38 to 34 points."
       }
+    ],
+    "weapons": [
+      {
+        "name": "Ursa Wren",
+        "keywords": ["Long Shot"],
+        "range": [0, 2],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
     ]
   },
   "mp": {
@@ -8815,6 +10050,24 @@
         "date": "5 June 2023",
         "description": "Cost reduced from 38 to 34 points."
       }
+    ],
+    "weapons": [
+      {
+        "name": "Tristan Wren",
+        "keywords": [
+          {
+            "name": "Lethal",
+            "value": "1"
+          },
+          "Suppressive"
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
+      }
     ]
   },
   "mq": {
@@ -8829,6 +10082,18 @@
       {
         "faction": "separatists",
         "cardSubtype": "droid trooper"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "E-5 Blaster Rifle",
+        "keywords": ["Sidearm"],
+        "range": [1, 3],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
       }
     ]
   },
@@ -8929,7 +10194,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "empire",
-    "cost": 68,
+    "cost": 62,
     "keywords": [
       "Infiltrate",
       "Marksman",
@@ -8975,6 +10240,12 @@
           "b": 1,
           "w": 0
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 68 to 62 points."
       }
     ]
   },
@@ -9045,7 +10316,8 @@
           "w": 0
         }
       }
-    ]
+    ],
+    "equip": ["mf", "me"]
   },
   "mz": {
     "id": "mz",
@@ -9053,7 +10325,7 @@
     "displayName": "T-21 Trooper",
     "cardName": "T-21 Special Forces Trooper",
     "cardType": "upgrade",
-    "cost": 27,
+    "cost": 24,
     "imageName": "T-21 Special Forces Trooper.webp",
     "keywords": ["Critical"],
     "requirements": [
@@ -9072,6 +10344,27 @@
       {
         "date": "27 October 2021",
         "description": "Cost reduced from 29 to 27 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 27 to 24 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "T-21 Repeating Blaster",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": 2
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 4
+        }
       }
     ]
   },
@@ -9867,6 +11160,18 @@
         "date": "6 December 2024",
         "description": "Remove the Sidearm: Ranged keyword. Gain the Sidearm: Melee, Ranged keyword."
       }
+    ],
+    "weapons": [
+      {
+        "name": "Viper Recon Droid",
+        "keywords": ["Sidearm"],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 2
+        }
+      }
     ]
   },
   "of": {
@@ -10019,7 +11324,7 @@
     "cardSubtype": "repulsor vehicle",
     "rank": "heavy",
     "faction": "rebels",
-    "cost": 65,
+    "cost": 75,
     "keywords": [
       {
         "name": "Armor",
@@ -10051,6 +11356,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 75 to 65 points. Armor reduced to 5."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 65 to 75 points."
       }
     ]
   },
@@ -10062,7 +11371,7 @@
     "cardSubtype": "repulsor vehicle",
     "rank": "heavy",
     "faction": "empire",
-    "cost": 100,
+    "cost": 90,
     "keywords": [
       {
         "name": "Armor",
@@ -10101,7 +11410,11 @@
         "keywords": [
           {
             "name": "Fixed",
-            "value": "Front, Impact 1"
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": 1
           }
         ],
         "range": [1, 3],
@@ -10120,6 +11433,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 105 to 100 points. Armor reduced to 5. Gained a second Ordance upgrade. Laser cannons gained Impact 1 and changed from 1 red and 3 black to 2 red and 2 black."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 100 to 90 points."
       }
     ]
   },
@@ -10173,6 +11490,27 @@
       "hitsurge": "",
       "defsurge": "b"
     },
+    "weapons": [
+      {
+        "name": "Twin Laser Cannons",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": 1
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ],
     "history": [
       {
         "date": "27 October 2021",
@@ -10197,7 +11535,7 @@
     "cardSubtype": "hardpoint",
     "cardName": "Heavy Laser Retrofit",
     "cardType": "upgrade",
-    "cost": 12,
+    "cost": 7,
     "imageName": "Heavy Laser Retrofit.webp",
     "keywords": ["Critical"],
     "requirements": [
@@ -10209,6 +11547,27 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 16 to 12 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 12 to 7 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Heavy Laser Cannon",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": "1"
+          }
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
       }
     ]
   },
@@ -10311,7 +11670,7 @@
     "cardSubtype": "hardpoint",
     "cardName": "AG-2G Quad Laser",
     "cardType": "upgrade",
-    "cost": 20,
+    "cost": 10,
     "imageName": "AG-2G Quad Laser.webp",
     "keywords": ["Impact"],
     "requirements": [
@@ -10331,6 +11690,27 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 25 to 20 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 20 to 10 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "AG-2G Quad Laser Cannon",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 6,
+          "w": 0
+        }
       }
     ]
   },
@@ -10374,7 +11754,7 @@
     "cardSubtype": "crew",
     "cardName": "Unstable Astromech",
     "cardType": "upgrade",
-    "cost": 6,
+    "cost": 16,
     "imageName": "Unstable R5 Astromech.webp",
     "keywords": [],
     "requirements": [
@@ -10384,6 +11764,12 @@
       },
       {
         "cardName": "A-A5 Speeder Truck"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 6 to 16 points."
       }
     ]
   },
@@ -10498,6 +11884,28 @@
     "cost": 26,
     "imageName": "Battle Shield Wookiee.webp",
     "keywords": ["Armor", "Reconfigure"],
+    "weapons": [
+      {
+        "name": "Offense",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      },
+      {
+        "name": "Defense",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ],
     "isDoubleSided": true,
     "requirements": [
       {
@@ -10754,6 +12162,18 @@
     "cost": 26,
     "imageName": "Long Gun Wookiee.webp",
     "keywords": ["Suppressive"],
+    "weapons": [
+      {
+        "name": "Long Gun",
+        "keywords": ["Suppressive"],
+        "range": [1, 4],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ],
     "requirements": [
       {
         "cardName": "Wookiee Warriors"
@@ -11152,6 +12572,24 @@
       {
         "cardName": "IG-100 MagnaGuard"
       }
+    ],
+    "weapons": [
+      {
+        "name": "Electro-Whip",
+        "keywords": [
+          {
+            "name": "Immobilize",
+            "value": "1"
+          },
+          "Versatile"
+        ],
+        "range": [0, 1],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
     ]
   },
   "qc": {
@@ -11173,7 +12611,7 @@
     "cardSubtype": "heavy weapon",
     "cardName": "RPS-6 MagnaGuard",
     "cardType": "upgrade",
-    "cost": 40,
+    "cost": 32,
     "imageName": "RPS-6 MagnaGuard.webp",
     "keywords": ["Critical", "Impact"],
     "requirements": [
@@ -11189,6 +12627,31 @@
       {
         "date": "19 July 2024",
         "description": "Cost increased from 34 to 40 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 40 to 32 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "RPS-6",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": "1"
+          },
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [2, 4],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
       }
     ]
   },
@@ -11439,6 +12902,25 @@
         "date": "19 July 2024",
         "description": "Can now be used in melee."
       }
+    ],
+    "weapons": [
+      {
+        "name": "Flamethrower",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          "Blast",
+          "Spray"
+        ],
+        "range": [0, 1],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 1
+        }
+      }
     ]
   },
   "qp": {
@@ -11483,6 +12965,35 @@
         "date": "19 July 2024",
         "description": "Cost increased from 25 to 30 points. No longer exhausts. Lost Cycle and gained Critical 1 keywords."
       }
+    ],
+    "weapons": [
+      {
+        "name": "Ion Blaster",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Critical",
+            "value": "1"
+          },
+          {
+            "name": "Impact",
+            "value": "2"
+          },
+          {
+            "name": "Ion",
+            "value": "1"
+          }
+        ],
+        "range": [2, 4],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 3
+        }
+      }
     ]
   },
   "qr": {
@@ -11496,6 +13007,27 @@
     "requirements": [
       {
         "cardName": "DSD1 Dwarf Spider Droid"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Laser Cannon",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Critical",
+            "value": "1"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 1,
+          "b": 3,
+          "w": 1
+        }
       }
     ]
   },
@@ -11684,6 +13216,27 @@
         "date": "5 June 2023",
         "description": "Cost reduced from 40 to 25 points."
       }
+    ],
+    "weapons": [
+      {
+        "name": "Twin Blaster Cannons",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Critical",
+            "value": "2"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 6,
+          "w": 0
+        }
+      }
     ]
   },
   "qw": {
@@ -11708,6 +13261,27 @@
         "date": "19 July 2024",
         "description": "Cost increased from 25 to 30 points."
       }
+    ],
+    "weapons": [
+      {
+        "name": "Twin Beam Cannons",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Beam",
+            "value": 2
+          }
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 2
+        }
+      }
     ]
   },
   "qx": {
@@ -11727,6 +13301,27 @@
       {
         "date": "5 June 2023",
         "description": "Cost reduced from 40 to 25 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Missile Pods",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [2, 4],
+        "dice": {
+          "r": 4,
+          "b": 0,
+          "w": 0
+        }
       }
     ]
   },
@@ -11957,7 +13552,7 @@
     "stats": {
       "minicount": 4,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 1,
       "speed": 2,
       "hitsurge": "",
@@ -12068,7 +13663,7 @@
     "faction": "mercenary",
     "affiliation": "maul loyalist",
     "isUnique": true,
-    "cost": 95,
+    "cost": 90,
     "keywords": [
       {
         "name": "Jump",
@@ -12135,6 +13730,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 100 to 95 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 95 to 90 points."
       }
     ]
   },
@@ -12251,6 +13850,23 @@
         "date": "16 June 2025",
         "description": "Cost reduced from 24 to 22 points."
       }
+    ],
+    "weapons": [
+      {
+        "name": "P13-M Disruptor",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "1"
+          }
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 0
+        }
+      }
     ]
   },
   "rh": {
@@ -12264,6 +13880,24 @@
     "requirements": [
       {
         "cardName": "Pyke Syndicate Foot Soldiers"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Electro-Whip Soldier",
+        "keywords": [
+          {
+            "name": "Immobilize",
+            "value": "1"
+          },
+          "Suppressive"
+        ],
+        "range": [0, 1],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
       }
     ]
   },
@@ -12357,6 +13991,24 @@
       {
         "cardName": "Black Sun Enforcers"
       }
+    ],
+    "weapons": [
+      {
+        "name": "Mag-Detpack",
+        "keywords": [
+          "Blast",
+          {
+            "name": "Impact",
+            "value": "3"
+          }
+        ],
+        "range": [0, 1],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      }
     ]
   },
   "rn": {
@@ -12376,6 +14028,23 @@
       {
         "date": "15 April 2025",
         "description": "Can now be used in melee."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Scatter Gun",
+        "keywords": [
+          {
+            "name": "Pierce",
+            "value": "1"
+          }
+        ],
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
       }
     ]
   },
@@ -12397,7 +14066,19 @@
     "cost": 3,
     "imageName": "Sonic Imploders.webp",
     "keywords": ["Suppressive"],
-    "requirements": []
+    "requirements": [],
+    "weapons": [
+      {
+        "name": "Sonic Imploder",
+        "keywords": ["Suppressive"],
+        "range": [1],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ]
   },
   "rq": {
     "id": "rq",
@@ -12419,6 +14100,28 @@
       {
         "date": "16 June 2025",
         "description": "Cost reduced from 10 to 0 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "The Darksaber (Maul)",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "2"
+          },
+          {
+            "name": "Pierce",
+            "value": "2"
+          },
+          "Sidearm"
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 6,
+          "w": 0
+        }
       }
     ]
   },
@@ -12585,6 +14288,28 @@
         "date": "15 April 2025",
         "description": "Minimum range changed from 1 to 3."
       }
+    ],
+    "weapons": [
+      {
+        "name": "Super Commando Jetpack Rockets",
+        "keywords": [
+          "Blast",
+          {
+            "name": "Critical",
+            "value": "1"
+          },
+          {
+            "name": "Impact",
+            "value": "1"
+          }
+        ],
+        "range": [3, 4],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      }
     ]
   },
   "sb": {
@@ -12619,6 +14344,23 @@
         "date": "5 June 2023",
         "description": "Cost reduced from 30 to 28 points."
       }
+    ],
+    "weapons": [
+      {
+        "name": "Dual Blaster Pistols",
+        "keywords": [
+          {
+            "name": "Lethal",
+            "value": "1"
+          }
+        ],
+        "range": [0, 2],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 2
+        }
+      }
     ]
   },
   "sd": {
@@ -12638,6 +14380,18 @@
       {
         "date": "5 June 2023",
         "description": "Cost reduced from 30 to 28 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Super Commando Marksman",
+        "keywords": [],
+        "range": [1, 3],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
       }
     ]
   },
@@ -12660,6 +14414,18 @@
         "date": "15 April 2025",
         "description": "Can now be used in melee."
       }
+    ],
+    "weapons": [
+      {
+        "name": "Rook's Blaster Pistols",
+        "keywords": [],
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 2
+        }
+      }
     ]
   },
   "sf": {
@@ -12678,12 +14444,37 @@
     "cardName": "Saxon's Galar-90 Rifle",
     "isUnique": true,
     "cardType": "upgrade",
-    "cost": 15,
+    "cost": 10,
     "imageName": "Saxon's Galar-90 Rifle.webp",
     "keywords": ["High Velocity", "Lethal", "Long Shot"],
     "requirements": [
       {
         "cardName": "Gar Saxon"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Galar-90 Sniper Rifle",
+        "keywords": [
+          "High Velocity",
+          {
+            "name": "Lethal",
+            "value": "1"
+          },
+          "Long Shot"
+        ],
+        "range": [1, 4],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 15 to 10 points."
       }
     ]
   },
@@ -12700,6 +14491,24 @@
       {
         "cardName": "Gar Saxon"
       }
+    ],
+    "weapons": [
+      {
+        "name": "Jetpack Rockets",
+        "keywords": [
+          "Blast",
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [2, 3],
+        "dice": {
+          "r": 3,
+          "b": 0,
+          "w": 0
+        }
+      }
     ]
   },
   "si": {
@@ -12714,6 +14523,18 @@
     "requirements": [
       {
         "cardName": "Gar Saxon"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "ZX Flame Projector",
+        "keywords": ["Blast", "Spray", "Suppressive"],
+        "range": [0, 1],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 1
+        }
       }
     ]
   },
@@ -12755,7 +14576,7 @@
     "rank": "heavy",
     "faction": "mercenary",
     "subfaction": "raiders",
-    "cost": 65,
+    "cost": 75,
     "imageName": "A-A5 Speeder Truck M.webp",
     "keywords": [
       {
@@ -13594,6 +15415,24 @@
       {
         "cardName": "Din Djarin"
       }
+    ],
+    "weapons": [
+      {
+        "name": "Din's Amban Rifle",
+        "keywords": [
+          {
+            "name": "Immobilize",
+            "value": "2"
+          },
+          "Suppressive"
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      }
     ]
   },
   "tp": {
@@ -13656,6 +15495,18 @@
     "requirements": [
       {
         "cardName": "Din Djarin"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Beskar Spear",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 2,
+          "b": 1,
+          "w": 0
+        }
       }
     ]
   },
@@ -13929,7 +15780,7 @@
     "rank": "commander",
     "faction": "empire",
     "isUnique": true,
-    "cost": 100,
+    "cost": 80,
     "entourage": "tm",
     "keywords": [
       {
@@ -13986,6 +15837,12 @@
           "w": 0
         }
       }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 100 to 80 points."
+      }
     ]
   },
   "uj": {
@@ -14003,7 +15860,28 @@
       }
     ],
     "history": [],
-    "id": "uj"
+    "id": "uj",
+    "weapons": [
+      {
+        "name": "The Darksaber",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "1"
+          },
+          {
+            "name": "Pierce",
+            "value": "1"
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 5,
+          "w": 0
+        }
+      }
+    ]
   },
   "uk": {
     "id": "uk",
@@ -14049,7 +15927,7 @@
     "cardSubtype": "heavy weapon",
     "cardName": "XS-IV Assault Cannon",
     "cardType": "upgrade",
-    "cost": 55,
+    "cost": 49,
     "imageName": "XS-IV Assault Cannon.webp",
     "keywords": ["Critical"],
     "requirements": [
@@ -14061,6 +15939,27 @@
       {
         "date": "5 June 2023",
         "description": "Cost increased from 48 to 55 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 55 to 49 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "XS-IV Assault Cannon",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": "1"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 4,
+          "w": 0
+        }
       }
     ]
   },
@@ -14069,7 +15968,7 @@
     "cardSubtype": "heavy weapon",
     "cardName": "SM-9 Frag Launcher",
     "cardType": "upgrade",
-    "cost": 45,
+    "cost": 40,
     "imageName": "SM-9 Frag Launcher.webp",
     "keywords": ["Blast", "Impact", "Cycle"],
     "requirements": [
@@ -14081,6 +15980,29 @@
       {
         "date": "5 June 2023",
         "description": "Cost increased from 40 to 45 points."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 45 to 40 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "SM-9 Frag Launcher",
+        "keywords": [
+          "Blast",
+          "Cycle",
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 2,
+          "b": 1,
+          "w": 0
+        }
       }
     ]
   },
@@ -14089,7 +16011,7 @@
     "cardSubtype": "heavy weapon",
     "cardName": "Mertalizer",
     "cardType": "upgrade",
-    "cost": 36,
+    "cost": 30,
     "imageName": "Mertalizer.webp",
     "keywords": ["Suppressive"],
     "requirements": [
@@ -14097,19 +16019,42 @@
         "cardName": "Imperial Dark Troopers"
       }
     ],
-    "history": []
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 36 to 30 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Mertalizer",
+        "keywords": ["Suppressive"],
+        "range": [0],
+        "dice": {
+          "r": 2,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ]
   },
   "ur": {
     "id": "ur",
     "cardSubtype": "personnel",
     "cardName": "Imperial Dark Trooper",
     "cardType": "upgrade",
-    "cost": 32,
+    "cost": 28,
     "imageName": "Imperial Dark Trooper.webp",
     "keywords": [],
     "requirements": [
       {
         "cardName": "Imperial Dark Troopers"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 32 to 28 points."
       }
     ]
   },
@@ -14543,7 +16488,11 @@
         "keywords": [
           {
             "name": "Fixed",
-            "value": "Front, Impact 1"
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": 1
           }
         ],
         "range": [0],
@@ -14737,7 +16686,28 @@
         "cardName": "Ewok Slingers"
       }
     ],
-    "history": []
+    "history": [],
+    "weapons": [
+      {
+        "name": "Stone Axe",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
   "vs": {
     "id": "vs",
@@ -14786,7 +16756,7 @@
     "rank": "special",
     "faction": "mercenary",
     "affiliation": "ewok",
-    "cost": 35,
+    "cost": 38,
     "keywords": [
       {
         "name": "Mercenary",
@@ -14838,6 +16808,10 @@
       {
         "date": "19 July 2024",
         "description": "Gained Mercenary: Rebels keyword. Gained a second Personnel upgrade."
+      },
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 35 to 38 points."
       }
     ],
     "affiliations": ["rebels"]
@@ -15208,7 +17182,7 @@
     "rank": "operative",
     "faction": "empire",
     "isUnique": true,
-    "cost": 105,
+    "cost": 97,
     "keywords": [
       "Dauntless",
       "Block",
@@ -15271,6 +17245,12 @@
           "w": 0
         }
       }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 105 to 97 points."
+      }
     ]
   },
   "wm": {
@@ -15283,7 +17263,7 @@
     "rank": "operative",
     "faction": "empire",
     "isUnique": true,
-    "cost": 110,
+    "cost": 102,
     "keywords": [
       {
         "name": "Jump",
@@ -15350,6 +17330,12 @@
           "b": 3,
           "w": 0
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 110 to 102 points."
       }
     ],
     "associate": "wl"
@@ -15590,7 +17576,19 @@
       }
     ],
     "isDoubleSided": true,
-    "history": []
+    "history": [],
+    "weapons": [
+      {
+        "name": "Force Pike",
+        "keywords": ["Suppressive"],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ]
   },
   "ws": {
     "id": "ws",
@@ -15605,7 +17603,25 @@
         "cardName": "Geonosian Warriors"
       }
     ],
-    "history": []
+    "history": [],
+    "weapons": [
+      {
+        "name": "Sonic Cannon Warrior",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "1"
+          },
+          "Scatter"
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
   },
   "wt": {
     "id": "wt",
@@ -16048,7 +18064,8 @@
           "w": 1
         }
       }
-    ]
+    ],
+    "equip": ["xr", "xs", "xq", "xt", "xu"]
   },
   "xj": {
     "id": "xj",
@@ -16116,7 +18133,8 @@
         "date": "6 November 2024",
         "description": "Cost increased from 75 to 90 points."
       }
-    ]
+    ],
+    "equip": ["xl"]
   },
   "xk": {
     "displayName": "DC-17m ICWS",
@@ -16132,7 +18150,41 @@
       }
     ],
     "isDoubleSided": true,
-    "id": "xk"
+    "id": "xk",
+    "weapons": [
+      {
+        "name": "DC-17m ICWS Launcher",
+        "keywords": [
+          "Scatter",
+          {
+            "name": "Impact",
+            "value": "1"
+          }
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
+      },
+      {
+        "name": "DC-17m ICWS Sniper",
+        "keywords": [
+          "High Velocity",
+          {
+            "name": "Lethal",
+            "value": "1"
+          }
+        ],
+        "range": [3, 4],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
   "xl": {
     "cardSubtype": "gear",
@@ -16174,7 +18226,24 @@
         "cardName": "Range Troopers"
       }
     ],
-    "id": "xn"
+    "id": "xn",
+    "weapons": [
+      {
+        "name": "DLT-20A Range Trooper",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [1, 5],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
   "xo": {
     "cardSubtype": "heavy weapon",
@@ -16188,7 +18257,19 @@
         "cardName": "Range Troopers"
       }
     ],
-    "id": "xo"
+    "id": "xo",
+    "weapons": [
+      {
+        "name": "T-21A Repeating Blaster",
+        "keywords": ["Suppressive"],
+        "range": [1, 4],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 2
+        }
+      }
+    ]
   },
   "xp": {
     "id": "xp",
@@ -16260,8 +18341,8 @@
         "range": [1, 2],
         "dice": {
           "r": 0,
-          "b": 1,
-          "w": 1
+          "b": 2,
+          "w": 0
         }
       }
     ],
@@ -16270,14 +18351,14 @@
         "date": "6 November 2024",
         "description": "Cost increased from 100 to 105 points."
       }
-    ]
+    ],
+    "equip": ["xl"]
   },
   "xq": {
     "id": "xq",
     "cardSubtype": "heavy weapon",
     "cardName": "Echo",
     "title": "Clone Force 99",
-    "ttsName": "Echo, Clone Force 99",
     "isUnique": true,
     "cardType": "upgrade",
     "cost": 0,
@@ -16320,7 +18401,19 @@
         "cardName": "The Bad Batch"
       }
     ],
-    "history": []
+    "history": [],
+    "weapons": [
+      {
+        "name": "Wrecker",
+        "keywords": [],
+        "range": [0, 2],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
   },
   "xt": {
     "id": "xt",
@@ -16353,7 +18446,29 @@
         "cardName": "The Bad Batch"
       }
     ],
-    "history": []
+    "history": [],
+    "weapons": [
+      {
+        "name": "Crosshair",
+        "keywords": [
+          "High Velocity",
+          {
+            "name": "Pierce",
+            "value": 1
+          },
+          {
+            "name": "Critical",
+            "value": 1
+          }
+        ],
+        "range": [1, 5],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
   "xv": {
     "id": "xv",
@@ -16401,6 +18516,29 @@
       "hitsurge": "",
       "defsurge": ""
     },
+    "weapons": [
+      {
+        "name": "Advanced Combat Training",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      },
+      {
+        "name": "DC-17 Hand Blaster",
+        "keywords": [],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ],
+    "equip": ["xq", "xr", "xs", "xt"],
     "counterpartId": "xw"
   },
   "xw": {
@@ -16471,7 +18609,12 @@
     "weapons": [
       {
         "name": "Det Packs",
-        "keywords": [{ "name": "Impact", "value": 1 }],
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 1
+          }
+        ],
         "range": [0],
         "dice": {
           "r": 1,
@@ -16527,6 +18670,28 @@
       "hitsurge": "",
       "defsurge": ""
     },
+    "weapons": [
+      {
+        "name": "Stun Baton",
+        "keywords": ["Suppressive"],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      },
+      {
+        "name": "E-11 Blaster Rifle",
+        "keywords": [],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 1
+        }
+      }
+    ],
     "history": [
       {
         "date": "16 June 2025",
@@ -16571,7 +18736,28 @@
       "speed": 2,
       "hitsurge": "h",
       "defsurge": ""
-    }
+    },
+    "weapons": [
+      {
+        "name": "Crab Claws",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 2,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
   },
   "yb": {
     "id": "yb",
@@ -16590,6 +18776,23 @@
       {
         "date": "16 June 2025",
         "description": "Cost reduced from 30 to 18 points."
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Oppress",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "1"
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
       }
     ]
   },
@@ -16618,12 +18821,18 @@
     "cardSubtype": "personnel",
     "cardName": "Snowtrooper Squad",
     "cardType": "upgrade",
-    "cost": 46,
+    "cost": 40,
     "imageName": "Snowtrooper Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
       {
         "cardName": "Snowtroopers"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 46 to 40 points."
       }
     ]
   },
@@ -16700,12 +18909,18 @@
     "cardSubtype": "personnel",
     "cardName": "Ewok Slinger Squad",
     "cardType": "upgrade",
-    "cost": 23,
+    "cost": 27,
     "imageName": "Ewok Slinger Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
       {
         "cardName": "Ewok Slingers"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 23 to 27 points."
       }
     ]
   },
@@ -16714,12 +18929,18 @@
     "cardSubtype": "personnel",
     "cardName": "Fleet Trooper Squad",
     "cardType": "upgrade",
-    "cost": 45,
+    "cost": 40,
     "imageName": "Fleet Trooper Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
       {
         "cardName": "Fleet Troopers"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 45 to 40 points."
       }
     ]
   },
@@ -16742,12 +18963,18 @@
     "cardSubtype": "personnel",
     "cardName": "Rebel Trooper Squad",
     "cardType": "upgrade",
-    "cost": 45,
+    "cost": 40,
     "imageName": "Rebel Trooper Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
       {
         "cardName": "Rebel Troopers"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 45 to 40 points."
       }
     ]
   },
@@ -16805,6 +19032,27 @@
       {
         "cardName": "LM-432 Crab Droid"
       }
+    ],
+    "weapons": [
+      {
+        "name": "Heavy Laser Cannon",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "2"
+          },
+          {
+            "name": "Fixed",
+            "value": "Front"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 5,
+          "w": 0
+        }
+      }
     ]
   },
   "yr": {
@@ -16819,6 +19067,23 @@
       {
         "cardName": "LM-432 Crab Droid"
       }
+    ],
+    "weapons": [
+      {
+        "name": "Twin Blaster Cannons",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        }
+      }
     ]
   },
   "ys": {
@@ -16826,12 +19091,18 @@
     "cardSubtype": "personnel",
     "cardName": "Clone Trooper Infantry Squad",
     "cardType": "upgrade",
-    "cost": 56,
+    "cost": 53,
     "imageName": "Clone Trooper Infantry Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
       {
         "cardName": "Clone Trooper Infantry"
+      }
+    ],
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost reduced from 56 to 53 points."
       }
     ]
   },
@@ -17092,7 +19363,7 @@
     "cardSubtype": "ground vehicle",
     "rank": "heavy",
     "faction": "separatists",
-    "cost": 65,
+    "cost": 78,
     "imageName": "Aqua Droids.webp",
     "keywords": [
       {
@@ -17115,10 +19386,21 @@
       "hitsurge": "h",
       "defsurge": "b"
     },
+    "history": [
+      {
+        "date": "15 November 2025",
+        "description": "Cost increased from 65 to 78 points."
+      }
+    ],
     "weapons": [
       {
         "name": "Crushing Punch",
-        "keywords": [{ "name": "Impact", "value": 1 }],
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 1
+          }
+        ],
         "range": [0],
         "dice": {
           "r": 1,
@@ -17149,6 +19431,23 @@
     "requirements": [
       {
         "cardName": "Aqua Droids"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Heavy Blaster",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 1
+        }
       }
     ]
   },
@@ -17229,6 +19528,28 @@
       {
         "rank": "special"
       }
+    ],
+    "weapons": [
+      {
+        "name": "Jedi Guardian",
+        "keywords": [
+          "Sidearm",
+          {
+            "name": "Pierce",
+            "value": "1"
+          },
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
     ]
   },
   "Ba": {
@@ -17242,6 +19563,24 @@
     "requirements": [
       {
         "cardName": "ARF Troopers"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "RPS-6 ARF Trooper",
+        "keywords": [
+          "Cumbersome",
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [2, 4],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
       }
     ]
   },
@@ -17301,14 +19640,34 @@
       "speed": 3,
       "hitsurge": "c",
       "defsurge": ""
-    }
+    },
+    "weapons": [
+      {
+        "name": "Ahsoka's Lightsabers",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 5,
+          "w": 3
+        }
+      }
+    ]
   },
   "Bd": {
     "id": "Bd",
     "cardName": "Ahsoka Tano",
     "title": "Jedi Padawan",
     "cardSubtype": "squad leader",
-    "ttsName": "Ahsoka Tano, Jedi Padawan",
     "isUnique": true,
     "cardType": "upgrade",
     "cost": 35,
@@ -17326,6 +19685,31 @@
     "requirements": [
       {
         "cardSubtype": "clone trooper"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Ahsoka's Lightsabers",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": "1"
+          },
+          {
+            "name": "Impact",
+            "value": "2"
+          },
+          {
+            "name": "Pierce",
+            "value": "1"
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 2
+        }
       }
     ]
   },
@@ -17377,15 +19761,20 @@
   "Bi": {
     "id": "Bi",
     "cardName": "Clone Trooper Marksmen",
-    "isUnreleased": "Q4 2025",
     "cardType": "unit",
     "cardSubtype": "clone trooper",
     "rank": "corps",
     "faction": "republic",
-    "cost": 0,
+    "cost": 50,
     "imageName": "Clone Trooper Marksmen.webp",
     "keywords": ["Prepared Position", "Marksman"],
-    "upgradeBar": [],
+    "upgradeBar": [
+      "squad leader",
+      "heavy weapon",
+      "personnel",
+      "training",
+      "gear"
+    ],
     "stats": {
       "minicount": 4,
       "hp": 1,
@@ -17419,9 +19808,9 @@
     ]
   },
   "Bj": {
+    "isHondo": "Q1 2026",
     "id": "Bj",
     "cardName": "Hondo Ohnaka",
-    "isUnreleased": "Q1 2026",
     "title": "Trustworthy Compatriot",
     "imageName": "Hondo Ohnaka.webp",
     "cardType": "unit",
@@ -17499,7 +19888,11 @@
     "keywords": [],
     "requirements": [
       {
-        "keywords": [{ "name": "Speeder" }]
+        "keywords": [
+          {
+            "name": "Speeder"
+          }
+        ]
       }
     ],
     "id": "Bk",
@@ -17728,7 +20121,6 @@
     "faction": "rebels",
     "cost": 50,
     "imageName": "Rebel Agent.webp",
-    "isUnreleased": "Q4 2025",
     "keywords": [
       "Nimble",
       {
@@ -17790,7 +20182,6 @@
     "faction": "rebels",
     "cost": 55,
     "imageName": "Rebel Officer.webp",
-    "isUnreleased": "Q4 2025",
     "keywords": [
       {
         "name": "Inspire",
@@ -17852,7 +20243,6 @@
     "faction": "empire",
     "cost": 50,
     "imageName": "Imperial Agent.webp",
-    "isUnreleased": "Q4 2025",
     "keywords": [
       "Relentless",
       {
@@ -17910,7 +20300,6 @@
     "faction": "empire",
     "cost": 55,
     "imageName": "Imperial Officer.webp",
-    "isUnreleased": "Q4 2025",
     "keywords": [
       {
         "name": "Inspire",
@@ -18075,8 +20464,8 @@
         "value": "Emplacement Trooper"
       },
       {
-        "name":"Prepared Position",
-        "isPermanent":true
+        "name": "Prepared Position",
+        "isPermanent": true
       },
       {
         "name": "Spotter",
@@ -18203,7 +20592,25 @@
         "cardName": "Imperial Officer"
       }
     ],
-    "history": []
+    "history": [],
+    "weapons": [
+      {
+        "name": "Heavy Blaster Pistol",
+        "keywords": [
+          {
+            "name": "Lethal",
+            "value": "1"
+          },
+          "Long Shot"
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
   "Cl": {
     "id": "Cl",
@@ -18231,7 +20638,24 @@
         "cardName": "Imperial Officer"
       }
     ],
-    "history": []
+    "history": [],
+    "weapons": [
+      {
+        "name": "Stun Baton",
+        "keywords": [
+          {
+            "name": "Immobilize",
+            "value": "1"
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 5,
+          "w": 0
+        }
+      }
+    ]
   },
   "Cm": {
     "id": "Cm",
@@ -18250,7 +20674,19 @@
         "cardName": "Imperial Officer"
       }
     ],
-    "history": []
+    "history": [],
+    "weapons": [
+      {
+        "name": "Z-6 Riot Baton",
+        "keywords": ["Suppressive"],
+        "range": [0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ]
   },
   "Cn": {
     "id": "Cn",
@@ -18319,9 +20755,9 @@
     "isUnique": true,
     "keywords": [
       {
-        "name":"Prepared Position",
-        "isPermanent":true
-      }, 
+        "name": "Prepared Position",
+        "isPermanent": true
+      },
       "Low Profile"
     ],
     "requirements": [
@@ -18405,7 +20841,29 @@
         "cardName": "Rebel Officer"
       }
     ],
-    "history": []
+    "history": [],
+    "weapons": [
+      {
+        "name": "Repeating Blaster",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": "1"
+          },
+          {
+            "name": "Impact",
+            "value": "1"
+          },
+          "Long Shot"
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 3
+        }
+      }
+    ]
   },
   "Cu": {
     "id": "Cu",
@@ -18434,7 +20892,24 @@
         "cardName": "Rebel Officer"
       }
     ],
-    "history": []
+    "history": [],
+    "weapons": [
+      {
+        "name": "Heavy Blaster Pistol",
+        "keywords": [
+          {
+            "name": "Lethal",
+            "value": "1"
+          }
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 1
+        }
+      }
+    ]
   },
   "Cv": {
     "id": "Cv",
@@ -18463,7 +20938,28 @@
         "cardName": "Rebel Officer"
       }
     ],
-    "history": []
+    "history": [],
+    "weapons": [
+      {
+        "name": "Vibro Axe",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "1"
+          },
+          {
+            "name": "Lethal",
+            "value": "1"
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 3,
+          "w": 0
+        }
+      }
+    ]
   },
   "Cw": {
     "id": "Cw",
@@ -18508,9 +21004,26 @@
         "cardName": "Rebel Officer"
       }
     ],
-    "history": []
+    "history": [],
+    "weapons": [
+      {
+        "name": "Thermal Detonator",
+        "keywords": [
+          "Blast",
+          {
+            "name": "Impact",
+            "value": "4"
+          }
+        ],
+        "range": [0, 1],
+        "dice": {
+          "r": 4,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
   },
-
   "Cz": {
     "id": "Cz",
     "cardName": "Jedi Knight General",
@@ -18520,19 +21033,17 @@
     "rank": "commander",
     "faction": "republic",
     "cost": 105,
-    "imageName": "Rebel Agent.webp",
-    "isUnreleased": "7 Nov 2025",
+    "imageName": "Jedi Knight General.webp",
     "keywords": [
       "Deflect",
       {
         "name": "Equip",
-        "value": "Armament"
+        "value": "Doctrine, Armament"
       },
       {
-        "name": "Equip",
-        "value": "Doctrine"
+        "name": "Immune",
+        "value": "Pierce"
       },
-      "Immune: Pierce",
       {
         "name": "Master of the Force",
         "value": 1
@@ -18554,7 +21065,8 @@
       "speed": 2,
       "hitsurge": "",
       "defsurge": ""
-    }
+    },
+    "weapons": []
   },
   "Da": {
     "id": "Da",
@@ -18565,35 +21077,29 @@
     "rank": "operative",
     "faction": "republic",
     "cost": 85,
-    "imageName": "Rebel Officer.webp",
-    "isUnreleased": "7 Nov 2025",
+    "imageName": "Jedi Knight.webp",
     "keywords": [
       "Deflect",
       {
         "name": "Equip",
-        "value": "Armament"
+        "value": "Doctrine, Armament"
       },
       {
-        "name": "Equip",
-        "value": "Doctrine"
-      },
-      "Immune: Pierce"
+        "name": "Immune",
+        "value": "Pierce"
+      }
     ],
-    "upgradeBar": [
-      "doctrine",
-      "force",
-      "training",
-      "armament"
-    ],
+    "upgradeBar": ["doctrine", "force", "training", "armament"],
     "stats": {
       "minicount": 1,
-      "hp": 6,
+      "hp": 5,
       "defense": "r",
-      "courage": 3,
+      "courage": 2,
       "speed": 2,
       "hitsurge": "",
       "defsurge": ""
-    }
+    },
+    "weapons": []
   },
   "Db": {
     "id": "Db",
@@ -18601,9 +21107,9 @@
     "cardType": "upgrade",
     "cardSubtype": "doctrine",
     "cost": 5,
-    "imageName": "Academy Trained.webp",
-    "additionalUpgradeSlots":["command"],
+    "imageName": "General of the Republic.webp",
     "isUnique": true,
+    "additionalUpgradeSlots": ["command"],
     "keywords": [
       {
         "name": "Bolster",
@@ -18631,12 +21137,10 @@
     "cardType": "upgrade",
     "cardSubtype": "doctrine",
     "cost": 8,
-    "imageName": "Tip of the Spear.webp",
+    "imageName": "Jedi Consular.webp",
     "isUnique": true,
     "additionalUpgradeSlots": ["force"],
-    "keywords": [
-      "Steady"
-    ],
+    "keywords": ["Steady"],
     "requirements": [
       "OR",
       {
@@ -18646,14 +21150,17 @@
         "cardName": "Jedi Knight General"
       }
     ],
-    "weapons":[
+    "weapons": [
       {
         "name": "Force Blast",
         "keywords": [
-          "Blast", 
-          {"name":"Impact", "value":2} 
+          "Blast",
+          {
+            "name": "Impact",
+            "value": "2"
+          }
         ],
-        "range": [1,2],
+        "range": [1, 2],
         "dice": {
           "r": 0,
           "b": 3,
@@ -18669,7 +21176,7 @@
     "cardType": "upgrade",
     "cardSubtype": "doctrine",
     "cost": 5,
-    "imageName": "Tip of the Spear.webp",
+    "imageName": "Jedi Negotiator.webp",
     "isUnique": true,
     "additionalUpgradeSlots": ["training"],
     "keywords": [],
@@ -18682,15 +21189,11 @@
         "cardName": "Jedi Knight General"
       }
     ],
-    "weapons":[
+    "weapons": [
       {
         "name": "Force Shove",
-        "keywords": [
-          "Blast",
-          "Spray",
-          "Suppressive" 
-        ],
-        "range": [1,2],
+        "keywords": ["Blast", "Spray", "Suppressive"],
+        "range": [1, 2],
         "dice": {
           "r": 0,
           "b": 0,
@@ -18707,12 +21210,15 @@
     "cardType": "upgrade",
     "cardSubtype": "doctrine",
     "cost": 10,
-    "imageName": "Tip of the Spear.webp",
+    "imageName": "Jedi Guardian (Doctrine).webp",
     "isUnique": true,
     "TODO": "ADD SURGE: HIT",
     "keywords": [
       "Charge",
-      {"name":"Lethal", "value":1}
+      {
+        "name": "Lethal",
+        "value": 1
+      }
     ],
     "requirements": [
       "OR",
@@ -18731,10 +21237,8 @@
     "cardType": "upgrade",
     "cardSubtype": "armament",
     "cost": 0,
-    "imageName": "Tip of the Spear.webp",
-    "keywords": [
-      {"name":"Block", "isPermanent":true}
-    ],
+    "imageName": "Lightsaber.webp",
+    "keywords": [{ "name": "Block", "isPermanent": true }],
     "requirements": [
       "OR",
       {
@@ -18744,13 +21248,22 @@
         "cardName": "Jedi Knight General"
       }
     ],
-    "weapons":[
+    "weapons": [
       {
         "name": "Lightsaber",
         "keywords": [
-        {"name":"Critical", "value":1},
-        {"name":"Impact", "value":2},
-        {"name":"Pierce", "value":1}
+          {
+            "name": "Critical",
+            "value": 1
+          },
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
         ],
         "range": [0],
         "dice": {
@@ -18768,9 +21281,8 @@
     "cardType": "upgrade",
     "cardSubtype": "armament",
     "cost": 0,
-    "imageName": "Tip of the Spear.webp",
-    "keywords": [
-    ],
+    "imageName": "Twin Lightsabers.webp",
+    "keywords": [],
     "requirements": [
       "OR",
       {
@@ -18780,13 +21292,19 @@
         "cardName": "Jedi Knight General"
       }
     ],
-    "weapons":[
+    "weapons": [
       {
         "name": "Twin Lightsabers",
         "keywords": [
           "High Velocity",
-          {"name":"Impact", "value":2},
-          {"name":"Pierce", "value":1}
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
         ],
         "range": [0],
         "dice": {
@@ -18799,15 +21317,18 @@
     "history": []
   },
   "Dh": {
-    "id": "Dg",
+    "id": "Dh",
     "cardName": "Double-Bladed Lightsaber",
     "cardType": "upgrade",
     "cardSubtype": "armament",
     "cost": 0,
-    "imageName": "Tip of the Spear.webp",
+    "imageName": "Double-Bladed Lightsaber.webp",
     "keywords": [
-      {"name":"Tactical", "value":1},
-      "Charge"
+      "Charge",
+      {
+        "name": "Tactical",
+        "value": 1
+      }
     ],
     "requirements": [
       "OR",
@@ -18818,13 +21339,22 @@
         "cardName": "Jedi Knight General"
       }
     ],
-    "weapons":[
+    "weapons": [
       {
         "name": "Double-Bladed Lightsaber",
         "keywords": [
-          {"name":"Ram", "value":1},
-          {"name":"Impact", "value":2},
-          {"name":"Pierce", "value":1}
+          {
+            "name": "Ram",
+            "value": 1
+          },
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
         ],
         "range": [0],
         "dice": {
@@ -18837,19 +21367,26 @@
     "history": []
   },
   "Di": {
+    "id": "Di",
     "cardName": "Jedi Training",
     "title": "Master Duelist",
-    "displayName":"Jedi, Master Duelist",
+    "displayName": "Jedi Training, Master Duelist",
     "cardType": "upgrade",
     "cardSubtype": "training",
     "cost": 8,
-    "uniqueCount":2,
-    "imageName": "On The Hunt.webp",
+    "uniqueCount": 2,
+    "imageName": "Master Duelist.webp",
     "keywords": [
-      "Block", 
-      "Outmaneuver", 
-      {"name":"Critical", "value":1}, 
-      {"name":"Jump", "value":1}
+      "Block",
+      "Outmaneuver",
+      {
+        "name": "Critical",
+        "value": 1
+      },
+      {
+        "name": "Jump",
+        "value": 1
+      }
     ],
     "requirements": [
       "OR",
@@ -18859,23 +21396,27 @@
       {
         "cardName": "Jedi Knight General"
       }
-    ],    
-    "id": "Di",
+    ],
     "history": []
   },
   "Dj": {
+    "id": "Dj",
     "cardName": "Jedi Training",
     "title": "Peacekeeping Mission",
-    "displayName":"Jedi, Peace Mission",
+    "displayName": "Jedi Training, Peacekeeping Mission",
     "cardType": "upgrade",
     "cardSubtype": "training",
     "cost": 8,
-    "uniqueCount":2,
-    "imageName": "On The Hunt.webp",
+    "uniqueCount": 2,
+    "imageName": "Peacekeeping Mission.webp",
     "keywords": [
-      {"name":"Prepared Position", "isPermanent":true}, 
-      {"name":"Reliable", "value":2},
-      "Sentinel" 
+      { "name": "Prepared Position", "isPermanent": true },
+      "Outmaneuver",
+      {
+        "name": "Reliable",
+        "value": 2
+      },
+      "Sentinel"
     ],
     "requirements": [
       "OR",
@@ -18885,22 +21426,25 @@
       {
         "cardName": "Jedi Knight General"
       }
-    ],    
-    "id": "Dj",
+    ],
     "history": []
   },
   "Dk": {
+    "id": "Dk",
     "cardName": "Jedi Training",
     "title": "Force Adept",
-    "displayName":"Jedi, Force Adept",
+    "displayName": "Jedi Training, Force Adept",
     "cardType": "upgrade",
     "cardSubtype": "training",
     "cost": 5,
-    "uniqueCount":2,
-    "imageName": "On The Hunt.webp",
+    "uniqueCount": 2,
+    "imageName": "Force Adept.webp",
     "additionalUpgradeSlots": ["force"],
     "keywords": [
-      {"name":"Jump", "value":2} 
+      {
+        "name": "Jump",
+        "value": 2
+      }
     ],
     "requirements": [
       "OR",
@@ -18910,21 +21454,24 @@
       {
         "cardName": "Jedi Knight General"
       }
-    ],    
-    "id": "Dk",
+    ],
     "history": []
   },
   "Dl": {
+    "id": "Dl",
     "cardName": "Jedi Training",
     "title": "Tactical Acumen",
-    "displayName":"Jedi, Tactical Acumen",
+    "displayName": "Jedi Training, Tactical Acumen",
     "cardType": "upgrade",
     "cardSubtype": "training",
     "cost": 8,
-    "uniqueCount":2,
-    "imageName": "On The Hunt.webp",
+    "uniqueCount": 2,
+    "imageName": "Tactical Acumen.webp",
     "keywords": [
-      {"name":"Guidance", "value":"Corps Trooper"} 
+      {
+        "name": "Guidance",
+        "value": "Core Trooper Unit"
+      }
     ],
     "requirements": [
       "OR",
@@ -18934,16 +21481,31 @@
       {
         "cardName": "Jedi Knight General"
       }
-    ],    
-    "id": "Dl",
+    ],
     "history": []
   },
-
-
-
-
   "Dm": {
     "id": "Dm",
+    "cardName": "Flow of the Force",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": ["Jedi Knight", "Jedi Knight General"],
+    "imageName": "Flow of the Force.webp",
+    "faction": "republic",
+    "keywords": []
+  },
+  "Dn": {
+    "id": "Dn",
+    "cardName": "Affirmative, General!",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": ["Jedi Knight", "Jedi Knight General"],
+    "imageName": "Affirmative, General.webp",
+    "faction": "republic",
+    "keywords": []
+  },
+  "Do": {
+    "id": "Do",
     "cardName": "Super Tactical Command Droid",
     "title": "Command and Control Droid",
     "cardType": "unit",
@@ -18951,14 +21513,13 @@
     "rank": "commander",
     "faction": "separatists",
     "cost": 70,
-    "imageName": "Rebel Agent.webp",
-    "isUnreleased": "7 Nov 2025",
+    "imageName": "Command and Control Droid.webp",
     "keywords": [
+      "Override",
       {
         "name": "Equip",
         "value": "Doctrine"
-      },
-     "Override"
+      }
     ],
     "upgradeBar": [
       "doctrine",
@@ -18979,11 +21540,10 @@
       "hitsurge": "h",
       "defsurge": ""
     },
-    "weapons":[
+    "weapons": [
       {
         "name": "Aggression Protocol",
-        "keywords": [
-        ],
+        "keywords": [],
         "range": [0],
         "dice": {
           "r": 0,
@@ -18993,9 +21553,8 @@
       },
       {
         "name": "E-5 Blaster Rifle",
-        "keywords": [
-        ],
-        "range": [1,3],
+        "keywords": [],
+        "range": [1, 3],
         "dice": {
           "r": 0,
           "b": 3,
@@ -19004,8 +21563,8 @@
       }
     ]
   },
-  "Dn": {
-    "id": "Dn",
+  "Dp": {
+    "id": "Dp",
     "cardName": "Super Tactical Command Droid",
     "title": "Auxiliary Command Droid",
     "cardType": "unit",
@@ -19013,15 +21572,17 @@
     "rank": "operative",
     "faction": "separatists",
     "cost": 60,
-    "imageName": "Rebel Agent.webp",
-    "isUnreleased": "7 Nov 2025",
+    "imageName": "Auxiliary Command Droid.webp",
     "keywords": [
-      {"name":"Aid", "value":"Droid Trooper"},
+      "Override",
       {
         "name": "Equip",
         "value": "Doctrine"
       },
-     "Override"
+      {
+        "name": "Aid",
+        "value": "Droid Trooper"
+      }
     ],
     "upgradeBar": [
       "doctrine",
@@ -19041,11 +21602,10 @@
       "hitsurge": "h",
       "defsurge": ""
     },
-    "weapons":[
+    "weapons": [
       {
         "name": "Aggression Protocol",
-        "keywords": [
-        ],
+        "keywords": [],
         "range": [0],
         "dice": {
           "r": 0,
@@ -19055,9 +21615,8 @@
       },
       {
         "name": "E-5 Blaster Rifle",
-        "keywords": [
-        ],
-        "range": [1,3],
+        "keywords": [],
+        "range": [1, 3],
         "dice": {
           "r": 0,
           "b": 3,
@@ -19066,55 +21625,16 @@
       }
     ]
   },
-  "Do": {
-    "id": "Do",
+  "Dq": {
+    "id": "Dq",
     "cardName": "Tyrannical Taskmaster",
     "cardType": "upgrade",
     "cardSubtype": "doctrine",
     "cost": 8,
-    "imageName": "Academy Trained.webp",
-    "additionalUpgradeSlots":["programming"],
+    "imageName": "Tyrannical Taskmaster.webp",
+    "additionalUpgradeSlots": ["programming"],
     "uniqueCount": 2,
-    "keywords": [
-    ],
-    "requirements": [
-      {
-        "cardName": "Super Tactical Command Droid"
-      }
-    ],
-    "history": []
-  },
-  "Dp": {
-    "id": "Dp",
-    "cardName": "Seek and Destroy",
-    "cardType": "upgrade",
-    "cardSubtype": "doctrine",
-    "cost": 5,
-    "imageName": "Academy Trained.webp",
-    "additionalUpgradeSlots":["training"],
-    "uniqueCount": 2,
-    "keywords": [
-      {"name":"Demoralize", "value":1},
-      "Marksman",
-      {"name":"Target", "value":1}
-    ],
-    "requirements": [
-      {
-        "cardName": "Super Tactical Command Droid"
-      }
-    ],
-    "history": []
-  },
-  "Dq": {
-    "id": "Dq",
-    "cardName": "Sliced Comms",
-    "cardType": "upgrade",
-    "cardSubtype": "programming",
-    "cost": 8,
-    "imageName": "Academy Trained.webp",
-    "uniqueCount": 2,
-    "keywords": [
-    ],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Super Tactical Command Droid"
@@ -19124,13 +21644,23 @@
   },
   "Dr": {
     "id": "Dr",
-    "cardName": "Overclock",
+    "cardName": "Seek and Destroy",
     "cardType": "upgrade",
-    "cardSubtype": "programming",
+    "cardSubtype": "doctrine",
     "cost": 5,
-    "imageName": "Academy Trained.webp",
+    "imageName": "Seek and Destroy.webp",
+    "additionalUpgradeSlots": ["training"],
     "uniqueCount": 2,
     "keywords": [
+      {
+        "name": "Demoralize",
+        "value": 1
+      },
+      "Marksman",
+      {
+        "name": "Target",
+        "value": 1
+      }
     ],
     "requirements": [
       {
@@ -19141,14 +21671,13 @@
   },
   "Ds": {
     "id": "Ds",
-    "cardName": "Targeting Relay",
+    "cardName": "Sliced Comms",
     "cardType": "upgrade",
     "cardSubtype": "programming",
-    "cost": 5,
-    "imageName": "Academy Trained.webp",
+    "cost": 8,
+    "imageName": "Sliced Comms.webp",
     "uniqueCount": 2,
-    "keywords": [
-    ],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Super Tactical Command Droid"
@@ -19158,14 +21687,13 @@
   },
   "Dt": {
     "id": "Dt",
-    "cardName": "Limiter Override",
+    "cardName": "Overclock",
     "cardType": "upgrade",
     "cardSubtype": "programming",
     "cost": 5,
-    "imageName": "Academy Trained.webp",
+    "imageName": "Overclock.webp",
     "uniqueCount": 2,
-    "keywords": [
-    ],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Super Tactical Command Droid"
@@ -19174,16 +21702,15 @@
     "history": []
   },
   "Du": {
-    "Du":"hast",
+    "Du": "hast",
     "id": "Du",
-    "cardName": "Optimized Task Flow",
+    "cardName": "Targeting Relay",
     "cardType": "upgrade",
     "cardSubtype": "programming",
-    "cost": 8,
-    "imageName": "Academy Trained.webp",
-    "keywords": [
-      {"name":"Direct","value":"AI Unit"}
-    ],
+    "cost": 5,
+    "imageName": "Targeting Relay.webp",
+    "uniqueCount": 2,
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Super Tactical Command Droid"
@@ -19193,14 +21720,13 @@
   },
   "Dv": {
     "id": "Dv",
-    "cardName": "Strategic Programming",
+    "cardName": "Limiter Override",
     "cardType": "upgrade",
     "cardSubtype": "programming",
-    "cost": 8,
-    "imageName": "Academy Trained.webp",
-    "keywords": [
-      {"name":"Strategize","value":1}
-    ],
+    "cost": 5,
+    "imageName": "Limiter Override.webp",
+    "uniqueCount": 2,
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Super Tactical Command Droid"
@@ -19210,14 +21736,16 @@
   },
   "Dw": {
     "id": "Dw",
-    "cardName": "Enhanced Combat Subroutines",
+    "cardName": "Optimized Task Flow",
     "cardType": "upgrade",
     "cardSubtype": "programming",
-    "cost": 5,
-    "imageName": "Academy Trained.webp",
+    "cost": 8,
+    "imageName": "Optimized Task Flow.webp",
     "keywords": [
-      {"name":"Sharpshooter","value":1},
-      {"name":"Lethal","value":1}
+      {
+        "name": "Direct",
+        "value": "AI Unit"
+      }
     ],
     "requirements": [
       {
@@ -19225,5 +21753,1116 @@
       }
     ],
     "history": []
+  },
+  "Dx": {
+    "id": "Dx",
+    "cardName": "Strategic Programming",
+    "cardType": "upgrade",
+    "cardSubtype": "programming",
+    "cost": 8,
+    "imageName": "Strategic Programming.webp",
+    "keywords": [
+      {
+        "name": "Strategize",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "history": []
+  },
+  "Dy": {
+    "id": "Dy",
+    "cardName": "Enhanced Combat Subroutines",
+    "cardType": "upgrade",
+    "cardSubtype": "programming",
+    "cost": 5,
+    "imageName": "Enhanced Combat Subroutines.webp",
+    "keywords": [
+      {
+        "name": "Sharpshooter",
+        "value": 1
+      },
+      {
+        "name": "Lethal",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "history": []
+  },
+  "Dz": {
+    "id": "Dz",
+    "cardName": "Electrostaff",
+    "cardType": "upgrade",
+    "cardSubtype": "armament",
+    "cost": 10,
+    "imageName": "Electrostaff.webp",
+    "keywords": [
+      "Charge",
+      {
+        "name": "Immune",
+        "value": "Melee Pierce"
+      }
+    ],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Electrostaff",
+        "keywords": [
+          {
+            "name": "Critical",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 2
+        }
+      }
+    ],
+    "history": []
+  },
+  "Ea": {
+    "id": "Ea",
+    "cardName": "Heavy Arm Cannon",
+    "cardType": "upgrade",
+    "cardSubtype": "armament",
+    "cost": 20,
+    "imageName": "Heavy Arm Cannon.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Heavy Arm Cannon",
+        "keywords": ["Suppressive"],
+        "range": [1, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 3
+        }
+      }
+    ],
+    "history": []
+  },
+  "Eb": {
+    "id": "Eb",
+    "cardName": "Mobility Upgrade",
+    "cardType": "upgrade",
+    "cardSubtype": "gear",
+    "cost": 8,
+    "imageName": "Mobility Upgrade.webp",
+    "keywords": ["Scale", "Steady"],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "history": []
+  },
+  "Ec": {
+    "id": "Ec",
+    "cardName": "Expanded Databanks",
+    "cardType": "upgrade",
+    "cardSubtype": "gear",
+    "cost": 5,
+    "imageName": "Expanded Databanks.webp",
+    "keywords": [],
+    "additionalUpgradeSlots": ["programming"],
+    "requirements": [
+      {
+        "cardName": "Super Tactical Command Droid"
+      }
+    ],
+    "history": []
+  },
+  "Ed": {
+    "id": "Ed",
+    "cardName": "Exterminate",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "Super Tactical Command Droid",
+    "imageName": "Exterminate.webp",
+    "faction": "separatists",
+    "keywords": [
+      {
+        "name": "Demoralize",
+        "value": 2
+      }
+    ]
+  },
+  "Ee": {
+    "id": "Ee",
+    "cardName": "Tactical Download",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "Super Tactical Command Droid",
+    "imageName": "Tactical Download.webp",
+    "faction": "separatists",
+    "keywords": []
+  },
+  "Ef": {
+    "id": "Ef",
+    "cardName": "General Grievous",
+    "title": "Wheel Bike Warlord",
+    "cardType": "unit",
+    "cardSubtype": "ground vehicle",
+    "rank": "commander",
+    "faction": "separatists",
+    "cost": 150,
+    "imageName": "General Grievous Wheel Bike Warlord.webp",
+    "isUnique": true,
+    "keywords": [
+      {
+        "name": "Armor",
+        "value": 1
+      },
+      "Climbing Vehicle",
+      {
+        "name": "Command Vehicle",
+        "value": 2
+      },
+      {
+        "name": "Entourage",
+        "value": "TSMEU-6 Wheel Bikes"
+      },
+      {
+        "name": "Immune",
+        "value": "Melee Pierce"
+      },
+      "Mobile"
+    ],
+    "entourage": "Eg",
+    "upgradeBar": ["command", "training", "gear", "grenades"],
+    "stats": {
+      "minicount": 1,
+      "hp": 8,
+      "defense": "r",
+      "courage": 0,
+      "speed": 2,
+      "hitsurge": "c",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Trophy Lightsabers",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Overrun",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          },
+          {
+            "name": "Ram",
+            "value": 1
+          },
+          "Scatter"
+        ],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 3,
+          "w": 1
+        }
+      },
+      {
+        "name": "Laser Cannon and Pistol",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Eg": {
+    "id": "Eg",
+    "cardName": "TSMEU-6 Wheel Bikes",
+    "imageName": "TSMEU-6 Wheel Bikes.webp",
+    "cardType": "unit",
+    "cardSubtype": "ground vehicle",
+    "rank": "special",
+    "faction": "separatists",
+    "isUnreleased": true,
+    "cost": 0,
+    "keywords": [
+      { "name": "AI", "value": "Dodge" },
+      { "name": "Armor", "value": "1" },
+      "Climbing Vehicle",
+      "Mobile"
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 2,
+      "hp": 3,
+      "defense": "r",
+      "courage": 0,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Spiked Wheel",
+        "keywords": [
+          {
+            "name": "Overrun",
+            "value": 2
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      },
+      {
+        "name": "Double Laser Cannon",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": 1
+          }
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 1
+        }
+      }
+    ],
+    "history": []
+  },
+  "Eh": {
+    "id": "Eh",
+    "cardName": "Full Throttle",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "General Grievous",
+    "imageName": "Full Throttle.webp",
+    "faction": "separatists",
+    "keywords": []
+  },
+  "Ei": {
+    "id": "Ei",
+    "cardName": "Pincer Attack",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "General Grievous",
+    "imageName": "Pincer Attack.webp",
+    "faction": "separatists",
+    "keywords": []
+  },
+  "Ej": {
+    "id": "Ej",
+    "cardName": "I'll Do it Myself!",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "General Grievous",
+    "imageName": "I'll Do it Myself.webp",
+    "faction": "separatists",
+    "keywords": [
+      {
+        "name": "Tactical",
+        "value": 1
+      }
+    ]
+  },
+  "Ek": {
+    "id": "Ek",
+    "cardName": "Turbo-Charge",
+    "cardType": "upgrade",
+    "cardSubtype": "gear",
+    "cost": 5,
+    "imageName": "Turbo-Charge.webp",
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "TSMEU-6 Wheel Bikes"
+      },
+      {
+        "title": "Wheel Bike Warlord"
+      }
+    ],
+    "history": []
+  },
+  "El": {
+    "id": "El",
+    "cardName": "Clone Trooper Marksmen Squad",
+    "cardType": "upgrade",
+    "cardSubtype": "personnel",
+    "cost": 53,
+    "imageName": "Clone Trooper Marksmen Squad.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Clone Trooper Marksmen"
+      }
+    ],
+    "history": []
+  },
+  "Em": {
+    "id": "Em",
+    "cardName": "Clone Trooper Marksmen",
+    "cardType": "upgrade",
+    "cardSubtype": "personnel",
+    "cost": 14,
+    "imageName": "Clone Trooper Marksmen.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Clone Trooper Marksmen"
+      }
+    ],
+    "history": []
+  },
+  "En": {
+    "id": "En",
+    "cardName": "Kraken",
+    "cardSubtype": "heavy weapon",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "Kraken Upgrade.webp",
+    "keywords": ["Leader", "AI"],
+    "additionalUpgradeSlots": ["heavy weapon"],
+    "requirements": [
+      {
+        "faction": "separatists",
+        "rank": "corps",
+        "cardSubtype": "droid trooper"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Kraken's Blaster",
+        "keywords": [],
+        "range": [0, 3],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
+  },
+  "Eo": {
+    "id": "Eo",
+    "cardName": "Agent Kallus",
+    "cardSubtype": "heavy weapon",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 28,
+    "imageName": "Agent Kallus Upgrade.webp",
+    "additionalUpgradeSlots": ["heavy weapon"],
+    "keywords": ["Leader", { "name": "Demoralize", "value": "1" }, "Sidearm"],
+    "requirements": [
+      "OR",
+      {
+        "faction": "empire",
+        "rank": "corps"
+      },
+      {
+        "faction": "empire",
+        "rank": "special"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "J-19 Bo-Rifle",
+        "keywords": ["Long Shot"],
+        "range": [0, 2],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 1
+        }
+      }
+    ]
+  },
+  "Ep": {
+    "id": "Ep",
+    "cardName": "Clone Captain Rex",
+    "cardSubtype": "squad leader",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 38,
+    "imageName": "Clone Captain Rex Upgrade.webp",
+    "keywords": ["Leader"],
+    "additionalUpgradeSlots": ["command", "training"],
+    "requirements": [
+      {
+        "faction": "republic",
+        "rank": "corps",
+        "cardSubtype": "clone trooper"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Dual Hand Blasters",
+        "keywords": [],
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Eq": {
+    "id": "Eq",
+    "cardName": "Cassian Andor",
+    "cardSubtype": "heavy weapon",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 25,
+    "imageName": "Cassian Andor Upgrade.webp",
+    "additionalUpgradeSlots": ["heavy weapon"],
+    "keywords": [
+      "Leader",
+      "Low Profile",
+      "Secret Mission",
+      {
+        "name": "Uncanny Luck",
+        "value": "1"
+      }
+    ],
+    "requirements": [
+      {
+        "faction": "rebels",
+        "rank": "corps"
+      }
+    ],
+    "isDoubleSided": true,
+    "weapons": [
+      {
+        "name": "Black Ops",
+        "keywords": [],
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      },
+      {
+        "name": "A280 Sniper Config",
+        "keywords": ["Long Shot"],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Er": {
+    "cardSubtype": "advantage",
+    "cardName": "Black Ops",
+    "cardType": "battle",
+    "faction": "empire",
+    "imageName": "Black Ops.webp",
+    "keywords": ["Infiltrate"],
+    "id": "Er"
+  },
+  "Es": {
+    "cardSubtype": "advantage",
+    "cardName": "Coordinated Strike",
+    "cardType": "battle",
+    "faction": "republic",
+    "imageName": "Coordinated Strike.webp",
+    "keywords": [
+      {
+        "name": "Coordinate",
+        "value": "Clone Trooper or Coordinate Vehicle"
+      }
+    ],
+    "id": "Es"
+  },
+  "Et": {
+    "cardSubtype": "advantage",
+    "cardName": "Command Override",
+    "cardType": "battle",
+    "faction": "separatists",
+    "imageName": "Command Override.webp",
+    "keywords": ["AI"],
+    "id": "Et"
+  },
+  "Eu": {
+    "cardSubtype": "advantage",
+    "cardName": "No Time to Lose",
+    "cardType": "battle",
+    "faction": "rebels",
+    "imageName": "No Time to Lose.webp",
+    "keywords": [],
+    "id": "Eu"
+  },
+  "Ev": {
+    "cardSubtype": "primary",
+    "cardName": "Outflank",
+    "cardType": "battle",
+    "imageName": "Outflank.webp",
+    "keywords": [],
+    "id": "Ev"
+  },
+  "Ew": {
+    "cardSubtype": "secondary",
+    "cardName": "Supply Run",
+    "cardType": "battle",
+    "imageName": "Supply Run.webp",
+    "keywords": [],
+    "id": "Ew"
+  },
+  "Ex": {
+    "id": "Ex",
+    "cardName": "Sneak Attack",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "",
+    "imageName": "Sneak Attack.webp",
+    "faction": "republic",
+    "battleForce": "212th Attack Battalion",
+    "keywords": [
+      "Infiltrate",
+      {
+        "name": "Scout",
+        "value": "1"
+      }
+    ]
+  },
+  "Ey": {
+    "id": "Ey",
+    "cardName": "Recon Division",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "",
+    "imageName": "Recon Division.webp",
+    "faction": "republic",
+    "battleForce": "212th Attack Battalion",
+    "keywords": [
+      {
+        "name": "Observe",
+        "value": "1"
+      }
+    ]
+  },
+  "Ez": {
+    "id": "Ez",
+    "cardName": "Flexible Strategy",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "",
+    "imageName": "Flexible Strategy.webp",
+    "faction": "republic",
+    "battleForce": "212th Attack Battalion",
+    "keywords": []
+  },
+  "Fa": {
+    "id": "Fa",
+    "cardName": "Imperial Probe Droid",
+    "imageName": "Imperial Probe Droid.webp",
+    "cardType": "unit",
+    "cardSubtype": "droid trooper",
+    "rank": "special",
+    "faction": "empire",
+    "cost": 0,
+    "isUnreleased": true,
+    "keywords": [
+      {
+        "name": "Observe",
+        "value": 3
+      },
+      {
+        "name": "Self-Destruct",
+        "value": 3
+      },
+      {
+        "name": "Detachment",
+        "value": "Special Forces"
+      },
+      "Disengage",
+      "Infiltrate",
+      {
+        "name": "Hover",
+        "value": "Air 1"
+      }
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 4,
+      "defense": "w",
+      "courage": 1,
+      "speed": 1,
+      "hitsurge": "",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Light Blaster",
+        "keywords": [],
+        "range": [0, 1],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Fb": {
+    "id": "Fb",
+    "cardName": "Luke Skywalker",
+    "title": "Commander Skywalker",
+    "imageName": "Luke Skywalker Commander Skywalker.webp",
+    "cardType": "unit",
+    "cardSubtype": "creature trooper",
+    "rank": "commander",
+    "faction": "rebels",
+    "cost": 0,
+    "isUnreleased": true,
+    "keywords": [
+      {
+        "name": "Spotter",
+        "value": 1
+      },
+      {
+        "name": "Take Cover",
+        "value": 1
+      },
+      {
+        "name": "Immune",
+        "value": "Pierce"
+      },
+      {
+        "name": "Inspire",
+        "value": 2
+      },
+      "Relentless",
+      "Reposition",
+      "Spur",
+      "Unhindered"
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Lightsaber & Horn",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Lethal",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          },
+          {
+            "name": "Ram",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 3
+        }
+      },
+      {
+        "name": "Luke's Blaster",
+        "keywords": ["Long Shot"],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 3,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Fc": {
+    "id": "Fc",
+    "cardName": "Han Solo",
+    "title": "Reluctant Hero",
+    "imageName": "Han Solo Reluctant Hero.webp",
+    "cardType": "unit",
+    "cardSubtype": "creature trooper",
+    "rank": "operative",
+    "faction": "rebels",
+    "cost": 0,
+    "isUnreleased": true,
+    "keywords": [
+      {
+        "name": "Arsenal",
+        "value": 2
+      },
+      "Charge",
+      {
+        "name": "Independent",
+        "value": "Aim 1 and Dodge 1"
+      },
+      "Reposition",
+      "Spur",
+      {
+        "name": "Uncanny Luck",
+        "value": 3
+      },
+      "Unhindered"
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "w",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "c",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Stampede",
+        "keywords": [
+          {
+            "name": "Ram",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 1
+        }
+      },
+      {
+        "name": "Han's DL-44 Blaster",
+        "keywords": [{ "name": "Pierce", "value": 1 }, "Versatile"],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
+  },
+  "Fd": {
+    "id": "Fd",
+    "cardName": "Weequay Pirates",
+    "imageName": "Weequay Pirates.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "corps",
+    "faction": "mercenary",
+    "affiliation": "black sun",
+    "cost": 0,
+    "isUnreleased": true,
+    "keywords": [
+      {
+        "name": "Mercenary",
+        "value": "Empire, Rebels, Republics, Separatists"
+      },
+      "Charge",
+      {
+        "name": "Independent",
+        "value": "Aim 1"
+      },
+      "Self-Preservation",
+      "Swashbuckler"
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 4,
+      "hp": 1,
+      "defense": "w",
+      "courage": 1,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Vibroblade",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      },
+      {
+        "name": "Weequay Blaster",
+        "keywords": ["Versatile"],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ],
+    "history": [],
+    "affiliations": ["empire", "rebels", "republic", "separatists"]
+  },
+  "Fe": {
+    "id": "Fe",
+    "cardName": "WLO-5 Speeder Tank",
+    "imageName": "WLO-5 Speeder Tank.webp",
+    "cardType": "unit",
+    "cardSubtype": "repulsor vehicle",
+    "rank": "heavy",
+    "faction": "mercenary",
+    "affiliation": "raider",
+    "cost": 0,
+    "isUnreleased": true,
+    "keywords": [
+      {
+        "name": "Mercenary",
+        "value": "Empire, Rebels, Republics, Separatists"
+      },
+      {
+        "name": "Armor",
+        "value": "5"
+      },
+      {
+        "name": "Arsenal",
+        "value": "2"
+      },
+      {
+        "name": "Hover",
+        "value": "Ground"
+      },
+      "Transport",
+      {
+        "name": "Weak Point",
+        "value": "2: Rear"
+      }
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 10,
+      "defense": "w",
+      "courage": 6,
+      "speed": 1,
+      "hitsurge": "",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Anti-Personnel Lasers",
+        "keywords": [{ "name": "Fixed", "value": "Front" }],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 2
+        }
+      },
+      {
+        "name": "Heavy Laser Cannon",
+        "keywords": [{ "name": "Impact", "value": "2" }],
+        "range": [1, 2],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 2
+        }
+      }
+    ],
+    "history": [],
+    "affiliations": ["empire", "rebels", "republic", "separatists"]
+  },
+  "Ff": {
+    "id": "Ff",
+    "cardName": "Grand Admiral Thrawn",
+    "title": "Imperial High Command",
+    "imageName": "Grand Admiral Thrawn.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "commander",
+    "faction": "empire",
+    "isUnique": true,
+    "cost": 0,
+    "isUnreleased": true,
+    "keywords": [
+      {
+        "name": "Strategize",
+        "value": 2
+      },
+      "Cunning",
+      {
+        "name": "Direct",
+        "value": "Empire Unit"
+      },
+      "Duelist",
+      "Exemplar",
+      "One Step Ahead",
+      {
+        "name": "Tactical",
+        "value": 1
+      }
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Chiss Martial Arts",
+        "range": [0],
+        "dice": {
+          "r": 4,
+          "b": 0,
+          "w": 0
+        }
+      },
+      {
+        "name": "Thrawn's Blaster",
+        "range": [1, 2],
+        "dice": {
+          "r": 3,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Fg": {
+    "id": "Fg",
+    "cardName": "Grand Moff Tarkin",
+    "title": "Imperial High Command",
+    "imageName": "Grand Moff Tarkin.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "commander",
+    "faction": "empire",
+    "isUnique": true,
+    "cost": 0,
+    "isUnreleased": true,
+    "keywords": [
+      {
+        "name": "Pull The Strings",
+        "value": "Empire Trooper"
+      },
+      {
+        "name": "Entourage",
+        "value": "Darth Vader"
+      }
+    ],
+    "entourage": "at",
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "w",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Contempt",
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 1
+        }
+      }
+    ]
+  },
+  "Fh": {
+    "cardSubtype": "2",
+    "cardName": "We Must Wait and Watch",
+    "commander": "Grand Admiral Thrawn",
+    "cardType": "command",
+    "faction": "empire",
+    "imageName": "We Must Wait and Watch.webp",
+    "keywords": ["Divulge", "Reinforcements"],
+    "history": [],
+    "id": "Fh"
+  },
+  "Fi": {
+    "cardSubtype": "3",
+    "cardName": "Fear Will Keep Them in Line",
+    "commander": "Grand Moff Tarkin",
+    "cardType": "command",
+    "faction": "empire",
+    "imageName": "Fear Will Keep Them in Line.webp",
+    "keywords": ["Divulge", { "name": "Demoralize", "value": 1 }],
+    "history": [],
+    "id": "Fi"
   }
 }

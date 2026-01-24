@@ -47,16 +47,16 @@ function ListLayout() {
       <div id="list-content">
         <div style={stickyStyles}>
           <ListHeader />
-          <div style={{ marginTop: 8 }} />
+          <div style={{ marginTop: 16 }} />
           <RankSelector />
         </div>
         <ListUnits />
-        <Divider style={{ marginBottom: 4 }} />
+        <Divider style={{ marginTop: 4, marginBottom: 4 }} />
         <ListCommands />
-        <Divider style={{ marginBottom: 4 }} />
+        <Divider style={{ marginTop: 4, marginBottom: 6 }} />
         <ListObjectives />
       </div>
-      <Divider style={{ marginBottom: 4 }} />
+      <Divider style={{ marginTop: 4, marginBottom: 6 }} />
       <ListExtras />
       <ListId />
       <div style={{ marginTop: 24 }} />
