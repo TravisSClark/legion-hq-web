@@ -342,7 +342,7 @@ Additionally, a unit with the Guardian X keyword cannot \
 benefit from Backup and ignores the CORPS Rank requirement to \
 provide Backup.",
   Guidance:
-    "As a Card of Free Card action, a unit with the Guidance \
+    "As a Card or Free Card action, a unit with the Guidance \
 keyword may choose another allied unit of the specified \
 unit type within 2. The chosen unit makes a free \
 non-Attack action.",
@@ -359,7 +359,6 @@ Upgrade Card becomes the unit leader.",
   "Hold the Line":
     "While a unit with the Hold the Line keyword is engaged, it gains \
 SURGE:HIT and SURGE:BLOCK.",
-
   Hover:
     "A unit with the Hover: Ground or Hover: Air X keyword can \
 make Standby actions during the Make Actions step and can \
@@ -406,7 +405,6 @@ effects of the Blast keyword are ignored.",
     "A unit with the Immune: Enemy Effects keyword ignores \
 all enemy card effects and cannot be targeted by any enemy \
 card effects.",
-
   "Immune: Melee":
     "Enemy units cannot be placed in base contact with a unit that \
 has the Immune: Melee keyword.",
@@ -834,7 +832,7 @@ difficult terrain. A unit may use the Tempted keyword only once \
 each Round.",
   Transport:
     "During Setup, a unit with the Transport keyword may choose \
-an allied CORPS Trooper or n Trooper unit to transport. During \
+an allied CORPS Trooper or SPECIAL FORCES Trooper unit to transport. During \
 the first Round's Issue Orders step, a unit with the Transport \
 keyword may issue an Order to the chosen unit. If the chosen \
 unit is undeployed when the unit with the Transport keyword \
@@ -991,7 +989,7 @@ Deflect, it cannot suffer Wounds from the Deflect keyword.",
   Impact:
     "When a unit attacks, if its Attack Pool has the Impact X \
 keyword and the defending unit has the Armor X keyword, \
-the attacking unit can modify up to X a results to CRIT results \
+the attacking unit can modify up to X HIT results to CRIT results \
 during the Modify Attack Dice step.",
   Ion: "When a Vehicle or Droid Trooper unit suffers 1 or more \
 Wounds from an attack that has the Ion X keyword in the \
@@ -1004,7 +1002,8 @@ tokens that it has. \n\
 If an Attack Pool includes the Ion X keyword, at the start of \
 the Modify Attack Dice step, before resolving other effects the \
 defending unit must flip up to X active Shield tokens, if able, for \
-each a or CRIT result in the attack roll.",
+each HIT or CRIT result in the attack roll, to a maximum of X \
+tokens flipped.",
   Lethal:
     "When a unit makes an attack with an Attack Pool that has \
 Lethal X, it can spend up to X Aim tokens during the Modify \
