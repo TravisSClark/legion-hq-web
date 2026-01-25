@@ -8,7 +8,7 @@ import UnitUpgrades from './UnitUpgrades';
 import UnitContext from 'context/UnitContext';
 import ListContext from 'context/ListContext';
 import { Grid, Input, Paper, TextField, Typography, Box } from '@material-ui/core';
-import Dossier from './Dossier';
+import Dossier from './Dossier/Dossier';
 
 const useStyles = makeStyles(theme => ({
   unitRow: {
@@ -81,7 +81,7 @@ function ListUnit({
     </div>
   );
 
-  if(mode !== "tour-of-duty"){
+  if(mode !== "tour of duty mode"){
     return unitListItem;
   }
   else{

@@ -12,7 +12,7 @@ import { Button } from "@material-ui/core";
 import {
   getEligibleBattlesToAdd,
   getEligibleCommandsToAdd,
-  getEligibleCommendations,
+  
   getEligibleUnitsToAdd,
   getEligibleUpgrades,
   getUpgradeBar,
@@ -20,7 +20,8 @@ import {
 } from "components/eligibleCardListGetter";
 import RegisterSelector from "./RegisterSelector";
 import register from "constants/register";
-import { addUpdateDossierItem } from "components/listOperations";
+
+import {getEligibleCommendations, getEligibleSetbacks} from 'components/tour/registerOperations';
 
 function Title({ title }) {
   return <Typography variant="body2">{title}</Typography>;
@@ -219,13 +220,14 @@ const CardSelector = () => {
       );
       break;
 
-    case "SETBACK":
     case "COMMENDATIONS":
     case "DEFINING_TRAIT":
       return (
-        <RegisterSelector items={getEligibleCommendations(currentList, cardPaneFilter.unitIndex)} onClick={(item)=>handleAddDossierItem(cardPaneFilter.unitIndex, cardPaneFilter.action.toLowerCase(), item)}/>
+        <RegisterSelector items={getEligibleCommendations(currentList, cardPaneFilter.unitIndex)} onClick={(item)=>handleAddDossierItem(cardPaneFilter.unitIndex, cardPaneFilter.action, item)}/>
       );
-      break;
+    
+    case "SETBACKS":
+      return( <RegisterSelector items={getEligibleSetbacks(currentList, cardPaneFilter.unitIndex)} onClick={(item)=>handleAddDossierItem(cardPaneFilter.unitIndex, cardPaneFilter.action, item)}/>);
     default:
       header = <Title title={`${action} is an invalid action.`} />;
   }

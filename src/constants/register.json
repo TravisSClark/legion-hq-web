@@ -144,5 +144,31 @@
     }
   ],
 
-  "high_commendations":[]
+  "high_commendations":[],
+
+  "setbacks":[
+     {
+      "name":"Battle-Fatigue",
+      "text":"When this unit attacks, after the Convert Attack Surges step, your opponent may remove up to X dice showing HIT results from this unit’s attack roll. A unit can have multiple instances of this Setback.",
+      "multiple": true,
+      "count":1
+    },
+    {
+      "name":"Battle-Shaken",
+      "text":"After this unit’s Rally step, if it has a number of Suppression tokens greater than its Courage, it suffers 1 Wound. If this unit is a Vehicle or started the game as a single miniature, it suffers 1 Wound at the start of the first Activation Phase instead."
+    },
+    {
+      "name":"Downtrodden",
+      "cost": 15,
+      "text":"When this unit is added to your army during army building, its point cost is increased by 15 points for each instance of this setback this unit has. A unit can have multiple instances of thisSetback.",
+      "multiple": true,
+      "count":1
+    },
+    {
+      "name":"Story Arc Setback",
+      "text":"IOU ~4 more entries. Please bear with while we're under construction!",
+      "multiple": true,
+      "count": 1
+    }
+  ]
 }

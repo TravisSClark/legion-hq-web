@@ -7,6 +7,7 @@ import {
   getUpgradeBar,
 } from "./eligibleCardListGetter";
 import battleForcesDict from "constants/battleForcesDict";
+import { getUnitDossier } from "./tour/registerOperations";
 
 const battleTypes = ["primary", "secondary", "advantage"];
 
@@ -312,7 +313,8 @@ function addUnit(list, unitId, stackSize = 1) {
         let eligibleUpgrades = getEligibleUpgrades(list, upgradeType, unitId);
         if (eligibleUpgrades.validIds.length === 1) {
           let freeSoloId = eligibleUpgrades.validIds[0];
-          if (cards[freeSoloId].cost === 0 && freeSoloId !== "rq") {
+          // Don't auto-equip things with Sidearm (ie they aren't fully "free" re weap options)
+          if (cards[freeSoloId].cost === 0 && !cards[freeSoloId].keywords.find(k=>k === "Sidearm" || k.name === "Sidearm")) {
             // If this card was already added via equip above, it'll break things if added again
             // (currently a futureproof w no known case)
             if (!unitCard.equip?.find((u) => u === freeSoloId)) {
@@ -331,6 +333,11 @@ function addUnit(list, unitId, stackSize = 1) {
 
     if (unitCard.command) {
       unitCard.command.forEach((commandId) => addCommand(list, commandId));
+    }
+
+    // init dossier w defaults if tod mode
+    if(list.mode == "tour of duty mode"){
+      getUnitDossier(list, unitIndex);
     }
   }
   sortUnitsByRank(list);
@@ -518,7 +525,7 @@ function unequipUpgradeFromUnit(unit, upgradeIndex){
 
   // TODO does not work if additionalUpgradeSlots has a config where >1 upgrade card provides aUS
   if ("additionalUpgradeSlots" in upgradeCard) {
-    removeAdditionalUpgradeSlot(newUnit, upgradeCard);
+    removeAdditionalUpgradeSlot(unit, upgradeCard);
   }
 
   unit.upgradesEquipped = sortUpgrades(unit);
@@ -545,33 +552,6 @@ function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
 }
 
 
-function getUnitDossier(list, unitIndex){
-
-  if(unitIndex >= list.units.length){
-    return null;
-  }
-
-  let unit = list.units[unitIndex];
-
-  if(!unit.dossier){
-    unit.dossier = {
-      xp: 0,
-      setbacks:[],
-      commendations:[]
-    };
-  }
-
-  return unit.dossier;
-
-}
-
-function addUpdateDossierItem(list, unitIndex, type, dossierItem){
-  
-  let dossier = getUnitDossier(list, unitIndex);
-  dossier[type].push(dossierItem.name);
-
-  return list;
-}
 
 export {
   addUnit,
@@ -594,6 +574,4 @@ export {
   updateSpecialUpgradeSlots,
   addAdditionalUpgradeSlots,
 
-  getUnitDossier,
-  addUpdateDossierItem
 };

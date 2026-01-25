@@ -3,7 +3,7 @@ import cards, { cardIdsByType, upgradeIdsBySubtype } from "constants/cards";
 
 import interactions from "components/cardInteractions";
 import battleForcesDict from "constants/battleForcesDict";
-import { getUnitDossier, sortCommandIds } from "./listOperations";
+import { sortCommandIds } from "./listOperations";
 import register from "constants/register";
 
 /**
@@ -466,50 +466,6 @@ function getUpgradeBar(unit) {
   ];
 }
 
-function getEligibleCommendations(list, unitIndex){
-
-  const validCommendations = [];
-  const unit = list.units[unitIndex];
-
-
-  if(!unit)return [];
-
-  console.log('comms for', register.commendations.length, JSON.stringify(unit));
-
-  if (!unit.unitId) return [];
-
-  const unitCard = cards[unit.unitId];
-  const unitCardCopy = JSON.parse(JSON.stringify(unitCard));
-
-  // TODO maybe this should be something done 'regularly' and displayed by upgrades, e.g. when Situational Awareness gives a unit Outmaneuver
-  // problem is, there's no real distinction, afaik, between keyword tags where keys get permanantly added vs contextually added or just referred to
-  unit.upgradesEquipped.forEach(id=>{
-    if(id == null) return;
-    let upgradeCard = cards[id];
-    upgradeCard.keywords.forEach(k=>{
-      if(k!==null){
-        if(k.isPermanent){
-          unitCardCopy.keywords.push(k);
-        }
-      }
-    })
-  })
-
-  for (let i = 0; i < register.commendations.length; i++) {
-
-    const commendation = register.commendations[i];
-    let dossier = getUnitDossier(list, unitIndex);
-    console.log('dossier', JSON.stringify(dossier));
-
-    if (dossier.commendations.find(n=>n === commendation.name)) continue;
-    // The 'normal' way to check for an upgrade - see if the unit meets the upgrade's requirements
-    if (!commendation.requirements || areRequirementsMet(commendation.requirements, unitCardCopy)) {
-      // console.log('req check ', JSON.stringify(commendation));
-      validCommendations.push(commendation);
-    } 
-  }
-  return validCommendations;
-}
 
 export {
   getEligibleBattlesToAdd,
@@ -522,5 +478,4 @@ export {
   areRequirementsMet,
   impRemnantUpgrades,
   getUpgradeBar,
-  getEligibleCommendations
 };

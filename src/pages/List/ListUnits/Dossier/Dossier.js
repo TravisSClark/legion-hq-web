@@ -3,11 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import UnitAvatar from 'common/UnitAvatar';
 import CardName from 'common/CardName';
 import UnitPoints from 'common/UnitPoints';
-import UnitActions from './UnitActions';
+import UnitActions from '../UnitActions';
 import UnitContext from 'context/UnitContext';
 import ListContext from 'context/ListContext';
-import { Grid, Input, Paper, TextField, Typography, Box, Button } from '@material-ui/core';
-import DossierUpgrades from './DossierUpgrades';
+import { Grid, TextField, Button } from '@material-ui/core';
+import DossierUpgrades from '../DossierUpgrades';
+import DossierItem from './DossierItem';
 
 const useStyles = makeStyles(theme => ({
   unitRow: {
@@ -34,21 +35,14 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function DossierEntry({type, unit}){
-
-  let dossierArray = unit.dossier[type.toLowerCase()]
-
-}
-
 function Dossier({
   counterpartUnit,
   addCounterpartHandler,
-  unitListItem
 }) {
   const classes = useStyles();
 
   const {unit, unitIndex, unitCard} = useContext(UnitContext);
-  const {setCardPaneFilter, handleCardZoom, mode} = useContext(ListContext);
+  const {setCardPaneFilter, handleCardZoom, handleRemoveDossierItem, handleXpUpdate, mode} = useContext(ListContext);
 
   console.log('unit is ', JSON.stringify(unit));
 
@@ -60,12 +54,6 @@ function Dossier({
   }else if(highestUnitError === 1){
     bgColor = "#550"
   }
-
-  let vetRank = 3;
-
-
-  console.log("unit", JSON.stringify(unit));
-
 
   let dossier = unit.dossier;
 
@@ -109,12 +97,12 @@ function Dossier({
         alignItems="start"
       >  
         <Grid item xs={3}>
-          <TextField label="XP" type="number" value={5} onChange={()=>{}} inputProps={{step:1}}/>
+          <TextField label="XP" type="number" value={dossier?.xp} onChange={(v)=>{handleXpUpdate(unitIndex, v.target.value)}} inputProps={{step:1}}/>
         </Grid>
         <Grid item xs={3}>
           <div>Veteran Rank</div>
           <div style={{display:'flex', flexDirection:'row'}}>
-          { Array(vetRank).fill(<div>*</div>)}
+          { dossier.level}
           </div>
         </Grid>
         <Grid item xs={6}>
@@ -122,7 +110,8 @@ function Dossier({
         </Grid>
         <Grid item xs={6}>
             <div>Commendations</div>
-            {dossier?.commendations.map(c=>{return <div>{c}</div>})}
+            {dossier?.commendations.map((c,i)=>{return <DossierItem type="commendations" text={c} 
+                onDelete={()=>{handleRemoveDossierItem(unitIndex, "commendations", i)}}/>})}
             <Button onClick={()=>{
                setCardPaneFilter({
                   action: 'COMMENDATIONS',
@@ -132,6 +121,13 @@ function Dossier({
         </Grid>
         <Grid item xs={6}>
           <div>Setbacks</div>
+          {dossier?.setbacks.map((c,i)=>{return <DossierItem type="setbacks" text={c} 
+              onDelete={()=>{handleRemoveDossierItem(unitIndex, "setbacks", i)}}/>})}
+          <Button onClick={()=>{
+              setCardPaneFilter({
+                action: 'SETBACKS',
+                unitIndex, 
+              })}}>Add</Button>
         </Grid>
 
       </Grid>

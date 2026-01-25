@@ -23,7 +23,6 @@ import {
   countPoints,
   consolidate,
   updateSpecialUpgradeSlots,
-  addUpdateDossierItem,
 } from "components/listOperations";
 import listTemplate from "constants/listTemplate";
 import {
@@ -31,6 +30,8 @@ import {
   checkValidCards,
   getRankLimits,
 } from "components/listValidator";
+
+import {  addUpdateDossierItem, removeDossierItem, updateDossierXp} from 'components/tour/registerOperations';
 
 import { getUpgradeBar } from "components/eligibleCardListGetter";
 import {
@@ -463,14 +464,22 @@ export function ListProvider({ width, children, slug, listHash }) {
     updateThenValidateList({ ...currentList, battleForce });
   };
 
-  const handleAddDossierItem = ( unitIndex,
-    type,
-    dossierItem,
-    )=>{
-      const newList = addUpdateDossierItem(currentList, unitIndex, type, dossierItem );
+  const handleAddDossierItem = ( unitIndex, type, dossierItem)=>{
+      const newList = addUpdateDossierItem(currentList, unitIndex, type.toLowerCase(), dossierItem );
 
-      // TODO - nasty thing wherein LHQ doesn't repaint from a list update alone
       setCurrentList({...newList});
+  }
+
+  const handleRemoveDossierItem =(unitIndex, type, itemIndex)=>{
+    const newList = removeDossierItem(currentList, unitIndex, type, itemIndex);
+
+    setCurrentList({...newList});
+  }
+
+  const handleXpUpdate = (unitIndex, value)=>{
+    const newList = updateDossierXp(currentList, unitIndex, value);
+
+    setCurrentList({...newList});
   }
 
   const unitProps = {
@@ -524,7 +533,9 @@ export function ListProvider({ width, children, slug, listHash }) {
     setRightPaneWidth,
   };
   const dossierProps={
-    handleAddDossierItem
+    handleAddDossierItem,
+    handleRemoveDossierItem,
+    handleXpUpdate
   }
   const messageProps = {
     listSaveMessage,
