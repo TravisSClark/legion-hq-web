@@ -88,6 +88,17 @@ function updateDossierXp(list, unitIndex, value){
 }
 
 
+// any extra ops for selection
+function registerUnitSelectPreamble(list, rank, card){
+  return !card.isUnique;
+}
+
+// any extra ops for selection
+function registerUpgradeSelectPreamble(list, card, unitId, upgradesEquipped){
+  return !card.isUnique;
+}
+
+
 function getEligibleRegisterItems(list, unitIndex, type){
 
   const validCommendations = [];
@@ -156,5 +167,7 @@ export{
   removeDossierItem,
   getEligibleCommendations,
   getEligibleSetbacks,
-  updateDossierXp
+  updateDossierXp,
+  registerUnitSelectPreamble,
+  registerUpgradeSelectPreamble
 }

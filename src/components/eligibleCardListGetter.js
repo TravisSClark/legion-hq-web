@@ -137,10 +137,11 @@ function sortUpgradeIds(ids) {
   return sortedIds;
 }
 
-function getEligibleUnitsToAdd(list, rank, userSettings) {
+function getEligibleUnitsToAdd(list, rank, preamble=false) {
   const validUnitIds = [];
   const cardsById = cardIdsByType.unit; // Object.keys(cards);
   const uniqueCardNames = getListUniques(list, "name");
+
 
   for (let i = 0; i < cardsById.length; i++) {
     const id = cardsById[i];
@@ -165,6 +166,8 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
         continue;
       else if (card.rank !== rank) continue;
     }
+
+    if(preamble && !preamble(list, rank, card)) continue;
 
     if (
       uniqueCardNames.includes(card.cardName) ||
@@ -257,7 +260,7 @@ function getEligibleCommandsToAdd(list) {
   };
 }
 
-function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
+function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = [], preamble=false) {
   const validUpgradeIds = [];
   const invalidUpgradeIds = [];
 
@@ -317,6 +320,8 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
     if (card.cardSubtype !== upgradeType) continue;
     if (card.faction && card.faction !== "" && list.faction !== card.faction)
       continue;
+
+    if(preamble && !preamble(list, card, unitId, upgradesEquipped)) continue;
 
     if (card.isUnique) {
       if (uniqueCardNames.includes(card.cardName)) continue;

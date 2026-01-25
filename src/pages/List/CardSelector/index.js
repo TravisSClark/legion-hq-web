@@ -19,9 +19,8 @@ import {
   unitHasUniques,
 } from "components/eligibleCardListGetter";
 import RegisterSelector from "./RegisterSelector";
-import register from "constants/register";
 
-import {getEligibleCommendations, getEligibleSetbacks} from 'components/tour/registerOperations';
+import {getEligibleCommendations, getEligibleSetbacks, registerUnitSelectPreamble, registerUpgradeSelectPreamble} from 'components/tour/registerOperations';
 
 function Title({ title }) {
   return <Typography variant="body2">{title}</Typography>;
@@ -64,16 +63,26 @@ const CardSelector = () => {
 
   switch (action) {
     case "UNIT":
-      selectorIds.validIds = getEligibleUnitsToAdd(
-        currentList,
-        cardPaneFilter.rank,
-        userSettings
-      );
+
+      if(currentList.mode === "tour of duty mode"){
+        selectorIds.validIds = getEligibleUnitsToAdd(
+          currentList, 
+          cardPaneFilter.rank,
+          registerUnitSelectPreamble
+        )
+      }
+      else {
+        selectorIds.validIds = getEligibleUnitsToAdd(
+          currentList,
+          cardPaneFilter.rank
+        );
+        
+      }
       selectorIds.invalidIds = [];
-      clickHandler = (unitId) => {
-        handleAddUnit(unitId, stackSize);
-        setStackSize(1);
-      };
+        clickHandler = (unitId) => {
+          handleAddUnit(unitId, stackSize);
+          setStackSize(1);
+        };
       header = (
         <StackController
           stackSize={stackSize}
@@ -105,6 +114,17 @@ const CardSelector = () => {
       //   getUpgradeBar(unit),
       //   cardPaneFilter.upgradeIndex
       // );
+      if(currentList.mode === "tour of duty mode"){
+        selectorIds = typeof getUpgradeBar(unit)[cardPaneFilter.upgradeIndex] === "object"
+          ? { validIds: cardPaneFilter.upgrades }
+          : getEligibleUpgrades(
+              currentList,
+              cardPaneFilter.upgradeType,
+              upgradeTargetId,
+              cardPaneFilter.upgradesEquipped,
+              registerUpgradeSelectPreamble
+            );
+      } else {
       selectorIds =
         typeof getUpgradeBar(unit)[cardPaneFilter.upgradeIndex] === "object"
           ? { validIds: cardPaneFilter.upgrades }
@@ -114,7 +134,7 @@ const CardSelector = () => {
               upgradeTargetId,
               cardPaneFilter.upgradesEquipped
             );
-
+      }
       clickHandler = (upgradeId) => {
         handleEquipUpgrade(
           action,

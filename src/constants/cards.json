@@ -22467,13 +22467,14 @@
     "id": "Fb",
     "cardName": "Luke Skywalker",
     "title": "Commander Skywalker",
+    "isUnique":true,
     "imageName": "Luke Skywalker Commander Skywalker.webp",
     "cardType": "unit",
     "cardSubtype": "creature trooper",
     "rank": "commander",
     "faction": "rebels",
     "cost": 0,
-    "isUnreleased": true,
+    "isUnreleased": "March 27, 2026",
     "keywords": [
       {
         "name": "Spotter",
