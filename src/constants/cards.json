@@ -22681,7 +22681,7 @@
     "rank": "heavy",
     "faction": "mercenary",
     "affiliation": "raider",
-    "cost": 0,
+    "cost": 100,
     "isUnreleased": true,
     "keywords": [
       {
@@ -22706,7 +22706,7 @@
         "value": "2: Rear"
       }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["pilot", "comms", "crew"],
     "stats": {
       "minicount": 1,
       "hp": 10,
