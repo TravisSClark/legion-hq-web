@@ -22621,7 +22621,7 @@
     "cardSubtype": "trooper",
     "rank": "corps",
     "faction": "mercenary",
-    "affiliation": "black sun",
+    "affiliation": "raider",
     "cost": 0,
     "isUnreleased": true,
     "keywords": [
@@ -22868,5 +22868,83 @@
     "keywords": ["Divulge", { "name": "Demoralize", "value": 1 }],
     "history": [],
     "id": "Fi"
+  },
+  "Fj": {
+    "cardName": "Black Sun Crew",
+    "cardType": "upgrade",
+    "cardSubtype": "crew",
+    "cost": 5,
+    "imageName": "Black Sun Crew.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "WLO-5 Speeder Tank"
+      }
+    ],
+    "changeAffiliation": "black sun",
+    "history": [],
+    "id": "Fj"
+  },
+  "Fk": {
+    "cardName": "Pyke Syndicate Crew",
+    "cardType": "upgrade",
+    "cardSubtype": "crew",
+    "cost": 5,
+    "imageName": "Pyke Syndicate Crew.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "WLO-5 Speeder Tank"
+      }
+    ],
+    "changeAffiliation": "pyke",
+    "history": [],
+    "id": "Fk"
+  },
+  "Fl": {
+    "cardName": "Weequay Crew",
+    "cardType": "upgrade",
+    "cardSubtype": "crew",
+    "cost": 0,
+    "imageName": "Weequay Crew.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "WLO-5 Speeder Tank"
+      }
+    ],
+    "history": [],
+    "id": "Fl"
+  },
+  "Fm": {
+    "cardName": "Pirate Captain",
+    "cardType": "upgrade",
+    "cardSubtype": "pilot",
+    "cost": 5,
+    "imageName": "Pirate Captain.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "WLO-5 Speeder Tank"
+      }
+    ],
+    "history": [],
+    "id": "Fm"
+  },
+  "Fn": {
+    "cardName": "Gang Boss",
+    "cardType": "upgrade",
+    "cardSubtype": "pilot",
+    "cost": 10,
+    "imageName": "Gang Boss.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "affiliation": "raider",
+        "rank": "heavy"
+      }
+    ],
+    "history": [],
+    "id": "Fn"
   }
 }
