@@ -19891,11 +19891,7 @@
     "keywords": [],
     "requirements": [
       {
-        "keywords": [
-          {
-            "name": "Speeder"
-          }
-        ]
+        "keywords": ["Speeder"]
       }
     ],
     "id": "Bk",
@@ -22461,7 +22457,7 @@
         }
       }
     ],
-    "detachment":"special"
+    "detachment": "special"
   },
   "Fb": {
     "id": "Fb",
@@ -22881,8 +22877,8 @@
         "cardName": "WLO-5 Speeder Tank"
       }
     ],
-    "changeCard":{
-      "affiliation":"black sun"
+    "changeCard": {
+      "affiliation": "black sun"
     },
     "changeAffiliation": "black sun",
     "history": [],
@@ -22900,8 +22896,8 @@
         "cardName": "WLO-5 Speeder Tank"
       }
     ],
-    "changeCard":{
-      "affiliation":"pyke"
+    "changeCard": {
+      "affiliation": "pyke"
     },
     "changeAffiliation": "pyke",
     "history": [],
