@@ -1,7 +1,30 @@
 {
-  "Rebels": [],
-  "Empire": [],
+  "Rebels": [
+    {
+      "name": "Captain Solo & Commander Skywalker on Tauntuns",
+      "date": "Apr 3",
+      "price": "$60"
+    }
+  ],
+  "Empire": [
+    {
+      "name": "Imperial Probe Droids ",
+      "date": "Apr 3",
+      "price": "$35"
+    },
+    {
+      "name": "Imperial High Command",
+      "date": "Apr 3",
+      "price": "$70"
+    }
+  ],
   "Republic": [],
-  "Separatists": [],
+  "Separatists": [
+    {
+      "name": "TSMEU-6 Personal Wheel Bike ",
+      "date": "Mar 20",
+      "price": "$70"
+    }
+  ],
   "Other": []
 }

@@ -213,7 +213,7 @@ function Home() {
                 onClick={() => setIsReleasesOpen(!isReleasesOpen)}
               >
                 <ReleaseIcon fontSize="small" style={{ marginRight: 4 }} />
-                Upcoming Releases
+                Upcoming New Releases
                 <ExpandMoreIcon
                   fontSize="small"
                   className={clsx(classes.expand, {
@@ -225,7 +225,11 @@ function Home() {
             <Grid item>
               {releaseList && (
                 <Collapse in={isReleasesOpen}>
-                  <a href="https://store.asmodee.com/collections/star-wars-legion?sort_by=created-descending">
+                  <a
+                    href="https://store.asmodee.com/collections/star-wars-legion?sort_by=created-descending"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Legion Product By Release Date
                   </a>
                   <Releases releases={releaseList} />
