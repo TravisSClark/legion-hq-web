@@ -7,9 +7,11 @@ import {
   Functions as CalculateIcon,
   ShareOutlined,
 } from "@material-ui/icons";
+import { Box, ButtonGroup, Divider, TextField } from "@material-ui/core";
 import DataContext from "context/DataContext";
 import ListContext from "context/ListContext";
 import TemplateButton from "./TemplateButton";
+import CounterButton from "./CounterButton";
 import LinkButton from "./LinkButton";
 import QRButton from "./QRButton";
 import TTSTextExportButton from "./TTSTextExportButton";
@@ -33,56 +35,87 @@ function ListExtras() {
   } = useContext(ListContext);
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexFlow: "row wrap",
-        justifyContent: "center",
-      }}
-    >
-      <TemplateButton />
-      <MenuButton label="Share/Print..." icon={<ShareOutlined />}>
-        <TTSTextExportButton currentList={currentList} />
-        <ImageExportButton currentList={currentList} />
-        <TextExportButton currentList={currentList} />
-        <PrintExportButton currentList={currentList} />
-        <QRButton currentList={currentList} />
-        <LinkButton currentList={currentList} />
-      </MenuButton>
-      <TTSTextImportButton/>
-      <SimpleButton
-        timeout={3000}
-        timeoutMessage={listSaveMessage ? listSaveMessage : "Saving..."}
-        isDisabled={!Boolean(userId)}
-        icon={<SaveIcon />}
-        label="Save"
-        handleClick={() => handleListSave(currentList)}
-      />
-      <SimpleButton
-        isDisabled={!Boolean(currentList.listId)}
-        icon={<ForkIcon />}
-        label="Fork List"
-        handleClick={() => handleListFork(currentList)}
-      />
-      <SimpleButton
-        icon={<ClearIcon />}
-        label="Clear List"
-        handleClick={handleClearList}
-      />
-      {/* <SimpleButton
-        isDisabled={!Boolean(userId) || !Boolean(currentList.listId)}
-        icon={<DeleteIcon />}
-        label="Delete List"
-        handleClick={deleteUserList}
-      /> */}
-      <SimpleButton
-        icon={<CalculateIcon />}
-        label={
-          isKillPointMode ? "Calculating Kill Points!" : "Calculate Kill Points"
-        }
-        handleClick={handleToggleIsKillPointMode}
-      />
-    </div>
+    <>
+      <div
+        style={{
+          display: "flex",
+          flexFlow: "row wrap",
+          justifyContent: "center",
+        }}
+      >
+        <ButtonGroup>
+          <CounterButton label="Wins" />
+          <CounterButton label="Loses" />
+        </ButtonGroup>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <TextField
+          label="Notes"
+          multiline
+          variant="outlined"
+          maxRows={4}
+          style={{ width: "60%" }}
+        />
+      </div>
+      <Divider style={{ marginTop: 4, marginBottom: 6 }} />
+      <div
+        style={{
+          display: "flex",
+          flexFlow: "row wrap",
+          justifyContent: "center",
+        }}
+      >
+        <TemplateButton />
+        <MenuButton label="Share/Print..." icon={<ShareOutlined />}>
+          <TTSTextExportButton currentList={currentList} />
+          <ImageExportButton currentList={currentList} />
+          <TextExportButton currentList={currentList} />
+          <PrintExportButton currentList={currentList} />
+          <QRButton currentList={currentList} />
+          <LinkButton currentList={currentList} />
+        </MenuButton>
+        <TTSTextImportButton />
+        <SimpleButton
+          timeout={3000}
+          timeoutMessage={listSaveMessage ? listSaveMessage : "Saving..."}
+          isDisabled={!Boolean(userId)}
+          icon={<SaveIcon />}
+          label="Save"
+          handleClick={() => handleListSave(currentList)}
+        />
+        <SimpleButton
+          isDisabled={!Boolean(currentList.listId)}
+          icon={<ForkIcon />}
+          label="Fork List"
+          handleClick={() => handleListFork(currentList)}
+        />
+        <SimpleButton
+          icon={<ClearIcon />}
+          label="Clear List"
+          handleClick={handleClearList}
+        />
+        {/* <SimpleButton
+          isDisabled={!Boolean(userId) || !Boolean(currentList.listId)}
+          icon={<DeleteIcon />}
+          label="Delete List"
+          handleClick={deleteUserList}
+        /> */}
+        <SimpleButton
+          icon={<CalculateIcon />}
+          label={
+            isKillPointMode
+              ? "Calculating Kill Points!"
+              : "Calculate Kill Points"
+          }
+          handleClick={handleToggleIsKillPointMode}
+        />
+      </div>
+    </>
   );
 }
 
