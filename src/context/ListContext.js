@@ -199,7 +199,7 @@ export function ListProvider({ width, children, slug, listHash }) {
   };
 
   const handleChangeNotes = (notes) =>
-    setCurrentList({ ...currentList, notes: notes });
+    setCurrentList({ ...currentList, notes: notes.substring(0, 1500) });
 
   const setCardSelectorToNextUpgradeSlot = (
     list,
