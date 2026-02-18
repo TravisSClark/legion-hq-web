@@ -7,7 +7,7 @@ import {
   Functions as CalculateIcon,
   ShareOutlined,
 } from "@material-ui/icons";
-import { Box, ButtonGroup, Divider, TextField } from "@material-ui/core";
+import { ButtonGroup, Divider, TextField } from "@material-ui/core";
 import DataContext from "context/DataContext";
 import ListContext from "context/ListContext";
 import TemplateButton from "./TemplateButton";
@@ -36,7 +36,7 @@ function ListExtras() {
 
   return (
     <>
-      <div
+      {/* <div
         style={{
           display: "flex",
           flexFlow: "row wrap",
@@ -45,7 +45,7 @@ function ListExtras() {
       >
         <ButtonGroup>
           <CounterButton label="Wins" />
-          <CounterButton label="Loses" />
+          <CounterButton label="Losses" />
         </ButtonGroup>
       </div>
       <div
@@ -62,7 +62,7 @@ function ListExtras() {
           style={{ width: "60%" }}
         />
       </div>
-      <Divider style={{ marginTop: 4, marginBottom: 6 }} />
+      <Divider style={{ marginTop: 4, marginBottom: 6 }} /> */}
       <div
         style={{
           display: "flex",

@@ -1,18 +1,21 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Button, ButtonGroup, TextField } from "@material-ui/core";
 import { Add as AddIcon, Remove as RemoveIcon } from "@material-ui/icons";
+import ListContext from "context/ListContext";
 
 function CounterButton({ label }) {
-  const [count, setCount] = useState(1);
+  const buttonLabel = label.toLowerCase();
+  const { currentList } = useContext(ListContext);
+  currentList[buttonLabel] = 0;
   const handleChange = (event) => {
-    setCount(Math.max(Number(event.target.value), 0));
+    currentList[buttonLabel] = Math.max(Number(event.target.value), 0);
   };
   return (
     <ButtonGroup style={{ margin: 5 }}>
       <Button
         aria-label="reduce"
         onClick={() => {
-          setCount(Math.max(count - 1, 0));
+          currentList[buttonLabel] = Math.max(currentList[buttonLabel] - 1, 0);
         }}
         size="small"
       >
@@ -22,14 +25,14 @@ function CounterButton({ label }) {
         label={label}
         variant="outlined"
         onChange={handleChange}
-        value={count}
+        value={currentList[buttonLabel]}
         style={{ width: 60 }}
       />
       <Button
         aria-label="increase"
         size="small"
         onClick={() => {
-          setCount(count + 1);
+          currentList[buttonLabel] += 1;
         }}
       >
         <AddIcon fontSize="small" />

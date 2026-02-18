@@ -1,10 +1,10 @@
 const listTemplate = {
-  title: 'Untitled',
-  mode: 'standard mode',
-  faction: '',
+  title: "Untitled",
+  mode: "standard mode",
+  faction: "",
   pointTotal: 0,
   killPoints: 0,
-  battleForce: '',
+  battleForce: "",
   killedUnits: [],
   units: [],
   commandCards: [],
@@ -17,8 +17,10 @@ const listTemplate = {
     corps: 0,
     special: 0,
     support: 0,
-    heavy: 0
-  }
+    heavy: 0,
+  },
+  wins: 0,
+  losses: 0,
 };
 
 export default listTemplate;

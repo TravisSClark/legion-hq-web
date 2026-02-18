@@ -4210,7 +4210,8 @@
     "keywords": ["Arsenal", "Field Commander"],
     "requirements": [
       {
-        "cardSubtype": "ground vehicle"
+        "cardSubtype": "ground vehicle",
+        "faction": "empire"
       }
     ],
     "history": [
@@ -5394,7 +5395,8 @@
     "keywords": [],
     "requirements": [
       {
-        "cardSubtype": "ground vehicle"
+        "cardSubtype": "ground vehicle",
+        "faction": "empire"
       }
     ],
     "id": "go"
@@ -5679,7 +5681,8 @@
     "keywords": ["Tactical"],
     "requirements": [
       {
-        "cardSubtype": "ground vehicle"
+        "cardSubtype": "ground vehicle",
+        "faction": "empire"
       }
     ],
     "id": "gz"
@@ -22023,14 +22026,14 @@
     "rank": "special",
     "faction": "separatists",
     "isUnreleased": "March 2026",
-    "cost": 0,
+    "cost": 90,
     "keywords": [
       { "name": "AI", "value": "Dodge" },
       { "name": "Armor", "value": "1" },
       "Climbing Vehicle",
       "Mobile"
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["pilot", "training", "gear", "comms"],
     "stats": {
       "minicount": 2,
       "hp": 3,
@@ -22949,5 +22952,20 @@
     "isUnique": true,
     "history": [],
     "id": "Fn"
+  },
+  "Fo": {
+    "cardName": "IG-100 MagnaGuard Pilot",
+    "cardType": "upgrade",
+    "cardSubtype": "pilot",
+    "cost": 10,
+    "imageName": "IG-100 MagnaGuard Pilot.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "TSMEU-6 Wheel Bikes"
+      }
+    ],
+    "history": [],
+    "id": "Fo"
   }
 }
