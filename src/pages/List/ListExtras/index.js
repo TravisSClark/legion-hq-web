@@ -31,22 +31,21 @@ function ListExtras() {
     handleClearList,
     handleListSave,
     handleListFork,
+    handleChangeNotes,
     handleToggleIsKillPointMode,
   } = useContext(ListContext);
 
   return (
     <>
-      {/* <div
+      <div
         style={{
           display: "flex",
           flexFlow: "row wrap",
           justifyContent: "center",
         }}
       >
-        <ButtonGroup>
-          <CounterButton label="Wins" />
-          <CounterButton label="Losses" />
-        </ButtonGroup>
+        <CounterButton label="Wins" />
+        <CounterButton label="Losses" />
       </div>
       <div
         style={{
@@ -56,13 +55,18 @@ function ListExtras() {
       >
         <TextField
           label="Notes"
+          value={currentList.notes}
+          onChange={(e) => {
+            e.persist();
+            handleChangeNotes(e.target.value);
+          }}
           multiline
           variant="outlined"
           maxRows={4}
           style={{ width: "60%" }}
         />
       </div>
-      <Divider style={{ marginTop: 4, marginBottom: 6 }} /> */}
+      <Divider style={{ marginTop: 4, marginBottom: 6 }} />
       <div
         style={{
           display: "flex",

@@ -198,12 +198,15 @@ export function ListProvider({ width, children, slug, listHash }) {
     updateThenValidateList({ ...setListMode(currentList, mode) });
   };
 
+  const handleChangeNotes = (notes) =>
+    setCurrentList({ ...currentList, notes: notes });
+
   const setCardSelectorToNextUpgradeSlot = (
     list,
     action,
     unitIndex,
     upgradeIndex,
-    getNewType = false
+    getNewType = false,
   ) => {
     const unit = list.units[unitIndex];
     const unitCard = cards[unit.unitId];
@@ -284,7 +287,7 @@ export function ListProvider({ width, children, slug, listHash }) {
     unitIndex,
     upgradeIndex,
     upgradeId,
-    isApplyToAll
+    isApplyToAll,
   ) => {
     const { list: newList, unitIndex: newUnitIndex } = equipUpgrade(
       currentList,
@@ -292,14 +295,14 @@ export function ListProvider({ width, children, slug, listHash }) {
       unitIndex,
       upgradeIndex,
       upgradeId,
-      isApplyToAll
+      isApplyToAll,
     );
 
     setCardSelectorToNextUpgradeSlot(
       newList,
       action,
       newUnitIndex,
-      upgradeIndex
+      upgradeIndex,
     );
 
     updateThenValidateList({ ...newList });
@@ -311,7 +314,7 @@ export function ListProvider({ width, children, slug, listHash }) {
       currentList,
       action,
       unitIndex,
-      upgradeIndex
+      upgradeIndex,
     );
     updateThenValidateList({ ...newList });
   };
@@ -484,6 +487,7 @@ export function ListProvider({ width, children, slug, listHash }) {
     handleClearList,
     handleChangeTitle,
     handleChangeMode,
+    handleChangeNotes,
     handleListSave,
     handleListFork,
     handleMergeList,

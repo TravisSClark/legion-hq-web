@@ -6,8 +6,12 @@ import ListContext from "context/ListContext";
 function CounterButton({ label }) {
   const buttonLabel = label.toLowerCase();
   const { currentList } = useContext(ListContext);
-  currentList[buttonLabel] = 0;
+  currentList[buttonLabel] = !isNaN(+currentList[buttonLabel])
+    ? +currentList[buttonLabel]
+    : 0;
+  const [count, setCount] = useState(currentList[buttonLabel]);
   const handleChange = (event) => {
+    setCount(Math.max(Number(event.target.value), 0));
     currentList[buttonLabel] = Math.max(Number(event.target.value), 0);
   };
   return (
@@ -15,7 +19,8 @@ function CounterButton({ label }) {
       <Button
         aria-label="reduce"
         onClick={() => {
-          currentList[buttonLabel] = Math.max(currentList[buttonLabel] - 1, 0);
+          setCount(Math.max(count - 1, 0));
+          currentList[buttonLabel] = Math.max(count - 1, 0);
         }}
         size="small"
       >
@@ -25,14 +30,15 @@ function CounterButton({ label }) {
         label={label}
         variant="outlined"
         onChange={handleChange}
-        value={currentList[buttonLabel]}
-        style={{ width: 60 }}
+        value={count}
+        style={{ width: 70 }}
       />
       <Button
         aria-label="increase"
         size="small"
         onClick={() => {
-          currentList[buttonLabel] += 1;
+          setCount(count + 1);
+          currentList[buttonLabel] = count + 1;
         }}
       >
         <AddIcon fontSize="small" />
