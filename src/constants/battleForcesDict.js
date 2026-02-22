@@ -18,14 +18,11 @@ const battleForcesDict = {
     special: ["Ay"],
     support: ["mb"],
     heavy: ["gb", "oo", "qs"],
-    allowedUniqueUpgrades: [
+    allowedUniqueUpgrades: [ // TODO: add "Squadron Leader"
       "uf",
       "Dc",
       "De",
       "Dd",
-      "Di",
-      "Dk",
-      "Dl",
       "Bl",
       "ug",
     ],
@@ -141,7 +138,8 @@ const battleForcesDict = {
         { ids: ["ah"], count: [0, 2] },
         { ids: ["ak"], count: [0, 2] },
       ],
-      // gainAoC: 'rebels', // on 2nd thought, this doesn't matter since we already have the AoC listbuild benefit via countMercs... leave as reminder
+      // gainAlliesofConvenience: 'rebels', // on 2nd thought, this doesn't matter since we already have the AoC listbuild benefit via countMercs... leave as reminder
+      // This would matter if we did a... valid-order-target-tracking in a companion app, but that's entire too far down road rn, if ever
     },
     plainTextRules: [
       "During the End Phase, EWOK units in this army remove 1 fewer Suppression token during the Remove Tokens step.",
@@ -214,7 +212,7 @@ const battleForcesDict = {
     special: ["la", "xd"],
     support: ["ie"],
     heavy: ["xe"],
-    allowedUniqueUpgrades: ["Bl", "En"], // TODO add "Kraken" once his upgrade comes out
+    allowedUniqueUpgrades: ["Bl", "En"],
     rules: {
       buildsAsCorps: ["xd"],
       ccAsCorps: true, // adds in the "and Battle Cards" rule to printout
@@ -355,7 +353,7 @@ const battleForcesDict = {
     special: ["re"],
     support: ["sq"],
     heavy: ["sm", "Fe"],
-    allowedUniqueUpgrades: ["rq", "so", "se", "sp", "sg", "sh", "si", "Bn"], // TODO add "Gang Boss"
+    allowedUniqueUpgrades: ["rq", "so", "se", "sp", "sg", "sh", "si", "Bn", "Fn"],
     rules: {
       countMercs: true,
     },
@@ -476,8 +474,7 @@ const battleForcesDict = {
     special: ["kz", "pg", "pm"],
     support: ["qh", "xf", "ic"],
     heavy: ["gb", "qs"],
-    // TODO remove Di-Dk to cut clutter if 'Tactical Acumen' is also allowed. ie it means Jedi Training were redundantly listed as they're limited, not unique
-    allowedUniqueUpgrades: ["Bl", "Dc", "Dd", "De", "Di", "Dj", "Dk"],
+    allowedUniqueUpgrades: ["Bl", "Dc", "Dd", "De"],
     rules: {
       buildsAsCorps: ["pm"],
       ccAsCorps: true, // adds in the "and Battle Cards" rule unique to Wookiee building rules
