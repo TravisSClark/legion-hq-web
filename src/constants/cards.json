@@ -22466,6 +22466,7 @@
     "id": "Fb",
     "cardName": "Luke Skywalker",
     "title": "Commander Skywalker",
+    "isUnique": true,
     "imageName": "Luke Skywalker Commander Skywalker.webp",
     "cardType": "unit",
     "cardSubtype": "creature trooper",
@@ -22555,6 +22556,7 @@
     "rank": "operative",
     "faction": "rebels",
     "cost": 0,
+    "isUnique": true,
     "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
