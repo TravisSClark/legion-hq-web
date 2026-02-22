@@ -22556,6 +22556,7 @@
     "rank": "operative",
     "faction": "rebels",
     "cost": 0,
+    "isUnique": true,
     "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
