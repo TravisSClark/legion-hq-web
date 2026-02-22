@@ -1,7 +1,4 @@
-import React, { useState } from 'react';
-
-function NumberInput({value, handleChange}) {
-
+function NumberInput({ value, handleChange }) {
   return (
     <div>
       <input
@@ -14,4 +11,4 @@ function NumberInput({value, handleChange}) {
   );
 }
 
-export default NumberInput
+export default NumberInput;

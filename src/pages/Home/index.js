@@ -25,10 +25,8 @@ import ErrorFallback from "common/ErrorFallback";
 import factions from "constants/factions";
 import lhqLogoLight from "assets/lhqLogoLight.svg";
 import lhqLogoDark from "assets/lhqLogoDark.svg";
-import releaseSchedule from "assets/releaseSchedule.webp";
-import reissueSchedule from "assets/reissueSchedule.webp";
-import naTournaments from "assets/2025 NA Tournaments.png";
-import euTournaments from "assets/2025 Eurasia Tournaments.png";
+import naTournaments from "assets/NA Tournaments.png";
+import euTournaments from "assets/Eurasia Tournaments.png";
 
 const useStyles = makeStyles((theme) => ({
   expand: {
@@ -213,7 +211,7 @@ function Home() {
                 onClick={() => setIsReleasesOpen(!isReleasesOpen)}
               >
                 <ReleaseIcon fontSize="small" style={{ marginRight: 4 }} />
-                Upcoming Releases
+                Upcoming New Releases
                 <ExpandMoreIcon
                   fontSize="small"
                   className={clsx(classes.expand, {
@@ -225,7 +223,11 @@ function Home() {
             <Grid item>
               {releaseList && (
                 <Collapse in={isReleasesOpen}>
-                  <a href="https://store.asmodee.com/collections/star-wars-legion?sort_by=created-descending">
+                  <a
+                    href="https://store.asmodee.com/collections/star-wars-legion?sort_by=created-descending"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Legion Product By Release Date
                   </a>
                   <Releases releases={releaseList} />
