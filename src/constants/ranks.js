@@ -32,4 +32,14 @@ const ranks = {
   }
 };
 
+const rankJsonNames = [
+    "commander",
+    "operative",
+    "corps",
+    "special",
+    "support",
+    "heavy",
+  ];
+
 export default ranks;
+export {rankJsonNames};

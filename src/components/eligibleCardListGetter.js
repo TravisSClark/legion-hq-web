@@ -5,6 +5,7 @@ import interactions from "components/cardInteractions";
 import battleForcesDict from "constants/battleForcesDict";
 import { sortCommandIds } from "./listOperations";
 import register from "constants/register";
+import { makeModifiedCard } from "./utility";
 
 /**
  * Functions for getting the lists of eligible cards that can be added based on list state
@@ -50,8 +51,6 @@ const impRemnantUpgrades = [
                 }
             ]
         ],
- * 
- * 
  */
 function areRequirementsMet(requirements, unitCard) {
   const operator = requirements[0];
@@ -177,10 +176,12 @@ function getEligibleUnitsToAdd(list, rank, preamble=false) {
 
     if (card.specialIssue && card.specialIssue !== list.battleForce) continue;
 
+    // Show detachment units only after their detach target is present in list
     if (card.detachment && !(battleForce?.rules?.ignoreDetach === id)) {
       for (let i = 0; i < list.units.length; i++) {
         const unit = list.units[i];
-        if (unit.unitId === card.detachment) {
+        const unitCard = cards[unit.unitId];
+        if (unit.unitId === card.detachment || unitCard.rank === card.detachment) {
           validUnitIds.push(id);
           break;
         }
@@ -264,54 +265,10 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = [], p
   const validUpgradeIds = [];
   const invalidUpgradeIds = [];
 
-  const faction = list.faction;
-
-  let forceAffinity = "dark side";
-  if (faction === "rebels" || faction === "republic")
-    forceAffinity = "light side";
-  else if (faction === "mercenary")
-    forceAffinity = battleForcesDict[list.battleForce].forceAffinity;
-
   if (!unitId) return { validUpgradeIds: [], invalidUpgradeIds: [] };
 
-  const unitCard = cards[unitId];
-  const unitCardCopy = JSON.parse(JSON.stringify(unitCard));
-
   const uniqueCardNames = getListUniques(list, "name");
-
-  // TODO not great, still better than alternatives I can think of rn
-  // should be assigned at unit construction
-  unitCardCopy.forceAffinity = forceAffinity;
-
-  // TODO worse; quick+dirty way to get imp remnant working; should probably have an 'effectiveRank' field
-  if (list.battleForce) {
-    if (
-      battleForcesDict[list.battleForce]?.rules?.buildsAsCorps?.includes(unitId)
-    ) {
-      unitCardCopy.rank = "corps";
-    }
-  }
-
-  // TODO maybe this should be something done 'regularly' and displayed by upgrades, e.g. when Situational Awareness gives a unit Outmaneuver
-  // problem is, there's no real distinction, afaik, between keyword tags where keys get permanantly added vs contextually added or just referred to
-  upgradesEquipped.forEach((id) => {
-    if (id == null) return;
-    let upgradeCard = cards[id];
-    upgradeCard.keywords.forEach((k) => {
-      if (k !== null) {
-        if (k.isPermanent) {
-          unitCardCopy.keywords.push(k);
-        }
-      }
-    });
-  });
-
-  // TODO bad...
-  for (let i = 0; i < unitCardCopy.keywords.length; i++) {
-    if (unitCardCopy.keywords[i].name) {
-      unitCardCopy.keywords[i] = unitCardCopy.keywords[i].name;
-    }
-  }
+  const unitCardCopy = makeModifiedCard(unitId, upgradesEquipped, list.faction, list.battleForce);
 
   for (let i = 0; i < upgradeIdsBySubtype[upgradeType].length; i++) {
     const id = upgradeIdsBySubtype[upgradeType][i]; //cardIdsByType['upgrade'][i];
