@@ -102,8 +102,7 @@ const battleForcesDict = {
     rules: {
       noFieldComm: true,
       unitLimits: [{ ids: ["ay", "sr"], count: [0, 2] }],
-      // TODO add Probe id here
-      // ignoreDetach:""
+      ignoreDetach:"Fa"
     },
     ruleUrl:
       "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_BlizzardForce.pdf",
