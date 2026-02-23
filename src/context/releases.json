@@ -21,10 +21,21 @@
   "Republic": [],
   "Separatists": [
     {
-      "name": "TSMEU-6 Personal Wheel Bike ",
+      "name": "TSMEU-6 Personal Wheel Bike",
       "date": "Mar 20",
       "price": "$70"
     }
   ],
-  "Other": []
+  "Other": [
+    {
+      "name": "Hondo Ohnaka & Weequay Pirates",
+      "date": "Apr 17",
+      "price": "$55"
+    },
+    {
+      "name": "WLO-5 Speeder Tank",
+      "date": "Apr 17",
+      "price": "?"
+    }
+  ]
 }
