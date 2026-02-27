@@ -22472,7 +22472,7 @@
     "cardSubtype": "creature trooper",
     "rank": "commander",
     "faction": "rebels",
-    "cost": 0,
+    "cost": 110,
     "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
@@ -22496,7 +22496,7 @@
       "Spur",
       "Unhindered"
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["force"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -22555,7 +22555,7 @@
     "cardSubtype": "creature trooper",
     "rank": "operative",
     "faction": "rebels",
-    "cost": 0,
+    "cost": 110,
     "isUnique": true,
     "isUnreleased": "Q1-Q2 2026",
     "keywords": [
@@ -22576,7 +22576,7 @@
       },
       "Unhindered"
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["command", "training", "gear", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 6,
