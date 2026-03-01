@@ -255,13 +255,6 @@ function Home() {
             </Grid>
             <Grid item>
               <Collapse in={isTournamentsOpen}>
-                <a
-                  href="https://www.legionevents.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Legion Events Apps
-                </a>
                 <img
                   alt="NA Tournaments"
                   src={naTournaments}

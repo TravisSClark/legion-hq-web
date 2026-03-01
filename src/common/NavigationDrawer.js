@@ -257,6 +257,21 @@ function NavigationDrawer() {
             </ListItemIcon>
             <ListItemText primary="Legion Helper" />
           </ListItem>
+          <ListItem
+            button
+            onClick={() =>
+              window.open(
+                "https://www.legionevents.app/",
+                "_blank",
+                "noopener noreferrer",
+              )
+            }
+          >
+            <ListItemIcon>
+              <LaunchIcon />
+            </ListItemIcon>
+            <ListItemText primary="Event Finder" />
+          </ListItem>
         </List>
         <Divider />
         <List dense={true}>
