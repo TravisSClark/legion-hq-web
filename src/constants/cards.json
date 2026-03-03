@@ -11267,7 +11267,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 4,
       "speed": 1,
       "hitsurge": "c",
@@ -18504,8 +18504,7 @@
         "name": "Sharpshooter",
         "value": 1
       },
-      "We're Not Regs",
-      "Fire Support"
+      "We're Not Regs"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -22752,7 +22751,7 @@
     "rank": "commander",
     "faction": "empire",
     "isUnique": true,
-    "cost": 0,
+    "cost": 110,
     "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
@@ -22772,7 +22771,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["command", "command", "command", "training", "gear"],
     "stats": {
       "minicount": 1,
       "hp": 5,
@@ -22969,5 +22968,89 @@
     ],
     "history": [],
     "id": "Fo"
+  },
+  "Fp": {
+    "id": "Fp",
+    "cardName": "Mace Windu",
+    "title": "Jedi Council",
+    "imageName": "Mace Windu.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "commander",
+    "faction": "republic",
+    "isUnique": true,
+    "isUnreleased": "Q1-Q2 2026",
+    "cost": 165,
+    "keywords": [
+      {
+        "name": "Jump",
+        "value": 1
+      },
+      "Charge",
+      {
+        "name": "Compel",
+        "value": "Core Trooper"
+      },
+      "Deflect",
+      "Immune: Pierce",
+      {
+        "name": "Master of the Force",
+        "value": 1
+      },
+      "Vaapad Mastery"
+    ],
+    "upgradeBar": [
+      "force",
+      "force",
+      "force",
+      "command",
+      "training",
+      "training"
+    ],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "c",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Windu's Lightsaber",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
+            "value": 2
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 3,
+          "b": 2,
+          "w": 1
+        }
+      },
+      {
+        "name": "Force Crush",
+        "keywords": [
+          "Blast",
+          { "name": "Immobilize", "value": 1 },
+          "Suppressive"
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 4,
+          "w": 0
+        }
+      }
+    ],
+    "history": []
   }
 }
