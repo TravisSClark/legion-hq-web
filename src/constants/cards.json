@@ -14181,7 +14181,12 @@
     "cardType": "upgrade",
     "cost": 8,
     "imageName": "Lead by Example.webp",
-    "keywords": [],
+    "keywords": [
+      {
+        "name": "Inspire",
+        "value": 2
+      }
+    ],
     "requirements": []
   },
   "rw": {
