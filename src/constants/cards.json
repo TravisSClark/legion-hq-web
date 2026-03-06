@@ -23129,10 +23129,10 @@
   },
   "Fs": {
     "cardSubtype": "training",
-    "cardName": "Secuirty Detail",
+    "cardName": "Security Detail",
     "cardType": "upgrade",
     "cost": 5,
-    "imageName": "Secuirty Detail.webp",
+    "imageName": "Security Detail.webp",
     "keywords": [
       {
         "name": "Guardian",
