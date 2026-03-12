@@ -3,18 +3,22 @@ import { makeStyles } from '@material-ui/core/styles';
 import UnitAvatar from 'common/UnitAvatar';
 import CardName from 'common/CardName';
 import UnitPoints from 'common/UnitPoints';
-import UnitActions from '../UnitActions';
+import UnitActions from '../ListUnits/UnitActions';
 import UnitContext from 'context/UnitContext';
 import ListContext from 'context/ListContext';
 import { Grid, TextField, Button } from '@material-ui/core';
-import DossierUpgrades from '../DossierUpgrades';
+import DossierUpgrades from './DossierUpgrades';
 import DossierItem from './DossierItem';
 
 const useStyles = makeStyles(theme => ({
   unitRow: {
     display: 'flex',
     flexFlow: 'row nowrap',
-    borderTop: '1px solid rgba(255,255,255,0.12)'
+  },
+  outlined: {
+    padding:'10px',
+    marginTop:'3px',
+    border: '1px solid rgba(255,255,255,0.12)'
   },
   unitColumn: { display: 'flex', flexFlow: 'column nowrap' },
   leftCell: { marginRight: 4 },
@@ -35,7 +39,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function Dossier({
+function DossierUnit({
   counterpartUnit,
   addCounterpartHandler,
 }) {
@@ -55,16 +59,15 @@ function Dossier({
     bgColor = "#550"
   }
 
-  let dossier = unit.dossier;
+  const dossier = unit.dossier;
 
   return (
-    <div >
+    <div className={classes.outlined} >
       <TextField
-        value={unit.dossierName}
+        value={dossier.name}
         label="Dossier Name"
         // onChange={handleChange}
       />      
-      {/* TODO for now this is a copy of unitListItem - maybe fold it back in, probably not with how upgrades work */}
       <div className={classes.unitColumn} style={{backgroundColor: bgColor, borderRadius:10}}>
         <div className={classes.unitRow}>
           <div className={classes.leftCell}>
@@ -135,4 +138,4 @@ function Dossier({
   )
 };
 
-export default Dossier;
+export default DossierUnit;

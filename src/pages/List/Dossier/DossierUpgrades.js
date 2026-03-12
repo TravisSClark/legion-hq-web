@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import AddCounterpartButton from './AddCounterpartButton';
-import AddUpgradeButton from './AddUpgradeButton';
-import UpgradeChip from './UpgradeChip';
+import AddCounterpartButton from '../ListUnits/AddCounterpartButton';
+import AddUpgradeButton from '../ListUnits/AddUpgradeButton';
+import UpgradeChip from '../ListUnits/UpgradeChip';
 import ListContext from 'context/ListContext';
 import UnitContext from 'context/UnitContext';
 

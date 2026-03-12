@@ -13,6 +13,7 @@ import ListExtras from "./ListExtras";
 import ListDisplay from "./ListDisplay";
 import ListId from "./ListId";
 import CardSelector from "./CardSelector";
+import DossierUnits from "./Dossier/DossierUnits";
 
 function ListLayout() {
   const { userSettings } = useContext(DataContext);
@@ -25,6 +26,7 @@ function ListLayout() {
     isModalOpen,
     modalContent,
     handleCloseModal,
+    mode
   } = useContext(ListContext);
 
   const isMobile = width === "xs" || width === "sm";
@@ -50,7 +52,11 @@ function ListLayout() {
           <div style={{ marginTop: 16 }} />
           <RankSelector />
         </div>
-        <ListUnits />
+        {/* Swap the view to ToD here, if applicable, else ListUnits */}
+        { 
+          (mode === 'tour of duty mode' && <DossierUnits/>)
+          || <ListUnits/>
+        }
         <Divider style={{ marginTop: 4, marginBottom: 4 }} />
         <ListCommands />
         <Divider style={{ marginTop: 4, marginBottom: 6 }} />

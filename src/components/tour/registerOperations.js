@@ -18,6 +18,7 @@ function getUnitDossier(list, unitIndex){
 
   if(!unit.dossier){
     unit.dossier = {
+      name: "Dossier Unit " + (unitIndex+1),
       xp: 0,
       level: 0,
       setbacks:[],

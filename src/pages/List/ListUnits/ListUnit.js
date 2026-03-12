@@ -7,8 +7,7 @@ import UnitActions from './UnitActions';
 import UnitUpgrades from './UnitUpgrades';
 import UnitContext from 'context/UnitContext';
 import ListContext from 'context/ListContext';
-import { Grid, Input, Paper, TextField, Typography, Box } from '@material-ui/core';
-import Dossier from './Dossier/Dossier';
+// import Dossier from './Dossier/Dossier';
 
 const useStyles = makeStyles(theme => ({
   unitRow: {
@@ -53,7 +52,7 @@ function ListUnit({
     bgColor = "#550"
   }
 
-  let unitListItem = (
+  return (
     <div className={classes.unitColumn} style={{backgroundColor: bgColor, borderRadius:10}}>
       <div className={classes.unitRow}>
         <div className={classes.leftCell}>
@@ -80,13 +79,6 @@ function ListUnit({
       {counterpartUnit}
     </div>
   );
-
-  if(mode !== "tour of duty mode"){
-    return unitListItem;
-  }
-  else{
-    return <Dossier unitListItem={unitListItem}></Dossier>
-  }
 };
 
 export default ListUnit;
