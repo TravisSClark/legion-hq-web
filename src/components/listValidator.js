@@ -816,7 +816,7 @@ function applyFieldCommander(list, rankReqs) {
 function applyRankAdjustments(currentList, rankReqs) {
   // map of unitIds:count allowed due to keywords below
   let extraRankCounts = {};
-
+  const battleForce = battleForcesDict[currentList.battleForce];
   // Count all the things adding ranks
   currentList.units.forEach((unit) => {
     const card = cards[unit.unitId];
@@ -827,7 +827,9 @@ function applyRankAdjustments(currentList, rankReqs) {
       }
       extraRankCounts[card.entourage] += unit.count;
     }
-    if (card.detachment) {
+
+    // Apply detachment (if we're not a battleforce ignoring this unit's detachment)
+    if (card.detachment && (battleForce && !battleForce.ignoreDetach == unit.unitId)) {
       // *technically* this is backwards... but still works ;)
       // We add +Detachment_count ranks on, and ding the user if the req count doesn't match in earlier validation
       if (!extraRankCounts[card.id]) {
