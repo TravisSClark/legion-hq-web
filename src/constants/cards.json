@@ -16065,7 +16065,7 @@
     "cardType": "upgrade",
     "cost": 5,
     "imageName": "Programmed Loyalty.webp",
-    "keywords": [],
+    "keywords": ["Retinue"],
     "requirements": [
       {
         "cardName": "Imperial Dark Troopers"
