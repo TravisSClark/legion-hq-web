@@ -11267,7 +11267,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 4,
       "speed": 1,
       "hitsurge": "c",
@@ -14181,7 +14181,12 @@
     "cardType": "upgrade",
     "cost": 8,
     "imageName": "Lead by Example.webp",
-    "keywords": [],
+    "keywords": [
+      {
+        "name": "Inspire",
+        "value": 2
+      }
+    ],
     "requirements": []
   },
   "rw": {
@@ -18504,8 +18509,7 @@
         "name": "Sharpshooter",
         "value": 1
       },
-      "We're Not Regs",
-      "Fire Support"
+      "We're Not Regs"
     ],
     "upgradeBar": [
       "heavy weapon",
@@ -22472,7 +22476,7 @@
     "cardSubtype": "creature trooper",
     "rank": "commander",
     "faction": "rebels",
-    "cost": 0,
+    "cost": 110,
     "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
@@ -22496,7 +22500,7 @@
       "Spur",
       "Unhindered"
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["force", "command", "training", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -22555,7 +22559,7 @@
     "cardSubtype": "creature trooper",
     "rank": "operative",
     "faction": "rebels",
-    "cost": 0,
+    "cost": 90,
     "isUnique": true,
     "isUnreleased": "Q1-Q2 2026",
     "keywords": [
@@ -22576,7 +22580,7 @@
       },
       "Unhindered"
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["command", "training", "gear", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -22752,7 +22756,7 @@
     "rank": "commander",
     "faction": "empire",
     "isUnique": true,
-    "cost": 0,
+    "cost": 110,
     "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
@@ -22772,7 +22776,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["command", "command", "command", "training", "gear"],
     "stats": {
       "minicount": 1,
       "hp": 5,
@@ -22813,7 +22817,7 @@
     "rank": "commander",
     "faction": "empire",
     "isUnique": true,
-    "cost": 0,
+    "cost": 95,
     "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
@@ -22826,7 +22830,7 @@
       }
     ],
     "entourage": "at",
-    "upgradeBar": [],
+    "upgradeBar": ["command", "command", "command"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -22969,5 +22973,305 @@
     ],
     "history": [],
     "id": "Fo"
+  },
+  "Fp": {
+    "id": "Fp",
+    "cardName": "Mace Windu",
+    "title": "Jedi Council",
+    "imageName": "Mace Windu.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "commander",
+    "faction": "republic",
+    "isUnique": true,
+    "isUnreleased": "Q1-Q2 2026",
+    "cost": 165,
+    "keywords": [
+      {
+        "name": "Jump",
+        "value": 1
+      },
+      "Charge",
+      {
+        "name": "Compel",
+        "value": "Core Trooper"
+      },
+      "Deflect",
+      "Immune: Pierce",
+      {
+        "name": "Master of the Force",
+        "value": 1
+      },
+      "Vaapad Mastery"
+    ],
+    "upgradeBar": [
+      "force",
+      "force",
+      "force",
+      "command",
+      "training",
+      "training"
+    ],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "c",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Windu's Lightsaber",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 2
+          },
+          {
+            "name": "Pierce",
+            "value": 2
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 3,
+          "b": 2,
+          "w": 1
+        }
+      },
+      {
+        "name": "Force Crush",
+        "keywords": [
+          "Blast",
+          { "name": "Immobilize", "value": 1 },
+          "Suppressive"
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 4,
+          "w": 0
+        }
+      }
+    ],
+    "history": []
+  },
+  "Fq": {
+    "id": "Fq",
+    "cardName": "General Tagge",
+    "title": "Imperial High Command",
+    "imageName": "General Tagge.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "commander",
+    "faction": "empire",
+    "isUnique": true,
+    "cost": 85,
+    "equip": ["Fr"],
+    "keywords": [
+      {
+        "name": "Equip",
+        "value": "Logistical Prowess"
+      },
+      "Calculate Odds",
+      "Exemplar",
+      {
+        "name": "Inspire",
+        "value": 1
+      }
+    ],
+    "upgradeBar": ["command", "command", "command", "training", "gear"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "w",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Unarmed",
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      },
+      {
+        "name": "Tagge's Blaster",
+        "range": [1, 2],
+        "dice": {
+          "r": 3,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Fr": {
+    "cardSubtype": "training",
+    "cardName": "Logistical Prowess",
+    "cardType": "upgrade",
+    "cost": 0,
+    "imageName": "Logistical Prowess.webp",
+    "keywords": ["Calculate Odds", "Cache"],
+    "requirements": [
+      {
+        "cardName": "General Tagge"
+      }
+    ],
+    "id": "Fr"
+  },
+  "Fs": {
+    "cardSubtype": "training",
+    "cardName": "Security Detail",
+    "cardType": "upgrade",
+    "cost": 5,
+    "imageName": "Security Detail.webp",
+    "keywords": [
+      {
+        "name": "Guardian",
+        "value": 2
+      },
+      "Retinue"
+    ],
+    "requirements": [
+      {
+        "cardName": "Imperial Death Troopers"
+      }
+    ],
+    "id": "Fs"
+  },
+  "Ft": {
+    "cardSubtype": "1",
+    "cardName": "Architects of Their Own Destruction",
+    "commander": "Grand Admiral Thrawn",
+    "cardType": "command",
+    "faction": "empire",
+    "imageName": "Architects of Their Own Destruction.webp",
+    "keywords": [],
+    "history": [],
+    "id": "Ft"
+  },
+  "Fu": {
+    "cardSubtype": "3",
+    "cardName": "Canny Adversary",
+    "commander": "General Tagge",
+    "cardType": "command",
+    "faction": "empire",
+    "imageName": "Canny Adversary.webp",
+    "keywords": [],
+    "history": [],
+    "id": "Fu"
+  },
+  "Fv": {
+    "cardSubtype": "1",
+    "cardName": "I Have Graphs AND the Command",
+    "commander": "General Tagge",
+    "cardType": "command",
+    "faction": "empire",
+    "imageName": "I Have Graphs AND the Command.webp",
+    "keywords": [],
+    "history": [],
+    "id": "Fv"
+  },
+  "Fw": {
+    "cardSubtype": "3",
+    "cardName": "I Want You to Know Failure",
+    "commander": "Grand Admiral Thrawn",
+    "cardType": "command",
+    "faction": "empire",
+    "imageName": "I Want You to Know Failure.webp",
+    "keywords": [],
+    "history": [],
+    "id": "Fw"
+  },
+  "Fx": {
+    "cardSubtype": "1",
+    "cardName": "Moment of Triumph",
+    "commander": "Grand Moff Tarkin",
+    "cardType": "command",
+    "faction": "empire",
+    "imageName": "Moment of Triumph.webp",
+    "keywords": [
+      "Divulge",
+      "Permanent",
+      {
+        "name": "Guardian",
+        "value": 4
+      },
+      {
+        "name": "Disciplined",
+        "value": 1
+      }
+    ],
+    "history": [],
+    "id": "Fx"
+  },
+  "Fy": {
+    "cardSubtype": "3",
+    "cardName": "Not Out of it Yet",
+    "commander": ["AND", "Han Solo", "Luke Skywalker"],
+    "cardType": "command",
+    "faction": "rebels",
+    "imageName": "Not Out of it Yet.webp",
+    "keywords": [],
+    "history": [],
+    "id": "Fy"
+  },
+  "Ga": {
+    "cardName": "On Patrol",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "Luke Skywalker",
+    "faction": "rebels",
+    "imageName": "On Patrol.webp",
+    "keywords": [
+      {
+        "name": "Observe",
+        "value": 4
+      }
+    ],
+    "id": "Ga",
+    "requirements": [
+      {
+        "title": "Commander Skywalker"
+      }
+    ]
+  },
+  "Gb": {
+    "cardName": "See You in Hell",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "Han Solo",
+    "faction": "rebels",
+    "imageName": "See You in Hell.webp",
+    "keywords": ["Unconcerned", "Unstoppable", "Disengage"],
+    "id": "Gb",
+    "requirements": [
+      {
+        "title": "Reluctant Hero"
+      }
+    ]
+  },
+  "Gc": {
+    "cardName": "The Empire Does Not Tolerate Failure",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "",
+    "faction": "empire",
+    "imageName": "The Empire Does Not Tolerate Failure.webp",
+    "keywords": [],
+    "id": "Gc",
+    "requirements": [
+      {
+        "title": "Imperial High Command"
+      }
+    ]
   }
 }
