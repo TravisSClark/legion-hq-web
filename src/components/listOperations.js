@@ -87,7 +87,7 @@ function equipUnitUpgrade(
   unitIndex,
   upgradeIndex,
   upgradeId,
-  isApplyToAll
+  isApplyToAll,
 ) {
   // applying upgrade to multiple units
   const unit = list.units[unitIndex];
@@ -98,7 +98,7 @@ function equipUnitUpgrade(
 
   const newUnit = JSON.parse(JSON.stringify(unit));
 
-  if(unit.upgradesEquipped[upgradeIndex] != null){
+  if (unit.upgradesEquipped[upgradeIndex] != null) {
     unequipUpgradeFromUnit(newUnit, upgradeIndex);
   }
 
@@ -219,9 +219,13 @@ function addAdditionalUpgradeSlots(unit, upgradeCard) {
 
   // uE is a [null, null...] until sth equipped. Hence, null by default, move the popped special upgrade over if there was one
   let card = cards[unit.unitId];
-  if(unit.upgradesEquipped.length < (card.upgradeBar.length + unit.additionalUpgradeSlots.length + unit.specialUpgradeSlots.length) )
+  if (
+    unit.upgradesEquipped.length <
+    card.upgradeBar.length +
+      unit.additionalUpgradeSlots.length +
+      unit.specialUpgradeSlots.length
+  )
     unit.upgradesEquipped.splice(offset, 0, newSlot);
-
 }
 
 function removeAdditionalUpgradeSlot(unit) {
@@ -259,7 +263,7 @@ function addUnit(list, unitId, stackSize = 1) {
   if (list.battleForce) {
     if (
       battleForcesDict[list.battleForce]?.rules?.buildsAsCorps?.includes(
-        newUnitObject.unitId
+        newUnitObject.unitId,
       )
     ) {
       newUnitObject.effectiveRank = "corps";
@@ -292,7 +296,7 @@ function addUnit(list, unitId, stackSize = 1) {
           unitIndex,
           upgradeIndex,
           unitCard.equip[i],
-          true
+          true,
         );
       }
     }
@@ -317,7 +321,7 @@ function addUnit(list, unitId, stackSize = 1) {
                 unitIndex,
                 upgradeIndex,
                 freeSoloId,
-                true
+                true,
               );
             }
           }
@@ -359,7 +363,7 @@ function sortUnitsByRank(list) {
   ];
   list.units.sort(
     (a, b) =>
-      ranks.indexOf(cards[a.unitId].rank) - ranks.indexOf(cards[b.unitId].rank)
+      ranks.indexOf(cards[a.unitId].rank) - ranks.indexOf(cards[b.unitId].rank),
   );
   return list;
 }
@@ -425,7 +429,7 @@ function equipUpgrade(
   unitIndex,
   upgradeIndex,
   upgradeId,
-  isApplyToAll = false
+  isApplyToAll = false,
 ) {
   if (action === "UNIT_UPGRADE" || action === "UNIT_UPGRADE_SPECIAL") {
     let newIndex;
@@ -434,7 +438,7 @@ function equipUpgrade(
       unitIndex,
       upgradeIndex,
       upgradeId,
-      isApplyToAll
+      isApplyToAll,
     );
     unitIndex = newIndex;
   } else if (action === "COUNTERPART_UPGRADE") {
@@ -501,12 +505,10 @@ function sortUpgrades(unit) {
   return sortedUpgrades;
 }
 
-
-function unequipUpgradeFromUnit(unit, upgradeIndex){
+function unequipUpgradeFromUnit(unit, upgradeIndex) {
   const upgradeId = unit.upgradesEquipped[upgradeIndex];
 
-  if(upgradeId == null)
-    return;
+  if (upgradeId == null) return;
 
   const upgradeCard = cards[upgradeId];
 
@@ -516,8 +518,6 @@ function unequipUpgradeFromUnit(unit, upgradeIndex){
   if ("additionalUpgradeSlots" in upgradeCard) {
     removeAdditionalUpgradeSlot(unit);
   }
-
-  unit.upgradesEquipped = sortUpgrades(unit);
 }
 
 function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {

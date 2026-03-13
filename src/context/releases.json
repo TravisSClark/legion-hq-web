@@ -28,13 +28,18 @@
   ],
   "Other": [
     {
+      "name": "Battle Deck Card Pack II",
+      "date": "Mar 20",
+      "price": "$55"
+    },
+    {
       "name": "Hondo Ohnaka & Weequay Pirates",
       "date": "Apr 17",
       "price": "$55"
     },
     {
       "name": "WLO-5 Speeder Tank",
-      "date": "Apr 17",
+      "date": "May 8",
       "price": "$85"
     }
   ]
