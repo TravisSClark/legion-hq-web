@@ -179,7 +179,10 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
       for (let i = 0; i < list.units.length; i++) {
         const unit = list.units[i];
         const unitCard = cards[unit.unitId];
-        if (unit.unitId === card.detachment || unitCard.rank === card.detachment) {
+        if (
+          unit.unitId === card.detachment ||
+          unitCard.rank === card.detachment
+        ) {
           validUnitIds.push(id);
           break;
         }
@@ -222,6 +225,15 @@ function getEligibleCcs(list) {
       let commanders = Array.isArray(card.commander)
         ? card.commander
         : [card.commander];
+      if (commanders[0] === "AND") {
+        for (let i = 1; i < commanders.length; i++) {
+          if (
+            !cardNames.includes(commanders[i]) &&
+            !listCounterparts.includes(commanders[i])
+          )
+            return false;
+        }
+      }
       if (
         !cardNames.some((c) => commanders.includes(c)) &&
         !listCounterparts.some((c) => commanders.includes(c))
@@ -234,7 +246,7 @@ function getEligibleCcs(list) {
       while (!requirementsMet && i < list.units.length) {
         requirementsMet = areRequirementsMet(
           card.requirements,
-          cards[list.units[i].unitId]
+          cards[list.units[i].unitId],
         );
         i++;
       }
@@ -266,7 +278,12 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
   if (!unitId) return { validUpgradeIds: [], invalidUpgradeIds: [] };
 
   const uniqueCardNames = getListUniques(list, "name");
-  const unitCardCopy = makeModifiedCard(unitId, upgradesEquipped, list.faction, list.battleForce);
+  const unitCardCopy = makeModifiedCard(
+    unitId,
+    upgradesEquipped,
+    list.faction,
+    list.battleForce,
+  );
 
   for (let i = 0; i < upgradeIdsBySubtype[upgradeType].length; i++) {
     const id = upgradeIdsBySubtype[upgradeType][i]; //cardIdsByType['upgrade'][i];

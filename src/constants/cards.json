@@ -23216,7 +23216,7 @@
   "Fy": {
     "cardSubtype": "3",
     "cardName": "Not Out of it Yet",
-    "commander": "Han Solo, Luke Skywalker",
+    "commander": ["AND", "Han Solo", "Luke Skywalker"],
     "cardType": "command",
     "faction": "rebels",
     "imageName": "Not Out of it Yet.webp",

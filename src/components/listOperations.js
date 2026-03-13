@@ -70,10 +70,15 @@ function consolidate(list) {
     }
   });
 
+  // i is command card, j is commander of command card if there is an AND
   for (let i = list.commandCards.length - 1; i > -1; i--) {
     let { commander } = cards[list.commandCards[i]];
     commander = typeof Array.isArray(commander) ? commander : [commander];
-    if (commander && !cardNames.some((c) => commander.includes(c))) {
+    if (commander && commander[0] === "AND") {
+      for (let j = 1; j < commander.length; j++) {
+        if (!cardNames.includes(commander[j])) list = removeCommand(list, i);
+      }
+    } else if (commander && !cardNames.some((c) => commander.includes(c))) {
       list = removeCommand(list, i);
     }
   }
