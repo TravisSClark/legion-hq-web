@@ -732,8 +732,7 @@
         "date": "19 July 2024",
         "description": "Gained Detachment keyword."
       }
-    ],
-    "detachment": "ak"
+    ]
   },
   "an": {
     "id": "an",
@@ -1213,8 +1212,7 @@
         "date": "19 July 2024",
         "description": "Cost reduced from 75 to 65 points. Lost Sharpshooter and Pierce, and gained Spotter and Exemplar keywords. Blaster changed from rainbow to 3 red."
       }
-    ],
-    "entourage": "bd"
+    ]
   },
   "aw": {
     "id": "aw",
@@ -1633,8 +1631,7 @@
         "date": "19 July 2024",
         "description": "Gained Detachment keyword."
       }
-    ],
-    "detachment": "ba"
+    ]
   },
   "bd": {
     "id": "bd",
@@ -4563,8 +4560,7 @@
         "date": "15 November 2025",
         "description": "Ranged attack changed from 3 white to 2 black."
       }
-    ],
-    "detachment": "hg"
+    ]
   },
   "fu": {
     "requirements": [
@@ -6398,14 +6394,13 @@
       "Block",
       {
         "name": "Entourage",
-        "value": "IG-100"
+        "value": "IG-100 MagnaGuard"
       },
       "Immune: Pierce",
       "Jedi Hunter",
       "Relentless",
       "Scale"
     ],
-    "entourage": "px",
     "upgradeBar": ["command", "command", "training", "gear"],
     "stats": {
       "minicount": 1,
@@ -6769,8 +6764,7 @@
         "date": "15 November 2025",
         "description": "Cost increased from 38 to 40 points."
       }
-    ],
-    "detachment": "gv"
+    ]
   },
   "ig": {
     "cardName": "CM-0/93 Trooper",
@@ -8625,8 +8619,7 @@
         "date": "6 November 2024",
         "description": "Cost increased from 24 to 26 points."
       }
-    ],
-    "detachment": "kz"
+    ]
   },
   "kz": {
     "id": "kz",
@@ -8856,8 +8849,7 @@
         "date": "19 July 2024",
         "description": "Gained Jump 1 and Detachment: BX-Series Droid Commandos keywords."
       }
-    ],
-    "detachment": "la"
+    ]
   },
   "lc": {
     "id": "lc",
@@ -9381,8 +9373,7 @@
         "date": "15 April 2025",
         "description": "Gained Infiltrate keyword."
       }
-    ],
-    "detachment": "kf"
+    ]
   },
   "lw": {
     "displayName": "ID10",
@@ -10633,8 +10624,7 @@
           "w": 2
         }
       }
-    ],
-    "detachment": "nb"
+    ]
   },
   "nl": {
     "id": "nl",
@@ -15792,7 +15782,6 @@
     "faction": "empire",
     "isUnique": true,
     "cost": 80,
-    "entourage": "tm",
     "keywords": [
       {
         "name": "Observe",
@@ -17419,8 +17408,7 @@
         "date": "16 June 2025",
         "description": "Cost reduced from 80 to 55 points."
       }
-    ],
-    "entourage": "ga"
+    ]
   },
   "wo": {
     "id": "wo",
@@ -21956,7 +21944,6 @@
       },
       "Mobile"
     ],
-    "entourage": "Eg",
     "upgradeBar": ["command", "training", "gear", "grenades"],
     "stats": {
       "minicount": 1,
@@ -22433,7 +22420,7 @@
       },
       {
         "name": "Detachment",
-        "value": "Special Forces"
+        "value": "special"
       },
       "Disengage",
       "Infiltrate",
@@ -22463,8 +22450,7 @@
           "w": 2
         }
       }
-    ],
-    "detachment": "special"
+    ]
   },
   "Fb": {
     "id": "Fb",
@@ -22829,7 +22815,6 @@
         "value": "Darth Vader"
       }
     ],
-    "entourage": "at",
     "upgradeBar": ["command", "command", "command"],
     "stats": {
       "minicount": 1,

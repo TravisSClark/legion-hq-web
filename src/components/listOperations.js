@@ -249,6 +249,7 @@ function addUnit(list, unitId, stackSize = 1) {
 
   const newUnitObject = {
     unitId,
+    unitName: unitCard.cardName,
     count: unitCard.isUnique || unitCard.isUniqueTitle ? 1 : stackSize,
     totalUnitCost: unitCard.cost * stackSize,
     upgradesEquipped: [],
