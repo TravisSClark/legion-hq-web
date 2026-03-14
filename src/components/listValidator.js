@@ -669,7 +669,7 @@ function validateList(currentList, rankLimits) {
           name +
           '" upgrades! (' +
           listUniqueUpgrades[id] +
-          " equipped, limit " +
+          " equipped, limt " +
           limit +
           ")",
       });
@@ -698,9 +698,18 @@ function validateList(currentList, rankLimits) {
       }
 
       let parentCount = 0;
-      const parentUnit = currentList.units.find(
+      let parentUnit = currentList.units.find(
         (u) => u.unitName === detachmentUnit.value,
       );
+
+      if (!parentUnit) {
+        currentList.units.forEach((unit) => {
+          unit.unitName = cards[unit.unitId].cardName;
+        });
+        parentUnit = currentList.units.find(
+          (u) => u.unitName === detachmentUnit.value,
+        );
+      }
 
       if (
         currentList.units.find((u) => u.unitName === detachmentUnit.value) !==
@@ -875,7 +884,7 @@ function applyRankAdjustments(currentList, rankReqs) {
     if (
       detachmentUnit &&
       battleForce &&
-      !battleForce.ignoreDetach == unit.unitId
+      !battleForce.ignoreDetach === unit.unitId
     ) {
       // *technically* this is backwards... but still works ;)
       // We add +Detachment_count ranks on, and ding the user if the req count doesn't match in earlier validation
