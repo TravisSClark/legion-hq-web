@@ -882,9 +882,10 @@ function applyRankAdjustments(currentList, rankReqs) {
     );
     // Apply detachment (if we're not a battleforce ignoring this unit's detachment)
     if (
-      detachmentUnit &&
-      battleForce &&
-      !battleForce.ignoreDetach === unit.unitId
+      (detachmentUnit && !battleForce) ||
+      (detachmentUnit &&
+        battleForce &&
+        !battleForce.ignoreDetach === unit.unitId)
     ) {
       // *technically* this is backwards... but still works ;)
       // We add +Detachment_count ranks on, and ding the user if the req count doesn't match in earlier validation
