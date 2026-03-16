@@ -23258,5 +23258,94 @@
         "title": "Imperial High Command"
       }
     ]
+  },
+  "Gd": {
+    "cardSubtype": "primary",
+    "cardName": "Cauldron",
+    "cardType": "battle",
+    "imageName": "Cauldron.webp",
+    "keywords": [],
+    "id": "Gd"
+  },
+  "Ge": {
+    "cardSubtype": "primary",
+    "cardName": "Contact, Contact!",
+    "cardType": "battle",
+    "imageName": "Contact, Contact!.webp",
+    "keywords": [
+      {
+        "name": "Precise",
+        "value": 1
+      }
+    ],
+    "id": "Ge"
+  },
+  "Gf": {
+    "cardSubtype": "primary",
+    "cardName": "Payload",
+    "cardType": "battle",
+    "imageName": "Payload.webp",
+    "keywords": [],
+    "id": "Gf"
+  },
+  "Gg": {
+    "cardSubtype": "secondary",
+    "cardName": "Retrieve the Data",
+    "cardType": "battle",
+    "imageName": "Retrieve the Data.webp",
+    "keywords": [],
+    "id": "Gg"
+  },
+  "Gh": {
+    "cardSubtype": "secondary",
+    "cardName": "Failed Negotiations",
+    "cardType": "battle",
+    "imageName": "Failed Negotiations.webp",
+    "keywords": ["Incognito"],
+    "id": "Gh"
+  },
+  "Gi": {
+    "cardSubtype": "secondary",
+    "cardName": "Align the Relay",
+    "cardType": "battle",
+    "imageName": "Align the Relay.webp",
+    "keywords": [],
+    "id": "Gi"
+  },
+  "Gj": {
+    "cardSubtype": "advantage",
+    "cardName": "Scrambled Orders",
+    "cardType": "battle",
+    "faction": "rebels",
+    "imageName": "Scrambled Orders.webp",
+    "keywords": [],
+    "id": "Gj"
+  },
+  "Gk": {
+    "cardSubtype": "advantage",
+    "cardName": "Extreme Discipline",
+    "cardType": "battle",
+    "faction": "empire",
+    "imageName": "Extreme Discipline.webp",
+    "keywords": [],
+    "id": "Gk"
+  },
+  "Gl": {
+    "cardSubtype": "advantage",
+    "cardName": "Armored Assault",
+    "cardType": "battle",
+    "faction": "separatists",
+    "imageName": "Armored Assault.webp",
+    "keywords": [],
+    "id": "Gl"
+  },
+  "Gm": {
+    "cardSubtype": "advantage",
+    "cardName": "Rapid Deployment",
+    "cardType": "battle",
+    "faction": "republic",
+    "imageName": "Rapid Deployment.webp",
+    "keywords": ["Reinforcements"],
+    "id": "Gm"
   }
 }
