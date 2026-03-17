@@ -22613,7 +22613,7 @@
     "rank": "corps",
     "faction": "mercenary",
     "affiliation": "raider",
-    "cost": 0,
+    "cost": 40,
     "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
@@ -22628,7 +22628,14 @@
       "Self-Preservation",
       "Swashbuckler"
     ],
-    "upgradeBar": [],
+    "upgradeBar": [
+      "heavy weapon",
+      "personnel",
+      "personnel",
+      "training",
+      "gear",
+      "grenades"
+    ],
     "stats": {
       "minicount": 4,
       "hp": 1,
@@ -22933,7 +22940,12 @@
     "cardSubtype": "pilot",
     "cost": 10,
     "imageName": "Gang Boss.webp",
-    "keywords": [],
+    "keywords": [
+      {
+        "name": "Command Vehicle",
+        "value": 2
+      }
+    ],
     "requirements": [
       {
         "affiliation": "raider",
@@ -23347,5 +23359,104 @@
     "imageName": "Rapid Deployment.webp",
     "keywords": ["Reinforcements"],
     "id": "Gm"
+  },
+  "Gn": {
+    "cardSubtype": "heavy weapon",
+    "cardName": "Long Rifle Pirate",
+    "cardType": "upgrade",
+    "cost": 20,
+    "imageName": "Long Rifle Pirate.webp",
+    "keywords": [{ "name": "Lethal", "value": 1 }],
+    "requirements": [
+      {
+        "cardName": "Weequay Pirates"
+      }
+    ],
+    "history": [],
+    "id": "Gn",
+    "weapons": [
+      {
+        "name": "Long Rifle",
+        "keywords": [],
+        "range": [1, 4],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Go": {
+    "cardSubtype": "personnel",
+    "cardName": "Weequay Captain",
+    "cardType": "upgrade",
+    "cost": 19,
+    "imageName": "Weequay Captain.webp",
+    "keywords": ["Leader"],
+    "requirements": [
+      {
+        "cardName": "Weequay Pirates"
+      }
+    ],
+    "history": [],
+    "id": "Go",
+    "weapons": [
+      {
+        "name": "Bravado",
+        "keywords": [],
+        "range": [0, 2],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Gp": {
+    "cardSubtype": "personnel",
+    "cardName": "Weequay Pirate Squad",
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "Weequay Pirate Squad.webp",
+    "keywords": ["Indomitable", "Transport"],
+    "requirements": [
+      {
+        "cardName": "Weequay Pirates"
+      }
+    ],
+    "history": [],
+    "id": "Gp"
+  },
+  "Gq": {
+    "cardSubtype": "heavy weapon",
+    "cardName": "Electrostaff Pirate",
+    "cardType": "upgrade",
+    "cost": 15,
+    "imageName": "Electrostaff Pirate.webp",
+    "keywords": [
+      { "name": "Immune", "value": "Melee Pierce" },
+      { "name": "Sidearm", "value": "Melee" }
+    ],
+    "requirements": [
+      {
+        "cardName": "Weequay Pirates"
+      }
+    ],
+    "history": [],
+    "id": "Gq",
+    "weapons": [
+      {
+        "name": "Electrostaff",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ]
   }
 }
