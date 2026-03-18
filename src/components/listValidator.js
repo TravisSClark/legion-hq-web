@@ -699,7 +699,7 @@ function validateList(currentList, rankLimits) {
 
       let parentCount = 0;
       let parentUnit = currentList.units.find(
-        (u) => u.unitName === detachmentUnit.value,
+        (u) => u.unitName === detachmentUnit.value && u.unitId !== id,
       );
 
       if (!parentUnit) {
@@ -707,13 +707,14 @@ function validateList(currentList, rankLimits) {
           unit.unitName = cards[unit.unitId].cardName;
         });
         parentUnit = currentList.units.find(
-          (u) => u.unitName === detachmentUnit.value,
+          (u) => u.unitName === detachmentUnit.value && u.unitId !== id,
         );
       }
 
       if (
-        currentList.units.find((u) => u.unitName === detachmentUnit.value) !==
-        undefined
+        currentList.units.find(
+          (u) => u.unitName === detachmentUnit.value && u.unitId !== id,
+        ) !== undefined
       ) {
         parentCount = unitCounts[parentUnit.unitId];
       }
@@ -911,7 +912,11 @@ function applyRankAdjustments(currentList, rankReqs) {
   currentList.units.forEach((unit) => {
     const card = cards[unit.unitId];
 
-    if (extraRankCounts[card.cardName]) {
+    // duplicate names in detachment, so we are ignoring the detachment ones
+    if (
+      extraRankCounts[card.cardName] &&
+      !card.keywords.some((keyword) => keyword.name === "Detachment")
+    ) {
       let allowance = Math.min(unit.count, extraRankCounts[card.cardName]);
       rankReqs[card.rank][1] += allowance;
       if (
