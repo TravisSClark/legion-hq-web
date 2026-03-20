@@ -234,13 +234,14 @@ function addAdditionalUpgradeSlots(unit, upgradeCard) {
 }
 
 function removeAdditionalUpgradeSlot(unit) {
-  unit.additionalUpgradeSlots = [];
-
   let offset =
-    unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
+    unit.upgradesEquipped.length -
+    unit.specialUpgradeSlots.length -
+    unit.additionalUpgradeSlots.length;
 
-  unit.upgradesEquipped.splice(offset, 1);
+  unit.upgradesEquipped.splice(offset, unit.additionalUpgradeSlots.length);
 
+  unit.additionalUpgradeSlots = [];
   updateSpecialUpgradeSlots(unit);
 }
 

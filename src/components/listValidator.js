@@ -889,10 +889,10 @@ function applyRankAdjustments(currentList, rankReqs) {
     ) {
       // *technically* this is backwards... but still works ;)
       // We add +Detachment_count ranks on, and ding the user if the req count doesn't match in earlier validation
-      if (!extraRankCounts[card.cardName]) {
-        extraRankCounts[card.cardName] = 0;
+      if (!extraRankCounts[detachmentUnit.value]) {
+        extraRankCounts[detachmentUnit.value] = 0;
       }
-      extraRankCounts[card.cardName] += unit.count;
+      extraRankCounts[detachmentUnit.value] += unit.count;
     }
 
     const associateUnit = card.keywords.find(
