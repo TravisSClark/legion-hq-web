@@ -242,7 +242,6 @@ function removeAdditionalUpgradeSlot(unit) {
   unit.upgradesEquipped.splice(offset, unit.additionalUpgradeSlots.length);
 
   unit.additionalUpgradeSlots = [];
-  updateSpecialUpgradeSlots(unit);
 }
 
 function addUnit(list, unitId, stackSize = 1) {
