@@ -149,11 +149,10 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     const battleForce = battleForcesDict[list.battleForce];
 
     if (!battleForce) {
-      if (!list.faction.includes(card.faction) && !card.affiliations) continue;
       if (
-        !list.faction.includes(card.faction) &&
-        card.affiliations &&
-        !card.affiliations.includes(list.faction)
+        list.faction !== card.faction &&
+        (!card.affiliations || card.affiliations &&
+        !card.affiliations.includes(list.faction))
       )
         continue;
       if (card.rank !== rank) continue;

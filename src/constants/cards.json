@@ -24103,63 +24103,6 @@
       }
     ]
   },
-  "Hn": {
-    "isUnreleased": "Q4 2026",
-    "id": "Hn",
-    "cardName": "Guerilla Troopers",
-    "imageName": "Jedi Knight General.webp",
-    "cardType": "unit",
-    "cardSubtype": "trooper",
-    "rank": "special",
-    "faction": "rebels",
-    "cost": 0,
-    "keywords": [
-      {
-        "name": "Flexible Response",
-        "value": "2"
-      },
-      {
-        "name": "Independent",
-        "value": "Aim 1"
-      },
-      "Infiltrate"
-    ],
-    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon"],
-    "stats": {
-      "minicount": 4,
-      "hp": 1,
-      "defense": "r",
-      "courage": 2,
-      "speed": 2,
-      "hitsurge": "",
-      "defsurge": ""
-    },
-    "weapons": [
-      {
-        "name": "Combat Training",
-        "range": [0, 0],
-        "dice": {
-          "r": 0,
-          "b": 1,
-          "w": 0
-        },
-        "keywords":[
-        ]
-      },
-      {
-        "name": "Stolen Blasters",
-        "range": [1, 3],
-        "dice": {
-          "r": 0,
-          "b": 1,
-          "w": 0
-        },
-        "keywords":[
-          "Overwhelm"
-        ]
-      }
-    ]
-  },
   "Ho": {
     "id": "Ho",
     "cardSubtype": "heavy weapon",
@@ -24501,7 +24444,7 @@
     "rank": "operative",
     "faction": "mercenary",
     "affiliation":"Mandalore",
-    "affiliations": ["all"],
+    "affiliations": ["empire", "rebels", "republic", "separatists"],
     "cost": 0,
     "keywords": [
       {"name": "Mercenary", "value":"All"},
