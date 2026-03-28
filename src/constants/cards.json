@@ -732,8 +732,7 @@
         "date": "19 July 2024",
         "description": "Gained Detachment keyword."
       }
-    ],
-    "detachment": "ak"
+    ]
   },
   "an": {
     "id": "an",
@@ -1213,8 +1212,7 @@
         "date": "19 July 2024",
         "description": "Cost reduced from 75 to 65 points. Lost Sharpshooter and Pierce, and gained Spotter and Exemplar keywords. Blaster changed from rainbow to 3 red."
       }
-    ],
-    "entourage": "bd"
+    ]
   },
   "aw": {
     "id": "aw",
@@ -1633,8 +1631,7 @@
         "date": "19 July 2024",
         "description": "Gained Detachment keyword."
       }
-    ],
-    "detachment": "ba"
+    ]
   },
   "bd": {
     "id": "bd",
@@ -4563,8 +4560,7 @@
         "date": "15 November 2025",
         "description": "Ranged attack changed from 3 white to 2 black."
       }
-    ],
-    "detachment": "hg"
+    ]
   },
   "fu": {
     "requirements": [
@@ -6398,14 +6394,13 @@
       "Block",
       {
         "name": "Entourage",
-        "value": "IG-100"
+        "value": "IG-100 MagnaGuard"
       },
       "Immune: Pierce",
       "Jedi Hunter",
       "Relentless",
       "Scale"
     ],
-    "entourage": "px",
     "upgradeBar": ["command", "command", "training", "gear"],
     "stats": {
       "minicount": 1,
@@ -6769,8 +6764,7 @@
         "date": "15 November 2025",
         "description": "Cost increased from 38 to 40 points."
       }
-    ],
-    "detachment": "gv"
+    ]
   },
   "ig": {
     "cardName": "CM-0/93 Trooper",
@@ -8625,8 +8619,7 @@
         "date": "6 November 2024",
         "description": "Cost increased from 24 to 26 points."
       }
-    ],
-    "detachment": "kz"
+    ]
   },
   "kz": {
     "id": "kz",
@@ -8856,8 +8849,7 @@
         "date": "19 July 2024",
         "description": "Gained Jump 1 and Detachment: BX-Series Droid Commandos keywords."
       }
-    ],
-    "detachment": "la"
+    ]
   },
   "lc": {
     "id": "lc",
@@ -9381,8 +9373,7 @@
         "date": "15 April 2025",
         "description": "Gained Infiltrate keyword."
       }
-    ],
-    "detachment": "kf"
+    ]
   },
   "lw": {
     "displayName": "ID10",
@@ -10633,8 +10624,7 @@
           "w": 2
         }
       }
-    ],
-    "detachment": "nb"
+    ]
   },
   "nl": {
     "id": "nl",
@@ -15792,7 +15782,6 @@
     "faction": "empire",
     "isUnique": true,
     "cost": 80,
-    "entourage": "tm",
     "keywords": [
       {
         "name": "Observe",
@@ -16076,7 +16065,7 @@
     "cardType": "upgrade",
     "cost": 5,
     "imageName": "Programmed Loyalty.webp",
-    "keywords": [],
+    "keywords": ["Retinue"],
     "requirements": [
       {
         "cardName": "Imperial Dark Troopers"
@@ -17419,8 +17408,7 @@
         "date": "16 June 2025",
         "description": "Cost reduced from 80 to 55 points."
       }
-    ],
-    "entourage": "ga"
+    ]
   },
   "wo": {
     "id": "wo",
@@ -21956,7 +21944,6 @@
       },
       "Mobile"
     ],
-    "entourage": "Eg",
     "upgradeBar": ["command", "training", "gear", "grenades"],
     "stats": {
       "minicount": 1,
@@ -22433,7 +22420,7 @@
       },
       {
         "name": "Detachment",
-        "value": "Special Forces"
+        "value": "special"
       },
       "Disengage",
       "Infiltrate",
@@ -22463,8 +22450,7 @@
           "w": 2
         }
       }
-    ],
-    "detachment": "special"
+    ]
   },
   "Fb": {
     "id": "Fb",
@@ -22627,7 +22613,7 @@
     "rank": "corps",
     "faction": "mercenary",
     "affiliation": "raider",
-    "cost": 0,
+    "cost": 40,
     "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
@@ -22642,7 +22628,14 @@
       "Self-Preservation",
       "Swashbuckler"
     ],
-    "upgradeBar": [],
+    "upgradeBar": [
+      "heavy weapon",
+      "personnel",
+      "personnel",
+      "training",
+      "gear",
+      "grenades"
+    ],
     "stats": {
       "minicount": 4,
       "hp": 1,
@@ -22829,7 +22822,6 @@
         "value": "Darth Vader"
       }
     ],
-    "entourage": "at",
     "upgradeBar": ["command", "command", "command"],
     "stats": {
       "minicount": 1,
@@ -22948,7 +22940,12 @@
     "cardSubtype": "pilot",
     "cost": 10,
     "imageName": "Gang Boss.webp",
-    "keywords": [],
+    "keywords": [
+      {
+        "name": "Command Vehicle",
+        "value": 2
+      }
+    ],
     "requirements": [
       {
         "affiliation": "raider",
@@ -23275,6 +23272,194 @@
     ]
   },
   "Gd": {
+    "cardSubtype": "primary",
+    "cardName": "Cauldron",
+    "cardType": "battle",
+    "imageName": "Cauldron.webp",
+    "keywords": [],
+    "id": "Gd"
+  },
+  "Ge": {
+    "cardSubtype": "primary",
+    "cardName": "Contact, Contact!",
+    "cardType": "battle",
+    "imageName": "Contact, Contact!.webp",
+    "keywords": [
+      {
+        "name": "Precise",
+        "value": 1
+      }
+    ],
+    "id": "Ge"
+  },
+  "Gf": {
+    "cardSubtype": "primary",
+    "cardName": "Payload",
+    "cardType": "battle",
+    "imageName": "Payload.webp",
+    "keywords": [],
+    "id": "Gf"
+  },
+  "Gg": {
+    "cardSubtype": "secondary",
+    "cardName": "Retrieve the Data",
+    "cardType": "battle",
+    "imageName": "Retrieve the Data.webp",
+    "keywords": [],
+    "id": "Gg"
+  },
+  "Gh": {
+    "cardSubtype": "secondary",
+    "cardName": "Failed Negotiations",
+    "cardType": "battle",
+    "imageName": "Failed Negotiations.webp",
+    "keywords": ["Incognito"],
+    "id": "Gh"
+  },
+  "Gi": {
+    "cardSubtype": "secondary",
+    "cardName": "Align the Relay",
+    "cardType": "battle",
+    "imageName": "Align the Relay.webp",
+    "keywords": [],
+    "id": "Gi"
+  },
+  "Gj": {
+    "cardSubtype": "advantage",
+    "cardName": "Scrambled Orders",
+    "cardType": "battle",
+    "faction": "rebels",
+    "imageName": "Scrambled Orders.webp",
+    "keywords": [],
+    "id": "Gj"
+  },
+  "Gk": {
+    "cardSubtype": "advantage",
+    "cardName": "Extreme Discipline",
+    "cardType": "battle",
+    "faction": "empire",
+    "imageName": "Extreme Discipline.webp",
+    "keywords": [],
+    "id": "Gk"
+  },
+  "Gl": {
+    "cardSubtype": "advantage",
+    "cardName": "Armored Assault",
+    "cardType": "battle",
+    "faction": "separatists",
+    "imageName": "Armored Assault.webp",
+    "keywords": [],
+    "id": "Gl"
+  },
+  "Gm": {
+    "cardSubtype": "advantage",
+    "cardName": "Rapid Deployment",
+    "cardType": "battle",
+    "faction": "republic",
+    "imageName": "Rapid Deployment.webp",
+    "keywords": ["Reinforcements"],
+    "id": "Gm"
+  },
+  "Gn": {
+    "cardSubtype": "heavy weapon",
+    "cardName": "Long Rifle Pirate",
+    "cardType": "upgrade",
+    "cost": 20,
+    "imageName": "Long Rifle Pirate.webp",
+    "keywords": [{ "name": "Lethal", "value": 1 }],
+    "requirements": [
+      {
+        "cardName": "Weequay Pirates"
+      }
+    ],
+    "history": [],
+    "id": "Gn",
+    "weapons": [
+      {
+        "name": "Long Rifle",
+        "keywords": [],
+        "range": [1, 4],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Go": {
+    "cardSubtype": "personnel",
+    "cardName": "Weequay Captain",
+    "cardType": "upgrade",
+    "cost": 19,
+    "imageName": "Weequay Captain.webp",
+    "keywords": ["Leader"],
+    "requirements": [
+      {
+        "cardName": "Weequay Pirates"
+      }
+    ],
+    "history": [],
+    "id": "Go",
+    "weapons": [
+      {
+        "name": "Bravado",
+        "keywords": [],
+        "range": [0, 2],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Gp": {
+    "cardSubtype": "personnel",
+    "cardName": "Weequay Pirate Squad",
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "Weequay Pirate Squad.webp",
+    "keywords": ["Indomitable", "Transport"],
+    "requirements": [
+      {
+        "cardName": "Weequay Pirates"
+      }
+    ],
+    "history": [],
+    "id": "Gp"
+  },
+  "Gq": {
+    "cardSubtype": "heavy weapon",
+    "cardName": "Electrostaff Pirate",
+    "cardType": "upgrade",
+    "cost": 15,
+    "imageName": "Electrostaff Pirate.webp",
+    "keywords": [
+      { "name": "Immune", "value": "Melee Pierce" },
+      { "name": "Sidearm", "value": "Melee" }
+    ],
+    "requirements": [
+      {
+        "cardName": "Weequay Pirates"
+      }
+    ],
+    "history": [],
+    "id": "Gq",
+    "weapons": [
+      {
+        "name": "Electrostaff",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Gr": {
     "cardName": "This Party's Over",
     "cardSubtype": "1",
     "cardType": "command",
@@ -23282,12 +23467,12 @@
     "faction": "empire",
     "imageName": "The Empire Does Not Tolerate Failure.webp",
     "keywords": ["Vaapad Mastery"],
-    "id": "Ge",
+    "id": "Gr",
     "isUnreleased": "Q3 2026"
   },
-  "Ge": {
+  "Gs": {
     "isUnreleased": "Q3 2026",
-    "id": "Ge",
+    "id": "Gs",
     "cardName": "Shaak Ti",
     "title": "Jedi Council",
     "imageName": "Jedi Knight General.webp",
@@ -23339,7 +23524,7 @@
       }
     ]
   },
-  "Gf": {
+  "Gt": {
     "isUnreleased": "Q3 2026",
     "cardName": "Unity Wins Wars",
     "cardSubtype": "3",
@@ -23348,11 +23533,11 @@
     "faction": "republic",
     "imageName": "The Empire Does Not Tolerate Failure.webp",
     "keywords": ["Mercenary"],
-    "id": "Gf"
+    "id": "Gt"
   },
-  "Gg": {
+  "Gu": {
     "isUnreleased": "Q3 2026",
-    "id": "Gg",
+    "id": "Gu",
     "cardName": "Ki-Adi-Mundi",
     "title": "Jedi Council",
     "imageName": "Jedi Knight General.webp",
@@ -23407,7 +23592,7 @@
       }
     ]
   },
-  "Gh": {
+  "Gv": {
     "isUnreleased": "Q3 2026",
     "cardName": "Force of Will",
     "cardSubtype": "3",
@@ -23415,11 +23600,11 @@
     "commander": "Ki-Adi-Mundi",
     "faction": "republic",
     "imageName": "The Empire Does Not Tolerate Failure.webp",
-    "id": "Gh"
+    "id": "Gv"
   },
-  "Gi": {
+  "Gw": {
     "isUnreleased": "Q3 2026",
-    "id": "Gi",
+    "id": "Gw",
     "cardName": "Plo Koon",
     "title": "Jedi Council",
     "imageName": "Jedi Knight General.webp",
@@ -23478,7 +23663,7 @@
       }
     ]
   },
-  "Gj": {
+  "Gx": {
     "isUnreleased": "Q3 2026",
     "cardName": "I Don't Believe in Chance",
     "cardSubtype": "2",
@@ -23487,11 +23672,11 @@
     "faction": "republic",
     "imageName": "The Empire Does Not Tolerate Failure.webp",
     "keywords": ["Distract"],
-    "id": "Gj"
+    "id": "Gx"
   },
-  "Gk":{
+  "Gy":{
     "isUnreleased": "Q3 2026",
-    "id":"Gk",
+    "id":"Gy",
     "cardName":"You're Not All the Same to Me",
     "imageName": "Vigilance.webp",
     "cost":5,
@@ -23503,7 +23688,7 @@
       {"cardName":"Plo Koon"}
     ]
   },
-  "Gl": {
+  "Gz": {
     "isUnreleased": "Q3 2026",
     "cardName": "A Disturbance in the Force",
     "cardSubtype": "3",
@@ -23511,15 +23696,15 @@
     "commander": "",
     "faction": "republic",
     "imageName": "The Empire Does Not Tolerate Failure.webp",
-    "id": "Gl",
+    "id": "Gz",
     "requirements":[
       {"title":"Jedi Council"}
     ],
     "keywords":[{"name":"Danger Sense", "value":1}, "Indomitable"]
   },
-  "Gm":{
+  "Ha":{
     "isUnreleased": "Q3 2026",
-    "id":"Gm",
+    "id":"Ha",
     "cardName":"Shaak Ti",
     "cardType":"upgrade",
     "cardSubtype":"heavy weapon",
@@ -23546,9 +23731,9 @@
       }
     ]
   },
-  "Gn": {
+  "Hb": {
     "isUnreleased": "Q3 2026",
-    "id": "Gn",
+    "id": "Hb",
     "cardName": "Savage Opress",
     "title": "Maul's Enforcer",
     "imageName": "Jedi Knight General.webp",
@@ -23617,9 +23802,9 @@
       }
     ]
   },
-  "Go": {
+  "Hc": {
     "isUnreleased": "Q3 2026",
-    "id": "Go",
+    "id": "Hc",
     "cardName": "Savage Opress",
     "title": "Maul's Enforcer",
     "imageName": "Jedi Knight General.webp",
@@ -23688,28 +23873,28 @@
       }
     ]
   },
-  "Gp": {
+  "Hd": {
     "isUnreleased": "Q3 2026",
     "cardName": "We Shall Start with Revenge",
     "cardSubtype": "1",
     "cardType": "command",
     "commander": "Savage Opress",
     "imageName": "The Empire Does Not Tolerate Failure.webp",
-    "id": "Gp"
+    "id": "Hd"
   },
-  "Gq": {
+  "Hi": {
     "isUnreleased": "Q3 2026",
     "cardName": "For the Cause",
     "cardSubtype": "1",
     "cardType": "command",
     "faction": "separatists",
     "imageName": "The Empire Does Not Tolerate Failure.webp",
-    "id": "Gq",
+    "id": "Hi",
     "keywords":[]
   },
-  "Gr": {
+  "Hj": {
     "isUnreleased": "Q4 2026",
-    "id": "Gr",
+    "id": "Hj",
     "cardName": "Anakin Skywalker",
     "title": "Mounted Jedi General",
     "imageName": "Jedi Knight General.webp",
@@ -23776,9 +23961,9 @@
       }
     ]
   },
-  "Gs": {
+  "Hk": {
     "isUnreleased": "Q4 2026",
-    "id": "Gs",
+    "id": "Hk",
     "cardName": "Jedi Knight",
     "title": "Mounted Jedi General",
     "imageName": "Jedi Knight General.webp",
@@ -23851,19 +24036,19 @@
       }
     ]
   },
-  "Gt": {
+  "Hl": {
     "isUnreleased": "Q4 2026",
     "cardName": "Evasive Action",
     "cardSubtype": "2",
     "cardType": "command",
     "faction": "republic",
     "imageName": "The Empire Does Not Tolerate Failure.webp",
-    "id": "Gt",
+    "id": "Hl",
     "keywords":[]
   },
-  "Gu": {
+  "Hm": {
     "isUnreleased": "Q4 2026",
-    "id": "Gu",
+    "id": "Hm",
     "cardName": "Guerilla Troopers",
     "imageName": "Jedi Knight General.webp",
     "cardType": "unit",
@@ -23918,9 +24103,9 @@
       }
     ]
   },
-  "Gv": {
+  "Hn": {
     "isUnreleased": "Q4 2026",
-    "id": "Gv",
+    "id": "Hn",
     "cardName": "Guerilla Troopers",
     "imageName": "Jedi Knight General.webp",
     "cardType": "unit",
@@ -23975,8 +24160,8 @@
       }
     ]
   },
-  "Gw": {
-    "id": "Gw",
+  "Ho": {
+    "id": "Ho",
     "cardSubtype": "heavy weapon",
     "cardName": "Din Djarin",
     "isUnique": true,
@@ -24008,8 +24193,8 @@
       }
     ]
   },
-  "Gx": {
-    "id": "Gx",
+  "Hp": {
+    "id": "Hp",
     "cardSubtype": "heavy weapon",
     "cardName": "The Armorer",
     "isUnique": true,

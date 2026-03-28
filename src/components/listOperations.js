@@ -234,14 +234,14 @@ function addAdditionalUpgradeSlots(unit, upgradeCard) {
 }
 
 function removeAdditionalUpgradeSlot(unit) {
-  unit.additionalUpgradeSlots = [];
-
   let offset =
-    unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
+    unit.upgradesEquipped.length -
+    unit.specialUpgradeSlots.length -
+    unit.additionalUpgradeSlots.length;
 
-  unit.upgradesEquipped.splice(offset, 1);
+  unit.upgradesEquipped.splice(offset, unit.additionalUpgradeSlots.length);
 
-  updateSpecialUpgradeSlots(unit);
+  unit.additionalUpgradeSlots = [];
 }
 
 function addUnit(list, unitId, stackSize = 1) {
@@ -249,6 +249,7 @@ function addUnit(list, unitId, stackSize = 1) {
 
   const newUnitObject = {
     unitId,
+    unitName: unitCard.cardName,
     count: unitCard.isUnique || unitCard.isUniqueTitle ? 1 : stackSize,
     totalUnitCost: unitCard.cost * stackSize,
     upgradesEquipped: [],

@@ -174,14 +174,17 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
 
     if (card.specialIssue && card.specialIssue !== list.battleForce) continue;
 
+    const detachmentUnit = card.keywords.find(
+      (keyword) => keyword.name === "Detachment",
+    );
     // Show detachment units only after their detach target is present in list
-    if (card.detachment && !(battleForce?.rules?.ignoreDetach === id)) {
+    if (detachmentUnit && !(battleForce?.rules?.ignoreDetach === id)) {
       for (let i = 0; i < list.units.length; i++) {
         const unit = list.units[i];
         const unitCard = cards[unit.unitId];
         if (
-          unit.unitId === card.detachment ||
-          unitCard.rank === card.detachment
+          unit.unitName === detachmentUnit.value ||
+          unitCard.rank === detachmentUnit.value
         ) {
           validUnitIds.push(id);
           break;
