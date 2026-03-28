@@ -251,6 +251,14 @@ function battleForceValidation(currentList, unitCounts) {
     return validationIssues;
   }
 
+  if (battleForcesDict[currentList.battleForce]?.rules?.noRules) {
+     validationIssues.push({
+        level: 2,
+        text: "We don't have rules for this Army yet, these units are a best guess. Build/buy with caution!",
+      });
+  }
+
+
   if (battleForcesDict[currentList.battleForce]?.rules?.take2NonEwokRebs) {
     let rebelsCount = currentList.units.reduce((rebelsCount, unit) => {
       const card = cards[unit.unitId];
