@@ -23273,5 +23273,771 @@
         "title": "Imperial High Command"
       }
     ]
+  },
+  "Gd": {
+    "cardName": "This Party's Over",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "Mace Windu",
+    "faction": "empire",
+    "imageName": "The Empire Does Not Tolerate Failure.webp",
+    "keywords": ["Vaapad Mastery"],
+    "id": "Ge",
+    "isUnreleased": "Q3 2026"
+  },
+  "Ge": {
+    "isUnreleased": "Q3 2026",
+    "id": "Ge",
+    "cardName": "Shaak Ti",
+    "title": "Jedi Council",
+    "imageName": "Jedi Knight General.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "operative",
+    "faction": "republic",
+    "isUnique": true,
+    "cost": 0,
+    "keywords": [
+       {
+        "name": "Jump",
+        "value": 1
+      },
+      "Quick Thinking",
+       {
+        "name": "Aid",
+        "value": "Non-Republic Unit"
+      },
+      "Allies of Convenience",
+      "Charge",
+      "Deflect",
+      "Immune: Pierce",
+      "Makashi Mastery"
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "c",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Shaak Ti's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 3,
+          "b": 3,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":2}  
+        ]
+      }
+    ]
+  },
+  "Gf": {
+    "isUnreleased": "Q3 2026",
+    "cardName": "Unity Wins Wars",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "Shaak Ti",
+    "faction": "republic",
+    "imageName": "The Empire Does Not Tolerate Failure.webp",
+    "keywords": ["Mercenary"],
+    "id": "Gf"
+  },
+  "Gg": {
+    "isUnreleased": "Q3 2026",
+    "id": "Gg",
+    "cardName": "Ki-Adi-Mundi",
+    "title": "Jedi Council",
+    "imageName": "Jedi Knight General.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "commander",
+    "faction": "republic",
+    "isUnique": true,
+    "cost": 0,
+    "keywords": [
+       {
+        "name": "Jump",
+        "value": 2
+      },
+      "Ataru Mastery",
+      "Charge",
+      {
+        "name": "Danger Sense",
+        "value": 1
+      },
+      "Deflect",
+      "Immune: Pierce",
+      {
+        "name": "Master of the Force",
+        "value": 1
+      }
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Mundi's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":1},
+          {"name":"Lethal", "value":1}  
+        ]
+      }
+    ]
+  },
+  "Gh": {
+    "isUnreleased": "Q3 2026",
+    "cardName": "Force of Will",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "Ki-Adi-Mundi",
+    "faction": "republic",
+    "imageName": "The Empire Does Not Tolerate Failure.webp",
+    "id": "Gh"
+  },
+  "Gi": {
+    "isUnreleased": "Q3 2026",
+    "id": "Gi",
+    "cardName": "Plo Koon",
+    "title": "Jedi Council",
+    "imageName": "Jedi Knight General.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "operative",
+    "faction": "republic",
+    "isUnique": true,
+    "cost": 0,
+    "keywords": [
+       {
+        "name": "Jump",
+        "value": 1
+      },
+      "Distract",
+      "Charge",
+      {
+        "name":"Defend",
+        "value":1
+      },
+      "Deflect",
+      {
+        "name":"Direct",
+        "value":"Clone Trooper Infantry"
+      },
+      "Immune: Pierce",
+      {
+        "name":"Inspire",
+        "value":2
+      },
+      "Shien Mastery"
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Plo Koon's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 0,
+          "b": 5,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":2}  
+        ]
+      }
+    ]
+  },
+  "Gj": {
+    "isUnreleased": "Q3 2026",
+    "cardName": "I Don't Believe in Chance",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "Plo Koon",
+    "faction": "republic",
+    "imageName": "The Empire Does Not Tolerate Failure.webp",
+    "keywords": ["Distract"],
+    "id": "Gj"
+  },
+  "Gk":{
+    "isUnreleased": "Q3 2026",
+    "id":"Gk",
+    "cardName":"You're Not All the Same to Me",
+    "imageName": "Vigilance.webp",
+    "cost":5,
+    "cardType":"upgrade",
+    "cardSubtype":"command",
+    "isUnique": true,
+    "keywords":[{"name":"Retinue", "value":"Plo Koon"}],
+    "requirements":[
+      {"cardName":"Plo Koon"}
+    ]
+  },
+  "Gl": {
+    "isUnreleased": "Q3 2026",
+    "cardName": "A Disturbance in the Force",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "",
+    "faction": "republic",
+    "imageName": "The Empire Does Not Tolerate Failure.webp",
+    "id": "Gl",
+    "requirements":[
+      {"title":"Jedi Council"}
+    ],
+    "keywords":[{"name":"Danger Sense", "value":1}, "Indomitable"]
+  },
+  "Gm":{
+    "isUnreleased": "Q3 2026",
+    "id":"Gm",
+    "cardName":"Shaak Ti",
+    "cardType":"upgrade",
+    "cardSubtype":"heavy weapon",
+    "imageName": "Vigilance.webp",
+    "faction":"republic",
+    "cost":22,
+    "isUnique": true,
+    "keywords":["Leader", {"name":"Sidearm", "value":"Melee, Ranged"},{"name":"Cache", "value":"Aim 1"}, "Immune: Melee Pierce"],
+    "requirements":[
+    ],
+    "weapons": [
+      {
+        "name": "Shaak Ti's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":1}  
+        ]
+      }
+    ]
+  },
+  "Gn": {
+    "isUnreleased": "Q3 2026",
+    "id": "Gn",
+    "cardName": "Savage Opress",
+    "title": "Maul's Enforcer",
+    "imageName": "Jedi Knight General.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "operative",
+    "faction": "mercenary",
+    "isUnique": true,
+    "cost": 0,
+    "keywords": [
+       {
+        "name": "Jump",
+        "value": 1
+      },
+      {
+        "name": "Demoralize",
+        "value": 1
+      },
+      {
+        "name": "Enrage",
+        "value": 2
+      },      
+      "Immune: Pierce",
+      {
+        "name":"Retinue",
+        "value":"Maul"
+      }
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Double-Bladed Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 2
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":2},
+          {"name":"Ram", "value":1}  
+        ]
+      },
+      {
+        "name": "Dark Fury",
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Poison", "value":1},
+          "Scatter"
+        ]
+      }
+    ]
+  },
+  "Go": {
+    "isUnreleased": "Q3 2026",
+    "id": "Go",
+    "cardName": "Savage Opress",
+    "title": "Maul's Enforcer",
+    "imageName": "Jedi Knight General.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "operative",
+    "faction": "separatists",
+    "isUnique": true,
+    "cost": 0,
+    "keywords": [
+       {
+        "name": "Jump",
+        "value": 1
+      },
+      {
+        "name": "Demoralize",
+        "value": 1
+      },
+      {
+        "name": "Enrage",
+        "value": 2
+      },      
+      "Immune: Pierce",
+      {
+        "name":"Retinue",
+        "value":"Count Dooku"
+      }
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Double-Bladed Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 2
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":2},
+          {"name":"Ram", "value":1}  
+        ]
+      },
+      {
+        "name": "Dark Fury",
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Poison", "value":1},
+          "Scatter"
+        ]
+      }
+    ]
+  },
+  "Gp": {
+    "isUnreleased": "Q3 2026",
+    "cardName": "We Shall Start with Revenge",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "Savage Opress",
+    "imageName": "The Empire Does Not Tolerate Failure.webp",
+    "id": "Gp"
+  },
+  "Gq": {
+    "isUnreleased": "Q3 2026",
+    "cardName": "For the Cause",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "faction": "separatists",
+    "imageName": "The Empire Does Not Tolerate Failure.webp",
+    "id": "Gq",
+    "keywords":[]
+  },
+  "Gr": {
+    "isUnreleased": "Q4 2026",
+    "id": "Gr",
+    "cardName": "Anakin Skywalker",
+    "title": "Mounted Jedi General",
+    "imageName": "Jedi Knight General.webp",
+    "cardType": "unit",
+    "cardSubtype": "repulsor vehicle",
+    "rank": "operative",
+    "faction": "republic",
+    "isUnique": true,
+    "cost": 0,
+    "keywords": [
+       {
+        "name": "Cover",
+        "value": 2
+      },
+      {
+        "name": "Independent",
+        "value": "Aim 2 or Surge 2"
+      },
+      "Immune: Pierce",
+      "Reposition",
+      {
+        "name": "Speeder",
+        "value": 1
+      }
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Anakin's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Overrun", "value":1},
+          {"name":"Pierce", "value":2},
+          "Scatter"
+        ]
+      },
+      {
+        "name": "Twin Blaster Cannon",
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 4
+        },
+        "keywords":[
+          {"name":"Fixed", "value":"Front"},
+          {"name":"Lethal", "value":1}
+        ]
+      }
+    ]
+  },
+  "Gs": {
+    "isUnreleased": "Q4 2026",
+    "id": "Gs",
+    "cardName": "Jedi Knight",
+    "title": "Mounted Jedi General",
+    "imageName": "Jedi Knight General.webp",
+    "cardType": "unit",
+    "cardSubtype": "repulsor vehicle",
+    "rank": "commander",
+    "faction": "republic",
+    "cost": 0,
+    "keywords": [
+      {
+        "name": "Aid",
+        "value": "Clone Trooper"
+      },
+      {
+        "name": "Command Vehicle",
+        "value": 2
+      },
+      {
+        "name": "Cover",
+        "value": 1
+      },
+      {
+        "name": "Defend",
+        "value": 1
+      },
+      "Immune: Pierce",
+      {
+        "name": "Speeder",
+        "value": 1
+      }
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 1,
+          "w": 3
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Overrun", "value":1},
+          {"name":"Pierce", "value":1},
+          "Scatter"
+        ]
+      },
+      {
+        "name": "Twin Blaster Cannon",
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 3
+        },
+        "keywords":[
+          {"name":"Fixed", "value":"Front"},
+          {"name":"Lethal", "value":1}
+        ]
+      }
+    ]
+  },
+  "Gt": {
+    "isUnreleased": "Q4 2026",
+    "cardName": "Evasive Action",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "faction": "republic",
+    "imageName": "The Empire Does Not Tolerate Failure.webp",
+    "id": "Gt",
+    "keywords":[]
+  },
+  "Gu": {
+    "isUnreleased": "Q4 2026",
+    "id": "Gu",
+    "cardName": "Guerilla Troopers",
+    "imageName": "Jedi Knight General.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "special",
+    "faction": "rebels",
+    "cost": 0,
+    "keywords": [
+      {
+        "name": "Flexible Response",
+        "value": "2"
+      },
+      {
+        "name": "Independent",
+        "value": "Aim 1"
+      },
+      "Infiltrate"
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon"],
+    "stats": {
+      "minicount": 4,
+      "hp": 1,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "range": [0, 0],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        },
+        "keywords":[
+        ]
+      },
+      {
+        "name": "Stolen Blasters",
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        },
+        "keywords":[
+          "Overwhelm"
+        ]
+      }
+    ]
+  },
+  "Gv": {
+    "isUnreleased": "Q4 2026",
+    "id": "Gv",
+    "cardName": "Guerilla Troopers",
+    "imageName": "Jedi Knight General.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "special",
+    "faction": "rebels",
+    "cost": 0,
+    "keywords": [
+      {
+        "name": "Flexible Response",
+        "value": "2"
+      },
+      {
+        "name": "Independent",
+        "value": "Aim 1"
+      },
+      "Infiltrate"
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon"],
+    "stats": {
+      "minicount": 4,
+      "hp": 1,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "range": [0, 0],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        },
+        "keywords":[
+        ]
+      },
+      {
+        "name": "Stolen Blasters",
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        },
+        "keywords":[
+          "Overwhelm"
+        ]
+      }
+    ]
+  },
+  "Gw": {
+    "id": "Gw",
+    "cardSubtype": "heavy weapon",
+    "cardName": "Din Djarin",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "Mag-Det Enforcer.webp",
+    "requirements": [
+      {
+        "affiliation": "The Tribe"
+      }
+    ],
+    "keywords":["Leader", "This is the Way"],
+    "weapons": [
+      {
+        "name": "Din's Blaster Pistol",
+        "keywords": [
+          "Blast",
+          {
+            "name": "Lethal",
+            "value": 1
+          }
+        ],
+        "range": [0, 2],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Gx": {
+    "id": "Gx",
+    "cardSubtype": "heavy weapon",
+    "cardName": "The Armorer",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "Mag-Det Enforcer.webp",
+    "keywords":["Leader", {"name":"Reliable", "value":2}],
+    "requirements": [
+    {
+      "affiliation": "The Tribe"
+    }
+    ],
+    "weapons": [
+      {
+        "name": "Hammer and Tongs",
+        "keywords": [
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ]
   }
 }

@@ -348,7 +348,7 @@ const battleForcesDict = {
     forceAffinity: "dark side",
     linkId: "sc",
     commander: ["ra", "rd", "qy"],
-    operative: ["rc", "kx", "ax"], // TODO add "Savage Oppress"!!
+    operative: ["rc", "kx", "ax", "Gn"],
     corps: ["rb", "qz", "Fd"],
     special: ["re"],
     support: ["sq"],
