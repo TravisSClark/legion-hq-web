@@ -18,7 +18,8 @@ const battleForcesDict = {
     special: ["Ay"],
     support: ["mb"],
     heavy: ["gb", "oo", "qs"],
-    allowedUniqueUpgrades: [ // TODO: add "Squadron Leader"
+    allowedUniqueUpgrades: [
+      // TODO: add "Squadron Leader"
       "uf",
       "Dc",
       "De",
@@ -95,7 +96,7 @@ const battleForcesDict = {
     rules: {
       noFieldComm: true,
       unitLimits: [{ ids: ["ay", "sr"], count: [0, 2] }],
-      ignoreDetach:"Fa"
+      ignoreDetach: "Fa",
     },
     "standard mode": {
       commander: [1, 2],
@@ -337,7 +338,17 @@ const battleForcesDict = {
     special: ["re"],
     support: ["sq"],
     heavy: ["sm", "Fe"],
-    allowedUniqueUpgrades: ["rq", "so", "se", "sp", "sg", "sh", "si", "Bn", "Fn"],
+    allowedUniqueUpgrades: [
+      "rq",
+      "so",
+      "se",
+      "sp",
+      "sg",
+      "sh",
+      "si",
+      "Bn",
+      "Fn",
+    ],
     rules: {
       countMercs: true,
     },
@@ -498,18 +509,18 @@ const battleForcesDict = {
     //   heavy: [0, 1]
     // }
   },
-   "Mandalorians (Unofficial)": {
+  "Mandalorian Clans (Unofficial)": {
     // TODO: guesses on affils are: Mandalore, Clan Kryze, Clan Wren, Covert, Death Watch
     // Adepticon stream at 48:00 said "Death Watch, Clan Kryze, Covert, Clan Wren, and Clan Saxon", but that sounds wrong re pic, lol
     // ctrl+f and replace EVERYWHERE once we get docs
-    name: "Mandalorians (Unofficial)",
+    name: "Mandalorian Clans (Unofficial)",
     faction: "mercenary",
     forceAffinity: "",
     linkId: "sc",
     commander: ["rd", "Hu", "Hw", "Hy"],
-    operative: ["ag", "Hv","Hx", "Hz", "tk", "aw", "tl"],
+    operative: ["ag", "Hv", "Hx", "Hz", "tk", "aw", "tl"],
     corps: ["Hq", "Hr"],
-    special: ["re", "ml", "Ht", "Ia" ],
+    special: ["re", "ml", "Ht", "Ia"],
     support: ["Hs"],
     heavy: [],
     allowedUniqueUpgrades: ["Ho", "Hp", "tn"],
@@ -519,7 +530,7 @@ const battleForcesDict = {
       //countMercs: true,
     },
     plainTextRules: [
-      "This is an UNOFFICIAL, best guess at what things might be allowed in a Mandalorian army.", 
+      "This is an UNOFFICIAL, best guess at what things might be allowed in a Mandalorian army.",
       "PLEASE, don't buy/preorder things based on these rules; we really know very little.",
     ],
     "standard mode": {
