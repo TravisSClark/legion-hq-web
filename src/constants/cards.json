@@ -24763,12 +24763,13 @@
   },
   "If": {
     "isUnreleased": "Q4 2026",
-    "cardName": "Evasive Action",
+    "cardName": "Weapons Are Our Religion",
     "cardSubtype": "2",
     "cardType": "command",
     "faction": "",
     "commander": "",
-    "imageName": "Evasive Action.webp",
+    "imageName": "Weapons Are Our Religion.webp",
+    "battleForce": "Mandalorian Clans",
     "requirements": [],
     "id": "If",
     "keywords": ["Charge", "Versatile"]
