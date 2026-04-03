@@ -31,7 +31,7 @@ const doesKeywordNeedValue = {
   Charge: false,
   "Climbing Vehicle": false,
   "Complete the Mission": false,
-  Compel: true,
+  Compel: false,
   Coordinate: true,
   Counterpart: true,
   Cover: true,
@@ -197,7 +197,7 @@ const doesKeywordNeedValue = {
 const keywordsWithFields = [
   ["Mercenary", "affiliations"],
   ["Special Issue", "specialIssue"],
-  ["Equip", "equip"],
+  // ["Equip", "equip"],
 ];
 
 function areRequirementsMet(requirements, unitCard) {

@@ -32,8 +32,6 @@ const battleForcesDict = {
         or up to 1 Aim or Dodge token belonging to an allied Clone Trooper unit within 2 and in LOS, as if the attacking or defending vehicle unit had that token.",
     ],
     rules: {},
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2025/11/DOC41_BattleForces.pdf",
     "standard mode": {
       commander: [1, 2],
       operative: [0, 1],
@@ -63,8 +61,6 @@ const battleForcesDict = {
     heavy: ["oo"],
     allowedUniqueUpgrades: ["lh", "lg", "Bd", "Ep"],
     rules: {},
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_501st.pdf",
     "standard mode": {
       commOp: 2,
       commander: [1, 2],
@@ -101,8 +97,6 @@ const battleForcesDict = {
       unitLimits: [{ ids: ["ay", "sr"], count: [0, 2] }],
       ignoreDetach:"Fa"
     },
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_BlizzardForce.pdf",
     "standard mode": {
       commander: [1, 2],
       operative: [0, 0],
@@ -146,8 +140,6 @@ const battleForcesDict = {
       "REBEL COMMANDER units in this army gain Allies of Convenience",
     ],
 
-    ruleUrl:
-      "cdn.svc.asmodee.net/production-amgcom/uploads/2023/07/StarWarsLegionBFRulesSheetBrightTreeVillage1",
     "standard mode": {
       commOp: 5,
       commander: [1, 5],
@@ -181,8 +173,6 @@ const battleForcesDict = {
     rules: {
       noFieldComm: true,
     },
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_EchoBaseDefenders.pdf",
     "standard mode": {
       commOp: 4,
       commander: [1, 4],
@@ -239,8 +229,6 @@ const battleForcesDict = {
         their next Attack action this turn.\n\
         • Remove up to 2 Suppression tokens.",
     ],
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ExperimentalDroids.pdf",
     "standard mode": {
       commander: [1, 2],
       operative: [0, 0],
@@ -285,8 +273,6 @@ const battleForcesDict = {
         When an allied unit checks to see if it is Panicked, it can never use the \
         Courage of an allied unit that is not within 2",
     ],
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ImperialRemnant-1.pdf",
     "standard mode": {
       commOp: 2,
       commander: [1, 2],
@@ -320,8 +306,6 @@ const battleForcesDict = {
       noFieldComm: true,
     },
     allowedUniqueUpgrades: [], // TODO add "Squadron Leader"
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2022/10/StarWarsLegionBFRulesSheetSI.pdf",
 
     "standard mode": {
       commOp: 2,
@@ -348,7 +332,7 @@ const battleForcesDict = {
     forceAffinity: "dark side",
     linkId: "sc",
     commander: ["ra", "rd", "qy"],
-    operative: ["rc", "kx", "ax"], // TODO add "Savage Oppress"!!
+    operative: ["rc", "kx", "ax", "Gn"],
     corps: ["rb", "qz", "Fd"],
     special: ["re"],
     support: ["sq"],
@@ -361,8 +345,6 @@ const battleForcesDict = {
       "A Shadow Collective Battle Force is aligned with the Dark Side.",
       "Units in this army with the Transport keyword may issue Orders to transported units regardless of Affiliation.",
     ],
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_ShadowCollective.pdf",
 
     "standard mode": {
       commOp: 4,
@@ -400,8 +382,6 @@ const battleForcesDict = {
       When a non-unique COMMANDER or non-unique OPERATIVE unit in this army is issued an Order, it gains 1 Surge token \
       COMMANDER units in this army have Compel while they are the nominated Commander.",
     ],
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2025/11/DOC41_BattleForces.pdf",
     "standard mode": {
       commander: [1, 3],
       operative: [0, 2],
@@ -443,8 +423,6 @@ const battleForcesDict = {
         and its Order token is placed facedown. Then, the unit loses its \
         Advantage token.",
     ],
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_TempestForce-1.pdf",
     "standard mode": {
       commOp: 2,
       commander: [1, 2],
@@ -493,8 +471,6 @@ const battleForcesDict = {
           defeated each Round, that unit may make a Speed-1 Move. A unit can \
           make this Move regardless of its speed.",
     ],
-    ruleUrl:
-      "https://cdn.svc.asmodee.net/production-amgcom/uploads/2024/07/SWQ_WookieesDefenders.pdf",
     "standard mode": {
       commOp: 2,
       commander: [1, 2],
@@ -521,6 +497,48 @@ const battleForcesDict = {
     //   support: [0, 1],
     //   heavy: [0, 1]
     // }
+  },
+   "Mandalorians (Unofficial)": {
+    // TODO: guesses on affils are: Mandalore, Clan Kryze, Clan Wren, Covert, Death Watch
+    // Adepticon stream at 48:00 said "Death Watch, Clan Kryze, Covert, Clan Wren, and Clan Saxon", but that sounds wrong re pic, lol
+    // ctrl+f and replace EVERYWHERE once we get docs
+    name: "Mandalorians (Unofficial)",
+    faction: "mercenary",
+    forceAffinity: "",
+    linkId: "sc",
+    commander: ["rd", "Hu", "Hw", "Hy"],
+    operative: ["ag", "Hv","Hx", "Hz", "tk", "aw", "tl"],
+    corps: ["Hq", "Hr"],
+    special: ["re", "ml", "Ht", "Ia" ],
+    support: ["Hs"],
+    heavy: [],
+    allowedUniqueUpgrades: ["Ho", "Hp", "tn"],
+    rules: {
+      noRules: true,
+
+      //countMercs: true,
+    },
+    plainTextRules: [
+      "This is an UNOFFICIAL, best guess at what things might be allowed in a Mandalorian army.", 
+      "PLEASE, don't buy/preorder things based on these rules; we really know very little.",
+    ],
+    "standard mode": {
+      commander: [0, 6],
+      operative: [0, 6],
+      corps: [0, 6],
+      special: [0, 6],
+      support: [0, 6],
+      heavy: [0, 6],
+    },
+    "500-point mode": {
+      commOp: 2,
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [1, 4],
+      special: [0, 3],
+      support: [0, 2],
+      heavy: [0, 1],
+    },
   },
 };
 

@@ -58,7 +58,7 @@ const useStyles = makeStyles({
 
 function BFRules({list}){
   
-  const bfPdf = "https://cdn.svc.asmodee.net/production-amgcom/uploads/2025/09/DOC13_BattleForces_v1_3.pdf"
+  const bfPdf = "https://www.atomicmassgames.com/swlegiondocs/"
   const classes = useStyles();
 
   if(!list.battleForce){
@@ -83,7 +83,7 @@ function BFRules({list}){
       { bfRules.countMercs && 
           <div>
             { list.battleForce !== "Shadow Collective" && <Typography className={classes.bfRules}>This Battle Force may take any number of Mercenary units.</Typography>}
-            { list.battleForce === "Shadow Collective" && <Typography className={classes.bfRules}>This Battle Forcemust be composed entirely of Mercenary units.</Typography> }
+            { list.battleForce === "Shadow Collective" && <Typography className={classes.bfRules}>This Battle Force must be composed entirely of Mercenary units.</Typography> }
             <Typography className={classes.bfRules}>These units do count towards the miniumum number of Ranks required and the army may include any number of Mercenaries at each Rank.</Typography>
           </div>
       } 
@@ -109,7 +109,7 @@ function BFRules({list}){
     {/* <Typography style={{marginBottom:0}} gutterBottom>See your rule doc for full battleforce rules while playing:</Typography> */}
     {/* <Typography>Additional Rules:</Typography> */}
     <DialogContentText>
-      <Link underline="always" href={bfPdf} target="_blank" rel="noreferrer noopener">Download Battle Forces Rules Document</Link>
+      <Link underline="always" href={bfPdf} target="_blank" rel="noreferrer noopener">Legion Rules Page</Link>
     </DialogContentText>
   </div> 
 }

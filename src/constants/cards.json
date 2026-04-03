@@ -8898,10 +8898,7 @@
       {
         "name": "BX Sniper Rifle",
         "keywords": [
-          {
-            "name": "Immune",
-            "value": "Deflect"
-          },
+          "Immune: Deflect",
           {
             "name": "Lethal",
             "value": "1"
@@ -8967,10 +8964,7 @@
       {
         "name": "DC-15x ARC Trooper",
         "keywords": [
-          {
-            "name": "Immune",
-            "value": "Deflect"
-          },
+          "Immune: Deflect",
           {
             "name": "Lethal",
             "value": "1"
@@ -9084,10 +9078,7 @@
             "name": "Critical",
             "value": 1
           },
-          {
-            "name": "Immune",
-            "value": "Deflect"
-          },
+          "Immune: Deflect",
           {
             "name": "Lethal",
             "value": 1
@@ -9490,7 +9481,7 @@
     "weapons": [
       {
         "name": "Grappling Claws",
-        "keywords": ["Impact 1"],
+        "keywords": [{"name": "Impact", "value":1}],
         "range": [0],
         "dice": {
           "r": 3,
@@ -9500,7 +9491,7 @@
       },
       {
         "name": "Rocket Launcher",
-        "keywords": ["Critical 1", "Impact 1"],
+        "keywords": [{"name": "Critical", "value":1},{"name": "Impact", "value":1}],
         "range": [1, 3],
         "dice": {
           "r": 0,
@@ -17063,8 +17054,9 @@
         "keywords": [
           {
             "name": "Fixed",
-            "value": "Front, Impact 1"
-          }
+            "value": "Front"
+          },
+          {"name": "Impact", "value":1}
         ],
         "range": [0],
         "dice": {
@@ -17848,8 +17840,10 @@
         "keywords": [
           {
             "name": "Fixed",
-            "value": "Front, Impact 1, Ion 1"
-          }
+            "value": "Front"
+          },
+          {"name": "Impact", "value":1},
+          {"name": "Ion", "value":1}
         ],
         "range": [1, 2],
         "dice": {
@@ -21034,10 +21028,7 @@
         "name": "Equip",
         "value": "Doctrine, Armament"
       },
-      {
-        "name": "Immune",
-        "value": "Pierce"
-      },
+      "Immune: Pierce",
       {
         "name": "Master of the Force",
         "value": 1
@@ -21078,10 +21069,7 @@
         "name": "Equip",
         "value": "Doctrine, Armament"
       },
-      {
-        "name": "Immune",
-        "value": "Pierce"
-      }
+      "Immune: Pierce"
     ],
     "upgradeBar": ["doctrine", "force", "training", "armament"],
     "stats": {
@@ -21801,10 +21789,7 @@
     "imageName": "Electrostaff.webp",
     "keywords": [
       "Charge",
-      {
-        "name": "Immune",
-        "value": "Melee Pierce"
-      }
+      "Immune: Melee Pierce"
     ],
     "requirements": [
       {
@@ -21938,10 +21923,7 @@
         "name": "Entourage",
         "value": "TSMEU-6 Wheel Bikes"
       },
-      {
-        "name": "Immune",
-        "value": "Melee Pierce"
-      },
+      "Immune: Melee Pierce",
       "Mobile"
     ],
     "upgradeBar": ["command", "training", "gear", "grenades"],
@@ -22473,10 +22455,7 @@
         "name": "Take Cover",
         "value": 1
       },
-      {
-        "name": "Immune",
-        "value": "Pierce"
-      },
+      "Immune: Pierce",
       {
         "name": "Inspire",
         "value": 2
@@ -23436,7 +23415,7 @@
     "cost": 15,
     "imageName": "Electrostaff Pirate.webp",
     "keywords": [
-      { "name": "Immune", "value": "Melee Pierce" },
+      "Immune: Melee Pierce",
       { "name": "Sidearm", "value": "Melee" }
     ],
     "requirements": [
@@ -23456,6 +23435,1289 @@
           "b": 1,
           "w": 0
         }
+      }
+    ]
+  },
+  "Gr": {
+    "cardName": "This Party's Over",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "Mace Windu",
+    "faction": "empire",
+    "imageName": "This Partys Over.webp",
+    "keywords": ["Vaapad Mastery"],
+    "id": "Gr",
+    "isUnreleased": "Q3 2026"
+  },
+  "Gs": {
+    "isUnreleased": "Q3 2026",
+    "id": "Gs",
+    "cardName": "Shaak Ti",
+    "title": "Jedi Council",
+    "imageName": "Shaak Ti.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "operative",
+    "faction": "republic",
+    "isUnique": true,
+    "cost": 0,
+    "keywords": [
+       {
+        "name": "Jump",
+        "value": 1
+      },
+      "Quick Thinking",
+       {
+        "name": "Aid",
+        "value": "Non-Republic Unit"
+      },
+      "Allies of Convenience",
+      "Charge",
+      "Deflect",
+      "Immune: Pierce",
+      "Makashi Mastery"
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "c",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Shaak Ti's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 3,
+          "b": 3,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":2}  
+        ]
+      }
+    ]
+  },
+  "Gt": {
+    "isUnreleased": "Q3 2026",
+    "cardName": "Unity Wins Wars",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "Shaak Ti",
+    "faction": "republic",
+    "imageName": "Unity Wins Wars.webp",
+    "keywords": ["Mercenary"],
+    "id": "Gt"
+  },
+  "Gu": {
+    "isUnreleased": "Q3 2026",
+    "id": "Gu",
+    "cardName": "Ki-Adi-Mundi",
+    "title": "Jedi Council",
+    "imageName": "Ki-Adi-Mundi.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "commander",
+    "faction": "republic",
+    "isUnique": true,
+    "cost": 0,
+    "keywords": [
+       {
+        "name": "Jump",
+        "value": 2
+      },
+      "Ataru Mastery",
+      "Charge",
+      {
+        "name": "Danger Sense",
+        "value": 1
+      },
+      "Deflect",
+      "Immune: Pierce",
+      {
+        "name": "Master of the Force",
+        "value": 1
+      }
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Mundi's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":1},
+          {"name":"Lethal", "value":1}  
+        ]
+      }
+    ]
+  },
+  "Gv": {
+    "isUnreleased": "Q3 2026",
+    "cardName": "Force of Will",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "Ki-Adi-Mundi",
+    "faction": "republic",
+    "imageName": "Force of Will.webp",
+    "id": "Gv"
+  },
+  "Gw": {
+    "isUnreleased": "Q3 2026",
+    "id": "Gw",
+    "cardName": "Plo Koon",
+    "title": "Jedi Council",
+    "imageName": "Plo Koon.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "operative",
+    "faction": "republic",
+    "isUnique": true,
+    "cost": 0,
+    "keywords": [
+       {
+        "name": "Jump",
+        "value": 1
+      },
+      "Distract",
+      "Charge",
+      {
+        "name":"Defend",
+        "value":1
+      },
+      "Deflect",
+      {
+        "name":"Direct",
+        "value":"Clone Trooper Infantry"
+      },
+      "Immune: Pierce",
+      {
+        "name":"Inspire",
+        "value":2
+      },
+      "Shien Mastery"
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Plo Koon's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 0,
+          "b": 5,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":2}  
+        ]
+      }
+    ]
+  },
+  "Gx": {
+    "isUnreleased": "Q3 2026",
+    "cardName": "I Don't Believe in Chance",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "Plo Koon",
+    "faction": "republic",
+    "imageName": "I Don't Believe in Chance.webp",
+    "keywords": ["Distract"],
+    "id": "Gx"
+  },
+  "Gy":{
+    "isUnreleased": "Q3 2026",
+    "id":"Gy",
+    "cardName":"You're Not All the Same to Me",
+    "imageName": "Youre Not All the Same to Me.webp",
+    "cost":5,
+    "cardType":"upgrade",
+    "cardSubtype":"command",
+    "isUnique": true,
+    "keywords":[{"name":"Retinue", "value":"Plo Koon"}],
+    "requirements":[
+      {"cardName":"Plo Koon"}
+    ]
+  },
+  "Gz": {
+    "isUnreleased": "Q3 2026",
+    "cardName": "A Disturbance in the Force",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "",
+    "faction": "republic",
+    "imageName": "A Disturbance in the Force.webp",
+    "id": "Gz",
+    "requirements":[
+      {"title":"Jedi Council"}
+    ],
+    "keywords":[{"name":"Danger Sense", "value":1}, "Indomitable"]
+  },
+  "Ha":{
+    "isUnreleased": "Q3 2026",
+    "id":"Ha",
+    "cardName":"Shaak Ti",
+    "cardType":"upgrade",
+    "cardSubtype":"heavy weapon",
+    "imageName": "Shaak Ti.webp",
+    "faction":"republic",
+    "cost":22,
+    "isUnique": true,
+    "keywords":["Leader", {"name":"Sidearm", "value":"Melee, Ranged"},{"name":"Cache", "value":"Aim 1"}, "Immune: Melee Pierce"],
+    "requirements":[
+    ],
+    "weapons": [
+      {
+        "name": "Shaak Ti's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":1}  
+        ]
+      }
+    ]
+  },
+  "Hb": {
+    "isUnreleased": "Q3 2026",
+    "id": "Hb",
+    "cardName": "Savage Opress",
+    "title": "Maul's Enforcer",
+    "imageName": "Savage Opress - Maul.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "operative",
+    "faction": "mercenary",
+    "isUnique": true,
+    "cost": 0,
+    "keywords": [
+       {
+        "name": "Jump",
+        "value": 1
+      },
+      {
+        "name": "Demoralize",
+        "value": 1
+      },
+      {
+        "name": "Enrage",
+        "value": 2
+      },      
+      "Immune: Pierce",
+      {
+        "name":"Retinue",
+        "value":"Maul"
+      }
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Double-Bladed Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 2
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":2},
+          {"name":"Ram", "value":1}  
+        ]
+      },
+      {
+        "name": "Dark Fury",
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Poison", "value":1},
+          "Scatter"
+        ]
+      }
+    ]
+  },
+  "Hc": {
+    "isUnreleased": "Q3 2026",
+    "id": "Hc",
+    "cardName": "Savage Opress",
+    "title": "Dooku's Apprentice",
+    "imageName": "Savage Opress - Dooku.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "operative",
+    "faction": "separatists",
+    "isUnique": true,
+    "cost": 0,
+    "keywords": [
+       {
+        "name": "Jump",
+        "value": 1
+      },
+      {
+        "name": "Demoralize",
+        "value": 1
+      },
+      {
+        "name": "Enrage",
+        "value": 2
+      },      
+      "Immune: Pierce",
+      {
+        "name":"Retinue",
+        "value":"Count Dooku"
+      }
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Double-Bladed Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 2
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Pierce", "value":2},
+          {"name":"Ram", "value":1}  
+        ]
+      },
+      {
+        "name": "Dark Fury",
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Poison", "value":1},
+          "Scatter"
+        ]
+      }
+    ]
+  },
+  "Hd": {
+    "isUnreleased": "Q3 2026",
+    "cardName": "We Shall Start with Revenge",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "Savage Opress",
+    "imageName": "We Shall Start with Revenge.webp",
+    "id": "Hd"
+  },
+  "Hi": {
+    "isUnreleased": "Q3 2026",
+    "cardName": "For the Cause",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "faction": "separatists",
+    "imageName": "For the Cause.webp",
+    "id": "Hi",
+    "keywords":[]
+  },
+  "Hj": {
+    "isUnreleased": "Q4 2026",
+    "id": "Hj",
+    "cardName": "Anakin Skywalker",
+    "title": "Mounted Jedi General",
+    "imageName": "Anakin - Mounted.webp",
+    "cardType": "unit",
+    "cardSubtype": "repulsor vehicle",
+    "rank": "operative",
+    "faction": "republic",
+    "isUnique": true,
+    "cost": 0,
+    "keywords": [
+       {
+        "name": "Cover",
+        "value": 2
+      },
+      {
+        "name": "Independent",
+        "value": "Aim 2 or Surge 2"
+      },
+      "Immune: Pierce",
+      "Reposition",
+      {
+        "name": "Speeder",
+        "value": 1
+      }
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Anakin's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Overrun", "value":1},
+          {"name":"Pierce", "value":2},
+          "Scatter"
+        ]
+      },
+      {
+        "name": "Twin Blaster Cannon",
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 4
+        },
+        "keywords":[
+          {"name":"Fixed", "value":"Front"},
+          {"name":"Lethal", "value":1}
+        ]
+      }
+    ]
+  },
+  "Hk": {
+    "isUnreleased": "Q4 2026",
+    "id": "Hk",
+    "cardName": "Jedi Knight",
+    "title": "Mounted Jedi General",
+    "imageName": "Mounted Jedi General.webp",
+    "cardType": "unit",
+    "cardSubtype": "repulsor vehicle",
+    "rank": "commander",
+    "faction": "republic",
+    "cost": 0,
+    "keywords": [
+      {
+        "name": "Aid",
+        "value": "Clone Trooper"
+      },
+      {
+        "name": "Command Vehicle",
+        "value": 2
+      },
+      {
+        "name": "Cover",
+        "value": 1
+      },
+      {
+        "name": "Defend",
+        "value": 1
+      },
+      "Immune: Pierce",
+      {
+        "name": "Speeder",
+        "value": 1
+      }
+    ],
+    "upgradeBar": ["command", "command", "force", "force", "training", "training"],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 1,
+          "w": 3
+        },
+        "keywords":[
+          {"name":"Impact", "value":2},
+          {"name":"Overrun", "value":1},
+          {"name":"Pierce", "value":1},
+          "Scatter"
+        ]
+      },
+      {
+        "name": "Twin Blaster Cannon",
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 3
+        },
+        "keywords":[
+          {"name":"Fixed", "value":"Front"},
+          {"name":"Lethal", "value":1}
+        ]
+      }
+    ]
+  },
+  "Hl": {
+    "isUnreleased": "Q4 2026",
+    "cardName": "Evasive Action",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "faction": "republic",
+    "imageName": "Evasive Action.webp",
+    "id": "Hl",
+    "keywords":[]
+  },
+  "Hm": {
+    "isUnreleased": "Q4 2026",
+    "id": "Hm",
+    "cardName": "Guerilla Troopers",
+    "imageName": "Guerilla Troopers.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "special",
+    "faction": "rebels",
+    "cost": 0,
+    "keywords": [
+      {
+        "name": "Flexible Response",
+        "value": "2"
+      },
+      {
+        "name": "Independent",
+        "value": "Aim 1"
+      },
+      "Infiltrate"
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon"],
+    "stats": {
+      "minicount": 4,
+      "hp": 1,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "range": [0, 0],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        },
+        "keywords":[
+        ]
+      },
+      {
+        "name": "Stolen Blasters",
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        },
+        "keywords":[
+          "Overwhelm"
+        ]
+      }
+    ]
+  },
+  "Ho": {
+    "id": "Ho",
+    "cardSubtype": "heavy weapon",
+    "isUnreleased": "June 2026",
+    "cardName": "Din Djarin",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "Din Djarin - Heavy.webp",
+    "requirements": [
+      {
+        "affiliation": "Covert"
+      }
+    ],
+    "keywords":["Leader", "This is the Way"],
+    "weapons": [
+      {
+        "name": "Din's Blaster Pistol",
+        "keywords": [
+          "Blast",
+          {
+            "name": "Lethal",
+            "value": 1
+          }
+        ],
+        "range": [0, 2],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Hp": {
+    "id": "Hp",
+    "isUnreleased": "June 2026",
+    "cardSubtype": "heavy weapon",
+    "cardName": "The Armorer",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "The Armorer - Heavy.webp",
+    "keywords":["Leader", {"name":"Reliable", "value":2}],
+    "requirements": [
+    {
+      "affiliation": "Covert"
+    }
+    ],
+    "weapons": [
+      {
+        "name": "Hammer and Tongs",
+        "keywords": [
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Hq": {
+    "isUnreleased": "July 2026",
+    "id": "Hq",
+    "cardName": "Mandalorian Initiates",
+    "imageName": "Mandalorian Initiates.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "corps",
+    "faction": "mercenary",
+    "affiliation": "Mandalore",
+    "cost": 0,
+    "keywords": [
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon", "gear"],
+    "stats": {
+      "minicount": 5,
+      "hp": 1,
+      "defense": "r",
+      "courage": 1,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Vibro Blades",
+        "range": [0, 0],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        },
+        "keywords":[
+        ]
+      },
+      {
+        "name": "Blaster Rifles",
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        },
+        "keywords":[
+          "Long Shot"
+        ]
+      }
+    ]
+  },
+  "Hr": {
+    "isUnreleased": "July 2026",
+    "id": "Hr",
+    "cardName": "Mandalorian Warriors",
+    "imageName": "Mandalorian Warriors.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "corps",
+    "faction": "mercenary",
+    "affiliation":"Mandalore",
+    "cost": 0,
+    "keywords": [
+      {"name":"Jump", "value":2},
+      "Duelist",
+      "Impervious"
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon", "gear"],
+    "stats": {
+      "minicount": 5,
+      "hp": 1,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Vibro Blades",
+        "range": [0, 0],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 1
+        },
+        "keywords":[
+        ]
+      },
+      {
+        "name": "Blaster Rifles",
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        },
+        "keywords":[
+          "Long Shot"
+        ]
+      }
+    ]
+  },
+  "Hs": {
+    "isUnreleased": "July 2026",
+    "id": "Hs",
+    "cardName": "Mandalorian Warriors",
+    "title":"Fire Support",
+    "imageName": "Mandalorian Warriors - Fire Support.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "support",
+    "faction": "mercenary",
+    "affiliatoin":"Mandalore",
+    "cost": 0,
+    "keywords": [
+      {"name":"Jump", "value":2},
+      {"name": "Detachment", "value":"Mandalorian Warriors"},
+      "Heavy Weapon Team",
+      "Duelist",
+      "Impervious",
+      {"name":"Sharpshooter", "value":1}
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon", "gear"],
+    "stats": {
+      "minicount": 4,
+      "hp": 1,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Vibro Blades",
+        "range": [0, 0],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 1
+        },
+        "keywords":[
+        ]
+      },
+      {
+        "name": "GALAAR-15 Carbines",
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        },
+        "keywords":[
+          "Long Shot"
+        ]
+      }
+    ]
+  },
+  "Ht": {
+    "isUnreleased": "July 2026",
+    "id": "Ht",
+    "cardName": "Clan Kryze Veterans",
+    "imageName": "Clan Kryze Veterans.webp",
+    "affiliation":"Clan Kryze",
+    "affiliations": ["rebels", "republic"],
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "special",
+    "faction": "mercenary",
+    "cost": 0,
+    "keywords": [
+      {"name": "Mercenary", "value":"Rebels, Republic"},
+      {"name":"Jump", "value":2},
+      "Impervious",
+      "Mandalorians Are Stronger Together",
+      {"name":"Tactical", "value":1}
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon", "gear"],
+    "stats": {
+      "minicount": 5,
+      "hp": 1,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Blaster Pistols",
+        "range": [0, 2],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 1
+        },
+        "keywords":[
+        ]
+      },
+      {
+        "name": "GALAAR-15 Carbines",
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        },
+        "keywords":[
+        ]
+      }
+    ]
+  },
+  "Hu": {
+    "isUnreleased": "July 2026",
+    "id": "Hu",
+    "cardName": "Mandalorian Leader",
+    "imageName": "Mandalorian Leader.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "commander",
+    "faction": "mercenary",
+    "affiliation":"Mandalore",
+    "cost": 0,
+    "keywords": [
+      {"name":"Jump", "value":2},
+      "Equip: Armament, Doctrine (No cards yet)",
+      "Impervious",
+      {"name":"Retinue", "value":"Mandalorian Warriors"}
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon", "gear"],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Vibroknife",
+        "range": [0, 0],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 2
+        },
+        "keywords":[
+          {"name":"Pierce", "value":1}
+        ]
+      },
+      {
+        "name": "Blaster Pistol",
+        "range": [1, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 2
+        },
+        "keywords":[
+        ]
+      }
+    ]
+  },
+  "Hv": {
+    "isUnreleased": "July 2026",
+    "id": "Hv",
+    "cardName": "Mandalorian Hunter",
+    "imageName": "Mandalorian Hunter.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "operative",
+    "faction": "mercenary",
+    "affiliation":"Mandalore",
+    "affiliations": ["empire", "rebels", "republic", "separatists"],
+    "cost": 0,
+    "keywords": [
+      {"name": "Mercenary", "value":"All"},
+      {"name":"Jump", "value":2},
+      "Equip: Armament, Doctrine (No cards yet)",
+      "Impervious"
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon", "gear"],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Vibroknife",
+        "range": [0, 0],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 2
+        },
+        "keywords":[
+          {"name":"Pierce", "value":1}
+        ]
+      },
+      {
+        "name": "Blaster Pistol",
+        "range": [1, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 2
+        },
+        "keywords":[
+        ]
+      }
+    ]
+  },
+  "Hw": {
+    "isUnreleased": "June 2026",
+    "id": "Hw",
+    "cardName": "Bo-Katan Kryze",
+    "title":"Savior of Mandalore",
+    "isUnique":true,
+    "imageName": "Bo-Katan Kryze.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "commander",
+    "faction": "mercenary",
+    "affiliation":"Clan Kryze",
+    "affiliations": ["rebels", "republic"],
+    "cost": 0,
+    "keywords": [
+      {"name": "Mercenary", "value":"Rebels, Republic"},
+      {"name":"Jump", "value":2},
+      "Death from Above",
+      "Impervious",
+      "Mandalorians Are Stronger Together",
+      {"name":"Tactical", "value":1}
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon", "gear"],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 3,
+      "speed": 3,
+      "hitsurge": "c",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Dual Blaster Pistols",
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        },
+        "keywords":[
+          "High Velocity"
+        ]
+      }
+    ]
+  },
+  "Hx": {
+    "isUnreleased": "June 2026",
+    "id": "Hx",
+    "cardName": "Axe Woves",
+    "title":"Cunning Warrior",
+    "isUnique":true,
+    "imageName": "Axe Woves.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "operative",
+    "faction": "mercenary",
+    "affiliation":"Clan Kryze",
+    "affiliations": ["rebels", "republic"],
+    "cost": 0,
+    "keywords": [
+      {"name": "Mercenary", "value":"Rebels, Republic"},
+      {"name":"Jump", "value":2},
+      "Charge",
+      {"name":"Coordinate", "value":"Clan Kryze Unit"},
+      "Impervious",
+      "Mandalorians Are Stronger Together",
+      {"name":"Tactical", "value":1}
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon", "gear"],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Vibroknife and Pistol",
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 2
+        },
+        "keywords":[
+        ]
+      }
+    ]
+  },
+  "Hy": {
+    "isUnreleased": "June 2026",
+    "id": "Hx",
+    "cardName": "The Armorer",
+    "title":"Forging the Future",
+    "isUnique":true,
+    "imageName": "The Armorer.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "commander",
+    "faction": "mercenary",
+    "affiliation":"Covert",
+    "cost": 0,
+    "keywords": [
+      {"name":"Jump", "value":2},
+      {"name":"Aid", "value":"Covert"},
+      "Charge",
+      "Impervious",
+      {"name":"Reliable", "value":1},
+      {"name":"This Is the Way", "value":"Move 1 or Recover 2"}
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon", "gear"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Hammer and Tongs",
+        "range": [0, 0],
+        "dice": {
+          "r": 3,
+          "b": 3,
+          "w": 0
+        },
+        "keywords":[
+          {"name":"Critical", "value":1},
+          {"name":"Impact", "value":2},
+          {"name": "Pierce", "value":1}
+        ]
+      }
+    ]
+  },
+  "Hz": {
+    "isUnreleased": "June 2026",
+    "id": "Hz",
+    "cardName": "Paz Vizsla",
+    "title":"Proud Warrior",
+    "isUnique":true,
+    "imageName": "Paz Vizsla.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "operative",
+    "faction": "mercenary",
+    "affiliation":"Covert",
+    "cost": 0,
+    "keywords": [
+      {"name":"Jump", "value":2},
+      "Field Commander",
+      "Impervious",
+      "Steady",
+      {"name":"This Is the Way", "value":"Aim 2"}
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon", "gear"],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 3,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Vibroknife",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 2
+        },
+        "keywords":[
+          {"name": "Pierce", "value":1}
+        ]
+      },
+      {
+        "name": "Repeating Blaster",
+        "range": [1, 3],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 3
+        },
+        "keywords":[
+          "Overwhelm"
+        ]
+      }
+    ]
+  },
+  "Ia": {
+    "isUnreleased": "June 2026",
+    "id": "Ia",
+    "cardName": "Clan Wren Veterans",
+    "imageName": "Clan Wren Veterans.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "special",
+    "faction": "mercenary",
+    "affiliation":"Clan Wren",
+    "affiliations": ["rebels"],
+    "cost": 0,
+    "keywords": [
+      {"name":"Mercenary", "value":"Rebels"},
+      {"name":"Jump", "value":2},
+      "Dauntless",
+      "Impervious",
+      "Nimble",
+      "We Fight for Our Family"
+    ],
+    "upgradeBar": ["training", "training", "heavy weapon", "heavy weapon", "gear"],
+    "stats": {
+      "minicount": 3,
+      "hp": 1,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Blaster Pistols",
+        "range": [0, 2],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 1
+        },
+        "keywords":[
+        ]
+      },
+      {
+        "name": "Galar-15 Carbines",
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        },
+        "keywords":[
+        ]
       }
     ]
   }

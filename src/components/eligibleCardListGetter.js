@@ -149,11 +149,10 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     const battleForce = battleForcesDict[list.battleForce];
 
     if (!battleForce) {
-      if (!list.faction.includes(card.faction) && !card.affiliations) continue;
       if (
-        !list.faction.includes(card.faction) &&
-        card.affiliations &&
-        !card.affiliations.includes(list.faction)
+        list.faction !== card.faction &&
+        (!card.affiliations || card.affiliations &&
+        !card.affiliations.includes(list.faction))
       )
         continue;
       if (card.rank !== rank) continue;
@@ -218,7 +217,7 @@ function getEligibleCcs(list) {
     const card = cards[id];
 
     if (pipCounts[card.cardSubtype] > 1) return false;
-    if (!list.faction.includes(card.faction)) return false;
+    if (card.faction && !list.faction.includes(card.faction)) return false;
     if (card.battleForce && card.battleForce !== list.battleForce) return false;
 
     if (list.commandCards.includes(id)) return false;
