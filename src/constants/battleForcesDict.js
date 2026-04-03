@@ -534,12 +534,12 @@ const battleForcesDict = {
       "PLEASE, don't buy/preorder things based on these rules; we really know very little.",
     ],
     "standard mode": {
-      commander: [0, 6],
-      operative: [0, 6],
-      corps: [0, 6],
-      special: [0, 6],
-      support: [0, 6],
-      heavy: [0, 6],
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [2, 6],
+      special: [0, 3],
+      support: [0, 3],
+      heavy: [0, 2],
     },
     "500-point mode": {
       commOp: 2,
