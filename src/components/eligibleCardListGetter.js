@@ -139,7 +139,7 @@ function sortUpgradeIds(ids) {
 
 function getEligibleUnitsToAdd(list, rank, userSettings) {
   const validUnitIds = [];
-  const cardsById = cardIdsByType.unit; // Object.keys(cards);
+  const cardsById = cardIdsByType.unit;
   const uniqueCardNames = getListUniques(list, "name");
 
   for (let i = 0; i < cardsById.length; i++) {
