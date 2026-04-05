@@ -21,7 +21,7 @@ function KeywordChips({ keywords, size = 'medium' }) {
 
       {(!keywords || keywords.length === 0) && <Typography>None</Typography> }
 
-      {keywords.map(kw =>{ 
+      {keywords?.map(kw =>{ 
         let keyword = kw.name;
         if(typeof kw === "string"){
           keyword = kw;

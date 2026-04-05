@@ -211,7 +211,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
     if (!id) return;
     const upgradeCard = cards[id];
 
-    if (upgradeCard.keywords.includes("Leader")) {
+    if (upgradeCard.keywords?.includes("Leader")) {
       leaderList.push(upgradeCard.cardName);
     } else if (
       list.battleForce === "Imperial Remnant" &&
