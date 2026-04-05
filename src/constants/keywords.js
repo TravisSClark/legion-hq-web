@@ -114,6 +114,9 @@ SURGE:BLOCK. When a unit with the Complete the Mission keyword \
 attacks an enemy unit within 1 of 1 or more allied Priority \
 Mission tokens, the attacking unit's Attack Pool gains the \
 Critical 2 keyword.",
+  "Command Vehicle":
+    "An allied unit within 3 of a unit with the Command Vehicle \
+  X keyword may treat their COURAGE as X when checking for Panic.",
   Compel:
     "After another allied Trooper unit of the matching Rank or unit \
 type within 2 of an allied unit with the Compel keyword \
@@ -803,6 +806,8 @@ Prepared Positions step of Setup.",
 during its Activation, it may make a free Attack action. Only \
 Ranged weapons can be added to Attack Pools during this \
 Attack action.",
+  Swashbuckler:
+    "Grants the pirates a free Dodge token after they spend an Aim token during an attack",
   Strategize:
     "When a unit makes the Strategize X action, it gains 1 \
 Suppression token, then chooses X allied units within 2. Each \

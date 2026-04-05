@@ -65,8 +65,6 @@ function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand, isCa
   const { cardName, cardType, cardSubtype } = card;
   const{handleCardZoom} = useContext(ListContext);
 
-  const isRecon = card.keywords.includes('Recon');
-
   let showPoints = !['battle', 'command'].includes(card.cardType);
 
   // switch IconBadge props based on cardType

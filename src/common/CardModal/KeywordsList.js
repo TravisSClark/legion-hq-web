@@ -11,7 +11,7 @@ function KeywordsList({ keywords:cardKeywords }) {
   
   return (
     <React.Fragment>
-          {cardKeywords.map(kw => {
+          {cardKeywords?.map(kw => {
             let keyword = kw
             if(typeof keyword === "string"){
               keyword = {name:kw}

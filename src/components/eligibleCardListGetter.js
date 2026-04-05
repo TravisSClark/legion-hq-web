@@ -138,7 +138,7 @@ function sortUpgradeIds(ids) {
 
 function getEligibleUnitsToAdd(list, rank, preamble=false) {
   const validUnitIds = [];
-  const cardsById = cardIdsByType.unit; // Object.keys(cards);
+  const cardsById = cardIdsByType.unit;
   const uniqueCardNames = getListUniques(list, "name");
 
 
@@ -149,11 +149,10 @@ function getEligibleUnitsToAdd(list, rank, preamble=false) {
     const battleForce = battleForcesDict[list.battleForce];
 
     if (!battleForce) {
-      if (!list.faction.includes(card.faction) && !card.affiliations) continue;
       if (
-        !list.faction.includes(card.faction) &&
-        card.affiliations &&
-        !card.affiliations.includes(list.faction)
+        list.faction !== card.faction &&
+        (!card.affiliations || card.affiliations &&
+        !card.affiliations.includes(list.faction))
       )
         continue;
       if (card.rank !== rank) continue;
@@ -176,12 +175,18 @@ function getEligibleUnitsToAdd(list, rank, preamble=false) {
 
     if (card.specialIssue && card.specialIssue !== list.battleForce) continue;
 
+    const detachmentUnit = card.keywords.find(
+      (keyword) => keyword.name === "Detachment",
+    );
     // Show detachment units only after their detach target is present in list
-    if (card.detachment && !(battleForce?.rules?.ignoreDetach === id)) {
+    if (detachmentUnit && !(battleForce?.rules?.ignoreDetach === id)) {
       for (let i = 0; i < list.units.length; i++) {
         const unit = list.units[i];
         const unitCard = cards[unit.unitId];
-        if (unit.unitId === card.detachment || unitCard.rank === card.detachment) {
+        if (
+          unit.unitName === detachmentUnit.value ||
+          unitCard.rank === detachmentUnit.value
+        ) {
           validUnitIds.push(id);
           break;
         }
@@ -214,7 +219,7 @@ function getEligibleCcs(list) {
     const card = cards[id];
 
     if (pipCounts[card.cardSubtype] > 1) return false;
-    if (!list.faction.includes(card.faction)) return false;
+    if (card.faction && !list.faction.includes(card.faction)) return false;
     if (card.battleForce && card.battleForce !== list.battleForce) return false;
 
     if (list.commandCards.includes(id)) return false;
@@ -224,6 +229,15 @@ function getEligibleCcs(list) {
       let commanders = Array.isArray(card.commander)
         ? card.commander
         : [card.commander];
+      if (commanders[0] === "AND") {
+        for (let i = 1; i < commanders.length; i++) {
+          if (
+            !cardNames.includes(commanders[i]) &&
+            !listCounterparts.includes(commanders[i])
+          )
+            return false;
+        }
+      }
       if (
         !cardNames.some((c) => commanders.includes(c)) &&
         !listCounterparts.some((c) => commanders.includes(c))
@@ -236,7 +250,7 @@ function getEligibleCcs(list) {
       while (!requirementsMet && i < list.units.length) {
         requirementsMet = areRequirementsMet(
           card.requirements,
-          cards[list.units[i].unitId]
+          cards[list.units[i].unitId],
         );
         i++;
       }
@@ -268,7 +282,12 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = [], p
   if (!unitId) return { validUpgradeIds: [], invalidUpgradeIds: [] };
 
   const uniqueCardNames = getListUniques(list, "name");
-  const unitCardCopy = makeModifiedCard(unitId, upgradesEquipped, list.faction, list.battleForce);
+  const unitCardCopy = makeModifiedCard(
+    unitId,
+    upgradesEquipped,
+    list.faction,
+    list.battleForce,
+  );
 
   for (let i = 0; i < upgradeIdsBySubtype[upgradeType].length; i++) {
     const id = upgradeIdsBySubtype[upgradeType][i]; //cardIdsByType['upgrade'][i];
@@ -343,10 +362,10 @@ function getEligibleBattlesToAdd(list, type) {
     if (currentCards.length >= 3) {
       invalidIds.push(id);
     } else if (list.mode === "500-point mode") {
-      if (card.keywords.includes("Recon")) validIds.push(id);
+      if (card.keywords?.includes("Recon")) validIds.push(id);
       else invalidIds.push(id);
     } else {
-      if (card.keywords.includes("Recon")) invalidIds.push(id);
+      if (card.keywords?.includes("Recon")) invalidIds.push(id);
       else validIds.push(id);
     }
   });

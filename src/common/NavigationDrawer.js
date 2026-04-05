@@ -203,7 +203,7 @@ function NavigationDrawer() {
               window.open(
                 " https://www.atomicmassgames.com/swlegiondocs/",
                 "_blank",
-                "noopener noreferrer"
+                "noopener noreferrer",
               )
             }
           >
@@ -218,7 +218,7 @@ function NavigationDrawer() {
               window.open(
                 "https://legion.longshanks.org/",
                 "_blank",
-                "noopener noreferrer"
+                "noopener noreferrer",
               )
             }
           >
@@ -231,9 +231,24 @@ function NavigationDrawer() {
             button
             onClick={() =>
               window.open(
+                "https://www.legionroller.com",
+                "_blank",
+                "noopener noreferrer",
+              )
+            }
+          >
+            <ListItemIcon>
+              <LaunchIcon />
+            </ListItemIcon>
+            <ListItemText primary="Legion Roller" />
+          </ListItem>
+          <ListItem
+            button
+            onClick={() =>
+              window.open(
                 "https://legion.takras.net/",
                 "_blank",
-                "noopener noreferrer"
+                "noopener noreferrer",
               )
             }
           >
@@ -241,6 +256,21 @@ function NavigationDrawer() {
               <LaunchIcon />
             </ListItemIcon>
             <ListItemText primary="Legion Helper" />
+          </ListItem>
+          <ListItem
+            button
+            onClick={() =>
+              window.open(
+                "https://www.legionevents.app/",
+                "_blank",
+                "noopener noreferrer",
+              )
+            }
+          >
+            <ListItemIcon>
+              <LaunchIcon />
+            </ListItemIcon>
+            <ListItemText primary="Event Finder" />
           </ListItem>
         </List>
         <Divider />
@@ -251,7 +281,7 @@ function NavigationDrawer() {
               window.open(
                 "https://www.youtube.com/@crit2block",
                 "_blank",
-                "noopener noreferrer"
+                "noopener noreferrer",
               )
             }
           >
@@ -264,24 +294,9 @@ function NavigationDrawer() {
             button
             onClick={() =>
               window.open(
-                "https://www.crit2block.com/blog",
-                "_blank",
-                "noopener noreferrer"
-              )
-            }
-          >
-            <ListItemIcon>
-              <LaunchIcon />
-            </ListItemIcon>
-            <ListItemText primary="Carolina Holocronicles" />
-          </ListItem>
-          <ListItem
-            button
-            onClick={() =>
-              window.open(
                 "https://www.youtube.com/@kokozula",
                 "_blank",
-                "noopener noreferrer"
+                "noopener noreferrer",
               )
             }
           >
