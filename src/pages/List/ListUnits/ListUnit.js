@@ -41,7 +41,7 @@ function ListUnit({
   const classes = useStyles();
 
   const {unit, unitIndex, unitCard} = useContext(UnitContext);
-  const {handleCardZoom, mode} = useContext(ListContext);
+  const {handleCardZoom} = useContext(ListContext);
 
   const highestUnitError = unit.validationIssues ? unit.validationIssues.reduce((hi, i)=>{return i.level > hi ? i.level : hi}, 0) : 0;
 

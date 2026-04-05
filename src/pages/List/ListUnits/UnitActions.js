@@ -31,6 +31,7 @@ const useStyles = makeStyles(theme => ({
 function UnitActions({
   unit,
   unitIndex,
+  canStack = true,
   isCounterpart = false
 }) {
 
@@ -110,7 +111,7 @@ function UnitActions({
 
     return(
       <div className={classes.buttons}>
-        {!hasUniques && !isCounterpart ? (
+        {canStack && !hasUniques && !isCounterpart ? (
           <React.Fragment>
             <IconButton
               size="small"

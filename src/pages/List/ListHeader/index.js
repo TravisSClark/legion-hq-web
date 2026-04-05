@@ -61,6 +61,7 @@ const useStyles = makeStyles({
 function ListHeader() {
   const {
     currentList,
+    registerList,
     handleSetBattleForce,
     currentKillPoints,
     isKillPointMode,
@@ -87,6 +88,9 @@ function ListHeader() {
   }, 0);
 
   const showHeaderLabel = userSettings.showHeaderLabel !== "off";
+
+  let maxPoints= currentList.mode === "tour of duty" ? registerList.register.combatPotential : legionModes[currentList.mode].maxPoints;
+
 
   return (
     <div id="list-header" className={classes.columnContainer}>
@@ -184,7 +188,7 @@ function ListHeader() {
             <ModeButton
               currentMode={currentList.mode}
               points={currentList.pointTotal}
-              maxPoints={legionModes[currentList.mode].maxPoints}
+              maxPoints={maxPoints}
               handleChangeMode={handleChangeMode}
             />
           </div>

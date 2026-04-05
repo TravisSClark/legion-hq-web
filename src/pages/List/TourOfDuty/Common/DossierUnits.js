@@ -1,15 +1,16 @@
 import React from "react";
 import ListContext from "context/ListContext";
-import DragDropContainer from "../ListUnits/DragDropContainer";
+import DragDropContainer from "../../ListUnits/DragDropContainer";
 import DossierUnit from "./DossierUnit";
 import ParagonUnit from "./ParagonUnit";
 
-import CounterpartUnit from "../ListUnits/CounterpartUnit";
+import CounterpartUnit from "../../ListUnits/CounterpartUnit";
 import cards from "constants/cards";
 import UnitContext from "context/UnitContext";
 import { getUpgradeBar } from "components/eligibleCardListGetter";
 
-function DossierUnits() {
+function DossierUnits({isBattle}) {
+
   const { currentList, reorderUnits, setCardPaneFilter } =
     React.useContext(ListContext);
 
@@ -92,18 +93,7 @@ function DossierUnits() {
   });
   return (
     <div id="list-units" style={{ display: "flex", flexFlow: "column" }}>
-      <div>Dossier Upgrades</div>
-      <UnitContext.Provider
-            value={{
-              unit: null,
-              unitCard: null,
-              // totalUpgradeBar: [...counterpartCard.upgradeBar],
-              // TODO: this is not *great*; relies on card funcs following "COUNTERPART_UPGRADE" et al to work
-              actionPrefix: "UNIT",
-            }}
-          >
-        <ParagonUnit/>
-      </UnitContext.Provider>
+      
       <DragDropContainer items={items} reorderUnits={reorderUnits} />
     </div>
   );

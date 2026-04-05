@@ -18,9 +18,16 @@ import {
   getUpgradeBar,
   unitHasUniques,
 } from "components/eligibleCardListGetter";
-import RegisterSelector from "./RegisterSelector";
 
-import {getEligibleCommendations, getEligibleSetbacks, registerUnitSelectPreamble, registerUpgradeSelectPreamble} from 'components/tour/registerOperations';
+import{
+  getUnitsFromRegister,
+  getUpgradesFromRegister
+} from "components/tour/registerOperations"
+
+import RegisterSelector from "../TourOfDuty/Common/RegisterSelector";
+
+import {getEligibleCommendations, getEligibleSetbacks, registerUnitSelectPreamble, registerUpgradeSelectPreamble,makeTodBattleUpgradeSelectPreamble} from 'components/tour/registerOperations';
+import DossierSelector from "../TourOfDuty/TourBattle/DossierSelector";
 
 function Title({ title }) {
   return <Typography variant="body2">{title}</Typography>;
@@ -29,6 +36,7 @@ function Title({ title }) {
 const CardSelector = () => {
   const {
     currentList,
+    registerList,
     cardPaneFilter,
     setCardPaneFilter,
     handleAddUnit,
@@ -41,7 +49,8 @@ const CardSelector = () => {
     handleAddCounterpart,
     setCardSelectorToNextUpgradeSlot,
     userSettings,
-    handleAddDossierItem
+    handleAddDossierItem,
+    handleAddDossierUnitForBattle
   } = React.useContext(ListContext);
   let header;
   let clickHandler;
@@ -61,143 +70,415 @@ const CardSelector = () => {
     hasUniques = unitHasUniques(currentList.units[cardPaneFilter.unitIndex]);
   }
 
-  switch (action) {
-    case "UNIT":
+  // TODO escape out CC+Battle select; they're basically the same bw ToD and not
+  // TODO this is a mess; mvp for now, this should get scoured later
+  if(currentList.mode === "tour of duty"){
 
-      if(currentList.mode === "tour of duty mode"){
-        selectorIds.validIds = getEligibleUnitsToAdd(
-          currentList, 
-          cardPaneFilter.rank,
-          registerUnitSelectPreamble
-        )
+    const isBattle = registerList.register.isBattle;
+
+    // Register edit; follows... most regular listbuilding rules
+    if(!isBattle){
+
+      switch(action){
+        case "UNIT":
+
+          selectorIds.validIds = getEligibleUnitsToAdd(
+            currentList, 
+            cardPaneFilter.rank,
+            registerUnitSelectPreamble
+          )
+          selectorIds.invalidIds = [];
+            clickHandler = (unitId) => {
+              handleAddUnit(unitId, stackSize);
+              setStackSize(1);
+            };
+          header = (
+            <StackController
+              stackSize={stackSize}
+              handleChange={(newValue) => setStackSize(newValue)}
+            />
+          );
+          break;
+        case "COUNTERPART":
+          selectorIds.validIds = [cardPaneFilter.counterpartId];
+          clickHandler = (counterpartId) =>
+            handleAddCounterpart(cardPaneFilter.unitIndex, counterpartId);
+          header = <Title title="Add counterpart" />;
+          break;
+        case "UNIT_UPGRADE":
+        case "COUNTERPART_UPGRADE":
+        case "UNIT_UPGRADE_SPECIAL":
+          let title =
+            action === "COUNTERPART_UPGRADE"
+              ? "Add counterpart upgrade"
+              : "Add upgrade";
+
+          const unit = currentList.units[cardPaneFilter.unitIndex];
+
+            selectorIds = typeof getUpgradeBar(unit)[cardPaneFilter.upgradeIndex] === "object"
+              ? { validIds: cardPaneFilter.upgrades }
+              : getEligibleUpgrades(
+                  currentList,
+                  cardPaneFilter.upgradeType,
+                  cardPaneFilter.unitId,
+                  cardPaneFilter.upgradesEquipped,
+                  registerUpgradeSelectPreamble
+                );
+          clickHandler = (upgradeId) => {
+            handleEquipUpgrade(
+              action,
+              cardPaneFilter.unitIndex,
+              cardPaneFilter.upgradeIndex,
+              upgradeId,
+              isApplyToAll
+            );
+          };
+          header = (
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+                flex: 1,
+              }}
+            >
+              {hasUniques ? (
+                <Title title={title} />
+              ) : (
+                <ToggleButton
+                  label="Apply to All"
+                  value={isApplyToAll}
+                  handleChange={() => {
+                    setIsApplyToAll(!isApplyToAll);
+                  }}
+                />
+              )}
+              {/* <Button
+                size="large"
+                style={{ marginLeft: 20 }}
+                onClick={() => {
+                  setCardSelectorToNextUpgradeSlot(
+                    currentList,
+                    action,
+                    cardPaneFilter.unitIndex,
+                    cardPaneFilter.upgradeIndex,
+                    isApplyToAll,
+                    true
+                  );
+                }}
+              >
+                Skip
+              </Button> */}
+            </div>
+          );
+          break;
+
+        case "COMMENDATIONS":
+        case "DEFINING_TRAIT":
+          return (
+            <RegisterSelector items={getEligibleCommendations(currentList, cardPaneFilter.unitIndex)} onClick={(item)=>handleAddDossierItem(cardPaneFilter.unitIndex, cardPaneFilter.action, item)}/>
+          );
+        
+        case "SETBACKS":
+          return( <RegisterSelector items={getEligibleSetbacks(currentList, cardPaneFilter.unitIndex)} onClick={(item)=>handleAddDossierItem(cardPaneFilter.unitIndex, cardPaneFilter.action, item)}/>);
+        default:
+          header = <Title title={`${action} is an invalid action.`} />;
       }
-      else {
+    } 
+    // Battle edit; gets units+upgrades from register
+    // for now, just allow uniques and trust user to tally
+    else{
+
+       switch(action){
+        case "UNIT":
+          return (
+            <DossierSelector items={getUnitsFromRegister(registerList, currentList, cardPaneFilter.rank)} onClick={(item)=>{handleAddDossierUnitForBattle(item)}}/>
+          );
+          break;
+        case "COUNTERPART":
+          selectorIds.validIds = [cardPaneFilter.counterpartId];
+          clickHandler = (counterpartId) =>
+            handleAddCounterpart(cardPaneFilter.unitIndex, counterpartId);
+          header = <Title title="Add counterpart" />;
+          break;
+        case "UNIT_UPGRADE":
+        case "COUNTERPART_UPGRADE":
+        case "UNIT_UPGRADE_SPECIAL":
+
+          let title =
+            action === "COUNTERPART_UPGRADE"
+              ? "Add counterpart upgrade"
+              : "Add upgrade";
+
+          const unit = currentList.units[cardPaneFilter.unitIndex];
+          const registerUnit = registerList.units.find(u=>u.dossier.name === unit.dossier.name);
+
+            selectorIds = typeof getUpgradeBar(unit)[cardPaneFilter.upgradeIndex] === "object"
+              ? { validIds: cardPaneFilter.upgrades }
+              : getEligibleUpgrades(
+                  currentList,
+                  cardPaneFilter.upgradeType,
+                  cardPaneFilter.unitId,
+                  cardPaneFilter.upgradesEquipped,
+                  makeTodBattleUpgradeSelectPreamble(registerUnit)
+                );
+          clickHandler = (upgradeId) => {
+            handleEquipUpgrade(
+              action,
+              cardPaneFilter.unitIndex,
+              cardPaneFilter.upgradeIndex,
+              upgradeId,
+              isApplyToAll
+            );
+          };
+          header = (
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                alignItems: "center",
+                flex: 1,
+              }}
+            >
+              {hasUniques ? (
+                <Title title={title} />
+              ) : (
+                <ToggleButton
+                  label="Apply to All"
+                  value={isApplyToAll}
+                  handleChange={() => {
+                    setIsApplyToAll(!isApplyToAll);
+                  }}
+                />
+              )}
+              {/* <Button
+                size="large"
+                style={{ marginLeft: 20 }}
+                onClick={() => {
+                  setCardSelectorToNextUpgradeSlot(
+                    currentList,
+                    action,
+                    cardPaneFilter.unitIndex,
+                    cardPaneFilter.upgradeIndex,
+                    isApplyToAll,
+                    true
+                  );
+                }}
+              >
+                Skip
+              </Button> */}
+            </div>
+          );
+          break;
+        case "COMMAND":
+          selectorIds = getEligibleCommandsToAdd(currentList);
+          clickHandler = (commandId) => handleAddCommand(commandId);
+          if (currentList.commandCards.length === 0) {
+            header = <Title title="Add command cards" />;
+          } else {
+            const currentCommands = currentList.commandCards.map((commandId, i) => (
+              <ChipCard
+                card={cards[commandId]}
+                key={commandId}
+                handleClick={() => handleCardZoom(commandId)}
+                handleDelete={() => handleRemoveCommand(i)}
+              />
+            ));
+            header = (
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexFlow: "row wrap",
+                }}
+              >
+                <Title title="Commands:" style={{ marginRight: 4 }} />
+                {currentCommands}
+              </div>
+            );
+          }
+          break;
+        case "BATTLE":
+          selectorIds = getEligibleBattlesToAdd(currentList, cardPaneFilter.type);
+          clickHandler = (battleId) =>
+            handleAddBattle(cardPaneFilter.type, battleId);
+          const currentBattles = currentList[`${cardPaneFilter.type}Cards`].map(
+            (id, i) => {
+              return (
+                <ChipCard
+                  card={cards[id]}
+                  handleClick={() => handleCardZoom(id)}
+                  handleDelete={() => handleRemoveBattle(cardPaneFilter.type, i)}
+                />
+              );
+            }
+          );
+          header = (
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                flexFlow: "row wrap",
+              }}
+            >
+              {currentBattles}
+            </div>
+          );
+          break;
+
+        case "COMMENDATIONS":
+        case "DEFINING_TRAIT":
+          return (
+            <RegisterSelector items={getEligibleCommendations(currentList, cardPaneFilter.unitIndex)} onClick={(item)=>handleAddDossierItem(cardPaneFilter.unitIndex, cardPaneFilter.action, item)}/>
+          );
+        
+        case "SETBACKS":
+          return( <RegisterSelector items={getEligibleSetbacks(currentList, cardPaneFilter.unitIndex)} onClick={(item)=>handleAddDossierItem(cardPaneFilter.unitIndex, cardPaneFilter.action, item)}/>);
+        default:
+          header = <Title title={`${action} is an invalid action.`} />;
+      }
+    }
+  }
+
+  else{
+    switch (action) {
+      case "UNIT":
+
         selectorIds.validIds = getEligibleUnitsToAdd(
           currentList,
           cardPaneFilter.rank
         );
-        
-      }
-      selectorIds.invalidIds = [];
-        clickHandler = (unitId) => {
-          handleAddUnit(unitId, stackSize);
-          setStackSize(1);
-        };
-      header = (
-        <StackController
-          stackSize={stackSize}
-          handleChange={(newValue) => setStackSize(newValue)}
-        />
-      );
-      break;
-    case "COUNTERPART":
-      selectorIds.validIds = [cardPaneFilter.counterpartId];
-      clickHandler = (counterpartId) =>
-        handleAddCounterpart(cardPaneFilter.unitIndex, counterpartId);
-      header = <Title title="Add counterpart" />;
-      break;
-    case "UNIT_UPGRADE":
-    case "COUNTERPART_UPGRADE":
-    case "UNIT_UPGRADE_SPECIAL":
-      let upgradeTargetId = cardPaneFilter.unitId;
-
-      let title =
-        action === "COUNTERPART_UPGRADE"
-          ? "Add counterpart upgrade"
-          : "Add upgrade";
-
-      const unit = currentList.units[cardPaneFilter.unitIndex];
-
-      // console.log(
-      //   "upgrades sel",
-      //   JSON.stringify(cardPaneFilter.upgrades),
-      //   getUpgradeBar(unit),
-      //   cardPaneFilter.upgradeIndex
-      // );
-      if(currentList.mode === "tour of duty mode"){
-        selectorIds = typeof getUpgradeBar(unit)[cardPaneFilter.upgradeIndex] === "object"
-          ? { validIds: cardPaneFilter.upgrades }
-          : getEligibleUpgrades(
-              currentList,
-              cardPaneFilter.upgradeType,
-              upgradeTargetId,
-              cardPaneFilter.upgradesEquipped,
-              registerUpgradeSelectPreamble
-            );
-      } else {
-      selectorIds =
-        typeof getUpgradeBar(unit)[cardPaneFilter.upgradeIndex] === "object"
-          ? { validIds: cardPaneFilter.upgrades }
-          : getEligibleUpgrades(
-              currentList,
-              cardPaneFilter.upgradeType,
-              upgradeTargetId,
-              cardPaneFilter.upgradesEquipped
-            );
-      }
-      clickHandler = (upgradeId) => {
-        handleEquipUpgrade(
-          action,
-          cardPaneFilter.unitIndex,
-          cardPaneFilter.upgradeIndex,
-          upgradeId,
-          isApplyToAll
+        selectorIds.invalidIds = [];
+          clickHandler = (unitId) => {
+            handleAddUnit(unitId, stackSize);
+            setStackSize(1);
+          };
+        header = (
+          <StackController
+            stackSize={stackSize}
+            handleChange={(newValue) => setStackSize(newValue)}
+          />
         );
-      };
-      header = (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-            alignItems: "center",
-            flex: 1,
-          }}
-        >
-          {hasUniques ? (
-            <Title title={title} />
-          ) : (
-            <ToggleButton
-              label="Apply to All"
-              value={isApplyToAll}
-              handleChange={() => {
-                setIsApplyToAll(!isApplyToAll);
-              }}
-            />
-          )}
-          <Button
-            size="large"
-            style={{ marginLeft: 20 }}
-            onClick={() => {
-              setCardSelectorToNextUpgradeSlot(
+        break;
+      case "COUNTERPART":
+        selectorIds.validIds = [cardPaneFilter.counterpartId];
+        clickHandler = (counterpartId) =>
+          handleAddCounterpart(cardPaneFilter.unitIndex, counterpartId);
+        header = <Title title="Add counterpart" />;
+        break;
+      case "UNIT_UPGRADE":
+      case "COUNTERPART_UPGRADE":
+      case "UNIT_UPGRADE_SPECIAL":
+        let title =
+          action === "COUNTERPART_UPGRADE"
+            ? "Add counterpart upgrade"
+            : "Add upgrade";
+
+        const unit = currentList.units[cardPaneFilter.unitIndex];
+
+        selectorIds =
+          typeof getUpgradeBar(unit)[cardPaneFilter.upgradeIndex] === "object"
+            ? { validIds: cardPaneFilter.upgrades }
+            : getEligibleUpgrades(
                 currentList,
-                action,
-                cardPaneFilter.unitIndex,
-                cardPaneFilter.upgradeIndex,
-                isApplyToAll,
-                true
+                cardPaneFilter.upgradeType,
+                cardPaneFilter.unitId,
+                cardPaneFilter.upgradesEquipped
               );
+        clickHandler = (upgradeId) => {
+          handleEquipUpgrade(
+            action,
+            cardPaneFilter.unitIndex,
+            cardPaneFilter.upgradeIndex,
+            upgradeId,
+            isApplyToAll
+          );
+        };
+        header = (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              alignItems: "center",
+              flex: 1,
             }}
           >
-            Skip
-          </Button>
-        </div>
-      );
-      break;
-    case "COMMAND":
-      selectorIds = getEligibleCommandsToAdd(currentList);
-      clickHandler = (commandId) => handleAddCommand(commandId);
-      if (currentList.commandCards.length === 0) {
-        header = <Title title="Add command cards" />;
-      } else {
-        const currentCommands = currentList.commandCards.map((commandId, i) => (
-          <ChipCard
-            card={cards[commandId]}
-            key={commandId}
-            handleClick={() => handleCardZoom(commandId)}
-            handleDelete={() => handleRemoveCommand(i)}
-          />
-        ));
+            {hasUniques ? (
+              <Title title={title} />
+            ) : (
+              <ToggleButton
+                label="Apply to All"
+                value={isApplyToAll}
+                handleChange={() => {
+                  setIsApplyToAll(!isApplyToAll);
+                }}
+              />
+            )}
+            <Button
+              size="large"
+              style={{ marginLeft: 20 }}
+              onClick={() => {
+                setCardSelectorToNextUpgradeSlot(
+                  currentList,
+                  action,
+                  cardPaneFilter.unitIndex,
+                  cardPaneFilter.upgradeIndex,
+                  isApplyToAll,
+                  true
+                );
+              }}
+            >
+              Skip
+            </Button>
+          </div>
+        );
+        break;
+      case "COMMAND":
+        selectorIds = getEligibleCommandsToAdd(currentList);
+        clickHandler = (commandId) => handleAddCommand(commandId);
+        if (currentList.commandCards.length === 0) {
+          header = <Title title="Add command cards" />;
+        } else {
+          const currentCommands = currentList.commandCards.map((commandId, i) => (
+            <ChipCard
+              card={cards[commandId]}
+              key={commandId}
+              handleClick={() => handleCardZoom(commandId)}
+              handleDelete={() => handleRemoveCommand(i)}
+            />
+          ));
+          header = (
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                flexFlow: "row wrap",
+              }}
+            >
+              <Title title="Commands:" style={{ marginRight: 4 }} />
+              {currentCommands}
+            </div>
+          );
+        }
+        break;
+      case "BATTLE":
+        selectorIds = getEligibleBattlesToAdd(currentList, cardPaneFilter.type);
+        clickHandler = (battleId) =>
+          handleAddBattle(cardPaneFilter.type, battleId);
+        const currentBattles = currentList[`${cardPaneFilter.type}Cards`].map(
+          (id, i) => {
+            return (
+              <ChipCard
+                card={cards[id]}
+                handleClick={() => handleCardZoom(id)}
+                handleDelete={() => handleRemoveBattle(cardPaneFilter.type, i)}
+              />
+            );
+          }
+        );
         header = (
           <div
             style={{
@@ -206,50 +487,22 @@ const CardSelector = () => {
               flexFlow: "row wrap",
             }}
           >
-            <Title title="Commands:" style={{ marginRight: 4 }} />
-            {currentCommands}
+            {currentBattles}
           </div>
         );
-      }
-      break;
-    case "BATTLE":
-      selectorIds = getEligibleBattlesToAdd(currentList, cardPaneFilter.type);
-      clickHandler = (battleId) =>
-        handleAddBattle(cardPaneFilter.type, battleId);
-      const currentBattles = currentList[`${cardPaneFilter.type}Cards`].map(
-        (id, i) => {
-          return (
-            <ChipCard
-              card={cards[id]}
-              handleClick={() => handleCardZoom(id)}
-              handleDelete={() => handleRemoveBattle(cardPaneFilter.type, i)}
-            />
-          );
-        }
-      );
-      header = (
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            flexFlow: "row wrap",
-          }}
-        >
-          {currentBattles}
-        </div>
-      );
-      break;
+        break;
 
-    case "COMMENDATIONS":
-    case "DEFINING_TRAIT":
-      return (
-        <RegisterSelector items={getEligibleCommendations(currentList, cardPaneFilter.unitIndex)} onClick={(item)=>handleAddDossierItem(cardPaneFilter.unitIndex, cardPaneFilter.action, item)}/>
-      );
-    
-    case "SETBACKS":
-      return( <RegisterSelector items={getEligibleSetbacks(currentList, cardPaneFilter.unitIndex)} onClick={(item)=>handleAddDossierItem(cardPaneFilter.unitIndex, cardPaneFilter.action, item)}/>);
-    default:
-      header = <Title title={`${action} is an invalid action.`} />;
+      case "COMMENDATIONS":
+      case "DEFINING_TRAIT":
+        return (
+          <RegisterSelector items={getEligibleCommendations(currentList, cardPaneFilter.unitIndex)} onClick={(item)=>handleAddDossierItem(cardPaneFilter.unitIndex, cardPaneFilter.action, item)}/>
+        );
+      
+      case "SETBACKS":
+        return( <RegisterSelector items={getEligibleSetbacks(currentList, cardPaneFilter.unitIndex)} onClick={(item)=>handleAddDossierItem(cardPaneFilter.unitIndex, cardPaneFilter.action, item)}/>);
+      default:
+        header = <Title title={`${action} is an invalid action.`} />;
+    }
   }
 
   return (

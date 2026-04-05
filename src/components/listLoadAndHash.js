@@ -247,6 +247,7 @@ function convertJsonToList(jsonText) {
 }
 
 function convertHashToList(faction, url) {
+  console.log('convert hash');
   let list = JSON.parse(JSON.stringify(listTemplate));
   list.faction = faction;
   let segments;
@@ -276,6 +277,7 @@ function convertHashToList(faction, url) {
     segments = segments[segments.length - 1].split(",");
   } else {
     list.battleForce = "";
+    list.mode = "standard mode";
     segments = url.split(",");
   }
   const unitSegments = [];

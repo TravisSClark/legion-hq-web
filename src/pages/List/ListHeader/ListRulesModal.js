@@ -41,7 +41,7 @@ const useStyles = makeStyles({
   item: { marginRight: 6 },
   valError: {
     display: 'flex',
-    alignItems: 'start',
+    alignItems: 'flexStart',
     justifyContent: 'start'
   },
   row: {

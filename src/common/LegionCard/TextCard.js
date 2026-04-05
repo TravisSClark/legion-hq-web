@@ -304,3 +304,5 @@ function TextCard({ card, handleClick, isExpanded:expandAtStart }) {
 };
 
 export default TextCard;
+
+export {TextCardHeader}

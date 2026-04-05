@@ -36,7 +36,7 @@ function ListExtras() {
   } = useContext(ListContext);
 
   return (
-    <>
+    <div>
       <div
         style={{
           display: "flex",
@@ -119,7 +119,7 @@ function ListExtras() {
           handleClick={handleToggleIsKillPointMode}
         />
       </div>
-    </>
+    </div>
   );
 }
 

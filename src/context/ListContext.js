@@ -31,7 +31,7 @@ import {
   getRankLimits,
 } from "components/listValidator";
 
-import {  addUpdateDossierItem, removeDossierItem, updateDossierXp} from 'components/tour/registerOperations';
+import {  addUpdateDossierItem, removeDossierItem, setSupplyPoints, updateDossierXp, setCombatPotential} from 'components/tour/registerOperations';
 
 import { getUpgradeBar } from "components/eligibleCardListGetter";
 import {
@@ -67,9 +67,14 @@ export function ListProvider({ width, children, slug, listHash }) {
   const [currentKillPoints, setCurrentKillPoints] = useState(0);
   const [validationIssues, setValidationIssues] = useState([]);
   const [rankLimits, setRankLimits] = useState();
-  const [mode, setMode] = useState();
+
+  // For ToD, store 2 list items, toggle currentList between the 2 based on register/battle mode
+  const [registerList, setRegisterList] = useState();
+  const [battleList, setBattleList] = useState();
+
 
   useEffect(() => {
+    console.log('useEffect');
     // route '/list/rebels' fetches the rebel list from storage
     if (slug in factions) {
       if (listHash) {
@@ -198,10 +203,25 @@ export function ListProvider({ width, children, slug, listHash }) {
     setCurrentList({ ...changeListTitle(currentList, title) });
 
   const handleChangeMode = (mode) => {
-    if (legionModes[mode]) {
-      setMode(mode);
-    }
+
     currentList.mode = mode;
+
+    // when changing to ToD mode, go out of ToD battle mode
+    if(mode === "tour of duty"){
+      if(!currentList.register){
+        currentList.register = {
+          paragon: null,
+          combatPotential: 600,
+          supplyPoints: 5,
+          isBattle:false
+        }
+        let newBattleList = JSON.parse(JSON.stringify(listTemplate));
+        newBattleList.mode = 'tour of duty'
+        setBattleList(newBattleList);
+        setRegisterList({...currentList});
+      }
+    }
+
     updateThenValidateList({ ...currentList });
   };
 
@@ -332,6 +352,22 @@ export function ListProvider({ width, children, slug, listHash }) {
     const newList = addUnit(currentList, unitId, stackSize);
     updateThenValidateList({ ...newList });
   };
+
+  const handleAddDossierUnitForBattle = (unit) =>{
+
+     if (width === "xs" || width === "sm") {
+      setCardPaneFilter({ action: "DISPLAY" });
+    }
+
+    const unitCopy = JSON.parse(JSON.stringify(unit));
+    unitCopy.upgradesEquipped = new Array(unit.upgradesEquipped.length).fill(null);
+    currentList.units.push(unitCopy);
+
+    updateThenValidateList({ ...currentList });
+
+  }
+
+
   const handleAddCommand = (commandId) => {
     const newList = addCommand(currentList, commandId);
     setCurrentList({ ...newList });
@@ -381,10 +417,12 @@ export function ListProvider({ width, children, slug, listHash }) {
     updateThenValidateList({ ...newList });
   };
   const handleDecrementUnit = (index) => {
+
     if (cardPaneFilter.action.includes("UPGRADE")) {
       setCardPaneFilter({ action: "DISPLAY" });
     }
-    let newList = decrementUnit(currentList, index);
+    const newList = decrementUnit(currentList, index);
+
     updateThenValidateList({ ...newList });
   };
 
@@ -485,6 +523,36 @@ export function ListProvider({ width, children, slug, listHash }) {
     setCurrentList({...newList});
   }
 
+  const handleSupplyUpdate = (supply)=>{
+    if(supply < 0) return;
+    const newList = setSupplyPoints(currentList, supply);
+
+    setCurrentList({...newList});
+  }
+
+  const handleCombatPotentialUpdate = (supply)=>{
+
+    if(supply < 600) return;
+    const newList = setCombatPotential(currentList, supply);
+
+    setCurrentList({...newList});
+  }
+
+  const handleToggleBattle = () =>{
+    let isBattle = registerList.register.isBattle = !registerList.register.isBattle;
+    setRegisterList({...registerList});
+
+    if(isBattle){
+      battleList.faction = currentList.faction;
+      battleList.battleForce = currentList.battleForce;
+      battleList.mode = currentList.mode;
+
+      updateThenValidateList({...battleList});
+    }else{
+      updateThenValidateList({...registerList});
+    }
+  }
+
   const unitProps = {
     handleAddUnit,
     handleAddCounterpart,
@@ -494,6 +562,7 @@ export function ListProvider({ width, children, slug, listHash }) {
     handleIncrementUnit,
     handleDecrementUnit,
     handleSetBattleForce,
+    handleToggleBattle,
   };
   const battleProps = {
     handleAddBattle,
@@ -505,6 +574,8 @@ export function ListProvider({ width, children, slug, listHash }) {
   };
   const listProps = {
     currentList,
+    registerList,
+    battleList,
     reorderUnits,
     isKillPointMode,
     currentKillPoints,
@@ -539,7 +610,10 @@ export function ListProvider({ width, children, slug, listHash }) {
   const dossierProps={
     handleAddDossierItem,
     handleRemoveDossierItem,
-    handleXpUpdate
+    handleXpUpdate,
+    handleSupplyUpdate,
+    handleCombatPotentialUpdate,
+    handleAddDossierUnitForBattle
   }
   const messageProps = {
     listSaveMessage,
@@ -561,7 +635,6 @@ export function ListProvider({ width, children, slug, listHash }) {
           ...dossierProps,
           validationIssues,
           rankLimits,
-          mode
         }}
       >
         {children}

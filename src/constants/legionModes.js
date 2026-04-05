@@ -47,7 +47,7 @@ const legionModes = {
       heavy: [0, 4],
     },
   },
-   "tour of duty mode": {
+  "tour of duty": {
     name: "Tour of Duty",
     maxPoints: 2000,
     rankReqs: {

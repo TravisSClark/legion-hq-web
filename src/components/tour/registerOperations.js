@@ -1,8 +1,8 @@
-// TODO make an informed decision on how to arrange all this ToD stuff
+// TODO make an informed decision on how to arrange all this ToD stuff, for now, just build it out
 
 import cards from "constants/cards";
 import { areRequirementsMet } from "../eligibleCardListGetter";
-import register from "constants/register";
+import tourValues from "constants/tourValues";
 
 // For now, make a folder to keep it more obviously separate; see if there ought to be more files and etc
 // might be better to mimic/delineate like the regular 'components' classes, tbd
@@ -71,6 +71,16 @@ function removeDossierItem(list, unitIndex, type, itemIndex){
   return list;
 }
 
+function setSupplyPoints(list, supply){
+  list.register.supplyPoints = supply;
+  return list;
+}
+
+function setCombatPotential(list, points){
+  list.register.combatPotential = points;
+  return list;
+}
+
 function updateDossierXp(list, unitIndex, value){
     let dossier = getUnitDossier(list, unitIndex);
     dossier.xp = value;
@@ -91,14 +101,17 @@ function updateDossierXp(list, unitIndex, value){
 
 // any extra ops for selection
 function registerUnitSelectPreamble(list, rank, card){
-  return !card.isUnique;
+  // A Register can never include unique units
+  return !card.isUnique && !card.isUniqueTitle;
 }
 
 // any extra ops for selection
 function registerUpgradeSelectPreamble(list, card, unitId, upgradesEquipped){
-  return !card.isUnique;
+  // A Register can never include unique upgrades of type: 
+  // Leader, Personnel, Heavy Weapon, Crew, Pilot, or Armament
+  return (!card.isUnique && !card.isUniqueTitle) || 
+    !['leader', 'personnel', 'heavy weapon', 'crew', 'pilot', 'armament'].includes(card.cardSubtype);
 }
-
 
 function getEligibleRegisterItems(list, unitIndex, type){
 
@@ -127,10 +140,10 @@ function getEligibleRegisterItems(list, unitIndex, type){
   var itemList;
   switch(type){
     case "commendations":
-      itemList = register.commendations;
+      itemList = tourValues.commendations;
       break;
     case "setbacks":
-      itemList = register.setbacks;
+      itemList = tourValues.setbacks;
       break;
     default:
       return [];
@@ -161,6 +174,35 @@ function getEligibleCommendations(list, unitIndex){
 function getEligibleSetbacks(list, unitIndex){
     return getEligibleRegisterItems(list, unitIndex, "setbacks");
 }
+
+
+function getUnitsFromRegister(registerList, list, rank){
+
+  let items = [];
+  registerList.units.forEach(unit=>{
+    const card = cards[unit.unitId];
+    if(card.rank === rank && !list.units.find(u => u.dossier.name === unit.dossier.name)){
+      items.push(unit);
+    }
+  })
+  return items;
+}
+
+
+function makeTodBattleUpgradeSelectPreamble(registerUnit){
+
+  let upgrades = registerUnit.upgradesEquipped;
+  return (list, card, unitId, upgradesEquipped)=>{
+    return upgrades.includes(card.id);
+  }
+
+}
+
+function getUpgradesFromRegister(registerList, list, unit, upgradeType, upgradesEquipped){
+
+}
+
+
 export{
   
   getUnitDossier,
@@ -170,5 +212,10 @@ export{
   getEligibleSetbacks,
   updateDossierXp,
   registerUnitSelectPreamble,
-  registerUpgradeSelectPreamble
+  registerUpgradeSelectPreamble,
+  makeTodBattleUpgradeSelectPreamble,
+  setSupplyPoints,
+  setCombatPotential,
+  getUnitsFromRegister,
+  getUpgradesFromRegister
 }

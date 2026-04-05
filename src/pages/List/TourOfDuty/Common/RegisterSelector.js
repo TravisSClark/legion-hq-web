@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import SelectorHeader from "./SelectorHeader";
+import SelectorHeader from "../../CardSelector/SelectorHeader";
 import ListContext from "context/ListContext";
 import { Button, Fade } from "@material-ui/core";
 

@@ -1,10 +1,8 @@
 import _ from "lodash";
 import cards, { cardIdsByType, upgradeIdsBySubtype } from "constants/cards";
 
-import interactions from "components/cardInteractions";
 import battleForcesDict from "constants/battleForcesDict";
 import { sortCommandIds } from "./listOperations";
-import register from "constants/register";
 import { makeModifiedCard } from "./utility";
 
 /**
@@ -141,6 +139,7 @@ function getEligibleUnitsToAdd(list, rank, preamble=false) {
   const cardsById = cardIdsByType.unit;
   const uniqueCardNames = getListUniques(list, "name");
 
+  console.log('get units ' , JSON.stringify(list));
 
   for (let i = 0; i < cardsById.length; i++) {
     const id = cardsById[i];

@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import UnitAvatar from 'common/UnitAvatar';
 import CardName from 'common/CardName';
 import UnitPoints from 'common/UnitPoints';
-import UnitActions from '../ListUnits/UnitActions';
+import UnitActions from '../../ListUnits/UnitActions';
 import UnitContext from 'context/UnitContext';
 import ListContext from 'context/ListContext';
 import { Grid, TextField, Button } from '@material-ui/core';
@@ -14,11 +14,7 @@ const useStyles = makeStyles(theme => ({
   unitRow: {
     display: 'flex',
     flexFlow: 'row nowrap',
-  },
-  outlined: {
-    padding:'10px',
-    marginTop:'3px',
-    border: '1px solid rgba(255,255,255,0.12)'
+    borderTop: '1px solid rgba(255,255,255,0.12)'
   },
   unitColumn: { display: 'flex', flexFlow: 'column nowrap' },
   leftCell: { marginRight: 4 },
@@ -39,16 +35,17 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-function DossierUnit({
-  counterpartUnit,
-  addCounterpartHandler,
-}) {
+function ParagonUnit({}) {
+
   const classes = useStyles();
 
   const {unit, unitIndex, unitCard} = useContext(UnitContext);
-  const {setCardPaneFilter, handleCardZoom, handleRemoveDossierItem, handleXpUpdate, mode} = useContext(ListContext);
+  const {setCardPaneFilter, handleCardZoom, handleRemoveDossierItem, handleXpUpdate} = useContext(ListContext);
 
-  console.log('unit is ', JSON.stringify(unit));
+
+  if(unit == null){
+    // return <Button variant='outlined' onClick={}>Add A Paragon</Button>
+  }
 
   const highestUnitError = unit.validationIssues ? unit.validationIssues.reduce((hi, i)=>{return i.level > hi ? i.level : hi}, 0) : 0;
 
@@ -62,9 +59,9 @@ function DossierUnit({
   const dossier = unit.dossier;
 
   return (
-    <div className={classes.outlined} >
+    <div >
       <TextField
-        value={dossier.name}
+        value="test"
         label="Dossier Name"
         // onChange={handleChange}
       />      
@@ -82,8 +79,6 @@ function DossierUnit({
             <CardName key="name" id={unitCard.id} />
             <DossierUpgrades
               key="upgrades"
-              counterpartId={unitCard.counterpartId}
-              addCounterpartHandler={addCounterpartHandler}
             />          
           </div>
           <div className={classes.rightCell}>
@@ -91,7 +86,6 @@ function DossierUnit({
             <UnitActions unit={unit} unitIndex={unitIndex} />
           </div>
         </div>
-        {counterpartUnit}
       </div>
 
       <Grid
@@ -138,4 +132,4 @@ function DossierUnit({
   )
 };
 
-export default DossierUnit;
+export default ParagonUnit;

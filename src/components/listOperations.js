@@ -216,6 +216,12 @@ function addAdditionalUpgradeSlots(unit, upgradeCard) {
   let offset =
     unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
 
+  let newSlot = null;
+
+  if (unit.specialUpgradeSlots.map((u) => u.type).includes(slots[0])) {
+    newSlot = unit.upgradesEquipped.pop();
+    unit.specialUpgradeSlots = [];
+  }
 
   // uE is a [null, null...] until sth equipped. Hence, null by default, move the popped special upgrade over if there was one
   let card = cards[unit.unitId];
@@ -336,7 +342,7 @@ function addUnit(list, unitId, stackSize = 1) {
     }
 
     // init dossier w defaults if tod mode
-    if(list.mode == "tour of duty mode"){
+    if(list.mode == "tour of duty"){
       getUnitDossier(list, unitIndex);
     }
   }
