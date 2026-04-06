@@ -23371,7 +23371,7 @@
     "cardSubtype": "personnel",
     "cardName": "Weequay Captain",
     "cardType": "upgrade",
-    "cost": 19,
+    "cost": 18,
     "imageName": "Weequay Captain.webp",
     "keywords": ["Leader"],
     "requirements": [
