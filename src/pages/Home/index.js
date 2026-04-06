@@ -27,6 +27,7 @@ import lhqLogoLight from "assets/lhqLogoLight.svg";
 import lhqLogoDark from "assets/lhqLogoDark.svg";
 import naTournaments from "assets/NA Tournaments.png";
 import euTournaments from "assets/Eurasia Tournaments.png";
+import roadmap from "assets/roadmap.webp";
 
 const useStyles = makeStyles((theme) => ({
   expand: {
@@ -223,6 +224,11 @@ function Home() {
             <Grid item>
               {releaseList && (
                 <Collapse in={isReleasesOpen}>
+                  <img
+                    alt="Adepticon Roadmap"
+                    src={roadmap}
+                    style={{ width: 600, height: "auto" }}
+                  />
                   <a
                     href="https://store.asmodee.com/collections/star-wars-legion?sort_by=created-descending"
                     target="_blank"
