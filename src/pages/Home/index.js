@@ -224,11 +224,13 @@ function Home() {
             <Grid item>
               {releaseList && (
                 <Collapse in={isReleasesOpen}>
-                  <img
-                    alt="Adepticon Roadmap"
-                    src={roadmap}
-                    style={{ width: 600, height: "auto" }}
-                  />
+                  <div>
+                    <img
+                      alt="Adepticon Roadmap"
+                      src={roadmap}
+                      style={{ width: 600, height: "auto" }}
+                    />
+                  </div>
                   <a
                     href="https://store.asmodee.com/collections/star-wars-legion?sort_by=created-descending"
                     target="_blank"
