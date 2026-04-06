@@ -75,7 +75,7 @@ const routes = {
     icon: <FactionIcon faction="separatists" />,
   },
   "/list/mercenary": {
-    name: "Shadow Collective",
+    name: "Mercenary",
     path: "/list/mercenary",
     icon: <FactionIcon faction="mercenary" />,
   },
@@ -213,7 +213,7 @@ export function DataProvider({ children }) {
                 } else {
                   setError("Login failure");
                   setMessage(
-                    `Tried and failed to create account with email address ${email}.`
+                    `Tried and failed to create account with email address ${email}.`,
                   );
                   setIsAlertOpen(true);
                 }
@@ -221,7 +221,7 @@ export function DataProvider({ children }) {
               .catch((e) => {
                 setError("Login failure");
                 setMessage(
-                  `Failed to create account with email address ${email}.`
+                  `Failed to create account with email address ${email}.`,
                 );
                 setIsAlertOpen(true);
               });
@@ -230,7 +230,7 @@ export function DataProvider({ children }) {
         .catch((e) => {
           setError(e);
           setMessage(
-            `Can't find user with email address ${email}. Server likely down.`
+            `Can't find user with email address ${email}. Server likely down.`,
           );
           setIsAlertOpen(true);
         });
