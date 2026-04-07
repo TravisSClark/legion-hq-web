@@ -21998,7 +21998,6 @@
     "cardSubtype": "ground vehicle",
     "rank": "special",
     "faction": "separatists",
-    "isUnreleased": "March 2026",
     "cost": 90,
     "keywords": [
       { "name": "AI", "value": "Dodge" },
@@ -22390,7 +22389,7 @@
     "rank": "special",
     "faction": "empire",
     "cost": 35,
-    "isUnreleased": "Q1-Q2 2026",
+    "isUnreleased": "May 2026",
     "keywords": [
       {
         "name": "Observe",
@@ -22445,7 +22444,6 @@
     "rank": "commander",
     "faction": "rebels",
     "cost": 110,
-    "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
         "name": "Spotter",
@@ -22526,7 +22524,6 @@
     "faction": "rebels",
     "cost": 90,
     "isUnique": true,
-    "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
         "name": "Arsenal",
@@ -22729,7 +22726,6 @@
     "faction": "empire",
     "isUnique": true,
     "cost": 110,
-    "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
         "name": "Strategize",
@@ -22790,7 +22786,6 @@
     "faction": "empire",
     "isUnique": true,
     "cost": 95,
-    "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
         "name": "Pull The Strings",
