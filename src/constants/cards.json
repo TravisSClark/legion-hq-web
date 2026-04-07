@@ -23847,8 +23847,10 @@
     "cardName": "We Shall Start with Revenge",
     "cardSubtype": "1",
     "cardType": "command",
+    "faction": "",
     "commander": "Savage Opress",
     "imageName": "We Shall Start with Revenge.webp",
+    "keywords": [],
     "id": "Hd"
   },
   "Hi": {
