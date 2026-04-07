@@ -333,7 +333,7 @@ const battleForcesDict = {
     forceAffinity: "dark side",
     linkId: "sc",
     commander: ["ra", "rd", "qy"],
-    operative: ["rc", "kx", "ax", "Gn"],
+    operative: ["rc", "kx", "ax", "Gn", "Hb"],
     corps: ["rb", "qz", "Fd"],
     special: ["re"],
     support: ["sq"],
