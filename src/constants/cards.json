@@ -23677,7 +23677,7 @@
     "id": "Ha",
     "cardName": "Shaak Ti",
     "cardType": "upgrade",
-    "cardSubtype": "heavy weapon",
+    "cardSubtype": "personnel",
     "imageName": "Shaak Ti Upgrade.webp",
     "faction": "republic",
     "cost": 22,
