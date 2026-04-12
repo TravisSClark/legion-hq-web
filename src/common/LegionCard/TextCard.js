@@ -10,7 +10,8 @@ import {
   CardContent,
   Grow,
   Divider,
-  Avatar
+  Avatar,
+  Chip
 } from '@material-ui/core';
 import {
   Add as AddIcon,
@@ -106,6 +107,15 @@ function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand, isCa
   // Add button, same for every type, simply passing thru the 'add this card' handler
   const action = (
     <div style={{flex:1, display:'flex', alignItems:'center', justifyContent:'center'}}>
+      {card.isUnreleased && <Chip
+                  size={'small'}
+                  label={<Typography variant="body2">Unreleased</Typography>}
+                  style={{
+                    marginBottom: 4,
+                    marginRight: 4,
+                    backgroundColor: "green",
+                  }}
+                />}
       { showPoints && !isCardExpanded && <PointsChip compact={true} value={card.cost}></PointsChip>}
       {!hideExpand(card) && <IconButton size="medium" onClick={handleExpandClick}>
         <ExpandMoreIcon />
@@ -136,7 +146,6 @@ function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand, isCa
   return (
     <CardHeader
       avatar={avatar}
-      // title={`${pips}${displayName ? displayName : cardName}`}
       title={title}
       subheader={subheader}
       action={action}
@@ -291,9 +300,7 @@ function TextCard({ card, handleClick, isExpanded:expandAtStart }) {
           card={card} handleClick={handleClick} handleExpandClick={handleExpandClick}
         />
         <Collapse in={isExpanded}>
-
           {cardContents}
-          
           <CardContent style={{ padding: 8 }}>
             <KeywordChips size={chipSize} keywords={card.keywords} />
           </CardContent>

@@ -241,8 +241,6 @@ export function DataProvider({ children }) {
     setIsAlertAllowed(false);
   };
 
-  // if (error) return <ErrorFallback error={error} message={message} />;
-
   return (
     <React.Fragment>
       <DataContext.Provider

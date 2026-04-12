@@ -6,6 +6,7 @@ import {
   CallSplit as ForkIcon,
   Functions as CalculateIcon,
   ShareOutlined,
+  HourglassFullTwoTone as Hourglass
 } from "@material-ui/icons";
 import { ButtonGroup, Divider, TextField } from "@material-ui/core";
 import DataContext from "context/DataContext";
@@ -23,7 +24,7 @@ import MenuButton from "common/MenuButton";
 import TTSTextImportButton from "./TTSTextImportButton";
 
 function ListExtras() {
-  const { userId } = useContext(DataContext);
+  const { userId, userSettings, setUserSettingsValue } = useContext(DataContext);
   const {
     currentList,
     isKillPointMode,
@@ -117,6 +118,15 @@ function ListExtras() {
               : "Calculate Kill Points"
           }
           handleClick={handleToggleIsKillPointMode}
+        />
+        <SimpleButton
+          icon={<Hourglass />}
+          label={
+            userSettings.showUnreleasedCards
+              ? "Showing Future Cards"
+              : "Hiding Future Cards"
+          }
+          handleClick={()=>setUserSettingsValue("showUnreleasedCards", !userSettings.showUnreleasedCards)}
         />
       </div>
     </>
