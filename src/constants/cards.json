@@ -182,7 +182,7 @@
     "stats": {
       "minicount": 1,
       "hp": 6,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 2,
       "hitsurge": "c",
@@ -428,7 +428,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 3,
       "hitsurge": "c",
@@ -1027,7 +1027,7 @@
     "stats": {
       "minicount": 1,
       "hp": 8,
-      "defense": "w",
+      "defense": "r",
       "courage": 0,
       "speed": 1,
       "hitsurge": "",
@@ -1107,7 +1107,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "c",
@@ -1177,7 +1177,7 @@
     "stats": {
       "minicount": 1,
       "hp": 6,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "h",
@@ -1254,7 +1254,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 3,
       "hitsurge": "c",
@@ -1420,7 +1420,7 @@
     "stats": {
       "minicount": 4,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 1,
       "speed": 2,
       "hitsurge": "h",
@@ -1467,7 +1467,7 @@
     "stats": {
       "minicount": 4,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 1,
       "speed": 1,
       "hitsurge": "h",
@@ -1668,7 +1668,7 @@
     "stats": {
       "minicount": 4,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "c",
@@ -1732,7 +1732,7 @@
     "stats": {
       "minicount": 1,
       "hp": 4,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 1,
       "hitsurge": "c",
@@ -1979,7 +1979,7 @@
     "stats": {
       "minicount": 1,
       "hp": 8,
-      "defense": "w",
+      "defense": "r",
       "courage": 6,
       "speed": 1,
       "hitsurge": "",
@@ -4252,7 +4252,7 @@
     "stats": {
       "minicount": 1,
       "hp": 7,
-      "defense": "w",
+      "defense": "r",
       "courage": 4,
       "speed": 2,
       "hitsurge": "c",
@@ -4319,7 +4319,7 @@
     "stats": {
       "minicount": 1,
       "hp": 7,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 2,
       "hitsurge": "",
@@ -4504,7 +4504,7 @@
     "stats": {
       "minicount": 1,
       "hp": 3,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 1,
       "hitsurge": "",
@@ -4713,7 +4713,7 @@
     "stats": {
       "minicount": 1,
       "hp": 6,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 2,
       "hitsurge": "c",
@@ -4811,7 +4811,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "c",
@@ -4876,7 +4876,7 @@
     "stats": {
       "minicount": 4,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "",
@@ -4938,7 +4938,7 @@
     "stats": {
       "minicount": 3,
       "hp": 2,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "",
@@ -5014,7 +5014,7 @@
     "stats": {
       "minicount": 1,
       "hp": 9,
-      "defense": "w",
+      "defense": "r",
       "courage": 6,
       "speed": 2,
       "hitsurge": "h",
@@ -5092,7 +5092,7 @@
     "stats": {
       "minicount": 1,
       "hp": 9,
-      "defense": "w",
+      "defense": "r",
       "courage": 6,
       "speed": 1,
       "hitsurge": "h",
@@ -5567,7 +5567,7 @@
     "stats": {
       "minicount": 1,
       "hp": 6,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 2,
       "hitsurge": "",
@@ -5947,7 +5947,7 @@
     "stats": {
       "minicount": 1,
       "hp": 6,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 1,
       "hitsurge": "h",
@@ -6002,7 +6002,7 @@
     "stats": {
       "minicount": 4,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 1,
       "speed": 1,
       "hitsurge": "",
@@ -6405,7 +6405,7 @@
     "stats": {
       "minicount": 1,
       "hp": 8,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "",
@@ -6522,7 +6522,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 3,
       "hitsurge": "h",
@@ -7904,7 +7904,7 @@
     "stats": {
       "minicount": 1,
       "hp": 6,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 2,
       "hitsurge": "h",
@@ -8584,7 +8584,7 @@
     "stats": {
       "minicount": 1,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "",
@@ -8659,7 +8659,7 @@
     "stats": {
       "minicount": 4,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "",
@@ -8737,7 +8737,7 @@
     "stats": {
       "minicount": 4,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "h",
@@ -8816,7 +8816,7 @@
     "stats": {
       "minicount": 1,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "h",
@@ -10386,7 +10386,7 @@
     "stats": {
       "minicount": 1,
       "hp": 6,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 2,
       "hitsurge": "c",
@@ -10716,7 +10716,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "red",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "",
@@ -10885,7 +10885,7 @@
     "stats": {
       "minicount": 1,
       "hp": 4,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "",
@@ -12374,7 +12374,7 @@
     "stats": {
       "minicount": 3,
       "hp": 2,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "h",
@@ -12431,7 +12431,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "c",
@@ -12507,7 +12507,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "h",
@@ -13479,7 +13479,7 @@
     "stats": {
       "minicount": 1,
       "hp": 4,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "",
@@ -13605,7 +13605,7 @@
     "stats": {
       "minicount": 1,
       "hp": 6,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 2,
       "hitsurge": "",
@@ -13676,7 +13676,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "c",
@@ -13760,7 +13760,7 @@
     "stats": {
       "minicount": 3,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 3,
       "hitsurge": "",
@@ -14765,7 +14765,7 @@
     "stats": {
       "minicount": 4,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 1,
       "speed": 2,
       "hitsurge": "h",
@@ -15021,7 +15021,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "c",
@@ -15105,7 +15105,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "h",
@@ -15187,7 +15187,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 2,
       "hitsurge": "c",
@@ -15280,7 +15280,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 2,
       "hitsurge": "c",
@@ -15650,7 +15650,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "c",
@@ -15799,7 +15799,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 2,
       "hitsurge": "c",
@@ -16096,7 +16096,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "",
@@ -16249,7 +16249,7 @@
     "stats": {
       "minicount": 1,
       "hp": 6,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 2,
       "hitsurge": "c",
@@ -17191,7 +17191,7 @@
     "stats": {
       "minicount": 1,
       "hp": 6,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "h",
@@ -17281,7 +17281,7 @@
     "stats": {
       "minicount": 1,
       "hp": 5,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 2,
       "hitsurge": "h",
@@ -17756,7 +17756,7 @@
     "stats": {
       "minicount": 3,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 1,
       "speed": 2,
       "hitsurge": "",
@@ -17963,7 +17963,7 @@
     "stats": {
       "minicount": 4,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 1,
       "hitsurge": "",
@@ -18033,7 +18033,7 @@
     "stats": {
       "minicount": 0,
       "hp": 2,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 2,
       "hitsurge": "",
@@ -18096,7 +18096,7 @@
     "stats": {
       "minicount": 4,
       "hp": 1,
-      "defense": "w",
+      "defense": "r",
       "courage": 2,
       "speed": 2,
       "hitsurge": "",
