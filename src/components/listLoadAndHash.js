@@ -41,7 +41,7 @@ function mergeLists(primaryList, secondaryList) {
   return consolidate(primaryList);
 }
 
-function processUnitSegment(segment) {
+function processUnitSegment(segment, list) {
   const unitSegment = segment.slice(0, 3);
   let upgradeSegment = segment.slice(3);
   let additionalUpgradeCards = [];
@@ -84,21 +84,21 @@ function processUnitSegment(segment) {
     });
   }
 
-  // if(battleForcesDict[list.battleForce]?.rules?.addAdditionalUpgradeSlots){
-  //   let upgrades = battleForcesDict[list.battleForce].rules.addAdditionalUpgradeSlots.find(pair=>pair[0] === unitId)
+  if(battleForcesDict[list.battleForce]?.rules?.addAdditionalUpgradeSlots){
+    let upgrades = battleForcesDict[list.battleForce].rules.addAdditionalUpgradeSlots.find(pair=>pair[0] === unitId)
 
-  //   if(upgrades){
-  //     addAdditionalUpgradeSlots(newUnitObject, upgrades[1]);
-  //   }
-  // }
+    if(upgrades){
+      addAdditionalUpgradeSlots(newUnit, upgrades[1]);
+    }
+  }
   return newUnit;
 }
 
-function segmentToUnitObject(unitIndex, segment) {
+function segmentToUnitObject(unitIndex, segment, list) {
   let unit;
   if (segment.includes("+")) {
-    unit = processUnitSegment(segment.split("+")[0]);
-    const counterpart = processUnitSegment(segment.split("+")[1]);
+    unit = processUnitSegment(segment.split("+")[0], list);
+    const counterpart = processUnitSegment(segment.split("+")[1], list);
     const { unitId, totalUnitCost, upgradesEquipped, additionalUpgradeSlots } =
       counterpart;
 
@@ -109,7 +109,7 @@ function segmentToUnitObject(unitIndex, segment) {
       upgradesEquipped,
       additionalUpgradeSlots,
     };
-  } else unit = processUnitSegment(segment);
+  } else unit = processUnitSegment(segment, list);
   return unit;
 }
 
@@ -305,7 +305,7 @@ function convertHashToList(faction, url) {
   }
   try {
     list.units = unitSegments.map((segment, i) =>
-      segmentToUnitObject(i, segment)
+      segmentToUnitObject(i, segment, list)
     );
   } catch (e) {
     return false;
