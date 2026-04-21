@@ -201,6 +201,13 @@ function updateSpecialUpgradeSlots(unit) {
 // TODO lots of bad shortcuts here that don't extend well
 // Check for special slots; remove or append them to end of unit bar accordingly
 function addAdditionalUpgradeSlots(unit, upgradeCard) {
+  
+  if(Array.isArray(upgradeCard)){
+    upgradeCard = {
+      additionalUpgradeSlots: upgradeCard
+    }
+  }
+  
   if (
     !upgradeCard.additionalUpgradeSlots ||
     upgradeCard.additionalUpgradeSlots.length === 0
@@ -262,6 +269,14 @@ function addUnit(list, unitId, stackSize = 1) {
   }
 
   updateSpecialUpgradeSlots(newUnitObject);
+
+  if(battleForcesDict[list.battleForce]?.rules?.addAdditionalUpgradeSlots){
+    let upgrades = battleForcesDict[list.battleForce].rules.addAdditionalUpgradeSlots.find(pair=>pair[0] === unitId)
+
+    if(upgrades){
+      addAdditionalUpgradeSlots(newUnitObject, upgrades[1]);
+    }
+  }
 
   // TODO will need something *like* this to do buildsAsCorps 'right' if we get interactions that don't slot nicely with existing rules
   // ie, thought this was needed for Imp March + Imp Remnant, it isn't *yet* since Scouts+Deaths already have the Training slot and can therefore

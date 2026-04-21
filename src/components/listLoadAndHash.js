@@ -83,6 +83,14 @@ function processUnitSegment(segment) {
       addAdditionalUpgradeSlots(newUnit, upgradeCard);
     });
   }
+
+  // if(battleForcesDict[list.battleForce]?.rules?.addAdditionalUpgradeSlots){
+  //   let upgrades = battleForcesDict[list.battleForce].rules.addAdditionalUpgradeSlots.find(pair=>pair[0] === unitId)
+
+  //   if(upgrades){
+  //     addAdditionalUpgradeSlots(newUnitObject, upgrades[1]);
+  //   }
+  // }
   return newUnit;
 }
 
@@ -319,7 +327,7 @@ function convertHashToList(faction, url) {
   } catch (e) {
     return false;
   }
-  if (list.faction === "mercenary") list.battleForce = "Shadow Collective";
+  if (list.faction === "mercenary" && !list.battleForce) list.battleForce = "Shadow Collective";
   if (
     list.faction === "separatists" &&
     list.battleForce === "Echo Base Defenders"

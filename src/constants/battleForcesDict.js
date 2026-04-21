@@ -26,6 +26,7 @@ const battleForcesDict = {
       "Dd",
       "Bl",
       "ug",
+      "cw"
     ],
     plainTextRules: [
       "When an allied non-COMMANDER non-OPERATIVE Vehicle unit is attacking or defending, \
@@ -60,7 +61,7 @@ const battleForcesDict = {
     special: ["kz", "ky", "Ay"],
     support: ["mb", "ic", "xj", "xp"],
     heavy: ["oo"],
-    allowedUniqueUpgrades: ["lh", "lg", "Bd", "Ep"],
+    allowedUniqueUpgrades: ["lh", "lg", "Bd", "Ep", "cw"],
     rules: {},
     "standard mode": {
       commOp: 2,
@@ -91,7 +92,7 @@ const battleForcesDict = {
     special: ["Fa"],
     support: ["bf", "be"],
     heavy: ["bg"],
-    allowedUniqueUpgrades: ["fl", "Ce", "Cf", "Cg"],
+    allowedUniqueUpgrades: ["fl", "Ce", "Cf", "Cg", "cw"],
 
     rules: {
       noFieldComm: true,
@@ -125,7 +126,7 @@ const battleForcesDict = {
     special: ["vu", "ak"],
     support: [],
     heavy: ["vj"],
-    allowedUniqueUpgrades: ["wa", "wb", "wc"],
+    allowedUniqueUpgrades: ["wa", "wb", "wc", "cw"],
     rules: {
       countMercs: true,
       take2NonEwokRebs: true, // lol
@@ -170,7 +171,7 @@ const battleForcesDict = {
     special: [],
     support: ["an", "he"],
     heavy: ["ap"],
-    allowedUniqueUpgrades: ["fk", "Cp", "Cq", "Cr", "Cs", "Bn"], // TODO needs "Squadron Leader" once card available
+    allowedUniqueUpgrades: ["fk", "Cp", "Cq", "Cr", "Cs", "Bn", "cw"], // TODO needs "Squadron Leader" once card available
     rules: {
       noFieldComm: true,
     },
@@ -203,7 +204,7 @@ const battleForcesDict = {
     special: ["la", "xd"],
     support: ["ie"],
     heavy: ["xe"],
-    allowedUniqueUpgrades: ["Bl", "En"],
+    allowedUniqueUpgrades: ["Bl", "En", "cw"],
     rules: {
       buildsAsCorps: ["xd"],
       ccAsCorps: true, // adds in the "and Battle Cards" rule to printout
@@ -257,7 +258,7 @@ const battleForcesDict = {
     special: ["ba", "bd"],
     support: ["bf", "be"],
     heavy: ["tm"],
-    allowedUniqueUpgrades: ["uj", "Ce", "Cf", "Cg", "Ch", "Cj", "Bl", "Bn"],
+    allowedUniqueUpgrades: ["uj", "Ce", "Cf", "Cg", "Ch", "Cj", "Bl", "Bn", "cw"],
     rules: {
       unitLimits: [
         { ids: ["ay"], count: [1, 2] },
@@ -293,6 +294,82 @@ const battleForcesDict = {
       heavy: [0, 1],
     },
   },
+  "The Ohnaka Gang": {
+    name: "The Ohnaka Gang",
+    faction: "mercenary",
+    forceAffinity: "dark side", // TODO - technically a light/dark choice w no consequences (for now)
+    linkId: "og",
+    commander: [],
+    operative: ["Bj"],
+    corps: ["Fd"],
+    special: [],
+    support: ["sq"],
+    heavy: ["Fe"],
+    allowedUniqueUpgrades: [
+      "Fn",
+      "cw",
+      // TODO add Squadron Leader
+      "so"
+    ],
+    rules: {
+      countMercs: true,
+      sortOfDetachment: [['Fe','Weequay Pirates']],
+      addAdditionalUpgradeSlots:[["Bj",["command"]]]
+    },
+    plainTextRules: [
+    ],
+
+    "standard mode": {
+      commander: [0, 0],
+      operative: [1, 1],
+      corps: [3, 6],
+      special: [0, 0],
+      support: [0, 3],
+      heavy: [2, 4],
+    },
+    "500-point mode": {
+      commander: [0, 0],
+      operative: [1, 1],
+      corps: [2, 5],
+      special: [0, 0],
+      support: [0, 2],
+      heavy: [1, 3],
+    },
+  },
+  "Rapid Interdiction Force": {
+    name: "Rapid Interdiction Force",
+    faction: "separatists",
+    linkId: "rf",
+    commander: [],
+    operative: [],
+    corps: ["la", "wp"], // TODO replace with PnP "Geonosian Engineers"
+    special: ["Eg"],
+    support: ["ie", "qk", "ya", "mc"],
+    heavy: ["gc"],
+    rules: {
+      buildsAsCorps: ["la"]
+    },
+    allowedUniqueUpgrades: ["cw", ], // TODO add "Squadron Leader"
+
+    "standard mode": {
+      commOp: 3,
+      commander: [1, 3],
+      operative: [0, 3],
+      corps: [3, 3],
+      special: [0, 3],
+      support: [0, 3],
+      heavy: [0, 3],
+    },
+    "500-point mode": {
+      commOp: 2,
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [1, 1],
+      special: [0, 3],
+      support: [0, 2],
+      heavy: [0, 2],
+    },
+  },
   "Separatist Invasion": {
     name: "Separatist Invasion",
     faction: "separatists",
@@ -306,7 +383,7 @@ const battleForcesDict = {
     rules: {
       noFieldComm: true,
     },
-    allowedUniqueUpgrades: [], // TODO add "Squadron Leader"
+    allowedUniqueUpgrades: ["cw"], // TODO add "Squadron Leader"
 
     "standard mode": {
       commOp: 2,
@@ -348,6 +425,7 @@ const battleForcesDict = {
       "si",
       "Bn",
       "Fn",
+      "cw"
     ],
     rules: {
       countMercs: true,
@@ -420,7 +498,7 @@ const battleForcesDict = {
     special: ["Fa", "ba"],
     support: ["bf"],
     heavy: ["we", "bg"],
-    allowedUniqueUpgrades: ["Ce", "Cf", "Ch", "Cj"], // TODO add "Squadron Leader"
+    allowedUniqueUpgrades: ["Ce", "Cf", "Ch", "Cj", "cw"], // TODO add "Squadron Leader"
     rules: {},
     plainTextRules: [
       "Vehicles in this army gain Scout 2.",
@@ -463,7 +541,7 @@ const battleForcesDict = {
     special: ["kz", "pg", "pm"],
     support: ["qh", "xf", "ic"],
     heavy: ["gb", "qs"],
-    allowedUniqueUpgrades: ["Bl", "Dc", "Dd", "De"],
+    allowedUniqueUpgrades: ["Bl", "Dc", "Dd", "De", "cw"],
     rules: {
       buildsAsCorps: ["pm"],
       ccAsCorps: true, // adds in the "and Battle Cards" rule unique to Wookiee building rules
@@ -516,14 +594,14 @@ const battleForcesDict = {
     name: "Mandalorian Clans (Unofficial)",
     faction: "mercenary",
     forceAffinity: "",
-    linkId: "sc",
+    linkId: "mc",
     commander: ["rd", "Hu", "Hw", "Hy"],
     operative: ["ag", "Hv", "Hx", "Hz", "tk", "aw", "tl"],
     corps: ["Hq", "Hr"],
     special: ["re", "ml", "Ht", "Ia"],
     support: ["Hs"],
     heavy: [],
-    allowedUniqueUpgrades: ["Ho", "Hp", "tn"],
+    allowedUniqueUpgrades: ["Ho", "Hp", "tn","cw"],
     rules: {
       noRules: true,
 
@@ -551,6 +629,7 @@ const battleForcesDict = {
       heavy: [0, 1],
     },
   },
+
 };
 
 export default battleForcesDict;
