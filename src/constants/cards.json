@@ -565,7 +565,7 @@
     "cardSubtype": "wookiee trooper",
     "rank": "special",
     "faction": "rebels",
-    "cost": 69,
+    "cost": 62,
     "keywords": ["Charge", "Duelist", "Indomitable", "Scale"],
     "upgradeBar": ["heavy weapon", "training", "training", "gear", "grenades"],
     "stats": {
@@ -601,6 +601,10 @@
       {
         "date": "19 November 2020",
         "description": "Cost reduced from 75 to 69 points. Gained Wookiee Warrior tag and Scale keyword. Lost Expert Climber and Unhindered keywords."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 69 to 62 points."
       }
     ]
   },
@@ -613,7 +617,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "rebels",
-    "cost": 48,
+    "cost": 42,
     "keywords": [
       "Low Profile",
       {
@@ -663,6 +667,10 @@
       {
         "date": "27 October 2021",
         "description": "Cost reduced from 50 to 48 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 48 to 42 points."
       }
     ]
   },
@@ -2465,12 +2473,17 @@
     "cardType": "upgrade",
     "cost": 5,
     "imageName": "Improvised Orders.webp",
+    "isUnique": true,
     "keywords": [],
     "requirements": [],
     "history": [
       {
         "date": "19 November 2020",
         "description": "Cost reduced from 10 to 5 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Changed to unique and no longer auto refreshes."
       }
     ],
     "id": "cw"
@@ -2876,7 +2889,7 @@
     "cardSubtype": "force",
     "cardName": "Saber Throw",
     "cardType": "upgrade",
-    "cost": 5,
+    "cost": 10,
     "imageName": "Saber Throw.webp",
     "keywords": [],
     "requirements": [],
@@ -2884,6 +2897,10 @@
       {
         "date": "12 September 2019",
         "description": "Cost reduced from 10 to 5 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost increased from 5 to 10 points."
       }
     ],
     "id": "dv"
@@ -3139,21 +3156,21 @@
     "cardSubtype": "heavy weapon",
     "cardName": "Proton Charge Saboteur",
     "cardType": "upgrade",
-    "cost": 20,
+    "cost": 14,
     "imageName": "Proton Charge Saboteur.webp",
-    "keywords": ["Blast", "Critical", "Impact"],
+    "keywords": ["Blast", "Assault", "Impact"],
     "weapons": [
       {
         "name": "Proton Charge",
         "keywords": [
           "Blast",
           {
-            "name": "Critical",
-            "value": 2
+            "name": "Impact",
+            "value": 6
           },
           {
-            "name": "Impact",
-            "value": 3
+            "name": "Assault",
+            "value": 1
           }
         ],
         "range": [0, 1],
@@ -3177,6 +3194,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 23 to 20 points. Now can be used in melee. Lost Surge to Crit. Gained Critical 2, lost Arm and Detonate, and Impact keyword value changed from 1 to 3. Dice changed from 1 red and 2 white to a single rainbow."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 20 to 14 points. Lost Critical 2, given Assault 1 keywords."
       }
     ],
     "id": "ef"
@@ -3185,30 +3206,25 @@
     "cardSubtype": "heavy weapon",
     "cardName": "DH-447 Sniper",
     "cardType": "upgrade",
-    "cost": 35,
+    "cost": 20,
     "imageName": "DH-447 Sniper.webp",
-    "keywords": ["High Velocity", "Pierce"],
+    "keywords": ["High Velocity", "Overwhelm", "Sniper Team"],
     "weapons": [
       {
         "name": "DH-447 Sniper Rifle",
-        "keywords": [
-          "High Velocity",
-          {
-            "name": "Pierce",
-            "value": 1
-          }
-        ],
-        "range": [1, 5],
+        "keywords": ["High Velocity", "Overwhelm", "Sniper Team"],
+        "range": [2, 5],
         "dice": {
           "r": 0,
           "b": 1,
-          "w": 1
+          "w": 2
         }
       }
     ],
     "requirements": [
       {
-        "cardName": "Rebel Commandos"
+        "cardName": "Rebel Commandos",
+        "title": "Strike Team"
       }
     ],
     "history": [
@@ -3219,6 +3235,10 @@
       {
         "date": "15 November 2025",
         "description": "Cost reduced from 38 to 35 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 35 to 20 points. Dice changed from 1 black 1 white to 1 black 2 white. Range changed from 1,5 to 2,5. Removed Pierce 1 and given Overwhelm and Sniper Team keywords."
       }
     ],
     "id": "eg"
@@ -3406,12 +3426,13 @@
     "cardSubtype": "heavy weapon",
     "cardName": "DLT-19x Sniper",
     "cardType": "upgrade",
-    "cost": 35,
+    "cost": 20,
     "imageName": "DLT-19x Sniper.webp",
-    "keywords": ["High Velocity", "Pierce"],
+    "keywords": ["High Velocity", "Overwhelm", "Sniper Team"],
     "requirements": [
       {
-        "cardName": "Scout Troopers"
+        "cardName": "Scout Troopers",
+        "title": "Strike Team"
       }
     ],
     "history": [
@@ -3422,24 +3443,22 @@
       {
         "date": "15 November 2025",
         "description": "Cost reduced from 38 to 35 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 35 to 20 points. Dice changed from 2 blcok to 1 black 2 white. Range changed from 1,5 to 2,5. Removed Pierce 1 and given Overwhelm and Sniper Team keywords."
       }
     ],
     "id": "em",
     "weapons": [
       {
         "name": "DLT-19x Sniper Rifle",
-        "keywords": [
-          "High Velocity",
-          {
-            "name": "Pierce",
-            "value": "1"
-          }
-        ],
-        "range": [1, 5],
+        "keywords": ["High Velocity", "Overwhelm", "Sniper Team"],
+        "range": [2, 5],
         "dice": {
           "r": 0,
-          "b": 2,
-          "w": 0
+          "b": 1,
+          "w": 2
         }
       }
     ]
@@ -3448,9 +3467,9 @@
     "cardSubtype": "heavy weapon",
     "cardName": "Sonic Charge Saboteur",
     "cardType": "upgrade",
-    "cost": 23,
+    "cost": 17,
     "imageName": "Sonic Charge Saboteur.webp",
-    "keywords": ["Blast", "Impact", "Suppressive"],
+    "keywords": ["Blast", "Impact", "Suppressive", "Assault"],
     "requirements": [
       {
         "cardName": "Scout Troopers"
@@ -3460,6 +3479,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 26 to 23 points. No longer surges to crit. Now works in melee. Dice increased from a red and a black to a red, 2 black, and a white. Gained Impact 2 and lost Arm and Detonate keywords."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 23 to 17 points. Dice changed from 1 red 1 black 2 white to 1 red 2 black 1white. Given Assault 1 keyword."
       }
     ],
     "id": "en",
@@ -3470,15 +3493,15 @@
           "Blast",
           {
             "name": "Impact",
-            "value": "2"
+            "value": "4"
           },
           "Suppressive"
         ],
         "range": [0, 1],
         "dice": {
           "r": 1,
-          "b": 1,
-          "w": 2
+          "b": 2,
+          "w": 1
         }
       }
     ]
@@ -4990,7 +5013,7 @@
     "cardSubtype": "repulsor vehicle",
     "rank": "heavy",
     "faction": "republic",
-    "cost": 155,
+    "cost": 145,
     "keywords": [
       {
         "name": "Armor",
@@ -5053,6 +5076,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 160 to 155 points. Armor reduced to 5. Gained surge to hit. Gained a second Ordance upgrade."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 155 to 145 points."
       }
     ]
   },
@@ -6611,23 +6638,25 @@
     "cardName": "Droidekas",
     "imageName": "Droidekas.webp",
     "cardType": "unit",
-    "cardSubtype": "ground vehicle",
+    "cardSubtype": "heavy droid trooper",
     "rank": "support",
     "faction": "separatists",
     "cost": 67,
     "keywords": [
       {
         "name": "AI",
-        "value": "Attack, Move"
+        "value": "Attack"
       },
       {
         "name": "Generator",
         "value": 1
       },
+      "Reposition",
       {
         "name": "Shielded",
         "value": 4
       },
+      "Unconcerned",
       "Wheel Mode"
     ],
     "upgradeBar": ["comms"],
@@ -6636,7 +6665,7 @@
       "hp": 3,
       "defense": "w",
       "courage": 0,
-      "speed": 1,
+      "speed": 2,
       "hitsurge": "",
       "defsurge": "b"
     },
@@ -6679,6 +6708,10 @@
       {
         "date": "16 June 2025",
         "description": "Cost increased from 60 to 67 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Changed from ground vehicle to heavy droid trooper. Speed increased from 1 to 2. AI Attack, Move changed to AI Attack. Given Reposition and Unconcerned keywords."
       }
     ]
   },
@@ -8880,35 +8913,34 @@
     "cardSubtype": "heavy weapon",
     "cardName": "BX-Series Droid Sniper",
     "cardType": "upgrade",
-    "cost": 40,
+    "cost": 20,
     "imageName": "BX-Series Droid Sniper.webp",
-    "keywords": ["Lethal", "Pierce", "Immune: Deflect"],
+    "keywords": ["High Velocity", "Overwhelm", "Sniper Team"],
     "requirements": [
       {
-        "cardName": "BX-Series Droid Commandos"
+        "cardName": "BX-Series Droid Commandos",
+        "title": "Strike Team"
       }
     ],
     "history": [
       {
         "date": "19 July 2024",
         "description": "Cost increased from 30 to 40 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 40 to 20 points. Immune Deflect and Lethal 1 changed to High Velocity, Overwhelm, and Sniper Team. Range changed to 2,5 and dice changed from 2 red to 1 black and 2 white."
       }
     ],
     "weapons": [
       {
         "name": "BX Sniper Rifle",
-        "keywords": [
-          "Immune: Deflect",
-          {
-            "name": "Lethal",
-            "value": "1"
-          }
-        ],
-        "range": [1, 5],
+        "keywords": ["High Velocity", "Overwhelm", "Sniper Team"],
+        "range": [2, 5],
         "dice": {
-          "r": 2,
-          "b": 0,
-          "w": 0
+          "r": 0,
+          "b": 1,
+          "w": 2
         }
       }
     ]
@@ -8946,35 +8978,34 @@
     "cardSubtype": "heavy weapon",
     "cardName": "DC-15x ARC Trooper",
     "cardType": "upgrade",
-    "cost": 37,
+    "cost": 26,
     "imageName": "DC-15x ARC Trooper.webp",
-    "keywords": ["Critical", "Immune: Deflect", "Deflect", "Lethal", "Pierce"],
+    "keywords": ["High Velocity", "Overwhelm", "Sniper Team"],
     "requirements": [
       {
-        "cardName": "ARC Troopers"
+        "cardName": "ARC Troopers",
+        "title": "Strike Team"
       }
     ],
     "history": [
       {
         "date": "19 July 2024",
         "description": "Cost increased from 31 to 37 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 37 to 26 points. Dice changed from 1 red 1 black to 1 black 2 white. Range changed from 1,5 to 2,5. Removed Critical, Lethal, and Immune Delect, and given High Velocity, Overwhelm and Sniper Team keywords."
       }
     ],
     "weapons": [
       {
         "name": "DC-15x ARC Trooper",
-        "keywords": [
-          "Immune: Deflect",
-          {
-            "name": "Lethal",
-            "value": "1"
-          }
-        ],
-        "range": [1, 5],
+        "keywords": ["High Velocity", "Overwhelm", "Sniper Team"],
+        "range": [2, 5],
         "dice": {
-          "r": 1,
+          "r": 0,
           "b": 1,
-          "w": 0
+          "w": 2
         }
       }
     ]
@@ -9374,7 +9405,7 @@
     "upgradeBar": ["comms"],
     "wounds": 1,
     "cardType": "counterpart",
-    "cost": 15,
+    "cost": 10,
     "imageName": "Iden_s ID10 Seeker Droid.webp",
     "keywords": [
       {
@@ -9409,7 +9440,13 @@
       }
     ],
     "cardSubtype": "droid trooper",
-    "id": "lw"
+    "id": "lw",
+    "history": [
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 15 to 0 points."
+      }
+    ]
   },
   "ly": {
     "cardName": "Incapacitate",
@@ -9750,9 +9787,9 @@
     "cardSubtype": "heavy weapon",
     "cardName": "Dioxis Mine Saboteur",
     "cardType": "upgrade",
-    "cost": 28,
+    "cost": 20,
     "imageName": "Dioxis Mine Saboteur.webp",
-    "keywords": ["Blast", "Poison"],
+    "keywords": ["Blast", "Poison", "Assault"],
     "requirements": [
       {
         "cardName": "BX-Series Droid Commandos"
@@ -9762,6 +9799,10 @@
       {
         "date": "19 July 2024",
         "description": "Can now be used in melee. Lost Arm and Detonate keywords.Card lost surge to hit. Dice changed from 1 black and 2 white to a single rainbow."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 28 to 20 points. Given Assault 1 keyword."
       }
     ],
     "weapons": [
@@ -9771,6 +9812,10 @@
           "Blast",
           {
             "name": "Poison",
+            "value": "1"
+          },
+          {
+            "name": "Assault",
             "value": "1"
           }
         ],
@@ -10182,7 +10227,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "empire",
-    "cost": 62,
+    "cost": 54,
     "keywords": [
       "Infiltrate",
       "Marksman",
@@ -10234,6 +10279,10 @@
       {
         "date": "15 November 2025",
         "description": "Cost reduced from 68 to 62 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 62 to 54 points."
       }
     ]
   },
@@ -10313,7 +10362,7 @@
     "displayName": "T-21 Trooper",
     "cardName": "T-21 Special Forces Trooper",
     "cardType": "upgrade",
-    "cost": 24,
+    "cost": 20,
     "imageName": "T-21 Special Forces Trooper.webp",
     "keywords": ["Critical"],
     "requirements": [
@@ -10336,6 +10385,10 @@
       {
         "date": "15 November 2025",
         "description": "Cost reduced from 27 to 24 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 24 to 20 points."
       }
     ],
     "weapons": [
@@ -10438,7 +10491,7 @@
     "rank": "operative",
     "faction": "separatists",
     "isUnique": true,
-    "cost": 130,
+    "cost": 115,
     "keywords": [
       {
         "name": "Jump",
@@ -10483,6 +10536,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 160 to 130 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 130 to 115 points."
       }
     ]
   },
@@ -10998,7 +11055,7 @@
     "cardSubtype": "command",
     "cardName": "Vigilance",
     "cardType": "upgrade",
-    "cost": 12,
+    "cost": 9,
     "imageName": "Vigilance.webp",
     "keywords": [],
     "requirements": [],
@@ -11006,6 +11063,10 @@
       {
         "date": "8 December 2022",
         "description": "Cost increased from 5 to 12 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 12 to 9 points."
       }
     ]
   },
@@ -11910,7 +11971,7 @@
     "cardSubtype": "wookiee trooper",
     "rank": "special",
     "faction": "republic",
-    "cost": 72,
+    "cost": 62,
     "keywords": [
       "Indomitable",
       "Scale",
@@ -11949,6 +12010,12 @@
           "b": 0,
           "w": 2
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "21 April 2026",
+        "description": "Cost increased from 72 to 62 points."
       }
     ]
   },
@@ -12054,7 +12121,7 @@
     "cardSubtype": "wookiee trooper",
     "rank": "special",
     "faction": "rebels",
-    "cost": 72,
+    "cost": 62,
     "keywords": [
       "Indomitable",
       "Scale",
@@ -12094,6 +12161,12 @@
           "w": 2
         }
       }
+    ],
+    "history": [
+      {
+        "date": "21 April 2026",
+        "description": "Cost increased from 72 to 62 points."
+      }
     ]
   },
   "pm": {
@@ -12106,7 +12179,7 @@
     "cardSubtype": "wookiee trooper",
     "rank": "special",
     "faction": "republic",
-    "cost": 69,
+    "cost": 62,
     "keywords": ["Charge", "Duelist", "Indomitable", "Scale"],
     "upgradeBar": ["heavy weapon", "training", "training", "gear", "grenades"],
     "stats": {
@@ -12138,6 +12211,12 @@
           "b": 1,
           "w": 1
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 69 to 62 points."
       }
     ]
   },
@@ -12836,7 +12915,7 @@
     "cardSubtype": "programming",
     "cardName": "Defense Protocols",
     "cardType": "upgrade",
-    "cost": 8,
+    "cost": 3,
     "imageName": "Defense Protocols.webp",
     "keywords": ["AI", "Dodge", "Nimble", "Outmaneuver"],
     "requirements": [
@@ -12848,6 +12927,10 @@
       {
         "date": "6 November 2024",
         "description": "Cost increased from 5 to 8 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 8 to 3 points."
       }
     ]
   },
@@ -12856,7 +12939,7 @@
     "cardSubtype": "programming",
     "cardName": "Attack Protocols",
     "cardType": "upgrade",
-    "cost": 8,
+    "cost": 3,
     "imageName": "Attack Protocols.webp",
     "keywords": ["AI", "Precise"],
     "requirements": [
@@ -12868,6 +12951,10 @@
       {
         "date": "6 November 2024",
         "description": "Cost increased from 5 to 8 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 8 to 3 points."
       }
     ]
   },
@@ -13321,7 +13408,7 @@
     "rank": "commander",
     "faction": "mercenary",
     "affiliation": "pyke",
-    "cost": 48,
+    "cost": 42,
     "keywords": [
       {
         "name": "Mercenary",
@@ -13376,6 +13463,10 @@
       {
         "date": "8 December 2022",
         "description": "Cost increased from 45 to 48 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 48 to 42 points."
       }
     ],
     "affiliations": ["empire", "rebels", "separatists", "republic"]
@@ -13586,7 +13677,7 @@
     "faction": "mercenary",
     "affiliation": "maul loyalist",
     "isUnique": true,
-    "cost": 150,
+    "cost": 130,
     "keywords": [
       {
         "name": "Jump",
@@ -13636,6 +13727,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 170 to 150 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 150 to 130 points."
       }
     ]
   },
@@ -16294,7 +16389,7 @@
     "faction": "mercenary",
     "affiliation": "ewok",
     "isUnique": true,
-    "cost": 70,
+    "cost": 64,
     "keywords": [
       {
         "name": "Mercenary",
@@ -16365,6 +16460,10 @@
       {
         "date": "15 April 2025",
         "description": "Lost Sharpshooter 2."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 70 to 64 points."
       }
     ]
   },
@@ -17945,7 +18044,7 @@
     "cardSubtype": "trooper",
     "rank": "support",
     "faction": "empire",
-    "cost": 70,
+    "cost": 60,
     "keywords": [
       {
         "name": "Advanced Targeting",
@@ -17995,6 +18094,10 @@
       {
         "date": "15 April 2025",
         "description": "Cost increased from 60 to 70 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 70 to 60 points."
       }
     ]
   },
@@ -18008,7 +18111,7 @@
     "rank": "operative",
     "faction": "republic",
     "isUnique": true,
-    "cost": 160,
+    "cost": 170,
     "keywords": [
       {
         "name": "Equip",
@@ -18061,7 +18164,13 @@
         }
       }
     ],
-    "equip": ["xr", "xs", "xq", "xt", "xu"]
+    "equip": ["xr", "xs", "xq", "xt", "xu"],
+    "history": [
+      {
+        "date": "21 April 2026",
+        "description": "Cost increased from 160 to 170 points."
+      }
+    ]
   },
   "xj": {
     "id": "xj",
@@ -18476,7 +18585,7 @@
     "faction": "mercenary",
     "affiliations": ["rebels"],
     "isUnique": true,
-    "cost": 140,
+    "cost": 150,
     "imageName": "The Bad Batch Reb.webp",
     "keywords": [
       {
@@ -18534,7 +18643,13 @@
       }
     ],
     "equip": ["xq", "xr", "xs", "xt"],
-    "counterpartId": "xw"
+    "counterpartId": "xw",
+    "history": [
+      {
+        "date": "21 April 2026",
+        "description": "Cost increased from 140 to 150 points."
+      }
+    ]
   },
   "xw": {
     "cardName": "Omega",
@@ -18843,6 +18958,12 @@
       {
         "cardName": "Stormtrooper Riot Squad"
       }
+    ],
+    "history": [
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 30 to 11 points."
+      }
     ]
   },
   "yf": {
@@ -18944,12 +19065,18 @@
     "cardSubtype": "heavy weapon",
     "cardName": "Rebel Marksman",
     "cardType": "upgrade",
-    "cost": 28,
+    "cost": 16,
     "imageName": "Rebel Marksman.webp",
     "keywords": [],
     "requirements": [
       {
         "cardName": "Rebel Sleeper Cell"
+      }
+    ],
+    "history": [
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 28 to 16 points."
       }
     ]
   },
@@ -19355,7 +19482,7 @@
     "id": "Aw",
     "cardName": "Aqua Droids",
     "cardType": "unit",
-    "cardSubtype": "ground vehicle",
+    "cardSubtype": "heavy droid trooper",
     "rank": "heavy",
     "faction": "separatists",
     "cost": 78,
@@ -19363,12 +19490,14 @@
     "keywords": [
       {
         "name": "AI",
-        "value": "Attack, Move"
+        "value": "Attack"
       },
       {
         "name": "Armor",
         "value": 2
       },
+      "Reposition",
+      "Unconcerned",
       "Infiltrate"
     ],
     "upgradeBar": ["heavy weapon", "comms"],
@@ -19385,6 +19514,10 @@
       {
         "date": "15 November 2025",
         "description": "Cost increased from 65 to 78 points."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Changed from ground vehicle to heavy droid trooper. Given Unconcerned and Reposition keywords. Changed AI Attack, Move to AI Attack."
       }
     ],
     "weapons": [
@@ -19584,12 +19717,18 @@
     "cardSubtype": "personnel",
     "cardName": "ARF Trooper Duo",
     "cardType": "upgrade",
-    "cost": 26,
+    "cost": 20,
     "imageName": "ARF Trooper Duo.webp",
     "keywords": ["Cache"],
     "requirements": [
       {
         "cardName": "ARF Troopers"
+      }
+    ],
+    "history": [
+      {
+        "date": "21 April 2026",
+        "description": "Cost reduced from 26 to 20 points."
       }
     ]
   },
@@ -24770,5 +24909,33 @@
     "requirements": [],
     "id": "If",
     "keywords": ["Charge", "Versatile"]
+  },
+  "Ig": {
+    "cardSubtype": "heavy weapon",
+    "cardName": "DC-15x ARC Trooper Gunner",
+    "cardType": "upgrade",
+    "cost": 26,
+    "imageName": "DC-15x ARC Trooper Gunner.webp",
+    "keywords": ["Overwhelm"],
+    "weapons": [
+      {
+        "name": "DC-15 Blaster Rifles",
+        "keywords": ["Overwhelm"],
+        "range": [1, 3],
+        "dice": {
+          "r": 1,
+          "b": 3,
+          "w": 1
+        }
+      }
+    ],
+    "requirements": [
+      {
+        "cardName": "ARC Troopers",
+        "rank": "special"
+      }
+    ],
+    "history": [],
+    "id": "Ig"
   }
 }
