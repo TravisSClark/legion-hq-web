@@ -21,12 +21,14 @@ const battleForcesDict = {
     allowedUniqueUpgrades: [
       // TODO: add "Squadron Leader"
       "uf",
+      "Io",
+      "cw",
       "Dc",
       "De",
       "Dd",
+      "In",
       "Bl",
       "ug",
-      "cw"
     ],
     plainTextRules: [
       "When an allied non-COMMANDER non-OPERATIVE Vehicle unit is attacking or defending, \
@@ -55,13 +57,13 @@ const battleForcesDict = {
     name: "501st Legion",
     faction: "republic",
     linkId: "5t",
-    commander: ["na", "fy", "ns", "Bc"],
+    commander: ["Bc", "na", "fy", "ns"],
     operative: [],
     corps: ["fz", "Bi"],
-    special: ["kz", "ky", "Ay"],
-    support: ["mb", "ic", "xj", "xp"],
+    special: ["kz", "Ay"],
+    support: ["ky", "mb", "ic", "xj", "xp"],
     heavy: ["oo"],
-    allowedUniqueUpgrades: ["lh", "lg", "Bd", "Ep", "cw"],
+    allowedUniqueUpgrades: ["Bd", "Ep", "lh", "lg", "cw"],
     rules: {},
     "standard mode": {
       commOp: 2,
@@ -73,7 +75,6 @@ const battleForcesDict = {
       heavy: [0, 1],
     },
     "500-point mode": {
-      commOp: 1,
       commander: [1, 1],
       operative: [0, 1],
       corps: [1, 4],
@@ -92,7 +93,7 @@ const battleForcesDict = {
     special: ["Fa"],
     support: ["bf", "be"],
     heavy: ["bg"],
-    allowedUniqueUpgrades: ["fl", "Ce", "Cf", "Cg", "cw"],
+    allowedUniqueUpgrades: ["Ce", "Cg", "fl", "cw", "Cf"],
 
     rules: {
       noFieldComm: true,
@@ -104,7 +105,7 @@ const battleForcesDict = {
       operative: [0, 0],
       corps: [3, 6],
       special: [0, 3],
-      support: [0, 4],
+      support: [1, 4],
       heavy: [0, 2],
     },
     "500-point mode": {
@@ -120,13 +121,13 @@ const battleForcesDict = {
     name: "Bright Tree Village",
     faction: "rebels",
     linkId: "btv",
-    commander: ["vv", "ac", "ab", "ve", "wd"],
+    commander: ["vv", "ac", "ab", "wd", "ve"],
     operative: ["af"],
     corps: ["vk", "ah"],
     special: ["vu", "ak"],
     support: [],
     heavy: ["vj"],
-    allowedUniqueUpgrades: ["wa", "wb", "wc", "cw"],
+    allowedUniqueUpgrades: ["wb", "cw", "wc", "wa"],
     rules: {
       countMercs: true,
       take2NonEwokRebs: true, // lol
@@ -165,13 +166,13 @@ const battleForcesDict = {
     name: "Echo Base Defenders",
     faction: "rebels",
     linkId: "ebd",
-    commander: ["ab", "ad", "ac", "Bz", "Fb"],
-    operative: ["jg", "ji", "af", "By", "Fc"],
+    commander: ["ab", "ad", "Fb", "ac", "Bz"],
+    operative: ["af", "Fc", "jg", "ji", "By"],
     corps: ["gv", "if"],
     special: [],
     support: ["an", "he"],
     heavy: ["ap"],
-    allowedUniqueUpgrades: ["fk", "Cp", "Cq", "Cr", "Cs", "Bn", "cw"], // TODO needs "Squadron Leader" once card available
+    allowedUniqueUpgrades: ["Cp", "cw", "Im", "Cr", "Cs", "Bn", "Cq", "fk"], // TODO needs "Squadron Leader" once card available
     rules: {
       noFieldComm: true,
     },
@@ -198,13 +199,13 @@ const battleForcesDict = {
     name: "Experimental Droids",
     faction: "separatists",
     linkId: "exd",
-    commander: ["nr", "pz", "qa"],
+    commander: ["qa", "pz", "nr"],
     operative: [],
     corps: ["gx", "ga", "xd"],
     special: ["la", "xd"],
     support: ["ie"],
     heavy: ["xe"],
-    allowedUniqueUpgrades: ["Bl", "En", "cw"],
+    allowedUniqueUpgrades: ["cw", "Bl", "En"],
     rules: {
       buildsAsCorps: ["xd"],
       ccAsCorps: true, // adds in the "and Battle Cards" rule to printout
@@ -241,7 +242,7 @@ const battleForcesDict = {
     },
     "500-point mode": {
       commander: [1, 1],
-      operative: [0, 1],
+      operative: [0, 0],
       corps: [2, 4],
       special: [0, 3],
       support: [0, 1],
@@ -258,7 +259,17 @@ const battleForcesDict = {
     special: ["ba", "bd"],
     support: ["bf", "be"],
     heavy: ["tm"],
-    allowedUniqueUpgrades: ["uj", "Ce", "Cf", "Cg", "Ch", "Cj", "Bl", "Bn", "cw"],
+    allowedUniqueUpgrades: [
+      "Ce",
+      "Cj",
+      "Cg",
+      "cw",
+      "Ch",
+      "Bl",
+      "Cf",
+      "uj",
+      "Bn",
+    ],
     rules: {
       unitLimits: [
         { ids: ["ay"], count: [1, 2] },
@@ -309,15 +320,14 @@ const battleForcesDict = {
       "Fn",
       "cw",
       // TODO add Squadron Leader
-      "so"
+      "so",
     ],
     rules: {
       countMercs: true,
-      sortOfDetachment: [['Fe','Weequay Pirates']],
-      addAdditionalUpgradeSlots:[["Bj",["command"]]]
+      sortOfDetachment: [["Fe", "Weequay Pirates"]],
+      addAdditionalUpgradeSlots: [["Bj", ["command"]]],
     },
-    plainTextRules: [
-    ],
+    plainTextRules: [],
 
     "standard mode": {
       commander: [0, 0],
@@ -340,16 +350,16 @@ const battleForcesDict = {
     name: "Rapid Interdiction Force",
     faction: "separatists",
     linkId: "rf",
-    commander: [],
-    operative: [],
+    commander: ["Ef", "Do"], // trench
+    operative: ["Dp"],
     corps: ["la", "wp"], // TODO replace with PnP "Geonosian Engineers"
     special: ["Eg"],
     support: ["ie", "qk", "ya", "mc"],
     heavy: ["gc"],
     rules: {
-      buildsAsCorps: ["la"]
+      buildsAsCorps: ["la"],
     },
-    allowedUniqueUpgrades: ["cw", ], // TODO add "Squadron Leader"
+    allowedUniqueUpgrades: ["cw"], // TODO add "Squadron Leader"
 
     "standard mode": {
       commOp: 3,
@@ -425,7 +435,7 @@ const battleForcesDict = {
       "si",
       "Bn",
       "Fn",
-      "cw"
+      "cw",
     ],
     rules: {
       countMercs: true,
@@ -462,9 +472,9 @@ const battleForcesDict = {
     operative: ["Ca"],
     corps: ["xz", "ay"],
     special: ["Fa", "ba"],
-    support: ["bf", "be"],
+    support: ["bf", "be", "bb"],
     heavy: ["bg", "bh", "on"],
-    allowedUniqueUpgrades: ["Ce", "Eo", "Cf", "Cg", "Ch", "Cj", "Bn"],
+    allowedUniqueUpgrades: ["Ce", "Eo", "Cf", "Cg", "Ch", "Cj", "Bn", "cw"],
     rules: {},
     plainTextRules: [
       "Non-unique COMMANDER and non-unique OPERATIVE units in this army gain Target 2. \
@@ -541,7 +551,7 @@ const battleForcesDict = {
     special: ["kz", "pg", "pm"],
     support: ["qh", "xf", "ic"],
     heavy: ["gb", "qs"],
-    allowedUniqueUpgrades: ["Bl", "Dc", "Dd", "De", "cw"],
+    allowedUniqueUpgrades: ["Ir", "Bl", "Dc", "Dd", "De", "cw"],
     rules: {
       buildsAsCorps: ["pm"],
       ccAsCorps: true, // adds in the "and Battle Cards" rule unique to Wookiee building rules
@@ -601,7 +611,7 @@ const battleForcesDict = {
     special: ["re", "ml", "Ht", "Ia"],
     support: ["Hs"],
     heavy: [],
-    allowedUniqueUpgrades: ["Ho", "Hp", "tn","cw"],
+    allowedUniqueUpgrades: ["Ho", "Hp", "tn", "cw"],
     rules: {
       noRules: true,
 
@@ -629,7 +639,6 @@ const battleForcesDict = {
       heavy: [0, 1],
     },
   },
-
 };
 
 export default battleForcesDict;

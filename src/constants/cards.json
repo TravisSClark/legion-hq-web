@@ -9387,7 +9387,7 @@
     "upgradeBar": ["comms"],
     "wounds": 1,
     "cardType": "counterpart",
-    "cost": 10,
+    "cost": 0,
     "imageName": "Iden_s ID10 Seeker Droid.webp",
     "keywords": [
       {
@@ -22710,7 +22710,6 @@
     "faction": "mercenary",
     "affiliation": "raider",
     "cost": 40,
-    "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
         "name": "Mercenary",
@@ -24919,5 +24918,376 @@
     ],
     "history": [],
     "id": "Ig"
+  },
+  "Ih": {
+    "cardSubtype": "heavy weapon",
+    "cardName": "Imperial Probe Droid",
+    "cardType": "upgrade",
+    "cost": 10,
+    "imageName": "Imperial Probe Droid upgrade.webp",
+    "keywords": ["Observe", "Noncombatant"],
+    "weapons": [],
+    "requirements": [
+      "AND",
+      {
+        "faction": "empire"
+      },
+      [
+        "OR",
+        {
+          "rank": "corps"
+        },
+        {
+          "rank": "special"
+        },
+        {
+          "rank": "support"
+        }
+      ]
+    ],
+    "history": [],
+    "id": "Ih"
+  },
+  "Ii": {
+    "cardSubtype": "personnel",
+    "cardName": "Pyke Syndicate Foot Soldier Squad",
+    "cardType": "upgrade",
+    "cost": 38,
+    "imageName": "Pyke Syndicate Foot Soldier Squad.webp",
+    "keywords": ["Indomitable"],
+    "additionalUpgradeSlots": ["heavy weapon"],
+    "weapons": [],
+    "requirements": [
+      {
+        "cardName": "Pyke Syndicate Foot Soldiers"
+      }
+    ],
+    "history": [],
+    "id": "Ii"
+  },
+  "Ij": {
+    "id": "Ij",
+    "cardName": "Fifth Brother",
+    "cardSubtype": "heavy weapon",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 32,
+    "imageName": "Fifth Brother Upgrade.webp",
+    "keywords": ["Leader", "Spur", "Sidearm", "Impact", "Pierce", "Ram"],
+    "requirements": [
+      {
+        "cardName": "Stormtrooper Riot Squad"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Spinning Lightsaber",
+        "keywords": [
+          { "name": "Ram", "value": 1 },
+          { "name": "Impact", "value": 1 },
+          { "name": "Pierce", "value": 1 }
+        ],
+        "range": [0, 0],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Ik": {
+    "id": "Ik",
+    "cardName": "Seventh Sister",
+    "cardSubtype": "heavy weapon",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "Seventh Sister Upgrade.webp",
+    "keywords": ["Leader", "Demoralize", "Sidearm", "Impact", "Pierce"],
+    "requirements": [
+      "AND",
+      {
+        "cardName": "Imperial Special Forces"
+      },
+      [
+        "NOT",
+        {
+          "title": "Inferno Squad"
+        }
+      ]
+    ],
+    "weapons": [
+      {
+        "name": "Spinning Lightsaber",
+        "keywords": [
+          { "name": "Impact", "value": 1 },
+          { "name": "Pierce", "value": 1 }
+        ],
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Il": {
+    "id": "Il",
+    "cardName": "Jyn Erso",
+    "cardSubtype": "heavy weapon",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 22,
+    "imageName": "Jyn Erso Upgrade.webp",
+    "additionalUpgradeSlots": ["heavy weapon"],
+    "keywords": [
+      "Leader",
+      "Danger Sense",
+      "Dauntless",
+      "Sidearm",
+      "Impact",
+      "Pierce"
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Guerilla Troopers"
+      },
+      {
+        "cardName": "Rebel Commandos",
+        "rank": "special"
+      },
+      {
+        "cardName": "Rebel Troopers"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Rebellious",
+        "keywords": ["Suppressive"],
+        "range": [0, 2],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
+  },
+  "Im": {
+    "id": "Im",
+    "cardName": "Luke Skywalker",
+    "cardSubtype": "heavy weapon",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 25,
+    "imageName": "Luke Skywalker Upgrade.webp",
+    "additionalUpgradeSlots": ["heavy weapon"],
+    "keywords": ["Leader", "Sidearm", "Critical", "Impact", "Pierce"],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Rebel Veterans"
+      },
+      {
+        "cardName": "Rebel Troopers"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Anakin's Lightsaber",
+        "keywords": [
+          { "name": "Critical", "value": 1 },
+          { "name": "Impact", "value": 1 },
+          { "name": "Pierce", "value": 1 }
+        ],
+        "range": [0, 0],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "In": {
+    "id": "In",
+    "cardName": "Obi-Wan Kenobi",
+    "cardSubtype": "squad leader",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 25,
+    "imageName": "Obi-Wan Kenobi Upgrade.webp",
+    "keywords": [
+      "Leader",
+      "Immune: Melee Pierce",
+      "Sidearm",
+      "Critical",
+      "Impact",
+      "Pierce"
+    ],
+    "requirements": [
+      {
+        "cardName": "ARF Troopers"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Kenobi's Lightsaber",
+        "keywords": [
+          { "name": "Critical", "value": 1 },
+          { "name": "Impact", "value": 1 },
+          { "name": "Pierce", "value": 1 }
+        ],
+        "range": [0, 0],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
+  },
+  "Io": {
+    "id": "Io",
+    "cardName": "Clone Commander Cody",
+    "cardSubtype": "squad leader",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 28,
+    "imageName": "Clone Commander Cody Upgrade.webp",
+    "keywords": ["Leader", "Mechanized Infantry", "Precise", "Impact"],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "ARF Troopers"
+      },
+      {
+        "cardName": "Clone Trooper Marksmen"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Cody's DC-15 Rifle",
+        "keywords": ["Impact"],
+        "range": [1, 4],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Ip": {
+    "id": "Ip",
+    "cardName": "Asajj Ventress",
+    "cardSubtype": "heavy weapon",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 26,
+    "imageName": "Asajj Ventress Upgrade.webp",
+    "keywords": [
+      "Leader",
+      "AI",
+      "Charge",
+      "Demoralize",
+      "Sidearm",
+      "Critical",
+      "Impact",
+      "Pierce"
+    ],
+    "additionalUpgradeSlots": ["heavy weapon"],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "B1 Battle Droids"
+      },
+      {
+        "cardName": "BX-Series Droid Commandos",
+        "rank": "special"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Asajj's Lightsaber",
+        "keywords": [
+          { "name": "Critical", "value": 1 },
+          { "name": "Impact", "value": 1 },
+          { "name": "Pierce", "value": 1 }
+        ],
+        "range": [0, 0],
+        "dice": {
+          "r": 0,
+          "b": 4,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Iq": {
+    "id": "Iq",
+    "cardName": "General Grievous",
+    "cardSubtype": "heavy weapon",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 36,
+    "imageName": "General Grievous Upgrade.webp",
+    "keywords": ["Leader", "AI", "Sidearm", "Critical", "Impact", "Pierce"],
+    "additionalUpgradeSlots": ["heavy weapon"],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "B1 Battle Droids"
+      },
+      {
+        "cardName": "IG-100 MagnaGuard"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Trophy Lightsabers",
+        "keywords": [
+          { "name": "Critical", "value": 1 },
+          { "name": "Impact", "value": 1 },
+          { "name": "Pierce", "value": 1 }
+        ],
+        "range": [0, 0],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
+  },
+  "Ir": {
+    "id": "Ir",
+    "cardName": "Chewbacca",
+    "cardSubtype": "heavy weapon",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 40,
+    "imageName": "Chewbacca Upgrade.webp",
+    "keywords": ["Leader", "Impact"],
+    "requirements": [
+      {
+        "cardSubtype": "wookiee trooper"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Chewbacca's Bowcaster",
+        "keywords": [{ "name": "Impact", "value": 1 }],
+        "range": [1, 3],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 2
+        }
+      }
+    ]
   }
 }
