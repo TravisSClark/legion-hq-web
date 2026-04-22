@@ -252,12 +252,11 @@ function battleForceValidation(currentList, unitCounts) {
   }
 
   if (battleForcesDict[currentList.battleForce]?.rules?.noRules) {
-     validationIssues.push({
-        level: 2,
-        text: "We don't have rules for this Army yet, these units are a best guess. Build/buy with caution!",
-      });
+    validationIssues.push({
+      level: 2,
+      text: "We don't have rules for this Army yet, these units are a best guess. Build/buy with caution!",
+    });
   }
-
 
   if (battleForcesDict[currentList.battleForce]?.rules?.take2NonEwokRebs) {
     let rebelsCount = currentList.units.reduce((rebelsCount, unit) => {
@@ -490,7 +489,8 @@ function rankValidation(
       rankIssues[r].push(issue);
     }
 
-    let getDisplayRank = (rank) => (rank === 'special' ? rank + ' forces' : rank).toUpperCase();
+    let getDisplayRank = (rank) =>
+      (rank === "special" ? rank + " forces" : rank).toUpperCase();
 
     if (currentRanks[r] > max) {
       let issue = {
@@ -644,17 +644,6 @@ function validateList(currentList, rankLimits) {
           ")",
       });
     }
-    if (card.isHondo) {
-      unit.validationIssues.push({
-        level: 1,
-        text:
-          "This *legitimate businessman* may not be allowed at some events yet! Consult your event's rules and organizers. (" +
-          card.cardName +
-          ", " +
-          card.isHondo +
-          ")",
-      });
-    }
 
     validationIssues = validationIssues.concat(unit.validationIssues);
   });
@@ -686,7 +675,6 @@ function validateList(currentList, rankLimits) {
     }
   });
 
-  
   // Track how many of each rank we have re detachment
   let rankDetachmentCounts = {};
   rankJsonNames.forEach((r) => {
@@ -701,21 +689,23 @@ function validateList(currentList, rankLimits) {
       (keyword) => keyword.name === "Detachment",
     )?.value;
 
-    if(battleForce?.rules?.sortOfDetachment){
-      console.log('sort of detach', JSON.stringify(battleForce.rules.sortOfDetachment));
-      battleForce.rules.sortOfDetachment.forEach(pair =>{
+    if (battleForce?.rules?.sortOfDetachment) {
+      console.log(
+        "sort of detach",
+        JSON.stringify(battleForce.rules.sortOfDetachment),
+      );
+      battleForce.rules.sortOfDetachment.forEach((pair) => {
         console.log(JSON.stringify(pair));
-        if(pair[0] == id){
-          console.log('checkit!!');
+        if (pair[0] == id) {
+          console.log("checkit!!");
           detachmentTarget = pair[1];
         }
-      })
+      });
     }
 
     // if this thing needs a detachment and we're not ignoring it, tally!
     if (detachmentTarget && battleForce?.rules?.ignoreDetach !== id) {
-      
-      // if it's a detachment by rank, just note what it is and how many of that rank it needs; 
+      // if it's a detachment by rank, just note what it is and how many of that rank it needs;
       // we'll actually check counts once all detachment:unitName instances are counted
       if (rankJsonNames.find((r) => r === detachmentTarget)) {
         rankDetachmentCounts[detachmentTarget].used += unitCounts[id];
@@ -726,27 +716,38 @@ function validateList(currentList, rankLimits) {
       // Otherwise, it's another unit name
       let parentCount = 0;
       let parentUnit = currentList.units.find(
-        (u) => u.unitName === detachmentTarget && !cards[u.unitId].keywords.find((keyword) => keyword.name === "Detachment")
+        (u) =>
+          u.unitName === detachmentTarget &&
+          !cards[u.unitId].keywords.find(
+            (keyword) => keyword.name === "Detachment",
+          ),
       );
-      
+
       let parentCard;
-      if(parentUnit)
-      {
-        parentCard = cards[parentUnit.unitId]
+      if (parentUnit) {
+        parentCard = cards[parentUnit.unitId];
         parentCount = unitCounts[parentUnit.unitId];
       }
       // If user removed all of their detachment enablers from the list
-      else{
-        let cardId = cardIdsByType.unit.find(id=>cards[id].cardName === detachmentTarget && 
-          !cards[id].keywords.find((keyword) => keyword.name === "Detachment"))
-        if(cardId)
-          parentCard = cards[cardId];
+      else {
+        let cardId = cardIdsByType.unit.find(
+          (id) =>
+            cards[id].cardName === detachmentTarget &&
+            !cards[id].keywords.find(
+              (keyword) => keyword.name === "Detachment",
+            ),
+        );
+        if (cardId) parentCard = cards[cardId];
       }
 
-      if(!parentCard){
+      if (!parentCard) {
         validationIssues.push({
-          level:2,
-          text: "An unexpected error occured while checking for " + card.cardName + "'s Detachment " + detachmentTarget
+          level: 2,
+          text:
+            "An unexpected error occured while checking for " +
+            card.cardName +
+            "'s Detachment " +
+            detachmentTarget,
         });
         return;
       }
@@ -755,8 +756,9 @@ function validateList(currentList, rankLimits) {
       rankDetachmentCounts[parentCard.rank].used += unitCounts[id];
 
       if (unitCounts[id] > parentCount) {
-
-        let isBfDetach = battleForce?.rules?.sortOfDetachment?.find(pair=> pair[0] == id) != undefined;
+        let isBfDetach =
+          battleForce?.rules?.sortOfDetachment?.find((pair) => pair[0] == id) !=
+          undefined;
 
         let cardName = (
           card.displayName ? card.displayName : card.cardName
@@ -789,24 +791,30 @@ function validateList(currentList, rankLimits) {
               "(" +
               parentCount +
               ") per " +
-              cardName + 
+              cardName +
               (isBfDetach ? ". (Battleforce Rules)" : ". (DETACHMENT)"),
           });
         }
       }
-    } else { // else not a unit with detachment; tally it for a non-detachment unit in rank count
+    } else {
+      // else not a unit with detachment; tally it for a non-detachment unit in rank count
       rankDetachmentCounts[card.rank].non_detach += unitCounts[id];
     }
   });
 
   // Finally, confirm we didn't use more rank detachments than we had unused units of that rank
   Object.getOwnPropertyNames(rankDetachmentCounts).forEach((rank) => {
-    if (rankDetachmentCounts[rank].used > rankDetachmentCounts[rank].non_detach && rankDetachmentCounts[rank].names.length > 0) {
+    if (
+      rankDetachmentCounts[rank].used > rankDetachmentCounts[rank].non_detach &&
+      rankDetachmentCounts[rank].names.length > 0
+    ) {
       let displayRank = rank === "special" ? "special forces" : rank;
       validationIssues.push({
         level: 2,
         text:
-          "Not enough " + displayRank + " units for DETACHMENT: " +
+          "Not enough " +
+          displayRank +
+          " units for DETACHMENT: " +
           displayRank.toUpperCase() +
           " (" +
           rankDetachmentCounts[rank].names.join(", ") +

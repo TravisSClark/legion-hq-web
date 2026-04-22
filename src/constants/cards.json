@@ -8958,7 +8958,7 @@
   "lf": {
     "id": "lf",
     "cardSubtype": "heavy weapon",
-    "cardName": "DC-15x ARC Trooper",
+    "cardName": "DC-15x ARC Trooper Sniper",
     "cardType": "upgrade",
     "cost": 26,
     "imageName": "DC-15x ARC Trooper.webp",
@@ -19924,7 +19924,6 @@
     ]
   },
   "Bj": {
-    "isHondo": "Q1 2026",
     "id": "Bj",
     "cardName": "Hondo Ohnaka",
     "title": "Trustworthy Compatriot",
@@ -24924,7 +24923,7 @@
     "cardName": "Imperial Probe Droid",
     "cardType": "upgrade",
     "cost": 10,
-    "imageName": "Imperial Probe Droid upgrade.webp",
+    "imageName": "Imperial Probe Droid Upgrade.webp",
     "keywords": ["Observe", "Noncombatant"],
     "weapons": [],
     "requirements": [
@@ -25289,5 +25288,63 @@
         }
       }
     ]
+  },
+  "Is": {
+    "id": "Is",
+    "cardName": "Geonosian Warriors",
+    "title": "Geonosian Engineers",
+    "imageName": "Geonosian Warriors Geonosian Engineers.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "corps",
+    "faction": "separatists",
+    "cost": 55,
+    "keywords": [
+      {
+        "name": "Jump",
+        "value": 3
+      },
+      "Repair",
+      "Scale",
+      "Death from Above",
+      {
+        "name": "Special Issue",
+        "value": "Rapid Interdiction Force"
+      },
+      "Weighed Down"
+    ],
+    "upgradeBar": ["heavy weapon", "personnel"],
+    "stats": {
+      "minicount": 4,
+      "hp": 1,
+      "defense": "w",
+      "courage": 1,
+      "speed": 2,
+      "hitsurge": "",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Spears",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 1
+        }
+      },
+      {
+        "name": "Sonic Blasters",
+        "keywords": [],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ],
+    "specialIssue": "Rapid Interdiction Force"
   }
 }
