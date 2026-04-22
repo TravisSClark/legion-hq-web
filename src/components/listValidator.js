@@ -603,7 +603,11 @@ function validateList(currentList, rankLimits) {
 
     // If battleforce, just use the whitelist for inclusion
     if (battleForce) {
-      if (!battleForce[card.rank].includes(unit.unitId)) {
+      if (
+        !battleForce[card.rank].includes(unit.unitId) &&
+        (!battleForce["rules"]["buildsAsCorps"] ||
+          !battleForce["rules"]["buildsAsCorps"].includes(unit.unitId))
+      ) {
         unit.validationIssues.push({
           level: 2,
           text: '"' + card.cardName + '" is not allowed in this battleforce.',
