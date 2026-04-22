@@ -148,13 +148,13 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
 
     const battleForce = battleForcesDict[list.battleForce];
 
-    if(card.isUnreleased && !userSettings.showUnreleasedCards) continue;
+    if (card.isUnreleased && !userSettings.showUnreleasedCards) continue;
 
     if (!battleForce) {
       if (
         list.faction !== card.faction &&
-        (!card.affiliations || card.affiliations &&
-        !card.affiliations.includes(list.faction))
+        (!card.affiliations ||
+          (card.affiliations && !card.affiliations.includes(list.faction)))
       )
         continue;
       if (card.rank !== rank) continue;
@@ -180,17 +180,19 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     );
     // Show detachment units only after their detach target is present in list
     if (detachmentUnit && !(battleForce?.rules?.ignoreDetach === id)) {
+      let detachmentPair = [0, 0];
       for (let i = 0; i < list.units.length; i++) {
         const unit = list.units[i];
         const unitCard = cards[unit.unitId];
+        // parent loop
         if (
-          unit.unitName === detachmentUnit.value ||
+          (unit.unitName === detachmentUnit.value && unit.unitId !== id) ||
           unitCard.rank === detachmentUnit.value
-        ) {
-          validUnitIds.push(id);
-          break;
-        }
+        )
+          detachmentPair[0] += unit.count;
+        if (unit.unitId === id) detachmentPair[1] += unit.count;
       }
+      if (detachmentPair[0] > detachmentPair[1]) validUnitIds.push(id);
     } else {
       validUnitIds.push(id);
     }

@@ -900,21 +900,16 @@ function applyRankAdjustments(currentList, rankReqs) {
       extraRankCounts[entourageUnit.value] += unit.count;
     }
 
-    const detachmentUnit = card.keywords.find(
-      (keyword) => keyword.name === "Detachment",
-    );
     // Apply detachment (if we're not a battleforce ignoring this unit's detachment)
     if (
-      detachmentUnit &&
+      card.keywords.some((keyword) => keyword.name === "Detachment") &&
       (!battleForce ||
         (battleForce && !battleForce.ignoreDetach === unit.unitId))
     ) {
-      // *technically* this is backwards... but still works ;)
-      // We add +Detachment_count ranks on, and ding the user if the req count doesn't match in earlier validation
-      if (!extraRankCounts[detachmentUnit.value]) {
-        extraRankCounts[detachmentUnit.value] = 0;
+      if (!extraRankCounts[card.cardName]) {
+        extraRankCounts[card.cardName] = 0;
       }
-      extraRankCounts[detachmentUnit.value] += unit.count;
+      extraRankCounts[card.cardName] += unit.count;
     }
 
     const associateUnit = card.keywords.find(
@@ -934,11 +929,7 @@ function applyRankAdjustments(currentList, rankReqs) {
   currentList.units.forEach((unit) => {
     const card = cards[unit.unitId];
 
-    // duplicate names in detachment, so we are ignoring the detachment ones
-    if (
-      extraRankCounts[card.cardName] &&
-      !card.keywords.some((keyword) => keyword.name === "Detachment")
-    ) {
+    if (extraRankCounts[card.cardName]) {
       let allowance = Math.min(unit.count, extraRankCounts[card.cardName]);
       rankReqs[card.rank][1] += allowance;
       if (

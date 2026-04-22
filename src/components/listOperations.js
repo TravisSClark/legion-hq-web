@@ -201,16 +201,16 @@ function updateSpecialUpgradeSlots(unit) {
 // TODO lots of bad shortcuts here that don't extend well
 // Check for special slots; remove or append them to end of unit bar accordingly
 function addAdditionalUpgradeSlots(unit, upgradeCard) {
-  
-  if(Array.isArray(upgradeCard)){
+  if (Array.isArray(upgradeCard)) {
     upgradeCard = {
-      additionalUpgradeSlots: upgradeCard
-    }
+      additionalUpgradeSlots: upgradeCard,
+    };
   }
-  
+
   if (
     !upgradeCard.additionalUpgradeSlots ||
-    upgradeCard.additionalUpgradeSlots.length === 0
+    upgradeCard.additionalUpgradeSlots.length === 0 ||
+    (upgradeCard.id === "Ih" && cards[unit.unitId].rank !== "corps")
   )
     return;
 
@@ -270,10 +270,12 @@ function addUnit(list, unitId, stackSize = 1) {
 
   updateSpecialUpgradeSlots(newUnitObject);
 
-  if(battleForcesDict[list.battleForce]?.rules?.addAdditionalUpgradeSlots){
-    let upgrades = battleForcesDict[list.battleForce].rules.addAdditionalUpgradeSlots.find(pair=>pair[0] === unitId)
+  if (battleForcesDict[list.battleForce]?.rules?.addAdditionalUpgradeSlots) {
+    let upgrades = battleForcesDict[
+      list.battleForce
+    ].rules.addAdditionalUpgradeSlots.find((pair) => pair[0] === unitId);
 
-    if(upgrades){
+    if (upgrades) {
       addAdditionalUpgradeSlots(newUnitObject, upgrades[1]);
     }
   }

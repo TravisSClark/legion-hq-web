@@ -8734,7 +8734,7 @@
     "cardSubtype": "droid trooper",
     "rank": "special",
     "faction": "separatists",
-    "cost": 64,
+    "cost": 60,
     "keywords": [
       {
         "name": "Jump",
@@ -8795,6 +8795,10 @@
       {
         "date": "19 July 2024",
         "description": "Gained Jump 1 keyword."
+      },
+      {
+        "date": "21 April 2026",
+        "description": "Points dropped from 64 to 60."
       }
     ]
   },
@@ -24944,6 +24948,7 @@
         }
       ]
     ],
+    "additionalUpgradeSlots": ["heavy weapon"],
     "history": [],
     "id": "Ih"
   },
