@@ -352,7 +352,7 @@ const battleForcesDict = {
     linkId: "rf",
     commander: ["Ef", "Do"], // trench
     operative: ["Dp"],
-    corps: ["la", "wp"], // TODO replace with PnP "Geonosian Engineers"
+    corps: ["la", "Is"],
     special: ["Eg"],
     support: ["ie", "qk", "ya", "mc"],
     heavy: ["gc"],
