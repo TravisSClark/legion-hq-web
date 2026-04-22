@@ -419,7 +419,11 @@ function findUnitIndexInList(unit, list) {
     if (listUnit.unitId === unit.unitId) {
       let upgradesMatch = true;
       let i = 0;
-      while (upgradesMatch && i < unit.upgradesEquipped.length) {
+      let endLoop =
+        unit.upgradesEquipped.length < listUnit.upgradesEquipped.length
+          ? listUnit.upgradesEquipped.length
+          : unit.upgradesEquipped.length;
+      while (upgradesMatch && i < endLoop) {
         if (unit.upgradesEquipped[i] !== listUnit.upgradesEquipped[i]) {
           upgradesMatch = false;
         }

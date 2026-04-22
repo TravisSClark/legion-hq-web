@@ -25318,7 +25318,7 @@
       },
       "Weighed Down"
     ],
-    "upgradeBar": ["heavy weapon", "personnel"],
+    "upgradeBar": [],
     "stats": {
       "minicount": 4,
       "hp": 1,

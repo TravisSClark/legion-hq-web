@@ -120,6 +120,7 @@ function equipUnitUpgrade(
   if (newUnitIndex > -1) {
     list.units[newUnitIndex].count += count;
     list = decrementUnit(list, unitIndex, count);
+    newIndex = newUnitIndex;
   } else if (list.units[unitIndex].count === count) {
     list.units[unitIndex] = newUnit;
   } else {
