@@ -303,16 +303,20 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
       if (uniqueCardNames.includes(card.cardName)) continue;
     }
 
-    let alreadyEquipped = false;
+    let alreadyEquippedOrLeader = false;
     upgradesEquipped.forEach((u) => {
       if (u == null) return;
 
       let uCard = cards[u];
-      if (id === u || uCard.cardName === card.cardName) {
-        alreadyEquipped = true;
-      }
+      if (
+        uCard.keywords?.includes("Leader") &&
+        card.keywords?.includes("Leader")
+      )
+        alreadyEquippedOrLeader = true;
+      if (id === u || uCard.cardName === card.cardName)
+        alreadyEquippedOrLeader = true;
     });
-    if (alreadyEquipped) continue;
+    if (alreadyEquippedOrLeader) continue;
 
     if (
       card.isUnique &&
