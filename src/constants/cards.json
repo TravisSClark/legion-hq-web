@@ -8965,7 +8965,7 @@
     "cardName": "DC-15x ARC Trooper Sniper",
     "cardType": "upgrade",
     "cost": 26,
-    "imageName": "DC-15x ARC Trooper.webp",
+    "imageName": "DC-15x ARC Trooper Sniper.webp",
     "keywords": ["High Velocity", "Overwhelm", "Sniper Team"],
     "requirements": [
       {
@@ -24899,7 +24899,7 @@
     "cardName": "DC-15x ARC Trooper Gunner",
     "cardType": "upgrade",
     "cost": 26,
-    "imageName": "DC-15x ARC Trooper Gunner.webp",
+    "imageName": "DC-15x ARC Trooper.webp",
     "keywords": ["Overwhelm"],
     "weapons": [
       {
