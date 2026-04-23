@@ -909,7 +909,9 @@ function applyRankAdjustments(currentList, rankReqs) {
     if (
       card.keywords.some((keyword) => keyword.name === "Detachment") &&
       (!battleForce ||
-        (battleForce && !battleForce.ignoreDetach === unit.unitId))
+        (battleForce &&
+          (!battleForce.ignoreDetach ||
+            !battleForce.ignoreDetach === unit.unitId)))
     ) {
       if (!detachExtraCounts[card.cardName]) {
         detachExtraCounts[card.cardName] = 0;
