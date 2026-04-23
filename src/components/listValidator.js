@@ -889,6 +889,7 @@ function applyFieldCommander(list, rankReqs) {
 function applyRankAdjustments(currentList, rankReqs) {
   // map of unitIds:count allowed due to keywords below
   let extraRankCounts = {};
+  let detachExtraCounts = {};
   const battleForce = battleForcesDict[currentList.battleForce];
   // Count all the things adding ranks
   currentList.units.forEach((unit) => {
@@ -910,10 +911,10 @@ function applyRankAdjustments(currentList, rankReqs) {
       (!battleForce ||
         (battleForce && !battleForce.ignoreDetach === unit.unitId))
     ) {
-      if (!extraRankCounts[card.cardName]) {
-        extraRankCounts[card.cardName] = 0;
+      if (!detachExtraCounts[card.cardName]) {
+        detachExtraCounts[card.cardName] = 0;
       }
-      extraRankCounts[card.cardName] += unit.count;
+      detachExtraCounts[card.cardName] += unit.count;
     }
 
     const associateUnit = card.keywords.find(
@@ -943,6 +944,19 @@ function applyRankAdjustments(currentList, rankReqs) {
         rankReqs.commOp += allowance;
       }
       extraRankCounts[card.cardName] -= allowance;
+    } else if (
+      detachExtraCounts[card.cardName] &&
+      card.keywords.some((keyword) => keyword.name === "Detachment")
+    ) {
+      let allowance = Math.min(unit.count, detachExtraCounts[card.cardName]);
+      rankReqs[card.rank][1] += allowance;
+      if (
+        rankReqs.commOp &&
+        (card.rank === "commander" || card.rank === "operative")
+      ) {
+        rankReqs.commOp += allowance;
+      }
+      detachExtraCounts[card.cardName] -= allowance;
     }
   });
 
