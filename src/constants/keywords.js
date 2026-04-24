@@ -23,17 +23,18 @@ that uses the Advanced Targeting X keyword may only form 1 \
 Attack Pool and skips the Declare Additional Defender step of \
 the attack sequence.",
   AI: "At the start of a unit with the AI keyword's Make Actions step, if \
-it is on the battlefield, does not have a faceup Order token, and \
-is not within 3 of an allied COMMANDER unit, it must make 1 of the \
-specified actions as its first action that Activation. Free actions \
-do not satisfy the requirements of the AI keyword. If a unit \
-cannot make any of its listed actions as its first action, it is free \
-to make other actions as normal.",
+it is on the battlefield and does not have a faceup Order token, and \
+is Suppressed or has a Vehicle Damage token or is a Vehicle with half \
+or more of its miniatures defeated it must make 1 of the specified actions \
+as its first action that Activation. Free actions \
+do not satisfy the requirements of the AI keyword. If the unit with \
+the AI keyword cannot make any of its listed actions, it makes \
+1 fewer action during its Make Actions step.",
   Agile:
     "When a unit with the Agile X keyword makes a Standard Move \
 as part of an action or free action, after the effect is resolved, it \
 gains X Dodge tokens.",
-  Aid: "When a unit with the Aid keyword would gain 1 or more Aim, \
+  Aid: "Each time a unit with the Aid keyword would gain an Aim, \
 Dodge, or Surge tokens, another allied unit of the Affiliation \
 or unit type listed within 2 and in LOS may gain that token \
 instead. If it does, the unit with the Aid keyword gains 1 \
@@ -106,7 +107,7 @@ moves and treated as a Trooper unit for the purposes \
 of Climbing.",
   "Complete the Mission":
     "During Setup, for each allied unit with the Complete the \
-Mission keyword, place an allied Priority Mission token on the \
+Mission keyword, place an allied Priority Mission (Advantage) token on the \
 battlefield within Contested Territory.\n\
 While a unit with the Complete the Mission keyword is within \
 1 of 1 or more allied Priority Mission tokens, that unit gains \
@@ -116,9 +117,10 @@ Mission tokens, the attacking unit's Attack Pool gains the \
 Critical 2 keyword.",
   "Command Vehicle":
     "An allied unit within 3 of a unit with the Command Vehicle \
-  X keyword may treat their COURAGE as X when checking for Panic.",
+  X keyword may treat their COURAGE as X when checking for Panic \
+  if both units have the same Affiliation or Faction.",
   Compel:
-    "After another allied Trooper unit of the matching Rank or unit \
+    "After another allied non-Droid Trooper unit of the matching Rank or unit \
 type within 2 of an allied unit with the Compel keyword \
 Rallies and is Suppressed but not Panicked, at the start of its \
 Make Actions step, it may gain 1 Suppression token to make a \
@@ -142,9 +144,9 @@ of the keyword; it does not issue 2 Orders.",
   Cunning:
     "When determining priority during the Command Phase, if a \
 player reveals a COMMANDER or OPERATIVE specific Command Card that belongs \
-to a unit with the Cunning keyword and there would be a tie \
-for priority, treat that Command Card as having 1 fewer pip. If \
-both players reveal a specific COMMANDER or OPERATIVE Command Card that \
+to a unit with the Cunning keyword and there would be a tie for priority, \
+treat that Command Card as having 1 fewer pip to a minimum of 0. \
+If both players reveal a specific COMMANDER or OPERATIVE Command Card that \
 belongs to a unit with the Cunning keyword, there is still a tie \
 for priority.",
   "Danger Sense":
@@ -156,7 +158,7 @@ an attack, it rolls 1 extra defense die during the Roll Defense \
 Dice step for each Suppression token it has, up to X additional \
 dice.",
   Dauntless:
-    "After a unit with the Dauntless keyword Rallies and is \
+    "After a non-Droid Trooper unit with the Dauntless keyword Rallies and is \
 Suppressed but not Panicked, at the start of its Make Action \
 step, it may gain 1 Suppression token to make a free Move \
 action. \n\
@@ -189,7 +191,6 @@ keyword, the Deflect keyword has no effect.",
   Demoralize:
     "After a unit with the Demoralize X keyword Rallies, add up to X \
 total Suppression tokens to enemy units within 2",
-
   Detachment:
     "A unit with the Detachment keyword doesn't count against the \
 maximum number of units of its Rank that can be included \
@@ -229,7 +230,7 @@ Inconspicuous keyword, it loses Inconspicuous until the end of \
 the Round.",
 
   "Divine Influence":
-    "Allied EWOK Trooper units gain Guardian 2: C-3PO while they \
+    "Other allied EWOK Trooper units gain Guardian 2: C-3PO while they \
 are within 1 and in LOS of an allied C-3PO. While allied \
 EWOK Trooper units within 1 and in LOS of an allied C-3PO \
 use Guardian X, they may cancel CRIT results as if they were HIT \
@@ -288,6 +289,10 @@ had the token.",
   "Expert Climber":
     "When a unit with the Expert Climber keyword makes a Climb, \
 it may Move a vertical distance up to height 2.",
+  "Eyes on the Prize":
+    "While a unit with the Eyes on the Prize keyword has its unit leader \
+within 1/2 range of 1 or more Objective tokens or is holding 1 or more Objectives, \
+it has the listed keyword.",
   "Field Commander":
     "During Army Building, an army that includes a unit with the \
 Field Commander keyword may ignore the minimum COMMANDER \
@@ -299,7 +304,7 @@ nominate an allied unit with the Field Commander keyword \
 to be Commander and issue Orders. A unit with the Field \
 Commander keyword is not a COMMANDER and only counts as one for \
 the purposes of issuing Orders with a Command Card during \
-the Command Phase. \
+the Command Phase and building a command hand. \n\
 Additionally, if an allied Unit is within 3 of the unit with \
 the Commander token and both units share the same Faction \
 or Affiliation, that allied unit may treat their COURAGE as 2 when \
@@ -325,7 +330,7 @@ Attack Dice step. For each hit result canceled in this way, the \
 unit with the Guardian X keyword rolls 1 defense die matching \
 the one on its Unit Card. After converting any defense surge \
 results according to its surge chart or by using Surge tokens, the \
-unit with the Guardian X keyword suffers 1 Wound for each \
+unit with the Guardian X keyword gains 1 suppression then suffers 1 Wound for each \
 Blank result. A defending unit that has the Guardian X keyword \
 used on it gains a Suppression token as normal. \
 A unit cannot use Guardian X if the defending unit also has \
@@ -409,8 +414,9 @@ effects of the Blast keyword are ignored.",
 all enemy card effects and cannot be targeted by any enemy \
 card effects.",
   "Immune: Melee":
-    "Enemy units cannot be placed in base contact with a unit that \
-has the Immune: Melee keyword.",
+    "Units with the Immune: Melee keyword cannot be targeted by \
+Melee attacks and cannot be Engaged. Ranged weapons can be used against this unit \
+even while in Melee with it.",
   "Immune: Melee Pierce":
     "While a unit with the Immune: Melee Pierce keyword is \
 defending against a Melee attack, the attacker cannot use the \
@@ -536,7 +542,6 @@ Attack Surges step. For each Aim token spent in this way, \
 instead of rerolling dice, change 1 Blank result to a HIT result, \
 1 HIT result to a CRIT result, or spend 2 Aim tokens to change 1 \
 Blank result to a CRIT result.",
-
   "Master of the Force":
     "When a unit with the Master of the Force X keyword ends \
 its Activation, it may ready up to X of its exhausted Force \
@@ -545,10 +550,22 @@ Upgrade Cards.",
     "As a Card action, a unit with the Master Storyteller keyword \
 may choose up to X allied EWOK units within 2, where X is the \
 current Round number. Each chosen unit gains 2 Surge tokens.",
+  "Mechanized Infantry":
+    "At the start of the Activation Phase, each unit with the \
+Mechanized Infantry keyword may choose a different allied vehicle \
+unit within range 2. If they do, the unit with the Mechanized Infantry \
+keyword and the chosen unit gain 1 Aim or Dodge token.",
   Mercenary:
     "A unit with the Mercenary: Faction keyword is a Mercenary \
 unit. The Faction(s) specified by the Mercenary: Faction \
 keyword can include that unit in an army as a Mercenary unit.",
+  Mobile:
+    "When a unit on notched bases with the Mobile keyword makes a move, \
+it skips rotating the unit leader's base step. It must make a free compulsory Move \
+action at the start or end of its Make Actions step. It cannot Reverse. If it makes \
+more than 1 non-compulsory Move action during its Activation, it may not claim Asset \
+tokens during its Activation. If it has claimed an Asset token, it can make only 1 non-compulsory \
+Move action during its Activation.",
   Nimble:
     "When a unit with the Nimble keyword defends against an attack \
 and spends at least 1 Dodge token during any point of the attack \
@@ -579,17 +596,15 @@ battlefield. The chosen unit may make a Speed-1 Move.",
   Outmaneuver:
     "A unit with the Outmaneuver keyword can spend Dodge tokens \
 to cancel CRIT results during the Apply Dodge and Cover step.",
-
   "My Mood Is Based On Profit":
     "(UNOFFICIAL - rules text not released) X values \
  on this unit's card are equal to the number of pips on the Command Card you played this turn.\
  (You may want to discuss/houserule with your opponent what a 0-pip card would do)",
-
   Override:
-    "When an allied unit begins its Activation while within 5 of \
+    "When an allied unit begins its Activation while within 3 of \
 a unit that has the Override keyword, the unit that has the \
-Override keyword may gain 1 Suppression token. If it does, the \
-activating unit ignores the AI keyword during its Activation.",
+Override keyword may gain 1 Suppression token if it is not Panicked . \
+If it does, the activating unit ignores the AI keyword during its Activation.",
   Plodding:
     "A unit with the Plodding keyword can only make 1 Move action \
 during its Activation.",
@@ -666,7 +681,6 @@ make this Move regardless of its Speed. \
 The Scout X keyword is cumulative but cannot exceed 3. If a \
 unit would ever have Scout X exceeding Scout 3, it has Scout \
 3 instead.",
-
   "Scouting Party":
     "During Setup, each unit with the Scouting Party keyword \
 may choose up to X allied Trooper units that do not have the \
@@ -752,7 +766,6 @@ by 2.",
   "Special Issue":
     "A unit with the Special Issue keyword can only be included in \
 an army using the specified Battle Force",
-
   "Soresu Mastery":
     "When a unit with Soresu Mastery defends against a Ranged \
 attack, it may reroll all of its defense dice during the Reroll \
@@ -795,7 +808,6 @@ Immobilize token, can use the Spur keyword to make a Move with \
 a total Speed of 1. However, a unit that normally has a Speed of \
 1, but has 2 Immobilize tokens, cannot use the Spur keyword to \
 make a Move because its Speed would still be 0.",
-
   Stationary:
     "A unit with the Stationary keyword cannot make Moves \
 unless the Move is a Pivot. A unit with the Prepared Position \
@@ -807,7 +819,9 @@ during its Activation, it may make a free Attack action. Only \
 Ranged weapons can be added to Attack Pools during this \
 Attack action.",
   Swashbuckler:
-    "Grants the pirates a free Dodge token after they spend an Aim token during an attack",
+    "When a unit with the Swashbuckler keyword spends 1 or more \
+Aim tokens during an Attack action, after the effect is resolved, \
+it gains 1 Dodge token.",
   Strategize:
     "When a unit makes the Strategize X action, it gains 1 \
 Suppression token, then chooses X allied units within 2. Each \
@@ -848,7 +862,6 @@ base of the unit with the Transport keyword. When the chosen \
 unit Deploys in this way, the unit leader of that unit measures \
 the vertical distance changed during that Move starting from \
 the unit with the Transport keyword.",
-
   "Uncanny Luck":
     "While a unit with the Uncanny Luck X keyword defends, it may \
 reroll up to X defense dice during the Reroll Defense Dice step. \
@@ -887,12 +900,12 @@ keyword while it is holding 1 or more Objective tokens.",
 tokens on other Clone Trooper units, and other Clone Trooper \
 units cannot spend this unit's Green tokens. Additionally, this \
 unit cannot benefit from Backup.",
-
   "Wheel Mode":
     "At the start of its Activation, a unit with the Wheel Mode \
 keyword can increase its Speed to 3 until the end of that \
-Activation. If it does, until the end of the Round, it gains the \
-Cover 2 keyword and cannot attack or flip active Shield tokens. \
+Activation. If it does, until the end of the Round, it loses the \
+Unconcerned keyword, gains the AI: Move and Cover 2 keywords, \
+and cannot flip its active Shield tokens. \
 To indicate that a unit of Droidekas is using the Wheel Mode \
 keyword, a player may replace their standing Droideka \
 miniatures with ball-form Droideka miniatures, or simply mark \
@@ -918,12 +931,16 @@ Area weapons can never be in an Attack Pool made by a unit \
 and must always be the only weapon in an Attack Pool.",
   Arm: "A unit that is equipped with a card that has the Arm X: Charge \
 Token Type keyword can make the Arm X action. When a unit \
-makes the Arm X action, the unit places X Charge tokens of \
+makes the Arm X action, the unit places X Charge (Advantage) tokens of \
 the specified type and matching its controlling player's color \
 completely within 1 and LOS of its unit leader. \n\
 Charge tokens cannot overlap any Objective, Advantage, or \
 other Charge tokens and must be placed on a flat surface \
 completely flush with that surface.",
+  Assault:
+    "When a weapon with the Assault X keyword is added to an \
+Attack Pool, if the defending unit is within range 1 of the attacking \
+unit's unit leader, you may upgrade X of that weapon's attack dice",
   Beam: "If a weapon with the Beam X keyword is in a unit's Attack \
 Pool during the Declare Additional Defender step, that unit \
 may declare up to X additional attacks, forming Attack Pools \
@@ -945,15 +962,14 @@ an Attack Pool that contains the Blast keyword.",
     "When a unit attacks, if the Critical X keyword is in the Attack \
 Pool, during the Convert Surges step it may convert up to X SURGE \
 results to CRIT results.",
-
   Cumbersome:
-    "A unit that has a weapon with the Cumbersome keyword \
-cannot make a Move prior to making an attack using that \
-weapon during the same Activation, unless the Move is a Pivot.",
+    "When a unit adds a weapon with the Cumbersome keyword to \
+an Attack Pool, it downgrades each of that weapon's attack dice \
+if that unit has made any Moves during the same Activation.",
   Detonate:
     "After a unit attacks, Moves, or makes an action, each unit that \
 has a weapon with the Detonate X keyword may Detonate up \
-to X allied Charge tokens of the specified type. If a token would \
+to X allied Charge (Advantage) tokens of the specified type. If a token would \
 detonate, that token detonates before any other abilities or \
 effects that occur after a unit Moves or makes an action, with \
 the exception of spending a Standby token which can be spent \
@@ -970,7 +986,7 @@ attacks, meaning that it cannot spend Aim tokens or modify \
 attack dice, regardless of any abilities on the unit that placed the \
 token. After a token detonates, remove it from the battlefield.",
   Fixed:
-    "To add a weapon that has the Fixed: Front or Fixed: Rear \
+    "To add a weapon that has the Fixed: Front/Rear/Sides \
 keyword to an Attack Pool, the defending unit must have at \
 least 1 of its miniatures' bases partially inside the specified firing \
 arc of the attacking miniature.",
@@ -1016,16 +1032,15 @@ Attack Dice step. If it does, the Attack Pool gains Pierce 1 for \
 each Aim token spent. The attacking unit may not reroll dice \
 with any Aim tokens spent in this way.",
   "Long Shot":
-    "When a unit with a weapon that has the Long Shot keyword \
+    "When a unit with 1 or mroe weapons that has the Long Shot keyword \
 makes an attack, before choosing an enemy unit to attack \
 during the Declare Defender step, it may spend 1 Aim token to \
-increase the maximum Range of that weapon by 1 until the end \
-of that attack sequence. The attacking unit may not reroll dice \
+increase the maximum Range of each weapon with the Long Shot keyword \
+by 1 until the end of that attack sequence. The attacking unit may not reroll dice \
 with any Aim tokens spent in this way. Only 1 Aim token may \
 be spent in this way per attack sequence.",
-
   Overrun:
-    "A weapon with a red overrun Range icon (8) is an Overrun \
+    "A weapon with a red overrun Range icon is an Overrun \
 weapon and can only be used during Overrun attacks. Overrun \
 attacks are not Ranged or Melee attacks. A unit may make X \
 Overrun attacks during its activation. A unit with an Overrun \
@@ -1042,6 +1057,11 @@ multiple miniatures in the unit. \n\
 If a unit can make multiple Overrun attacks during its \
 Activation, it must make a separate Move through an enemy \
 unit for each Overrun attack.",
+  Overwhelm:
+    "When a unit attacks with an Attack Pool that has 1 or more \
+weapons with the Overwhelm keyword, if it spends at least 1 \
+Aim token during the Reroll Dice step, the defending unit gains \
+1 Suppression token during the Assign Suppression Token to Defender step.",
   Pierce:
     "When a unit attacks with an Attack Pool that has Pierce X \
 keyword it may cancel up to X BLOCK results during the Modify \
@@ -1067,7 +1087,6 @@ keyword gains X Poison tokens. \n\
 When a unit with 1 or more Poison tokens ends its Activation, \
 it suffers 1 Wound for each Poison token it has, then removes all \
 of its Poison tokens.",
-
   Primitive:
     "When a unit attacks, if its Attack Pool has the Primitive \
 keyword and the defending unit has the Armor X keyword, \
@@ -1089,6 +1108,15 @@ Ram X.",
 Pool that has the Scatter keyword, after the attack is resolved, \
 it may place any of the non-unit leader miniatures in the \
 defending unit in Cohesion.",
+  "Sniper Team":
+    "When a weapon with the Sniper Team keyword is the only weapon \
+in an Attack Pool, if the attacking unit has not made a Move during \
+its Activation and if each miniature in the attacking unit has LOS to \
+1 or more miniatures in the defending unit, upgrade each of that weapon’s \
+attack dice. If you do, after the Convert Attack Surges step, you may cancel \
+all the attack dice in the Attack Pool and skip to the Assign Suppression Token \
+to Defender step. If 1 or more Crit results were cancelled in this way, \
+the defending unit suffers 1 Wound",
   Spray:
     "When a miniature adds a weapon that has the Spray keyword \
 to an Attack Pool, that weapon adds its dice a number of times \
@@ -1148,7 +1176,6 @@ token is removed.",
 Upgrade Cards with the Cycle keyword that was not used \
 during that Activation. Only using the weapon, keywords, or \
 other card text on the card counts as using that Upgrade Card.",
-
   Divulge:
     "Some Command Cards have the Divulge keyword. Command \
 Cards that contain the Divulge keyword are divided by a \
@@ -1160,13 +1187,14 @@ step indicated by the Divulge keyword. If a card is revealed in \
 this manner, resolve the text that follows the Divulge keyword. \n\
 A card that is revealed in this way is not played and is returned \
 to that player's Command Hand at the end of the step in which \
-it was Divulged. Players can Divulge as many Command Cards \
-as they wish. If both players have Command Cards that are \
-Divulged at the same time, the blue player can reveal their \
-Command Card first. If this opportunity is declined, that card \
-can no longer be Divulged.",
+it was Divulged. If a card with the Permanent keyword is Divulged, \
+it does not return to a player's Command Hand and it remains in play. \
+Divulge as many Command Cards as they wish. If both players have \
+Command Cards that are Divulged at the same time, the blue player \
+can reveal their Command Card first. If this opportunity is declined, \
+that card can no longer be Divulged.",
   "Graffitti Tokens":
-    "A Graffiti token represents a striking image or symbol painted \
+    "A Graffiti (Advantage) token represents a striking image or symbol painted \
 onto the terrain of the battlefield. Graffiti tokens affect a unit's \
 morale. Graffiti tokens have 2 sides. Players should place the \
 Graffiti token flat on a surface so that the side that corresponds \
