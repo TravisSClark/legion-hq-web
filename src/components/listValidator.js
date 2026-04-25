@@ -697,10 +697,22 @@ function validateList(currentList, rankLimits) {
   Object.getOwnPropertyNames(unitCounts).forEach((id) => {
     const card = cards[id];
 
-    const detachmentTarget = card.keywords.find(
+    let detachmentTarget = card.keywords.find(
       (keyword) => keyword.name === "Detachment",
     )?.value;
 
+    if(battleForce?.rules?.sortOfDetachment){
+      console.log('sort of detach', JSON.stringify(battleForce.rules.sortOfDetachment));
+      battleForce.rules.sortOfDetachment.forEach(pair =>{
+        console.log(JSON.stringify(pair));
+        if(pair[0] == id){
+          console.log('checkit!!');
+          detachmentTarget = pair[1];
+        }
+      })
+    }
+
+    // if this thing needs a detachment and we're not ignoring it, tally!
     if (detachmentTarget && battleForce?.rules?.ignoreDetach !== id) {
       
       // if it's a detachment by rank, just note what it is and how many of that rank it needs; 
@@ -743,6 +755,9 @@ function validateList(currentList, rankLimits) {
       rankDetachmentCounts[parentCard.rank].used += unitCounts[id];
 
       if (unitCounts[id] > parentCount) {
+
+        let isBfDetach = battleForce?.rules?.sortOfDetachment?.find(pair=> pair[0] == id) != undefined;
+
         let cardName = (
           card.displayName ? card.displayName : card.cardName
         ).toUpperCase();
@@ -769,13 +784,13 @@ function validateList(currentList, rankLimits) {
               "s  (" +
               unitCounts[id] +
               "). " +
-              "You need one " +
+              "You need at least one " +
               parentName +
               "(" +
               parentCount +
               ") per " +
-              cardName +
-              ". (DETACHMENT)",
+              cardName + 
+              (isBfDetach ? ". (Battleforce Rules)" : ". (DETACHMENT)"),
           });
         }
       }

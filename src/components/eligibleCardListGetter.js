@@ -147,6 +147,8 @@ function getEligibleUnitsToAdd(list, rank, preamble=false) {
 
     const battleForce = battleForcesDict[list.battleForce];
 
+    if(card.isUnreleased && !userSettings.showUnreleasedCards) continue;
+
     if (!battleForce) {
       if (
         list.faction !== card.faction &&

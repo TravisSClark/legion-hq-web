@@ -5,6 +5,7 @@ const settings = {
     chipSize: "medium",
     builderOrientation: "right",
     cascadeUpgradeSelection: "yes",
+    showUnreleasedCards: true,
     dragDelayTime: 1,
     showHeaderLabel:"on"
   },
@@ -48,6 +49,14 @@ const settings = {
       values: [
         { key: "yes", name: "Yes" },
         { key: "no", name: "No" },
+      ],
+    },
+    {
+      key: "showUnreleasedCards",
+      name: "Show Unreleased Cards",
+      values: [
+        { key: true, name: "Yes" },
+        { key: false, name: "No" },
       ],
     },
   ],
