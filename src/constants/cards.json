@@ -6661,7 +6661,7 @@
       "hp": 3,
       "defense": "w",
       "courage": 0,
-      "speed": 2,
+      "speed": 1,
       "hitsurge": "",
       "defsurge": "b"
     },
@@ -8608,6 +8608,7 @@
       "hitsurge": "c",
       "defsurge": ""
     },
+    "equip": ["lf"],
     "weapons": [
       {
         "name": "DC-17 Hand Blasters",
@@ -22969,6 +22970,7 @@
     "cost": 5,
     "imageName": "Black Sun Crew.webp",
     "keywords": [],
+    "affiliations": ["empire", "separatists"],
     "requirements": [
       {
         "cardName": "WLO-5 Speeder Tank"
@@ -22993,6 +22995,7 @@
         "cardName": "WLO-5 Speeder Tank"
       }
     ],
+    "affiliations": ["empire", "rebels", "separatists", "republic"],
     "changeCard": {
       "affiliation": "pyke"
     },
@@ -25351,5 +25354,38 @@
       }
     ],
     "specialIssue": "Rapid Interdiction Force"
+  },
+  "It": {
+    "id": "It",
+    "cardName": "I Smell Profit",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "",
+    "imageName": "I Smell Profit.webp",
+    "faction": "",
+    "battleForce": "The Ohnaka Gang",
+    "keywords": ["Eyes on the Prize", "Low Profile", "Nimble"]
+  },
+  "Iu": {
+    "id": "Iu",
+    "cardName": "Speak Softly and Drive a Big Tank",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "",
+    "imageName": "Speak Softly and Drive a Big Tank.webp",
+    "faction": "",
+    "battleForce": "The Ohnaka Gang",
+    "keywords": []
+  },
+  "Iv": {
+    "id": "Iv",
+    "cardName": "Insolence?! We are Pirates!",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "",
+    "imageName": "Insolence?! We are Pirates!.webp",
+    "faction": "",
+    "battleForce": "The Ohnaka Gang",
+    "keywords": []
   }
 }

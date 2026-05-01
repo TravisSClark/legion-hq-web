@@ -905,7 +905,7 @@ unit cannot benefit from Backup.",
 keyword can increase its Speed to 3 until the end of that \
 Activation. If it does, until the end of the Round, it loses the \
 Unconcerned keyword, gains the AI: Move and Cover 2 keywords, \
-and cannot flip its active Shield tokens. \
+and cannot make attacks or flip its active Shield tokens. \
 To indicate that a unit of Droidekas is using the Wheel Mode \
 keyword, a player may replace their standing Droideka \
 miniatures with ball-form Droideka miniatures, or simply mark \
@@ -1006,7 +1006,6 @@ unit's Speed before applying any effects that reduce its Speed.",
   "Immune: Deflect":
     "When a unit attacks with an Attack Pool that has Immune: \
 Deflect, it cannot suffer Wounds from the Deflect keyword.",
-
   Impact:
     "When a unit attacks, if its Attack Pool has the Impact X \
 keyword and the defending unit has the Armor X keyword, \
@@ -1109,9 +1108,10 @@ Pool that has the Scatter keyword, after the attack is resolved, \
 it may place any of the non-unit leader miniatures in the \
 defending unit in Cohesion.",
   "Sniper Team":
-    "When a weapon with the Sniper Team keyword is the only weapon \
-in an Attack Pool, if the attacking unit has not made a Move during \
-its Activation and if each miniature in the attacking unit has LOS to \
+    "When a unit makes an attack during its Activation and \
+a weapon with the Sniper Team keyword is the only weapon in an Attack Pool, \
+if the attacking unit has not made a Move during its Activation \
+and if each miniature in the attacking unit has LOS to \
 1 or more miniatures in the defending unit, upgrade each of that weapon’s \
 attack dice. If you do, after the Convert Attack Surges step, you may cancel \
 all the attack dice in the Attack Pool and skip to the Assign Suppression Token \

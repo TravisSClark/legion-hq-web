@@ -18,7 +18,7 @@ const battleForcesDict = {
     special: ["Ay"],
     support: ["mb"],
     heavy: ["gb", "oo", "qs"],
-    allowedUniqueUpgrades: [
+    allowedUpgrades: [
       // TODO: add "Squadron Leader"
       "uf",
       "Io",
@@ -63,7 +63,7 @@ const battleForcesDict = {
     special: ["kz", "Ay"],
     support: ["ky", "mb", "ic", "xj", "xp"],
     heavy: ["oo"],
-    allowedUniqueUpgrades: ["Bd", "Ep", "lh", "lg", "cw"],
+    allowedUpgrades: ["Bd", "Ep", "lh", "lg", "cw"],
     rules: {},
     "standard mode": {
       commOp: 2,
@@ -93,7 +93,7 @@ const battleForcesDict = {
     special: ["Fa"],
     support: ["bf", "be"],
     heavy: ["bg"],
-    allowedUniqueUpgrades: ["Ce", "Cg", "fl", "cw", "Cf"],
+    allowedUpgrades: ["Ce", "Cg", "fl", "cw", "Cf"],
 
     rules: {
       noFieldComm: true,
@@ -127,7 +127,7 @@ const battleForcesDict = {
     special: ["vu", "ak"],
     support: [],
     heavy: ["vj"],
-    allowedUniqueUpgrades: ["wb", "cw", "wc", "wa"],
+    allowedUpgrades: ["wb", "cw", "wc", "wa"],
     rules: {
       countMercs: true,
       take2NonEwokRebs: true, // lol
@@ -172,7 +172,7 @@ const battleForcesDict = {
     special: [],
     support: ["an", "he"],
     heavy: ["ap"],
-    allowedUniqueUpgrades: ["Cp", "cw", "Im", "Cr", "Cs", "Bn", "Cq", "fk"], // TODO needs "Squadron Leader" once card available
+    allowedUpgrades: ["Cp", "cw", "Im", "Cr", "Cs", "Bn", "Cq", "fk"], // TODO needs "Squadron Leader" once card available
     rules: {
       noFieldComm: true,
     },
@@ -205,7 +205,7 @@ const battleForcesDict = {
     special: ["la"],
     support: ["ie"],
     heavy: ["xe"],
-    allowedUniqueUpgrades: ["cw", "Bl", "En"],
+    allowedUpgrades: ["cw", "Bl", "En"],
     rules: {
       buildsAsCorps: ["xd"],
       ccAsCorps: true, // adds in the "and Battle Cards" rule to printout
@@ -259,17 +259,7 @@ const battleForcesDict = {
     special: [],
     support: ["bf", "be"],
     heavy: ["tm"],
-    allowedUniqueUpgrades: [
-      "Ce",
-      "Cj",
-      "Cg",
-      "cw",
-      "Ch",
-      "Bl",
-      "Cf",
-      "uj",
-      "Bn",
-    ],
+    allowedUpgrades: ["Ce", "Cj", "Cg", "cw", "Ch", "Bl", "Cf", "uj", "Bn"],
     rules: {
       unitLimits: [
         { ids: ["ay"], count: [1, 2] },
@@ -316,7 +306,7 @@ const battleForcesDict = {
     special: [],
     support: ["sq"],
     heavy: ["Fe"],
-    allowedUniqueUpgrades: [
+    allowedUpgrades: [
       "Fn",
       "cw",
       // TODO add Squadron Leader
@@ -359,7 +349,7 @@ const battleForcesDict = {
     rules: {
       buildsAsCorps: ["la"],
     },
-    allowedUniqueUpgrades: ["cw"], // TODO add "Squadron Leader"
+    allowedUpgrades: ["cw"], // TODO add "Squadron Leader"
 
     "standard mode": {
       commOp: 3,
@@ -393,7 +383,7 @@ const battleForcesDict = {
     rules: {
       noFieldComm: true,
     },
-    allowedUniqueUpgrades: ["cw"], // TODO add "Squadron Leader"
+    allowedUpgrades: ["cw"], // TODO add "Squadron Leader"
 
     "standard mode": {
       commOp: 2,
@@ -425,7 +415,7 @@ const battleForcesDict = {
     special: ["re"],
     support: ["sq"],
     heavy: ["sm", "Fe"],
-    allowedUniqueUpgrades: [
+    allowedUpgrades: [
       "rq",
       "so",
       "se",
@@ -436,6 +426,8 @@ const battleForcesDict = {
       "Bn",
       "Fn",
       "cw",
+      "Fj",
+      "Fk",
     ],
     rules: {
       countMercs: true,
@@ -474,7 +466,7 @@ const battleForcesDict = {
     special: ["Fa", "ba"],
     support: ["bf", "be", "bb"],
     heavy: ["bg", "bh", "on"],
-    allowedUniqueUpgrades: ["Ce", "Eo", "Cf", "Cg", "Ch", "Cj", "Bn", "cw"],
+    allowedUpgrades: ["Ce", "Eo", "Cf", "Cg", "Ch", "Cj", "Bn", "cw"],
     rules: {},
     plainTextRules: [
       "Non-unique COMMANDER and non-unique OPERATIVE units in this army gain Target 2. \
@@ -508,7 +500,7 @@ const battleForcesDict = {
     special: ["Fa", "ba"],
     support: ["bf"],
     heavy: ["we", "bg"],
-    allowedUniqueUpgrades: ["Ce", "Cf", "Ch", "Cj", "cw"], // TODO add "Squadron Leader"
+    allowedUpgrades: ["Ce", "Cf", "Ch", "Cj", "cw"], // TODO add "Squadron Leader"
     rules: {},
     plainTextRules: [
       "Vehicles in this army gain Scout 2.",
@@ -551,7 +543,7 @@ const battleForcesDict = {
     special: ["kz", "pg"],
     support: ["qh", "xf", "ic"],
     heavy: ["gb", "qs"],
-    allowedUniqueUpgrades: ["Ir", "Bl", "Dc", "Dd", "De", "cw"],
+    allowedUpgrades: ["Ir", "Bl", "Dc", "Dd", "De", "cw"],
     rules: {
       buildsAsCorps: ["pm"],
       ccAsCorps: true, // adds in the "and Battle Cards" rule unique to Wookiee building rules
@@ -611,7 +603,7 @@ const battleForcesDict = {
     special: ["re", "ml", "Ht", "Ia"],
     support: ["Hs"],
     heavy: [],
-    allowedUniqueUpgrades: ["Ho", "Hp", "tn", "cw"],
+    allowedUpgrades: ["Ho", "Hp", "tn", "cw"],
     rules: {
       noRules: true,
 

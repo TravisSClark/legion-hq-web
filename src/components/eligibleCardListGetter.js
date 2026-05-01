@@ -296,7 +296,23 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
     const card = cards[id];
 
     if (card.cardSubtype !== upgradeType) continue;
+    if (list.battleForce) {
+      if (battleForcesDict[list.battleForce].allowedUpgrades.includes(id)) {
+        validUpgradeIds.push(id);
+        continue;
+      }
+
+      if (
+        card.isUnique &&
+        !battleForcesDict[list.battleForce].allowedUpgrades.includes(id)
+      )
+        continue;
+    }
+
     if (card.faction && card.faction !== "" && list.faction !== card.faction)
+      continue;
+
+    if (card.affiliations && !card.affiliations.includes(list.faction))
       continue;
 
     if (card.isUnique) {
@@ -317,13 +333,6 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
         alreadyEquippedOrLeader = true;
     });
     if (alreadyEquippedOrLeader) continue;
-
-    if (
-      card.isUnique &&
-      list.battleForce &&
-      !battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id)
-    )
-      continue;
 
     // Imp remnant's mixed heavies rule (and a cheat to get Imp March working)
     if (

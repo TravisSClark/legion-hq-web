@@ -97,9 +97,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
         : unit.count;
     }
     if (list.battleForce && isUniqueCard(card)) {
-      if (
-        !battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id)
-      )
+      if (!battleForcesDict[list.battleForce].allowedUpgrades.includes(id))
         unit.validationIssues.push({
           level: 2,
           text:
@@ -140,9 +138,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
           : 1;
       }
       if (list.battleForce && card.isUnique) {
-        if (
-          !battleForcesDict[list.battleForce].allowedUniqueUpgrades.includes(id)
-        )
+        if (!battleForcesDict[list.battleForce].allowedUpgrades.includes(id))
           unit.validationIssues.push({
             level: 2,
             text:
