@@ -297,7 +297,10 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
 
     if (card.cardSubtype !== upgradeType) continue;
     if (list.battleForce) {
-      if (battleForcesDict[list.battleForce].allowedUpgrades.includes(id)) {
+      if (
+        battleForcesDict[list.battleForce].allowedUpgrades.includes(id) &&
+        areRequirementsMet(card.requirements, unitCardCopy)
+      ) {
         validUpgradeIds.push(id);
         continue;
       }
