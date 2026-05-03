@@ -296,27 +296,6 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
     const card = cards[id];
 
     if (card.cardSubtype !== upgradeType) continue;
-    if (list.battleForce) {
-      if (
-        battleForcesDict[list.battleForce].allowedUpgrades.includes(id) &&
-        areRequirementsMet(card.requirements, unitCardCopy)
-      ) {
-        validUpgradeIds.push(id);
-        continue;
-      }
-
-      if (
-        card.isUnique &&
-        !battleForcesDict[list.battleForce].allowedUpgrades.includes(id)
-      )
-        continue;
-    }
-
-    if (card.faction && card.faction !== "" && list.faction !== card.faction)
-      continue;
-
-    if (card.affiliations && !card.affiliations.includes(list.faction))
-      continue;
 
     if (card.isUnique) {
       if (uniqueCardNames.includes(card.cardName)) continue;
@@ -337,16 +316,38 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
     });
     if (alreadyEquippedOrLeader) continue;
 
-    // Imp remnant's mixed heavies rule (and a cheat to get Imp March working)
-    if (
-      list.battleForce === "Imperial Remnant" &&
-      // card.cardSubtype === "heavy weapon" &&
-      unitCardCopy.cardSubtype === "trooper" &&
-      impRemnantUpgrades.includes(id)
-    ) {
-      validUpgradeIds.push(id);
-      continue;
+    if (list.battleForce) {
+      if (
+        battleForcesDict[list.battleForce].allowedUpgrades.includes(id) &&
+        areRequirementsMet(card.requirements, unitCardCopy)
+      ) {
+        validUpgradeIds.push(id);
+        continue;
+      }
+
+      if (
+        card.isUnique &&
+        !battleForcesDict[list.battleForce].allowedUpgrades.includes(id)
+      )
+        continue;
+
+      // Imp remnant's mixed heavies rule (and a cheat to get Imp March working)
+      if (
+        list.battleForce === "Imperial Remnant" &&
+        // card.cardSubtype === "heavy weapon" &&
+        unitCardCopy.cardSubtype === "trooper" &&
+        impRemnantUpgrades.includes(id)
+      ) {
+        validUpgradeIds.push(id);
+        continue;
+      }
     }
+
+    if (card.faction && card.faction !== "" && list.faction !== card.faction)
+      continue;
+
+    if (card.affiliations && !card.affiliations.includes(list.faction))
+      continue;
 
     // The 'normal' way to check for an upgrade - see if the unit meets the upgrade's requirements
     if (areRequirementsMet(card.requirements, unitCardCopy)) {
