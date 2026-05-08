@@ -1,24 +1,23 @@
 {
   "Rebels": [],
-  "Empire": [
-    {
-      "name": "Imperial Probe Droids ",
-      "date": "May 8",
-      "price": "$35"
-    }
-  ],
+  "Empire": [],
   "Republic": [],
   "Separatists": [],
   "Other": [
     {
-      "name": "Hondo Ohnaka & Weequay Pirates",
-      "date": "Apr 17",
-      "price": "$55"
+      "name": "Mandalorian Special Edition Army Box",
+      "date": "June 19",
+      "price": "$140"
     },
     {
-      "name": "WLO-5 Speeder Tank",
-      "date": "May 8",
-      "price": "$85"
+      "name": "Mandalorian Leaders",
+      "date": "June 19",
+      "price": "$53"
+    },
+    {
+      "name": "Customizable Mandalorian Leader and Hunter",
+      "date": "August 7",
+      "price": "$40"
     }
   ]
 }

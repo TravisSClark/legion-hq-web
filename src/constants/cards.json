@@ -7992,7 +7992,8 @@
         "description": "Lost Covert Ops and Loadout, and gained Sharpshooter 1 and Infiltrate keywords. Lost Armament but gained Command slot. Melee changed from 2 red to 3 black. Gun now on card - card cost increased by cost of gun (100 to 115)."
       }
     ],
-    "counterpartId": "lw"
+    "counterpartId": "lw",
+    "equip": ["lw"]
   },
   "kh": {
     "cardSubtype": "armament",
@@ -22779,7 +22780,6 @@
     "faction": "mercenary",
     "affiliation": "raider",
     "cost": 100,
-    "isUnreleased": "Q1-Q2 2026",
     "keywords": [
       {
         "name": "Mercenary",
@@ -24653,7 +24653,7 @@
   },
   "Hy": {
     "isUnreleased": "June 2026",
-    "id": "Hx",
+    "id": "Hy",
     "cardName": "The Armorer",
     "title": "Forging the Future",
     "isUnique": true,

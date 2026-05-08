@@ -305,23 +305,31 @@ function addUnit(list, unitId, stackSize = 1) {
 
     if (unitCard.equip) {
       for (let i = 0; i < unitCard.equip.length; i++) {
-        let upgradeType = cards[unitCard.equip[i]].cardSubtype;
-        let upgradeIndex = unitCard.upgradeBar.indexOf(upgradeType);
-        if (list.units[list.units.length - 1].upgradesEquipped[upgradeIndex]) {
-          while (
-            list.units[list.units.length - 1].upgradesEquipped[upgradeIndex] &&
-            upgradeIndex < unitCard.upgradeBar.length - 1
+        if (cards[unitCard.equip[i]].cardType === "counterpart") {
+          addCounterpart(list, unitIndex, unitCard.equip[i]);
+        } else {
+          let upgradeType = cards[unitCard.equip[i]].cardSubtype;
+          let upgradeIndex = unitCard.upgradeBar.indexOf(upgradeType);
+          if (
+            list.units[list.units.length - 1].upgradesEquipped[upgradeIndex]
           ) {
-            upgradeIndex += 1;
+            while (
+              list.units[list.units.length - 1].upgradesEquipped[
+                upgradeIndex
+              ] &&
+              upgradeIndex < unitCard.upgradeBar.length - 1
+            ) {
+              upgradeIndex += 1;
+            }
           }
+          [list, unitIndex] = equipUnitUpgrade(
+            list,
+            unitIndex,
+            upgradeIndex,
+            unitCard.equip[i],
+            true,
+          );
         }
-        [list, unitIndex] = equipUnitUpgrade(
-          list,
-          unitIndex,
-          upgradeIndex,
-          unitCard.equip[i],
-          true,
-        );
       }
     }
 
