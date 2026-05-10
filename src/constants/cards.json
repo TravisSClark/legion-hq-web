@@ -24469,14 +24469,23 @@
     "rank": "commander",
     "faction": "mercenary",
     "affiliation": "Mandalorian Clans",
-    "cost": 0,
+    "cost": 90,
     "keywords": [
       { "name": "Jump", "value": 2 },
       "Equip: Armament, Doctrine (No cards yet)",
       "Impervious",
       { "name": "Retinue", "value": "Mandalorian Warriors" }
     ],
-    "upgradeBar": ["armament", "doctrine"],
+    "upgradeBar": [
+      "clan",
+      "doctrine",
+      "armament",
+      "command",
+      "training",
+      "gear",
+      "gear",
+      "grenades"
+    ],
     "stats": {
       "minicount": 1,
       "hp": 5,
@@ -24573,7 +24582,7 @@
     "faction": "mercenary",
     "affiliation": "Clan Kryze",
     "affiliations": ["rebels", "republic"],
-    "cost": 0,
+    "cost": 110,
     "keywords": [
       { "name": "Mercenary", "value": "Rebels, Republic" },
       { "name": "Jump", "value": 2 },
@@ -24582,7 +24591,15 @@
       "Mandalorians Are Stronger Together",
       { "name": "Tactical", "value": 1 }
     ],
-    "upgradeBar": [],
+    "upgradeBar": [
+      "command",
+      "training",
+      "training",
+      "gear",
+      "gear",
+      "armament",
+      "grenades"
+    ],
     "stats": {
       "minicount": 1,
       "hp": 5,
@@ -24618,7 +24635,7 @@
     "faction": "mercenary",
     "affiliation": "Clan Kryze",
     "affiliations": ["rebels", "republic"],
-    "cost": 0,
+    "cost": 90,
     "keywords": [
       { "name": "Mercenary", "value": "Rebels, Republic" },
       { "name": "Jump", "value": 2 },
@@ -24628,7 +24645,7 @@
       "Mandalorians Are Stronger Together",
       { "name": "Tactical", "value": 1 }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["training", "training", "comms", "gear", "gear", "grenades"],
     "stats": {
       "minicount": 1,
       "hp": 5,
@@ -24663,7 +24680,7 @@
     "rank": "commander",
     "faction": "mercenary",
     "affiliation": "Children of the Watch",
-    "cost": 0,
+    "cost": 120,
     "keywords": [
       { "name": "Jump", "value": 2 },
       { "name": "Aid", "value": "Children of the Watch" },
@@ -24672,7 +24689,7 @@
       { "name": "Reliable", "value": 1 },
       { "name": "This Is the Way", "value": "Move 1 or Recover 2" }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["command", "command", "training", "gear", "gear"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -24711,7 +24728,7 @@
     "rank": "operative",
     "faction": "mercenary",
     "affiliation": "Children of the Watch",
-    "cost": 0,
+    "cost": 105,
     "keywords": [
       { "name": "Jump", "value": 2 },
       "Field Commander",
@@ -24719,7 +24736,7 @@
       "Steady",
       { "name": "This Is the Way", "value": "Aim 2" }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["training", "training", "gear", "gear"],
     "stats": {
       "minicount": 1,
       "hp": 5,
