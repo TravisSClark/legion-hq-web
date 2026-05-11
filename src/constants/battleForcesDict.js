@@ -383,7 +383,7 @@ const battleForcesDict = {
     rules: {
       noFieldComm: true,
     },
-    allowedUpgrades: ["cw"], // TODO add "Squadron Leader"
+    allowedUpgrades: ["Iq", "cw"], // TODO add "Squadron Leader"
 
     "standard mode": {
       commOp: 2,
