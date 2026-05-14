@@ -15,6 +15,7 @@ import ordnance from "assets/upgradeTypes/ordnance.png";
 import programming from "assets/upgradeTypes/programming.png";
 import squadLeader from "assets/upgradeTypes/squadLeader.png";
 import doctrine from "assets/upgradeTypes/doctrine.png";
+import clan from "assets/upgradeTypes/clan.png";
 
 const upgradeTypes = {
   "heavy weapon": {
@@ -84,6 +85,10 @@ const upgradeTypes = {
   doctrine: {
     name: "Doctrine",
     icon: doctrine,
+  },
+  clan: {
+    name: "Mandalorian Clan",
+    icon: clan,
   },
 };
 
