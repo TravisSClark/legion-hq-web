@@ -3204,7 +3204,7 @@
     "cardType": "upgrade",
     "cost": 20,
     "imageName": "DH-447 Sniper.webp",
-    "keywords": ["High Velocity", "Overwhelm", "Sniper Team"],
+    "keywords": [],
     "weapons": [
       {
         "name": "DH-447 Sniper Rifle",
@@ -3424,7 +3424,7 @@
     "cardType": "upgrade",
     "cost": 20,
     "imageName": "DLT-19x Sniper.webp",
-    "keywords": ["High Velocity", "Overwhelm", "Sniper Team"],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Scout Troopers",
@@ -8903,7 +8903,7 @@
     "cardType": "upgrade",
     "cost": 20,
     "imageName": "BX-Series Droid Sniper.webp",
-    "keywords": ["High Velocity", "Overwhelm", "Sniper Team"],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "BX-Series Droid Commandos",
@@ -8968,7 +8968,7 @@
     "cardType": "upgrade",
     "cost": 26,
     "imageName": "DC-15x ARC Trooper Sniper.webp",
-    "keywords": ["High Velocity", "Overwhelm", "Sniper Team"],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "ARC Troopers",
@@ -23466,7 +23466,7 @@
     "cardType": "upgrade",
     "cost": 20,
     "imageName": "Long Rifle Pirate.webp",
-    "keywords": [{ "name": "Lethal", "value": 1 }],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Weequay Pirates"
@@ -23477,7 +23477,7 @@
     "weapons": [
       {
         "name": "Long Rifle",
-        "keywords": [],
+        "keywords": [{ "name": "Lethal", "value": 1 }],
         "range": [1, 4],
         "dice": {
           "r": 1,
@@ -24273,9 +24273,9 @@
     "rank": "corps",
     "faction": "mercenary",
     "affiliation": "Mandalore",
-    "cost": 0,
+    "cost": 56,
     "keywords": [],
-    "upgradeBar": [],
+    "upgradeBar": ["clan", "heavy weapon", "personnel", "training", "grenades"],
     "stats": {
       "minicount": 5,
       "hp": 1,
@@ -24318,9 +24318,17 @@
     "rank": "corps",
     "faction": "mercenary",
     "affiliation": "Mandalore",
-    "cost": 0,
+    "cost": 64,
     "keywords": [{ "name": "Jump", "value": 2 }, "Duelist", "Impervious"],
-    "upgradeBar": [],
+    "upgradeBar": [
+      "clan",
+      "heavy weapon",
+      "personnel",
+      "training",
+      "gear",
+      "grenades",
+      "armament"
+    ],
     "stats": {
       "minicount": 5,
       "hp": 1,
@@ -24365,7 +24373,7 @@
     "rank": "support",
     "faction": "mercenary",
     "affiliatoin": "Mandalore",
-    "cost": 0,
+    "cost": 55,
     "keywords": [
       { "name": "Jump", "value": 2 },
       { "name": "Detachment", "value": "Mandalorian Warriors" },
@@ -24374,7 +24382,14 @@
       "Impervious",
       { "name": "Sharpshooter", "value": 1 }
     ],
-    "upgradeBar": [],
+    "upgradeBar": [
+      "clan",
+      "heavy weapon",
+      "personnel",
+      "training",
+      "gear",
+      "grenades"
+    ],
     "stats": {
       "minicount": 4,
       "hp": 1,
@@ -24418,7 +24433,7 @@
     "cardSubtype": "mandalorian trooper",
     "rank": "special",
     "faction": "mercenary",
-    "cost": 0,
+    "cost": 120,
     "keywords": [
       { "name": "Mercenary", "value": "Rebels, Republic" },
       { "name": "Jump", "value": 2 },
@@ -24426,7 +24441,7 @@
       "Mandalorians Are Stronger Together",
       { "name": "Tactical", "value": 1 }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["personnel", "heavy weapon", "training", "grenades", "gear"],
     "stats": {
       "minicount": 5,
       "hp": 1,
@@ -24920,7 +24935,7 @@
     "cardType": "upgrade",
     "cost": 26,
     "imageName": "DC-15x ARC Trooper.webp",
-    "keywords": ["Overwhelm"],
+    "keywords": [],
     "weapons": [
       {
         "name": "DC-15 Blaster Rifles",
@@ -24997,7 +25012,7 @@
     "cardType": "upgrade",
     "cost": 32,
     "imageName": "Fifth Brother Upgrade.webp",
-    "keywords": ["Leader", "Spur", "Sidearm", "Impact", "Pierce", "Ram"],
+    "keywords": ["Leader", "Spur", "Sidearm"],
     "requirements": [
       {
         "cardName": "Stormtrooper Riot Squad"
@@ -25028,7 +25043,7 @@
     "cardType": "upgrade",
     "cost": 30,
     "imageName": "Seventh Sister Upgrade.webp",
-    "keywords": ["Leader", "Demoralize", "Sidearm", "Impact", "Pierce"],
+    "keywords": ["Leader", "Demoralize", "Sidearm"],
     "requirements": [
       "AND",
       {
@@ -25109,7 +25124,7 @@
     "cost": 25,
     "imageName": "Luke Skywalker Upgrade.webp",
     "additionalUpgradeSlots": ["heavy weapon"],
-    "keywords": ["Leader", "Sidearm", "Critical", "Impact", "Pierce"],
+    "keywords": ["Leader", "Sidearm", "Critical"],
     "requirements": [
       "OR",
       {
@@ -25144,14 +25159,7 @@
     "cardType": "upgrade",
     "cost": 25,
     "imageName": "Obi-Wan Kenobi Upgrade.webp",
-    "keywords": [
-      "Leader",
-      "Immune: Melee Pierce",
-      "Sidearm",
-      "Critical",
-      "Impact",
-      "Pierce"
-    ],
+    "keywords": ["Leader", "Immune: Melee Pierce", "Sidearm"],
     "requirements": [
       {
         "cardName": "ARF Troopers"
@@ -25182,7 +25190,7 @@
     "cardType": "upgrade",
     "cost": 28,
     "imageName": "Clone Commander Cody Upgrade.webp",
-    "keywords": ["Leader", "Mechanized Infantry", "Precise", "Impact"],
+    "keywords": ["Leader", "Mechanized Infantry", "Precise"],
     "requirements": [
       "OR",
       {
@@ -25213,16 +25221,7 @@
     "cardType": "upgrade",
     "cost": 26,
     "imageName": "Asajj Ventress Upgrade.webp",
-    "keywords": [
-      "Leader",
-      "AI",
-      "Charge",
-      "Demoralize",
-      "Sidearm",
-      "Critical",
-      "Impact",
-      "Pierce"
-    ],
+    "keywords": ["Leader", "AI", "Charge", "Demoralize", "Sidearm"],
     "additionalUpgradeSlots": ["heavy weapon"],
     "requirements": [
       "OR",
@@ -25259,7 +25258,7 @@
     "cardType": "upgrade",
     "cost": 36,
     "imageName": "General Grievous Upgrade.webp",
-    "keywords": ["Leader", "AI", "Sidearm", "Critical", "Impact", "Pierce"],
+    "keywords": ["Leader", "AI", "Sidearm"],
     "additionalUpgradeSlots": ["heavy weapon"],
     "requirements": [
       "OR",
@@ -25295,7 +25294,7 @@
     "cardType": "upgrade",
     "cost": 40,
     "imageName": "Chewbacca Upgrade.webp",
-    "keywords": ["Leader", "Impact"],
+    "keywords": ["Leader"],
     "requirements": [
       {
         "cardSubtype": "wookiee trooper"
@@ -25404,5 +25403,133 @@
     "faction": "",
     "battleForce": "The Ohnaka Gang",
     "keywords": []
+  },
+  "Iw": {
+    "id": "Iw",
+    "cardSubtype": "personnel",
+    "cardName": "Mandalorian Initiate Squad",
+    "cardType": "upgrade",
+    "cost": 45,
+    "imageName": "Mandalorian Initiate Squad.webp",
+    "keywords": ["Indomitable", "Transport"],
+    "requirements": [
+      {
+        "cardName": "Mandalorian Initiates"
+      }
+    ]
+  },
+  "Ix": {
+    "id": "Ix",
+    "cardSubtype": "armament",
+    "cardName": "GALAAR-15 Carbines",
+    "cardType": "upgrade",
+    "cost": 5,
+    "imageName": "GALAAR-15 Carbines.webp",
+    "keywords": [],
+    "weapons": [
+      {
+        "name": "GALAAR-15 Carbine",
+        "keywords": [],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ],
+    "requirements": [
+      {
+        "cardName": "Mandalorian Warriors"
+      }
+    ]
+  },
+  "Iy": {
+    "id": "Iy",
+    "cardSubtype": "heavy weapon",
+    "cardName": "GALAAR-90 Sniper Rifle",
+    "cardType": "upgrade",
+    "cost": 35,
+    "imageName": "GALAAR-15 Sniper Rifle.webp",
+    "keywords": [],
+    "weapons": [
+      {
+        "name": "GALAAR-15 Sniper Rifle",
+        "keywords": [{ "name": "Lethal", "value": 1 }],
+        "range": [1, 4],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ],
+    "requirements": [
+      "AND",
+      {
+        "cardName": "Mandalorian Warriors"
+      },
+      [
+        "OR",
+        {
+          "rank": "special"
+        },
+        {
+          "rank": "support"
+        }
+      ]
+    ]
+  },
+  "Iz": {
+    "id": "Iz",
+    "cardSubtype": "heavy weapon",
+    "cardName": "SHUKUR-05 Repeater",
+    "cardType": "upgrade",
+    "cost": 28,
+    "imageName": "SHUKUR-05 Repeater.webp",
+    "keywords": [],
+    "weapons": [
+      {
+        "name": "SHUKUR-05 Repeater",
+        "keywords": ["Overwhelm"],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ],
+    "requirements": [
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ]
+  },
+  "Ja": {
+    "id": "Ja",
+    "cardSubtype": "heavy weapon",
+    "cardName": "Micro-Grenade Launcher",
+    "cardType": "upgrade",
+    "cost": 22,
+    "imageName": "Micro-Grenade Launcher.webp",
+    "keywords": ["Cycle"],
+    "weapons": [
+      {
+        "name": "Micro-Grenade Launcher",
+        "keywords": ["Blast", { "name": "Impact", "value": 1 }],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 2
+        }
+      }
+    ],
+    "requirements": [
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ]
   }
 }
