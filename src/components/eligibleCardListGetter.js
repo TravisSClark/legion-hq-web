@@ -291,71 +291,74 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
     list.battleForce,
   );
 
-  for (let i = 0; i < upgradeIdsBySubtype[upgradeType].length; i++) {
-    const id = upgradeIdsBySubtype[upgradeType][i]; //cardIdsByType['upgrade'][i];
-    const card = cards[id];
+  if (upgradeIdsBySubtype[upgradeType]) {
+    for (let i = 0; i < upgradeIdsBySubtype[upgradeType].length; i++) {
+      const id = upgradeIdsBySubtype[upgradeType][i]; //cardIdsByType['upgrade'][i];
+      const card = cards[id];
 
-    if (card.cardSubtype !== upgradeType) continue;
+      if (card.cardSubtype !== upgradeType) continue;
 
-    if (card.isUnique) {
-      if (uniqueCardNames.includes(card.cardName)) continue;
-    }
-
-    let alreadyEquippedOrLeader = false;
-    upgradesEquipped.forEach((u) => {
-      if (u == null) return;
-
-      let uCard = cards[u];
-      if (
-        uCard.keywords?.includes("Leader") &&
-        card.keywords?.includes("Leader")
-      )
-        alreadyEquippedOrLeader = true;
-      if (id === u || uCard.cardName === card.cardName)
-        alreadyEquippedOrLeader = true;
-    });
-    if (alreadyEquippedOrLeader) continue;
-
-    if (list.battleForce) {
-      if (
-        battleForcesDict[list.battleForce].allowedUpgrades.includes(id) &&
-        areRequirementsMet(card.requirements, unitCardCopy)
-      ) {
-        validUpgradeIds.push(id);
-        continue;
+      if (card.isUnique) {
+        if (uniqueCardNames.includes(card.cardName)) continue;
       }
 
-      if (
-        card.isUnique &&
-        !battleForcesDict[list.battleForce].allowedUpgrades.includes(id)
-      )
-        continue;
+      let alreadyEquippedOrLeader = false;
+      upgradesEquipped.forEach((u) => {
+        if (u == null) return;
 
-      // Imp remnant's mixed heavies rule (and a cheat to get Imp March working)
-      if (
-        list.battleForce === "Imperial Remnant" &&
-        // card.cardSubtype === "heavy weapon" &&
-        unitCardCopy.cardSubtype === "trooper" &&
-        impRemnantUpgrades.includes(id)
-      ) {
-        validUpgradeIds.push(id);
-        continue;
+        let uCard = cards[u];
+        if (
+          uCard.keywords?.includes("Leader") &&
+          card.keywords?.includes("Leader")
+        )
+          alreadyEquippedOrLeader = true;
+        if (id === u || uCard.cardName === card.cardName)
+          alreadyEquippedOrLeader = true;
+      });
+      if (alreadyEquippedOrLeader) continue;
+
+      if (list.battleForce) {
+        if (
+          battleForcesDict[list.battleForce].allowedUpgrades.includes(id) &&
+          areRequirementsMet(card.requirements, unitCardCopy)
+        ) {
+          validUpgradeIds.push(id);
+          continue;
+        }
+
+        if (
+          card.isUnique &&
+          !battleForcesDict[list.battleForce].allowedUpgrades.includes(id)
+        )
+          continue;
+
+        // Imp remnant's mixed heavies rule (and a cheat to get Imp March working)
+        if (
+          list.battleForce === "Imperial Remnant" &&
+          // card.cardSubtype === "heavy weapon" &&
+          unitCardCopy.cardSubtype === "trooper" &&
+          impRemnantUpgrades.includes(id)
+        ) {
+          validUpgradeIds.push(id);
+          continue;
+        }
       }
-    }
 
-    if (card.faction && card.faction !== "" && list.faction !== card.faction)
-      continue;
+      if (card.faction && card.faction !== "" && list.faction !== card.faction)
+        continue;
 
-    if (card.affiliations && !card.affiliations.includes(list.faction))
-      continue;
+      if (card.affiliations && !card.affiliations.includes(list.faction))
+        continue;
 
-    // The 'normal' way to check for an upgrade - see if the unit meets the upgrade's requirements
-    if (areRequirementsMet(card.requirements, unitCardCopy)) {
-      validUpgradeIds.push(id);
-    } else {
-      invalidUpgradeIds.push(id);
+      // The 'normal' way to check for an upgrade - see if the unit meets the upgrade's requirements
+      if (areRequirementsMet(card.requirements, unitCardCopy)) {
+        validUpgradeIds.push(id);
+      } else {
+        invalidUpgradeIds.push(id);
+      }
     }
   }
+
   return {
     validIds: sortUpgradeIds(validUpgradeIds),
     invalidIds: sortIds(invalidUpgradeIds),
