@@ -868,6 +868,9 @@ reroll up to X defense dice during the Reroll Defense Dice step. \
 Any dice rerolled with the Uncanny Luck X keyword must be \
 rerolled at the same time, and each die cannot be rerolled more \
 than once.",
+  "This is the Way":
+    "Allows nearby allied Children of the Watch units to make the \
+listed action(s) when this unit is issued an order.",
   Unconcerned:
     "A unit with the Unconcerned keyword cannot benefit \
 from Cover, and miniatures in the unit cannot be Repaired \

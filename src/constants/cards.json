@@ -24204,7 +24204,7 @@
   },
   "Ho": {
     "id": "Ho",
-    "cardSubtype": "heavy weapon",
+    "cardSubtype": "personnel",
     "isUnreleased": "June 2026",
     "cardName": "Din Djarin",
     "isUnique": true,
@@ -24236,7 +24236,7 @@
   "Hp": {
     "id": "Hp",
     "isUnreleased": "June 2026",
-    "cardSubtype": "heavy weapon",
+    "cardSubtype": "personnel",
     "cardName": "The Armorer",
     "isUnique": true,
     "cardType": "upgrade",
@@ -25529,6 +25529,109 @@
     "requirements": [
       {
         "cardSubtype": "mandalorian trooper"
+      }
+    ]
+  },
+  "Jb": {
+    "cardName": "A Higher Purpose",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "Bo-Katan Kryze",
+    "faction": "",
+    "imageName": "A Higher Purpose.webp",
+    "keywords": ["Barrage", "Relentless", { "name": "Pierce", "value": 1 }],
+    "id": "Jb"
+  },
+  "Jc": {
+    "cardName": "Mandalore Will Survive",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "Bo-Katan Kryze",
+    "faction": "",
+    "imageName": "Mandalore Will Survive.webp",
+    "keywords": [],
+    "id": "Jc"
+  },
+  "Jd": {
+    "cardName": "Both Hunter and Prey",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "The Armorer",
+    "faction": "",
+    "imageName": "Both Hunter and Prey.webp",
+    "keywords": [],
+    "id": "Jd"
+  },
+  "Je": {
+    "cardName": "We Shape Ourselves",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "The Armorer",
+    "faction": "",
+    "imageName": "We Shape Ourselves.webp",
+    "keywords": ["Divulge", "Cache"],
+    "id": "Je"
+  },
+  "Jf": {
+    "cardName": "Go, There Are Too Many...",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "Paz Vizsla",
+    "faction": "",
+    "imageName": "Go, There Are Too Many.webp",
+    "keywords": ["Permanent", "Stationary", "Versatile"],
+    "id": "Jf"
+  },
+  "Jg": {
+    "id": "Jg",
+    "isUnreleased": "June 2026",
+    "cardSubtype": "personnel",
+    "cardName": "Axe Woves",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "Axe Woves Upgrade.webp",
+    "keywords": ["Leader", "Independent", "Infiltrate"],
+    "faction": "mercenary",
+    "requirements": [],
+    "weapons": []
+  },
+  "Jh": {
+    "id": "Jh",
+    "isUnreleased": "June 2026",
+    "cardSubtype": "personnel",
+    "cardName": "Bo-Katan Kryze",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "Bo-Katan Kryze Upgrade.webp",
+    "keywords": ["Leader", "Charge"],
+    "faction": "mercenary",
+    "requirements": [],
+    "weapons": []
+  },
+  "Ji": {
+    "id": "Ji",
+    "isUnreleased": "June 2026",
+    "cardSubtype": "personnel",
+    "cardName": "Paz Vizsla",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 40,
+    "imageName": "Paz Vizsla Upgrade.webp",
+    "keywords": ["Leader", "This is the Way"],
+    "faction": "mercenary",
+    "requirements": [],
+    "weapons": [
+      {
+        "name": "Repeating Blaster",
+        "keywords": ["Overwhelm"],
+        "range": [1, 3],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 3
+        }
       }
     ]
   }
