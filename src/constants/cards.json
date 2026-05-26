@@ -15459,7 +15459,7 @@
     "id": "tn",
     "cardName": "Grogu",
     "faction": "mercenary",
-    "affiliations": ["rebels"],
+    "affiliations": ["rebels", "mercenary"],
     "subfaction": "bounty hunters",
     "isUnique": true,
     "wounds": 1,
@@ -25450,7 +25450,7 @@
     "cardName": "GALAAR-90 Sniper Rifle",
     "cardType": "upgrade",
     "cost": 35,
-    "imageName": "GALAAR-15 Sniper Rifle.webp",
+    "imageName": "GALAAR-90 Sniper Rifle.webp",
     "keywords": [],
     "weapons": [
       {
@@ -25467,7 +25467,7 @@
     "requirements": [
       "AND",
       {
-        "cardName": "Mandalorian Warriors"
+        "cardSubtype": "mandalorian trooper"
       },
       [
         "OR",

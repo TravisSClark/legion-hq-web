@@ -603,7 +603,19 @@ const battleForcesDict = {
     special: ["re", "ml", "Ht", "Ia"],
     support: ["Hs"],
     heavy: [],
-    allowedUpgrades: ["Ho", "Hp", "tn", "cw"],
+    allowedUpgrades: [
+      "Ho",
+      "Hp",
+      "tn",
+      "to",
+      "tq",
+      "tr",
+      "ts",
+      "cw",
+      "Jg",
+      "Jh",
+      "Ji",
+    ],
     rules: {
       noRules: true,
 
