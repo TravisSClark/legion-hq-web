@@ -9933,8 +9933,12 @@
     "imageName": "Tristan Wren.webp",
     "keywords": ["Lethal", "Suppressive"],
     "requirements": [
+      "OR",
       {
-        "cardName": "Clan Wren Veterans"
+        "affiliation": "Clan Wren"
+      },
+      {
+        "affiliation": "Clan Saxon"
       }
     ],
     "history": [

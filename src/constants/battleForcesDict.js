@@ -594,10 +594,10 @@ const battleForcesDict = {
     faction: "mandalorians",
     forceAffinity: "",
     linkId: "mc",
-    commander: ["rd", "Hu", "Hw", "Hy"],
-    operative: ["ag", "Hv", "Hx", "Hz", "tk", "aw", "tl"],
+    commander: ["Jp", "Hu", "Jj", "Hw", "Hy"],
+    operative: ["Hx", "tk", "Hz", "Jq", "Jo", "Hv"],
     corps: ["Hq", "Hr"],
-    special: ["Ht", "Ia", "re"],
+    special: ["Ht", "Ia", "Jv"],
     support: ["Hs"],
     heavy: [],
     allowedUpgrades: [
@@ -605,7 +605,7 @@ const battleForcesDict = {
       "Jg",
       "ts",
       "Jh",
-      // Darksaber
+      // Darksabers
       "to",
       "Ho",
       "tr",
@@ -613,7 +613,7 @@ const battleForcesDict = {
       "cw",
       "Ji",
       // Sabine Wren
-      "se",
+      // Rook Kast
       "Hp",
       "mp",
       "mo",
@@ -662,11 +662,8 @@ const battleForcesDict = {
       "tr",
       "cw",
       "Ji",
-      // Sabine Wren
       "se",
       "Hp",
-      "mp",
-      "mo",
     ],
     rules: {
       noRules: true,
@@ -691,6 +688,125 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
     },
+  },
+  "Clan Kryze": {
+    name: "Clan Kryze",
+    faction: "mandalorians",
+    forceAffinity: "",
+    linkId: "ck",
+    commander: ["Hw"],
+    operative: ["Hx"],
+    corps: ["Hq", "Hr"],
+    special: ["Ht"],
+    support: ["Hs"],
+    heavy: [],
+    allowedUpgrades: ["Jg", "Jh", "cw"], // Bo Darksaber
+    rules: {
+      unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
+    },
+    plainTextRules: [
+      "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
+      All units included in this army must have the same Affiliation as at least 1 Commander or Operative unit in this army",
+    ],
+    "standard mode": {
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [2, 6],
+      special: [0, 3],
+      support: [0, 3],
+      heavy: [0, 2],
+    },
+    "500-point mode": {
+      commOp: 3,
+      commander: [1, 3],
+      operative: [0, 3],
+      corps: [2, 4],
+      special: [0, 3],
+      support: [0, 2],
+    },
+  },
+  "Clan Wren": {
+    name: "Clan Wren",
+    faction: "mandalorians",
+    forceAffinity: "",
+    linkId: "cr",
+    commander: ["Jj"],
+    operative: ["Jo"],
+    corps: ["Hq", "Hr"],
+    special: ["Ia"],
+    support: ["Hs"],
+    heavy: [],
+    allowedUpgrades: [
+      "cw",
+      // Sabine Darksaber
+      // Sabine Wren
+      "mp",
+      "mo",
+    ],
+    rules: {
+      unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
+    },
+    plainTextRules: [
+      "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
+      All units included in this army must have the same Affiliation as at least 1 Commander or Operative unit in this army",
+    ],
+    "standard mode": {
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [2, 6],
+      special: [0, 3],
+      support: [0, 3],
+      heavy: [0, 2],
+    },
+    "500-point mode": {
+      commOp: 3,
+      commander: [1, 3],
+      operative: [0, 3],
+      corps: [2, 4],
+      special: [0, 3],
+      support: [0, 2],
+    },
+  "Clan Saxon": {
+    name: "Clan Saxon",
+    faction: "mandalorians",
+    forceAffinity: "",
+    linkId: "cs",
+    commander: ["Jp"],
+    operative: ["Jt"],
+    corps: ["Hq", "Hr"],
+    special: ["Jv"],
+    support: ["Hs"],
+    heavy: [],
+    allowedUpgrades: [
+      "cw",
+      // Saxon Darksaber
+      // Gar Saxon
+      // Rook Kast
+      "mo",
+    ],
+    rules: {
+      unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
+    },
+    plainTextRules: [
+      "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
+      All units included in this army must have the same Affiliation as at least 1 Commander or Operative unit in this army",
+    ],
+    "standard mode": {
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [2, 6],
+      special: [0, 3],
+      support: [0, 3],
+      heavy: [0, 2],
+    },
+    "500-point mode": {
+      commOp: 3,
+      commander: [1, 3],
+      operative: [0, 3],
+      corps: [2, 4],
+      special: [0, 3],
+      support: [0, 2],
+    }
   },
 };
 
