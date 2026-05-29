@@ -1226,7 +1226,7 @@
     "title": "Infamous Bounty Hunter",
     "imageName": "Boba Fett Infamous Bounty Hunter.webp",
     "cardType": "unit",
-    "cardSubtype": "trooper",
+    "cardSubtype": "mandalorian trooper",
     "rank": "operative",
     "faction": "mercenary",
     "affiliation": "rogue",
@@ -1320,6 +1320,10 @@
       {
         "date": "5 June 2023",
         "description": "Cost increased from 120 to 130 points."
+      },
+      {
+        "date": "29 May 2026",
+        "description": "Changed to mandalorian trooper."
       }
     ],
     "affiliations": ["empire"]
@@ -9816,139 +9820,6 @@
       }
     ]
   },
-  "mk": {
-    "id": "mk",
-    "cardName": "Mandalorian Resistance",
-    "imageName": "Mandalorian Resistance.webp",
-    "cardType": "unit",
-    "cardSubtype": "trooper",
-    "rank": "special",
-    "faction": "rebels",
-    "cost": 62,
-    "keywords": [
-      {
-        "name": "Jump",
-        "value": 2
-      },
-      "Impervious",
-      "Nimble"
-    ],
-    "upgradeBar": [
-      "heavy weapon",
-      "training",
-      "comms",
-      "gear",
-      "armament",
-      "grenades"
-    ],
-    "stats": {
-      "minicount": 3,
-      "hp": 1,
-      "defense": "r",
-      "courage": 2,
-      "speed": 3,
-      "hitsurge": "h",
-      "defsurge": "b"
-    },
-    "weapons": [
-      {
-        "name": "Westar 35 Blaster Pistols",
-        "keywords": [],
-        "range": [1, 2],
-        "dice": {
-          "r": 0,
-          "b": 2,
-          "w": 0
-        }
-      }
-    ],
-    "history": [
-      {
-        "date": "5 June 2023",
-        "description": "Cost reduced from 72 to 68 points."
-      },
-      {
-        "date": "16 June 2025",
-        "description": "Cost reduced from 68 to 62 points."
-      }
-    ]
-  },
-  "ml": {
-    "id": "ml",
-    "cardName": "Mandalorian Resistance",
-    "title": "Clan Wren",
-    "displayName": "Clan Wren",
-    "imageName": "Mandalorian Resistance Clan Wren.webp",
-    "cardType": "unit",
-    "cardSubtype": "trooper",
-    "rank": "special",
-    "faction": "rebels",
-    "isUniqueTitle": true,
-    "cost": 30,
-    "keywords": [
-      {
-        "name": "Jump",
-        "value": 2
-      },
-      {
-        "name": "Equip",
-        "value": "Tristan Wren, Ursa Wren"
-      },
-      "Impervious",
-      "Nimble",
-      {
-        "name": "Retinue",
-        "value": "Sabine Wren"
-      }
-    ],
-    "upgradeBar": [
-      "heavy weapon",
-      "heavy weapon",
-      "training",
-      "comms",
-      "gear",
-      "armament",
-      "grenades"
-    ],
-    "stats": {
-      "minicount": 1,
-      "hp": 2,
-      "defense": "r",
-      "courage": 2,
-      "speed": 3,
-      "hitsurge": "h",
-      "defsurge": "b"
-    },
-    "weapons": [
-      {
-        "name": "Combat Training",
-        "keywords": [],
-        "range": [0],
-        "dice": {
-          "r": 0,
-          "b": 1,
-          "w": 1
-        }
-      },
-      {
-        "name": "Westar 35 Blaster Pistols",
-        "keywords": [],
-        "range": [1, 2],
-        "dice": {
-          "r": 0,
-          "b": 2,
-          "w": 0
-        }
-      }
-    ],
-    "history": [
-      {
-        "date": "5 June 2023",
-        "description": "Cost reduced from 34 to 30 points."
-      }
-    ],
-    "equip": ["mp", "mo"]
-  },
   "mm": {
     "id": "mm",
     "cardSubtype": "armament",
@@ -9997,7 +9868,7 @@
     "keywords": ["Duelist", "Pierce", "Immune: Pierce"],
     "requirements": [
       {
-        "cardName": "Mandalorian Resistance"
+        "cardName": "Clan Wren Veterans"
       }
     ],
     "history": [
@@ -10030,7 +9901,7 @@
     "keywords": ["Dauntless", "Leader", "Long Shot"],
     "requirements": [
       {
-        "cardName": "Mandalorian Resistance"
+        "cardName": "Clan Wren Veterans"
       }
     ],
     "history": [
@@ -10063,7 +9934,7 @@
     "keywords": ["Lethal", "Suppressive"],
     "requirements": [
       {
-        "cardName": "Mandalorian Resistance"
+        "cardName": "Clan Wren Veterans"
       }
     ],
     "history": [
@@ -13812,7 +13683,7 @@
     "cardName": "Mandalorian Super Commandos",
     "imageName": "Mandalorian Super Commandos.webp",
     "cardType": "unit",
-    "cardSubtype": "trooper",
+    "cardSubtype": "mandalorian trooper",
     "rank": "special",
     "faction": "mercenary",
     "affiliation": "maul loyalist",
@@ -13851,19 +13722,9 @@
     },
     "weapons": [
       {
-        "name": "Combat Expertise",
-        "keywords": [],
-        "range": [0],
-        "dice": {
-          "r": 0,
-          "b": 2,
-          "w": 0
-        }
-      },
-      {
         "name": "Westar-35 Blaster Pistols",
         "keywords": [],
-        "range": [1, 2],
+        "range": [0, 2],
         "dice": {
           "r": 0,
           "b": 2,
@@ -13876,8 +13737,8 @@
         "range": [1, 3],
         "dice": {
           "r": 0,
-          "b": 0,
-          "w": 0
+          "b": 1,
+          "w": 1
         }
       }
     ],
@@ -13889,6 +13750,10 @@
       {
         "date": "16 June 2025",
         "description": "Cost reduced from 70 to 66 points."
+      },
+      {
+        "date": "29 May 2026",
+        "description": "Changed to mandalorian trooper."
       }
     ]
   },
@@ -15240,10 +15105,10 @@
     "title": "The Mandalorian",
     "imageName": "Din Djarin.webp",
     "cardType": "unit",
-    "cardSubtype": "trooper",
+    "cardSubtype": "mandalorian trooper",
     "rank": "operative",
     "faction": "mercenary",
-    "affiliation": "rogue",
+    "affiliation": "Children of the Watch",
     "isUnique": true,
     "cost": 95,
     "keywords": [
@@ -15314,6 +15179,10 @@
       {
         "date": "19 July 2024",
         "description": "Cost reduced from 105 to 95 points."
+      },
+      {
+        "date": "29 May 2026",
+        "description": "Changed to mandalorian trooper, affiliation changed to Children of the Watch."
       }
     ],
     "affiliations": ["empire", "rebels"],
@@ -15459,8 +15328,8 @@
     "id": "tn",
     "cardName": "Grogu",
     "faction": "mercenary",
+    "affiliation": "Children of the Watch",
     "affiliations": ["rebels", "mercenary"],
-    "subfaction": "bounty hunters",
     "isUnique": true,
     "wounds": 1,
     "cardType": "counterpart",
@@ -15477,7 +15346,13 @@
       "Claim"
     ],
     "upgradeBar": [],
-    "cardSubtype": "trooper"
+    "cardSubtype": "trooper",
+    "history": [
+      {
+        "date": "29 May 2026",
+        "description": "Affiliation changed to Children of the Watch."
+      }
+    ]
   },
   "to": {
     "id": "to",
@@ -24908,10 +24783,9 @@
     "cardName": "Aerial Assault",
     "cardSubtype": "2",
     "cardType": "command",
-    "faction": "",
+    "faction": "mandalorians",
     "commander": "",
     "imageName": "Aerial Assault.webp",
-    "battleForce": "Mandalorian Clans",
     "requirements": [],
     "id": "Ie",
     "keywords": ["Jump X", "Death from Above"]
@@ -24919,12 +24793,11 @@
   "If": {
     "isUnreleased": "Q4 2026",
     "cardName": "Weapons Are Our Religion",
-    "cardSubtype": "2",
+    "cardSubtype": "3",
     "cardType": "command",
-    "faction": "",
+    "faction": "mandalorians",
     "commander": "",
     "imageName": "Weapons Are Our Religion.webp",
-    "battleForce": "Mandalorian Clans",
     "requirements": [],
     "id": "If",
     "keywords": ["Charge", "Versatile"]
@@ -25634,5 +25507,415 @@
         }
       }
     ]
+  },
+  "Jj": {
+    "isUnreleased": "June 2026",
+    "id": "Jj",
+    "cardName": "Ursa Wren",
+    "title": "Leader of Clan Wren",
+    "isUnique": true,
+    "imageName": "Ursa Wren Unit.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "commander",
+    "faction": "mercenary",
+    "affiliation": "Clan Wren",
+    "affiliations": ["rebels"],
+    "cost": 75,
+    "keywords": [
+      { "name": "Bolster", "value": 2 },
+      { "name": "Jump", "value": 2 },
+      {
+        "name": "Mercenary",
+        "value": "Rebels"
+      },
+      {
+        "name": "Entourage",
+        "value": "Clan Wren Veterans"
+      },
+      "Impervious",
+      { "name": "Inspire", "value": 1 },
+      "Nimble",
+      "We Fight for Our Family"
+    ],
+    "upgradeBar": [
+      "command",
+      "training",
+      "training",
+      "gear",
+      "gear",
+      "grenades"
+    ],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Blaster Pistols",
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        },
+        "keywords": []
+      }
+    ]
+  },
+  "Jk": {
+    "isUnreleased": "Q4 2026",
+    "cardName": "We Are Mandalorians",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "faction": "mandalorians",
+    "commander": "",
+    "imageName": "We Are Mandalorians.webp",
+    "requirements": [],
+    "id": "Jk",
+    "keywords": [{ "name": "Inspire", "value": 2 }]
+  },
+  "Jl": {
+    "isUnreleased": "Q4 2026",
+    "cardName": "No One Threatens Our Family",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "faction": "",
+    "commander": "Ursa Wren",
+    "imageName": "No One Threatens Our Family.webp",
+    "requirements": [],
+    "id": "Jl",
+    "keywords": [{ "name": "Guardian", "value": 1 }]
+  },
+  "Jm": {
+    "isUnreleased": "Q4 2026",
+    "cardName": "Make the Impossible Possible",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "faction": "",
+    "commander": "Sabine Wren",
+    "imageName": "Make the Impossible Possible.webp",
+    "requirements": [
+      {
+        "title": "Back in the Fold"
+      }
+    ],
+    "id": "Jm",
+    "keywords": ["Steady"]
+  },
+  "Jn": {
+    "isUnreleased": "Q4 2026",
+    "cardName": "We Protect Our Own",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "faction": "",
+    "commander": "",
+    "imageName": "We Protect Our Own.webp",
+    "requirements": [
+      "OR",
+      {
+        "affiliation": "Clan Wren",
+        "rank": "commander"
+      },
+      {
+        "affiliation": "Clan Wren",
+        "rank": "operative"
+      }
+    ],
+    "id": "Jn",
+    "keywords": ["Steady"]
+  },
+  "Jo": {
+    "isUnreleased": "June 2026",
+    "id": "Jo",
+    "cardName": "Sabine Wren",
+    "title": "Back in the Fold",
+    "isUnique": true,
+    "imageName": "Sabine Wre Back in the Fold.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "operative",
+    "faction": "mandalorians",
+    "affiliation": "Clan Wren",
+    "cost": 110,
+    "keywords": [
+      { "name": "Jump", "value": 2 },
+      "Gunslinger",
+      "Impervious",
+      "Nimble",
+      "We Fight for Our Family"
+    ],
+    "upgradeBar": ["armament", "training", "gear", "gear", "grenades"],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "c",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Pistols & Grenades",
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        },
+        "keywords": ["Blast", "Overwhelm"]
+      }
+    ]
+  },
+  "Jp": {
+    "isUnreleased": "June 2026",
+    "id": "Jp",
+    "cardName": "Gar Saxon",
+    "title": "Head of Clan Saxon",
+    "isUnique": true,
+    "imageName": "Gar Saxon Head of Clan Saxon.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "commander",
+    "faction": "mandalorians",
+    "affiliation": "Clan Saxon",
+    "cost": 115,
+    "keywords": [
+      { "name": "Jump", "value": 2 },
+      { "name": "Advanced Targeting", "value": "Trooper 1" },
+      "Allies of Convenience",
+      "Compel",
+      "Impervious",
+      "Marksman",
+      "Victory or Death"
+    ],
+    "upgradeBar": [
+      "command",
+      "armament",
+      "training",
+      "training",
+      "gear",
+      "gear",
+      "grenades"
+    ],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "c",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Dual Pistols",
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        },
+        "keywords": []
+      },
+      {
+        "name": "GALAR-90 Sniper Rifle",
+        "range": [1, 5],
+        "dice": {
+          "r": 2,
+          "b": 1,
+          "w": 0
+        },
+        "keywords": ["High Velocity", { "name": "Lethal", "value": 2 }]
+      }
+    ]
+  },
+  "Jq": {
+    "isUnreleased": "June 2026",
+    "id": "Jq",
+    "cardName": "Rook Kast",
+    "title": "Devoted to the Cause",
+    "isUnique": true,
+    "imageName": "Rook Kast Unit.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "operative",
+    "faction": "mandalorians",
+    "affiliation": "Clan Saxon",
+    "cost": 85,
+    "keywords": [
+      { "name": "Jump", "value": 2 },
+      { "name": "Coordinate", "value": "Clan Saxon Unit" },
+      "Impervious",
+      { "name": "Retinue", "value": "Clan Saxon Commander" },
+      { "name": "Target", "value": 1 },
+      "Victory or Death"
+    ],
+    "upgradeBar": ["command", "training", "comms", "gear", "grenades"],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "c",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Dual Pistols",
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        },
+        "keywords": ["Overwhelm"]
+      }
+    ]
+  },
+  "Jr": {
+    "isUnreleased": "Q4 2026",
+    "cardName": "Close Formation",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "faction": "",
+    "commander": "",
+    "imageName": "Close Formation.webp",
+    "requirements": [
+      "OR",
+      {
+        "affiliation": "Clan Kryze",
+        "rank": "commander"
+      },
+      {
+        "affiliation": "Clan Kryze",
+        "rank": "operative"
+      }
+    ],
+    "id": "Jr",
+    "keywords": [{ "name": "Precise", "value": 1 }, "Outmaneuver"]
+  },
+  "Js": {
+    "isUnreleased": "Q4 2026",
+    "cardName": "Death Before Defeat",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "faction": "",
+    "commander": "",
+    "imageName": "Death Before Defeat.webp",
+    "requirements": [
+      "OR",
+      {
+        "affiliation": "Clan Saxon",
+        "rank": "commander"
+      },
+      {
+        "affiliation": "Clan Saxon",
+        "rank": "operative"
+      }
+    ],
+    "id": "Js",
+    "keywords": [{ "name": "Ram", "value": 1 }]
+  },
+  "Jt": {
+    "isUnreleased": "Q4 2026",
+    "cardName": "Vengeful Strike",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "faction": "",
+    "commander": "Rook Kast",
+    "imageName": "Vengeful Strike.webp",
+    "requirements": [],
+    "id": "Jt",
+    "keywords": []
+  },
+  "Ju": {
+    "isUnreleased": "Q4 2026",
+    "cardName": "Out of the Shadows",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "faction": "",
+    "commander": "",
+    "imageName": "Out of the Shadows.webp",
+    "requirements": [
+      "OR",
+      {
+        "affiliation": "Children of the Watch",
+        "rank": "commander"
+      },
+      {
+        "affiliation": "Children of the Watch",
+        "rank": "operative"
+      }
+    ],
+    "id": "Ju",
+    "keywords": ["Infiltrate"]
+  },
+  "Jv": {
+    "id": "Jv",
+    "cardName": "Super Commandos",
+    "imageName": "Super Commandos.webp",
+    "cardType": "unit",
+    "cardSubtype": "mandalorian trooper",
+    "rank": "special",
+    "faction": "mandalorians",
+    "affiliation": "Clan Saxon",
+    "cost": 92,
+    "keywords": [
+      {
+        "name": "Jump",
+        "value": 2
+      },
+      {
+        "name": "Defend",
+        "value": 1
+      },
+      "Impervious",
+      {
+        "name": "Independent",
+        "value": "Aim 1"
+      },
+      "Victory or Death"
+    ],
+    "upgradeBar": ["heavy weapon", "personnel", "training", "gear", "grenades"],
+    "stats": {
+      "minicount": 4,
+      "hp": 1,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Combat Expertise",
+        "keywords": [],
+        "range": [0, 2],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 1
+        }
+      },
+      {
+        "name": "Blaster Rifles",
+        "keywords": [],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      }
+    ],
+    "history": []
   }
 }

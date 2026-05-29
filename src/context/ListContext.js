@@ -188,6 +188,8 @@ export function ListProvider({ width, children, slug, listHash }) {
     const newList = JSON.parse(JSON.stringify(listTemplate));
     if (currentList.faction === "mercenary")
       newList.battleForce = "Shadow Collective";
+    if (currentList.faction === "mandalorians")
+      newList.battleForce = "Mandalorian Clans";
     updateThenValidateList({ ...newList, faction: currentList.faction });
   };
 

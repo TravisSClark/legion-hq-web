@@ -74,6 +74,11 @@ const routes = {
     path: "/list/separatists",
     icon: <FactionIcon faction="separatists" />,
   },
+  "/list/mandalorians": {
+    name: "Mandalorian Clans",
+    path: "/list/mandalorians",
+    icon: <FactionIcon faction="mandalorians" />,
+  },
   "/list/mercenary": {
     name: "Mercenary",
     path: "/list/mercenary",

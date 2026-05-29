@@ -84,10 +84,12 @@ function processUnitSegment(segment, list) {
     });
   }
 
-  if(battleForcesDict[list.battleForce]?.rules?.addAdditionalUpgradeSlots){
-    let upgrades = battleForcesDict[list.battleForce].rules.addAdditionalUpgradeSlots.find(pair=>pair[0] === unitId)
+  if (battleForcesDict[list.battleForce]?.rules?.addAdditionalUpgradeSlots) {
+    let upgrades = battleForcesDict[
+      list.battleForce
+    ].rules.addAdditionalUpgradeSlots.find((pair) => pair[0] === unitId);
 
-    if(upgrades){
+    if (upgrades) {
       addAdditionalUpgradeSlots(newUnit, upgrades[1]);
     }
   }
@@ -123,6 +125,8 @@ function convertJsonToList(jsonText) {
   else if (importList.armyFaction === "republic") newList.faction = "republic";
   else if (importList.armyFaction === "separatist")
     newList.faction = "separatists";
+  else if (importList.armyFaction === "mandalorian")
+    newList.faction = "mandalorian";
   else newList.faction = "";
 
   if (importList.battleForce) newList.battleForce = importList.battleForce;
@@ -267,7 +271,7 @@ function convertHashToList(faction, url) {
     if (points) {
       idx++;
       let mode = Object.getOwnPropertyNames(legionModes).find(
-        (n) => legionModes[n].maxPoints === points
+        (n) => legionModes[n].maxPoints === points,
       );
       if (mode) {
         list.mode = mode;
@@ -275,7 +279,7 @@ function convertHashToList(faction, url) {
     }
 
     let bfCode = Object.getOwnPropertyNames(battleForcesDict).find(
-      (k) => battleForcesDict[k].linkId === segments[idx]
+      (k) => battleForcesDict[k].linkId === segments[idx],
     );
     if (bfCode) {
       list.battleForce = bfCode;
@@ -305,7 +309,7 @@ function convertHashToList(faction, url) {
   }
   try {
     list.units = unitSegments.map((segment, i) =>
-      segmentToUnitObject(i, segment, list)
+      segmentToUnitObject(i, segment, list),
     );
   } catch (e) {
     return false;
@@ -327,7 +331,10 @@ function convertHashToList(faction, url) {
   } catch (e) {
     return false;
   }
-  if (list.faction === "mercenary" && !list.battleForce) list.battleForce = "Shadow Collective";
+  if (list.faction === "mercenary" && !list.battleForce)
+    list.battleForce = "Shadow Collective";
+  if (list.faction === "mandalorians" && !list.battleForce)
+    list.battleForce = "Mandalorian Clans";
   if (
     list.faction === "separatists" &&
     list.battleForce === "Echo Base Defenders"

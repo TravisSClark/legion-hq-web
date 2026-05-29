@@ -20,6 +20,11 @@ export const initialLists = {
     faction: "mercenary",
     battleForce: "Shadow Collective",
   },
+  mandalorians: {
+    ...listTemplate,
+    faction: "mandalorians",
+    battleForce: "Mandalorian Clans",
+  },
 };
 
 function Pages() {

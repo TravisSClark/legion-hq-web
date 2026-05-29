@@ -59,6 +59,19 @@ const factions = {
       light: separatistsBlack,
     },
   },
+  mandalorians: {
+    name: "Mandalorian Clans",
+    singular: "Mandalorian Clan",
+    longName: "Mandalorian Clans",
+    forceAffinity: "dark side",
+    primaryColor: "#235732",
+    secondaryColor: "#43270F",
+    tertiaryColor: "#eeeeee",
+    icon: {
+      dark: mercenaryWhite,
+      light: mercenaryBlack,
+    },
+  },
   mercenary: {
     name: "Mercenary",
     singular: "Mercenary",

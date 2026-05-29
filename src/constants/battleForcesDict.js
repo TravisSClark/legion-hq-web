@@ -589,41 +589,41 @@ const battleForcesDict = {
     //   heavy: [0, 1]
     // }
   },
-  "Mandalorian Clans (Unofficial)": {
-    // TODO: guesses on affils are: Mandalore, Clan Kryze, Clan Wren, Covert, Death Watch
-    // Adepticon stream at 48:00 said "Death Watch, Clan Kryze, Covert, Clan Wren, and Clan Saxon", but that sounds wrong re pic, lol
-    // ctrl+f and replace EVERYWHERE once we get docs
-    name: "Mandalorian Clans (Unofficial)",
-    faction: "mercenary",
+  "Mandalorian Clans": {
+    name: "Mandalorian Clans",
+    faction: "mandalorians",
     forceAffinity: "",
     linkId: "mc",
     commander: ["rd", "Hu", "Hw", "Hy"],
     operative: ["ag", "Hv", "Hx", "Hz", "tk", "aw", "tl"],
     corps: ["Hq", "Hr"],
-    special: ["re", "ml", "Ht", "Ia"],
+    special: ["Ht", "Ia", "re"],
     support: ["Hs"],
     heavy: [],
     allowedUpgrades: [
-      "Ho",
-      "Hp",
       "tn",
-      "to",
-      "tq",
-      "tr",
-      "ts",
-      "cw",
       "Jg",
+      "ts",
       "Jh",
+      // Darksaber
+      "to",
+      "Ho",
+      "tr",
+      // Gar Saxon
+      "cw",
       "Ji",
+      // Sabine Wren
+      "se",
+      "Hp",
+      "mp",
+      "mo",
     ],
     rules: {
-      noRules: true,
-
-      //countMercs: true,
+      unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
     },
     plainTextRules: [
-      "This is an UNOFFICIAL, best guess at what things might be allowed in a Mandalorian army.",
-      "PLEASE, don't buy/preorder things based on these rules; we really know very little.",
+      "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
+      All units included in this army must have the same Affiliation as at least 1 Commander or Operative unit in this army",
     ],
     "standard mode": {
       commander: [1, 2],
@@ -634,13 +634,62 @@ const battleForcesDict = {
       heavy: [0, 2],
     },
     "500-point mode": {
-      commOp: 2,
-      commander: [1, 2],
-      operative: [0, 2],
-      corps: [1, 4],
+      commOp: 3,
+      commander: [1, 3],
+      operative: [0, 3],
+      corps: [2, 4],
       special: [0, 3],
       support: [0, 2],
-      heavy: [0, 1],
+    },
+  },
+  "Children of the Watch": {
+    name: "Children of the Watch",
+    faction: "mandalorians",
+    forceAffinity: "",
+    linkId: "cw",
+    commander: ["Hy"],
+    operative: ["Hz"],
+    corps: ["Hq", "Hr"],
+    special: [],
+    support: ["Hs"],
+    heavy: [],
+    allowedUpgrades: [
+      "tn",
+      "ts",
+      // Darksaber
+      "to",
+      "Ho",
+      "tr",
+      "cw",
+      "Ji",
+      // Sabine Wren
+      "se",
+      "Hp",
+      "mp",
+      "mo",
+    ],
+    rules: {
+      noRules: true,
+    },
+    plainTextRules: [
+      "You army may include any number of Mandalorian Initiate units, but must still follow this battle forces Rank Requirements. \
+      When a Mandalorian Initiate unit equips a unique Personnel upgrade, reduce the cost of that upgrade by 5 points",
+    ],
+    "standard mode": {
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [2, 6],
+      special: [0, 3],
+      support: [0, 3],
+      heavy: [0, 2],
+    },
+    "500-point mode": {
+      commOp: 3,
+      commander: [1, 3],
+      operative: [0, 3],
+      corps: [2, 4],
+      special: [0, 3],
+      support: [0, 2],
     },
   },
 };
