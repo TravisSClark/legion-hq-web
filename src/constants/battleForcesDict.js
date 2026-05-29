@@ -599,7 +599,7 @@ const battleForcesDict = {
     corps: ["Hq", "Hr"],
     special: ["Ht", "Ia", "Jv"],
     support: ["Hs"],
-    heavy: [],
+    heavy: ["bh", "om", "Fe"],
     allowedUpgrades: [
       "tn",
       "Jg",
@@ -631,7 +631,7 @@ const battleForcesDict = {
       corps: [2, 6],
       special: [0, 3],
       support: [0, 3],
-      heavy: [0, 2],
+      heavy: [0, 1],
     },
     "500-point mode": {
       commOp: 3,
@@ -699,7 +699,7 @@ const battleForcesDict = {
     corps: ["Hq", "Hr"],
     special: ["Ht"],
     support: ["Hs"],
-    heavy: ["bh", "om", "Fe"],
+    heavy: [],
     allowedUpgrades: ["Jg", "Jh", "cw"], // Bo Darksaber
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
