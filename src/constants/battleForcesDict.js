@@ -699,7 +699,7 @@ const battleForcesDict = {
     corps: ["Hq", "Hr"],
     special: ["Ht"],
     support: ["Hs"],
-    heavy: [],
+    heavy: ["bh", "om", "Fe"],
     allowedUpgrades: ["Jg", "Jh", "cw"], // Bo Darksaber
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
