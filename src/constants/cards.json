@@ -26118,6 +26118,9 @@
         "cardSubtype": "mandalorian trooper"
       }
     ],
+    "changeCard": {
+      "affiliation": "Clan Kryze"
+    },
     "changeAffiliation": "Clan Kryze",
     "history": []
   },
@@ -26134,6 +26137,9 @@
         "cardSubtype": "mandalorian trooper"
       }
     ],
+    "changeCard": {
+      "affiliation": "Clan Wren"
+    },
     "changeAffiliation": "Clan Wren",
     "history": []
   },
@@ -26150,6 +26156,9 @@
         "cardSubtype": "mandalorian trooper"
       }
     ],
+    "changeCard": {
+      "affiliation": "Children of the Watch"
+    },
     "changeAffiliation": "Children of the Watch",
     "history": []
   },
@@ -26166,6 +26175,9 @@
         "cardSubtype": "mandalorian trooper"
       }
     ],
+    "changeCard": {
+      "affiliation": "Clan Saxon"
+    },
     "changeAffiliation": "Clan Saxon",
     "history": []
   },
@@ -26188,6 +26200,9 @@
         "rank": "operative"
       }
     ],
+    "changeCard": {
+      "affiliation": "Children of the Watch"
+    },
     "changeAffiliation": "Children of the Watch",
     "history": []
   },
