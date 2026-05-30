@@ -767,6 +767,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
     },
+  },
   "Clan Saxon": {
     name: "Clan Saxon",
     faction: "mandalorians",
@@ -778,13 +779,7 @@ const battleForcesDict = {
     special: ["Jv"],
     support: ["Hs"],
     heavy: [],
-    allowedUpgrades: [
-      "cw",
-      "Kq",
-      "Kl",
-      "Jx",
-      "Kn",
-    ],
+    allowedUpgrades: ["cw", "Kq", "Kl", "Jx", "Kn"],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
     },
@@ -807,7 +802,7 @@ const battleForcesDict = {
       corps: [2, 4],
       special: [0, 3],
       support: [0, 2],
-    }
+    },
   },
 };
 
