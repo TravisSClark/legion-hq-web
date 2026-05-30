@@ -8,6 +8,8 @@ import separatistsWhite from "assets/factions/separatistsWhite.svg";
 import separatistsBlack from "assets/factions/separatistsBlack.svg";
 import mercenaryWhite from "assets/factions/mercenaryWhite.svg";
 import mercenaryBlack from "assets/factions/mercenaryBlack.svg";
+import mandaloriansWhite from "assets/factions/mandaloriansWhite.svg";
+import mandaloriansBlack from "assets/factions/mandaloriansBlack.svg";
 
 const factions = {
   rebels: {
