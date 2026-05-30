@@ -24231,7 +24231,7 @@
     "cost": 30,
     "faction": "mercenary",
     "imageName": "Din Djarin Upgrade.webp",
-    "requirements": [],
+    "requirements": [{ "affiliation": "Children of the Watch" }],
     "keywords": ["Leader", "This is the Way"],
     "weapons": [
       {
@@ -24263,7 +24263,7 @@
     "imageName": "The Armorer Upgrade.webp",
     "keywords": ["Leader", { "name": "Reliable", "value": 2 }],
     "faction": "mercenary",
-    "requirements": [],
+    "requirements": [{ "affiliation": "Children of the Watch" }],
     "weapons": [
       {
         "name": "Hammer and Tongs",
@@ -25610,7 +25610,7 @@
     "imageName": "Axe Woves Upgrade.webp",
     "keywords": ["Leader", "Independent", "Infiltrate"],
     "faction": "mercenary",
-    "requirements": [],
+    "requirements": [{ "affiliation": "Clan Kryze" }],
     "weapons": []
   },
   "Jh": {
@@ -25624,7 +25624,7 @@
     "imageName": "Bo-Katan Kryze Upgrade.webp",
     "keywords": ["Leader", "Charge"],
     "faction": "mercenary",
-    "requirements": [],
+    "requirements": [{ "affiliation": "Clan Kryze" }],
     "weapons": []
   },
   "Ji": {
@@ -25638,7 +25638,7 @@
     "imageName": "Paz Vizsla Upgrade.webp",
     "keywords": ["Leader", "This is the Way"],
     "faction": "mercenary",
-    "requirements": [],
+    "requirements": [{ "affiliation": "Children of the Watch" }],
     "weapons": [
       {
         "name": "Repeating Blaster",
