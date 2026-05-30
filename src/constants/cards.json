@@ -410,7 +410,7 @@
     "title": "Explosive Artist",
     "imageName": "Sabine Wren.webp",
     "cardType": "unit",
-    "cardSubtype": "trooper",
+    "cardSubtype": "mandalorian trooper",
     "rank": "operative",
     "faction": "rebels",
     "isUnique": true,
@@ -452,6 +452,10 @@
       }
     ],
     "history": [
+      {
+        "date": "29 May 2026",
+        "description": "Changed to mandalorian trooper."
+      },
       {
         "date": "16 June 2025",
         "description": "Cost reduced from 125 to 105 points."
@@ -1309,6 +1313,10 @@
       }
     ],
     "history": [
+      {
+        "date": "29 May 2026",
+        "description": "Changed to mandalorian trooper."
+      },
       {
         "date": "19 November 2020",
         "description": "Cost reduced from 140 to 125 points."
@@ -2972,18 +2980,7 @@
     "cardType": "upgrade",
     "cost": 5,
     "imageName": "Sabine The Darksaber.webp",
-    "keywords": [
-      "Dauntless",
-      "Immune: Pierce",
-      {
-        "name": "Impact",
-        "value": 1
-      },
-      {
-        "name": "Pierce",
-        "value": 1
-      }
-    ],
+    "keywords": ["Dauntless", "Immune: Pierce"],
     "weapons": [
       {
         "name": "The Darksaber",
@@ -9820,6 +9817,139 @@
       }
     ]
   },
+  "mk": {
+    "id": "mk",
+    "cardName": "Mandalorian Resistance",
+    "imageName": "Mandalorian Resistance.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "special",
+    "faction": "rebels",
+    "cost": 62,
+    "keywords": [
+      {
+        "name": "Jump",
+        "value": 2
+      },
+      "Impervious",
+      "Nimble"
+    ],
+    "upgradeBar": [
+      "heavy weapon",
+      "training",
+      "comms",
+      "gear",
+      "armament",
+      "grenades"
+    ],
+    "stats": {
+      "minicount": 3,
+      "hp": 1,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Westar 35 Blaster Pistols",
+        "keywords": [],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ],
+    "history": [
+      {
+        "date": "5 June 2023",
+        "description": "Cost reduced from 72 to 68 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 68 to 62 points."
+      }
+    ]
+  },
+  "ml": {
+    "id": "ml",
+    "cardName": "Mandalorian Resistance",
+    "title": "Clan Wren",
+    "displayName": "Clan Wren",
+    "imageName": "Mandalorian Resistance Clan Wren.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "special",
+    "faction": "rebels",
+    "isUniqueTitle": true,
+    "cost": 30,
+    "keywords": [
+      {
+        "name": "Jump",
+        "value": 2
+      },
+      {
+        "name": "Equip",
+        "value": "Tristan Wren, Ursa Wren"
+      },
+      "Impervious",
+      "Nimble",
+      {
+        "name": "Retinue",
+        "value": "Sabine Wren"
+      }
+    ],
+    "upgradeBar": [
+      "heavy weapon",
+      "heavy weapon",
+      "training",
+      "comms",
+      "gear",
+      "armament",
+      "grenades"
+    ],
+    "stats": {
+      "minicount": 1,
+      "hp": 2,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Combat Training",
+        "keywords": [],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 1
+        }
+      },
+      {
+        "name": "Westar 35 Blaster Pistols",
+        "keywords": [],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ],
+    "history": [
+      {
+        "date": "5 June 2023",
+        "description": "Cost reduced from 34 to 30 points."
+      }
+    ],
+    "equip": ["mp", "mo"]
+  },
   "mm": {
     "id": "mm",
     "cardSubtype": "armament",
@@ -9827,7 +9957,7 @@
     "cardType": "upgrade",
     "cost": 5,
     "imageName": "Jetpack Rockets.webp",
-    "keywords": ["Blast", "Impact"],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Mandalorian Resistance"
@@ -9868,7 +9998,7 @@
     "keywords": ["Duelist", "Pierce", "Immune: Pierce"],
     "requirements": [
       {
-        "cardName": "Clan Wren Veterans"
+        "cardName": "Mandalorian Resistance"
       }
     ],
     "history": [
@@ -9901,7 +10031,7 @@
     "keywords": ["Dauntless", "Leader", "Long Shot"],
     "requirements": [
       {
-        "cardName": "Clan Wren Veterans"
+        "cardName": "Mandalorian Resistance"
       }
     ],
     "history": [
@@ -9933,12 +10063,8 @@
     "imageName": "Tristan Wren.webp",
     "keywords": ["Lethal", "Suppressive"],
     "requirements": [
-      "OR",
       {
-        "affiliation": "Clan Wren"
-      },
-      {
-        "affiliation": "Clan Saxon"
+        "cardName": "Mandalorian Resistance"
       }
     ],
     "history": [
@@ -13603,7 +13729,7 @@
     "title": "Militant Commando",
     "imageName": "Gar Saxon.webp",
     "cardType": "unit",
-    "cardSubtype": "trooper",
+    "cardSubtype": "mandalorian trooper",
     "rank": "commander",
     "faction": "mercenary",
     "affiliation": "maul loyalist",
@@ -13668,6 +13794,10 @@
       }
     ],
     "history": [
+      {
+        "date": "29 May 2026",
+        "description": "Changed to mandalorian trooper."
+      },
       {
         "date": "5 June 2023",
         "description": "Cost reduced from 105 to 100 points."
@@ -13747,6 +13877,10 @@
       }
     ],
     "history": [
+      {
+        "date": "29 May 2026",
+        "description": "Changed to mandalorian trooper."
+      },
       {
         "date": "5 June 2023",
         "description": "Cost reduced from 75 to 70 points."
@@ -14277,7 +14411,7 @@
     "cardType": "upgrade",
     "cost": 28,
     "imageName": "Super Commando Gunslinger.webp",
-    "keywords": ["Lethal"],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Mandalorian Super Commandos"
@@ -15198,7 +15332,7 @@
     "title": "Daimyo of Mos Espa",
     "imageName": "Boba Fett Daimyo of Mos Espa.webp",
     "cardType": "unit",
-    "cardSubtype": "trooper",
+    "cardSubtype": "mandalorian trooper",
     "rank": "operative",
     "faction": "mercenary",
     "affiliation": "rogue",
@@ -15269,7 +15403,13 @@
         }
       }
     ],
-    "affiliations": ["rebels"]
+    "affiliations": ["rebels"],
+    "history": [
+      {
+        "date": "29 May 2026",
+        "description": "Changed to mandalorian trooper."
+      }
+    ]
   },
   "tm": {
     "id": "tm",
@@ -24674,7 +24814,7 @@
     "faction": "mercenary",
     "affiliation": "Clan Wren",
     "affiliations": ["rebels"],
-    "cost": 0,
+    "cost": 92,
     "keywords": [
       { "name": "Mercenary", "value": "Rebels" },
       { "name": "Jump", "value": 2 },
@@ -25921,5 +26061,524 @@
       }
     ],
     "history": []
+  },
+  "Jw": {
+    "id": "Jw",
+    "cardSubtype": "heavy weapon",
+    "cardName": "Beskad Duelist",
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "Beskad Duelist Mandos.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Clan Wren Veterans"
+      }
+    ],
+    "history": [],
+    "weapons": [
+      {
+        "name": "Vibro Sword",
+        "keywords": [{ "name": "Pierce", "value": 1 }],
+        "range": [0],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Jx": {
+    "id": "Jx",
+    "cardSubtype": "personnel",
+    "cardName": "Rook Kast",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 25,
+    "imageName": "Rook Kast Mandos.webp",
+    "keywords": ["Retinue", "Leader"],
+    "requirements": [
+      {
+        "affiliation": "Clan Saxon"
+      }
+    ],
+    "history": []
+  },
+  "Jy": {
+    "id": "Jy",
+    "cardSubtype": "clan",
+    "cardName": "Clan Kryze",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 0,
+    "imageName": "Clan Kryze.webp",
+    "keywords": ["Mandalorians Are Stronger Together"],
+    "requirements": [
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ],
+    "changeAffiliation": "Clan Kryze",
+    "history": []
+  },
+  "Jz": {
+    "id": "Jz",
+    "cardSubtype": "clan",
+    "cardName": "Clan Wren",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 0,
+    "imageName": "Clan Wren.webp",
+    "keywords": ["We Fight for Our Family"],
+    "requirements": [
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ],
+    "changeAffiliation": "Clan Wren",
+    "history": []
+  },
+  "Ka": {
+    "id": "Ka",
+    "cardSubtype": "clan",
+    "cardName": "Children of the Watch",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 0,
+    "imageName": "Children of the Watch.webp",
+    "keywords": ["This is the Way"],
+    "requirements": [
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ],
+    "changeAffiliation": "Children of the Watch",
+    "history": []
+  },
+  "Kb": {
+    "id": "Kb",
+    "cardSubtype": "clan",
+    "cardName": "Clan Saxon",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 0,
+    "imageName": "Clan Saxon.webp",
+    "keywords": ["Victory or Death"],
+    "requirements": [
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ],
+    "changeAffiliation": "Clan Saxon",
+    "history": []
+  },
+  "Kc": {
+    "id": "Kc",
+    "cardSubtype": "clan",
+    "cardName": "Champion of the Watch",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 0,
+    "imageName": "Champion of the Watch.webp",
+    "keywords": ["This is the Way"],
+    "requirements": [
+      "OR",
+      {
+        "cardSubtype": "mandalorian trooper",
+        "rank": "commander"
+      },
+      {
+        "cardSubtype": "mandalorian trooper",
+        "rank": "operative"
+      }
+    ],
+    "changeAffiliation": "Children of the Watch",
+    "history": []
+  },
+  "Kd": {
+    "id": "Kd",
+    "cardSubtype": "heavy weapon",
+    "cardName": "Super Commando Gunslinger",
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "Super Commando Gunslinger Mandos.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Super Commandos"
+      }
+    ],
+    "history": [],
+    "weapons": [
+      {
+        "name": "Rapid Fire Pistols",
+        "keywords": ["Overwhelm"],
+        "range": [0, 2],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Ke": {
+    "id": "Ke",
+    "cardSubtype": "heavy weapon",
+    "cardName": "Super Commando Marksman",
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "Super Commando Marksman Mandos.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Super Commandos"
+      }
+    ],
+    "history": [],
+    "weapons": [
+      {
+        "name": "Designated Marksman",
+        "keywords": [{ "name": "Lethal", "value": 1 }],
+        "range": [1, 3],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 1
+        }
+      }
+    ]
+  },
+  "Kf": {
+    "id": "Kf",
+    "cardSubtype": "gear",
+    "cardName": "Combat Shields",
+    "cardType": "upgrade",
+    "cost": 10,
+    "imageName": "Combat Shields.webp",
+    "keywords": ["Shielded"],
+    "requirements": [
+      "AND",
+      {
+        "cardSubtype": "mandalorian trooper"
+      },
+      [
+        "OR",
+        {
+          "rank": "special"
+        },
+        {
+          "rank": "support"
+        },
+        {
+          "rank": "corps"
+        }
+      ]
+    ]
+  },
+  "Kg": {
+    "id": "Kg",
+    "cardSubtype": "gear",
+    "cardName": "Jetpack Rockets",
+    "cardType": "upgrade",
+    "uniqueCount": 2,
+    "cost": 10,
+    "imageName": "Jetpack Rockets Mandos.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ],
+    "history": [],
+    "weapons": [
+      {
+        "name": "Jetpack Rockets",
+        "keywords": [
+          {
+            "name": "Anti-Material",
+            "value": 4
+          },
+          {
+            "name": "Impact",
+            "value": 4
+          }
+        ],
+        "range": [3, 4],
+        "dice": {
+          "r": 0,
+          "b": 4,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Kh": {
+    "id": "Kh",
+    "cardSubtype": "gear",
+    "cardName": "Personal Combat Shield",
+    "cardType": "upgrade",
+    "uniqueCount": 2,
+    "cost": 10,
+    "imageName": "Personal Combat Shield Leader.webp",
+    "keywords": ["Shielded", "Recharge"],
+    "requirements": [
+      "OR",
+      {
+        "cardSubtype": "mandalorian trooper",
+        "rank": "commander"
+      },
+      {
+        "cardSubtype": "mandalorian trooper",
+        "rank": "operative"
+      }
+    ]
+  },
+  "Ki": {
+    "id": "Ki",
+    "cardSubtype": "gear",
+    "cardName": "Personal Combat Shield",
+    "cardType": "upgrade",
+    "uniqueCount": 2,
+    "cost": 10,
+    "imageName": "Personal Combat Shield Leader.webp",
+    "keywords": ["Shielded", "Recharge"],
+    "requirements": [
+      "OR",
+      {
+        "cardSubtype": "mandalorian trooper",
+        "rank": "commander"
+      },
+      {
+        "cardSubtype": "mandalorian trooper",
+        "rank": "operative"
+      }
+    ]
+  },
+  "Kj": {
+    "id": "Kj",
+    "cardSubtype": "gear",
+    "cardName": "Flame Projector",
+    "cardType": "upgrade",
+    "uniqueCount": 2,
+    "cost": 5,
+    "imageName": "Flame Projector.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Flame Projector",
+        "keywords": ["Blast", "Spray", "Suppressive"],
+        "range": [0, 1],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Kk": {
+    "id": "Kk",
+    "cardSubtype": "gear",
+    "cardName": "Whipcord Launcher",
+    "cardType": "upgrade",
+    "uniqueCount": 2,
+    "cost": 5,
+    "imageName": "Whipcord Launcher Mandos.webp",
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "cardSubtype": "mandalorian trooper",
+        "rank": "commander"
+      },
+      {
+        "cardSubtype": "mandalorian trooper",
+        "rank": "operative"
+      }
+    ]
+  },
+  "Kl": {
+    "id": "Kl",
+    "cardSubtype": "personnel",
+    "cardName": "Gar Saxon",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 45,
+    "imageName": "Gar Saxon Upgrade.webp",
+    "keywords": ["Compel", "Leader"],
+    "requirements": [
+      {
+        "affiliation": "Clan Saxon"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "GALAR-90 Sniper Rifle",
+        "keywords": ["High Velocity", { "name": "Lethal", "value": 1 }],
+        "range": [1, 5],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ]
+  },
+  "Km": {
+    "id": "Km",
+    "cardSubtype": "personnel",
+    "cardName": "Sabine Wren",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 25,
+    "imageName": "Sabine Wren Upgrade.webp",
+    "keywords": ["Leader"],
+    "requirements": [
+      {
+        "affiliation": "Clan Wren"
+      }
+    ]
+  },
+  "Kn": {
+    "id": "Kn",
+    "cardSubtype": "personnel",
+    "cardName": "Tristan Wren",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 25,
+    "imageName": "Tristan Wren Mandos.webp",
+    "keywords": ["Leader", { "name": "Precise", "value": 2 }],
+    "requirements": [
+      "OR",
+      {
+        "affiliation": "Clan Saxon"
+      },
+      {
+        "affiliation": "Clan Wren"
+      }
+    ]
+  },
+  "Ko": {
+    "id": "Ko",
+    "cardSubtype": "armament",
+    "cardName": "The Darksaber",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 10,
+    "imageName": "Bo-Katan The Darksaber.webp",
+    "keywords": [
+      "Allies of Convenience",
+      "Immune: Pierce",
+      "Mandalorians Are Stronger Together"
+    ],
+    "weapons": [
+      {
+        "name": "The Darksaber",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 5,
+          "w": 0
+        }
+      }
+    ],
+    "requirements": [
+      {
+        "cardName": "Bo-Katan Kryze"
+      }
+    ]
+  },
+  "Kp": {
+    "id": "Kp",
+    "cardSubtype": "armament",
+    "cardName": "The Darksaber",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 10,
+    "imageName": "Din Djarin The Darksaber.webp",
+    "keywords": ["Immune: Pierce"],
+    "weapons": [
+      {
+        "name": "The Darksaber",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 5,
+          "w": 0
+        }
+      }
+    ],
+    "requirements": [
+      {
+        "cardName": "Din Djarin"
+      }
+    ]
+  },
+  "Kq": {
+    "id": "Kq",
+    "cardSubtype": "armament",
+    "cardName": "The Darksaber",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 10,
+    "imageName": "Gar Saxon The Darksaber.webp",
+    "keywords": [
+      "Charge",
+      { "name": "Demoralize", "value": 2 },
+      "Immune: Pierce"
+    ],
+    "weapons": [
+      {
+        "name": "The Darksaber",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": 1
+          },
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 5,
+          "w": 0
+        }
+      }
+    ],
+    "requirements": [
+      {
+        "title": "Head of Clan Saxon"
+      }
+    ]
   }
 }

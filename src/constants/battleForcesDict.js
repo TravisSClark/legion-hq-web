@@ -601,22 +601,23 @@ const battleForcesDict = {
     support: ["Hs"],
     heavy: ["bh", "om", "Fe"],
     allowedUpgrades: [
-      "tn",
-      "Jg",
-      "ts",
-      "Jh",
-      // Darksabers
-      "to",
-      "Ho",
-      "tr",
-      // Gar Saxon
       "cw",
+      "Jg",
+      "tn",
+      "ts",
+      "to",
+      "tr",
+      "Jh",
+      "Ko",
+      "Kp",
+      "Kq",
+      "Ho",
+      "Kl",
       "Ji",
-      // Sabine Wren
-      // Rook Kast
+      "Km",
+      "Kn",
       "Hp",
-      "mp",
-      "mo",
+      "mo", // Ursa upgrade
     ],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
@@ -646,7 +647,7 @@ const battleForcesDict = {
     name: "Children of the Watch",
     faction: "mandalorians",
     forceAffinity: "",
-    linkId: "cw",
+    linkId: "cotw",
     commander: ["Hy"],
     operative: ["Hz"],
     corps: ["Hq", "Hr"],
@@ -656,7 +657,7 @@ const battleForcesDict = {
     allowedUpgrades: [
       "tn",
       "ts",
-      // Darksaber
+      "Kp",
       "to",
       "Ho",
       "tr",
@@ -700,7 +701,7 @@ const battleForcesDict = {
     special: ["Ht"],
     support: ["Hs"],
     heavy: [],
-    allowedUpgrades: ["Jg", "Jh", "cw"], // Bo Darksaber
+    allowedUpgrades: ["Jg", "Jh", "Ko", "cw"],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
     },
@@ -729,7 +730,7 @@ const battleForcesDict = {
     name: "Clan Wren",
     faction: "mandalorians",
     forceAffinity: "",
-    linkId: "cr",
+    linkId: "cw",
     commander: ["Jj"],
     operative: ["Jo"],
     corps: ["Hq", "Hr"],
@@ -738,10 +739,10 @@ const battleForcesDict = {
     heavy: [],
     allowedUpgrades: [
       "cw",
-      // Sabine Darksaber
-      // Sabine Wren
-      "mp",
-      "mo",
+      "eb",
+      "Km",
+      "Kn",
+      "mo", // Ursa upgrade
     ],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
@@ -779,10 +780,10 @@ const battleForcesDict = {
     heavy: [],
     allowedUpgrades: [
       "cw",
-      // Saxon Darksaber
-      // Gar Saxon
-      // Rook Kast
-      "mo",
+      "Kq",
+      "Kl",
+      "Jx",
+      "Kn",
     ],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],

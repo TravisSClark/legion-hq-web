@@ -68,8 +68,8 @@ const factions = {
     secondaryColor: "#43270F",
     tertiaryColor: "#eeeeee",
     icon: {
-      dark: mercenaryWhite,
-      light: mercenaryBlack,
+      dark: mandaloriansWhite,
+      light: mandaloriansBlack,
     },
   },
   mercenary: {
