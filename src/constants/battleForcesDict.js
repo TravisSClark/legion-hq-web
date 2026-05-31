@@ -599,7 +599,7 @@ const battleForcesDict = {
     corps: ["Hq", "Hr"],
     special: ["Ht", "Ia", "Jv"],
     support: ["Hs"],
-    heavy: ["bh", "om", "Fe"],
+    heavy: [],
     allowedUpgrades: [
       "cw",
       "Jg",
@@ -621,6 +621,7 @@ const battleForcesDict = {
     ],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
+      countMercs: true,
     },
     plainTextRules: [
       "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
@@ -632,7 +633,7 @@ const battleForcesDict = {
       corps: [2, 6],
       special: [0, 3],
       support: [0, 3],
-      heavy: [0, 1],
+      heavy: [0, 2],
     },
     "500-point mode": {
       commOp: 3,
@@ -666,8 +667,9 @@ const battleForcesDict = {
       "se",
       "Hp",
     ],
+    disallowedUpgrades: ["Jy", "Jz", "Kb"],
     rules: {
-      noRules: true,
+      countMercs: true,
     },
     plainTextRules: [
       "You army may include any number of Mandalorian Initiate units, but must still follow this battle forces Rank Requirements. \
@@ -702,8 +704,10 @@ const battleForcesDict = {
     support: ["Hs"],
     heavy: [],
     allowedUpgrades: ["Jg", "Jh", "Ko", "cw"],
+    disallowedUpgrades: ["Jz", "Ka", "Kb", "Kc"],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
+      countMercs: true,
     },
     plainTextRules: [
       "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
@@ -744,8 +748,10 @@ const battleForcesDict = {
       "Kn",
       "mo", // Ursa upgrade
     ],
+    disallowedUpgrades: ["Jy", "Ka", "Kb", "Kc"],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
+      countMercs: true,
     },
     plainTextRules: [
       "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
@@ -780,8 +786,48 @@ const battleForcesDict = {
     support: ["Hs"],
     heavy: [],
     allowedUpgrades: ["cw", "Kq", "Kl", "Jx", "Kn"],
+    disallowedUpgrades: ["Jy", "Jz", "Ka", "Kc"],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
+      countMercs: true,
+    },
+    plainTextRules: [
+      "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
+      All units included in this army must have the same Affiliation as at least 1 Commander or Operative unit in this army",
+    ],
+    "standard mode": {
+      commander: [1, 2],
+      operative: [0, 2],
+      corps: [2, 6],
+      special: [0, 3],
+      support: [0, 3],
+      heavy: [0, 2],
+    },
+    "500-point mode": {
+      commOp: 3,
+      commander: [1, 3],
+      operative: [0, 3],
+      corps: [2, 4],
+      special: [0, 3],
+      support: [0, 2],
+    },
+  },
+  "Custom Clan": {
+    name: "Custom Clan",
+    faction: "mandalorians",
+    forceAffinity: "",
+    linkId: "cc",
+    commander: ["Hu"],
+    operative: ["Hv"],
+    corps: ["Hq", "Hr"],
+    special: [],
+    support: ["Hs"],
+    heavy: [],
+    allowedUpgrades: ["cw"],
+    disallowedUpgrades: ["Jy", "Jz", "Ka", "Kb", "Kc"],
+    rules: {
+      unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
+      countMercs: true,
     },
     plainTextRules: [
       "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
