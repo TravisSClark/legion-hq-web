@@ -672,8 +672,10 @@ const battleForcesDict = {
       countMercs: true,
     },
     plainTextRules: [
-      "You army may include any number of Mandalorian Initiate units, but must still follow this battle forces Rank Requirements. \
-      When a Mandalorian Initiate unit equips a unique Personnel upgrade, reduce the cost of that upgrade by 5 points",
+      "You army may include any number of Mandalorian Initiate units, \
+      but must still follow this battle forces Rank Requirements. \
+      When a Mandalorian Initiate unit equips a unique Personnel upgrade, \
+      reduce the cost of that upgrade by 5 points.",
     ],
     "standard mode": {
       commander: [1, 2],
@@ -710,8 +712,8 @@ const battleForcesDict = {
       countMercs: true,
     },
     plainTextRules: [
-      "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
-      All units included in this army must have the same Affiliation as at least 1 Commander or Operative unit in this army",
+      "During the Remove Tokens step of the End Phase, \
+      choose up to 3 green tokens on allied units. The chosen tokens are not removed.",
     ],
     "standard mode": {
       commander: [1, 2],
@@ -754,8 +756,9 @@ const battleForcesDict = {
       countMercs: true,
     },
     plainTextRules: [
-      "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
-      All units included in this army must have the same Affiliation as at least 1 Commander or Operative unit in this army",
+      "Allied Mandalorian Trooper units gain Guardian 1: Clan Wren Units with Guardian X in this army \
+      can use the Guardian X keyword on other allied units that have the Guardian X keyword. \
+      Commander and Operative units in this army that have the Guardian X keyword can benefit from Backup",
     ],
     "standard mode": {
       commander: [1, 2],
@@ -792,8 +795,8 @@ const battleForcesDict = {
       countMercs: true,
     },
     plainTextRules: [
-      "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
-      All units included in this army must have the same Affiliation as at least 1 Commander or Operative unit in this army",
+      "When an allied unit defeats an enemy unit, after the effect is resolved, \
+      the allied unit may make a Recover action or may make a Speed-1 Move",
     ],
     "standard mode": {
       commander: [1, 2],
@@ -829,10 +832,7 @@ const battleForcesDict = {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
     },
-    plainTextRules: [
-      "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
-      All units included in this army must have the same Affiliation as at least 1 Commander or Operative unit in this army",
-    ],
+    plainTextRules: ["You can choose 2 of the benefits listed."],
     "standard mode": {
       commander: [1, 2],
       operative: [0, 2],
