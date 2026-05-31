@@ -15473,7 +15473,7 @@
     "cardName": "Grogu",
     "faction": "mercenary",
     "affiliation": "Children of the Watch",
-    "affiliations": ["rebels", "mercenary"],
+    "affiliations": ["rebels", "mandalorians"],
     "isUnique": true,
     "wounds": 1,
     "cardType": "counterpart",
@@ -25609,7 +25609,6 @@
     "cost": 30,
     "imageName": "Axe Woves Upgrade.webp",
     "keywords": ["Leader", "Independent", "Infiltrate"],
-    "faction": "mercenary",
     "requirements": [{ "affiliation": "Clan Kryze" }],
     "weapons": []
   },
@@ -25623,7 +25622,6 @@
     "cost": 30,
     "imageName": "Bo-Katan Kryze Upgrade.webp",
     "keywords": ["Leader", "Charge"],
-    "faction": "mercenary",
     "requirements": [{ "affiliation": "Clan Kryze" }],
     "weapons": []
   },
@@ -25755,7 +25753,7 @@
   "Jn": {
     "isUnreleased": "Q4 2026",
     "cardName": "We Protect Our Own",
-    "cardSubtype": "2",
+    "cardSubtype": "3",
     "cardType": "command",
     "faction": "",
     "commander": "",
@@ -25780,7 +25778,7 @@
     "cardName": "Sabine Wren",
     "title": "Back in the Fold",
     "isUnique": true,
-    "imageName": "Sabine Wre Back in the Fold.webp",
+    "imageName": "Sabine Wren Back in the Fold.webp",
     "cardType": "unit",
     "cardSubtype": "mandalorian trooper",
     "rank": "operative",
@@ -26289,7 +26287,7 @@
   },
   "Kg": {
     "id": "Kg",
-    "cardSubtype": "gear",
+    "cardSubtype": "grenades",
     "cardName": "Jetpack Rockets",
     "cardType": "upgrade",
     "uniqueCount": 2,
