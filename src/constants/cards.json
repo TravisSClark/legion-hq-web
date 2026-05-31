@@ -14623,7 +14623,7 @@
     "cardType": "command",
     "commander": "Gar Saxon",
     "imageName": "Marked for Elimination.webp",
-    "faction": "mercenary",
+    "faction": "",
     "keywords": []
   },
   "sk": {
@@ -14633,7 +14633,7 @@
     "cardType": "command",
     "commander": "Gar Saxon",
     "imageName": "Fight Another Day.webp",
-    "faction": "mercenary",
+    "faction": "",
     "keywords": ["Outmaneuver"]
   },
   "sl": {
@@ -14643,7 +14643,7 @@
     "cardType": "command",
     "commander": "Gar Saxon",
     "imageName": "Victory or Death!.webp",
-    "faction": "mercenary",
+    "faction": "",
     "keywords": ["Outmaneuver"]
   },
   "sm": {
@@ -26319,27 +26319,6 @@
           "b": 4,
           "w": 0
         }
-      }
-    ]
-  },
-  "Kh": {
-    "id": "Kh",
-    "cardSubtype": "gear",
-    "cardName": "Personal Combat Shield",
-    "cardType": "upgrade",
-    "uniqueCount": 2,
-    "cost": 10,
-    "imageName": "Personal Combat Shield Leader.webp",
-    "keywords": ["Shielded", "Recharge"],
-    "requirements": [
-      "OR",
-      {
-        "cardSubtype": "mandalorian trooper",
-        "rank": "commander"
-      },
-      {
-        "cardSubtype": "mandalorian trooper",
-        "rank": "operative"
       }
     ]
   },
