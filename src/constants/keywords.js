@@ -876,9 +876,6 @@ reroll up to X defense dice during the Reroll Defense Dice step. \
 Any dice rerolled with the Uncanny Luck X keyword must be \
 rerolled at the same time, and each die cannot be rerolled more \
 than once.",
-  "This is the Way":
-    "Allows nearby allied Children of the Watch units to make the \
-listed action(s) when this unit is issued an order.",
   Unconcerned:
     "A unit with the Unconcerned keyword cannot benefit \
 from Cover, and miniatures in the unit cannot be Repaired \
@@ -905,7 +902,7 @@ to the pool for each Wound token it has, to a maximum of 3.",
 1 or more Wounds from an enemy attack, after the attack is resolved, \
 the allied unit may gain 1 Suppression token. If it does, it may \
 gain 1 Aim token or 1 Dodge token.",
-  "We Fight For Our Family":
+  "We Fight for Our Family":
     "When a unit with the We Fight for Our Family keyword makes \
 an attack action, after the effect is resolved, choose another allied unit \
 with the We Fight for Our family keyword within 2, if able. \

@@ -24570,7 +24570,7 @@
       "Equip: Armament, Doctrine (No cards yet)",
       "Impervious"
     ],
-    "upgradeBar": ["armament", "doctrine"],
+    "upgradeBar": ["clan", "doctrine", "armament"],
     "stats": {
       "minicount": 1,
       "hp": 5,
@@ -24721,7 +24721,7 @@
       "Charge",
       "Impervious",
       { "name": "Reliable", "value": 1 },
-      { "name": "This Is the Way", "value": "Move 1 or Recover 2" }
+      { "name": "This is the Way", "value": "Move 1 or Recover 2" }
     ],
     "upgradeBar": ["command", "command", "training", "gear", "gear"],
     "stats": {
@@ -24768,7 +24768,7 @@
       "Field Commander",
       "Impervious",
       "Steady",
-      { "name": "This Is the Way", "value": "Aim 2" }
+      { "name": "This is the Way", "value": "Aim 2" }
     ],
     "upgradeBar": ["training", "training", "gear", "gear"],
     "stats": {
