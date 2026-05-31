@@ -439,14 +439,8 @@ Guardian X keyword.",
 Weapons keyword cannot contain weapons with a maximum \
 Range of 1.",
   Impervious:
-    "While a unit with the Impervious keyword is defending, it \
-rolls a number of extra defense dice during the Roll Defense \
-Dice step equal to the total Pierce X value of weapons in the \
-Attack Pool. \
-If a unit with Impervious also has the Immune: Pierce keyword, \
-then it does not roll extra defense dice for the Impervious \
-keyword when defending against an attack with the \
-Pierce X keyword.",
+    "When a unit with the Impervious keyword would have one or \
+more block results canceled by the Pierce X keyword, cancel one fewer result.",
   Incognito:
     "A unit with the Incognito keyword cannot be attacked by enemy \
 units that are not within 1 of it, cannot Contest Objectives, \
@@ -535,6 +529,15 @@ Attack Pool by 1 during the Choose Weapons and Gather Dice \
 step. If it does, the defender cannot use the Immune: Melee \
 Pierce, Immune: Pierce, and/or Impervious keywords during \
 this attack.",
+  "Mandalorians Are Stronger Together":
+    "When an allied unit with the Mandalorians are Stronger Together keyword \
+spends 1 or more Aim tokens, after the effect is resolved, \
+it gains 1 Dodge token if it is within 2 of another allied unit \
+with the Mandalorians are Stronger Together keyword. \n\
+When an allied unit with Mandalorians are Stronger together keyword \
+spends 1 or more Dodge tokens, after the effect is resolved, \
+it gains 1 Aim token if it is within 2 of another allied unit \
+with the Mandalorians are Stronger Together keyword.",
   Marksman:
     "A unit with the Marksman keyword may spend any number of \
 Aim tokens after converting attack surges during the Convert \
@@ -849,6 +852,11 @@ the attack is resolved, that unit with the Tempted keyword \
 may make a free Attack action or a Speed-2 Move ignoring \
 difficult terrain. A unit may use the Tempted keyword only once \
 each Round.",
+  "This is the Way":
+    "When an allied unit with the This is the Way keyword is issued an Order, \
+choose up to X other allied Children of the Watch units within 2 of that unit. \
+Each chosen unit performs the Action listed by the unit that was issued the order's \
+This is the Way keyword as a free action",
   Transport:
     "During Setup, a unit with the Transport keyword may choose \
 an allied CORPS Trooper or SPECIAL FORCES Trooper unit to transport. During \
@@ -886,6 +894,22 @@ tokens. This unit may never have more than 1 faceup Order \
 token. While this unit is not defeated, when its controlling \
 player is creating their Order Pool, they add an additional Order \
 token corresponding to this unit's Rank to their Order Pool.",
+  "Vaapad Mastery":
+    "When a unit with the Vaapad Mastery keyword attacks, before \
+rolling dice, it adds 1 white attack die to the pool for each Wound \
+token it has, to a maximum of 3. When a unit with the Vaapad Mastery \
+keyword defends, beforerolling dice it adds 1 white defense die \
+to the pool for each Wound token it has, to a maximum of 3.",
+  "Victory or Death":
+    "When an allied unit with the Victory or Death keyword suffers \
+1 or more Wounds from an enemy attack, after the attack is resolved, \
+the allied unit may gain 1 Suppression token. If it does, it may \
+gain 1 Aim token or 1 Dodge token.",
+  "We Fight For Our Family":
+    "When a unit with the We Fight for Our Family keyword makes \
+an attack action, after the effect is resolved, choose another allied unit \
+with the We Fight for Our family keyword within 2, if able. \
+The chosen unit gains 1 Dodge token.",
   "Weak Point":
     "While a unit with the Weak Point X: Front/Rear/Sides keyword \
 defends, if the attacking unit's unit leader is at least partially \
@@ -924,6 +948,14 @@ that unit suffers X Wounds.",
 
   // Weapon keywords
 
+  "Anti-Material":
+    "When a unit makes an attack that has the Anti-Materiel X \
+keyword in the Attack Pool, if the defending unit is a Vehicle unit,\
+upgrade X of that weapon’s attack dice.",
+  "Anti-Personnel":
+    "When a unit makes an attack that has the Anti-Personnel X \
+keyword in the Attack Pool, if the defending unit is a Trooper unit,\
+upgrade X of that weapon’s attack dice.",
   "Area Weapon":
     "A weapon with a yellow Range icon is an area weapon. When \
 using an area weapon, make a separate attack against each unit, \
