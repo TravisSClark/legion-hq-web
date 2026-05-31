@@ -780,7 +780,7 @@ const battleForcesDict = {
     forceAffinity: "",
     linkId: "cs",
     commander: ["Jp"],
-    operative: ["Jt"],
+    operative: ["Jq"],
     corps: ["Hq", "Hr"],
     special: ["Jv"],
     support: ["Hs"],
