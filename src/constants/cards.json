@@ -24502,7 +24502,7 @@
     "cardSubtype": "mandalorian trooper",
     "rank": "commander",
     "faction": "mercenary",
-    "affiliation": "Mandalorian Clans",
+    "affiliation": "Mandalore",
     "cost": 90,
     "keywords": [
       { "name": "Jump", "value": 2 },
@@ -24561,7 +24561,7 @@
     "cardSubtype": "mandalorian trooper",
     "rank": "operative",
     "faction": "mercenary",
-    "affiliation": "Mandalorian Clans",
+    "affiliation": "Mandalore",
     "affiliations": ["empire", "rebels", "republic", "separatists"],
     "cost": 0,
     "keywords": [
@@ -25456,9 +25456,25 @@
       }
     ],
     "requirements": [
+      "AND",
       {
         "cardName": "Mandalorian Warriors"
-      }
+      },
+      [
+        "OR",
+        {
+          "affiliation": "Clan Kryze"
+        },
+        {
+          "affiliation": "Clan Saxon"
+        },
+        {
+          "affiliation": "Clan Wren"
+        },
+        {
+          "affiliation": "Mandalore"
+        }
+      ]
     ]
   },
   "Iy": {
