@@ -1,20 +1,24 @@
 import _ from "lodash";
 
-function getSpecialSlots(unitCard){
-
+function getSpecialSlots(unitCard) {
   let specialSlots = [];
-  interactions.specialSlotEligibility.forEach(slot=>{
-
+  interactions.specialSlotEligibility.forEach((slot) => {
     let hasSlot = false;
-    if(slot.eligibility && _.isMatch(unitCard, slot.eligibility) || 
-      (slot.keyword && _.find(unitCard.keywords, (k)=>slot.keyword === k || slot.keyword === k.name))){
+    if (
+      (slot.eligibility && _.isMatch(unitCard, slot.eligibility)) ||
+      (slot.keyword &&
+        _.find(
+          unitCard.keywords,
+          (k) => slot.keyword === k || slot.keyword === k.name,
+        ))
+    ) {
       hasSlot = true;
     }
 
-    if(hasSlot){
+    if (hasSlot) {
       specialSlots.push(slot);
     }
-  })
+  });
 
   return specialSlots;
 }
@@ -28,59 +32,74 @@ const interactions = {
         list.units.map((u) => u.unitId).includes("ae"),
       pointDelta: -5,
     },
+    Ho: {
+      isConditionMet: (list, unit) =>
+        list.battleForce === "Children of the Watch" && unit.unitId === "Hq",
+      pointDelta: -5,
+    },
+    Hp: {
+      isConditionMet: (list, unit) =>
+        list.battleForce === "Children of the Watch" && unit.unitId === "Hq",
+      pointDelta: -5,
+    },
+    Ji: {
+      isConditionMet: (list, unit) =>
+        list.battleForce === "Children of the Watch" && unit.unitId === "Hq",
+      pointDelta: -5,
+    },
   },
 
   // Determines if a unit gets a bonus slot for a given upgrade type, the 'may equip even if you don't have slot' thing for binocs and imp march
   // *Maybe* these should be tied to the upgrade card data, but I think it's better to use this array instead of rifling the upgrade deck
-  specialSlotEligibility:[
+  specialSlotEligibility: [
     {
       // Imperial March
-      eligibility:{
-        "rank" :"corps",
-        "faction":"empire"
-      }, 
-      type:"training",
-      upgrades:["Bo"]
+      eligibility: {
+        rank: "corps",
+        faction: "empire",
+      },
+      type: "training",
+      upgrades: ["Bo"],
     },
 
     {
       // B1s + Binocs
-      eligibility:{
-        "cardName" :"B1 Battle Droids",
-      }, 
-      type:"gear",
-      upgrades:["hy"]
+      eligibility: {
+        cardName: "B1 Battle Droids",
+      },
+      type: "gear",
+      upgrades: ["hy"],
     },
     {
       // B1s + Scanner
-      eligibility:{
-        "cardName" :"B1 Battle Droids",
-      }, 
-      type:"gear",
-      upgrades:["mr"]
+      eligibility: {
+        cardName: "B1 Battle Droids",
+      },
+      type: "gear",
+      upgrades: ["mr"],
     },
     {
       // Unit with Speeder + Strike and Fade
-      keyword:"Speeder", 
-      type:"training",
-      upgrades:["Bk"]
+      keyword: "Speeder",
+      type: "training",
+      upgrades: ["Bk"],
     },
     {
       // Unit with Transport + Door Gunners
-      keyword:"Transport", 
-      type:"crew",
-      upgrades:["Bv"]
+      keyword: "Transport",
+      type: "crew",
+      upgrades: ["Bv"],
     },
     {
       // TODO this breaks if we get a non-trooper with PP
       // Emplacement Trooper OR Trooper w prepared position + Dug in
-      keyword:"Prepared Position", 
-      type:"training",
-      eligibility:{cardSubtype:"emplacement trooper"},
-      upgrades:["Bq"]
+      keyword: "Prepared Position",
+      type: "training",
+      eligibility: { cardSubtype: "emplacement trooper" },
+      upgrades: ["Bq"],
     },
   ],
 };
 
 export default interactions;
-export {getSpecialSlots}
+export { getSpecialSlots };
