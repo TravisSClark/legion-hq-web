@@ -26583,5 +26583,20 @@
         "title": "Head of Clan Saxon"
       }
     ]
+  },
+  "Kr": {
+    "id": "Kr",
+    "cardSubtype": "personnel",
+    "cardName": "Ursa Wren",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 25,
+    "imageName": "Ursa Wren Mandos.webp",
+    "keywords": ["Leader", { "name": "Defend", "value": 2 }],
+    "requirements": [
+      {
+        "affiliation": "Clan Wren"
+      }
+    ]
   }
 }
