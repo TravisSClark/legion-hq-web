@@ -2314,7 +2314,7 @@
     "cardName": "Legacy of Mandalore",
     "cardType": "command",
     "commander": "Sabine Wren",
-    "faction": "rebels",
+    "faction": "",
     "imageName": "Legacy of Mandalore.webp",
     "keywords": ["Inspire"],
     "id": "cj"
@@ -5225,7 +5225,7 @@
     "cardName": "Explosions!",
     "cardType": "command",
     "commander": "Sabine Wren",
-    "faction": "rebels",
+    "faction": "",
     "imageName": "Explosions!.webp",
     "keywords": ["Area Weapon", "Blast", "Critical", "Arm", "Detonate"],
     "id": "gh"
@@ -5235,7 +5235,7 @@
     "cardName": "Symbol of Rebellion",
     "cardType": "command",
     "commander": "Sabine Wren",
-    "faction": "rebels",
+    "faction": "",
     "imageName": "Symbol of Rebellion.webp",
     "keywords": ["Graffiti Token"],
     "id": "gi"
