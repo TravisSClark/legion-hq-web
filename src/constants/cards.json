@@ -26871,5 +26871,20 @@
         "cardName": "Mandalorian Leader"
       }
     ]
+  },
+  "Ld": {
+    "id": "Ld",
+    "cardSubtype": "gear",
+    "cardName": "Full Beskar Armor",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 10,
+    "imageName": "Full Beskar Armor.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Mandalorian Hunter"
+      }
+    ]
   }
 }
