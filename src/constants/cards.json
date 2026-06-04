@@ -14277,6 +14277,14 @@
       {
         "faction": "mercenary",
         "rank": "operative"
+      },
+      {
+        "faction": "mandalorians",
+        "rank": "operative"
+      },
+      {
+        "faction": "mandalorians",
+        "rank": "operative"
       }
     ]
   },
@@ -14304,6 +14312,14 @@
       {
         "faction": "mercenary",
         "rank": "operative"
+      },
+      {
+        "faction": "mandalorians",
+        "rank": "operative"
+      },
+      {
+        "faction": "mandalorians",
+        "rank": "operative"
       }
     ]
   },
@@ -14330,6 +14346,14 @@
       },
       {
         "faction": "mercenary",
+        "rank": "operative"
+      },
+      {
+        "faction": "mandalorians",
+        "rank": "operative"
+      },
+      {
+        "faction": "mandalorians",
         "rank": "operative"
       }
     ]
