@@ -24506,7 +24506,7 @@
     "cost": 90,
     "keywords": [
       { "name": "Jump", "value": 2 },
-      "Equip: Armament, Doctrine (No cards yet)",
+      { "name": "Equip", "value": "Armament, Doctrine" },
       "Impervious",
       { "name": "Retinue", "value": "Mandalorian Warriors" }
     ],
@@ -24563,14 +24563,22 @@
     "faction": "mercenary",
     "affiliation": "Mandalore",
     "affiliations": ["empire", "rebels", "republic", "separatists"],
-    "cost": 0,
+    "cost": 75,
     "keywords": [
       { "name": "Mercenary", "value": "All" },
       { "name": "Jump", "value": 2 },
-      "Equip: Armament, Doctrine (No cards yet)",
+      { "name": "Equip", "value": "Armament, Doctrine" },
       "Impervious"
     ],
-    "upgradeBar": ["clan", "doctrine", "armament"],
+    "upgradeBar": [
+      "clan",
+      "doctrine",
+      "armament",
+      "training",
+      "gear",
+      "gear",
+      "grenades"
+    ],
     "stats": {
       "minicount": 1,
       "hp": 5,
@@ -26596,6 +26604,271 @@
     "requirements": [
       {
         "affiliation": "Clan Wren"
+      }
+    ]
+  },
+  "Ks": {
+    "id": "Ks",
+    "cardSubtype": "doctrine",
+    "cardName": "Guild Member",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 8,
+    "imageName": "Guild Member.webp",
+    "keywords": ["Bounty"],
+    "requirements": [
+      {
+        "cardName": "Mandalorian Hunter"
+      }
+    ]
+  },
+  "Kt": {
+    "id": "Kt",
+    "cardSubtype": "doctrine",
+    "cardName": "Deadeye",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 5,
+    "imageName": "Deadeye.webp",
+    "keywords": [
+      { "name": "Target", "value": 1 },
+      { "name": "Sharpshooter", "value": 1 }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Mandalorian Leader"
+      },
+      {
+        "cardName": "Mandalorian Hunter"
+      }
+    ]
+  },
+  "Ku": {
+    "id": "Ku",
+    "cardSubtype": "doctrine",
+    "cardName": "Battlemaster",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 8,
+    "imageName": "Battlemaster.webp",
+    "keywords": ["Death from Above"],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Mandalorian Leader"
+      },
+      {
+        "cardName": "Mandalorian Hunter"
+      }
+    ]
+  },
+  "Kv": {
+    "id": "Kv",
+    "cardSubtype": "armament",
+    "cardName": "GALAAR-90 Sniper Rifle",
+    "cardType": "upgrade",
+    "cost": 5,
+    "imageName": "GALAAR-90 Sniper Rifle Leader.webp",
+    "keywords": [{ "name": "Sharpshooter", "value": 1 }],
+    "weapons": [
+      {
+        "name": "GALAAR-90 Sniper Rifle",
+        "keywords": [
+          "High Velocity",
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [1, 5],
+        "dice": {
+          "r": 1,
+          "b": 1,
+          "w": 1
+        }
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Mandalorian Leader"
+      },
+      {
+        "cardName": "Mandalorian Hunter"
+      }
+    ]
+  },
+  "Kw": {
+    "id": "Kw",
+    "cardSubtype": "armament",
+    "cardName": "Vibrosword",
+    "cardType": "upgrade",
+    "cost": 8,
+    "imageName": "Vibrosword.webp",
+    "keywords": ["Charge", "Duelist"],
+    "weapons": [
+      {
+        "name": "Vibrosword",
+        "keywords": [
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 3
+        }
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Mandalorian Leader"
+      },
+      {
+        "cardName": "Mandalorian Hunter"
+      }
+    ]
+  },
+  "Kx": {
+    "id": "Kx",
+    "cardSubtype": "armament",
+    "cardName": "Dual Armaments",
+    "cardType": "upgrade",
+    "cost": 8,
+    "imageName": "Dual Armaments.webp",
+    "keywords": ["Charge", "Duelist"],
+    "weapons": [
+      {
+        "name": "Vibroknives",
+        "keywords": [
+          "High Velocity",
+          {
+            "name": "Pierce",
+            "value": 1
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 3
+        }
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Mandalorian Leader"
+      },
+      {
+        "cardName": "Mandalorian Hunter"
+      }
+    ]
+  },
+  "Ky": {
+    "id": "Ky",
+    "cardSubtype": "armament",
+    "cardName": "EE-3 Carbine Rifle",
+    "cardType": "upgrade",
+    "cost": 5,
+    "imageName": "EE-3 Carbine Rifle.webp",
+    "keywords": [],
+    "weapons": [
+      {
+        "name": "EE-3 Carbine Rifle",
+        "keywords": ["Overwhelm"],
+        "range": [1, 3],
+        "dice": {
+          "r": 1,
+          "b": 3,
+          "w": 0
+        }
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Mandalorian Leader"
+      },
+      {
+        "cardName": "Mandalorian Hunter"
+      }
+    ]
+  },
+  "Kz": {
+    "id": "Kz",
+    "cardSubtype": "armament",
+    "cardName": "GALAAR-15 Carbine",
+    "cardType": "upgrade",
+    "cost": 0,
+    "imageName": "GALAAR-15 Carbine.webp",
+    "keywords": [],
+    "weapons": [
+      {
+        "name": "GALAAR-15 Carbine",
+        "keywords": [],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 4,
+          "w": 0
+        }
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Mandalorian Leader"
+      },
+      {
+        "cardName": "Mandalorian Hunter"
+      }
+    ]
+  },
+  "La": {
+    "isUnreleased": "Q4 2026",
+    "cardName": "No Escape",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "faction": "",
+    "commander": "Mandalorian Hunter",
+    "imageName": "No Escape.webp",
+    "requirements": [],
+    "id": "La",
+    "keywords": []
+  },
+  "Lb": {
+    "isUnreleased": "Q4 2026",
+    "cardName": "Honor and Strength",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "faction": "",
+    "commander": "Mandalorian Leader",
+    "imageName": "Honor and Strength.webp",
+    "requirements": [],
+    "id": "Lb",
+    "keywords": []
+  },
+  "Lc": {
+    "id": "Lc",
+    "cardSubtype": "doctrine",
+    "cardName": "War Party Leader",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 5,
+    "imageName": "War Party Leader.webp",
+    "keywords": [
+      { "name": "Direct", "value": "Mercenary Trooper" },
+      { "name": "Inspire", "value": 1 }
+    ],
+    "requirements": [
+      {
+        "cardName": "Mandalorian Leader"
       }
     ]
   }

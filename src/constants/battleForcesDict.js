@@ -580,14 +580,6 @@ const battleForcesDict = {
       support: [0, 2],
       heavy: [0, 1],
     },
-    // '500-point mode': {
-    //   commander: [1, 2],
-    //   operative: [0, 0],
-    //   corps: [2, 4],
-    //   special: [0, 3],
-    //   support: [0, 1],
-    //   heavy: [0, 1]
-    // }
   },
   "Mandalorian Clans": {
     name: "Mandalorian Clans",
@@ -617,7 +609,11 @@ const battleForcesDict = {
       "Km",
       "Kn",
       "Hp",
-      "mo", // Ursa upgrade
+      "Kr",
+      "Ks",
+      "Kt",
+      "Ku",
+      "Lc",
     ],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
@@ -666,6 +662,10 @@ const battleForcesDict = {
       "Ji",
       "se",
       "Hp",
+      "Ks",
+      "Kt",
+      "Ku",
+      "Lc",
     ],
     disallowedUpgrades: ["Jy", "Jz", "Kb"],
     rules: {
@@ -705,7 +705,7 @@ const battleForcesDict = {
     special: ["Ht"],
     support: ["Hs"],
     heavy: [],
-    allowedUpgrades: ["Jg", "Jh", "Ko", "cw"],
+    allowedUpgrades: ["Jg", "Jh", "Ko", "cw", "Ks", "Kt", "Ku", "Lc"],
     disallowedUpgrades: ["Jz", "Ka", "Kb", "Kc"],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
@@ -743,13 +743,7 @@ const battleForcesDict = {
     special: ["Ia"],
     support: ["Hs"],
     heavy: [],
-    allowedUpgrades: [
-      "cw",
-      "eb",
-      "Km",
-      "Kn",
-      "mo", // Ursa upgrade
-    ],
+    allowedUpgrades: ["cw", "eb", "Km", "Kn", "Kr", "Ks", "Kt", "Ku", "Lc"],
     disallowedUpgrades: ["Jy", "Ka", "Kb", "Kc"],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
@@ -788,7 +782,7 @@ const battleForcesDict = {
     special: ["Jv"],
     support: ["Hs"],
     heavy: [],
-    allowedUpgrades: ["cw", "Kq", "Kl", "Jx", "Kn"],
+    allowedUpgrades: ["cw", "Kq", "Kl", "Jx", "Kn", "Ks", "Kt", "Ku", "Lc"],
     disallowedUpgrades: ["Jy", "Jz", "Ka", "Kc"],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
@@ -827,7 +821,7 @@ const battleForcesDict = {
     support: ["Hs"],
     heavy: [],
     allowedUpgrades: ["cw"],
-    disallowedUpgrades: ["Jy", "Jz", "Ka", "Kb", "Kc"],
+    disallowedUpgrades: ["Jy", "Jz", "Ka", "Kb", "Kc", "Ks", "Kt", "Ku", "Lc"],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
