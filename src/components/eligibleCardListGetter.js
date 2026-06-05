@@ -250,10 +250,13 @@ function getEligibleCcs(list) {
       let requirementsMet = false;
       let i = 0;
       while (!requirementsMet && i < list.units.length) {
-        requirementsMet = areRequirementsMet(
-          card.requirements,
-          cards[list.units[i].unitId],
+        const unitCardCopy = makeModifiedCard(
+          list.units[i].unitId,
+          list.units[i].upgradesEquipped,
+          list.faction,
+          list.battleForce,
         );
+        requirementsMet = areRequirementsMet(card.requirements, unitCardCopy);
         i++;
       }
       if (!requirementsMet) return false;

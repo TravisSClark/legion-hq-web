@@ -26765,7 +26765,7 @@
     "cardType": "upgrade",
     "cost": 8,
     "imageName": "Dual Armaments.webp",
-    "keywords": ["Charge", "Duelist"],
+    "keywords": ["Charge", "Gunslinger"],
     "weapons": [
       {
         "name": "Vibroknives",
