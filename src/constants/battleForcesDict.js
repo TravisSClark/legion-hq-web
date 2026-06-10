@@ -639,6 +639,7 @@ const battleForcesDict = {
       corps: [2, 4],
       special: [0, 3],
       support: [0, 2],
+      heavy: [0, 0],
     },
   },
   "Children of the Watch": {
@@ -694,6 +695,7 @@ const battleForcesDict = {
       corps: [2, 4],
       special: [0, 3],
       support: [0, 2],
+      heavy: [0, 0],
     },
   },
   "Clan Kryze": {
@@ -732,6 +734,7 @@ const battleForcesDict = {
       corps: [2, 4],
       special: [0, 3],
       support: [0, 2],
+      heavy: [0, 0],
     },
   },
   "Clan Wren": {
@@ -739,8 +742,8 @@ const battleForcesDict = {
     faction: "mandalorians",
     forceAffinity: "",
     linkId: "cw",
-    commander: ["Jj"],
-    operative: ["Jo"],
+    commander: ["Jj", "Hu"],
+    operative: ["Jo", "Hv"],
     corps: ["Hq", "Hr"],
     special: ["Ia"],
     support: ["Hs"],
@@ -782,6 +785,7 @@ const battleForcesDict = {
       corps: [2, 4],
       special: [0, 3],
       support: [0, 2],
+      heavy: [0, 0],
     },
   },
   "Clan Saxon": {
@@ -866,6 +870,7 @@ const battleForcesDict = {
       corps: [2, 4],
       special: [0, 3],
       support: [0, 2],
+      heavy: [0, 0],
     },
   },
 };
