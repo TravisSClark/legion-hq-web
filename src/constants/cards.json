@@ -5250,30 +5250,6 @@
     "requirements": [],
     "id": "gj"
   },
-  "gk": {
-    "cardSubtype": "gear",
-    "cardName": "Sabine's Combat Shield",
-    "cardType": "upgrade",
-    "cost": 5,
-    "imageName": "Personal Combat Shield.webp",
-    "keywords": ["Shield Token", "Shielded", "Recharge"],
-    "requirements": [
-      {
-        "cardName": "Sabine Wren"
-      }
-    ],
-    "history": [
-      {
-        "date": "19 November 2020",
-        "description": "Cost reduced from 10 to 5 points."
-      },
-      {
-        "date": "15 April 2025",
-        "description": "Renamed to Sabine's Combat Shield. Now comes back if not used this turn."
-      }
-    ],
-    "id": "gk"
-  },
   "gl": {
     "cardSubtype": "heavy weapon",
     "cardName": "DT-F16",
@@ -6840,20 +6816,6 @@
         }
       }
     ]
-  },
-  "ih": {
-    "cardSubtype": "gear",
-    "cardName": "Electro Grappling Line",
-    "cardType": "upgrade",
-    "cost": 5,
-    "imageName": "Electro Grappling Line.webp",
-    "keywords": [],
-    "requirements": [
-      {
-        "cardName": "Sabine Wren"
-      }
-    ],
-    "id": "ih"
   },
   "ii": {
     "cardSubtype": "pilot",
@@ -9813,281 +9775,6 @@
           "r": 1,
           "b": 1,
           "w": 1
-        }
-      }
-    ]
-  },
-  "mk": {
-    "id": "mk",
-    "cardName": "Mandalorian Resistance",
-    "imageName": "Mandalorian Resistance.webp",
-    "cardType": "unit",
-    "cardSubtype": "trooper",
-    "rank": "special",
-    "faction": "rebels",
-    "cost": 62,
-    "keywords": [
-      {
-        "name": "Jump",
-        "value": 2
-      },
-      "Impervious",
-      "Nimble"
-    ],
-    "upgradeBar": [
-      "heavy weapon",
-      "training",
-      "comms",
-      "gear",
-      "armament",
-      "grenades"
-    ],
-    "stats": {
-      "minicount": 3,
-      "hp": 1,
-      "defense": "r",
-      "courage": 2,
-      "speed": 3,
-      "hitsurge": "h",
-      "defsurge": "b"
-    },
-    "weapons": [
-      {
-        "name": "Westar 35 Blaster Pistols",
-        "keywords": [],
-        "range": [1, 2],
-        "dice": {
-          "r": 0,
-          "b": 2,
-          "w": 0
-        }
-      }
-    ],
-    "history": [
-      {
-        "date": "5 June 2023",
-        "description": "Cost reduced from 72 to 68 points."
-      },
-      {
-        "date": "16 June 2025",
-        "description": "Cost reduced from 68 to 62 points."
-      }
-    ]
-  },
-  "ml": {
-    "id": "ml",
-    "cardName": "Mandalorian Resistance",
-    "title": "Clan Wren",
-    "displayName": "Clan Wren",
-    "imageName": "Mandalorian Resistance Clan Wren.webp",
-    "cardType": "unit",
-    "cardSubtype": "trooper",
-    "rank": "special",
-    "faction": "rebels",
-    "isUniqueTitle": true,
-    "cost": 30,
-    "keywords": [
-      {
-        "name": "Jump",
-        "value": 2
-      },
-      {
-        "name": "Equip",
-        "value": "Tristan Wren, Ursa Wren"
-      },
-      "Impervious",
-      "Nimble",
-      {
-        "name": "Retinue",
-        "value": "Sabine Wren"
-      }
-    ],
-    "upgradeBar": [
-      "heavy weapon",
-      "heavy weapon",
-      "training",
-      "comms",
-      "gear",
-      "armament",
-      "grenades"
-    ],
-    "stats": {
-      "minicount": 1,
-      "hp": 2,
-      "defense": "r",
-      "courage": 2,
-      "speed": 3,
-      "hitsurge": "h",
-      "defsurge": "b"
-    },
-    "weapons": [
-      {
-        "name": "Combat Training",
-        "keywords": [],
-        "range": [0],
-        "dice": {
-          "r": 0,
-          "b": 1,
-          "w": 1
-        }
-      },
-      {
-        "name": "Westar 35 Blaster Pistols",
-        "keywords": [],
-        "range": [1, 2],
-        "dice": {
-          "r": 0,
-          "b": 2,
-          "w": 0
-        }
-      }
-    ],
-    "history": [
-      {
-        "date": "5 June 2023",
-        "description": "Cost reduced from 34 to 30 points."
-      }
-    ],
-    "equip": ["mp", "mo"]
-  },
-  "mm": {
-    "id": "mm",
-    "cardSubtype": "armament",
-    "cardName": "Jetpack Rockets",
-    "cardType": "upgrade",
-    "cost": 5,
-    "imageName": "Jetpack Rockets.webp",
-    "keywords": [],
-    "requirements": [
-      {
-        "cardName": "Mandalorian Resistance"
-      }
-    ],
-    "history": [
-      {
-        "date": "5 June 2023",
-        "description": "Cost reduced from 8 to 5 points."
-      }
-    ],
-    "weapons": [
-      {
-        "name": "Jetpack Rockets",
-        "keywords": [
-          "Blast",
-          {
-            "name": "Impact",
-            "value": "1"
-          }
-        ],
-        "range": [3, 4],
-        "dice": {
-          "r": 1,
-          "b": 0,
-          "w": 0
-        }
-      }
-    ]
-  },
-  "mn": {
-    "id": "mn",
-    "cardSubtype": "heavy weapon",
-    "cardName": "Beskad Duelist",
-    "cardType": "upgrade",
-    "cost": 24,
-    "imageName": "Beskad Duelist.webp",
-    "keywords": ["Duelist", "Pierce", "Immune: Pierce"],
-    "requirements": [
-      {
-        "cardName": "Mandalorian Resistance"
-      }
-    ],
-    "history": [
-      {
-        "date": "5 June 2023",
-        "description": "Cost reduced from 28 to 24 points."
-      }
-    ],
-    "weapons": [
-      {
-        "name": "Vibroblade",
-        "keywords": [],
-        "range": [0],
-        "dice": {
-          "r": 2,
-          "b": 0,
-          "w": 0
-        }
-      }
-    ]
-  },
-  "mo": {
-    "id": "mo",
-    "cardSubtype": "heavy weapon",
-    "cardName": "Ursa Wren",
-    "isUnique": true,
-    "cardType": "upgrade",
-    "cost": 34,
-    "imageName": "Ursa Wren.webp",
-    "keywords": ["Dauntless", "Leader", "Long Shot"],
-    "requirements": [
-      {
-        "cardName": "Mandalorian Resistance"
-      }
-    ],
-    "history": [
-      {
-        "date": "5 June 2023",
-        "description": "Cost reduced from 38 to 34 points."
-      }
-    ],
-    "weapons": [
-      {
-        "name": "Ursa Wren",
-        "keywords": ["Long Shot"],
-        "range": [0, 2],
-        "dice": {
-          "r": 1,
-          "b": 1,
-          "w": 1
-        }
-      }
-    ]
-  },
-  "mp": {
-    "id": "mp",
-    "cardSubtype": "heavy weapon",
-    "cardName": "Tristan Wren",
-    "isUnique": true,
-    "cardType": "upgrade",
-    "cost": 34,
-    "imageName": "Tristan Wren.webp",
-    "keywords": ["Lethal", "Suppressive"],
-    "requirements": [
-      {
-        "cardName": "Mandalorian Resistance"
-      }
-    ],
-    "history": [
-      {
-        "date": "5 June 2023",
-        "description": "Cost reduced from 38 to 34 points."
-      }
-    ],
-    "weapons": [
-      {
-        "name": "Tristan Wren",
-        "keywords": [
-          {
-            "name": "Lethal",
-            "value": "1"
-          },
-          "Suppressive"
-        ],
-        "range": [1, 3],
-        "dice": {
-          "r": 0,
-          "b": 2,
-          "w": 0
         }
       }
     ]
@@ -14358,62 +14045,6 @@
       }
     ]
   },
-  "rz": {
-    "id": "rz",
-    "cardSubtype": "gear",
-    "cardName": "Super Commando Combat Shields",
-    "cardType": "upgrade",
-    "cost": 10,
-    "imageName": "Super Commando Combat Shields.webp",
-    "keywords": ["Shielded"],
-    "requirements": [
-      {
-        "cardName": "Mandalorian Super Commandos"
-      }
-    ]
-  },
-  "sa": {
-    "id": "sa",
-    "cardSubtype": "armament",
-    "cardName": "Super Commando Jetpack Rockets",
-    "cardType": "upgrade",
-    "cost": 8,
-    "imageName": "Super Commando Jetpack Rockets.webp",
-    "keywords": ["Blast", "Critical", "Impact"],
-    "requirements": [
-      {
-        "cardName": "Mandalorian Super Commandos"
-      }
-    ],
-    "history": [
-      {
-        "date": "15 April 2025",
-        "description": "Minimum range changed from 1 to 3."
-      }
-    ],
-    "weapons": [
-      {
-        "name": "Super Commando Jetpack Rockets",
-        "keywords": [
-          "Blast",
-          {
-            "name": "Critical",
-            "value": "1"
-          },
-          {
-            "name": "Impact",
-            "value": "1"
-          }
-        ],
-        "range": [3, 4],
-        "dice": {
-          "r": 1,
-          "b": 0,
-          "w": 0
-        }
-      }
-    ]
-  },
   "sb": {
     "id": "sb",
     "cardSubtype": "heavy weapon",
@@ -14580,66 +14211,6 @@
       }
     ]
   },
-  "sh": {
-    "id": "sh",
-    "cardSubtype": "armament",
-    "cardName": "Saxon's Jetpack Rockets",
-    "isUnique": true,
-    "cardType": "upgrade",
-    "cost": 10,
-    "imageName": "Saxon's Z-3X Jetpack Rockets.webp",
-    "keywords": ["Blast", "Cycle", "Impact"],
-    "requirements": [
-      {
-        "cardName": "Gar Saxon"
-      }
-    ],
-    "weapons": [
-      {
-        "name": "Jetpack Rockets",
-        "keywords": [
-          "Blast",
-          {
-            "name": "Impact",
-            "value": "2"
-          }
-        ],
-        "range": [2, 3],
-        "dice": {
-          "r": 3,
-          "b": 0,
-          "w": 0
-        }
-      }
-    ]
-  },
-  "si": {
-    "id": "si",
-    "cardSubtype": "armament",
-    "cardName": "Saxon's ZX Flame Projector",
-    "isUnique": true,
-    "cardType": "upgrade",
-    "cost": 5,
-    "imageName": "Saxon's ZX Flame Projector.webp",
-    "keywords": ["Blast", "Spray", "Suppressive"],
-    "requirements": [
-      {
-        "cardName": "Gar Saxon"
-      }
-    ],
-    "weapons": [
-      {
-        "name": "ZX Flame Projector",
-        "keywords": ["Blast", "Spray", "Suppressive"],
-        "range": [0, 1],
-        "dice": {
-          "r": 0,
-          "b": 1,
-          "w": 1
-        }
-      }
-    ]
-  },
   "sj": {
     "id": "sj",
     "cardName": "Marked For Elimination",
@@ -14745,21 +14316,6 @@
       {
         "rank": "heavy",
         "affiliation": "raider"
-      }
-    ]
-  },
-  "sp": {
-    "id": "sp",
-    "cardSubtype": "gear",
-    "cardName": "Saxon's Combat Shield",
-    "isUnique": true,
-    "cardType": "upgrade",
-    "cost": 10,
-    "imageName": "Saxon's Combat Shield.webp",
-    "keywords": ["Shielded", "Recharge"],
-    "requirements": [
-      {
-        "cardName": "Gar Saxon"
       }
     ]
   },
@@ -15571,22 +15127,6 @@
       }
     ]
   },
-  "tq": {
-    "id": "tq",
-    "cardSubtype": "gear",
-    "cardName": "Din's Flame Projector",
-    "isUnique": true,
-    "cardType": "upgrade",
-    "cost": 5,
-    "faction": "",
-    "imageName": "Din's Flame Projector.webp",
-    "keywords": ["Blast", "Spray", "Suppressive"],
-    "requirements": [
-      {
-        "cardName": "Din Djarin"
-      }
-    ]
-  },
   "tr": {
     "id": "tr",
     "cardSubtype": "gear",
@@ -15873,21 +15413,6 @@
       {
         "date": "19 July 2024",
         "description": "Cost increased from 15 to 20 points. Upgrade type changed from personnel to squad leader."
-      }
-    ]
-  },
-  "uh": {
-    "id": "uh",
-    "cardSubtype": "gear",
-    "cardName": "Boba's Flame Projector",
-    "isUnique": true,
-    "cardType": "upgrade",
-    "cost": 5,
-    "imageName": "Boba's Flame Projector.webp",
-    "keywords": ["Blast", "Spray", "Suppressive"],
-    "requirements": [
-      {
-        "cardName": "Boba Fett"
       }
     ]
   },
@@ -19907,21 +19432,6 @@
     "imageName": "Revenge Is Not the Jedi Way.webp",
     "faction": "republic",
     "keywords": ["Jar'Kai Mastery", "Shien Mastery"]
-  },
-  "Bh": {
-    "cardName": "Mandalorian Combat Shields",
-    "cardType": "upgrade",
-    "cardSubtype": "gear",
-    "cost": 10,
-    "imageName": "Mandalorian Combat Shields.webp",
-    "keywords": ["Shielded"],
-    "requirements": [
-      {
-        "cardName": "Mandalorian Resistance"
-      }
-    ],
-    "id": "Bh",
-    "history": []
   },
   "Bi": {
     "id": "Bi",
@@ -24889,6 +24399,20 @@
         },
         "keywords": []
       }
+    ],
+    "history": [
+      {
+        "date": "5 June 2023",
+        "description": "Cost reduced from 72 to 68 points."
+      },
+      {
+        "date": "16 June 2025",
+        "description": "Cost reduced from 68 to 62 points."
+      },
+      {
+        "date": "19 June 2026",
+        "description": "Cost reduced from 62 to 92 points. Changed affiliation from rebel to Clan Wren. Gained Duantless, Mercenary, and We Fight for Our Family keywords. Changed range 0-2 weapon from 2 black to 1 red 1 white, and gained range 3 1 black weapon. Gained an extra mini."
+      }
     ]
   },
   "Ib": {
@@ -26124,7 +25648,16 @@
         "cardName": "Clan Wren Veterans"
       }
     ],
-    "history": [],
+    "history": [
+      {
+        "date": "5 June 2023",
+        "description": "Cost reduced from 28 to 24 points."
+      },
+      {
+        "date": "19 June 2026",
+        "description": "Cost increased from 24 to 30 points. Lost Duelist and gained Pierce 1. Gained charge on tap."
+      }
+    ],
     "weapons": [
       {
         "name": "Vibro Sword",
@@ -26334,6 +25867,12 @@
           "rank": "corps"
         }
       ]
+    ],
+    "history": [
+      {
+        "date": "19 June 2026",
+        "description": "Renamed from Mandalorian Combat Shields. Requirements changed to mando special forces, support, or corps."
+      }
     ]
   },
   "Kg": {
@@ -26350,7 +25889,16 @@
         "cardSubtype": "mandalorian trooper"
       }
     ],
-    "history": [],
+    "history": [
+      {
+        "date": "5 June 2023",
+        "description": "Cost reduced from 8 to 5 points."
+      },
+      {
+        "date": "19 June 2026",
+        "description": "Moved from armament to grenade. Changed from 1 red to 4 black. Removed Blast and Critical, and gained Anti-Material."
+      }
+    ],
     "weapons": [
       {
         "name": "Jetpack Rockets",
@@ -26391,6 +25939,20 @@
       {
         "cardSubtype": "mandalorian trooper",
         "rank": "operative"
+      }
+    ],
+    "history": [
+      {
+        "date": "19 November 2020",
+        "description": "Cost reduced from 10 to 5 points."
+      },
+      {
+        "date": "15 April 2025",
+        "description": "Renamed to Sabine's Combat Shield. Now comes back if not used this turn."
+      },
+      {
+        "date": "19 June 2026",
+        "description": "Renamed to Personal Combat Shield. Increased from 5 to 10 points. Changed from unique to 2 pipped. Changed from Sabine to mando comm or op."
       }
     ]
   },
@@ -26439,6 +26001,12 @@
       {
         "cardSubtype": "mandalorian trooper",
         "rank": "operative"
+      }
+    ],
+    "history": [
+      {
+        "date": "19 June 2026",
+        "description": "Changed from just Sabine to 2 pipped generic mando. Changed from tap to exhaust."
       }
     ]
   },
@@ -26500,6 +26068,16 @@
       },
       {
         "affiliation": "Clan Wren"
+      }
+    ],
+    "history": [
+      {
+        "date": "5 June 2023",
+        "description": "Cost reduced from 38 to 34 points."
+      },
+      {
+        "date": "19 June 2026",
+        "description": "Moved from heavy weapon to personnel. Lost weapon profile. Changed requirements. Gained Precise 2. Lost 1 health. Cost reduced from 34 to 25 points."
       }
     ]
   },
@@ -26631,6 +26209,16 @@
     "requirements": [
       {
         "affiliation": "Clan Wren"
+      }
+    ],
+    "history": [
+      {
+        "date": "5 June 2023",
+        "description": "Cost reduced from 38 to 34 points."
+      },
+      {
+        "date": "19 June 2026",
+        "description": "Cost reduced from 34 to 25 points. Lost 1 health and weapon profile. Lost Daultless and gained Defend 1 keywords. Changed requirements."
       }
     ]
   },

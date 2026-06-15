@@ -62,8 +62,8 @@ const factions = {
     },
   },
   mandalorians: {
-    name: "Mandalorian Clans",
-    singular: "Mandalorian Clan",
+    name: "Mandalorians",
+    singular: "Mandalorian",
     longName: "Mandalorian Clans",
     forceAffinity: "dark side",
     primaryColor: "#235732",

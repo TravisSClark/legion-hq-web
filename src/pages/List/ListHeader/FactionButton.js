@@ -37,6 +37,7 @@ FactionButton.propTypes = {
     "republic",
     "separatists",
     "mercenary",
+    "mandalorians",
   ]).isRequired,
 };
 

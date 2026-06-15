@@ -1,34 +1,24 @@
-import React, { useContext } from 'react';
-import { Avatar, Icon } from '@material-ui/core';
-import DataContext from 'context/DataContext';
-import factions from 'constants/factions';
-import themes from 'constants/themes';
+import React, { useContext } from "react";
+import { Avatar, Icon } from "@material-ui/core";
+import DataContext from "context/DataContext";
+import factions from "constants/factions";
+import themes from "constants/themes";
 
-function FactionIcon({ faction, isAvatar, style }) {
+function FactionIcon({ faction, style }) {
   const { userSettings } = useContext(DataContext);
   const { themeColor } = userSettings;
   if (faction in factions) {
     const paletteType = themes.palettes[themeColor].type;
-    if (isAvatar) {
-      return (
-        <Avatar
+    return (
+      <Icon>
+        <img
           alt={faction}
           src={factions[faction].icon[paletteType]}
-          style={style}
+          style={style ? style : { marginBottom: 5 }}
         />
-      );
-    } else {
-      return (
-        <Icon color="error">
-          <img
-            alt={faction}
-            src={factions[faction].icon[paletteType]}
-            style={style ? style : { marginBottom: 5 }}
-          />
-        </Icon>
-      );
-    }
+      </Icon>
+    );
   } else return <div />;
-};
+}
 
 export default FactionIcon;
