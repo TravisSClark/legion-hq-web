@@ -22636,7 +22636,7 @@
     "rank": "commander",
     "faction": "republic",
     "isUnique": true,
-    "isUnreleased": "Q1-Q2 2026",
+    "isUnreleased": "Q3 2026",
     "cost": 165,
     "keywords": [
       {
@@ -23761,7 +23761,6 @@
   "Ho": {
     "id": "Ho",
     "cardSubtype": "personnel",
-    "isUnreleased": "June 2026",
     "cardName": "Din Djarin",
     "isUnique": true,
     "cardType": "upgrade",
@@ -23791,7 +23790,6 @@
   },
   "Hp": {
     "id": "Hp",
-    "isUnreleased": "June 2026",
     "cardSubtype": "personnel",
     "cardName": "The Armorer",
     "isUnique": true,
@@ -23820,7 +23818,6 @@
     ]
   },
   "Hq": {
-    "isUnreleased": "July 2026",
     "id": "Hq",
     "cardName": "Mandalorian Initiates",
     "imageName": "Mandalorian Initiates.webp",
@@ -23865,7 +23862,6 @@
     ]
   },
   "Hr": {
-    "isUnreleased": "July 2026",
     "id": "Hr",
     "cardName": "Mandalorian Warriors",
     "imageName": "Mandalorian Warriors.webp",
@@ -23918,7 +23914,6 @@
     ]
   },
   "Hs": {
-    "isUnreleased": "July 2026",
     "id": "Hs",
     "cardName": "Mandalorian Warriors",
     "displayName": "Mandalorian Warriors Fire Support",
@@ -23979,7 +23974,6 @@
     ]
   },
   "Ht": {
-    "isUnreleased": "July 2026",
     "id": "Ht",
     "cardName": "Clan Kryze Veterans",
     "imageName": "Clan Kryze Veterans.webp",
@@ -24149,7 +24143,6 @@
     ]
   },
   "Hw": {
-    "isUnreleased": "June 2026",
     "id": "Hw",
     "cardName": "Bo-Katan Kryze",
     "title": "Savior of Mandalore",
@@ -24202,7 +24195,6 @@
     ]
   },
   "Hx": {
-    "isUnreleased": "June 2026",
     "id": "Hx",
     "cardName": "Axe Woves",
     "title": "Cunning Warrior",
@@ -24248,7 +24240,6 @@
     ]
   },
   "Hy": {
-    "isUnreleased": "June 2026",
     "id": "Hy",
     "cardName": "The Armorer",
     "title": "Forging the Future",
@@ -24296,7 +24287,6 @@
     ]
   },
   "Hz": {
-    "isUnreleased": "June 2026",
     "id": "Hz",
     "cardName": "Paz Vizsla",
     "title": "Proud Warrior",
@@ -24349,7 +24339,6 @@
     ]
   },
   "Ia": {
-    "isUnreleased": "June 2026",
     "id": "Ia",
     "cardName": "Clan Wren Veterans",
     "imageName": "Clan Wren Veterans.webp",
@@ -24482,7 +24471,6 @@
     "history": []
   },
   "Ie": {
-    "isUnreleased": "Q4 2026",
     "cardName": "Aerial Assault",
     "cardSubtype": "2",
     "cardType": "command",
@@ -24494,7 +24482,6 @@
     "keywords": ["Jump X", "Death from Above"]
   },
   "If": {
-    "isUnreleased": "Q4 2026",
     "cardName": "Weapons Are Our Religion",
     "cardSubtype": "3",
     "cardType": "command",
@@ -25176,7 +25163,6 @@
   },
   "Jg": {
     "id": "Jg",
-    "isUnreleased": "June 2026",
     "cardSubtype": "personnel",
     "cardName": "Axe Woves",
     "isUnique": true,
@@ -25189,7 +25175,6 @@
   },
   "Jh": {
     "id": "Jh",
-    "isUnreleased": "June 2026",
     "cardSubtype": "personnel",
     "cardName": "Bo-Katan Kryze",
     "isUnique": true,
@@ -25202,7 +25187,6 @@
   },
   "Ji": {
     "id": "Ji",
-    "isUnreleased": "June 2026",
     "cardSubtype": "personnel",
     "cardName": "Paz Vizsla",
     "isUnique": true,
@@ -25226,7 +25210,6 @@
     ]
   },
   "Jj": {
-    "isUnreleased": "June 2026",
     "id": "Jj",
     "cardName": "Ursa Wren",
     "title": "Leader of Clan Wren",
@@ -25286,7 +25269,6 @@
     ]
   },
   "Jk": {
-    "isUnreleased": "Q4 2026",
     "cardName": "We Are Mandalorians",
     "cardSubtype": "1",
     "cardType": "command",
@@ -25298,7 +25280,6 @@
     "keywords": [{ "name": "Inspire", "value": 2 }]
   },
   "Jl": {
-    "isUnreleased": "Q4 2026",
     "cardName": "No One Threatens Our Family",
     "cardSubtype": "1",
     "cardType": "command",
@@ -25310,7 +25291,6 @@
     "keywords": [{ "name": "Guardian", "value": 1 }]
   },
   "Jm": {
-    "isUnreleased": "Q4 2026",
     "cardName": "Make the Impossible Possible",
     "cardSubtype": "2",
     "cardType": "command",
@@ -25326,7 +25306,6 @@
     "keywords": ["Steady"]
   },
   "Jn": {
-    "isUnreleased": "Q4 2026",
     "cardName": "We Protect Our Own",
     "cardSubtype": "3",
     "cardType": "command",
@@ -25348,7 +25327,6 @@
     "keywords": ["Steady"]
   },
   "Jo": {
-    "isUnreleased": "June 2026",
     "id": "Jo",
     "cardName": "Sabine Wren",
     "title": "Back in the Fold",
@@ -25391,7 +25369,6 @@
     ]
   },
   "Jp": {
-    "isUnreleased": "June 2026",
     "id": "Jp",
     "cardName": "Gar Saxon",
     "title": "Head of Clan Saxon",
@@ -25454,7 +25431,6 @@
     ]
   },
   "Jq": {
-    "isUnreleased": "June 2026",
     "id": "Jq",
     "cardName": "Rook Kast",
     "title": "Devoted to the Cause",
@@ -25498,7 +25474,6 @@
     ]
   },
   "Jr": {
-    "isUnreleased": "Q4 2026",
     "cardName": "Close Formation",
     "cardSubtype": "2",
     "cardType": "command",
@@ -25520,7 +25495,6 @@
     "keywords": [{ "name": "Precise", "value": 1 }, "Outmaneuver"]
   },
   "Js": {
-    "isUnreleased": "Q4 2026",
     "cardName": "Death Before Defeat",
     "cardSubtype": "3",
     "cardType": "command",
@@ -25542,7 +25516,6 @@
     "keywords": [{ "name": "Ram", "value": 1 }]
   },
   "Jt": {
-    "isUnreleased": "Q4 2026",
     "cardName": "Vengeful Strike",
     "cardSubtype": "2",
     "cardType": "command",
@@ -25554,7 +25527,6 @@
     "keywords": []
   },
   "Ju": {
-    "isUnreleased": "Q4 2026",
     "cardName": "Out of the Shadows",
     "cardSubtype": "2",
     "cardType": "command",

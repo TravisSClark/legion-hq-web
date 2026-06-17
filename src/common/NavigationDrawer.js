@@ -132,7 +132,7 @@ function NavigationDrawer() {
                       return (
                         <NavDrawerLink
                           text={
-                            userList.title.length > 64
+                            userList.title.length > 32
                               ? `${userList.title}...`
                               : userList.title
                           }

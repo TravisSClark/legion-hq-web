@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Avatar, Icon } from "@material-ui/core";
+import { Icon } from "@material-ui/core";
 import DataContext from "context/DataContext";
 import factions from "constants/factions";
 import themes from "constants/themes";
@@ -14,7 +14,14 @@ function FactionIcon({ faction, style }) {
         <img
           alt={faction}
           src={factions[faction].icon[paletteType]}
-          style={style ? style : { marginBottom: 5 }}
+          style={
+            style
+              ? style
+              : {
+                  marginBottom: 5,
+                  height: 20,
+                }
+          }
         />
       </Icon>
     );

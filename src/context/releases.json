@@ -5,16 +5,6 @@
   "Separatists": [],
   "Other": [
     {
-      "name": "Mandalorian Special Edition Army Box",
-      "date": "June 19",
-      "price": "$140"
-    },
-    {
-      "name": "Mandalorian Leaders",
-      "date": "June 19",
-      "price": "$53"
-    },
-    {
       "name": "Mandalorian Warriors",
       "date": "July 24",
       "price": "$63"
@@ -23,6 +13,11 @@
       "name": "Customizable Mandalorian Leader and Hunter",
       "date": "August 7",
       "price": "$40"
+    },
+    {
+      "name": "Upgrade Card Pack 2",
+      "date": "August 14",
+      "price": "$20"
     }
   ]
 }
