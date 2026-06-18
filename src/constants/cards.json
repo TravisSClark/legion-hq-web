@@ -14214,6 +14214,39 @@
       }
     ]
   },
+  "sh": {
+    "id": "sh",
+    "cardSubtype": "armament",
+    "cardName": "Saxon's Jetpack Rockets",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cost": 10,
+    "imageName": "Saxon's Z-3X Jetpack Rockets.webp",
+    "keywords": ["Blast", "Cycle", "Impact"],
+    "requirements": [
+      {
+        "cardName": "Gar Saxon"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Jetpack Rockets",
+        "keywords": [
+          "Blast",
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [2, 3],
+        "dice": {
+          "r": 3,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
+  },
   "sj": {
     "id": "sj",
     "cardName": "Marked For Elimination",

@@ -17,7 +17,6 @@ function FactionIcon({ faction, style }) {
           style={{
             marginBottom: 5,
             height: 20,
-            padding: 5,
           }}
         />
       </Icon>
