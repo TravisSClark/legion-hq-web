@@ -14,14 +14,11 @@ function FactionIcon({ faction, style }) {
         <img
           alt={faction}
           src={factions[faction].icon[paletteType]}
-          style={
-            style
-              ? style
-              : {
-                  marginBottom: 5,
-                  height: 20,
-                }
-          }
+          style={{
+            marginBottom: 5,
+            height: 20,
+            padding: 5,
+          }}
         />
       </Icon>
     );

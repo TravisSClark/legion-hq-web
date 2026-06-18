@@ -18,7 +18,7 @@ function FactionButton({ currentList, handleFactionMenuOpen }) {
           borderStyle: "solid",
         }}
       >
-        <FactionIcon faction={currentList.faction} style={{ padding: 3 }} />
+        <FactionIcon faction={currentList.faction} />
         {currentList.battleForce
           ? currentList.battleForce
           : currentList.faction.charAt(0).toUpperCase() +

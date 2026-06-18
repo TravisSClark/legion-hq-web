@@ -439,8 +439,9 @@ Guardian X keyword.",
 Weapons keyword cannot contain weapons with a maximum \
 Range of 1.",
   Impervious:
-    "When a unit with the Impervious keyword would have one or \
-more block results canceled by the Pierce X keyword, cancel one fewer result.",
+    "When an Attack Pool is being resolved against a unit with the \
+Impervious Keyword, at the start of the Modify Defense Dice step, \
+reduce that Attack Pool's Pierce X keyword value by 1, to a minimum of 0.",
   Incognito:
     "A unit with the Incognito keyword cannot be attacked by enemy \
 units that are not within 1 of it, cannot Contest Objectives, \
@@ -530,14 +531,14 @@ step. If it does, the defender cannot use the Immune: Melee \
 Pierce, Immune: Pierce, and/or Impervious keywords during \
 this attack.",
   "Mandalorians Are Stronger Together":
-    "When an allied unit with the Mandalorians are Stronger Together keyword \
-spends 1 or more Aim tokens, after the effect is resolved, \
-it gains 1 Dodge token if it is within 2 of another allied unit \
-with the Mandalorians are Stronger Together keyword. \n\
-When an allied unit with Mandalorians are Stronger together keyword \
-spends 1 or more Dodge tokens, after the effect is resolved, \
-it gains 1 Aim token if it is within 2 of another allied unit \
-with the Mandalorians are Stronger Together keyword.",
+    "When an allied unit with the Mandalorians Are Stronger Together \
+keyword spend 1 or more Aim tokens during an attack, after the attack \
+is resolved, it gains 1 Dodge token if it is within 2 or another allied \
+unit with the Mandalorians Are Stronger Together keyword. \n\
+When an allied unit with Mandalorians Are Stronger together keyword spend \
+1 or more Dodge token during an attack, after the attack is resolved, it \
+gains 1 Aim token if it is within 2 of another allied unit with the \
+Mandalorians Are Stronger Together keyword.",
   Marksman:
     "A unit with the Marksman keyword may spend any number of \
 Aim tokens after converting attack surges during the Convert \
