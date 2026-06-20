@@ -22571,7 +22571,6 @@
     "changeCard": {
       "affiliation": "black sun"
     },
-    "changeAffiliation": "black sun",
     "history": [],
     "id": "Fj"
   },
@@ -22591,7 +22590,6 @@
     "changeCard": {
       "affiliation": "pyke"
     },
-    "changeAffiliation": "pyke",
     "history": [],
     "id": "Fk"
   },
@@ -25711,7 +25709,6 @@
     "changeCard": {
       "affiliation": "Clan Kryze"
     },
-    "changeAffiliation": "Clan Kryze",
     "history": []
   },
   "Jz": {
@@ -25730,7 +25727,6 @@
     "changeCard": {
       "affiliation": "Clan Wren"
     },
-    "changeAffiliation": "Clan Wren",
     "history": []
   },
   "Ka": {
@@ -25749,7 +25745,6 @@
     "changeCard": {
       "affiliation": "Children of the Watch"
     },
-    "changeAffiliation": "Children of the Watch",
     "history": []
   },
   "Kb": {
@@ -25768,7 +25763,6 @@
     "changeCard": {
       "affiliation": "Clan Saxon"
     },
-    "changeAffiliation": "Clan Saxon",
     "history": []
   },
   "Kc": {
@@ -25793,7 +25787,6 @@
     "changeCard": {
       "affiliation": "Children of the Watch"
     },
-    "changeAffiliation": "Children of the Watch",
     "history": []
   },
   "Kd": {

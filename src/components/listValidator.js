@@ -84,7 +84,7 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
     unit.upgradesEquipped,
     list.faction,
     list.battleForce,
-  ); //Object.assign({}, unitCard);
+  );
 
   unit.validationIssues = [];
 
@@ -247,125 +247,148 @@ function battleForceValidation(currentList, unitCounts) {
     return validationIssues;
   }
 
-  if (battleForcesDict[currentList.battleForce]?.rules?.noRules) {
-    validationIssues.push({
-      level: 2,
-      text: "We don't have rules for this Army yet, these units are a best guess. Build/buy with caution!",
-    });
-  }
+  const rules = battleForcesDict[currentList.battleForce]?.rules;
 
-  if (battleForcesDict[currentList.battleForce]?.rules?.take2NonEwokRebs) {
-    let rebelsCount = currentList.units.reduce((rebelsCount, unit) => {
-      const card = cards[unit.unitId];
-      if (card.faction === "rebels") return rebelsCount + unit.count;
-      else return rebelsCount;
-    }, 0);
-
-    if (rebelsCount < 2) {
+  if(rules){
+    if (rules.noRules) {
       validationIssues.push({
         level: 2,
-        text: "List must have at least 2 non-Ewok REBEL units.",
+        text: "We don't have rules for this Army yet, these units are a best guess. Build/buy with caution!",
       });
     }
-  }
 
-  if (battleForcesDict[currentList.battleForce]?.rules?.unitLimits) {
-    let unitLimits = battleForcesDict[currentList.battleForce].rules.unitLimits;
-
-    unitLimits.forEach((limit) => {
-      let unitCount = limit.ids.reduce((count, id) => {
-        return count + (unitCounts[id] ? unitCounts[id] : 0);
+    if (rules.take2NonEwokRebs) {
+      let rebelsCount = currentList.units.reduce((rebelsCount, unit) => {
+        const card = cards[unit.unitId];
+        if (card.faction === "rebels") return rebelsCount + unit.count;
+        else return rebelsCount;
       }, 0);
 
-      if (unitCount < limit.count[0] || unitCount > limit.count[1]) {
-        let name = limit.ids
-          .map((id) =>
-            cards[id].displayName ? cards[id].displayName : cards[id].cardName,
-          )
-          .join(" OR ");
-        if (limit.count[0] === 0)
-          validationIssues.push({
-            level: 2,
-            text: "Limit " + limit.count[1] + " " + name.toUpperCase(),
-          });
-        else
-          validationIssues.push({
-            level: 2,
-            text:
-              "You must have " +
-              limit.count[0] +
-              " - " +
-              limit.count[1] +
-              " " +
-              name.toUpperCase(),
-          });
+      if (rebelsCount < 2) {
+        validationIssues.push({
+          level: 2,
+          text: "List must have at least 2 non-Ewok REBEL units.",
+        });
       }
-    });
-  }
-
-  if (battleForcesDict[currentList.battleForce]?.rules?.minOneOfEachCorps) {
-    let corpsCounts = battleForcesDict[currentList.battleForce].corps.map(
-      (id) => {
-        return { id, count: unitCounts[id] ? unitCounts[id] : 0 };
-      },
-    );
-
-    if (battleForcesDict[currentList.battleForce]?.rules?.buildsAsCorps) {
-      let moreCorps = battleForcesDict[
-        currentList.battleForce
-      ]?.rules?.buildsAsCorps.map((id) => {
-        return { id, count: unitCounts[id] ? unitCounts[id] : 0 };
-      });
-      corpsCounts = corpsCounts.concat(moreCorps);
     }
 
-    let hasNone = false;
-    let hasMoreThanOne = false;
-    corpsCounts.forEach((c) => {
-      if (c.count === 0) {
-        hasNone = true;
-      } else if (c.count > 1) {
-        hasMoreThanOne = true;
+    if (rules.unitLimits) {
+      let unitLimits = battleForcesDict[currentList.battleForce].rules.unitLimits;
+
+      unitLimits.forEach((limit) => {
+        let unitCount = limit.ids.reduce((count, id) => {
+          return count + (unitCounts[id] ? unitCounts[id] : 0);
+        }, 0);
+
+        if (unitCount < limit.count[0] || unitCount > limit.count[1]) {
+          let name = limit.ids
+            .map((id) =>
+              cards[id].displayName ? cards[id].displayName : cards[id].cardName,
+            )
+            .join(" OR ");
+          if (limit.count[0] === 0)
+            validationIssues.push({
+              level: 2,
+              text: "Limit " + limit.count[1] + " " + name.toUpperCase(),
+            });
+          else
+            validationIssues.push({
+              level: 2,
+              text:
+                "You must have " +
+                limit.count[0] +
+                " - " +
+                limit.count[1] +
+                " " +
+                name.toUpperCase(),
+            });
+        }
+      });
+    }
+
+    if (rules.minOneOfEachCorps) {
+      let corpsCounts = battleForcesDict[currentList.battleForce].corps.map(
+        (id) => {
+          return { id, count: unitCounts[id] ? unitCounts[id] : 0 };
+        },
+      );
+
+      if (battleForcesDict[currentList.battleForce]?.rules?.buildsAsCorps) {
+        let moreCorps = battleForcesDict[
+          currentList.battleForce
+        ]?.rules?.buildsAsCorps.map((id) => {
+          return { id, count: unitCounts[id] ? unitCounts[id] : 0 };
+        });
+        corpsCounts = corpsCounts.concat(moreCorps);
       }
-    });
 
-    if (hasNone && hasMoreThanOne) {
-      validationIssues.push({
-        level: 2,
-        text: "You must have at least one of each Corps type before adding additional ones",
+      let hasNone = false;
+      let hasMoreThanOne = false;
+      corpsCounts.forEach((c) => {
+        if (c.count === 0) {
+          hasNone = true;
+        } else if (c.count > 1) {
+          hasMoreThanOne = true;
+        }
       });
+
+      if (hasNone && hasMoreThanOne) {
+        validationIssues.push({
+          level: 2,
+          text: "You must have at least one of each Corps type before adding additional ones",
+        });
+      }
     }
-  }
 
-  if (battleForcesDict[currentList.battleForce]?.rules?.minimum3Wookiees) {
-    let wookCount = currentList.units.reduce((wookCount, unit) => {
-      const card = cards[unit.unitId];
-      if (card.cardSubtype === "wookiee trooper") return wookCount + unit.count;
-      else return wookCount;
-    }, 0);
+    if (rules.minimum3Wookiees) {
+      let wookCount = currentList.units.reduce((wookCount, unit) => {
+        const card = cards[unit.unitId];
+        if (card.cardSubtype === "wookiee trooper") return wookCount + unit.count;
+        else return wookCount;
+      }, 0);
 
-    if (wookCount < 3) {
-      validationIssues.push({
-        level: 2,
-        text:
-          "Your army must include at least 3 Wookiee Trooper units. (" +
-          wookCount +
-          " found)",
+      if (wookCount < 3) {
+        validationIssues.push({
+          level: 2,
+          text:
+            "Your army must include at least 3 Wookiee Trooper units. (" +
+            wookCount +
+            " found)",
+        });
+      }
+    }
+
+    if(rules.needsClan){
+      const affil = rules.needsClan.affiliation;
+      let hasIssue = false;
+      currentList.units.forEach(u=>{
+
+
+        // TODO; move/rename this if we get into multi units needing this kind of check (ie I don't want to make this copy everywhere)
+        const unitCardCopy = makeModifiedCard(
+          u.unitId,
+          u.upgradesEquipped,
+          currentList.faction,
+          currentList.battleForce,
+        );
+
+        if(unitCardCopy.affiliation !== affil){
+          hasIssue = true;
+          u.validationIssues.push({
+            level: 2,
+            text:"This unit must be " + affil.toUpperCase() + " affiliation."
+          })
+        }
       });
-    }
-  }
+      if(hasIssue){
+        validationIssues.push({
+            level: 2,
+            text:"All units must be " + affil.toUpperCase() + " affiliation."
+        })
+      }
 
-  // TODO remove once we get custom Imp officer
-  if (
-    currentList.battleForce === "Tempest Force" &&
-    unitCounts["we"] !== 1 &&
-    battleForcesDict[currentList.battleForce].commander.length === 0
-  ) {
-    validationIssues.push({
-      level: 2,
-      text: "Until 'Imperial Officer' gets reworked, you'll need to include Major Marquand (under Heavies) to fulfill Commander requirements",
-    });
-  }
+    }
+  } // end if(rules)
 
   return validationIssues;
 }
@@ -516,6 +539,105 @@ function rankValidation(
   return validationIssues;
 }
 
+function countUnits(currentList, unitCounts, currentRanks, mercs, gameTimeRanks){
+  let forceAffinity = getForceAffinity(currentList.faction, currentList.battleForce);
+
+  // count units, count up them mercs, pull in any unit-specific issues
+  currentList.units.forEach((unit, index) => {
+    const card = cards[unit.unitId];
+
+    if (!unitCounts[unit.unitId]) {
+      unitCounts[unit.unitId] = 0;
+    }
+    unitCounts[unit.unitId] += unit.count;
+    if (card.faction === "mercenary") {
+      mercs[card.rank] += unit.count;
+    }
+
+    currentRanks[card.rank] += unit.count;
+    gameTimeRanks[card.rank] += unit.count; // DON'T update this using the buildsAsCorps rules below so we see what our gametime counts are
+
+    if (
+      battleForcesDict[currentList.battleForce]?.rules?.buildsAsCorps?.includes(
+        unit.unitId,
+      )
+    ) {
+      currentRanks[card.rank] -= unit.count;
+      currentRanks["corps"] += unit.count;
+    }
+
+    unit.forceAffinity = forceAffinity;
+  });
+
+}
+
+function validateUnits(currentList, rankLimits, listUniqueUpgrades){
+  let validationIssues = [];
+
+  currentList.units.forEach((unit, index) => {
+    const card = cards[unit.unitId];
+    unit.validationIssues = [];
+
+    const battleForce = currentList.battleForce
+      ? battleForcesDict[currentList.battleForce]
+      : null;
+    // side-effect of tallying list's unique upgrades to the passed in obj for use later
+    validateUpgrades(currentList, index, listUniqueUpgrades);
+
+    // If battleforce, just use the whitelist for inclusion
+    if (battleForce) {
+      if (
+        !battleForce[card.rank].includes(unit.unitId) &&
+        (!battleForce["rules"]["buildsAsCorps"] ||
+          !battleForce["rules"]["buildsAsCorps"].includes(unit.unitId))
+      ) {
+        unit.validationIssues.push({
+          level: 2,
+          text: '"' + card.cardName + '" is not allowed in this battleforce.',
+        });
+      }
+    }
+    // else, confirm we don't have a unit w specialIssue or a merc out of faction (e.g. BTV specials)
+    else if (card.specialIssue) {
+      unit.validationIssues.push({
+        level: 2,
+        text:
+          '"' +
+          (card.displayName ? card.displayName : card.cardName) +
+          '" is not allowed outside the ' +
+          card.specialIssue.toUpperCase() +
+          " battleforce. (Special Issue)",
+      });
+    } else if (
+      card.faction === "mercenary" &&
+      !card.affiliations.includes(currentList.faction)
+    ) {
+      unit.validationIssues.push({
+        level: 2,
+        text:
+          card.cardName + " is not allowed in this faction/battleforce combo",
+      });
+    }
+
+    if (card.isUnreleased) {
+      unit.validationIssues.push({
+        level: 1,
+        text:
+          '"' +
+          card.cardName +
+          (card.title ? ", " + card.title : "") +
+          '" is not released yet (' +
+          card.isUnreleased +
+          ")",
+      });
+    }
+
+    validationIssues = validationIssues.concat(unit.validationIssues);
+  });
+
+  return validationIssues;
+}
+
 // Would be better to move some of this into the proper unit/upgrade modify steps instead of
 // iterating everything every time something's changed
 // See if anyone complains about LHQ chugging first then go from there ;)
@@ -556,97 +678,15 @@ function validateList(currentList, rankLimits) {
 
   const faction = currentList.faction;
 
-  let forceAffinity = getForceAffinity(faction, currentList.battleForce);
-
   const listUniqueUpgrades = {};
   let unitCounts = {};
 
-  // count units, count up them mercs, pull in any unit-specific issues
-  currentList.units.forEach((unit, index) => {
-    const card = cards[unit.unitId];
-    unit.validationIssues = [];
+  countUnits(currentList, unitCounts, currentRanks, mercs, gameTimeRanks);
 
-    if (!unitCounts[unit.unitId]) {
-      unitCounts[unit.unitId] = 0;
-    }
-    unitCounts[unit.unitId] += unit.count;
-    if (card.faction === "mercenary") {
-      mercs[card.rank] += unit.count;
-    }
-
-    currentRanks[card.rank] += unit.count;
-    gameTimeRanks[card.rank] += unit.count; // DON'T update this using the buildsAsCorps rules below so we see what our gametime counts are
-
-    // Maul + Darksaber interaction - TODO, make it data/rules-driven
-    if (unit.unitId === "rc" && unit.upgradesEquipped.includes("rq")) {
-      currentRanks["commander"]++;
-      currentRanks["operative"]--;
-    }
-
-    if (
-      battleForcesDict[currentList.battleForce]?.rules?.buildsAsCorps?.includes(
-        unit.unitId,
-      )
-    ) {
-      currentRanks[card.rank] -= unit.count;
-      currentRanks["corps"] += unit.count;
-    }
-
-    unit.forceAffinity = forceAffinity;
-
-    // side-effect of tallying list's unique upgrades to the passed in obj for use later
-    validateUpgrades(currentList, index, listUniqueUpgrades);
-
-    // If battleforce, just use the whitelist for inclusion
-    if (battleForce) {
-      if (
-        !battleForce[card.rank].includes(unit.unitId) &&
-        (!battleForce["rules"]["buildsAsCorps"] ||
-          !battleForce["rules"]["buildsAsCorps"].includes(unit.unitId))
-      ) {
-        unit.validationIssues.push({
-          level: 2,
-          text: '"' + card.cardName + '" is not allowed in this battleforce.',
-        });
-      }
-    }
-    // else, confirm we don't have a unit w specialIssue or a merc out of faction (e.g. BTV specials)
-    else if (card.specialIssue) {
-      unit.validationIssues.push({
-        level: 2,
-        text:
-          '"' +
-          (card.displayName ? card.displayName : card.cardName) +
-          '" is not allowed outside the ' +
-          card.specialIssue.toUpperCase() +
-          " battleforce. (Special Issue)",
-      });
-    } else if (
-      card.faction === "mercenary" &&
-      !card.affiliations.includes(faction)
-    ) {
-      unit.validationIssues.push({
-        level: 2,
-        text:
-          card.cardName + " is not allowed in this faction/battleforce combo",
-      });
-    }
-
-    if (card.isUnreleased) {
-      unit.validationIssues.push({
-        level: 1,
-        text:
-          '"' +
-          card.cardName +
-          (card.title ? ", " + card.title : "") +
-          '" is not released yet (' +
-          card.isUnreleased +
-          ")",
-      });
-    }
-
-    validationIssues = validationIssues.concat(unit.validationIssues);
-  });
+  // side-effect of tallying list's unique upgrades to the passed in obj for use later
+  validationIssues = validationIssues.concat(
+    validateUnits(currentList, rankLimits, listUniqueUpgrades)
+  );
 
   if (battleForcesDict[currentList.battleForce]?.rules?.buildsAsCorps) {
     validationIssues.push({

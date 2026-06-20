@@ -673,7 +673,7 @@ const battleForcesDict = {
     disallowedUpgrades: ["Jy", "Jz", "Kb"],
     rules: {
       countMercs: true,
-      needsAffiliation: "Children of the Watch"
+      needsClan: {affiliation: "Children of the Watch", upgrade:"Ka", commOpUpgrade:"Kc"}
     },
     plainTextRules: [
       "You army may include any number of Mandalorian Initiate units, \
@@ -715,7 +715,7 @@ const battleForcesDict = {
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
-      needsAffiliation: "Clan Kryze"
+      needsClan: {affiliation: "Clan Kryze", upgrade:"Jy"}
     },
     plainTextRules: [
       "During the Remove Tokens step of the End Phase, \
@@ -766,6 +766,7 @@ const battleForcesDict = {
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
+      needsClan: {affiliation: "Clan Wren", upgrade:"Jz"}
     },
     plainTextRules: [
       "Allied Mandalorian Trooper units gain Guardian 1: Clan Wren Units with Guardian X in this army \
@@ -817,7 +818,7 @@ const battleForcesDict = {
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
-      needsAffiliation: "Clan Saxon"
+      needsClan:  {affiliation: "Clan Saxon", upgrade:"Kb"}
     },
     plainTextRules: [
       "When an allied unit defeats an enemy unit, after the effect is resolved, \
@@ -856,8 +857,7 @@ const battleForcesDict = {
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
-      needsAffiliation: "Mandalorians"
-
+      needsClan:  {affiliation: "Mandalorians"}
     },
     plainTextRules: ["You can choose 2 of the benefits listed."],
     "standard mode": {
