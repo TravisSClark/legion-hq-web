@@ -85,6 +85,7 @@ const CardSelector = () => {
           selectorIds.validIds = getEligibleUnitsToAdd(
             currentList, 
             cardPaneFilter.rank,
+            userSettings,
             registerUnitSelectPreamble
           )
           selectorIds.invalidIds = [];
@@ -348,7 +349,8 @@ const CardSelector = () => {
 
         selectorIds.validIds = getEligibleUnitsToAdd(
           currentList,
-          cardPaneFilter.rank
+          cardPaneFilter.rank,
+          userSettings
         );
         selectorIds.invalidIds = [];
           clickHandler = (unitId) => {
