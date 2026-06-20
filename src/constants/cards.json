@@ -23861,7 +23861,7 @@
     "cardSubtype": "mandalorian trooper",
     "rank": "corps",
     "faction": "mercenary",
-    "affiliation": "Mandalore",
+    "affiliation": "Mandalorians",
     "cost": 56,
     "keywords": [],
     "upgradeBar": ["clan", "heavy weapon", "personnel", "training", "grenades"],
@@ -23905,7 +23905,7 @@
     "cardSubtype": "mandalorian trooper",
     "rank": "corps",
     "faction": "mercenary",
-    "affiliation": "Mandalore",
+    "affiliation": "Mandalorians",
     "cost": 64,
     "keywords": [{ "name": "Jump", "value": 2 }, "Duelist", "Impervious"],
     "upgradeBar": [
@@ -23959,7 +23959,7 @@
     "cardSubtype": "mandalorian trooper",
     "rank": "support",
     "faction": "mercenary",
-    "affiliatoin": "Mandalore",
+    "affiliation": "Mandalorians",
     "cost": 55,
     "keywords": [
       { "name": "Jump", "value": 2 },
@@ -24069,7 +24069,7 @@
     "cardSubtype": "mandalorian trooper",
     "rank": "commander",
     "faction": "mercenary",
-    "affiliation": "Mandalore",
+    "affiliation": "Mandalorians",
     "cost": 90,
     "keywords": [
       { "name": "Jump", "value": 2 },
@@ -24128,7 +24128,7 @@
     "cardSubtype": "mandalorian trooper",
     "rank": "operative",
     "faction": "mercenary",
-    "affiliation": "Mandalore",
+    "affiliation": "Mandalorians",
     "affiliations": ["empire", "rebels", "republic", "separatists"],
     "cost": 75,
     "keywords": [
@@ -25054,7 +25054,7 @@
           "affiliation": "Clan Wren"
         },
         {
-          "affiliation": "Mandalore"
+          "affiliation": "Mandalorians"
         }
       ]
     ]

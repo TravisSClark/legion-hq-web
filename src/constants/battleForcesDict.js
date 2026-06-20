@@ -673,6 +673,7 @@ const battleForcesDict = {
     disallowedUpgrades: ["Jy", "Jz", "Kb"],
     rules: {
       countMercs: true,
+      needsAffiliation: "Children of the Watch"
     },
     plainTextRules: [
       "You army may include any number of Mandalorian Initiate units, \
@@ -714,6 +715,7 @@ const battleForcesDict = {
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
+      needsAffiliation: "Clan Kryze"
     },
     plainTextRules: [
       "During the Remove Tokens step of the End Phase, \
@@ -815,6 +817,7 @@ const battleForcesDict = {
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
+      needsAffiliation: "Clan Saxon"
     },
     plainTextRules: [
       "When an allied unit defeats an enemy unit, after the effect is resolved, \
@@ -847,12 +850,14 @@ const battleForcesDict = {
     corps: ["Hq", "Hr"],
     special: [],
     support: ["Hs"],
-    heavy: [],
+    heavy: ["sm", "Fe", "bh"],
     allowedUpgrades: ["cw", "Ks", "Kt", "Ku", "Lc", "Ld"],
     disallowedUpgrades: ["Jy", "Jz", "Ka", "Kb", "Kc"],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
+      needsAffiliation: "Mandalorians"
+
     },
     plainTextRules: ["You can choose 2 of the benefits listed."],
     "standard mode": {
