@@ -12952,6 +12952,7 @@
     "cardSubtype": "hardpoint",
     "cardName": "Twin Blaster Cannons",
     "ttsName": "Twin Blaster Cannons (ISP)",
+    "faction":"republic",
     "cardType": "upgrade",
     "cost": 25,
     "imageName": "Twin Blaster Cannons ISP.webp",
@@ -18773,6 +18774,7 @@
     "id": "yr",
     "cardSubtype": "hardpoint",
     "cardName": "Twin Blaster Cannons",
+    "faction":"separatists",
     "cardType": "upgrade",
     "cost": 5,
     "imageName": "Twin Blaster Cannons Crab.webp",
@@ -22310,7 +22312,7 @@
     "keywords": [
       {
         "name": "Mercenary",
-        "value": "Empire, Rebels, Republics, Separatists"
+        "value": "Empire, Rebels, Republic, Separatists"
       },
       "Charge",
       {
@@ -22375,7 +22377,7 @@
     "keywords": [
       {
         "name": "Mercenary",
-        "value": "Empire, Rebels, Republics, Separatists"
+        "value": "Empire, Rebels, Republic, Separatists"
       },
       {
         "name": "Armor",
