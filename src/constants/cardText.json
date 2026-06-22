@@ -1,0 +1,1959 @@
+{
+  "bv": {
+    "name": "Maximum Firepower",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "General Veers",
+    "orders": "General Veers",
+    "text": "At the end of General Veers’ next Activation,\nhe may make an attack using the weapon below.\nAT-AT Cannons e4-8"
+  },
+  "bj": {
+    "name": "Assault",
+    "factionRestriction": "none",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "3 Units",
+    "text": "Though slower to organize, a coordinated\noffense can be decisive."
+  },
+  "Aa": {
+    "name": "Bring Them to Heel",
+    "section": "secondary",
+    "factionRestriction": "none",
+    "text": "Scoring: Starting in the second Round, during each End Phase, if more enemy units than allied units have a number of Suppression tokens equal to or greater than their [courage], score 1 VP.\n\nOnce per Round, per player, when a unit gains 1 or more Suppression tokens, the opposing player may mark 1 of their unmarked spaces on the chart below if the condition listed in the leftmost column of that space's row is met.\n\n| Condition | Blue Player | Red Player |\n|---|---|---|\n| An enemy unit is Panicked. | 2 VPs | 2 VPs |\n| All enemy units that can gain Suppression tokens have 1 or more Suppression tokens. | 2 VPs | 2 VPs |"
+  },
+  "Aq": {
+    "name": "Bring Them to Heel",
+    "section": "secondary",
+    "variant": "skirmish",
+    "factionRestriction": "none",
+    "text": "Scoring: Starting in the second round, during each End Phase, if more enemy units than friendly units have a number of suppression tokens equal to or greater than their courage, score 1 VP.\n\nOnce per round, per player, when a unit gains 1 or more suppression tokens, the opposing player may mark one of their unmarked spaces on the chart below if the condition listed in the leftmost column of that space's row is met.\n\n| Condition | Blue Player | Red Player |\n|---|---|---|\n| An enemy unit is panicked. | 2 VPs | 2 VPs |\n| All enemy units that can gain suppression tokens have 1 or more suppression tokens. | 2 VPs | 2 VPs |"
+  },
+  "Ab": {
+    "name": "Destroy Enemy Base",
+    "section": "secondary",
+    "factionRestriction": "none",
+    "text": "Setup: Starting with the Blue player, each player places 1 allied Base (POI) not within [range 1] of each edge of the battlefield. Then, starting with the Blue player, each player chooses 1 allied unit. Each chosen unit gains a Bomb (asset).\n\nScoring: During each End Phase, players score 4 VPs if the enemy Base was destroyed during that End Phase.\n\nSpecial Rules: Each unit gains [Claim (Bomb)]. Each unit can hold only 1 Bomb.\n\nAt the start of the End Phase, if 1 or more allied units holding a Bomb are Contesting an enemy Base that you are Securing, remove all Bombs held by allied units Contesting that Base from the game. Then that Base is destroyed and removed from the battlefield."
+  },
+  "Gi": {
+    "name": "Align the Relay",
+    "section": "secondary",
+    "factionRestriction": "none",
+    "text": "Setup: Place a Comms Relay (Asset) in the center of the battlefield, even if there is already an Objective token there. Then, starting with the Blue player, each player places 2 Comms Relays within [range 3] of both long battlefield edges, not within [range 1] of a short battlefield edge, and not within [range 1] of another Comms Relay.\n\nScoring: Starting in the second Round, during the End Phase, players score 1 VP if they Control 2 or more Comms Relays, and 1 additional VP if they Control 4 or more Comms Relays.\n\nSpecial Rules: Each unit gains [Align Relay] (Choose a Comms Relay this unit is Contesting. You now control that Comms Relay.)\n\nA Comms Relay Controlled by a player is Controlled by that player until another player Controls it."
+  },
+  "Gh": {
+    "name": "Failed Negotiations",
+    "section": "secondary",
+    "factionRestriction": "none",
+    "text": "Setup: Place an Exchange (POI) in the center of the battlefield, even if there is already an Objective token there. Then, starting with the Blue player, each player chooses 1 of their [Corps] or [Special Forces] Trooper units. Each chosen unit gains an allied Prisoner (Asset).\n\nScoring: Starting in the second Round, during the End Phase, players score 1 VP for each unit they control holding 1 or more Prisoners that is within [range 1] of the Exchange.\n\nSpecial Rules: A unit that has 1 or more Prisoners increases its [courage] by 1. At the start of the first Activation Phase, units that are holding 1 or more Prisoners gain Incognito until the end of the Round.\n\nAdditionally, each [Corps] and [Special Forces] Trooper unit gains [Claim (Prisoner)]."
+  },
+  "Ac": {
+    "name": "Marked Targets",
+    "section": "secondary",
+    "factionRestriction": "none",
+    "text": "Setup: Starting with the Blue player, each player chooses 2 allied units and 2 enemy units. A player may not choose a unit that has already been chosen. Then the chosen units each gain a Marked Target token.\n\nScoring: When a unit with a Marked Target token is defeated, after the effect is resolved, that unit's opposing player scores 1 VP."
+  },
+  "Ad": {
+    "name": "Recon Mission",
+    "section": "secondary",
+    "factionRestriction": "none",
+    "text": "Setup: Starting with the Blue player, each player chooses 1 allied unit. Each chosen unit gains an allied Scanner (asset).\n\nScoring: Starting in the second Round, at the end of each friendly unit's activation, if that unit is holding a Scanner and if that unit's unit leader is within [range 1] and has LOS to 2 or more enemy units, that allied unit's controlling player scores 1 VP. Each player can score a maximum of 1 VP in this way each Round.\n\nSpecial Rules: Each unit gains [Claim (Scanner)]. Units cannot claim enemy Scanners.\n\nIf an allied unit is holding a Scanner, at the end of that unit's Activation, each enemy unit within [range 1] and in LOS of that allied unit's unit leader gains 1 Observation token."
+  },
+  "Ar": {
+    "name": "Recon Mission",
+    "section": "secondary",
+    "variant": "skirmish",
+    "factionRestriction": "none",
+    "text": "Setup: Starting with the blue player, each player chooses 1 friendly unit. Each chosen unit gains a friendly Scanner (asset).\n\nScoring: Starting in the second round, at the end of each friendly unit's activation, if that unit is holding a Scanner and if that unit's unit leader is at [range 1] and has LOS to 2 or more enemy units, that friendly unit's controlling player scores 1 VP. Each player can score a maximum of 1 VP in this way each round.\n\nSpecial Rules: Each unit gains [Claim (Scanner)]. Units cannot claim enemy Scanners.\n\nIf a friendly unit is holding a Scanner, at the end of that unit's activation, each enemy unit within [range 1] and in LOS of that friendly unit's unit leader gains 1 observation token."
+  },
+  "Gg": {
+    "name": "Retrieve the Data",
+    "section": "secondary",
+    "factionRestriction": "none",
+    "text": "Setup: Place a Data Core (Asset) in the center of the battlefield, even if there is already an Objective token there. Then, starting with the Blue player, each player places 2 Data Cores (Asset) in Contested Territory, not within [range 2] of each edge of the battlefield and not within [range 1] of another Data Core.\n\nScoring: Starting in the second Round, during the End Phase, players score 1 VP for each Data Core they are Securing that has 2 or more Suppression tokens. After scoring VPs, if a player is Securing a Data Core with 2 or more Suppression tokens, remove that Data Core from the battlefield.\n\nSpecial Rules: Each unit gains [Data Recovery] (Place 1 Suppression token on a Data Core this unit is Contesting)."
+  },
+  "Ew": {
+    "name": "Supply Run",
+    "section": "secondary",
+    "factionRestriction": "none",
+    "text": "Setup: Starting with the Blue player, each player places 2 Supply Caches (Assets) in Contested Territory, not within [range 2] of each edge of the battlefield and not within [range 1] of another Supply Cache.\n\nScoring: Starting in the second Round, at the start of each allied unit's Activation, if that unit is contesting a POI and is holding a Supply Cache, its Controlling player may choose to remove that Supply Cache from the Game. If they do, that player scores 1 VP. If it is the fourth or fifth Round, that player scores 1 additional VP.\n\nSpecial Rules: Each Trooper unit gains [Claim (Supply Cache)]. Each unit can hold only 1 Supply Cache at a time."
+  },
+  "Ae": {
+    "name": "Surface Scan",
+    "section": "secondary",
+    "factionRestriction": "none",
+    "text": "Setup: Starting with the Blue player, each player chooses 2 allied units. Each chosen unit gains an allied Scanner (asset).\n\nScoring: Starting in the second Round, during each End Phase, if a player controls 2 units that are each holding a Scanner, are not within allied Territory, and are not Contesting a POI that is within allied Territory, they score 1 VP.\n\nDuring the End Phase, if an allied unit holding a Scanner is Contesting an unclaimed enemy Scanner, that unit's controlling player scores 2 VPs. Each player may score a maximum of 2 VPs in this way per game.\n\nSpecial Rules: Each unit gains [Claim (Scanner)]. Units cannot claim enemy Scanners. Each unit can hold only 1 Scanner at a time."
+  },
+  "As": {
+    "name": "Surface Scan",
+    "section": "secondary",
+    "variant": "skirmish",
+    "factionRestriction": "none",
+    "text": "Setup: Starting with the blue player, each player chooses 2 friendly units. Each chosen unit gains a friendly Scanner (asset).\n\nScoring: Starting in the second round, during each End Phase, if a player controls 2 units that are each holding a Scanner, are beyond friendly territory, and are not contesting a POI that is within friendly territory, they score 1 VP.\n\nDuring the End Phase, if a friendly unit holding a Scanner is contesting an unclaimed enemy Scanner, that unit's controlling player scores 2 VPs. Each player may score a maximum of 2 VPs in this way per game.\n\nSpecial Rules: Each unit gains [Claim (Scanner)]. Units cannot claim enemy Scanners. Each unit can hold only 1 Scanner at a time."
+  },
+  "Af": {
+    "name": "Sweep and Clear",
+    "section": "secondary",
+    "factionRestriction": "none",
+    "text": "Scoring: Once per Round, per player, when an enemy unit is defeated by an attack made by an allied unit, that allied unit's controlling player may mark 1 of their unmarked spaces below. A player may only mark a space corresponding with a Territory the attacking unit's unit leader is within.\n\n| Territory | Blue Player | Red Player |\n|---|---|---|\n| Any Territory | 1 VP | 1 VP |\n| Allied Territory | 1 VP | 1 VP |\n| Contested Territory | 1 VP | 1 VP |\n| Enemy Territory | 2 VPs | 2 VPs |"
+  },
+  "yu": {
+    "name": "Advanced Intel",
+    "section": "advantage",
+    "factionRestriction": "none",
+    "text": "Special Rules: At the start of the first Activation Phase, add 1 Advantage token to your Pass Pool."
+  },
+  "At": {
+    "name": "Advanced Intel",
+    "section": "advantage",
+    "variant": "skirmish",
+    "factionRestriction": "none",
+    "text": "Special Rules: At the start of the first Activation Phase, add 1 pass token to your pass pool."
+  },
+  "Gl": {
+    "name": "Armored Assault",
+    "section": "advantage",
+    "factionRestriction": "Republic",
+    "text": "Special Rules: Republic Only. At the start of the first Activation Phase, choose up to 3 allied Vehicle units. Each chosen Vehicle unit gains 1 Aim token."
+  },
+  "Er": {
+    "name": "Black Ops",
+    "section": "advantage",
+    "factionRestriction": "Empire",
+    "text": "Special Rules: Empire Only. At the start of the first Activation Phase, choose an allied [Corps] or [Special Forces] Trooper unit with 6 or fewer miniatures. If the chosen unit has Infiltrate, it gains 1 Aim token and 1 Dodge token. If the chosen unit does not have Infiltrate, it gains Infiltrate."
+  },
+  "Et": {
+    "name": "Command Override",
+    "section": "advantage",
+    "factionRestriction": "Separatists",
+    "text": "Special Rules: Separatists Only. During Setup, place 2 Advantage tokens on this card.\n\nDuring the Issue Orders step of the Command Phase, you may remove 1 of the Advantage tokens on this card. If you do, choose an allied unit with the AI keyword. The chosen unit issues an Order to itself."
+  },
+  "Es": {
+    "name": "Coordinated Strike",
+    "section": "advantage",
+    "factionRestriction": "Republic",
+    "text": "Special Rules: Republic Only. During Setup, place 1 Advantage token on this card.\n\nDuring the Issue Orders step of the Command Phase, you may remove 1 Advantage token on this card. If you do, choose up to 2 allied Republic units. Each unit gains Coordinate: Clone Trooper or Coordinate: Republic Vehicle."
+  },
+  "yv": {
+    "name": "Cunning Deployment",
+    "section": "advantage",
+    "factionRestriction": "none",
+    "text": "Special Rules: At the start of the first Activation Phase, choose 3 allied units. Each chosen unit gains 1 Dodge token."
+  },
+  "Au": {
+    "name": "Cunning Deployment",
+    "section": "advantage",
+    "variant": "skirmish",
+    "factionRestriction": "none",
+    "text": "Special Rules: At the start of the first Activation Phase, choose 3 friendly units. Each chosen unit gains 1 dodge token."
+  },
+  "Gk": {
+    "name": "Extreme Discipline",
+    "section": "advantage",
+    "factionRestriction": "Empire",
+    "text": "Special Rules: Empire Only. During Setup, place 2 Advantage tokens on this card.\n\nWhen an allied unit gains 1 or more Suppression tokens, after the effect is resolved, you may remove 1 Advantage token on this card. If you do, the allied unit removes all of its Suppression tokens, then suffers 1 Wound."
+  },
+  "yw": {
+    "name": "Fortified Position",
+    "section": "advantage",
+    "factionRestriction": "none",
+    "text": "Setup: During Setup, you may place up to 3 barricades within allied or Contested Territory and not within [range 1] of each other."
+  },
+  "Av": {
+    "name": "Fortified Position",
+    "section": "advantage",
+    "variant": "skirmish",
+    "factionRestriction": "none",
+    "text": "Setup: During Setup, you may place up to 3 barricades within friendly or contested territory and beyond [range 1] of each other."
+  },
+  "yx": {
+    "name": "Garrison",
+    "section": "advantage",
+    "factionRestriction": "none",
+    "text": "Setup: During Setup, choose up to 1 of your [Corps] units without Prepared Position. The chosen unit gains Prepared Position this game."
+  },
+  "Eu": {
+    "name": "No Time to Lose",
+    "section": "advantage",
+    "factionRestriction": "Rebels",
+    "text": "Special Rules: Rebels Only. At the start of an allied unit's Activation, if you have 1 or more Advantage tokens in your Pass Pool, you may spend 1 of those Advantage tokens. If you do, the activating unit gains 1 Aim token and 1 Dodge token, or makes a free Recover action."
+  },
+  "yy": {
+    "name": "Ordnance",
+    "section": "advantage",
+    "factionRestriction": "none",
+    "text": "Special Rules: Once per game, at the end of the Command Phase, you may place an allied Ordnance token (Advantage) on the battlefield.\n\nAt the beginning of the End Phase, if an allied Ordnance token is on the battlefield, roll 3 black attack dice. Each unit within [range 1] of that token that has the Armor or Armor X keyword or has the Vehicle unit type suffers 2 Wounds for each [crit] result and 1 Wound for each [hit] result. Each other unit within [range 1] of that token gains 1 Suppression token for each [crit] and [hit] result rolled. Then remove that Ordnance token from the game."
+  },
+  "Gm": {
+    "name": "Rapid Deployment",
+    "section": "advantage",
+    "factionRestriction": "Republic",
+    "text": "Special Rules: Republic Only. At the start of the first Activation Phase, choose up to 2 allied [Corps] Clone Trooper units. The chosen units gain Reinforcements."
+  },
+  "Gj": {
+    "name": "Scrambled Orders",
+    "section": "advantage",
+    "factionRestriction": "Separatists",
+    "text": "Special Rules: Separatists Only. During Setup, place an allied Comms Scrambler (Advantage) on the battlefield. Enemy units within [range 1] of 1 or more Comms Scramblers cannot be issued Orders.\n\nEnemy units gain Destroy Comms Scrambler (Remove an enemy Comms Scrambler within [range melee] from the battlefield.)"
+  },
+  "yz": {
+    "name": "Strafing Run",
+    "section": "advantage",
+    "factionRestriction": "none",
+    "text": "Special Rules: Once per game, at the end of the Command Phase, you may place an allied Air Support token (Advantage) on the battlefield.\n\nAt the beginning of the End Phase, if an allied Air Support token is on the battlefield, measure from that token to any position within [range 1] of it and note the miniatures overlapped by the Range Tool. Then roll 4 black attack dice. Each unit that contains 1 or more miniatures that were overlapped by the tool or that overlap the token gains 1 Suppression token for each [crit] and [hit] result rolled. Then remove that Air Support token from the game."
+  },
+  "aa": {
+    "name": "Standing Orders",
+    "factionRestriction": "none",
+    "pips": "4",
+    "commanderRestriction": "none",
+    "orders": "1 Unit",
+    "text": "At the end of the Command Phase,\nreturn this card to your hand."
+  },
+  "bk": {
+    "name": "Push",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "2 Units",
+    "text": "A tactical strike between two synchronized\nunits is a key component of warfare."
+  },
+  "bl": {
+    "name": "Ambush",
+    "factionRestriction": "none",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "1 Unit",
+    "text": "A well-placed unit with the element of surprise\non its side can turn the tide of an entire battle."
+  },
+  "bm": {
+    "name": "Master of Evil",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "Darth Vader",
+    "orders": "Darth Vader & 2 Units",
+    "text": "Darth Vader gains 1 Dodge token. At the start\nof Darth Vader's next Activation, each enemy\nTrooper unit within @ of him gains\n3 Suppression tokens."
+  },
+  "bn": {
+    "name": "Imperial Discipline",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "General Veers",
+    "orders": "General Veers & 2 Units",
+    "text": "When an allied unit is issued an Order with\nnis card. it mav make a Recover action"
+  },
+  "bp": {
+    "name": "Z-6 Jetpack Rocket",
+    "factionRestriction": "none",
+    "pips": "3",
+    "commanderRestriction": "Boba Fett",
+    "orders": "Boba Fett",
+    "text": "This Round, Boba Fett gains the weapon\nbelow during his Activation."
+  },
+  "bq": {
+    "name": "Lying In Wait",
+    "factionRestriction": "none",
+    "pips": "3",
+    "commanderRestriction": "Bossk",
+    "orders": "Bossk",
+    "text": "Bossk gains SHARPSHOOTER 7 this Round.\nUntil the end of the Round, each time an\nenemy unit ends its Activation, Bossk gains"
+  },
+  "br": {
+    "name": "New Ways to Motivate Them",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "Darth Vader",
+    "orders": "2 TROOPER UNITS",
+    "text": "This Round, when an allied non-Darth Vader\nTrooper unit that has a faceup Order token\nstarts its Activation, it may suffer 1 Wound.\nIf it does, it may make 1 additional action\nduring that Activation."
+  },
+  "bs": {
+    "name": "Evasive Maneuvers",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "General Veers",
+    "orders": "Vehicle Units",
+    "text": "When an allied Vehicle unit is issued an Order\nwith this card, it gains 1 Dodge token. Allied\nVehicle units cain Maiwmece this Round."
+  },
+  "bw": {
+    "name": "Implacable",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "Darth Vader",
+    "orders": "DARTH VADER",
+    "text": "At the start of each of Darth Vader's\nActivations this Round, he gains 1 Dodge\ntoken. At the end of Darth Vader’s first\nActivation this Round, he may suffer 1 Wound.\nIf he does, shuffle his Order token into the\nOrder Pool. During Darth Vader's second\nActivation this Round. he makes 1 fewer action."
+  },
+  "by": {
+    "name": "Voracious Ambition",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "Director Orson Krennic",
+    "orders": "Bil Rine",
+    "text": "At the start of this Round's Activation Phase,\nplace 3 random Order tokens from your Order\nPool face down on this card. You may look\nat these Order tokens at any time. When you\nwould draw an Order token from your Order\nPool, you may choose 1 of the Order tokens on\nthis card and use that token instead."
+  },
+  "bz": {
+    "name": "Whipcord Launcher",
+    "factionRestriction": "none",
+    "pips": "1",
+    "commanderRestriction": "Boba Fett",
+    "orders": "BOBA FETT",
+    "text": "This Round, while Boba Fett is Engaged, he\ncan make Moves as normal if any unit he\nis Engaged with has 1 or more Immobilize\ntokens. During Boba Fett’s next Activation,\nhe gains the following free action.\nb> Choose an enemy Trooper unit within\nR1 and in LOS. The chosen unit gains 2\nImmobilize tokens and 2 Suppression tokens."
+  },
+  "ca": {
+    "name": "Covert Observation",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "Unit",
+    "text": "When an enemy unit is issued an Order with\na Command Card this Round, that unit gains\n1 Suppression token."
+  },
+  "cb": {
+    "name": "Pinned Down",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "2 Support or Heavy Units",
+    "text": "Each time an allied @ unit or ~&, unit makes\nan attack against a unit that has a faceup Order\ntoken this Round, after the attack is resolved,\nshuffle the defending unit's Order token back\ninto that plaver's Order Pool."
+  },
+  "cc": {
+    "name": "Coordinated Fire",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "3 CORPS UNITS",
+    "text": "This Round, when an allied A unit spends\n1 or more Aim tokens while making a Ranged\nattack, after the attack is resolved, choose\nanother allied unit within eS. The chosen unit\nmav gain 1 Aim token."
+  },
+  "cd": {
+    "name": "Return of the Jedi",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "Luke Skywalker",
+    "orders": "Luke Skywalker & 2 Units",
+    "text": "When Luke Skywalker is issued an Order\nwith this card, he gains 1 Dodge token. At the\nstart of Luke Skywalker’s next Activation,\neach allied Trooper unit within €} of him may\nremove |] Suppression token."
+  },
+  "ce": {
+    "name": "Somebody Has to Save Our Skins",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "Leia Organa",
+    "orders": "Leia Organa & 2 Units",
+    "text": "After Leia Organa’s next Activation, you\nmay choose an allied unit within 2} of Leia\nOrgana that has a faceup Order token. If you\ndo. the chosen unit activates."
+  },
+  "cf": {
+    "name": "Change of Plans",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "Han Solo",
+    "orders": "HAN SOLO & 2 UNITS",
+    "text": "When this card is revealed, you may discard\nit to return an opponent's Command Card to\ntheir Command Hand and return to the Select\nand Play Command Card step. That\nopponent cannot select the Command Card that\nwas returned to their Command Hand."
+  },
+  "cg": {
+    "name": "Notorious Scoundrels",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "Chewbacca",
+    "orders": "Chewbacca Han Solo",
+    "text": "Choose 1 of Han Solo’s Command Cards in\nyour discard pile. Return that card to your\nOmMmMand mand"
+  },
+  "ch": {
+    "name": "Covering Fire",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "Units",
+    "text": "This Round, each time an allied & unit\nmakes a Ranged attack, after the attack is\nresolved, another allied unit within 2} may\ngain 1 Dodge token."
+  },
+  "ci": {
+    "name": "Rebellions Are Built on Hope",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "Jyn Erso",
+    "orders": "3 TROOPER UNITS",
+    "text": "When a unit is issued an Order with this card,\nit may gain 1 Suppression token. This Round,\nwhile an allied Trooper unit has a faceup\nOrder token, it gains DANGER SENSE 2,\nINDOMITABLE, and cannot be Suppressed or"
+  },
+  "cj": {
+    "name": "Legacy of Mandalore",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "Sabine Wren",
+    "orders": "SABINE WREN & 2 TROOPERS",
+    "text": "Sabine Wren gains INSPIRE 1 this Round.\nEach time Sabine Wren issues an Order toa\nCOMMANDER, OPERATIVE, or SPECIAL FORCES unit this Round, she gains\neither 1 Aim token or 1 Dodge token."
+  },
+  "ck": {
+    "name": "My Ally is the Force",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Luke Skywalker",
+    "orders": "2 TROOPER UNITS",
+    "text": "When a unit is issued an Order with this card, it gains 1 Dodge token."
+  },
+  "cl": {
+    "name": "No Time for Sorrows",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Leia Organa",
+    "orders": "Troopers",
+    "text": "When a unit is issued an Order with this card,\nit mav make a Speed-1 Move."
+  },
+  "cm": {
+    "name": "Reckless Diversion",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Han Solo",
+    "orders": "HAN SOLO & 1 UNIT",
+    "text": "This Round, each time an enemy unit makes\nan attack, it must attack a Trooper unit that has\na faceup Order token, if able. Allied Trooper\nunits that have faceup Order tokens do not\nbenefit from Backun this Round."
+  },
+  "cn": {
+    "name": "Brains and Brawn",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Chewbacca",
+    "orders": "CHEWBACCA & LEIA ORGANA",
+    "text": "This Round, each time an allied Leia Organa\nmakes a Ranged attack, if Chewbacca has LOS\nto and is within © of the defender during the\nForm Attack Pool step, add 1 of Chewbacca’s\nRanged weapons to the Attack Pool."
+  },
+  "co": {
+    "name": "Trust Goes Both Ways",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Jyn Erso",
+    "orders": "Jyn Erso Trooper Unit",
+    "text": "Jyn Erso gains INSPIRE 2 this Round. When a\nnon-Jyn Erso Trooper unit is issued an Order\nwith this card, that unit gains TEAMWORK:\nJynw Erso until the end of the Round."
+  },
+  "cp": {
+    "name": "Turning the Tide",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "Units",
+    "text": "Allied @ and W@, units gain Inspire 2"
+  },
+  "cq": {
+    "name": "Son of Skywalker",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "Luke Skywalker",
+    "orders": "Luke Skywalker",
+    "text": "When Luke Skywalker makes his first attack\nthis Round, after the attack sequence is\nresolved, he may make a free attack action,\neven if he has already made an attack action"
+  },
+  "cr": {
+    "name": "Coordinated Bombardment",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "Leia Organa",
+    "orders": "Leia Organa",
+    "text": "At the end of Leia Organa’s next Activation,\nshe may make up to 3 attacks against different\nenemy units using the weapon below.\nBomBaRDMENT"
+  },
+  "cs": {
+    "name": "Sorry About the Mess",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "Han Solo",
+    "orders": "Han Solo",
+    "text": "While building a Command Hand, treat this\ncard as though it has 1 pip. When Han Solo is\nissued an Order with this card, he gains 1 Aim\ntoken and 1 Dodge token."
+  },
+  "ct": {
+    "name": "I Rebel",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "Jyn Erso",
+    "orders": "JYN ERSO",
+    "text": "Jyn Erso gains CHARGE during her next\nActivation. Once this Round, when an enemy\nunit within 2 and in LOS of Jyn Erso starts\nits Activation, before its Rally step, Jyn Erso\nmay gain 1 Suppression token. If she does, she\nmay make a free Move action, and then may\nmake a free Attack action."
+  },
+  "cu": {
+    "name": "Common Cause",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "Chewbacca",
+    "orders": "CHEWBACCA & LUKE SKYWALKER",
+    "text": "At the end of Chewbacca’'s next Activation,\nif Luke Skywalker has a faceup Order token,\nhe may activate. At the end of Luke Skywalker's\nnext Activation, if Chewbacca has a faceup\nOrder token. he mav activate."
+  },
+  "cv": {
+    "name": "Sabotaged Communications",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "1 OPERATIVE OR SPECIAL FORCES UNIT",
+    "text": "When an opponent issues Orders using a\nCommand Card this Round, they can issue\non (\\rder with that cara"
+  },
+  "fp": {
+    "name": "I am a Jedi",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "Luke Skywalker",
+    "orders": "LUKE SKYWALKER",
+    "text": "This Round, Luke Skywalker gains W:Y\nand cannot make attacks. Choose up to\n2 enemy Trooper units within 4B of Luke\nSkywalker. The chosen units cannot make\nattacks until the end of the Round."
+  },
+  "fq": {
+    "name": "Darkness Descends",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "Darth Vader",
+    "orders": "Darth Vader",
+    "text": "PERMANENT. If this card was not Divulged,\nDarth Vader gains RELIABLE 2.\nDivutcE: Resolve Setup Effects step. Darth\nVader gains INFILTRATE this Game. This card\nmust be selected durine Round 1."
+  },
+  "gd": {
+    "name": "Annihilation Looms",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "Director Orson Krennic",
+    "orders": "DIRECTOR ORSON KRENNIC & 2 UNITS",
+    "text": "Each Trooper unit on the battlefield gains\n2 Suppression tokens. Then, if it is Round\nA or 5, each Trooper unit gains 1 additional\nSuppression token."
+  },
+  "ge": {
+    "name": "Deploy the Garrison",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "Director Orson Krennic",
+    "orders": "Trooper Units",
+    "text": "At the start of this Round's Activation Phase,\nchoose up to 2 allied Trooper units that have\nfaceup Order tokens. Each chosen unit may\nmake a free Standby action."
+  },
+  "gf": {
+    "name": "Merciless Munitions",
+    "factionRestriction": "none",
+    "pips": "1",
+    "commanderRestriction": "Bossk",
+    "orders": "BOSSK",
+    "text": "Ui ULC TALLINN, DUVOSOK otiitse EiVinriin fe\nDioxis CHARGE. After a Trooper unit\ndefends against a Dioxis Charge attack, that\nunit gains 1 Poison token. Do not discard this\ncard from play.\nDioxts CHARGE"
+  },
+  "gg": {
+    "name": "Reptilian Rampage",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "Bossk",
+    "orders": "BOSSK",
+    "text": "During Bossk’s next Activation, he can make\nup to 2 Attack actions instead of the normal 1.\nOnce during Bossk’s next Activation, he may\nsuffer 1 Wound. If he does, he may make a free\nMove action"
+  },
+  "gh": {
+    "name": "Explosions!",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "Sabine Wren",
+    "orders": "SABINE WREN",
+    "text": "this action, she may make a Speed-1 Move.\nUntil the end of the Game, Sabine Wren gains\nDETONATE 2: THERMAL CHARGE. Do not\ndiscard this card from play."
+  },
+  "gi": {
+    "name": "Symbol of Rebellion",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Sabine Wren",
+    "orders": "SABINE WREN",
+    "text": "At the start of Sabine Wren's next Activation,\nshe may make a Recover action.\nThis Round, Sabine Wren gains the following\nfree action.\nb> Place 1 Graffiti token within 1) and in LOS\nof Sabine Wren, touching a piece of non-area"
+  },
+  "hi": {
+    "name": "General Kenobi",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "Obi-Wan Kenobi",
+    "orders": "Obi-Wan Kenobi & 2 Units",
+    "text": "When a unit is issued an Order with this card,\nthat unit gains 1 Surge token for each other\nallied unit within @8 of it."
+  },
+  "hj": {
+    "name": "Hello There!",
+    "factionRestriction": "Republic",
+    "pips": "1",
+    "commanderRestriction": "Obi-Wan Kenobi",
+    "orders": "Obi-Wan Kenobi",
+    "text": "Obi-Wan Kenobi gains NimBze this Round.\nAt the start of the next Activation Phase,\nObi-Wan Kenobi may gain 1 Aim token,\n1 Dodge token, 1 Standby token, or 1 Surge\nwoleeicneach eens unit within oe"
+  },
+  "hk": {
+    "name": "Supreme Commander",
+    "factionRestriction": "Separatists",
+    "pips": "2",
+    "commanderRestriction": "General Grievous",
+    "orders": "2 TROOPER UNITS",
+    "text": "General Grievous gains RUTHLESS this\nRound. When an allied unit is issued an Order\nwith this card, that unit and each other allied\nTrooper unit within 1) and in LOS of that\nunit gains 1 Surge token."
+  },
+  "hl": {
+    "name": "Crush Them!",
+    "factionRestriction": "Separatists",
+    "pips": "3",
+    "commanderRestriction": "General Grievous",
+    "orders": "General Grievous & 2 Units",
+    "text": "When a unit is issued an Order with this card,\nthat unit gains 1 Surge token for each of your\nopponent's defeated units."
+  },
+  "im": {
+    "name": "Trained In Your Jedi Arts",
+    "factionRestriction": "Separatists",
+    "pips": "1",
+    "commanderRestriction": "General Grievous",
+    "orders": "General Grievous",
+    "text": "NBC EENE CE NEED YUUDO be bese i Sa ay LWINN ti Alive\ngains DISENGAGE this Round. At the end of\nGeneral Grievous next Activation he may\nmake an attack against each enemy unit within\n4B and in LOS using the weapon below.\nTrophy LIGHTSABERS @ @>",
+    "weapon": {
+      "name": "TROPHY LIGHTSABERS",
+      "dice": "1R 1W 2B",
+      "range": "0-1",
+      "keywords": "SUPPRESSIVE, VERSATILE"
+    }
+  },
+  "in": {
+    "name": "Knowledge and Defense",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "Obi-Wan Kenobi",
+    "orders": "Trooper Units",
+    "text": "Obi-Wan Kenobi gains 1 Dodge token for\neach other allied Trooper unit within G.\nThis Round, Obi-Wan Kenobi can use\nGuarRpDIAN X during enemy melee attacks."
+  },
+  "ir": {
+    "name": "We're Not Programmed",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "Clone Captain Rex",
+    "orders": "Clone Trooper Units",
+    "text": "Clone Captain Rex gains 2 Surge tokens and\ngains INSPIRE 2 this Round. At the start of\nClone Captain Rex's next Activation, he may\nmake a Recover action."
+  },
+  "is": {
+    "name": "You Disappoint Me",
+    "factionRestriction": "Separatists",
+    "pips": "3",
+    "commanderRestriction": "Count Dooku",
+    "orders": "COUNT DOOKU & 2 UNITS",
+    "text": "When a unit is issued an Order with this card,\nthat unit gains 1 Dodge token. Until the end of\nthe Round, each time Count Dooku makes a\nRanged attack against a Trooper unit, after the\nattack is resolved, that unit makes a Speed-2\nMove. You resolve this movement."
+  },
+  "jc": {
+    "name": "Vader's Might",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "Darth Vader",
+    "orders": "DARTH VADER",
+    "text": "Place the chosen unit's unit leader on the\nbattlefield within B and within Height 1 of\nits current position. Then place the rest of the\nchosen unit in cohesion with the unit leader.\nThen, if it is an enemy unit, roll 1 white defense\ndie for each miniature in the unit. That unit\nsuffers 1 Wound for each W and result in"
+  },
+  "jd": {
+    "name": "You Serve Your Master Well",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "Luke Skywalker",
+    "orders": "LUKE SKYWALKER",
+    "text": "following free action.\n> Choose an allied non- ww, non-@ Trooper\nunit within @, ora Suppressed enemy\nnon-~wAr, non-@ Trooper unit within GQ.\nIf the chosen unit is an allied unit, make 1 free\nMove or Attack action with that unit. If the\nchosen unit is an enemy unit, it gains\n3 Suppression tokens."
+  },
+  "je": {
+    "name": "Fear and Dead Men",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "Darth Vader",
+    "orders": "Darth Vader",
+    "text": "This Round, when Darth Vader suffers 1 or\nmore Wounds from an enemy attack, after the\neffect is resolved, the attacking unit suffers an\nequal number of Wounds."
+  },
+  "jf": {
+    "name": "Full of Surprises",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Luke Skywalker",
+    "orders": "LUKE SKYWALKER",
+    "text": "Luke Skywalker gains 1 Dodge token.\nUntil the end of the Round, each time Luke\nSkywalker defends, he rolls a number of\nadditional white defense dice during the Roll\nDefense Dice step equal to his ® minus the\nnumber of Suppression tokens he has."
+  },
+  "jl": {
+    "name": "Blast Off!",
+    "factionRestriction": "none",
+    "pips": "1",
+    "commanderRestriction": "R2-D2",
+    "orders": "R2-D2",
+    "text": "This Round, R2-D2 increases his maximum\nSpeed by 1 and gains DISENGAGE and\n#@ Jump 1.\nWhen R2-D2 is issued an Order with this card,\nR2-D2 gains 1 Dodge token and 1 Suppression"
+  },
+  "jr": {
+    "name": "Fear, Surprise, Intimidation",
+    "factionRestriction": "Separatists",
+    "pips": "1",
+    "commanderRestriction": "Count Dooku",
+    "orders": "COUNT DOOKU",
+    "text": "This Round, Count Dooku gains ARSENAL 2\nand RELENTLESS and each of his Ranged\nweapons gains VERSATILE. Until the end of the\nRound, each time Count Dooku makes an\nattack, after the attack is resolved, each\ndefending unit gains 2 Suppression tokens."
+  },
+  "js": {
+    "name": "Double the Fall",
+    "factionRestriction": "Separatists",
+    "pips": "2",
+    "commanderRestriction": "Count Dooku",
+    "orders": "COUNT DOOKU  & 1 UNIT",
+    "text": "At the start of the Activation Phase this\nRound, if Count Dooku has a faceup Order\ntoken, you may return it to your Order Pool.\nIf you do, choose up to 2 enemy units within\n2 and return their Order tokens to the\nopposing player's Order Pool."
+  },
+  "jt": {
+    "name": "Call Me Captain",
+    "factionRestriction": "Republic",
+    "pips": "1",
+    "commanderRestriction": "Clone Captain Rex",
+    "orders": "CLONE CAPTAIN REX",
+    "text": "Once per Activation this Round while Clone\nCaptain Rex has a faceup Order token, when\nanother allied unit attacks an enemy unit\nwithin 2} and in LOS of Clone Captain Rex,\nadd 3 red attack dice to the allied unit's Attack\nPool durine the Form Attack pool step."
+  },
+  "ju": {
+    "name": "Take That, Clankers!",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "Clone Captain Rex",
+    "orders": "2 TROOPER UNITS",
+    "text": "This Round, each time an allied Clone Trooper\nunit with a faceup Order token makes an Aim\naction during its Activation, it may increase\nthe maximum 8 of each of its Ranged\nweapons by 1, toa maximum of 4, until the\nend of that Activation."
+  },
+  "jz": {
+    "name": "Smoke Screen",
+    "factionRestriction": "none",
+    "pips": "3",
+    "commanderRestriction": "R2-D2",
+    "orders": "R2-D2 & 1 TROOPER UNIT",
+    "text": "When R2-D2 issues an Order to another unit\nwith this card, that unit may make a Speed-1\nMove. At the start of the next Activation\nPhase, R2-D2 may make a > Smoke 7 free"
+  },
+  "ka": {
+    "name": "Impromptu Immolation",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "R2-D2",
+    "orders": "R2-D2",
+    "text": "When R2-D2 makes an attack this Round,\nafter the attack is resolved, he may make a free\nMove action. During R2-D2’s next Activation,\nhe gains the weapon below.\n",
+    "weapon": {
+      "name": "Impromptu Immolation",
+      "dice": "2W",
+      "range": "0-1",
+      "keywords": "Blast, Spray, Suppressive"
+    }
+  },
+  "kj": {
+    "name": "Crack Shot",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "Cassian Andor",
+    "orders": "CASSIAN ANDOR",
+    "text": "Cassian Andor gains 1 Aim token, gains\nGUNSLINGER this Round, and may gain\n1 Suppression token. During Cassian Andor's\nnext Activation, he may make a free Attack"
+  },
+  "kk": {
+    "name": "Pulse Scan",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "Iden Versio",
+    "orders": "Iden Versio",
+    "text": "Iden Versio gains 1 Aim token and gains\nSHARPSHOOTER 2 this Round.\nAt the end of Iden Versio's next Activation,\nshe oains 1 Dodge token and 1 Standby token."
+  },
+  "ln": {
+    "name": "Diplomatic Cover",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "Padme Amidala",
+    "orders": "Danme Aminala",
+    "text": "ee eee Oe ETC eC\nPERMANENT. If this card was Divulged,\nPadmé Amidala gains Secret Mission. If it\nwas not, she gains INSPIRE 1.\nDIVULGE: Resolve Setup Effects step.\nPadmé Amidala gains INFILTRATE this game.\nThis card must be selected during Round 1."
+  },
+  "lo": {
+    "name": "I'm in Control",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "Cad Bane",
+    "orders": "Cad Bane & 1 Unit",
+    "text": "At the start and end of Cad Bane’s next\nActivation, he may remove any number of\nSuppression tokens. For each Suppression token\nremoved in this way, choose another unit within\n© of him. The chosen unit gains 1 Suppression\ntoken. Each time an enemy Trooper unit gains\n1 or more Suppression tokens in this way, if it has\nno Immobijlize tokens. it gains 1 Immobilize token."
+  },
+  "lp": {
+    "name": "I Make the Rules Now",
+    "factionRestriction": "none",
+    "pips": "3",
+    "commanderRestriction": "Cad Bane",
+    "orders": "Divulge Resolve Setup Effects Place",
+    "text": "2 bane tokens on the Dattleneld Not Within ey\nof enemy Territory. Cad Bane cannot Deploy\nor make any actions until an allied Here I Am\ntoken is revealed. This card must be selected\nduring Round 1.\nBooey Trap ="
+  },
+  "lq": {
+    "name": "Our Fate is in Your Hands",
+    "factionRestriction": "Republic",
+    "pips": "1",
+    "commanderRestriction": "Padme Amidala",
+    "orders": "PADME AMIDALA",
+    "text": "Phase, allied Trooper units within + 2] of\nPadmé Amidala may remove any number\nof Suppression tokens. Then, for each\nSuppression token removed in this way,\nPadmé Amidala gains 1 Suppression token.\nFinally, for each Suppression token she gained\nin this way, she gains 1 Dodge token, to a\nmaximum of 2 Dodge tokens."
+  },
+  "lr": {
+    "name": "Volunteer Mission",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "Cassian Andor",
+    "orders": "CASSIAN ANDOR & 2 TROOPER UNITS",
+    "text": "Each time Cassian Andor issues an Order to\na wv, @, or YAY unit this Round, that unit\nmay make a Recover action, gains DANGER\nSENSE 7 until the end of the Round, and may\ncain 1 Sunpression token."
+  },
+  "ls": {
+    "name": "Last Stand",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Cassian Andor",
+    "orders": "CASSIAN ANDOR & 1 TROOPER UNIT",
+    "text": "When a ~“v or & unit is issued an Order with\nthis card, that unit gains INDOMITABLE until\nthe end of the Round and gains 1 Aim token,\nDodge token, or Suppression token for each\nWound token that unit has, to a maximum"
+  },
+  "lt": {
+    "name": "Sacrifice",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "K-2SO",
+    "orders": "Ctacciaanl Aainod .Ccch",
+    "text": "K-2SO gains GUARDIAN 4 this Round.\nAt the end of K-2SO’s next Activation, you\nmay choose another allied ~~ or & unit\nwithin 1 and in K-2SO’s LOS. If you do,\nK-2S0O is defeated and enemy units cannot\nmake Ranged attacks against the chosen unit\nuntil the end of this Round."
+  },
+  "ly": {
+    "name": "Incapacitate",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "Iden Versio",
+    "orders": "IDEN VERSIO",
+    "text": "The chosen unit gains 3 Suppression tokens.\nThen, if the chosen unit isa A unit that has\nnot activated this Round, flip its Order token\nfacedown, if able. If that A& unit's Order token\ncould not be flipped face down, instead assign\nit a facedown A Order token from its\ncontrolling player's Order Pool."
+  },
+  "lz": {
+    "name": "Concussive Blast",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "Iden Versio",
+    "orders": "Iden Versio",
+    "text": "When Iden Versio starts her Activation this\nRound, she makes a Recover action.\nDuring Iden Versio’s Activation this Round,\nshe gains the weapon below."
+  },
+  "ma": {
+    "name": "Tactical Strike",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "Iden Versio",
+    "orders": "IDEN VERSION & 2 TROOPER UNITS",
+    "text": "This Round, when Iden Versio or an allied\nWAY unit that has a faceup Order token starts\nits Activation, it may reduce its maximum\nSpeed to 1 until the end of that Activation.\nIf it does, it gains STEADY and TACTICAL 7\nuntil the end of that Activation."
+  },
+  "mg": {
+    "name": "I'm Your Worst Nightmare",
+    "factionRestriction": "none",
+    "pips": "1",
+    "commanderRestriction": "Cad Bane",
+    "orders": "Cad Bane",
+    "text": "Cad Bane gains UNCANNY Luck 2 this\nRound. During Cad Bane’s Activation this\nRound, he can make up to 2 Attack actions\ninstead of the normal 1."
+  },
+  "mi": {
+    "name": "Aggressive Negotiations",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "Padme Amidala",
+    "orders": "Padme Amidala Trooper Unit",
+    "text": "When a unit is issued an Order with this card,\nthat unit may make a Speed-1 Move, gain\n1 Aim token, gain 1 Dodge token, or gain\n1 Surge token."
+  },
+  "mt": {
+    "name": "Synchronized Offensive",
+    "factionRestriction": "Republic",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "Vehicle Unit",
+    "text": "When an allied Vehicle unit is issued an Order\nwith this card, choose an allied Clone Trooper\nunit within 2 of that Vehicle. The nominated\nwe issues the chosen unit an Order."
+  },
+  "mu": {
+    "name": "Mechanized Incursion",
+    "factionRestriction": "Separatists",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "Vehicle Unit",
+    "text": "When an allied Vehicle unit is issued an Order\nthis Round, choose an allied Droid Trooper\nunit within 2} of that Vehicle. The chosen unit\nissues an Order to itself."
+  },
+  "mv": {
+    "name": "General Skywalker",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "Anakin Skywalker",
+    "orders": "Anakin Skywalker & 2 Units",
+    "text": "Anakin Skywalker gains INSPIRE 2 this\nRound. When a unit is issued an Order with\nhis card. that unit cain Aim token"
+  },
+  "mw": {
+    "name": "Duel of the Fates",
+    "factionRestriction": "none",
+    "pips": "1",
+    "commanderRestriction": "Maul",
+    "orders": "Maul",
+    "text": "Maul gains 1 Dodge token and gains\nDISENGAGE this Round. While Maul is\nEngaged with an enemy unit this Round, that\nunit cannot spend Aim tokens, Dodge tokens,\nStandbv tokens. or Surge tokens."
+  },
+  "nf": {
+    "name": "This is Where the Fun Begins",
+    "factionRestriction": "Republic",
+    "pips": "1",
+    "commanderRestriction": "Anakin Skywalker",
+    "orders": "ANAKIN SKYWALKER",
+    "text": "Anakin Skywalker gains }} Jump 2 this\nRound. During Anakin Skywalker's next\nActivation, he can make up to 2 Attack actions.\nDIVULGE: Resolve Setup Effects step. Anakin\nSkywalker gains PREPARED PosiITIon this"
+  },
+  "ng": {
+    "name": "You Underestimate My Power",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "Anakin Skywalker",
+    "orders": "Anakin Skywalker & 1 Unit",
+    "text": "This Round, each time Anakin Skywalker\nattacks a unit that has a facedown Order token,\nduring the Form Attack Pool step, he adds 6\nwhite attack dice to his Attack Pool."
+  },
+  "ni": {
+    "name": "The Phantom Menace",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "Maul",
+    "orders": "Maul Trooper Unit",
+    "text": "This Round, Maul cannot make attacks\nand enemy units not within @ of Maul\ncannot attack him.\nDIVULGE: Resolve Setup Effects step.\nMaul cains INFILTRATE this Game."
+  },
+  "nj": {
+    "name": "At Last",
+    "factionRestriction": "none",
+    "pips": "3",
+    "commanderRestriction": "Maul",
+    "orders": "Maul",
+    "text": "While building a Command Hand, treat this\ncard as though it has 3 pips.\nMaul gains 1 Aim token and gains JEDI\nHUNTER this Round. At the start of Maul’s\nnext Activation. he mav sufter 1 Wound."
+  },
+  "nn": {
+    "name": "Ace Up His Sleeve",
+    "factionRestriction": "Rebels",
+    "pips": "21",
+    "commanderRestriction": "Lando Calrissian",
+    "orders": "LANDO CALRISSIAN & 1 UNIT",
+    "text": "during the Resolve Command Card Effects\nstep of the Command Phase, after revealing\nCommand Cards but before resolving\nCommand Card effects, you may return your\nrevealed card to your Command Hand and\nplay this card instead. Treat this card as having\nbeen selected, played, and revealed instead of"
+  },
+  "no": {
+    "name": "Face Me!",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "Agent Kallus",
+    "orders": "Agent Kallus",
+    "text": "Agent Kallus gains Hotp THE Line this Round.\nAdditionally, until the end of the Round, enemy\nTrooper units that are Engaged with Agent\nKallus cannot Move. except to Pivot."
+  },
+  "nt": {
+    "name": "Corellian Spike",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "Lando Calrissian",
+    "orders": "LANDO CALRISSIAN",
+    "text": "bIaNK: ine chosen ult Sains 2 UNIMOOUIZe tOKenNs.\nMK or WG: The chosen unit gains 1 Immobilize\ntoken.\n¥t: Lando Calrissian gains 2 Immobilize tokens.\nDIVULGE: Resolve Setup Effects step. Lando\nCalrissian gains INFILTRATE and INCOGNITO this"
+  },
+  "nu": {
+    "name": "Orbital Strike",
+    "factionRestriction": "Separatists",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "Unit",
+    "text": "Once this Round, at the end of an allied\nAy unit's Activation or an allied Freep\nCOMMANDER unit's Activation, it may make\nan attack using the weapon below.\nOrsiTaL BOMBARDMENT"
+  },
+  "nv": {
+    "name": "Roger, Roger!",
+    "factionRestriction": "Separatists",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "Droid Trooper Units",
+    "text": "When a unit is issued an Order with this card,\nit gains 1 Dodge token or 1 Surge token."
+  },
+  "nw": {
+    "name": "Idiot's Array",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "Lando Calrissian",
+    "orders": "Lando Calrissian & 2 Units",
+    "text": "Until the end of this Round, each time an\nallied unit with a faceup Order token makes\nan attack, if the defending unit is within 2}\nand in LOS of Lando Calrissian and if the\nAttack Pool contains at least 1 Blank, 34,\nand 3 results during the Reroll Dice step,\nyou may change 1 3 result and 1 4 result in\nthe Attack Pool into {3 results."
+  },
+  "nx": {
+    "name": "Air Support",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "Unit",
+    "text": "Once this Round, at the end of an allied wAw's\nActivation or an allied Fito COMMANDER\nunit's Activation, that unit may make an attack\nusing the weapon below.\nAir Support\nBEAM 2. IMMUNE: DEFLECT 4) Oo"
+  },
+  "ny": {
+    "name": "Attack of the Clones",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "Clone Trooper Units",
+    "text": "When a unit is issued an Order with this card,\nit may gain 1 Surge token or remove\n1 Suppression token."
+  },
+  "oj": {
+    "name": "ISB Investigation",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "Agent Kallus",
+    "orders": "AGENT KALLUS & 1 UNIT",
+    "text": "sets aside, faceup, all Command Cards in\ntheir Command Hand that have the declared\nnumber of pips. During the End Phase, do not\ndiscard this card. After the chosen opponent\nplays a Command Card in a subsequent\nRound, they return the set-aside Command\nCards to their Command Hand. Then discard"
+  },
+  "ok": {
+    "name": "Ruthless Tactics",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "Agent Kallus",
+    "orders": "3 UNITS",
+    "text": "faceup Order token makes a Ranged attack,\nafter that attack is resolved, the defending\nunit gains 1 Observation token. Additonally,\nuntil the end of the Round, each time an allied\nunit declares an attack against an enemy unit\nthat has 1 or more Observation tokens, the\nattacking unit may spend one of those tokens.\nTf it does. the Attack Pool cains SUPPRESSIVE."
+  },
+  "pi": {
+    "name": "Size Matters Not",
+    "factionRestriction": "Republic",
+    "pips": "1",
+    "commanderRestriction": "Yoda",
+    "orders": "YODA",
+    "text": "This Round, Yoda gains 4»>Jump 1, CHARGE,\nDISENGAGE, and treats his maximum Speed\nas 3.\nDuring his next Activation, Yoda can make\nany of his 4) or > up to 2 times.\nAt the start of the next End Phase, if There Is\nNo Try is in your discard pile, return it to your"
+  },
+  "pj": {
+    "name": "There Is No Try",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "Yoda",
+    "orders": "YODA & 1 TROOPER UNIT",
+    "text": "When a unit is issued an Order with this card,\nit gains 1 Dodge token and gains\nOUTMANEUVER and RELENTLESS this Round.\nAt the start of the next End Phase, if Luminous\nBeings Are We is in your discard pile, return it\nto vour Command Hand."
+  },
+  "pk": {
+    "name": "Luminous Beings Are We",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "Yoda",
+    "orders": "Each Eligible Unit",
+    "text": "Yoda gains 2 Aim tokens, 2 Dodge tokens,\nand 2 Surge tokens. Yoda cannot make attacks\nthis Round. Until the end of the Round, allied\nunits within © of Yoda can spend Yoda’s Aim\ntokens, Dodge tokens, and Surge tokens.\nAt the start of the next End Phase, if Size\nMatters Not is in your discard pile, return it to\nyour Command Hand."
+  },
+  "pp": {
+    "name": "Size Matters Sometimes",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "Chewbacca",
+    "orders": "CHEWBACCA & YODA",
+    "text": "If Chewbacca is within R1 of an allied Yoda, and if\nYoda is on the battlefield, \nplace that Yoda in base contact with Chewbacca.\nIf you do, until the end of the Round, that Yoda\ncannot make Moves and each time Chewbacca\nMoves, after that Move is resolved, place\nthat Yoda in base contact with Chewbacca.\nWhile an allied Yoda is in base contact with\nChewbacca this Round, Chewbacca gains\nDEFLECT, can spend that Yoda’s Dodge tokens,\nand rolls red defense dice while defending or\nusing Guardian X"
+  },
+  "pu": {
+    "name": "Defiance",
+    "factionRestriction": "Republic",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "1 SPECIAL FORCES UNIT OR HEAVY UNIT",
+    "text": "When an allied unit is issued an Order with\nthis card, ifa ~e Wookiee Trooper unit\nissued that Order, and if the Ordered unit has\n1 or more Wound tokens or has had 1 or more\nof its miniatures be defeated, the Ordered unit\ngains 1 Aim token, 1 Dodge token, and 1 Surge"
+  },
+  "pv": {
+    "name": "Get In Position",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "Trooper Units",
+    "text": "When an allied Wookiee Trooper unit is issued\nan Order with this card, ifa ~~ Wookiee\nTrooper unit issued that Order, the Ordered\nunit cains AGILE 7 this Round."
+  },
+  "pw": {
+    "name": "Daring Defense",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "Trooper Units",
+    "text": "When an allied Wookiee Trooper unit is issued\nan Order with this card, ifa ~~ Wookiee\nTrooper unit issued that Order, the Ordered\nunit cains DEMORALIZE 7 this Round."
+  },
+  "qe": {
+    "name": "They Too Will Suffer",
+    "factionRestriction": "Separatists",
+    "pips": "1",
+    "commanderRestriction": "Kalani / Kraken",
+    "orders": "KALANI OR KRAKEN",
+    "text": "opponent. Lhe chosen opponent must choose\n1 of their A, WAY, ®, or ~B, units witha\nfaceup Order token, if able, and return that\nOrder token to their Order Pool.\nThe first time the chosen opponent would\ndraw an Order token from their Order Pool\nthis Round, you may force them to draw a\ntoken with a Rank of your choice instead."
+  },
+  "qf": {
+    "name": "Preservation Protocols",
+    "factionRestriction": "Separatists",
+    "pips": "2",
+    "commanderRestriction": "Kalani OR Kraken",
+    "orders": "2 DROID TROOPER UNITS OR AI UNITS",
+    "text": "wm A Vs a wa:\n2 DROID TROOPER UNITS OR Al UNITS\nWhen a unit is issued an Order with this card,\nthat unit gains 1 Dodge token and gains\nDIGENGSOGE ond Imperviouse thic Round."
+  },
+  "qg": {
+    "name": "Do Not Underestimate Our Means",
+    "factionRestriction": "Separatists",
+    "pips": "3",
+    "commanderRestriction": "Kalani / Kraken",
+    "orders": "3 DROID TROOPER UNITS OR AI UNITS",
+    "text": "next Activation Phase, choose up to 2 allied\nunits that have faceup Order tokens. Each\nchosen unit makes a Recover action.\nDivutce: Resolve Setup Effects step.\nChoose up to 3 allied units with Al. Each\nchosen unit gains REINFORCEMENTS this"
+  },
+  "rr": {
+    "name": "Witch Magick",
+    "factionRestriction": "Mercenary",
+    "pips": "1",
+    "commanderRestriction": "Maul",
+    "orders": "Maul",
+    "text": "While building a Command Hand, treat this\ncard as though it has 1 pip.\nRemove up to 2 Wound tokens and any\nnumber of Poison tokens or Immobilize\ntokens from Maul. At the start of Maul's next\nActivation. he makes a Recover action."
+  },
+  "rs": {
+    "name": "His Eminence",
+    "factionRestriction": "Mercenary",
+    "pips": "2",
+    "commanderRestriction": "Maul",
+    "orders": "Maiil",
+    "text": "Maul gains 1 Dodge token. Each other\nTrooper unit within €} of Maul gains\n1 Suppression token. Until the end of the\nRound, each time an allied Trooper unit starts\nits Activation within 1 of Maul, it skips\nits Rally step and cannot be Suppressed or\nPanicked this Round."
+  },
+  "rt": {
+    "name": "Seize What Power We Can",
+    "factionRestriction": "Mercenary",
+    "pips": "3",
+    "commanderRestriction": "Maul",
+    "orders": "MAUL & 2 UNITS",
+    "text": "Place 1 Aim token and 3 Surge tokens on\nthis card. Until the end of the Round, each\ntime an enemy unit within 4} of Maul spends\n1 or more Aim tokens, Dodge tokens, or Surge\ntokens, place 1 token of the same type on this\ncard. Allied Mercenary units can spend tokens\non this card as if thev have those tokens."
+  },
+  "rw": {
+    "name": "Ploy",
+    "factionRestriction": "none",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "Units",
+    "text": "This Round, at the start of the Activation\nPhase, choose 1 Order token from your Order\nPool and place it face down on this card. Then\nshuffle your Order Pool. You may look at this\ntoken at any time. This Round, when you\nwould draw an Order token from your Order\nPool, you may use the Order token on this\ncard instead."
+  },
+  "rx": {
+    "name": "Aggression",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "Mercenary Commander or Operative",
+    "orders": "2 UNITS",
+    "text": "When issuing Orders with this card, you may\nchoose to not issue up to 2 Orders. Then,\nfor each Order not issued in this way, choose\na different allied Mercenary unit within €} of\nthe nominated Commander. Each chosen unit\noains | Aim token."
+  },
+  "ry": {
+    "name": "Discretion",
+    "factionRestriction": "none",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "3 UNITS",
+    "text": "When issuing Orders with this card, you may\nchoose to not issue up to 3 Orders. Then, for\neach Order not issued in this way, choose a\ndifferent allied Mercenary unit within © of\nthe nominated Commander. Each chosen unit\noains | Dodge token."
+  },
+  "sj": {
+    "name": "Marked For Elimination",
+    "factionRestriction": "Mercenary",
+    "pips": "1",
+    "commanderRestriction": "Gar Saxon",
+    "orders": "Gar Saxon",
+    "text": "When Gar Saxon is issued an Order with this\ncard, he gains 2 Aim tokens. Then choose an\nenemy ~wAw or & unit. The chosen unit gains 4\nObservation tokens and 2 Suvpression tokens."
+  },
+  "sk": {
+    "name": "Fight Another Day",
+    "factionRestriction": "Mercenary",
+    "pips": "2",
+    "commanderRestriction": "Gar Saxon",
+    "orders": "Gar Saxon Trooper Units",
+    "text": "This Round, Gar Saxon cannot issue Orders\nto allied units that are not within 1 of him.\nWhen a unit is issued an Order with this card,\nit gains 1 Dodge token.\nGar Saxon and allied WAY units gain\nOuTMANEUVER this Round."
+  },
+  "sl": {
+    "name": "Victory or Death!",
+    "factionRestriction": "Mercenary",
+    "pips": "3",
+    "commanderRestriction": "Gar Saxon",
+    "orders": "Gar Saxon Trooper Units",
+    "text": "When a unit is issued an Order with this card,\nit gains 1 Aim token.\nGar Saxon and allied WAY units gain\nINDOMITABLE this Round."
+  },
+  "ss": {
+    "name": "Delaying Tactics",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "1 Unit",
+    "text": "At the end of this Command Phase, choose an\nopponent. The chosen opponent must choose\n1 of their non-~Aw units that has a faceup\nOrder token, if able, and return that unit's\nOrder token to their Order Pool."
+  },
+  "st": {
+    "name": "Courage of the Rebellion",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "2 Units",
+    "text": "When an allied unit is issued an Order with\nthis card. that unit mav make a Recover action."
+  },
+  "su": {
+    "name": "Hold at Any Cost",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "3 CORPS OR SUPPORT UNITS",
+    "text": "When an allied Trooper unit is issued an \nOrder with this card, it gains 1 Aim token and\n1 Standby token."
+  },
+  "sv": {
+    "name": "Unrelenting Fire",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "2 Units",
+    "text": "This Round, each enemy unit cannot remove\nmore than 1 Suppression token during its"
+  },
+  "sw": {
+    "name": "Overwhelming Barrage",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "2 Units",
+    "text": "Once this Round, at the end of an allied ~w\nunit's Activation, that unit may make an attack\nusing the weapon below.\nOverwn ELMING BARRAGE _ Oo.\n1 BEAM 1. BLAST. CRITICAL 3."
+  },
+  "sx": {
+    "name": "Debark for Ground Assault",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "3 UNITS",
+    "text": "When an A Trooper unit is issued an\nOrder with this card, until the end of the\nRound, it gains Spur, and its weapons gain"
+  },
+  "sy": {
+    "name": "Lead From the Front",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "1 COMMANDER UNIT",
+    "text": "When building a Command Hand, treat this\ncard as though it has 2 pips. When an allied\nwAw is issued an Order with this card, choose\nup to 3 other allied units within 1 of that\nwAe unit. Each chosen unit gains 1 Aim token\nor 1 Dodge token."
+  },
+  "sz": {
+    "name": "Tactical Planning",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "2 SPECIAL FORCES OR SUPPORT UNITS",
+    "text": "This Round, each time an allied WAY or &\nunit makes an attack against a unit that has a\nfaceup Order token, after the attack is resolved,\nshuffle that token back into its controlling\nplaver's Order Pool."
+  },
+  "ta": {
+    "name": "Leaders of the 501st",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "3 SPECIAL FORCES OR TROOPER UNITS",
+    "text": "PERMANENT. Allied units within R2 of\nAnakin Skywalker and/or an allied Clone\nCaptain Rex gain INDOMITABLE."
+  },
+  "tb": {
+    "name": "AI Coordination",
+    "factionRestriction": "Separatists",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "Unit",
+    "text": "When a unit is issued an Order with this card,\nit on1n anadabv token"
+  },
+  "tc": {
+    "name": "Unrelenting Assault",
+    "factionRestriction": "Separatists",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "2 CORPS UNITS",
+    "text": "Until the end of the Round, each time an\nallied A unit makes a Ranged attack, after the\naction is resolved, if it spent 1 or more Aim\ntokens, another allied unit within 2 may gain"
+  },
+  "td": {
+    "name": "Unstoppable Advance",
+    "factionRestriction": "Separatists",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "Units",
+    "text": "When a unit is issued an Order with this card,\nit mav make a Sneed-|1 Move"
+  },
+  "te": {
+    "name": "A Simple Man",
+    "factionRestriction": "none",
+    "pips": "1",
+    "commanderRestriction": "Boba Fett",
+    "orders": "1 Unit",
+    "text": "At the start of the next Activation Phase,\nif Boba Fett has a faceup Order token,\nan allied unit within 1} of Boba Fett may\nmake a Speed-1 Move.\nOtherwise, Boba Fett gains 1 Aim token\nand, until the end of the Round, increases\nthe Range of his Ranged weapons by | toa\nmaximum of 5 and cains MARKSMAN."
+  },
+  "tf": {
+    "name": "Making His Way in the Galaxy",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "Boba Fett",
+    "orders": "BOBA FETT",
+    "text": "During his next Activation, Bobba Fett cannot make Attack actions. At the end of Boba Fett's\nnext Activation, he may make an attack with\nonly the following weapon against each enemy\nunit within R1 and in LOS.",
+    "weapon": {
+      "name": "No DIsINTEGRATIONS",
+      "range": "0-1",
+      "dice": "2R 1B",
+      "keywords": "BLAST. IMPAGT 1. VERSATILE"
+    }
+  },
+  "tg": {
+    "name": "Rule With Respect",
+    "factionRestriction": "none",
+    "pips": "3",
+    "commanderRestriction": "Boba Fett",
+    "orders": "BOBA FETT & 2 UNITS",
+    "text": "Each time an allied unit within 1) and in\nLOS of Boba Fett makes a Ranged attack this\nRound, if Boba Fett has a faceup Order token,\nadd 1 black die to 1 of that unit’s Attack Pools\ndurinse the Form Attack Poo! step."
+  },
+  "th": {
+    "name": "Whistling Birds",
+    "factionRestriction": "none",
+    "pips": "3",
+    "commanderRestriction": "Din Djarin",
+    "orders": "DIN DJARIN",
+    "text": "During Din Djarin’s next Activation, he gains\nthe following action.\n4 Choose up to 3 enemy units within @ and\nin LOS. For each chosen unit, roll 1 white attack\ndie for each miniature in that unit. That unit\nsuffers 1 Wound for each HIT, CRIT, and SURGE result\nrolled."
+  },
+  "tt": {
+    "name": "I Like Those Odds",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "Din Djarin",
+    "orders": "Din Djarin",
+    "text": "Din Djarin gains 1 Aim token.\nThis Round, when Din Djarin makes an Attack\naction, after that Attack action is resolved,\nhe mav make an attack against a different unit."
+  },
+  "tu": {
+    "name": "This is the Way",
+    "factionRestriction": "none",
+    "pips": "1",
+    "commanderRestriction": "Din Djarin",
+    "orders": "Din Djarin",
+    "text": "Din Djarin gains 1 Dodge token and gains\nRELENTLESS this Round."
+  },
+  "tw": {
+    "name": "A Machine Made For Killing",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "IG-11 / IG-88",
+    "orders": "IG-11 or IG-88",
+    "text": "When a unit is issued an Order with this card,\nit gains 1 Aim token and gains DEMORALIZE 3\nand STEADY this Rounc"
+  },
+  "tx": {
+    "name": "Anti-Capture Protocols",
+    "factionRestriction": "none",
+    "pips": "3",
+    "commanderRestriction": "IG-11",
+    "orders": "IG-11",
+    "text": "When building a Command Hand, if your\narmy includes IG-11, this card must be\nincluded.\nThis Round, IG-11 gains })} SetF-Destruct 4\nand must make a }} SenF-DestTrRucr 4 action\nduring his Activation. if able."
+  },
+  "ty": {
+    "name": "Focused on the Kill",
+    "factionRestriction": "none",
+    "pips": "1",
+    "commanderRestriction": "IG-88",
+    "orders": "Permanent. When Ig-",
+    "text": "against a unit that has 1 or more Bounty tokens,\nthe defending unit cannot spend tokens during\nthat attack.\nIG-88 is not defeated when he is assigned\nWound tokens equal to his Wound threshold.\nAt the start of the End Phase, if IG-88 has a\nnumber of Wound tokens equal to or exceeding\nhis Wound threshold. he is defeated."
+  },
+  "tz": {
+    "name": "Independent Programming",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "IG-88",
+    "orders": "IG-88",
+    "text": "PERMANENT. When IG-88 issues an Order to\nhimself, he gains 1 Aim token.\n-88 oain pe PENDENT: LIOD"
+  },
+  "ua": {
+    "name": "Mechanical Carnage",
+    "factionRestriction": "none",
+    "pips": "1",
+    "commanderRestriction": "IG-11",
+    "orders": "IG-11",
+    "text": "IG-11 loses GUNSLINGER this Round.\nThe first time IG-11 declares an Attack action\nduring his next Activation, he makes 1 attack\nagainst each enemy unit within @ and in LOS\ninstead of attacking normally."
+  },
+  "ud": {
+    "name": "The Hand Thing",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "Grogu",
+    "orders": "NONE",
+    "text": "This card cannot be selected during the\nCommand Phase. When an allied unit within\n1) and in LOS of Grogu is declared as a\ndefender against a Ranged attack, you may\ndiscard this card from your Command Hand.\nIf you do, the defending unit gains 2 Dodge\ntokens and gains DEFLECT until the attack"
+  },
+  "uk": {
+    "name": "Die at My Hand",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "Moff Gideon",
+    "orders": "Moff Gideon",
+    "text": "Moff Gideon gains 1 Aim token and 1 Dodge\noken and oains RK A his Round"
+  },
+  "ul": {
+    "name": "You Have Something I Want",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "Moff Gideon",
+    "orders": "2 Units",
+    "text": "This card cannot be chosen during the first\nRound. After Orders have been issued, choose\nan allied Imperial Dark Troopers unit that\nhas a faceup Order token. Remove the chosen\nunit from the battlefield, keeping all its tokens,\nthen place it on the battlefield not within 2}\nof any enemy units. Then flip the chosen unit's\nOrder token facedown."
+  },
+  "um": {
+    "name": "Moment of Consideration",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "Moff Gideon",
+    "orders": "3 CORPS OR HEAVY SUPPORT UNITS",
+    "text": "When a unit is issued an Order with this card, it gains 1 Standby token"
+  },
+  "uu": {
+    "name": "The Sith Will Rule",
+    "factionRestriction": "Separatists",
+    "pips": "2",
+    "commanderRestriction": "Count Dooku",
+    "orders": "COUNT DOOKU",
+    "text": "gains | Aim token and | Dodge token.\nAfter Count Dooku’s next Activation, if Asajj\nVentress does not have a facedown Order\ntoken, she activates. After she activates, if she\nhas a faceup Order token, flip it face down. If\nshe does not have an Order token, assign her\na facedown @ Order token from your Order\nPool, then shuffle your Order Pool."
+  },
+  "uv": {
+    "name": "The Jedi Shall Fall",
+    "factionRestriction": "Separatists",
+    "pips": "1",
+    "commanderRestriction": "Asajj Ventress",
+    "orders": "Asajj Ventress",
+    "text": "Asajj Ventress gains JEDI HUNTER this\nRound. Until the end of the Round, each time\nAsajj Ventress makes an attack, during the\nRoll Attack Dice step, she may gain up to 4\nSuppression tokens before rolling dice. She\ngains 1 Dodge token for each Suppression\ntoken gained in this way."
+  },
+  "ux": {
+    "name": "I Am Fear",
+    "factionRestriction": "Separatists",
+    "pips": "2",
+    "commanderRestriction": "Asajj Ventress",
+    "orders": "Asajj Ventress",
+    "text": "At the start of Asajj Ventress’ next Activation,\nshe makes a Recover action. At the end of\nAsajj Ventress’ next Activation, she may make\nan attack using the weapon below.\nForce CHoke\nCRITICAL 4. SPRAY. SUPPRESSIVE | Oe"
+  },
+  "uw": {
+    "name": "Yes, My Master",
+    "factionRestriction": "Separatists",
+    "pips": "3",
+    "commanderRestriction": "Asajj Ventress",
+    "orders": "Units",
+    "text": "You must Divulge this card. It stays in play.\nDIVULGE: Resolve Setup Effects step. Choose 1 of\nthe following effects to resolve:\n- PERMANENT. Asajj Ventress gains BOUNTY and\nREINFORCEMENTS.\n« PERMANENT. Asajj Ventress gains\nDEMORALIZE 1, MAKASHI MASTERY, and\nOnra ANEIIVED"
+  },
+  "va": {
+    "name": "Bring It Down!",
+    "factionRestriction": "Republic",
+    "pips": "1",
+    "commanderRestriction": "Clone Commander Cody",
+    "orders": "CLONE COMMANDER CODY",
+    "text": "Cody may make his }} actions up to 2 times.\nThis Round, each time an allied unit declares an\nattack against an enemy unit that has 1 or more\nObservation tokens, the allied unit may spend\n1 of those tokens. If it does, that attack gains\nSuPPRESSIVE if the enemy unit is a Trooper\nunit, or ImpacrT 7 if the enemy unit is a Vehicle"
+  },
+  "vb": {
+    "name": "Have I Ever Let You Down?",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "Clone Commander Cody",
+    "orders": "Cione",
+    "text": "This Round, each time a unit that was issued an\nOrder with this card suffers 1 or more Wounds\nfrom an enemy attack while within 1) of Clone\nCommander Cody, after the attack is resolved,\nif Clone Commander Cody is within } of the\nattacking enemy unit and has LOS to it, he may\nmake an attack against that unit."
+  },
+  "vc": {
+    "name": "Combined Arms",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "Clone Commander Cody",
+    "orders": "2 TROOPER UNITS & 2 VEHICLE UNITS",
+    "text": "Activation, he may make his }} actions up to\n2 times. This Round, each time an allied Vehicle\nunit declares an attack against an enemy unit\nthat has 1 or more Observation tokens, the\nallied unit may spend 1 of those tokens. If it\ndoes, after the attack is resolved, an allied Clone\nTrooper unit within € of that Vehicle may\nmake a Sneed-1 Move."
+  },
+  "vf": {
+    "name": "I Am No Jedi",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "Ahsoka Tano",
+    "orders": "AHSOKA TANO",
+    "text": "Ahsoka Tano gains AGILE 7 this Round. Until\nthe end of the Round, each time Ahsoka Tano\nmakes an attack, during the Form Attack Pool\nstep, add 1 white die to the Attack Pool for\neach Dodge token that she has, to a maximum"
+  },
+  "vg": {
+    "name": "Family Reunion",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Ahsoka Tano",
+    "orders": "AHSOKA TANO & SABINE WREN",
+    "text": "Ahsoka Tano gains TEAMWORK: SABINE\nWReEn this Round.\nAt the start of Ahsoka Tano’s next Activation,\nSabine Wren may make a Speed-2 Move.\nAt the start of Sabine Wren’s next Activation,\nAhsoka Tano mav make a Speed-2 Move."
+  },
+  "vh": {
+    "name": "Swift Protector",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Ahsoka Tano",
+    "orders": "Ahsoka Tano",
+    "text": "Ahsoka Tano gains GUARDIAN 2 this Round.\nUntil the end of the Round, each time another\nallied small-base Trooper unit within 1 of\nAhsoka Tano is declared as a defending unit,\nthat defending unit mav gain 1 Dodge token."
+  },
+  "vi": {
+    "name": "A New Beginning",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "Ahsoka Tano",
+    "orders": "AHSOKA TANO and 2 UNITS",
+    "text": "When a small-base Trooper unit is issued an\nOrder with this card, it gains either 1 Aim\ntoken or 1 Dodge token. Ahsoka Tano gains\nINSPIRE 2 this Round. At the start of Ahsoka\nTano’s next Activation, she makes a Recover"
+  },
+  "vl": {
+    "name": "Close Call",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "Wicket",
+    "orders": "WICKET",
+    "text": "At the start of the next Activation Phase,\nWicket gains 1 Dodge token. Until the end of\nthe Round, Wicket increases his maximum\nSpeed to 3 and gains OUTMANEUVER. Wicket\ncannot make attacks this Round."
+  },
+  "vm": {
+    "name": "Sneaky Scouting",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Wicket",
+    "orders": "Wicket",
+    "text": "Choose up to 2 enemy units within @ of\nWicket. Each chosen unit gains 2 Observation\ntokens. Until the end of the Round, each time\nan allied unit declares an attack against a unit\nthat has 1 or more Observation tokens, you\nmay spend 1 Observation token on that enemy\nunit. If you do, the Attack Pool gains 2G : 3\nfor that attack."
+  },
+  "vn": {
+    "name": "Courageous Counterattack",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "Wicket",
+    "orders": "Wicket & 2 Units",
+    "text": "Allied @ units with a faceup Order token treat\ntheir ® as “—” this Round.\nUntil the end of the Round, each time an allied\n¢ Trooper unit that has a faceup Order token\nattacks, during the Form Attack Pool step, for\neach Wound token and miniature from that\nunit that was previously defeated, add 1 white\nattack die to the Attack Pool."
+  },
+  "vo": {
+    "name": "A Beautiful Friendship",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Leia Organa",
+    "orders": "Leia Organa Wicket",
+    "text": "PERMANENT. Wicket gains TEAMWORK:\nLea ORGANA. When an ¢ Av issues Orders,\nyou may choose an allied Q unit within PT)\nof that “ew and that “Aw issues the chosen\nunit an Order. When a Y wAw issues Orders,\nyou may choose an allied @ unit within of\nthat ~~ and that ~Aw issues the chosen unit"
+  },
+  "vw": {
+    "name": "Arboreal Assault",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "2 <Ewok> Trooper UNITS",
+    "text": "You must nominate an <Ewok> Commander. If you cannot nominate an <Ewok> commander you cannot play this card.\nWhen a <Ewok> Trooper unit is issued an Order with\nthis card, its weapons gain SUPPRESSIVE and\nIMMOBILIZE 1 until the end of the Round.\nAdditionally, when an allied special forces unit makes\nan attack against an enemy unit that has a\nfaceup Order token, after the attack is resolved,\nshuffle that Order token back into that player's \nOrder Pool.",
+    "flavor": "Bright Tree Village"
+  },
+  "vx": {
+    "name": "Log Traps",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "NO UNITS",
+    "text": "At the start of the Activation Phase this\nRound, 1 é Trooper unit that contains an\nEwok Trapper miniature may make an attack\nusing the weapon below."
+  },
+  "vy": {
+    "name": "Hiding in Plain Sight",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "BRIGHT TREE VILLAGE",
+    "orders": "2 <EWOK> TROOPER UNITS",
+    "text": "You must nominate an € Commander.\nIf you cannot nominate an € Commander, you\ncannot play this card.\nUnits issued an Order with this card gain\nInNcoNSsPICUOUS this Round."
+  },
+  "vz": {
+    "name": "For the Tribe",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "Trooper Units",
+    "text": "You must nominate an € Commander.\nIf you cannot nominate an € Commander, you\ncannot play this card.\nUnits issued an Order with this card gain\nDAUNTLESS and RELENTLESS this Round.\nWhen a unit is issued an Order with this card,\nit mav make a Recover action."
+  },
+  "wf": {
+    "name": "Drive Them Out",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "Vehicle Unit",
+    "text": "Allied Vehicles gain DEMORALIZE 1 this\nRound. The first time an allied Vehicle that has\na faceup Order token ends a Move within 2B\nof 1 or more enemy units this Round, choose\n1 of those units. Roll 1 white defense die for\neach miniature in the chosen unit. The chosen\nunit suffers 1 Wound for every or © result"
+  },
+  "wg": {
+    "name": "We Need Reinforcements",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "Trooper Units",
+    "text": "When a unit is issued an Order with this card,\nit oains NGS his Round"
+  },
+  "wh": {
+    "name": "Constantly Alert",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "3 Units",
+    "text": "When a unit is issued an Order with this card,\nit gains 1 Aim token for each enemy unit within\n1) of it. Then, if it did not gain any Aim tokens\nthis wav. it oains 1 Standby token."
+  },
+  "wi": {
+    "name": "Gunner, Infantry!",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "Major Marquand",
+    "orders": "MAJOR MARQUAND",
+    "text": "Until the end of the Round, Major Marquand\ngains TACTICAL 7 and his weapons gain\nSuPPRESSIVE. During his next Activation,\nMajor Marquand reduces his maximum\nSpeed bv 1. toa minimum of 1]."
+  },
+  "wj": {
+    "name": "Squadron, On Me",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "Major Marquand",
+    "orders": "Major Marquand",
+    "text": "At the start of Major Marquand’s next\nActivation, each other allied Vehicle unit\nwithin 4} of him may make a free Pivot.\nThen those units mav make a Snpeed-1 Move."
+  },
+  "wk": {
+    "name": "Armored Cavalry",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "Major Marquand",
+    "orders": "3 VEHICLE UNITS",
+    "text": "resolve 1 of the following effects:\ne Ifthe Vehicle unit is in Major Marquand's\nfront arc or is undeployed, it may gain 1\nDodge token.\ne Ifthe Vehicle unit is in Major Marquand's\nside arc, it may gain 1 Aim token.\ne Ifthe Vehicle unit is in Major Marquand's\nrear arc. it mav make a Sneed-1 Move."
+  },
+  "wu": {
+    "name": "You Would Question Me?",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "Fifth Brother",
+    "orders": "Permanent. Each Fifth Brother",
+    "text": "1 or more Aim tokens, Seventh Sister gains 1\nDodge token. Each time Fifth Brother gains 1\nor more Dodge tokens, Seventh Sister gains 1\nAim token. When either of those units would\ngain 1 or more Aim tokens or Dodge tokens,\nthe other unit may gain 1 Immobilize token. If\nit does, the first unit gains 1 additional token\nof the same tvne."
+  },
+  "wv": {
+    "name": "I Care Not For Your Struggles",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "Fifth Brother",
+    "orders": "Fifth Brother Trooper Units",
+    "text": "When a unit is issued an Order with this card,\nit scains DAUNTLESS this Round."
+  },
+  "ww": {
+    "name": "Come and Prove It",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "Seventh Sister",
+    "orders": "Fifth Brother Seventh Sister",
+    "text": "This Round, Fifth Brother and Seventh\nSister gain INDOMITABLE and roll 1 extra\ndefense die during the Roll Defense Die step\nwhile they are defending. Until the end of the\nRound, each time Seventh Sister is declared\nas the target of an attack, if she has a faceup\nOrder token, she gains 1 Dodge token at the\nstart of the Anpvlv Dodge and Cover step."
+  },
+  "wx": {
+    "name": "Unexpected, But Not Unwelcome",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "Seventh Sister",
+    "orders": "Fifth Brother Seventh Sister",
+    "text": "When a unit is issued an Order with this card,\nit makes a Recover action. This Round, each\ntime Seventh Sister attacks a “Ae or A unit\nthat has 1 or more facedown Order tokens, at\nthe start of the Roll Attack Dice step she may\ngain up to 2 Suppression tokens. If she does,\nshe gains 1 Aim token for each Suppression\ntoken gained in this wav."
+  },
+  "wy": {
+    "name": "You Hide Your Fear Well",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "Seventh Sister",
+    "orders": "Seventh Sister & 2 Units",
+    "text": "Seventh Sister gains DEMORALIZE 7 this\nRound. Until the end of the Round, each time\na Suppressed enemy unit within 4} of Seventh\nSister spends an Aim token to re-roll 1 or\nmore dice. that unit re-rolls 1 fewer die."
+  },
+  "wz": {
+    "name": "Brutal Enforcer",
+    "factionRestriction": "Separatists",
+    "pips": "1",
+    "commanderRestriction": "Sun Fac",
+    "orders": "SUN FAC",
+    "text": "At the start of the Activation Phase, choose u\nto 2 allied Geonosian Warrior units within rs\nof Sun Fac. Each chosen unit may #JumP 3.\nSun Fac gains AGILE 7 and DEMORALIZE 1"
+  },
+  "xa": {
+    "name": "Let the Executions Begin!",
+    "factionRestriction": "Separatists",
+    "pips": "1",
+    "commanderRestriction": "Poggle the Lesser",
+    "orders": "POGGLE THE LESSER",
+    "text": "This Round, each time an allied A Trooper unit\nmakes an attack, if the defending unit is within\n© and in LOS of Poggle the Lesser during the\nRoll Attack Dice step, the attacking unit gains\nM4 : Xt during that attack."
+  },
+  "xb": {
+    "name": "We Serve the Queen",
+    "factionRestriction": "Separatists",
+    "pips": "2",
+    "commanderRestriction": "Poggle the Lesser",
+    "orders": "1 UNIT",
+    "text": "Sun Fac loses Direct: GEONOSIAN\nWarriors this Round, and Sun Fac and allied\nGeonosian Warrior units gain COORDINATE:\nGEONOSIAN Warriors this Round. At the\nstart of each allied Geonosian Warrior unit's\nnext Activation, if it has a faceup Order token it\ngains 1 Aim token and 1 Dodge token."
+  },
+  "xc": {
+    "name": "We Make Weapons",
+    "factionRestriction": "Separatists",
+    "pips": "34",
+    "commanderRestriction": "Poggle the Lesser",
+    "orders": "4 DROID TROOPER UNITS",
+    "text": "When building a Command Hand, treat this\ncard as though it has 3 pips.\nWhen a CORPS Droid Trooper unit is issued an\nOrder with this card, you may choose to return\nits Order token to the Order Pool. If you do,\nyou may return 1 defeated miniature to the\nunit with no Wound tokens and remove 1\nSuppression token from the unit."
+  },
+  "xx": {
+    "name": "We Do What We Do",
+    "factionRestriction": "none",
+    "pips": "3",
+    "commanderRestriction": "The Bad Batch",
+    "orders": "THE BAD BATCH",
+    "text": "This Round:\nWhile The Bad Batch contains Hunter,\nit increases its maximum Speed by 1\nWhile it contains Tech, it gains TACTICAL 1.\nWhile it contains Echo, it gains RELIABLE 1.\nWhile it contains Crosshair, it gains PRECISE 1.\nWhile it contains Omega, it gains INSPIRE 1.\nWhile it contains Wrecker, its weapons gain\nSUPPRESSIVE"
+  },
+  "Be": {
+    "name": "You Are Beaten",
+    "factionRestriction": "Republic",
+    "pips": "1",
+    "commanderRestriction": "Ahsoka Tano",
+    "orders": "1 UNIT",
+    "text": "If she defeats 1 or more enemy units this\nRound, she can make up to 2 attack actions\nand may make a free Move action during her\nActivation this Round. When Ahsoka Tano\nattacks an enemy unit with a Melee attack\nthis Round, after that attack is resolved, the\ndefending unit may make a free Move action\nand can Withdraw with that action."
+  },
+  "Bf": {
+    "name": "I Go Where I'm Needed",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "Ahsoka Tano",
+    "orders": "3 Units",
+    "text": "Ahsoka Tano may make a Speed-3 Move. This\nRound, Ahsoka Tano gains GUARDIAN 3 and\nDisencace, her © is increased by 1, she treats\nher maximum Speed as 1, and her maximum\nCnped cannat he incresaced"
+  },
+  "Bg": {
+    "name": "Revenge Is Not the Jedi Way",
+    "factionRestriction": "Republic",
+    "pips": "24",
+    "commanderRestriction": "Ahsoka Tano, Padawan Commander",
+    "orders": "2 UNITS",
+    "text": "When building a Command Hand, treat this\ncard as though it has 2 pips. Ahsoka Tano\ngains 3 Dodge tokens. Additionally, Ahsoka\n‘Tano gains Jar‘Kat Mastery and loses\nSwiew Mastery this Round."
+  },
+  "Bw": {
+    "name": "That's Just Good Business",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "Hondo Ohnaka",
+    "orders": "HONDO OHNAKA & 1 UNIT",
+    "text": "free Move Action during his Activation. ihe\nfirst time Hondo Ohnaka moves into melee\nwith an enemy unit this Round, after the\nmove is resolved, Hondo Ohnaka removes all\nSuppression tokens on him and that enemy\nunit gains the tokens removed. Then, that\nenemy unit removes all green tokens on them,\nand Hondo Ohnaka gains the tokens removed."
+  },
+  "Bx": {
+    "name": "Stories, So Many of Them True",
+    "factionRestriction": "none",
+    "pips": "3",
+    "commanderRestriction": "Hondo Ohnaka",
+    "orders": "Hondo Ohnaka",
+    "text": "‘This Round, when an allied unit begins its\nactivation on the battlefield and within 4} of\nHondo Ohnaka, if he has a faceup Order token\nand ifhe is not Panicked, Hondo Ohnaka\nmay gain | Suppression token. If he does, the\nactivating unit gains 1 Aim token, | Dodge\ntoken, or | Surge token."
+  },
+  "Cn": {
+    "name": "Inexorable Advance",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "Imperial Officer",
+    "orders": "3 TROOPER UNITS",
+    "text": "When a & Trooper unit is issued an Order\nwith this card, its Ranged weapons gain\nSUPPRESSIVE until the end of the Round.\nAdditionally, when an enemy unit Panics this\nRound, after the effect is resolved, an allied\nON pee ee elon oy (Ov aue| 9) Wi fpacom"
+  },
+  "Co": {
+    "name": "Fearsome Oration",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "Imperial Agent",
+    "orders": "Imperial Agent",
+    "text": "When an Imperial Agent is issued an order\nwith this card, it gains DEMORALIZE 2 and\nImenimje 8 wntil tho and afths Daind"
+  },
+  "Cw": {
+    "name": "Diversionary Tactics",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "Rebel Officer",
+    "orders": "Trooper Units",
+    "text": "When a unit is issued an Order with this card,\nit O|11N lYadoe taken and (Yacervatian talien"
+  },
+  "Cx": {
+    "name": "Battlefield Reconnaissance",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Rebel Agent",
+    "orders": "Unit & 1 Unit",
+    "text": "This Round, when creating your Pass Pool, add\na number of additional Advantage tokens equal"
+  },
+  "Dm": {
+    "name": "Flow of the Force",
+    "factionRestriction": "Republic",
+    "pips": "1",
+    "commanderRestriction": "Jedi Knight / Jedi Knight General",
+    "orders": "JEDI KNIGHT OR JEDI KNIGHT GENERAL",
+    "text": "JEDI KNIGHT OR JEDI KNIGHT GENERAL\nWhen a unit is issued an Order with this card,\nit may make a Recover action. Then it gains\n1 Aim token, 1 Dodge token, and 1 Standby"
+  },
+  "Dn": {
+    "name": "Affirmative, General!",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "Jedi Knight / Jedi Knight General",
+    "orders": "Cli Oalle Tdohhded",
+    "text": "When issuing Orders with this card, you may\nchoose to not issue up to 3 Orders. Then, for\neach Order not issued in this way, choose a\ndifferent allied &) Clone Trooper unit without\na faceup Order token. Each chosen unit may\nmake a Speed-1 Move and may remove up to\n1 Suppression token."
+  },
+  "Ed": {
+    "name": "Exterminate",
+    "factionRestriction": "Separatists",
+    "pips": "1",
+    "commanderRestriction": "Super Tactical Command Droid",
+    "orders": "SUPER TACTICAL COMMAND DROID",
+    "text": "an Order with this card, it gains DEMORALIZE 2\nthis Round.\nAdditionally, the first time this Round the\nOrdered Super Tactical Command Droid\ndefeats an enemy unit, after the effect is resolved,\nthat Super Tactical Command Droid may make\na free Attack action, even if it has already made\nan Attack action durino its Activation."
+  },
+  "Ee": {
+    "name": "Tactical Download",
+    "factionRestriction": "Separatists",
+    "pips": "3",
+    "commanderRestriction": "Super Tactical Command Droid",
+    "orders": "3 AI UNITS OR DROID TROOPER UNITS",
+    "text": "Each time an allied Droid Trooper unit or\nallied unit with the Al keyword attacks or\ndefends this Round, it may spend 1 token on\nthis card as if that unit had that token. If it\ndoes, for each token an allied unit spends in\nthis way, after the effect is resolved, that unit\ngains 1 Immobilize token."
+  },
+  "Eh": {
+    "name": "Full Throttle",
+    "factionRestriction": "Separatists",
+    "pips": "3",
+    "commanderRestriction": "General Grievous",
+    "orders": "General Grievous Vehicle Units",
+    "text": "When a unit is issued an Order with this card,\nit gains 1 Dodge token.\nThis Round, when an allied Vehicle unit makes\na Move, after the effect is resolved, it gains\n1 Surge token."
+  },
+  "Ei": {
+    "name": "Pincer Attack",
+    "factionRestriction": "Separatists",
+    "pips": "2",
+    "commanderRestriction": "General Grievous",
+    "orders": "Vehicle Units",
+    "text": "This Round, when an allied Vehicle unit\nattacks, the defending unit does not benefit\nfrom Cover if it is within 1 and in LOS of\n1 or more other allied Vehicle units."
+  },
+  "Ej": {
+    "name": "I'll Do it Myself!",
+    "factionRestriction": "Separatists",
+    "pips": "1",
+    "commanderRestriction": "General Grievous",
+    "orders": "GENERAL GRIEVOUS",
+    "text": "Within @y Of General Grievous. if you do,\nthe chosen unit suffers 1 Wound and General\nGrievous gains TACTICAL 7 this Round.\nWhen General Grievous makes attacks this\nRound, remove all Aim tokens, Dodge tokens,\nSurge tokens, and Standby tokens from the\ndefending unit during the Form Attack Pool"
+  },
+  "Ex": {
+    "name": "Sneak Attack",
+    "factionRestriction": "Republic",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "1 UNIT",
+    "text": "Divutee: Setup. Choose up to 2 A Clone\nTrooper units. Each chosen unit gains\nINFILTRATE this game. Then, for each WA\"\nunit in your army, choose a different Vehicle\nunit. Each chosen Vehicle unit gains Scour 1"
+  },
+  "Ey": {
+    "name": "Recon Division",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "Linits",
+    "text": "This Round, each allied Trooper unit gains\n4 OBSERVE 1.\nAdditionally, during the Remove Tokens step\nof the next End Phase, if an enemy unit with\n1 or more Observation tokens has LOS to\n1 or more allied units, the enemy unit does not\nremove anv Observation tokens."
+  },
+  "Ez": {
+    "name": "Flexible Strategy",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "3 Units",
+    "text": "When a Trooper unit is issued an Order with\nthis card, it may remove up 1 to Suppression\ntoken or make a Speed-1 Move. When a\nVehicle unit is issued an Order with this card,\nit mav gain 1 Aim token or 1 Dodge token."
+  },
+  "Fh": {
+    "name": "We Must Wait and Watch",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "Grand Admiral Thrawn",
+    "orders": "Coe Reinforcements",
+    "text": "This card cannot be selected during the\nCommand Phase. When an enemy unit ends\nits Activation, you may discard this card. If you\ndo, choose a non-Suppressed or non-Panicked\nallied unit within @ of the enemy unit. The\nchosen unit may make a free Move action or\nAttack action."
+  },
+  "Fi": {
+    "name": "Fear Will Keep Them in Line",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "Grand Moff Tarkin",
+    "orders": "Itlialitc",
+    "text": "DIVULGE: Resolve Setup Effects step.\nPermanent. When an allied @ unit is issued\nan Order, it has DEMORALIZE 7 until the end\nof the Round.\nAllied i) units have DEMORALIZE 1 this"
+  },
+  "Ft": {
+    "name": "Architects of Their Own Destruction",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "Grand Admiral Thrawn",
+    "orders": "1 UNIT",
+    "text": "token from your opponent's Order Pool, if able.\nThe first time your opponent chooses to activate\na unit this Round, they may choose to activate\nthe chosen unit. If they do not, the chosen unit\nmay not activate using a faceup Order token\nuntil your Opponent has no Order tokens in\ntheir Order Pool or on Command Cards, and\nhac no other nite with facenn Order takenc"
+  },
+  "Fu": {
+    "name": "Canny Adversary",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "General Tagge",
+    "orders": "3 UNITS",
+    "text": "This Round, when an enemy unit within © of\nGeneral Tagge spends 1 or more Aim tokens,\nDodge tokens, or Surge tokens, add 1 Aim\ntoken, 1 Dodge token, or 1 Surge token to\nLogistical Prowess. Then, if the enemy unit\nis in LOS of General Tagge, that enemy unit\ncaine 1 Ohcervation token"
+  },
+  "Fv": {
+    "name": "I Have Graphs AND the Command",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "General Tagge",
+    "orders": "1 UNIT",
+    "text": "General Tagge may remove any number of\ntokens from Logistical Prowess to gain the\nmatching tokens.\nAt the start of the Activation Phase, General\nTacoe mav make 9 Sneed _? MOVE."
+  },
+  "Fw": {
+    "name": "I Want You to Know Failure",
+    "factionRestriction": "Empire",
+    "pips": "3",
+    "commanderRestriction": "Grand Admiral Thrawn",
+    "orders": "3 Units",
+    "text": "This Round, when an allied @ unit attacks,\nduring the Form Attack Pools step it gains\n1 Aim token if the defending unit does not\nhave 1 or more facedown Order tokens."
+  },
+  "Fx": {
+    "name": "Moment of Triumph",
+    "factionRestriction": "Empire",
+    "pips": "1",
+    "commanderRestriction": "Grand Moff Tarkin",
+    "orders": "NO UNITS",
+    "text": "Backup. While defending, Grand Moff Tarkin\ncan benefit from Backup provided by Darth\nVader even if the attacking unit’s unit leader is\nwithin @ of Grand Moff Tarkin.\nWhile Grand Moff Tarkin is Contesting an\nObjective token that is not in allied Territory,\nallied Trooper units within 2} of him have"
+  },
+  "Fy": {
+    "name": "Not Out of it Yet",
+    "factionRestriction": "Rebels",
+    "pips": "3",
+    "commanderRestriction": "AND / Han Solo / Luke Skywalker",
+    "orders": "HAN SOLO & LUKE SKYWALKER",
+    "text": "a Speed-1 Move.\nThis Round, when Luke Skywalker begins\nhis Activation while within 2] of Han Solo,\nhe gains 1 Aim token and 1 Dodge token.\nAdditionally, when Han Solo begins his\nActivation while within 2} of Luke Skywalker\nthis Round, he gains 1 Aim token and 1 Dodge"
+  },
+  "Ga": {
+    "name": "On Patrol",
+    "factionRestriction": "Rebels",
+    "pips": "2",
+    "commanderRestriction": "Luke Skywalker, Commander Skywalker",
+    "orders": "LUKE SKYWALKER & 1 TROOPER UNIT",
+    "text": "When a unit is issued an Order with this card,\nit may make a Speed-1 Move, then make an\n> OBSERVE 4 Action.\nAdditionally, when an enemy unit ends it's\nActivation within R2 of an allied Creature\nTrooper unit this Round, the allied unit may\ngain 1 Dodge token"
+  },
+  "Gb": {
+    "name": "See You in Hell",
+    "factionRestriction": "Rebels",
+    "pips": "1",
+    "commanderRestriction": "Han Solo",
+    "orders": "HAN SOLO",
+    "text": "PERMANENT. Han Solo gains UNCONCERNED\nand UNSTOPPABLE.\nDuring the Round in which this card was\nplayed, Han Solo gains DISENGAGE and gains\n1 Aim token, 1 Dodge token, and cannot be\nCunprecced or Panicked"
+  },
+  "Gc": {
+    "name": "The Empire Does Not Tolerate Failure",
+    "factionRestriction": "Empire",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "2 EMPIRE",
+    "text": "starts its Activation this Round, it may gain 2\nAim tokens. If it does, at the end of that unit’s\nActivation, if it did not defeat at least 1 enemy\nunit during that Activation, it suffers 2 Wounds.\nDuring the End Phase, if 1 or more units issued\nan Order with this card defeated 1 or more\nenemy ww or @ units this Round, you score"
+  },
+  "Gr": {
+    "name": "This Party's Over",
+    "factionRestriction": "Republic",
+    "pips": "1",
+    "commanderRestriction": "Mace Windu",
+    "orders": "MACE WINDU",
+    "text": "When Mace Windu is issued an Order with\nthis card, he may suffer 1-3 Wounds.\nThis Round, when Mace Windu would use\nthe Vaapap Mastery keyword while he\nis Engaged, add red attack or defense dice\ninstead of white attack or defense dice."
+  },
+  "Gt": {
+    "name": "Unity Wins Wars",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "Shaak Ti",
+    "orders": "SHAAK TI & 2 UNITS",
+    "text": "This Round, once per Activation when an\nallied & unit gains 1 or more Aim tokens\nor | or more Dodge tokens, after the effect is\nresolved, you may choose an allied unit with\nthe Mercenary keyword within @ of the\nallied & unit. The chosen unit gains 1 token\nof the same tvpe."
+  },
+  "Gv": {
+    "name": "Force of Will",
+    "factionRestriction": "Republic",
+    "pips": "3",
+    "commanderRestriction": "Ki-Adi-Mundi",
+    "orders": "3 UNITS",
+    "text": "units within & of him. Each chosen unit may\nremove up to 2 Suppression tokens. Then, for\neach Suppression token removed in this way,\nKi-Adi-Mundi gains 1 Suppression token and\nmay ready | of his exhausted © upgrades.\nAdditionally, each time Ki-Adi-Mundi uses\na © upgrade this Round, after the effect is\nresolved. he gains 1 Surge token."
+  },
+  "Gx": {
+    "name": "I Don't Believe in Chance",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "Plo Koon",
+    "orders": "Plo Koon & 2 Units",
+    "text": "When Plo Koon is issued an Order with\nthis card, he may make 2 }} Distracr free\nActions.\nUntil the end of the Round, when another\nallied unit issued an Order with this card starts\nits Activation within F 2} of Plo Koon, Plo\nKaan mav make a Sneed-.] Move."
+  },
+  "Gz": {
+    "name": "A Disturbance in the Force",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "2 Units",
+    "text": "This Round, while a unit issued an Order\nwith this card has a faceup Order token, it has\nDANGER Sense 1 and INDOMmITABLE.\nUntil the end of the Round, when an allied\nunit with 1 or more © upgrade slots spends\nor loses a Standby token this Round, after the\neffect is resolved, that unit gains 1 Aim token\nor 1 Dodge token."
+  },
+  "Hd": {
+    "name": "We Shall Start with Revenge",
+    "factionRestriction": "none",
+    "pips": "1",
+    "commanderRestriction": "Savage Opress",
+    "orders": "MAUL & SAVAGE OPRESS",
+    "text": "EE SERRE E SES UV URE Es SEREEE, SUE Vee\nWound token Savage Opress has, Savage\nOpress gains 1 Aim token. Finally, for each\nWound token Maul has, Maul gains 1 Aim\ntoken.\nChoose | of Maul’s Command Cards in\nyour Discard pile, if able. Return the chosen\nCommand Card to your Command Hand."
+  },
+  "Hi": {
+    "name": "For the Cause",
+    "factionRestriction": "Separatists",
+    "pips": "1",
+    "commanderRestriction": "none",
+    "orders": "24 Units",
+    "text": "You must nominate a “Ae unit as Commander\nto play this card.\nWhen a unit is issued an Order with this card,\nit gains 1 Surge token."
+  },
+  "Hl": {
+    "name": "Evasive Action",
+    "factionRestriction": "Republic",
+    "pips": "2",
+    "commanderRestriction": "MOUNTED JEDI GENERAL",
+    "orders": "NO UNITS",
+    "text": "MMYVYVDSe Mp V7 2 GIO VAY Ul @ UII Ula Lave\nthe SPEEDER X keyword. Each chosen unit\nissues an Order to itself and gains\nOuTmMaANeEvveR this Round.\nAdditionally, this Round, allied @ and V®,\nVehicle units have NimBLE while they are\nwithin @ of an allied “Ae or & unit that has\nthe SPEEDER X keyword."
+  },
+  "Ib": {
+    "name": "I Smell Fear... and it Smells Good",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "Admiral Trench",
+    "orders": "2 UNITS",
+    "text": "Choose up to 2 enemy units. Each chosen unit gains 1 Ploy Token\nThis Round, at the start of each allied unit's Activation, you may choose an enemy unit that\nhas 1 or more Ploy tokens. If you do, remove 1\nof those Ploy tokens and resolve 1 of the effects\nbelow:\n* The chosen unit loses 1 green token.\n* The chosen unit gains 2 Suppression tokens.\n* If the chosen unit has a faceup Order token,\nshuffle it into that Opponent’s Order Pool."
+  },
+  "Ie": {
+    "name": "Aerial Assault",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "2 UNITS",
+    "text": "When a unit with the Jump X keyword is\nissued an Order with this card. it may make a\n: 2) leg ae ee a gehen te SSeS ~ : $\nJump 2 action. =\nfaceup Order token and the Jump X keyword\nattac Ks, it gains | MEL TH From ABOVE until\n“theendotthe Rounds —"
+  },
+  "If": {
+    "name": "Weapons Are Our Religion",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "3 UNITS",
+    "text": "‘Wheo a unit és issued an Onder with this cand,\nit gains Oxamer this Round.\nThe weapons of allied Mandadoetan Trooper"
+  },
+  "It": {
+    "name": "I Smell Profit",
+    "factionRestriction": "none",
+    "pips": "3",
+    "commanderRestriction": "none",
+    "orders": "3 Units",
+    "text": "THE Prize: Low Prorite ano NimsBte."
+  },
+  "Iu": {
+    "name": "Speak Softly and Drive a Big Tank",
+    "factionRestriction": "none",
+    "pips": "2",
+    "commanderRestriction": "none",
+    "orders": "Vehicle Units",
+    "text": "When a unit is issued an Order with this card,\nit may make a free Move action or gain 1 Aim\ntoken or 1 Dodge token."
+  }
+}
