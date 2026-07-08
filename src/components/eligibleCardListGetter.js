@@ -1,7 +1,6 @@
 import _ from "lodash";
 import cards, { cardIdsByType, upgradeIdsBySubtype } from "constants/cards";
 
-import interactions from "components/cardInteractions";
 import battleForcesDict from "constants/battleForcesDict";
 import { sortCommandIds } from "./listOperations";
 import { makeModifiedCard } from "./utility";
@@ -17,7 +16,6 @@ const impRemnantUpgrades = [
   "fu",
   "gm",
   "gl",
-  "em",
   "en",
   "ja",
   // "Bo", // cheating ;)

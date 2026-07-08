@@ -170,25 +170,22 @@ function generateStandardText(list) {
   return header + points + units + commands;
 }
 
-
-function getTtsName(card){
-    if (card.ttsName) {
-      return card.ttsName;
-    } else if (card.title) {
-      if(card.cardType == 'upgrade'){
-        return card.cardName + ", " + card.title;
-      }else{
-        return card.cardName + " " + card.title;
-      }
+function getTtsName(card) {
+  if (card.ttsName) {
+    return card.ttsName;
+  } else if (card.title) {
+    if (card.cardType === "upgrade") {
+      return card.cardName + ", " + card.title;
     } else {
-      return card.cardName;
+      return card.cardName + " " + card.title;
     }
-};
+  } else {
+    return card.cardName;
+  }
+}
 
 function generateTTSJSONText(list) {
   const ttsJSON = { author: "Legion HQ" };
-
-  
 
   const writeCardsToJsonArray = (cardList, jsonArray) => {
     if (!cardList) return;
@@ -257,7 +254,7 @@ function generateTTSJSONText(list) {
   writeCardsToJsonArray(list.secondaryCards, ttsJSON.battlefieldDeck.objective);
   writeCardsToJsonArray(
     list.advantageCards,
-    ttsJSON.battlefieldDeck.conditions
+    ttsJSON.battlefieldDeck.conditions,
   );
   // TODO maybe someday we update this to the 'actual' new names, need a TTS update for that
   // appendMissionTTSJSON(list.primaryCards, ttsJSON.battlefieldDeck.objective);
@@ -338,5 +335,5 @@ export {
   generateTournamentText,
   generateStandardText,
   generateMinimalText,
-  getTtsName
+  getTtsName,
 };

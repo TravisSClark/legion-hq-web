@@ -1,4 +1,4 @@
-import React, { useState, Suspense, lazy } from "react";
+import React, { Suspense, lazy } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import LoadingWidget from "common/LoadingWidget";
 import listTemplate from "constants/listTemplate";

@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import {
   Box,
   IconButton,
-  Button,
   Dialog,
   DialogTitle,
   DialogContent,
@@ -158,9 +157,15 @@ function ListHeader() {
             flexDirection: "column",
           }}
         >
-          {showHeaderLabel && <Typography variant="subtitle1" component="label" htmlFor="my-button">
-            Battleforce:
-          </Typography>}
+          {showHeaderLabel && (
+            <Typography
+              variant="subtitle1"
+              component="label"
+              htmlFor="my-button"
+            >
+              Battleforce:
+            </Typography>
+          )}
           <div className={classes.item}>
             <FactionButton
               currentList={currentList}
@@ -177,9 +182,15 @@ function ListHeader() {
             flexDirection: "column",
           }}
         >
-          {showHeaderLabel && <Typography variant="subtitle1" component="label" htmlFor="my-button">
-            Mode:
-          </Typography>}
+          {showHeaderLabel && (
+            <Typography
+              variant="subtitle1"
+              component="label"
+              htmlFor="my-button"
+            >
+              Mode:
+            </Typography>
+          )}
           <div className={classes.item}>
             <ModeButton
               currentMode={currentList.mode}

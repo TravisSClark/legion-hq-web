@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { AppBar, Toolbar, IconButton, InputBase } from "@material-ui/core";
+import { AppBar, Toolbar, IconButton } from "@material-ui/core";
 import { alpha, makeStyles } from "@material-ui/core/styles";
-import { Menu as MenuIcon, Search as SearchIcon } from "@material-ui/icons";
+import { Menu as MenuIcon } from "@material-ui/icons";
 import { NavLink } from "react-router-dom";
 import DataContext from "context/DataContext";
 import lhqLogoLight from "assets/lhqLogoLight.svg";

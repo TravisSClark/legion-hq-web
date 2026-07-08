@@ -1,16 +1,12 @@
 import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
 import {
-  Button,
   ButtonBase,
-  Chip,
-  Icon,
   Menu,
   MenuItem,
   MenuList,
   Typography,
 } from "@material-ui/core";
-import LargerTooltip from "common/LargerTooltip";
 import legionModes from "constants/legionModes";
 import DataContext from "context/DataContext";
 import { ExpandMore } from "@material-ui/icons";
@@ -25,7 +21,6 @@ function ModeButton({
   const [anchorEl, setAnchorEl] = useState();
   const handleOpenMenu = (event) => setAnchorEl(event.currentTarget);
   const handleCloseMenu = () => setAnchorEl();
-  const { userSettings } = useContext(DataContext);
 
   const isOverPoints = points > maxPoints;
   const pointsDiff = Math.abs(maxPoints - points);

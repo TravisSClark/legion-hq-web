@@ -1,6 +1,5 @@
-import React, { useContext } from 'react';
-import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useContext } from "react";
+import { makeStyles } from "@material-ui/core/styles";
 import {
   Typography,
   IconButton,
@@ -11,115 +10,145 @@ import {
   Grow,
   Divider,
   Avatar,
-  Chip
-} from '@material-ui/core';
+  Chip,
+} from "@material-ui/core";
 import {
   Add as AddIcon,
-  ExpandMore as ExpandMoreIcon
-} from '@material-ui/icons';
-import { DefenseChip, PointsChip, SpeedChip, StatChip, SurgeChip } from 'common/CardChip';
-import KeywordChips from 'common/KeywordChips';
-import CardIcon from 'common/CardIcon';
-import IconBadge from 'common/IconBadge';
-import UpgradeBar from 'common/UpgradeBar';
-import ListContext from 'context/ListContext';
+  ExpandMore as ExpandMoreIcon,
+} from "@material-ui/icons";
+import {
+  DefenseChip,
+  PointsChip,
+  SpeedChip,
+  StatChip,
+  SurgeChip,
+} from "common/CardChip";
+import KeywordChips from "common/KeywordChips";
+import CardIcon from "common/CardIcon";
+import IconBadge from "common/IconBadge";
+import UpgradeBar from "common/UpgradeBar";
+import ListContext from "context/ListContext";
 
-function capitalizeFirstLetters(words) {
-  const strings = words.split(' ').map(string => {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  });
-  return strings.join(' ');
-}
-
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   expand: {
-    transform: 'rotate(0deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform', {
+    transform: "rotate(0deg)",
+    marginLeft: "auto",
+    transition: theme.transitions.create("transform", {
       duration: theme.transitions.duration.shortest,
     }),
   },
-  expandOpen: { transform: 'rotate(180deg)' },
-  card: { width: '100%', marginRight: 4, marginBottom: 4 }
+  expandOpen: { transform: "rotate(180deg)" },
+  card: { width: "100%", marginRight: 4, marginBottom: 4 },
 }));
 
 function ReverseWrapper({ children }) {
   const containerStyle = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'flex-end'
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "flex-end",
   };
-  return (
-    <div style={containerStyle}>
-      {children}
-    </div>
-  );
+  return <div style={containerStyle}>{children}</div>;
 }
 
-function isUniqueCard(card){
+function isUniqueCard(card) {
   return card.isUnique || card.isUniqueTitle;
 }
 
 // TODO a lot of this would be better if it shrunk based on screen width. For now, shave some space off to make mobile easier to use
 // (ie Compact is made with mobile first in mind)
-function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand, isCardExpanded }) {
+function TextCardHeader({
+  card,
+  handleClick,
+  handleExpandClick,
+  hideExpand,
+  isCardExpanded,
+}) {
   const { cardName, cardType, cardSubtype } = card;
-  const{handleCardZoom} = useContext(ListContext);
+  const { handleCardZoom } = useContext(ListContext);
 
-  let showPoints = !['battle', 'command'].includes(card.cardType);
+  let showPoints = !["battle", "command"].includes(card.cardType);
 
   // switch IconBadge props based on cardType
   let avatar = (
     <IconBadge
-      upgradeType={cardType === 'upgrade' ? cardSubtype: null}
-      rank={cardType === 'unit' ? card.rank: null}
-      hidden={cardType === 'command' || cardType === 'counterpart' || cardType === 'battle'}
+      upgradeType={cardType === "upgrade" ? cardSubtype : null}
+      rank={cardType === "unit" ? card.rank : null}
+      hidden={
+        cardType === "command" ||
+        cardType === "counterpart" ||
+        cardType === "battle"
+      }
       avatar={
         <CardIcon
           size="medium" // default large
           card={card}
-          handleClick={()=>{
-            handleCardZoom(card.id)
+          handleClick={() => {
+            handleCardZoom(card.id);
           }}
         />
       }
     />
   );
 
-  if(cardType === "battle"){
+  if (cardType === "battle") {
     // TODO stop repeating this code/color map
     let bgColor = "#953233";
-    let textColor = "#eee"
-    if(cardSubtype === 'secondary'){
+    let textColor = "#eee";
+    if (cardSubtype === "secondary") {
       bgColor = "#E68646";
-      textColor="#000"
-    }else if(cardSubtype === 'advantage'){
-      bgColor = '#306036';
+      textColor = "#000";
+    } else if (cardSubtype === "advantage") {
+      bgColor = "#306036";
     }
 
-    let avatarText = card.cardName.split(' ').map(s=>s.substring(0,1)).filter(s=>s.toUpperCase()===s).slice(0,2).join('');
+    let avatarText = card.cardName
+      .split(" ")
+      .map((s) => s.substring(0, 1))
+      .filter((s) => s.toUpperCase() === s)
+      .slice(0, 2)
+      .join("");
 
-    avatar = <Avatar style={{ backgroundColor: bgColor, color:textColor }}  onClick={()=>{
-      handleCardZoom(card.id)
-    }}>{avatarText}</Avatar>;
+    avatar = (
+      <Avatar
+        style={{ backgroundColor: bgColor, color: textColor }}
+        onClick={() => {
+          handleCardZoom(card.id);
+        }}
+      >
+        {avatarText}
+      </Avatar>
+    );
   }
 
   // Add button, same for every type, simply passing thru the 'add this card' handler
   const action = (
-    <div style={{flex:1, display:'flex', alignItems:'center', justifyContent:'center'}}>
-      {card.isUnreleased && <Chip
-                  size={'small'}
-                  label={<Typography variant="body2">Unreleased</Typography>}
-                  style={{
-                    marginBottom: 4,
-                    marginRight: 4,
-                    backgroundColor: "green",
-                  }}
-                />}
-      { showPoints && !isCardExpanded && <PointsChip compact={true} value={card.cost}></PointsChip>}
-      {!hideExpand(card) && <IconButton size="medium" onClick={handleExpandClick}>
-        <ExpandMoreIcon />
-      </IconButton>}
+    <div
+      style={{
+        flex: 1,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      {card.isUnreleased && (
+        <Chip
+          size={"small"}
+          label={<Typography variant="body2">Unreleased</Typography>}
+          style={{
+            marginBottom: 4,
+            marginRight: 4,
+            backgroundColor: "green",
+          }}
+        />
+      )}
+      {showPoints && !isCardExpanded && (
+        <PointsChip compact={true} value={card.cost}></PointsChip>
+      )}
+      {!hideExpand(card) && (
+        <IconButton size="medium" onClick={handleExpandClick}>
+          <ExpandMoreIcon />
+        </IconButton>
+      )}
       <IconButton size="medium" onClick={handleClick}>
         <AddIcon />
       </IconButton>
@@ -131,16 +160,23 @@ function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand, isCa
   pipCount = isUniqueCard(card) ? 1 : pipCount;
   pipCount = card.uniqueCount ? card.uniqueCount : pipCount;
 
-  let pips = '•'.repeat(pipCount) + (pipCount > 0 ? " ":"");
+  let pips = "•".repeat(pipCount) + (pipCount > 0 ? " " : "");
 
   let subheader = card.title; //capitalizeFirstLetters(cardSubtype) + (isRecon ? ' (Recon)' : '');
-  if(cardType === "command"){
+  if (cardType === "command") {
     subheader = "Command";
   }
 
-  const title = <Typography onClick={()=>{
-    handleCardZoom(card.id)
-  }}>{pips}{cardName}</Typography>
+  const title = (
+    <Typography
+      onClick={() => {
+        handleCardZoom(card.id);
+      }}
+    >
+      {pips}
+      {cardName}
+    </Typography>
+  );
 
   // TODO see if there's a way to left-align the (+) and have no space on header; did not see one in ~5s of reviewing MUI page
   return (
@@ -157,7 +193,7 @@ function TextCardHeader({ card, handleClick, handleExpandClick, hideExpand, isCa
 function CounterpartCardContent({ card, chipSize }) {
   const { cost, wounds } = card;
   return (
-    <CardContent style={{ padding: 8, textAlign: 'right' }}>
+    <CardContent style={{ padding: 8, textAlign: "right" }}>
       <ReverseWrapper>
         <Typography variant="body2" color="textSecondary">
           Cost
@@ -180,7 +216,7 @@ function CounterpartCardContent({ card, chipSize }) {
 function UpgradeCardContent({ card, chipSize }) {
   const { cost } = card;
   return (
-    <CardContent style={{ padding: 8, textAlign: 'right' }}>
+    <CardContent style={{ padding: 8, textAlign: "right" }}>
       <ReverseWrapper>
         <Typography variant="body2" color="textSecondary">
           Cost
@@ -193,35 +229,31 @@ function UpgradeCardContent({ card, chipSize }) {
 }
 
 function UnitCardContent({ card, chipSize }) {
-  const {
-    cost,
-    resilience,
-    upgradeBar,
-  } = card;
-
+  const { cost, resilience, upgradeBar } = card;
 
   let stats = card.stats;
-  if(!stats){
+  if (!stats) {
     stats = {};
   }
 
-  const defense = stats.defense === 'w' ? 'white' : 'red';
+  const defense = stats.defense === "w" ? "white" : "red";
   const surges = [];
-  if(stats.hitsurge === 'h'){
-    surges.push('hit');
-  }
-  else if(stats.hitsurge === 'c'){
-    surges.push('crit');
+  if (stats.hitsurge === "h") {
+    surges.push("hit");
+  } else if (stats.hitsurge === "c") {
+    surges.push("crit");
   }
 
-  if(stats.defsurge === 'b'){
-    surges.push('block');
+  if (stats.defsurge === "b") {
+    surges.push("block");
   }
 
   return (
-    <CardContent style={{ padding: 8, textAlign: 'right' }}>
+    <CardContent style={{ padding: 8, textAlign: "right" }}>
       <ReverseWrapper>
-        <Typography variant="body2" color="textSecondary">Cost</Typography>
+        <Typography variant="body2" color="textSecondary">
+          Cost
+        </Typography>
         <div style={{ flexGrow: 1 }} />
         <PointsChip value={cost} size={chipSize} />
       </ReverseWrapper>
@@ -253,51 +285,50 @@ function UnitCardContent({ card, chipSize }) {
   );
 }
 
-function TextCard({ card, handleClick, isExpanded:expandAtStart }) {
-  const chipSize = 'small';
+function TextCard({ card, handleClick, isExpanded: expandAtStart }) {
+  const chipSize = "small";
   const classes = useStyles();
-  const hideExpand = c => c.cardType !== 'unit' && c.cardType !== 'upgrade' && !(c.keywords?.length)
+  const hideExpand = (c) =>
+    c.cardType !== "unit" && c.cardType !== "upgrade" && !c.keywords?.length;
 
   // default to open
-  const [isExpanded, setIsExpanded] = React.useState(expandAtStart !== undefined ? expandAtStart: !hideExpand(card));
+  const [isExpanded, setIsExpanded] = React.useState(
+    expandAtStart !== undefined ? expandAtStart : !hideExpand(card),
+  );
   const handleExpandClick = () => setIsExpanded(!isExpanded);
 
   let cardContents = null;
 
-  switch(card.cardType){
-    case 'unit':
-      cardContents = (
-          <UnitCardContent card={card} chipSize={chipSize} />
-      );
+  switch (card.cardType) {
+    case "unit":
+      cardContents = <UnitCardContent card={card} chipSize={chipSize} />;
       break;
-    case 'upgrade':
-      cardContents = (
-          <UpgradeCardContent card={card} chipSize={chipSize} />
-      );
+    case "upgrade":
+      cardContents = <UpgradeCardContent card={card} chipSize={chipSize} />;
       break;
-    case 'counterpart':
-      cardContents = (
-          <CounterpartCardContent card={card} chipSize={chipSize} />
-      );
+    case "counterpart":
+      cardContents = <CounterpartCardContent card={card} chipSize={chipSize} />;
       break;
-    case 'command':
+    case "command":
       cardContents = null;
       break;
-    case 'battle':
+    case "battle":
       cardContents = null;
       break;
     default:
-      cardContents = (
-          <UnitCardContent card={card} chipSize={chipSize} />
-      );
+      cardContents = <UnitCardContent card={card} chipSize={chipSize} />;
       break;
   }
 
   return (
     <Grow unmountOnExit in={true}>
       <Card className={classes.card}>
-        <TextCardHeader hideExpand={hideExpand} isCardExpanded={isExpanded}
-          card={card} handleClick={handleClick} handleExpandClick={handleExpandClick}
+        <TextCardHeader
+          hideExpand={hideExpand}
+          isCardExpanded={isExpanded}
+          card={card}
+          handleClick={handleClick}
+          handleExpandClick={handleExpandClick}
         />
         <Collapse in={isExpanded}>
           {cardContents}
@@ -308,6 +339,6 @@ function TextCard({ card, handleClick, isExpanded:expandAtStart }) {
       </Card>
     </Grow>
   );
-};
+}
 
 export default TextCard;

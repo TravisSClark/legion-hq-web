@@ -212,7 +212,6 @@ function convertJsonToList(jsonText) {
 
     newUnit.upgradesEquipped = sortUpgrades(newUnit);
 
-    let unitIndex = newList.units.length - 1;
     let newUnitIndex = findUnitIndexInList(newUnit, newList); // <- TODO
     // If this unit already exists...
     if (newUnitIndex > -1) {
@@ -222,7 +221,7 @@ function convertJsonToList(jsonText) {
     }
   });
   importList.commandCards?.forEach((cc) => {
-    if (cc == "Standing Orders") {
+    if (cc === "Standing Orders") {
       return;
     }
     let ccId = findId(cc, "command");

@@ -78,7 +78,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
           {
             [classes.commandCard]:
               cardType === "command" || cardType === "battle",
-          }
+          },
         )}
       >
         <CardActionArea
@@ -98,7 +98,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
               },
               {
                 [classes.battleImage]:
-                  cardType === "battle" && cardSubtype == "primary",
+                  cardType === "battle" && cardSubtype === "primary",
               },
               { [classes.upgradeImage]: cardType === "upgrade" },
               {
@@ -106,7 +106,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
                   cardType === "command" ||
                   (cardType === "battle" && cardSubtype !== "primary"),
               },
-              { [classes.doubleUpgrade]: isDoubleSided }
+              { [classes.doubleUpgrade]: isDoubleSided },
             )}
           />
         </CardActionArea>
