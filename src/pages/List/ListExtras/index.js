@@ -18,6 +18,7 @@ import QRButton from "./QRButton";
 import TTSTextExportButton from "./TTSTextExportButton";
 import ImageExportButton from "./ImageExportButton";
 import TextExportButton from "./TextExportButton";
+import StatsGridButton from "./StatsGridButton";
 import PrintExportButton from "./PrintExportButton";
 import SimpleButton from "./SimpleButton";
 import MenuButton from "common/MenuButton";
@@ -76,11 +77,12 @@ function ListExtras() {
         }}
       >
         <TemplateButton />
+        <PrintExportButton currentList={currentList} />
+        <StatsGridButton currentList={currentList} />
         <MenuButton label="Share/Print..." icon={<ShareOutlined />}>
           <TTSTextExportButton currentList={currentList} />
           <ImageExportButton currentList={currentList} />
           <TextExportButton currentList={currentList} />
-          <PrintExportButton currentList={currentList} />
           <QRButton currentList={currentList} />
           <LinkButton currentList={currentList} />
         </MenuButton>
