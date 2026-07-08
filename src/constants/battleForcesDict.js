@@ -673,7 +673,11 @@ const battleForcesDict = {
     disallowedUpgrades: ["Jy", "Jz", "Kb"],
     rules: {
       countMercs: true,
-      needsClan: {affiliation: "Children of the Watch", upgrade:"Ka", commOpUpgrade:"Kc"}
+      needsClan: {
+        affiliation: "Children of the Watch",
+        upgrade: "Ka",
+        commOpUpgrade: "Kc",
+      },
     },
     plainTextRules: [
       "You army may include any number of Mandalorian Initiate units, \
@@ -715,7 +719,7 @@ const battleForcesDict = {
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
-      needsClan: {affiliation: "Clan Kryze", upgrade:"Jy"}
+      needsClan: { affiliation: "Clan Kryze", upgrade: "Jy" },
     },
     plainTextRules: [
       "During the Remove Tokens step of the End Phase, \
@@ -766,7 +770,7 @@ const battleForcesDict = {
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
-      needsClan: {affiliation: "Clan Wren", upgrade:"Jz"}
+      needsClan: { affiliation: "Clan Wren", upgrade: "Jz" },
     },
     plainTextRules: [
       "Allied Mandalorian Trooper units gain Guardian 1: Clan Wren Units with Guardian X in this army \
@@ -818,7 +822,7 @@ const battleForcesDict = {
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
-      needsClan:  {affiliation: "Clan Saxon", upgrade:"Kb"}
+      needsClan: { affiliation: "Clan Saxon", upgrade: "Kb" },
     },
     plainTextRules: [
       "When an allied unit defeats an enemy unit, after the effect is resolved, \
@@ -851,15 +855,55 @@ const battleForcesDict = {
     corps: ["Hq", "Hr"],
     special: [],
     support: ["Hs"],
-    heavy: ["sm", "Fe", "bh"],
+    heavy: [],
     allowedUpgrades: ["cw", "Ks", "Kt", "Ku", "Lc", "Ld"],
     disallowedUpgrades: ["Jy", "Jz", "Ka", "Kb", "Kc"],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
-      needsClan:  {affiliation: "Mandalorians"}
+      needsClan: { affiliation: "Mandalorians" },
     },
-    plainTextRules: ["You can choose 2 of the benefits listed."],
+    choices: [
+      {
+        name: "Veterans",
+      },
+      {
+        name: "Tools of the Trade",
+        rules: {
+          addUpgrades: ["Le", "Lf", "Lg"],
+        },
+      },
+      {
+        name: "Rapid Deployment",
+      },
+      {
+        name: "Guns for Hire",
+        rules: {
+          addHeavy: ["sm", "Fe", "bh"],
+          maxAdditionalHeavies: 1,
+        },
+      },
+      {
+        name: "Feats of Valor",
+      },
+    ],
+    plainTextRules: [
+      "CHOOSE 2 OF THE FOLLOWING:\n Veterans: \n Each time a Mandalorian Warrior unit equips the GALAAR-15 Carbines upgrade, \
+      reduce the cost of that upgrade by 5 points. Additionally, during Setup you may choose 2 alliedunits. Each chosen gains DAUNTLESS. \n\
+      Tools of the Trade: \n You may include 1 additional copy each of the Flame Projector, Jetpack Rockets, and Whipcord Launcher \
+      Upgrade Cards in your army. These additional copies do not cost points, and may be equipped by any allied Mandalorian Trooper unit, \
+      ignoring restrictions. Each unit may still only ever be equipped with 1 copy of an upgrade card. \n Rapid Deployment: \n \
+      During Setup, you may set aside up to 2 allied units that are not holding an Asset Objective token, marking the set aside units \
+      with Advantage tokens. The first time each set-aside unit would be chosen to activate this Game, you may Deploy it by putting \
+      that unit’s unit leader onto the battlefield not within 2 of all enemy units, if able, then put the rest of the unit in cohesion. \
+      If you do, that unit is treated as activated and its Order token is placed facedown. Then the unit loses its Advantage token. \n\
+      Guns for Hire: \n You may include a AA-5 Speeder Truck, a TX-225 GAVw Occupier Tank, or a WLO-5 Speeder Tank in your army. \
+      These units change their Affiliation to MANDALORIANS, and gain COORDINATE: MANDALORIAN WARRIOERS, and INDEPENDENT: SURGE 1. \n\
+      Feats of Valor: \n When an allied unit in this army defeats an enemy unit, after the effect is resolved, the allied unit gains 1 Valor \
+      token. While a unit has 1 or more Valor tokens, it has Dauntless. While a unit has 2 or more Valor tokens, at the start of each of its \
+      Activations it gains 1 Aim token, Dodge token, or Surge token. While a unit has 3 or more Valor tokens, it has EXEMPLAR. \
+      These bonuses are cumulative",
+    ],
     "standard mode": {
       commander: [1, 2],
       operative: [0, 2],

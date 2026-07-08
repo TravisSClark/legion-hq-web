@@ -300,7 +300,8 @@ function addUnit(list, unitId, stackSize = 1) {
   if (unitIndex > -1) {
     list.units[unitIndex].count += stackSize;
     list.units[unitIndex].totalUnitCost += unitCard.cost * stackSize;
-  } else { // else make a new unit
+  } else {
+    // else make a new unit
     list.units.push(newUnitObject);
     unitIndex = list.units.length - 1;
 
@@ -334,20 +335,17 @@ function addUnit(list, unitId, stackSize = 1) {
       }
     }
 
-    if(battleForcesDict[list.battleForce]?.rules?.needsClan?.upgrade){
+    if (battleForcesDict[list.battleForce]?.rules?.needsClan?.upgrade) {
       let needsClan = battleForcesDict[list.battleForce].rules.needsClan;
       let clanId = needsClan.upgrade;
-      if(needsClan.commOpUpgrade && (unitCard.rank == "commander" || unitCard.rank == "operative"))
+      if (
+        needsClan.commOpUpgrade &&
+        (unitCard.rank === "commander" || unitCard.rank === "operative")
+      )
         clanId = needsClan.commOpUpgrade;
-      let upgradeIndex = unitCard.upgradeBar.indexOf('clan');
-      if(upgradeIndex > -1){
-        [list] = equipUnitUpgrade(
-            list,
-            unitIndex,
-            upgradeIndex,
-            clanId,
-            true,
-          );
+      let upgradeIndex = unitCard.upgradeBar.indexOf("clan");
+      if (upgradeIndex > -1) {
+        [list] = equipUnitUpgrade(list, unitIndex, upgradeIndex, clanId, true);
       }
     }
 

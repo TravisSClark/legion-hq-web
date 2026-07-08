@@ -249,7 +249,7 @@ function battleForceValidation(currentList, unitCounts) {
 
   const rules = battleForcesDict[currentList.battleForce]?.rules;
 
-  if(rules){
+  if (rules) {
     if (rules.noRules) {
       validationIssues.push({
         level: 2,
@@ -273,7 +273,8 @@ function battleForceValidation(currentList, unitCounts) {
     }
 
     if (rules.unitLimits) {
-      let unitLimits = battleForcesDict[currentList.battleForce].rules.unitLimits;
+      let unitLimits =
+        battleForcesDict[currentList.battleForce].rules.unitLimits;
 
       unitLimits.forEach((limit) => {
         let unitCount = limit.ids.reduce((count, id) => {
@@ -283,7 +284,9 @@ function battleForceValidation(currentList, unitCounts) {
         if (unitCount < limit.count[0] || unitCount > limit.count[1]) {
           let name = limit.ids
             .map((id) =>
-              cards[id].displayName ? cards[id].displayName : cards[id].cardName,
+              cards[id].displayName
+                ? cards[id].displayName
+                : cards[id].cardName,
             )
             .join(" OR ");
           if (limit.count[0] === 0)
@@ -343,7 +346,8 @@ function battleForceValidation(currentList, unitCounts) {
     if (rules.minimum3Wookiees) {
       let wookCount = currentList.units.reduce((wookCount, unit) => {
         const card = cards[unit.unitId];
-        if (card.cardSubtype === "wookiee trooper") return wookCount + unit.count;
+        if (card.cardSubtype === "wookiee trooper")
+          return wookCount + unit.count;
         else return wookCount;
       }, 0);
 
@@ -358,12 +362,10 @@ function battleForceValidation(currentList, unitCounts) {
       }
     }
 
-    if(rules.needsClan){
+    if (rules.needsClan) {
       const affil = rules.needsClan.affiliation;
       let hasIssue = false;
-      currentList.units.forEach(u=>{
-
-
+      currentList.units.forEach((u) => {
         // TODO; move/rename this if we get into multi units needing this kind of check (ie I don't want to make this copy everywhere)
         const unitCardCopy = makeModifiedCard(
           u.unitId,
@@ -372,21 +374,20 @@ function battleForceValidation(currentList, unitCounts) {
           currentList.battleForce,
         );
 
-        if(unitCardCopy.affiliation !== affil){
+        if (unitCardCopy.affiliation !== affil) {
           hasIssue = true;
           u.validationIssues.push({
             level: 2,
-            text:"This unit must be " + affil.toUpperCase() + " affiliation."
-          })
+            text: "This unit must be " + affil.toUpperCase() + " affiliation.",
+          });
         }
       });
-      if(hasIssue){
+      if (hasIssue) {
         validationIssues.push({
-            level: 2,
-            text:"All units must be " + affil.toUpperCase() + " affiliation."
-        })
+          level: 2,
+          text: "All units must be " + affil.toUpperCase() + " affiliation.",
+        });
       }
-
     }
   } // end if(rules)
 
@@ -539,8 +540,17 @@ function rankValidation(
   return validationIssues;
 }
 
-function countUnits(currentList, unitCounts, currentRanks, mercs, gameTimeRanks){
-  let forceAffinity = getForceAffinity(currentList.faction, currentList.battleForce);
+function countUnits(
+  currentList,
+  unitCounts,
+  currentRanks,
+  mercs,
+  gameTimeRanks,
+) {
+  let forceAffinity = getForceAffinity(
+    currentList.faction,
+    currentList.battleForce,
+  );
 
   // count units, count up them mercs, pull in any unit-specific issues
   currentList.units.forEach((unit, index) => {
@@ -568,10 +578,9 @@ function countUnits(currentList, unitCounts, currentRanks, mercs, gameTimeRanks)
 
     unit.forceAffinity = forceAffinity;
   });
-
 }
 
-function validateUnits(currentList, rankLimits, listUniqueUpgrades){
+function validateUnits(currentList, rankLimits, listUniqueUpgrades) {
   let validationIssues = [];
 
   currentList.units.forEach((unit, index) => {
@@ -676,8 +685,6 @@ function validateList(currentList, rankLimits) {
     });
   }
 
-  const faction = currentList.faction;
-
   const listUniqueUpgrades = {};
   let unitCounts = {};
 
@@ -685,7 +692,7 @@ function validateList(currentList, rankLimits) {
 
   // side-effect of tallying list's unique upgrades to the passed in obj for use later
   validationIssues = validationIssues.concat(
-    validateUnits(currentList, rankLimits, listUniqueUpgrades)
+    validateUnits(currentList, rankLimits, listUniqueUpgrades),
   );
 
   if (battleForcesDict[currentList.battleForce]?.rules?.buildsAsCorps) {
@@ -736,7 +743,7 @@ function validateList(currentList, rankLimits) {
       );
       battleForce.rules.sortOfDetachment.forEach((pair) => {
         console.log(JSON.stringify(pair));
-        if (pair[0] == id) {
+        if (pair[0] === id) {
           console.log("checkit!!");
           detachmentTarget = pair[1];
         }
@@ -797,8 +804,9 @@ function validateList(currentList, rankLimits) {
 
       if (unitCounts[id] > parentCount) {
         let isBfDetach =
-          battleForce?.rules?.sortOfDetachment?.find((pair) => pair[0] == id) !=
-          undefined;
+          battleForce?.rules?.sortOfDetachment?.find(
+            (pair) => pair[0] === id,
+          ) !== undefined;
 
         let cardName = (
           card.displayName ? card.displayName : card.cardName

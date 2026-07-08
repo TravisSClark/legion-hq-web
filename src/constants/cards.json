@@ -12952,7 +12952,7 @@
     "cardSubtype": "hardpoint",
     "cardName": "Twin Blaster Cannons",
     "ttsName": "Twin Blaster Cannons (ISP)",
-    "faction":"republic",
+    "faction": "republic",
     "cardType": "upgrade",
     "cost": 25,
     "imageName": "Twin Blaster Cannons ISP.webp",
@@ -18774,7 +18774,7 @@
     "id": "yr",
     "cardSubtype": "hardpoint",
     "cardName": "Twin Blaster Cannons",
-    "faction":"separatists",
+    "faction": "separatists",
     "cardType": "upgrade",
     "cost": 5,
     "imageName": "Twin Blaster Cannons Crab.webp",
@@ -26512,5 +26512,88 @@
         "cardName": "Mandalorian Hunter"
       }
     ]
+  },
+  "Le": {
+    "id": "Le",
+    "cardSubtype": "gear",
+    "cardName": "Flame Projector",
+    "cardType": "upgrade",
+    "isUnique": true,
+    "cost": 0,
+    "imageName": "Flame Projector.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ],
+    "battleForce": "Custom Clan",
+    "weapons": [
+      {
+        "name": "Flame Projector",
+        "keywords": ["Blast", "Spray", "Suppressive"],
+        "range": [0, 1],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Lf": {
+    "id": "Lf",
+    "cardSubtype": "grenades",
+    "cardName": "Jetpack Rockets",
+    "cardType": "upgrade",
+    "isUnique": true,
+    "cost": 0,
+    "imageName": "Jetpack Rockets Mandos.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ],
+    "battleForce": "Custom Clan",
+    "history": [],
+    "weapons": [
+      {
+        "name": "Jetpack Rockets",
+        "keywords": [
+          {
+            "name": "Anti-Material",
+            "value": 4
+          },
+          {
+            "name": "Impact",
+            "value": 4
+          }
+        ],
+        "range": [3, 4],
+        "dice": {
+          "r": 0,
+          "b": 4,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Lg": {
+    "id": "Lg",
+    "cardSubtype": "gear",
+    "cardName": "Whipcord Launcher",
+    "cardType": "upgrade",
+    "isUnique": true,
+    "cost": 0,
+    "imageName": "Whipcord Launcher Mandos.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ],
+    "history": [],
+    "battleForce": "Custom Clan"
   }
 }

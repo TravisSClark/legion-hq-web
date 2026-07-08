@@ -47,6 +47,11 @@ const interactions = {
         list.battleForce === "Children of the Watch" && unit.unitId === "Hq",
       pointDelta: -5,
     },
+    Ix: {
+      isConditionMet: (list, unit) =>
+        list.battleForce === "Custom Clan" && unit.unitId === "Hr",
+      pointDelta: -5,
+    },
   },
 
   // Determines if a unit gets a bonus slot for a given upgrade type, the 'may equip even if you don't have slot' thing for binocs and imp march
