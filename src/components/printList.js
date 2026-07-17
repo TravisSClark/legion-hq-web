@@ -2,6 +2,10 @@ import cards from "constants/cards";
 import legionModes from "constants/legionModes";
 import generateLink from "pages/List/ListExtras/generateLink";
 
+function getDiplayNameOrName(card) {
+  return card.displayName ? card.displayName : card.cardName;
+}
+
 function getNumActivations(list) {
   return list.units.reduce((num, unit) => {
     num += unit.count;
@@ -14,7 +18,7 @@ function generateMissionCards(missionArray, label, html) {
   if (missionArray.length > 0) {
     let objectives = `${label}:${lineBreak}`;
     missionArray.forEach((id) => {
-      objectives += ` - ${cards[id].cardName}${lineBreak}`;
+      objectives += ` - ${getDiplayNameOrName(cards[id])}${lineBreak}`;
     });
     return objectives;
   }
@@ -40,34 +44,34 @@ function generateTournamentText(list, html) {
         // Kalani
         units += `${unitCard.cardName} - Kalani (${unit.totalUnitCost})${lineBreak}`;
       } else {
-        units += `${unitCard.cardName} (${unit.totalUnitCost})${lineBreak}`;
+        units += `${getDiplayNameOrName(unitCard)} (${unit.totalUnitCost})${lineBreak}`;
       }
       for (let j = 0; j < unit.upgradesEquipped.length; j++) {
         if (unit.upgradesEquipped[j]) {
           const upgradeCard = cards[unit.upgradesEquipped[j]];
-          units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})${lineBreak}`;
+          units += ` - ${getDiplayNameOrName(upgradeCard)} (${upgradeCard.cost})${lineBreak}`;
         }
       }
       if (unit.counterpart) {
         const { counterpart } = unit;
         const counterpartCard = cards[counterpart.counterpartId];
-        units += `${counterpartCard.cardName} (${unit.counterpart.totalUnitCost})${lineBreak}`;
+        units += `${getDiplayNameOrName(counterpartCard)} (${unit.counterpart.totalUnitCost})${lineBreak}`;
         for (let j = 0; j < counterpart.upgradesEquipped.length; j++) {
           if (counterpart.upgradesEquipped[j]) {
             const upgradeCard = cards[counterpart.upgradesEquipped[j]];
-            units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})${lineBreak}`;
+            units += ` - ${getDiplayNameOrName(upgradeCard)} (${upgradeCard.cost})${lineBreak}`;
           }
         }
       }
     } else {
       for (let i = 0; i < unit.count; i++) {
-        units += `${unitCard.cardName} (${
+        units += `${getDiplayNameOrName(unitCard)} (${
           unit.totalUnitCost / unit.count
         })${lineBreak}`;
         for (let j = 0; j < unit.upgradesEquipped.length; j++) {
           if (unit.upgradesEquipped[j]) {
             const upgradeCard = cards[unit.upgradesEquipped[j]];
-            units += ` - ${upgradeCard.cardName} (${upgradeCard.cost})${lineBreak}`;
+            units += ` - ${getDiplayNameOrName(upgradeCard)} (${upgradeCard.cost})${lineBreak}`;
           }
         }
       }
@@ -80,7 +84,7 @@ function generateTournamentText(list, html) {
     if (commandCard.cardSubtype === "1") pips = "•";
     else if (commandCard.cardSubtype === "2") pips = "••";
     else if (commandCard.cardSubtype === "3") pips = "•••";
-    commands += `${pips}${commandCard.cardName}${lineBreak}`;
+    commands += `${pips}${getDiplayNameOrName(commandCard)}${lineBreak}`;
   });
   if (commands !== "") {
     commands = `${lineBreak}Commands:${lineBreak}${commands}`;
@@ -119,15 +123,13 @@ function generateStandardText(list) {
     const unitCard = cards[id];
     let line = " - ";
     if (unit.count > 1) line += `${unit.count}× `;
-    line += unitCard.displayName ? unitCard.displayName : unitCard.cardName;
+    line += getDiplayNameOrName(unitCard.cardName);
     if (unitCard.cost !== unit.totalUnitCost) {
       line += ` (${unitCard.cost}): `;
       unit.upgradesEquipped.forEach((upgradeId, i) => {
         if (!upgradeId) return;
         const upgradeCard = cards[upgradeId];
-        line += upgradeCard.displayName
-          ? upgradeCard.displayName
-          : upgradeCard.cardName;
+        line += getDiplayNameOrName(upgradeCard);
         line += ` (${upgradeCard.cost}), `;
       });
       line = line.substring(0, line.length - 2);
@@ -164,7 +166,7 @@ function generateStandardText(list) {
     else if (commandCard.cardSubtype === "2") commands += "•• ";
     else if (commandCard.cardSubtype === "3") commands += "••• ";
     else commands += "•••• ";
-    commands += `${commandCard.cardName}, `;
+    commands += `${getDiplayNameOrName(commandCard)}, `;
   });
   if (commands !== "") commands += "•••• Standing Orders";
   return header + points + units + commands;
@@ -277,7 +279,7 @@ function generateMinimalText(list) {
     const unitCard = cards[unit.unitId];
     let line = "";
     if (unit.count > 1) line += `${unit.count}× `;
-    line += `${unitCard.cardName} `;
+    line += `${getDiplayNameOrName(unitCard)} `;
 
     // TODO this should be a flag to append the unit subtitle to the card display
     // or maybe just use displayname or etc - rethink this format's name display
@@ -291,7 +293,7 @@ function generateMinimalText(list) {
     unit.upgradesEquipped.forEach((id, i) => {
       if (id) {
         const upgradeCard = cards[id];
-        upgrades += `${upgradeCard.cardName}, `;
+        upgrades += `${getDiplayNameOrName(upgradeCard)}, `;
       }
     });
     if (upgrades !== "") {
@@ -302,11 +304,11 @@ function generateMinimalText(list) {
     if (unit.counterpart) {
       let cUpgrades = "";
       const counterpartCard = cards[unit.counterpart.counterpartId];
-      counterpart += `\n${counterpartCard.cardName}`;
+      counterpart += `\n${getDiplayNameOrName(counterpartCard)}`;
       unit.counterpart.upgradesEquipped.forEach((id, i) => {
         if (id) {
           const upgradeCard = cards[id];
-          cUpgrades += `${upgradeCard.cardName}, `;
+          cUpgrades += `${getDiplayNameOrName(upgradeCard)}, `;
         }
       });
       if (cUpgrades !== "") {
@@ -324,7 +326,7 @@ function generateMinimalText(list) {
     else if (commandCard.cardSubtype === "2") commands += "•• ";
     else if (commandCard.cardSubtype === "3") commands += "••• ";
     else commands += "•••• ";
-    commands += `${commandCard.cardName}, `;
+    commands += `${getDiplayNameOrName(commandCard)}, `;
   });
   if (commands !== "") commands += "•••• Standing Orders";
   return header + units + commands;

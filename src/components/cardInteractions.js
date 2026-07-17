@@ -49,7 +49,9 @@ const interactions = {
     },
     Ix: {
       isConditionMet: (list, unit) =>
-        list.battleForce === "Custom Clan" && unit.unitId === "Hr",
+        list.battleForce === "Custom Clan" &&
+        list.choices.includes("Veterans") &&
+        unit.unitId === "Hr",
       pointDelta: -5,
     },
   },
@@ -102,6 +104,33 @@ const interactions = {
       type: "training",
       eligibility: { cardSubtype: "emplacement trooper" },
       upgrades: ["Bq"],
+    },
+    {
+      // Custom Clan Flame Projector
+      choice: "Tools of the Trade",
+      eligibility: {
+        cardSubtype: "mandalorian trooper",
+      },
+      type: "gear",
+      upgrades: ["Le"],
+    },
+    {
+      // Custom Clan Whip
+      choice: "Tools of the Trade",
+      eligibility: {
+        cardSubtype: "mandalorian trooper",
+      },
+      type: "gear",
+      upgrades: ["Lg"],
+    },
+    {
+      // Custom Clan Rockets
+      choice: "Tools of the Trade",
+      eligibility: {
+        cardSubtype: "mandalorian trooper",
+      },
+      type: "grenades",
+      upgrades: ["Lf"],
     },
   ],
 };

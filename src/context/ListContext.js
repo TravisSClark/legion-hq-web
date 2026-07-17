@@ -462,6 +462,10 @@ export function ListProvider({ width, children, slug, listHash }) {
     updateThenValidateList({ ...currentList, battleForce });
   };
 
+  const handleSetBattleforceChoices = (choices) => {
+    updateThenValidateList({ ...currentList, choices });
+  };
+
   const unitProps = {
     handleAddUnit,
     handleAddCounterpart,
@@ -471,6 +475,7 @@ export function ListProvider({ width, children, slug, listHash }) {
     handleIncrementUnit,
     handleDecrementUnit,
     handleSetBattleForce,
+    handleSetBattleforceChoices,
   };
   const battleProps = {
     handleAddBattle,

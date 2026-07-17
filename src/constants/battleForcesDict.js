@@ -600,6 +600,7 @@ const battleForcesDict = {
       "to",
       "tr",
       "Jh",
+      "eb",
       "Ko",
       "Kp",
       "Kq",
@@ -856,7 +857,7 @@ const battleForcesDict = {
     special: [],
     support: ["Hs"],
     heavy: [],
-    allowedUpgrades: ["cw", "Ks", "Kt", "Ku", "Lc", "Ld"],
+    allowedUpgrades: ["cw", "Ks", "Kt", "Ku", "Lc", "Ld", "Le", "Lf", "Lg"],
     disallowedUpgrades: ["Jy", "Jz", "Ka", "Kb", "Kc"],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
@@ -869,9 +870,6 @@ const battleForcesDict = {
       },
       {
         name: "Tools of the Trade",
-        rules: {
-          addUpgrades: ["Le", "Lf", "Lg"],
-        },
       },
       {
         name: "Rapid Deployment",

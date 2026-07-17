@@ -354,6 +354,8 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
       if (card.faction && card.faction !== "" && list.faction !== card.faction)
         continue;
 
+      if (card.specialIssue && card.specialIssue !== list.battleForce) continue;
+
       if (card.affiliations && !card.affiliations.includes(list.faction))
         continue;
 

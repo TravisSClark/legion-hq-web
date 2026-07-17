@@ -26517,17 +26517,14 @@
     "id": "Le",
     "cardSubtype": "gear",
     "cardName": "Flame Projector",
+    "displayName": "Tools of the Trade, Flame Projector",
     "cardType": "upgrade",
     "isUnique": true,
     "cost": 0,
     "imageName": "Flame Projector.webp",
     "keywords": [],
-    "requirements": [
-      {
-        "cardSubtype": "mandalorian trooper"
-      }
-    ],
-    "battleForce": "Custom Clan",
+    "requirements": [],
+    "specialIssue": "Custom Clan",
     "weapons": [
       {
         "name": "Flame Projector",
@@ -26544,7 +26541,7 @@
   "Lf": {
     "id": "Lf",
     "cardSubtype": "grenades",
-    "cardName": "Jetpack Rockets",
+    "cardName": "Tools of the Trade, Jetpack Rockets",
     "cardType": "upgrade",
     "isUnique": true,
     "cost": 0,
@@ -26555,7 +26552,6 @@
         "cardSubtype": "mandalorian trooper"
       }
     ],
-    "battleForce": "Custom Clan",
     "history": [],
     "weapons": [
       {
@@ -26582,7 +26578,7 @@
   "Lg": {
     "id": "Lg",
     "cardSubtype": "gear",
-    "cardName": "Whipcord Launcher",
+    "cardName": "Tools of the Trade, Whipcord Launcher",
     "cardType": "upgrade",
     "isUnique": true,
     "cost": 0,
@@ -26593,7 +26589,21 @@
         "cardSubtype": "mandalorian trooper"
       }
     ],
-    "history": [],
-    "battleForce": "Custom Clan"
+    "history": []
+  },
+  "Lh": {
+    "id": "Lh",
+    "cardSubtype": "gear",
+    "cardName": "Superior Equipment",
+    "cardType": "upgrade",
+    "isUnique": true,
+    "cost": 15,
+    "imageName": "Superior Equipment.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ]
   }
 }

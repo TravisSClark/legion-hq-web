@@ -12,22 +12,30 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import { Info as InfoIcon, Warning as WarningIcon } from "@material-ui/icons";
 
+import DataContext from "context/DataContext";
 import ListContext from "context/ListContext";
 import legionModes from "constants/legionModes";
+import battleForcesDict from "constants/battleForcesDict";
+
 import ModeButton from "./ModeButton";
 import TitleField from "./TitleField";
 import KillPointsField from "./KillPointsField";
 import FactionButton from "./FactionButton";
-
 import BattleforceSelectorMenu from "./BattleforceSelectorMenu";
 import { ListRulesModal } from "./ListRulesModal";
-import DataContext from "context/DataContext";
+import BattleforceChoicesMultiToggle from "./BattleforceChoicesMultiToggle";
 
 const useStyles = makeStyles({
   container: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+  },
+  choiceContainer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingTop: 12,
   },
   battleForceContainer: {
     display: "flex",
@@ -65,6 +73,7 @@ function ListHeader() {
     isKillPointMode,
     handleChangeTitle,
     handleChangeMode,
+    handleSetBattleforceChoices,
     validationIssues,
   } = useContext(ListContext);
 
@@ -210,6 +219,19 @@ function ListHeader() {
           />
         </div>
       </div>
+      {currentList.battleForce &&
+        battleForcesDict[currentList.battleForce].choices && (
+          <div className={classes.choiceContainer}>
+            <BattleforceChoicesMultiToggle
+              currentChoices={currentList.choices}
+              battleforceChoices={
+                battleForcesDict[currentList.battleForce].choices
+              }
+              handleSetBattleforceChoices={handleSetBattleforceChoices}
+              maxChoices={2}
+            />
+          </div>
+        )}
     </div>
   );
 }
