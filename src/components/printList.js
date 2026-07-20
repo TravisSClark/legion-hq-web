@@ -123,7 +123,7 @@ function generateStandardText(list) {
     const unitCard = cards[id];
     let line = " - ";
     if (unit.count > 1) line += `${unit.count}× `;
-    line += getDiplayNameOrName(unitCard.cardName);
+    line += getDiplayNameOrName(unitCard);
     if (unitCard.cost !== unit.totalUnitCost) {
       line += ` (${unitCard.cost}): `;
       unit.upgradesEquipped.forEach((upgradeId, i) => {

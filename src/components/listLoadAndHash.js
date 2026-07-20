@@ -57,7 +57,7 @@ function processUnitSegment(segment, list) {
     specialUpgradeSlots: [],
   };
 
-  updateSpecialUpgradeSlots(newUnit);
+  updateSpecialUpgradeSlots(list, newUnit);
 
   let upgradeIndex = 0;
   for (let i = 0; i < upgradeSegment.length; i++) {
@@ -183,7 +183,7 @@ function convertJsonToList(jsonText) {
       specialUpgradeSlots: [],
     };
 
-    updateSpecialUpgradeSlots(newUnit);
+    updateSpecialUpgradeSlots(null, newUnit);
 
     u.upgrades?.forEach((up) => {
       let upId = findId(up, "upgrade");

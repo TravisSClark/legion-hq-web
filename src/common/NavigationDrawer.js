@@ -91,7 +91,7 @@ function NavigationDrawer() {
             }}
           />
           <NavDrawerLink
-            text="Cards"
+            text="Lookup"
             selected={pathname === "/cards"}
             icon={routes["/cards"].icon}
             handleClick={() => {

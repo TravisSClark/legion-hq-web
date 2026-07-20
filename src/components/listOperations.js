@@ -115,6 +115,13 @@ function equipUnitUpgrade(
 
   newUnit.upgradesEquipped = sortUpgrades(newUnit);
 
+  if (
+    list.battleForce === "Custom Clan" &&
+    list.choices.includes("Tools of the Trade")
+  ) {
+    updateSpecialUpgradeSlots(list, newUnit);
+  }
+
   let newUnitIndex = findUnitIndexInList(newUnit, list); // <- TODO
   // If this unit already exists...
   if (newUnitIndex > -1) {
@@ -181,7 +188,7 @@ function removeCounterpart(list, unitIndex) {
     a. Special upgrade slots go on the end for a unit, after upgradebar and after addtl slots
     b. Add a new null element on upgrades equipped
 */
-function updateSpecialUpgradeSlots(unit) {
+function updateSpecialUpgradeSlots(list, unit) {
   unit.specialUpgradeSlots = [];
   const unitCard = cards[unit.unitId];
 
@@ -269,7 +276,7 @@ function addUnit(list, unitId, stackSize = 1) {
     newUnitObject.upgradesEquipped.push(null);
   }
 
-  updateSpecialUpgradeSlots(newUnitObject);
+  updateSpecialUpgradeSlots(list, newUnitObject);
 
   if (battleForcesDict[list.battleForce]?.rules?.addAdditionalUpgradeSlots) {
     let upgrades = battleForcesDict[

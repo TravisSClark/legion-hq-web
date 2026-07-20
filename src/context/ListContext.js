@@ -147,7 +147,7 @@ export function ListProvider({ width, children, slug, listHash }) {
         popped = popped.filter((u) => u !== null);
 
         u.specialUpgradeSlots = [];
-        updateSpecialUpgradeSlots(u);
+        updateSpecialUpgradeSlots(list, u);
 
         popped.forEach((p) => {
           u.specialUpgradeSlots.forEach((s, i) => {

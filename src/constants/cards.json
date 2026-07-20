@@ -5237,7 +5237,7 @@
     "commander": "Sabine Wren",
     "faction": "",
     "imageName": "Symbol of Rebellion.webp",
-    "keywords": ["Graffiti Token"],
+    "keywords": ["Graffiti Tokens"],
     "id": "gi"
   },
   "gj": {
@@ -25339,7 +25339,7 @@
       }
     ],
     "id": "Jm",
-    "keywords": ["Steady"]
+    "keywords": ["Steady", "Graffitti Tokens"]
   },
   "Jn": {
     "cardName": "We Protect Our Own",
@@ -26596,13 +26596,17 @@
     "cardSubtype": "gear",
     "cardName": "Superior Equipment",
     "cardType": "upgrade",
-    "isUnique": true,
+    "uniqueCount": 2,
     "cost": 15,
     "imageName": "Superior Equipment.webp",
     "keywords": [],
     "requirements": [
+      "NOT",
       {
-        "cardSubtype": "mandalorian trooper"
+        "rank": "commander"
+      },
+      {
+        "rank": "operative"
       }
     ]
   }
