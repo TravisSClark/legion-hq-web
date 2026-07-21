@@ -1,8 +1,25 @@
 {
   "Rebels": [],
   "Empire": [],
-  "Republic": [],
-  "Separatists": [],
+  "Republic": [
+    {
+      "name": "Judi Council",
+      "date": "August 21",
+      "price": "$60"
+    }
+  ],
+  "Separatists": [
+    {
+      "name": "Leaders of the Separatist Alliance ",
+      "date": "September 11",
+      "price": "$63"
+    },
+    {
+      "name": "B2 Super Rocket Battle Droids",
+      "date": "September 11",
+      "price": "$58"
+    }
+  ],
   "Other": [
     {
       "name": "Mandalorian Warriors",

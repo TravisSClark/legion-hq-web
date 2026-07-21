@@ -19,7 +19,6 @@ const battleForcesDict = {
     support: ["mb"],
     heavy: ["gb", "oo", "qs"],
     allowedUpgrades: [
-      // TODO: add "Squadron Leader"
       "uf",
       "Io",
       "cw",
@@ -28,6 +27,7 @@ const battleForcesDict = {
       "Dd",
       "In",
       "Bl",
+      "Lz",
       "ug",
     ],
     plainTextRules: [
@@ -172,7 +172,7 @@ const battleForcesDict = {
     special: [],
     support: ["an", "he"],
     heavy: ["ap"],
-    allowedUpgrades: ["Cp", "cw", "Im", "Cr", "Cs", "Bn", "Cq", "fk"], // TODO needs "Squadron Leader" once card available
+    allowedUpgrades: ["Cp", "cw", "Im", "Cr", "Cs", "Lz", "Bn", "Cq", "fk"],
     rules: {
       noFieldComm: true,
     },
@@ -306,12 +306,7 @@ const battleForcesDict = {
     special: [],
     support: ["sq"],
     heavy: ["Fe"],
-    allowedUpgrades: [
-      "Fn",
-      "cw",
-      // TODO add Squadron Leader
-      "so",
-    ],
+    allowedUpgrades: ["Fn", "cw", "Lz", "so"],
     rules: {
       countMercs: true,
       sortOfDetachment: [["Fe", "Weequay Pirates"]],
@@ -349,7 +344,7 @@ const battleForcesDict = {
     rules: {
       buildsAsCorps: ["la"],
     },
-    allowedUpgrades: ["cw"], // TODO add "Squadron Leader"
+    allowedUpgrades: ["cw", "Lz"],
 
     "standard mode": {
       commOp: 3,
@@ -383,7 +378,7 @@ const battleForcesDict = {
     rules: {
       noFieldComm: true,
     },
-    allowedUpgrades: ["Iq", "cw"], // TODO add "Squadron Leader"
+    allowedUpgrades: ["Iq", "cw", "Lz"],
 
     "standard mode": {
       commOp: 2,
@@ -500,7 +495,7 @@ const battleForcesDict = {
     special: ["Fa", "ba"],
     support: ["bf"],
     heavy: ["we", "bg"],
-    allowedUpgrades: ["Ce", "Cf", "Ch", "Cj", "cw"], // TODO add "Squadron Leader"
+    allowedUpgrades: ["Ce", "Cf", "Lz", "Ch", "Cj", "cw"],
     rules: {},
     plainTextRules: [
       "Vehicles in this army gain Scout 2.",

@@ -5,7 +5,9 @@ function getSpecialSlots(unitCard) {
   interactions.specialSlotEligibility.forEach((slot) => {
     let hasSlot = false;
     if (
-      (slot.eligibility && _.isMatch(unitCard, slot.eligibility)) ||
+      (slot.eligibility &&
+        _.isMatch(unitCard, slot.eligibility) &&
+        (!slot.notEligible || !_.isMatch(unitCard, slot.notEligible))) ||
       (slot.keyword &&
         _.find(
           unitCard.keywords,
@@ -114,23 +116,34 @@ const interactions = {
       type: "gear",
       upgrades: ["Le"],
     },
+    // {
+    //   // Custom Clan Whip
+    //   choice: "Tools of the Trade",
+    //   eligibility: {
+    //     cardSubtype: "mandalorian trooper",
+    //   },
+    //   type: "gear",
+    //   upgrades: ["Lg"],
+    // },
+    // {
+    //   // Custom Clan Rockets
+    //   choice: "Tools of the Trade",
+    //   eligibility: {
+    //     cardSubtype: "mandalorian trooper",
+    //   },
+    //   type: "grenades",
+    //   upgrades: ["Lf"],
+    // },
     {
-      // Custom Clan Whip
-      choice: "Tools of the Trade",
       eligibility: {
-        cardSubtype: "mandalorian trooper",
+        cardSubtype: "trooper",
+        stats: { defense: "w" },
       },
-      type: "gear",
-      upgrades: ["Lg"],
-    },
-    {
-      // Custom Clan Rockets
-      choice: "Tools of the Trade",
-      eligibility: {
-        cardSubtype: "mandalorian trooper",
+      notEligible: {
+        cardSubtype: "droid trooper",
       },
-      type: "grenades",
-      upgrades: ["Lf"],
+      type: "training",
+      upgrades: ["Ls"],
     },
   ],
 };

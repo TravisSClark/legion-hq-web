@@ -22672,7 +22672,7 @@
     "rank": "commander",
     "faction": "republic",
     "isUnique": true,
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Aug 2026",
     "cost": 165,
     "keywords": [
       {
@@ -23160,10 +23160,10 @@
     "imageName": "This Party's Over.webp",
     "keywords": ["Vaapad Mastery"],
     "id": "Gr",
-    "isUnreleased": "Q3 2026"
+    "isUnreleased": "Aug 2026"
   },
   "Gs": {
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Aug 2026",
     "id": "Gs",
     "cardName": "Shaak Ti",
     "title": "Jedi Council",
@@ -23217,7 +23217,7 @@
     ]
   },
   "Gt": {
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Aug 2026",
     "cardName": "Unity Wins Wars",
     "cardSubtype": "3",
     "cardType": "command",
@@ -23228,7 +23228,7 @@
     "id": "Gt"
   },
   "Gu": {
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Aug 2026",
     "id": "Gu",
     "cardName": "Ki-Adi-Mundi",
     "title": "Jedi Council",
@@ -23285,17 +23285,18 @@
     ]
   },
   "Gv": {
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Aug 2026",
     "cardName": "Force of Will",
     "cardSubtype": "3",
     "cardType": "command",
     "commander": "Ki-Adi-Mundi",
     "faction": "republic",
     "imageName": "Force of Will.webp",
+    "keywords": [],
     "id": "Gv"
   },
   "Gw": {
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Aug 2026",
     "id": "Gw",
     "cardName": "Plo Koon",
     "title": "Jedi Council",
@@ -23356,7 +23357,7 @@
     ]
   },
   "Gx": {
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Aug 2026",
     "cardName": "I Don't Believe in Chance",
     "cardSubtype": "2",
     "cardType": "command",
@@ -23367,7 +23368,7 @@
     "id": "Gx"
   },
   "Gy": {
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Aug 2026",
     "id": "Gy",
     "cardName": "You're Not All the Same to Me",
     "imageName": "Youre Not All the Same to Me.webp",
@@ -23379,7 +23380,7 @@
     "requirements": [{ "cardName": "Plo Koon" }]
   },
   "Gz": {
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Aug 2026",
     "cardName": "A Disturbance in the Force",
     "cardSubtype": "2",
     "cardType": "command",
@@ -23391,7 +23392,7 @@
     "keywords": [{ "name": "Danger Sense", "value": 1 }, "Indomitable"]
   },
   "Ha": {
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Aug 2026",
     "id": "Ha",
     "cardName": "Shaak Ti",
     "cardType": "upgrade",
@@ -23425,7 +23426,7 @@
     ]
   },
   "Hb": {
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Sept 2026",
     "id": "Hb",
     "cardName": "Savage Opress",
     "title": "Maul's Enforcer",
@@ -23493,7 +23494,7 @@
     ]
   },
   "Hc": {
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Sept 2026",
     "id": "Hc",
     "cardName": "Savage Opress",
     "title": "Dooku's Apprentice",
@@ -23561,7 +23562,7 @@
     ]
   },
   "Hd": {
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Sept 2026",
     "cardName": "We Shall Start with Revenge",
     "cardSubtype": "1",
     "cardType": "command",
@@ -23572,7 +23573,7 @@
     "id": "Hd"
   },
   "Hi": {
-    "isUnreleased": "Q3 2026",
+    "isUnreleased": "Sept 2026",
     "cardName": "For the Cause",
     "cardSubtype": "1",
     "cardType": "command",
@@ -24441,7 +24442,7 @@
     ]
   },
   "Ib": {
-    "isUnreleased": "Q4 2026",
+    "isUnreleased": "Sept 2026",
     "cardName": "I Smell Fear... and it Smells Good",
     "cardSubtype": "2",
     "cardType": "command",
@@ -26457,7 +26458,7 @@
     ]
   },
   "La": {
-    "isUnreleased": "Q4 2026",
+    "isUnreleased": "Aug 2026",
     "cardName": "No Escape",
     "cardSubtype": "1",
     "cardType": "command",
@@ -26469,7 +26470,7 @@
     "keywords": []
   },
   "Lb": {
-    "isUnreleased": "Q4 2026",
+    "isUnreleased": "Aug 2026",
     "cardName": "Honor and Strength",
     "cardSubtype": "3",
     "cardType": "command",
@@ -26593,6 +26594,7 @@
   },
   "Lh": {
     "id": "Lh",
+    "isUnreleased": "Aug 2026",
     "cardSubtype": "gear",
     "cardName": "Superior Equipment",
     "cardType": "upgrade",
@@ -26609,5 +26611,459 @@
         "rank": "operative"
       }
     ]
+  },
+  "Li": {
+    "id": "Li",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Force Enhanced Defense",
+    "cardType": "upgrade",
+    "cardSubtype": "force",
+    "cost": 5,
+    "imageName": "Force Enhanced Defense.webp",
+    "keywords": [
+      {
+        "name": "Shielded",
+        "value": 1
+      }
+    ],
+    "requirements": []
+  },
+  "Lj": {
+    "id": "Lj",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Force Agility",
+    "cardType": "upgrade",
+    "cardSubtype": "force",
+    "cost": 8,
+    "imageName": "Force Agility.webp",
+    "keywords": ["Disengage"],
+    "requirements": []
+  },
+  "Lk": {
+    "id": "Lk",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Battlemind",
+    "cardType": "upgrade",
+    "cardSubtype": "force",
+    "cost": 8,
+    "imageName": "Battlemind.webp",
+    "keywords": [],
+    "requirements": []
+  },
+  "Ll": {
+    "id": "Ll",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Annul",
+    "cardType": "upgrade",
+    "cardSubtype": "force",
+    "cost": 12,
+    "imageName": "Annul.webp",
+    "keywords": [],
+    "requirements": []
+  },
+  "Lm": {
+    "id": "Lm",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Helping Hand",
+    "cardType": "upgrade",
+    "cardSubtype": "force",
+    "cost": 5,
+    "imageName": "Helping Hand.webp",
+    "keywords": [
+      {
+        "name": "Jump",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "forceAffinity": "light side"
+      }
+    ]
+  },
+  "Ln": {
+    "id": "Ln",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Force Absorb",
+    "cardType": "upgrade",
+    "cardSubtype": "force",
+    "cost": 5,
+    "imageName": "Force Absorb.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "forceAffinity": "light side"
+      }
+    ]
+  },
+  "Lo": {
+    "id": "Lo",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Despair",
+    "cardType": "upgrade",
+    "cardSubtype": "force",
+    "cost": 5,
+    "imageName": "Despair.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "forceAffinity": "dark side"
+      }
+    ]
+  },
+  "Lp": {
+    "id": "Lp",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Hatred",
+    "cardType": "upgrade",
+    "cardSubtype": "force",
+    "cost": 8,
+    "imageName": "Hatred.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "forceAffinity": "dark side"
+      }
+    ]
+  },
+  "Lq": {
+    "id": "Lq",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Force Drain",
+    "cardType": "upgrade",
+    "cardSubtype": "force",
+    "cost": 14,
+    "imageName": "Force Drain.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "forceAffinity": "dark side"
+      }
+    ]
+  },
+  "Lr": {
+    "id": "Lr",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Strong in the Force",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 5,
+    "imageName": "Strong in the Force.webp",
+    "keywords": [
+      {
+        "name": "Independent",
+        "value": "Aim or Dodge 1"
+      }
+    ],
+    "requirements": [
+      {
+        "upgradeBar": ["force"]
+      }
+    ]
+  },
+  "Ls": {
+    "id": "Ls",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Hit the Dirt",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 3,
+    "imageName": "Hit the Dirt.webp",
+    "keywords": [],
+    "requirements": [
+      "AND",
+      {
+        "stats": { "defense": "w" }
+      },
+      [
+        "OR",
+        {
+          "cardSubtype": "trooper"
+        },
+        {
+          "cardSubtype": "clone trooper"
+        },
+        {
+          "cardSubtype": "creature trooper"
+        },
+        {
+          "cardSubtype": "emplacement trooper"
+        },
+        {
+          "cardSubtype": "wookiee trooper"
+        },
+        {
+          "cardSubtype": "mandalorian trooper"
+        }
+      ]
+    ]
+  },
+  "Lt": {
+    "id": "Lt",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Lying In Wait",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 5,
+    "imageName": "Lying In Wait Upgrade.webp",
+    "keywords": ["Low Profile"],
+    "requirements": [
+      "AND",
+      [
+        "OR",
+        {
+          "cardSubtype": "trooper"
+        },
+        {
+          "cardSubtype": "clone trooper"
+        },
+        {
+          "cardSubtype": "creature trooper"
+        },
+        {
+          "cardSubtype": "droid trooper"
+        },
+        {
+          "cardSubtype": "emplacement trooper"
+        },
+        {
+          "cardSubtype": "wookiee trooper"
+        },
+        {
+          "cardSubtype": "mandalorian trooper"
+        }
+      ],
+      [
+        "OR",
+        {
+          "keywords": ["Prepared Position"]
+        },
+        {
+          "keywords": ["Infiltrate"]
+        }
+      ]
+    ]
+  },
+  "Lu": {
+    "id": "Lu",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Stuck In",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 8,
+    "imageName": "Stuck In.webp",
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "cardSubtype": "trooper"
+      },
+      {
+        "cardSubtype": "clone trooper"
+      },
+      {
+        "cardSubtype": "creature trooper"
+      },
+      {
+        "cardSubtype": "droid trooper"
+      },
+      {
+        "cardSubtype": "emplacement trooper"
+      },
+      {
+        "cardSubtype": "wookiee trooper"
+      },
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ]
+  },
+  "Lv": {
+    "id": "Lv",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Go For Broke",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 5,
+    "imageName": "Go For Broke.webp",
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "cardSubtype": "trooper"
+      },
+      {
+        "cardSubtype": "clone trooper"
+      },
+      {
+        "cardSubtype": "creature trooper"
+      },
+      {
+        "cardSubtype": "droid trooper"
+      },
+      {
+        "cardSubtype": "emplacement trooper"
+      },
+      {
+        "cardSubtype": "wookiee trooper"
+      },
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ]
+  },
+  "Lw": {
+    "id": "Lw",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Agile Climber",
+    "cardType": "upgrade",
+    "cardSubtype": "training",
+    "cost": 5,
+    "imageName": "Agile Climber.webp",
+    "keywords": [],
+    "requirements": [
+      "AND",
+      [
+        "OR",
+        {
+          "cardSubtype": "trooper"
+        },
+        {
+          "cardSubtype": "clone trooper"
+        },
+        {
+          "cardSubtype": "creature trooper"
+        },
+        {
+          "cardSubtype": "droid trooper"
+        },
+        {
+          "cardSubtype": "emplacement trooper"
+        },
+        {
+          "cardSubtype": "wookiee trooper"
+        },
+        {
+          "cardSubtype": "mandalorian trooper"
+        }
+      ],
+      {
+        "stats": { "defense": "w" }
+      }
+    ]
+  },
+  "Lx": {
+    "id": "Lx",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Infantry Support",
+    "cardType": "upgrade",
+    "cardSubtype": "comms",
+    "cost": 10,
+    "imageName": "Infantry Support.webp",
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "cardSubtype": "ground vehicle"
+      },
+      {
+        "cardSubtype": "repulsor vehicle"
+      }
+    ]
+  },
+  "Ly": {
+    "id": "Ly",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Adeptive Combat Network",
+    "cardType": "upgrade",
+    "cardSubtype": "comms",
+    "cost": 4,
+    "imageName": "Infantry Support.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardSubtype": "droid trooper"
+      }
+    ]
+  },
+  "Lz": {
+    "id": "Lz",
+    "isUnreleased": "Aug 2026",
+    "isUnique": true,
+    "cardName": "Squadron Leader",
+    "cardType": "upgrade",
+    "cardSubtype": "comms",
+    "cost": 10,
+    "imageName": "Squadron Leader.webp",
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "cardSubtype": "ground vehicle"
+      },
+      {
+        "cardSubtype": "repulsor vehicle"
+      }
+    ]
+  },
+  "Ma": {
+    "id": "Ma",
+    "isUnreleased": "Aug 2026",
+    "cardName": "High Speed Tracking",
+    "cardType": "upgrade",
+    "cardSubtype": "gear",
+    "cost": 3,
+    "imageName": "High Speed Tracking.webp",
+    "keywords": ["Blast"],
+    "requirements": []
+  },
+  "Mb": {
+    "id": "Mb",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Tank Hunting Munitions",
+    "cardType": "upgrade",
+    "cardSubtype": "gear",
+    "cost": 3,
+    "imageName": "Tank Hunting Munitions.webp",
+    "keywords": [
+      {
+        "name": "Anti-Material",
+        "value": 2
+      },
+      {
+        "name": "Impact",
+        "value": 2
+      }
+    ],
+    "requirements": []
+  },
+  "Mc": {
+    "id": "Mc",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Overcharged Blaster Packs",
+    "cardType": "upgrade",
+    "cardSubtype": "gear",
+    "cost": 3,
+    "imageName": "Overcharged Blaster Packs.webp",
+    "keywords": [
+      {
+        "name": "Anti-Personnel",
+        "value": 2
+      },
+      "Overwhelm"
+    ],
+    "requirements": []
+  },
+  "Me": {
+    "id": "Me",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Fire Control",
+    "isUnique": true,
+    "cardType": "upgrade",
+    "cardSubtype": "command",
+    "cost": 5,
+    "imageName": "Fire Control.webp",
+    "keywords": [],
+    "requirements": []
   }
 }

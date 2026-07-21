@@ -107,7 +107,6 @@ function Cards() {
             {sortedKeywords.map((key) => (
               <Chip
                 clickable
-                onClick={handleClick}
                 size={"medium"}
                 label={key}
                 style={{ marginBottom: 4, marginLeft: 4 }}
