@@ -567,6 +567,12 @@ function countUnits(
     currentRanks[card.rank] += unit.count;
     gameTimeRanks[card.rank] += unit.count; // DON'T update this using the buildsAsCorps rules below so we see what our gametime counts are
 
+    // Maul + Darksaber interaction - TODO, make it data/rules-driven
+    if (unit.unitId === "rc" && unit.upgradesEquipped.includes("rq")) {
+      currentRanks["commander"]++;
+      currentRanks["operative"]--;
+    }
+
     if (
       battleForcesDict[currentList.battleForce]?.rules?.buildsAsCorps?.includes(
         unit.unitId,
