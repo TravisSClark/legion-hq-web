@@ -34,7 +34,7 @@ fs.readdir(inputFolder, (err, files) => {
 
         // command cards (do a second pass with / 5 or 4 instead of 3 for h for the more dense cards)
         let x = 0;
-        let y = image.bitmap.height / 8;
+        let y = image.bitmap.height / 7;
         let w = image.bitmap.width;
         let h = image.bitmap.height / 3;
 

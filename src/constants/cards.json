@@ -23173,7 +23173,7 @@
     "rank": "operative",
     "faction": "republic",
     "isUnique": true,
-    "cost": 0,
+    "cost": 120,
     "keywords": [
       {
         "name": "Jump",
@@ -23190,7 +23190,7 @@
       "Immune: Pierce",
       "Makashi Mastery"
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["force", "force", "command", "training"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -23238,7 +23238,7 @@
     "rank": "commander",
     "faction": "republic",
     "isUnique": true,
-    "cost": 0,
+    "cost": 155,
     "keywords": [
       {
         "name": "Jump",
@@ -23257,7 +23257,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["force", "force", "force", "command", "training"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -23306,7 +23306,7 @@
     "rank": "operative",
     "faction": "republic",
     "isUnique": true,
-    "cost": 0,
+    "cost": 105,
     "keywords": [
       {
         "name": "Jump",
@@ -23330,7 +23330,7 @@
       },
       "Shien Mastery"
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["force", "force", "command", "training"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -25206,7 +25206,14 @@
     "cardType": "upgrade",
     "cost": 30,
     "imageName": "Axe Woves Upgrade.webp",
-    "keywords": ["Leader", "Independent", "Infiltrate"],
+    "keywords": [
+      "Leader",
+      "Independent",
+      {
+        "name": "Infiltrate",
+        "isPermanent": true
+      }
+    ],
     "requirements": [{ "affiliation": "Clan Kryze" }],
     "weapons": []
   },
@@ -26805,7 +26812,7 @@
     "cardType": "upgrade",
     "cardSubtype": "training",
     "cost": 5,
-    "imageName": "Lying In Wait Upgrade.webp",
+    "imageName": "Lying in Wait Upgrade.webp",
     "keywords": ["Low Profile"],
     "requirements": [
       "AND",
@@ -26974,15 +26981,19 @@
   "Ly": {
     "id": "Ly",
     "isUnreleased": "Aug 2026",
-    "cardName": "Adeptive Combat Network",
+    "cardName": "Adaptive Combat Network",
     "cardType": "upgrade",
     "cardSubtype": "comms",
     "cost": 4,
-    "imageName": "Infantry Support.webp",
+    "imageName": "Adeptive Combat Network.webp",
     "keywords": [],
     "requirements": [
+      "OR",
       {
         "cardSubtype": "droid trooper"
+      },
+      {
+        "cardSubtype": "heavy droid trooper"
       }
     ]
   },
@@ -27065,5 +27076,113 @@
     "imageName": "Fire Control.webp",
     "keywords": [],
     "requirements": []
+  },
+  "Mf": {
+    "id": "Mf",
+    "isUnreleased": "Aug 2026",
+    "cardName": "Wisdom of the Council",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "",
+    "faction": "republic",
+    "imageName": "Wisdom of the Council.webp",
+    "requirements": [{ "title": "Jedi Council" }]
+  },
+  "Mg": {
+    "isUnreleased": "Aug 2026",
+    "id": "Mg",
+    "cardName": "Mace Windu",
+    "cardType": "upgrade",
+    "cardSubtype": "squad leader",
+    "imageName": "Mace Windu Upgrade.webp",
+    "faction": "republic",
+    "cost": 35,
+    "isUnique": true,
+    "keywords": [
+      "Leader",
+      { "name": "Sidearm", "value": "Melee, Ranged" },
+      { "name": "Compel", "value": "Core Trooper" },
+      "Immune: Melee Pierce"
+    ],
+    "requirements": [{ "cardSubtype": "clone trooper" }],
+    "weapons": [
+      {
+        "name": "Windu's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 0
+        },
+        "keywords": [
+          { "name": "Impact", "value": 2 },
+          { "name": "Pierce", "value": 1 }
+        ]
+      }
+    ]
+  },
+  "Mh": {
+    "isUnreleased": "Aug 2026",
+    "id": "Mh",
+    "cardName": "Plo Koon",
+    "cardType": "upgrade",
+    "cardSubtype": "squad leader",
+    "imageName": "Plo Koon Personnel.webp",
+    "faction": "republic",
+    "cost": 22,
+    "isUnique": true,
+    "keywords": [
+      "Leader",
+      { "name": "Sidearm", "value": "Melee, Ranged" },
+      "Immune: Melee Pierce"
+    ],
+    "requirements": [{ "cardSubtype": "clone trooper" }],
+    "weapons": [
+      {
+        "name": "Plo Koon's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 1,
+          "b": 2,
+          "w": 0
+        },
+        "keywords": [
+          { "name": "Impact", "value": 2 },
+          { "name": "Pierce", "value": 1 }
+        ]
+      }
+    ]
+  },
+  "Mi": {
+    "isUnreleased": "Aug 2026",
+    "id": "Mi",
+    "cardName": "Ki-Adi-Mundi",
+    "cardType": "upgrade",
+    "cardSubtype": "squad leader",
+    "imageName": "Ki-Adi-Mundi Upgrade.webp",
+    "faction": "republic",
+    "cost": 25,
+    "isUnique": true,
+    "keywords": [
+      "Leader",
+      { "name": "Sidearm", "value": "Melee, Ranged" },
+      "Immune: Melee Pierce"
+    ],
+    "requirements": [{ "cardSubtype": "clone trooper" }],
+    "weapons": [
+      {
+        "name": "Mundi's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 1,
+          "w": 0
+        },
+        "keywords": [
+          { "name": "Impact", "value": 2 },
+          { "name": "Pierce", "value": 1 }
+        ]
+      }
+    ]
   }
 }
