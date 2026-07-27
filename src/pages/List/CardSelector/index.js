@@ -61,7 +61,7 @@ const CardSelector = () => {
       selectorIds.validIds = getEligibleUnitsToAdd(
         currentList,
         cardPaneFilter.rank,
-        userSettings
+        userSettings,
       );
       selectorIds.invalidIds = [];
       clickHandler = (unitId) => {
@@ -103,10 +103,11 @@ const CardSelector = () => {
         typeof getUpgradeBar(unit)[cardPaneFilter.upgradeIndex] === "object"
           ? { validIds: cardPaneFilter.upgrades }
           : getEligibleUpgrades(
+              userSettings,
               currentList,
               cardPaneFilter.upgradeType,
               upgradeTargetId,
-              cardPaneFilter.upgradesEquipped
+              cardPaneFilter.upgradesEquipped,
             );
 
       clickHandler = (upgradeId) => {
@@ -115,7 +116,7 @@ const CardSelector = () => {
           cardPaneFilter.unitIndex,
           cardPaneFilter.upgradeIndex,
           upgradeId,
-          isApplyToAll
+          isApplyToAll,
         );
       };
       header = (
@@ -149,7 +150,7 @@ const CardSelector = () => {
                 cardPaneFilter.unitIndex,
                 cardPaneFilter.upgradeIndex,
                 isApplyToAll,
-                true
+                true,
               );
             }}
           >
@@ -199,7 +200,7 @@ const CardSelector = () => {
               handleDelete={() => handleRemoveBattle(cardPaneFilter.type, i)}
             />
           );
-        }
+        },
       );
       header = (
         <div

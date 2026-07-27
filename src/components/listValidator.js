@@ -103,6 +103,21 @@ function validateUpgrades(list, unitIndex, listUniqueUpgrades) {
           text:
             "" + card.cardName + " upgrade is not allowed in this battleforce.",
         });
+      if (
+        card.choice &&
+        (!battleForcesDict[list.battleForce]?.choices ||
+          !list.choices?.includes(card.choice))
+      ) {
+        unit.validationIssues.push({
+          level: 2,
+          text:
+            "" +
+            card.cardName +
+            " upgrade is not allowed in this battleforce without " +
+            card.choice +
+            ".",
+        });
+      }
     }
 
     if (card.isUnreleased) {
@@ -374,7 +389,7 @@ function battleForceValidation(currentList, unitCounts) {
           currentList.battleForce,
         );
 
-        if (unitCardCopy.affiliation !== affil) {
+        if (unitCardCopy.affiliation && unitCardCopy.affiliation !== affil) {
           hasIssue = true;
           u.validationIssues.push({
             level: 2,
@@ -604,15 +619,14 @@ function validateUnits(currentList, rankLimits, listUniqueUpgrades) {
       if (
         !battleForce[card.rank].includes(unit.unitId) &&
         (!battleForce["rules"]["buildsAsCorps"] ||
-          !battleForce["rules"]["buildsAsCorps"].includes(unit.unitId))
-        //   &&
-        // (!battleForce.choices ||
-        //   currentList.choices?.some(
-        //     (choice) =>
-        //       !battleForce.choices
-        //         .find((bfchoice) => bfchoice.name === choice)
-        //         ?.add?.includes(unit.unitId),
-        //   ))
+          !battleForce["rules"]["buildsAsCorps"]?.includes(unit.unitId)) &&
+        (!battleForce.choices ||
+          currentList.choices?.some(
+            (choice) =>
+              !battleForce.choices
+                .find((bfchoice) => bfchoice.name === choice)
+                ?.add?.includes(unit.unitId),
+          ))
       ) {
         unit.validationIssues.push({
           level: 2,

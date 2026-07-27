@@ -252,7 +252,7 @@ function removeAdditionalUpgradeSlot(unit) {
   unit.additionalUpgradeSlots = [];
 }
 
-function addUnit(list, unitId, stackSize = 1) {
+function addUnit(list, unitId, stackSize = 1, userSettings) {
   const unitCard = cards[unitId];
 
   const newUnitObject = {
@@ -357,7 +357,12 @@ function addUnit(list, unitId, stackSize = 1) {
       let upgradeIndex = unitCard.upgradeBar.indexOf(upgradeType);
 
       if (upgradeIndex > -1) {
-        let eligibleUpgrades = getEligibleUpgrades(list, upgradeType, unitId);
+        let eligibleUpgrades = getEligibleUpgrades(
+          userSettings,
+          list,
+          upgradeType,
+          unitId,
+        );
         if (eligibleUpgrades.validIds.length === 1) {
           let freeSoloId = eligibleUpgrades.validIds[0];
           if (cards[freeSoloId].cost === 0 && freeSoloId !== "rq") {

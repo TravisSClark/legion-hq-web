@@ -127,11 +127,10 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
               >
                 <Chip
                   size={chipSize}
-                  label={<Typography variant="body2">Unreleased</Typography>}
                   style={{
                     marginBottom: 4,
                     marginRight: 4,
-                    backgroundColor: "green",
+                    backgroundColor: "orange",
                   }}
                 />
               </Tooltip>

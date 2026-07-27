@@ -159,14 +159,6 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
       // If a unit builds as corps per BF, just have it show in both corps and sf lists
       if (rank === "corps" && battleForce?.rules?.buildsAsCorps?.includes(id));
       else if (
-        battleForce.choices &&
-        list.choices?.some((choice) =>
-          battleForce.choices
-            .find((bfchoice) => bfchoice.name === choice)
-            ?.add?.includes(id),
-        )
-      );
-      else if (
         !battleForce[rank].includes(id) &&
         !(
           battleForce.choices &&
@@ -295,7 +287,13 @@ function getEligibleCommandsToAdd(list) {
   };
 }
 
-function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
+function getEligibleUpgrades(
+  userSettings,
+  list,
+  upgradeType,
+  unitId,
+  upgradesEquipped = [],
+) {
   const validUpgradeIds = [];
   const invalidUpgradeIds = [];
 
@@ -334,6 +332,8 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
           alreadyEquippedOrLeader = true;
       });
       if (alreadyEquippedOrLeader) continue;
+
+      if (card.isUnreleased && !userSettings.showUnreleasedCards) continue;
 
       if (
         card.choice &&

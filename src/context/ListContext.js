@@ -324,7 +324,7 @@ export function ListProvider({ width, children, slug, listHash }) {
     if (width === "xs" || width === "sm") {
       setCardPaneFilter({ action: "DISPLAY" });
     }
-    const newList = addUnit(currentList, unitId, stackSize);
+    const newList = addUnit(currentList, unitId, stackSize, userSettings);
     updateThenValidateList({ ...newList });
   };
   const handleAddCommand = (commandId) => {
