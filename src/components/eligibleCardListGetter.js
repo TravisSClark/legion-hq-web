@@ -159,6 +159,14 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
     } else {
       // If a unit builds as corps per BF, just have it show in both corps and sf lists
       if (rank === "corps" && battleForce?.rules?.buildsAsCorps?.includes(id));
+      else if (
+        battleForce.choices &&
+        list.choices?.some((choice) =>
+          battleForce.choices
+            .find((bfchoice) => bfchoice.name === choice)
+            ?.add?.includes(id),
+        )
+      );
       else if (!battleForce[rank].includes(id))
         // do nothing
         continue;
@@ -318,6 +326,13 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
       });
       if (alreadyEquippedOrLeader) continue;
 
+      if (
+        card.choice &&
+        (!battleForcesDict[list.battleForce]?.choices ||
+          !list.choices?.includes(card.choice))
+      )
+        continue;
+
       if (list.battleForce) {
         if (
           battleForcesDict[list.battleForce].disallowedUpgrades &&
@@ -353,8 +368,6 @@ function getEligibleUpgrades(list, upgradeType, unitId, upgradesEquipped = []) {
 
       if (card.faction && card.faction !== "" && list.faction !== card.faction)
         continue;
-
-      if (card.specialIssue && card.specialIssue !== list.battleForce) continue;
 
       if (card.affiliations && !card.affiliations.includes(list.faction))
         continue;

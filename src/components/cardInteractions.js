@@ -108,33 +108,6 @@ const interactions = {
       upgrades: ["Bq"],
     },
     {
-      // Custom Clan Flame Projector
-      choice: "Tools of the Trade",
-      eligibility: {
-        cardSubtype: "mandalorian trooper",
-      },
-      type: "gear",
-      upgrades: ["Le"],
-    },
-    // {
-    //   // Custom Clan Whip
-    //   choice: "Tools of the Trade",
-    //   eligibility: {
-    //     cardSubtype: "mandalorian trooper",
-    //   },
-    //   type: "gear",
-    //   upgrades: ["Lg"],
-    // },
-    // {
-    //   // Custom Clan Rockets
-    //   choice: "Tools of the Trade",
-    //   eligibility: {
-    //     cardSubtype: "mandalorian trooper",
-    //   },
-    //   type: "grenades",
-    //   upgrades: ["Lf"],
-    // },
-    {
       eligibility: {
         cardSubtype: "trooper",
         stats: { defense: "w" },

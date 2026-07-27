@@ -871,10 +871,7 @@ const battleForcesDict = {
       },
       {
         name: "Guns for Hire",
-        rules: {
-          addHeavy: ["sm", "Fe", "bh"],
-          maxAdditionalHeavies: 1,
-        },
+        add: ["sm", "Fe", "bh"],
       },
       {
         name: "Feats of Valor",
@@ -903,7 +900,7 @@ const battleForcesDict = {
       corps: [2, 6],
       special: [0, 3],
       support: [0, 3],
-      heavy: [0, 2],
+      heavy: [0, 1],
     },
     "500-point mode": {
       commOp: 3,
@@ -912,7 +909,7 @@ const battleForcesDict = {
       corps: [2, 4],
       special: [0, 3],
       support: [0, 2],
-      heavy: [0, 0],
+      heavy: [0, 1],
     },
   },
 };

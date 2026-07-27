@@ -605,6 +605,14 @@ function validateUnits(currentList, rankLimits, listUniqueUpgrades) {
         !battleForce[card.rank].includes(unit.unitId) &&
         (!battleForce["rules"]["buildsAsCorps"] ||
           !battleForce["rules"]["buildsAsCorps"].includes(unit.unitId))
+        //   &&
+        // (!battleForce.choices ||
+        //   currentList.choices?.some(
+        //     (choice) =>
+        //       !battleForce.choices
+        //         .find((bfchoice) => bfchoice.name === choice)
+        //         ?.add?.includes(unit.unitId),
+        //   ))
       ) {
         unit.validationIssues.push({
           level: 2,

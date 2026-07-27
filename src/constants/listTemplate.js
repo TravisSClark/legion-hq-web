@@ -5,7 +5,6 @@ const listTemplate = {
   pointTotal: 0,
   killPoints: 0,
   battleForce: "",
-  choices: [],
   killedUnits: [],
   units: [],
   commandCards: [],
@@ -22,6 +21,8 @@ const listTemplate = {
   },
   wins: 0,
   losses: 0,
+  notes: "",
+  choices: [],
 };
 
 export default listTemplate;

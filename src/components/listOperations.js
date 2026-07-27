@@ -115,13 +115,6 @@ function equipUnitUpgrade(
 
   newUnit.upgradesEquipped = sortUpgrades(newUnit);
 
-  if (
-    list.battleForce === "Custom Clan" &&
-    list.choices.includes("Tools of the Trade")
-  ) {
-    updateSpecialUpgradeSlots(list, newUnit);
-  }
-
   let newUnitIndex = findUnitIndexInList(newUnit, list); // <- TODO
   // If this unit already exists...
   if (newUnitIndex > -1) {

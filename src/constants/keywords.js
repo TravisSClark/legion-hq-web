@@ -1124,7 +1124,7 @@ of its Poison tokens.",
 keyword and the defending unit has the Armor X keyword, \
 after resolving any instances of the Impact X keyword during \
 the Modify Attack Dice step, the attacking unit must modify all \
-CRIT results to a results.",
+CRIT results to HIT results.",
   Ram: "While a unit makes an attack with an Attack Pool that has \
 the Ram X keyword, during the Modify Attack Dice step, it \
 may change X results to CRIT results if it meets either of the \

@@ -23371,7 +23371,7 @@
     "isUnreleased": "Aug 2026",
     "id": "Gy",
     "cardName": "You're Not All the Same to Me",
-    "imageName": "Youre Not All the Same to Me.webp",
+    "imageName": "You're Not All the Same to Me.webp",
     "cost": 5,
     "cardType": "upgrade",
     "cardSubtype": "command",
@@ -26531,8 +26531,12 @@
     "cost": 0,
     "imageName": "Flame Projector.webp",
     "keywords": [],
-    "requirements": [],
-    "specialIssue": "Custom Clan",
+    "choice": "Tools of the Trade",
+    "requirements": [
+      {
+        "cardSubtype": "mandalorian trooper"
+      }
+    ],
     "weapons": [
       {
         "name": "Flame Projector",
@@ -26555,6 +26559,7 @@
     "cost": 0,
     "imageName": "Jetpack Rockets Mandos.webp",
     "keywords": [],
+    "choice": "Tools of the Trade",
     "requirements": [
       {
         "cardSubtype": "mandalorian trooper"
@@ -26592,6 +26597,7 @@
     "cost": 0,
     "imageName": "Whipcord Launcher Mandos.webp",
     "keywords": [],
+    "choice": "Tools of the Trade",
     "requirements": [
       {
         "cardSubtype": "mandalorian trooper"
@@ -27086,6 +27092,7 @@
     "commander": "",
     "faction": "republic",
     "imageName": "Wisdom of the Council.webp",
+    "keywords": [],
     "requirements": [{ "title": "Jedi Council" }]
   },
   "Mg": {
