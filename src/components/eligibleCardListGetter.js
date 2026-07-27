@@ -139,12 +139,11 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
   const validUnitIds = [];
   const cardsById = cardIdsByType.unit;
   const uniqueCardNames = getListUniques(list, "name");
+  const battleForce = battleForcesDict[list.battleForce];
 
   for (let i = 0; i < cardsById.length; i++) {
     const id = cardsById[i];
     const card = cards[id];
-
-    const battleForce = battleForcesDict[list.battleForce];
 
     if (card.isUnreleased && !userSettings.showUnreleasedCards) continue;
 
@@ -167,7 +166,17 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
             ?.add?.includes(id),
         )
       );
-      else if (!battleForce[rank].includes(id))
+      else if (
+        !battleForce[rank].includes(id) &&
+        !(
+          battleForce.choices &&
+          list.choices?.some((choice) =>
+            battleForce.choices
+              .find((bfchoice) => bfchoice.name === choice)
+              ?.add?.includes(id),
+          )
+        )
+      )
         // do nothing
         continue;
       else if (card.rank !== rank) continue;
