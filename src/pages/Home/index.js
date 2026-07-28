@@ -100,7 +100,7 @@ function Home() {
     });
   }
   useEffect(() => {
-    if (userId) fetchUserLists(userId);
+    if (userId && !userLists) fetchUserLists(userId);
   }, [userId]);
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>

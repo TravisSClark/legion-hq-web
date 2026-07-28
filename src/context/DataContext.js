@@ -147,13 +147,13 @@ export function DataProvider({ children }) {
   }, [isAuthenticated, user, userId]);
 
   useEffect(() => {
-    if (userId) fetchUserLists(userId);
+    if (userId && !userLists) fetchUserLists(userId);
   }, [userId]);
 
   useEffect(() => {
     let numFetches = 0;
     const intervalId = setInterval(() => {
-      if (userId && numFetches < 5) {
+      if (userId && !userLists && numFetches < 5) {
         numFetches++;
         fetchUserLists(userId);
       } else if (user && isAuthenticated && !userId) {
