@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import clsx from "clsx";
 import { ErrorBoundary } from "react-error-boundary";
 import {
@@ -80,10 +80,8 @@ function Home() {
     newsPosts,
     releaseList,
     auth,
-    userId,
     userLists,
     userSettings,
-    fetchUserLists,
     deleteUserList,
   } = useContext(DataContext);
   const classes = useStyles();
@@ -99,9 +97,6 @@ function Home() {
       }
     });
   }
-  useEffect(() => {
-    if (userId && !userLists) fetchUserLists(userId);
-  }, [userId]);
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <Fade in={true}>

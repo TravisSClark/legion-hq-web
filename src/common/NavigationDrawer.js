@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
 import Img from "react-image";
 import {
@@ -40,9 +40,7 @@ function NavigationDrawer() {
   const {
     isDrawerOpen,
     routes,
-    userId,
     userLists,
-    fetchUserLists,
     goToPage,
     setIsDrawerOpen,
     setIsNewList,
@@ -56,9 +54,6 @@ function NavigationDrawer() {
       }
     });
   }
-  useEffect(() => {
-    if (userId && !userLists) fetchUserLists(userId);
-  }, [userId]);
   return (
     <SwipeableDrawer
       open={isDrawerOpen}

@@ -12,7 +12,7 @@ class Auth {
       audience,
       clientID,
       responseType: "token id_token",
-      scope: "openid profile email offline_access",
+      scope: "openid profile email",
     });
     this.getProfile = this.getProfile.bind(this);
     this.handleAuthentication = this.handleAuthentication.bind(this);
@@ -38,10 +38,6 @@ class Auth {
     return this.idToken;
   }
 
-  getRefreshToken() {
-    return this.refreshToken;
-  }
-
   isAuthenticated() {
     return new Date().getTime() < this.expiresAt;
   }
@@ -58,7 +54,6 @@ class Auth {
           return reject(err);
         }
         this.idToken = authResult.idToken;
-        this.refreshToken = authResult.refreshToken;
         this.profile = authResult.idTokenPayload;
         this.expiresAt = authResult.idTokenPayload.exp * 1000;
         resolve();

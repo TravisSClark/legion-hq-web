@@ -141,27 +141,16 @@ export function DataProvider({ children }) {
   }
 
   useEffect(() => {
-    if (user && user.email && isAuthenticated && !userId) {
+    if (user?.email && isAuthenticated && !userId) {
       fetchUserId(user.email);
     }
-  }, [isAuthenticated, user, userId]);
+  }, [user, isAuthenticated, userId]);
 
   useEffect(() => {
-    if (userId && !userLists) fetchUserLists(userId);
-  }, [userId]);
-
-  useEffect(() => {
-    let numFetches = 0;
-    const intervalId = setInterval(() => {
-      if (userId && !userLists && numFetches < 5) {
-        numFetches++;
-        fetchUserLists(userId);
-      } else if (user && isAuthenticated && !userId) {
-        fetchUserId(user.email ? user.email : "Undefined email");
-      }
-    }, 15000);
-    return () => clearInterval(intervalId);
-  }, [userId, user, isAuthenticated]);
+    if (userId && !userLists?.length) {
+      fetchUserLists(userId);
+    }
+  }, [userId, userLists]);
 
   const setUserSettingsValue = (key, value) => {
     if (typeof Storage !== "undefined") {
