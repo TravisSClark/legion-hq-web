@@ -57,7 +57,7 @@ function NavigationDrawer() {
     });
   }
   useEffect(() => {
-    if (userId) fetchUserLists(userId);
+    if (userId && !userLists) fetchUserLists(userId);
   }, [userId]);
   return (
     <SwipeableDrawer
