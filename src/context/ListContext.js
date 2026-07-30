@@ -67,12 +67,18 @@ export function ListProvider({ width, children, slug, listHash }) {
   const [rankLimits, setRankLimits] = useState();
 
   useEffect(() => {
-    // route '/list/rebels' fetches the rebel list from storage
     const hasList = userLists?.find((list) => list?.listId === slug);
-    if (slug in factions) {
-      updateThenValidateList(JSON.parse(JSON.stringify(initialLists[slug])));
-    } else if (hasList) {
+
+    if (hasList) {
       updateThenValidateList(JSON.parse(JSON.stringify(hasList)));
+    } else if (slug in factions) {
+      if (listHash) {
+        // route '/list/rebels/{listHash}' gets from the hash
+        const convertedList = convertHashToList(slug, listHash);
+        if (convertedList) updateThenValidateList({ ...convertedList });
+      } else
+        // route '/list/rebels' fetches the rebel list from storage
+        updateThenValidateList(JSON.parse(JSON.stringify(initialLists[slug])));
     }
     // route '/list/1b2f34' fetches list 1b2f34 from database
     else if (slug !== "") {
@@ -96,7 +102,9 @@ export function ListProvider({ width, children, slug, listHash }) {
           setStatus("idle");
         });
     }
-  }, [slug]); // compiler warns about not using hash or loaded lists in this effect; doing so makes us do inf ops and freeze
+  }, [slug]);
+
+  // compiler warns about not using hash or loaded lists in this effect; doing so makes us do inf ops and freeze
   useEffect(() => {
     if (width === "xs" || width === "sm") {
       setLeftPaneWidth(12);
@@ -210,7 +218,6 @@ export function ListProvider({ width, children, slug, listHash }) {
     getNewType = false,
   ) => {
     const unit = list.units[unitIndex];
-    const unitCard = cards[unit.unitId];
 
     // These might be a bad pattern, but they sort of are needed for confirming we haven't exceeded the total upgrade count when cascading
     let upgradesEquipped = unit.upgradesEquipped;
