@@ -49,7 +49,7 @@ let config = {
 };
 
 export function ListProvider({ width, children, slug, listHash }) {
-  const { userId, userSettings, goToPage, isNewList, setIsNewList } =
+  const { userId, userSettings, userLists, goToPage, isNewList, setIsNewList } =
     useContext(DataContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [status, setStatus] = useState("idle");
@@ -68,12 +68,11 @@ export function ListProvider({ width, children, slug, listHash }) {
 
   useEffect(() => {
     // route '/list/rebels' fetches the rebel list from storage
+    const hasList = userLists?.find((list) => list?.listId === slug);
     if (slug in factions) {
-      if (listHash) {
-        const convertedList = convertHashToList(slug, listHash);
-        if (convertedList) updateThenValidateList({ ...convertedList });
-      } else
-        updateThenValidateList(JSON.parse(JSON.stringify(initialLists[slug])));
+      updateThenValidateList(JSON.parse(JSON.stringify(initialLists[slug])));
+    } else if (hasList) {
+      updateThenValidateList(JSON.parse(JSON.stringify(hasList)));
     }
     // route '/list/1b2f34' fetches list 1b2f34 from database
     else if (slug !== "") {

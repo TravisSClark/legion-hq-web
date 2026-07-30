@@ -26624,13 +26624,19 @@
     "imageName": "Superior Equipment.webp",
     "keywords": [],
     "requirements": [
-      "NOT",
-      {
-        "rank": "commander"
-      },
-      {
-        "rank": "operative"
-      }
+      "AND",
+      [
+        "NOT",
+        {
+          "rank": "commander"
+        }
+      ],
+      [
+        "NOT",
+        {
+          "rank": "operative"
+        }
+      ]
     ]
   },
   "Li": {
