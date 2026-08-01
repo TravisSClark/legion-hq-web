@@ -1,12 +1,11 @@
 import React, { useContext } from "react";
 import { AppBar, Toolbar, IconButton } from "@material-ui/core";
 import { alpha, makeStyles } from "@material-ui/core/styles";
-import { Menu as MenuIcon } from "@material-ui/icons";
+import { Menu as MenuIcon, Settings as SettingsIcon } from "@material-ui/icons";
 import { NavLink } from "react-router-dom";
 import DataContext from "context/DataContext";
 import lhqLogoLight from "assets/lhqLogoLight.svg";
 import lhqLogoDark from "assets/lhqLogoDark.svg";
-import crit2block from "assets/crit2block.png";
 
 const useStyles = makeStyles((theme) => ({
   grow: { flexGrow: 1 },
@@ -78,9 +77,11 @@ function DefaultBar() {
         />
       </NavLink>
       <div className={classes.grow} />
-      <a href="https://www.youtube.com/@crit2block">
-        <img alt="Crit2Block Logo" src={crit2block} style={{ height: 45 }} />
-      </a>
+      <NavLink to="/settings">
+        <IconButton>
+          <SettingsIcon />
+        </IconButton>
+      </NavLink>
       {/* {false && (
         <div className={classes.search}>
           <div className={classes.searchIcon}>

@@ -14,16 +14,14 @@ import {
   Typography,
 } from "@material-ui/core";
 
-import {
-  Launch as LaunchIcon,
-  ExpandMore,
-  Add as AddIcon,
-} from "@material-ui/icons";
+import { ExpandMore, Add as AddIcon } from "@material-ui/icons";
 import cards from "constants/cards";
 import factions from "constants/factions";
 import urls from "constants/urls";
 import DataContext from "context/DataContext";
 import { findFirstCardId } from "pages/Home/ListChip";
+import crit2block from "assets/crit2block.png";
+import patreon from "assets/PATREON_SYMBOL_1_BLACK_RGB.png";
 
 function NavDrawerLink({ selected, icon, avatar, text, handleClick }) {
   return (
@@ -61,11 +59,25 @@ function NavigationDrawer() {
       onClose={() => setIsDrawerOpen(false)}
     >
       <div style={{ width: "100%" }}>
-        <List>
-          <ListItem>
-            <ListItemText primary="Legion HQ 2" secondary="Crit2Block" />
-          </ListItem>
-        </List>
+        <ListItem
+          button
+          onClick={() =>
+            window.open(
+              "https://www.youtube.com/@crit2block",
+              "_blank",
+              "noopener noreferrer",
+            )
+          }
+        >
+          <ListItemIcon>
+            <img
+              alt="Crit2Block Logo"
+              src={crit2block}
+              style={{ width: 48, height: 48 }}
+            />
+          </ListItemIcon>
+        </ListItem>
+        <Divider />
         <List dense={true}>
           <NavDrawerLink
             text="Home"
@@ -92,6 +104,15 @@ function NavigationDrawer() {
             handleClick={() => {
               setIsDrawerOpen(false);
               goToPage("/cards");
+            }}
+          />
+          <NavDrawerLink
+            text="Resources"
+            selected={pathname === "/resources"}
+            icon={routes["/resources"].icon}
+            handleClick={() => {
+              setIsDrawerOpen(false);
+              goToPage("/resources");
             }}
           />
         </List>
@@ -160,7 +181,6 @@ function NavigationDrawer() {
             );
           })}
         </List>
-        <Divider />
         <List dense={true}>
           {/* <NavDrawerLink
             text="Roller"
@@ -171,15 +191,44 @@ function NavigationDrawer() {
               goToPage("/roller");
             }}
           /> */}
-          <NavDrawerLink
-            text="Settings"
-            selected={pathname === "/settings"}
-            icon={routes["/settings"].icon}
-            handleClick={() => {
-              setIsDrawerOpen(false);
-              goToPage("/settings");
-            }}
-          />
+          <ListItem
+            button
+            onClick={() =>
+              window.open(
+                "https://www.buymeacoffee.com/legionhq",
+                "_blank",
+                "noopener noreferrer",
+              )
+            }
+          >
+            <ListItemIcon>
+              <img
+                alt="Buy Me a Coffee"
+                src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
+                style={{ width: 24, height: 24 }}
+              />
+            </ListItemIcon>
+            <ListItemText primary="Buy Me a Coffee" />
+          </ListItem>
+          <ListItem
+            button
+            onClick={() =>
+              window.open(
+                "https://patreon.com/LegionHQ2?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink",
+                "_blank",
+                "noopener noreferrer",
+              )
+            }
+          >
+            <ListItemIcon>
+              <img
+                alt="Patreon"
+                src={patreon}
+                style={{ width: 24, height: 24 }}
+              />
+            </ListItemIcon>
+            <ListItemText primary="Patreon" />
+          </ListItem>
           <NavDrawerLink
             text="Info"
             selected={pathname === "/info"}
@@ -189,117 +238,6 @@ function NavigationDrawer() {
               goToPage("/info");
             }}
           />
-        </List>
-        <Divider />
-        <List dense={true}>
-          <ListItem
-            button
-            onClick={() =>
-              window.open(
-                " https://www.atomicmassgames.com/swlegiondocs/",
-                "_blank",
-                "noopener noreferrer",
-              )
-            }
-          >
-            <ListItemIcon>
-              <LaunchIcon />
-            </ListItemIcon>
-            <ListItemText primary="AMG Legion Docs" />
-          </ListItem>
-          <ListItem
-            button
-            onClick={() =>
-              window.open(
-                "https://legion.longshanks.org/",
-                "_blank",
-                "noopener noreferrer",
-              )
-            }
-          >
-            <ListItemIcon>
-              <LaunchIcon />
-            </ListItemIcon>
-            <ListItemText primary="Longshanks" />
-          </ListItem>
-          <ListItem
-            button
-            onClick={() =>
-              window.open(
-                "https://www.legionroller.com",
-                "_blank",
-                "noopener noreferrer",
-              )
-            }
-          >
-            <ListItemIcon>
-              <LaunchIcon />
-            </ListItemIcon>
-            <ListItemText primary="Legion Roller" />
-          </ListItem>
-          <ListItem
-            button
-            onClick={() =>
-              window.open(
-                "https://legion.takras.net/",
-                "_blank",
-                "noopener noreferrer",
-              )
-            }
-          >
-            <ListItemIcon>
-              <LaunchIcon />
-            </ListItemIcon>
-            <ListItemText primary="Legion Helper" />
-          </ListItem>
-          <ListItem
-            button
-            onClick={() =>
-              window.open(
-                "https://www.legionevents.app/",
-                "_blank",
-                "noopener noreferrer",
-              )
-            }
-          >
-            <ListItemIcon>
-              <LaunchIcon />
-            </ListItemIcon>
-            <ListItemText primary="Event Finder" />
-          </ListItem>
-        </List>
-        <Divider />
-        <List dense={true}>
-          <ListItem
-            button
-            onClick={() =>
-              window.open(
-                "https://www.youtube.com/@crit2block",
-                "_blank",
-                "noopener noreferrer",
-              )
-            }
-          >
-            <ListItemIcon>
-              <LaunchIcon />
-            </ListItemIcon>
-            <ListItemText primary="Crit2Block YouTube" />
-          </ListItem>
-          <ListItem
-            button
-            onClick={() =>
-              window.open(
-                "https://www.youtube.com/@kokozula",
-                "_blank",
-                "noopener noreferrer",
-              )
-            }
-          >
-            <ListItemIcon>
-              <LaunchIcon />
-            </ListItemIcon>
-            <ListItemText primary="Kokozula YouTube" />
-          </ListItem>
         </List>
       </div>
     </SwipeableDrawer>

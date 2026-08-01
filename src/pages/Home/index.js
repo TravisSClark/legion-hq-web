@@ -28,6 +28,7 @@ import lhqLogoDark from "assets/lhqLogoDark.svg";
 import naTournaments from "assets/NA Tournaments.png";
 import euTournaments from "assets/Eurasia Tournaments.png";
 import roadmap from "assets/roadmap.webp";
+import patreon from "assets/PATREON_SYMBOL_1_BLACK_RGB.png";
 
 const useStyles = makeStyles((theme) => ({
   expand: {
@@ -271,6 +272,57 @@ function Home() {
               </Collapse>
             </Grid>
             <Grid item></Grid>
+            <Grid item>
+              <Grid direction="row">
+                <Grid item>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="pat-button"
+                    href="https://patreon.com/LegionHQ2?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink"
+                  >
+                    <img
+                      src={patreon}
+                      alt="Patreon"
+                      style={{
+                        width: "30 !important",
+                        height: "30 !important",
+                        objectFit: "contain",
+                      }}
+                    />
+                    <span
+                      style={{ marginLeft: "5px", fontSize: "28px !important" }}
+                    >
+                      Patreon
+                    </span>
+                  </a>
+                  <link
+                    rel="stylesheet"
+                    href="https://fonts.googleapis.com/css?family=Cookie"
+                  />
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bmc-button"
+                    href="https://www.buymeacoffee.com/legionhq"
+                  >
+                    <img
+                      src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
+                      alt="Buy me a coffee"
+                    />
+                    <span
+                      style={{
+                        marginLeft: "5px",
+                        fontSize: "28px !important",
+                      }}
+                    >
+                      Buy me a coffee
+                    </span>
+                  </a>
+                </Grid>
+              </Grid>
+            </Grid>
+
             <Grid item>
               <iframe
                 title="Legion Discord"

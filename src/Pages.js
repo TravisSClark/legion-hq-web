@@ -9,6 +9,7 @@ const Roller = lazy(() => import("pages/Roller"));
 const Privacy = lazy(() => import("pages/Privacy"));
 const MainListPage = lazy(() => import("pages/List"));
 const Settings = lazy(() => import("pages/Settings"));
+const Resources = lazy(() => import("pages/Resources"));
 const Info = lazy(() => import("pages/Info"));
 export const initialLists = {
   rebels: { ...listTemplate, faction: "rebels" },
@@ -44,6 +45,7 @@ function Pages() {
         />
         <Route path="/roller" component={Roller} />
         <Route path="/settings" component={Settings} />
+        <Route path="/resources" component={Resources} />
         <Route path="/info" component={Info} />
         <Route path="/privacy" component={Privacy} />
         <Redirect to="/" />

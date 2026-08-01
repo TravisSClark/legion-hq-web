@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import Axios from "axios";
 import {
+  Launch as LaunchIcon,
   Home as HomeIcon,
   Settings as SettingsIcon,
   Info as InfoIcon,
@@ -53,6 +54,11 @@ const routes = {
     name: "Dice Roller",
     path: "/roller",
     icon: <DiceIcon style={{ fontSize }} />,
+  },
+  "/resources": {
+    name: "Resources",
+    path: "/resources",
+    icon: <LaunchIcon />,
   },
   "/list/rebels": {
     name: "Rebels",
