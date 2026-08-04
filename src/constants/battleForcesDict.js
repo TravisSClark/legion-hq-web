@@ -611,6 +611,7 @@ const battleForcesDict = {
       "Ku",
       "Lc",
       "Ld",
+      "Jx",
     ],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
