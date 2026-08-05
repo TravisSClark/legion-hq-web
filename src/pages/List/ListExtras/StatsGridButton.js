@@ -99,7 +99,7 @@ function UnitBlock({ unit, instanceLabel }) {
 
   const baseWeapons = (card.weapons || []).map((w) => ({ ...w, source: null }));
   const upgradeWeapons = equippedUpgrades.flatMap((up) =>
-    (up.weapons || []).map((w) => ({ ...w, source: up.cardName }))
+    (up.weapons || []).map((w) => ({ ...w, source: up.cardName })),
   );
   const weapons = [...baseWeapons, ...upgradeWeapons];
 
@@ -302,30 +302,30 @@ function CardPage({ ids, cols, rows, inkMode, title }) {
         }}
       >
         {items.map((c, i) => (
-        <div
-          key={`${c.id}-${i}`}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            overflow: "hidden",
-          }}
-        >
-          <img
-            alt={c.cardName}
-            src={`${urls.cdn}/${c.cardType}Cards/${c.imageName}`}
-            loading="eager"
+          <div
+            key={`${c.id}-${i}`}
             style={{
-              maxWidth: "100%",
-              maxHeight: "100%",
-              objectFit: "contain",
-              filter: INK_FILTERS[inkMode] || "none",
-              WebkitPrintColorAdjust: "exact",
-              printColorAdjust: "exact",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              overflow: "hidden",
             }}
-          />
-        </div>
-      ))}
+          >
+            <img
+              alt={c.cardName}
+              src={`${urls.cdn}/${c.cardType}Cards/${c.imageName}`}
+              loading="eager"
+              style={{
+                maxWidth: "100%",
+                maxHeight: "100%",
+                objectFit: "contain",
+                filter: INK_FILTERS[inkMode] || "none",
+                WebkitPrintColorAdjust: "exact",
+                printColorAdjust: "exact",
+              }}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -447,7 +447,9 @@ function CardTextBlock({ id, fallbackCard }) {
       })()}
 
       {ct.text && (
-        <div style={{ whiteSpace: "pre-wrap", marginBottom: ct.flavor ? 3 : 0 }}>
+        <div
+          style={{ whiteSpace: "pre-wrap", marginBottom: ct.flavor ? 3 : 0 }}
+        >
           {ct.text}
         </div>
       )}
@@ -512,7 +514,11 @@ function CardSelections({ currentList, inkMode }) {
   const secondaryIds = currentList.secondaryCards || [];
   const advantageIds = currentList.advantageCards || [];
   const hasAny =
-    commandIds.length + primaryIds.length + secondaryIds.length + advantageIds.length > 0;
+    commandIds.length +
+      primaryIds.length +
+      secondaryIds.length +
+      advantageIds.length >
+    0;
   if (!hasAny) return null;
 
   if (inkMode === "text") {
@@ -540,11 +546,7 @@ function CardSelections({ currentList, inkMode }) {
           />
         )}
         {advantageIds.length > 0 && (
-          <CardTextPage
-            ids={advantageIds}
-            cols={2}
-            title="Advantage Cards"
-          />
+          <CardTextPage ids={advantageIds} cols={2} title="Advantage Cards" />
         )}
       </>
     );
@@ -652,7 +654,7 @@ const StatsGridSheet = React.forwardRef(({ currentList, inkMode }, ref) => {
           key={`${i}-${n}`}
           unit={unit}
           instanceLabel={count > 1 ? `(#${n + 1})` : ""}
-        />
+        />,
       );
     }
     if (unit.counterpart) {
@@ -665,7 +667,7 @@ const StatsGridSheet = React.forwardRef(({ currentList, inkMode }, ref) => {
             totalUnitCost: unit.counterpart.totalUnitCost,
           }}
           instanceLabel="(counterpart)"
-        />
+        />,
       );
     }
   });
@@ -754,7 +756,7 @@ function StatsGridButton({ currentList }) {
       </Menu>
       <div
         style={{
-          position: "absolute",
+          position: "fixed",
           left: -100000,
           top: 0,
           width: "8.5in",
