@@ -4,13 +4,10 @@ import {
   ExpansionPanel,
   ExpansionPanelSummary,
   ExpansionPanelDetails,
-  Collapse,
-  IconButton,
   Typography,
   makeStyles,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import Alert from "@material-ui/lab/Alert";
 import CardModal from "common/CardModal";
 import cards from "constants/cards";
 import keywords from "constants/keywords";

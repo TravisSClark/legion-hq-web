@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Fade from "@material-ui/core/Fade";
 import Typography from "@material-ui/core/Typography";
 import ListContext from "context/ListContext";

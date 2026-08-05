@@ -79,9 +79,9 @@ function processUnitSegment(segment, list) {
     }
   }
   if (additionalUpgradeCards) {
-    additionalUpgradeCards.map(function (upgradeCard) {
-      addAdditionalUpgradeSlots(newUnit, upgradeCard);
-    });
+    additionalUpgradeCards.map((upgradeCard) =>
+      addAdditionalUpgradeSlots(newUnit, upgradeCard),
+    );
   }
 
   if (battleForcesDict[list.battleForce]?.rules?.addAdditionalUpgradeSlots) {

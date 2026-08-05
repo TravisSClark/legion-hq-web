@@ -1,16 +1,6 @@
 import React from "react";
-import clsx from "clsx";
-import {
-  makeStyles,
-  Collapse,
-  Typography,
-  Divider,
-  IconButton,
-} from "@material-ui/core";
-import { ExpandMore as ExpandMoreIcon } from "@material-ui/icons";
+import { makeStyles, Typography, Divider } from "@material-ui/core";
 import LegionCard from "common/LegionCard";
-import cards from "constants/cards";
-import ChipCard from "common/LegionCard/ChipCard";
 
 const useStyles = makeStyles((theme) => ({
   expand: {
@@ -45,13 +35,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function CollapsedContent({ children, isExpanded }) {
-  return (
-    <Collapse unmountOnExit timeout="auto" in={isExpanded}>
-      {children}
-    </Collapse>
-  );
-}
+// function CollapsedContent({ children, isExpanded }) {
+//   return (
+//     <Collapse unmountOnExit timeout="auto" in={isExpanded}>
+//       {children}
+//     </Collapse>
+//   );
+// }
 
 function SelectorContent({
   action,
@@ -61,8 +51,8 @@ function SelectorContent({
   handleCardZoom,
 }) {
   const classes = useStyles();
-  const [isExpanded, setIsExpanded] = React.useState(false);
-  const handleExpandClick = () => setIsExpanded(!isExpanded);
+  // const [isExpanded, setIsExpanded] = React.useState(false);
+  // const handleExpandClick = () => setIsExpanded(!isExpanded);
   if (validIds.length === 0) {
     return (
       <div className={classes.columnContainer}>

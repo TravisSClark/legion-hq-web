@@ -9,7 +9,6 @@ import {
   CardActions,
   CardActionArea,
   Chip,
-  Typography,
   Tooltip,
 } from "@material-ui/core";
 import clsx from "clsx";

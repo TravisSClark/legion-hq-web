@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import {
   ButtonBase,
@@ -8,7 +8,6 @@ import {
   Typography,
 } from "@material-ui/core";
 import legionModes from "constants/legionModes";
-import DataContext from "context/DataContext";
 import { ExpandMore } from "@material-ui/icons";
 
 function ModeButton({
