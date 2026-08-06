@@ -172,7 +172,7 @@ export function DataProvider({ children }) {
   const fetchUserLists = (userId) => {
     if (userId) {
       httpClient
-        .get(`${urls.api}/lists?userId=${userId}`, config)
+        .get(`${urls.api}/lists/user?userId=${userId}`, config)
         .then((response) => {
           let lists = response.data;
           lists.sort((a, b) => b.updatedAt.localeCompare(a.updatedAt));

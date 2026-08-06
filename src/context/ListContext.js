@@ -49,8 +49,15 @@ let config = {
 };
 
 export function ListProvider({ width, children, slug, listHash }) {
-  const { userId, userSettings, userLists, goToPage, isNewList, setIsNewList } =
-    useContext(DataContext);
+  const {
+    userId,
+    userSettings,
+    userLists,
+    setUserLists,
+    goToPage,
+    isNewList,
+    setIsNewList,
+  } = useContext(DataContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState();
@@ -67,7 +74,9 @@ export function ListProvider({ width, children, slug, listHash }) {
   const [rankLimits, setRankLimits] = useState();
 
   useEffect(() => {
-    const hasList = userLists?.find((list) => list?.listId === slug);
+    const hasList = userLists?.find(
+      (list) => list?.listId === slug && list?.createdAt,
+    );
 
     if (hasList) {
       updateThenValidateList(JSON.parse(JSON.stringify(hasList)));
@@ -93,6 +102,13 @@ export function ListProvider({ width, children, slug, listHash }) {
               return !oldCounterparts.includes(unit.unitId);
             });
             updateThenValidateList(loadedList);
+            const listIndex = userLists?.findIndex(
+              (list) => list.listId === slug,
+            );
+            if (listIndex !== -1) {
+              userLists[listIndex] = loadedList;
+              setUserLists(userLists);
+            }
           } else setError(`List ${slug} not found.`);
           setStatus("idle");
         })
@@ -114,6 +130,7 @@ export function ListProvider({ width, children, slug, listHash }) {
       setRightPaneWidth(6);
     }
   }, [width]);
+
   useEffect(() => {
     if (width === "xs" || width === "sm") {
       if (cardPaneFilter.action === "DISPLAY") {
@@ -125,6 +142,7 @@ export function ListProvider({ width, children, slug, listHash }) {
       }
     }
   }, [width, cardPaneFilter]);
+
   useEffect(() => {
     if (isNewList) {
       updateThenValidateList(JSON.parse(JSON.stringify(initialLists[slug])));
@@ -413,6 +431,13 @@ export function ListProvider({ width, children, slug, listHash }) {
         .then((response) => {
           list.updatedAt = response.data.updatedAt;
           setCurrentList(list);
+          const listIndex = userLists?.findIndex(
+            (list) => list.listId === slug,
+          );
+          if (listIndex !== -1) {
+            userLists[listIndex] = list;
+            setUserLists(userLists);
+          }
           setListSaveMessage("List Updated!");
         })
         .catch((e) => {
