@@ -6637,7 +6637,7 @@
       "minicount": 2,
       "hp": 3,
       "defense": "w",
-      "courage": 0,
+      "courage": 2,
       "speed": 1,
       "hitsurge": "",
       "defsurge": "b"
@@ -17060,7 +17060,7 @@
     "stats": {
       "minicount": 1,
       "hp": 4,
-      "defense": "w",
+      "defense": "r",
       "courage": 3,
       "speed": 1,
       "hitsurge": "h",
@@ -19101,7 +19101,7 @@
       "minicount": 3,
       "hp": 3,
       "defense": "w",
-      "courage": 0,
+      "courage": 2,
       "speed": 1,
       "hitsurge": "h",
       "defsurge": "b"
@@ -19151,7 +19151,7 @@
     "cardType": "upgrade",
     "cost": 28,
     "imageName": "Heavy Aqua Droid.webp",
-    "keywords": ["Impact"],
+    "keywords": [],
     "requirements": [
       {
         "cardName": "Aqua Droids"
@@ -23438,7 +23438,7 @@
     "rank": "operative",
     "faction": "mercenary",
     "isUnique": true,
-    "cost": 0,
+    "cost": 90,
     "keywords": [
       {
         "name": "Jump",
@@ -23458,7 +23458,7 @@
         "value": "Maul"
       }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["force", "training"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -23506,7 +23506,7 @@
     "rank": "operative",
     "faction": "separatists",
     "isUnique": true,
-    "cost": 0,
+    "cost": 90,
     "keywords": [
       {
         "name": "Jump",
@@ -23526,7 +23526,7 @@
         "value": "Count Dooku"
       }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["force", "training"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -24064,7 +24064,6 @@
     ]
   },
   "Hu": {
-    "isUnreleased": "July 2026",
     "id": "Hu",
     "cardName": "Mandalorian Leader",
     "imageName": "Mandalorian Leader.webp",
@@ -24123,7 +24122,6 @@
     ]
   },
   "Hv": {
-    "isUnreleased": "July 2026",
     "id": "Hv",
     "cardName": "Mandalorian Hunter",
     "imageName": "Mandalorian Hunter.webp",
@@ -26473,7 +26471,6 @@
     ]
   },
   "La": {
-    "isUnreleased": "Aug 2026",
     "cardName": "No Escape",
     "cardSubtype": "1",
     "cardType": "command",
@@ -26485,7 +26482,6 @@
     "keywords": []
   },
   "Lb": {
-    "isUnreleased": "Aug 2026",
     "cardName": "Honor and Strength",
     "cardSubtype": "3",
     "cardType": "command",
@@ -26615,7 +26611,6 @@
   },
   "Lh": {
     "id": "Lh",
-    "isUnreleased": "Aug 2026",
     "cardSubtype": "gear",
     "cardName": "Superior Equipment",
     "cardType": "upgrade",
@@ -26641,7 +26636,6 @@
   },
   "Li": {
     "id": "Li",
-    "isUnreleased": "Aug 2026",
     "cardName": "Force Enhanced Defense",
     "cardType": "upgrade",
     "cardSubtype": "force",
@@ -26657,7 +26651,6 @@
   },
   "Lj": {
     "id": "Lj",
-    "isUnreleased": "Aug 2026",
     "cardName": "Force Agility",
     "cardType": "upgrade",
     "cardSubtype": "force",
@@ -26668,7 +26661,6 @@
   },
   "Lk": {
     "id": "Lk",
-    "isUnreleased": "Aug 2026",
     "cardName": "Battlemind",
     "cardType": "upgrade",
     "cardSubtype": "force",
@@ -26679,7 +26671,6 @@
   },
   "Ll": {
     "id": "Ll",
-    "isUnreleased": "Aug 2026",
     "cardName": "Annul",
     "cardType": "upgrade",
     "cardSubtype": "force",
@@ -26690,7 +26681,6 @@
   },
   "Lm": {
     "id": "Lm",
-    "isUnreleased": "Aug 2026",
     "cardName": "Helping Hand",
     "cardType": "upgrade",
     "cardSubtype": "force",
@@ -26710,7 +26700,6 @@
   },
   "Ln": {
     "id": "Ln",
-    "isUnreleased": "Aug 2026",
     "cardName": "Force Absorb",
     "cardType": "upgrade",
     "cardSubtype": "force",
@@ -26725,7 +26714,6 @@
   },
   "Lo": {
     "id": "Lo",
-    "isUnreleased": "Aug 2026",
     "cardName": "Despair",
     "cardType": "upgrade",
     "cardSubtype": "force",
@@ -26740,7 +26728,6 @@
   },
   "Lp": {
     "id": "Lp",
-    "isUnreleased": "Aug 2026",
     "cardName": "Hatred",
     "cardType": "upgrade",
     "cardSubtype": "force",
@@ -26755,7 +26742,6 @@
   },
   "Lq": {
     "id": "Lq",
-    "isUnreleased": "Aug 2026",
     "cardName": "Force Drain",
     "cardType": "upgrade",
     "cardSubtype": "force",
@@ -26770,7 +26756,6 @@
   },
   "Lr": {
     "id": "Lr",
-    "isUnreleased": "Aug 2026",
     "cardName": "Strong in the Force",
     "cardType": "upgrade",
     "cardSubtype": "training",
@@ -26790,7 +26775,6 @@
   },
   "Ls": {
     "id": "Ls",
-    "isUnreleased": "Aug 2026",
     "cardName": "Hit the Dirt",
     "cardType": "upgrade",
     "cardSubtype": "training",
@@ -26827,7 +26811,6 @@
   },
   "Lt": {
     "id": "Lt",
-    "isUnreleased": "Aug 2026",
     "cardName": "Lying In Wait",
     "cardType": "upgrade",
     "cardSubtype": "training",
@@ -26873,7 +26856,6 @@
   },
   "Lu": {
     "id": "Lu",
-    "isUnreleased": "Aug 2026",
     "cardName": "Stuck In",
     "cardType": "upgrade",
     "cardSubtype": "training",
@@ -26907,7 +26889,6 @@
   },
   "Lv": {
     "id": "Lv",
-    "isUnreleased": "Aug 2026",
     "cardName": "Go For Broke",
     "cardType": "upgrade",
     "cardSubtype": "training",
@@ -26941,7 +26922,6 @@
   },
   "Lw": {
     "id": "Lw",
-    "isUnreleased": "Aug 2026",
     "cardName": "Agile Climber",
     "cardType": "upgrade",
     "cardSubtype": "training",
@@ -26981,7 +26961,6 @@
   },
   "Lx": {
     "id": "Lx",
-    "isUnreleased": "Aug 2026",
     "cardName": "Infantry Support",
     "cardType": "upgrade",
     "cardSubtype": "comms",
@@ -27000,7 +26979,6 @@
   },
   "Ly": {
     "id": "Ly",
-    "isUnreleased": "Aug 2026",
     "cardName": "Adaptive Combat Network",
     "cardType": "upgrade",
     "cardSubtype": "comms",
@@ -27019,7 +26997,6 @@
   },
   "Lz": {
     "id": "Lz",
-    "isUnreleased": "Aug 2026",
     "isUnique": true,
     "cardName": "Squadron Leader",
     "cardType": "upgrade",
@@ -27039,7 +27016,6 @@
   },
   "Ma": {
     "id": "Ma",
-    "isUnreleased": "Aug 2026",
     "cardName": "High Speed Tracking",
     "cardType": "upgrade",
     "cardSubtype": "gear",
@@ -27050,7 +27026,6 @@
   },
   "Mb": {
     "id": "Mb",
-    "isUnreleased": "Aug 2026",
     "cardName": "Tank Hunting Munitions",
     "cardType": "upgrade",
     "cardSubtype": "gear",
@@ -27070,7 +27045,6 @@
   },
   "Mc": {
     "id": "Mc",
-    "isUnreleased": "Aug 2026",
     "cardName": "Overcharged Blaster Packs",
     "cardType": "upgrade",
     "cardSubtype": "gear",
@@ -27087,7 +27061,6 @@
   },
   "Me": {
     "id": "Me",
-    "isUnreleased": "Aug 2026",
     "cardName": "Fire Control",
     "isUnique": true,
     "cardType": "upgrade",
@@ -27204,6 +27177,217 @@
           { "name": "Impact", "value": 2 },
           { "name": "Pierce", "value": 1 }
         ]
+      }
+    ]
+  },
+  "Mj": {
+    "id": "Mj",
+    "cardName": "Admiral Trench",
+    "title": "Fleet Commander",
+    "imageName": "Admiral Trench.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "commander",
+    "faction": "separatists",
+    "isUnique": true,
+    "cost": 85,
+    "keywords": [
+      {
+        "name": "Direct",
+        "value": "Flying Vehicle"
+      },
+      {
+        "name": "Entourage",
+        "value": "Kraken"
+      },
+      {
+        "name": "Equip",
+        "value": "Caught in a Web"
+      },
+      "Override"
+    ],
+    "upgradeBar": ["command", "command", "command", "comms", "gear"],
+    "stats": {
+      "minicount": 1,
+      "hp": 5,
+      "defense": "r",
+      "courage": 2,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Swagger Stick",
+        "range": [0, 0],
+        "dice": {
+          "r": 0,
+          "b": 1,
+          "w": 0
+        }
+      },
+      {
+        "name": "Orbital Strike",
+        "range": [5, 0],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        },
+        "keywords": [
+          {
+            "name": "Immune",
+            "value": "Deflect"
+          },
+          {
+            "name": "Impact",
+            "value": 3
+          }
+        ]
+      }
+    ]
+  },
+  "Mk": {
+    "id": "Mk",
+    "cardName": "B2 Super Rocket Battle Droids",
+    "cardType": "unit",
+    "cardSubtype": "droid trooper",
+    "rank": "heavy",
+    "faction": "separatists",
+    "cost": 94,
+    "imageName": "B2 Super Rocket Battle Droids.webp",
+    "keywords": [
+      {
+        "name": "Jump",
+        "value": 2
+      },
+      {
+        "name": "AI",
+        "value": "Attack"
+      },
+      {
+        "name": "Target",
+        "value": 1
+      }
+    ],
+    "upgradeBar": ["heavy weapon", "personnel", "gear", "comms"],
+    "stats": {
+      "minicount": 4,
+      "hp": 2,
+      "defense": "r",
+      "courage": 2,
+      "speed": 3,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "history": [],
+    "weapons": [
+      {
+        "name": "Twin Arm Cannons",
+        "keywords": ["Overwhelm"],
+        "range": [0, 2],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Ml": {
+    "id": "Ml",
+    "cardSubtype": "heavy weapon",
+    "cardName": "B2-HA Rocket Droid",
+    "cardType": "upgrade",
+    "cost": 30,
+    "imageName": "B2-HA Rocket Droid.webp",
+    "keywords": ["Cycle"],
+    "requirements": [
+      {
+        "cardName": "B2 Super Rocket Battle Droids"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "B2-HA",
+        "keywords": [
+          "Blast",
+          {
+            "name": "Impact",
+            "value": "2"
+          }
+        ],
+        "range": [2, 3],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 1
+        }
+      }
+    ]
+  },
+  "Mm": {
+    "id": "Mm",
+    "cardSubtype": "personnel",
+    "cardName": "B2 Super Rocket Battle Droid",
+    "cardType": "upgrade",
+    "cost": 21,
+    "imageName": "B2 Super Rocket Battle Droid.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "B2 Super Rocket Battle Droids"
+      }
+    ]
+  },
+  "Mn": {
+    "id": "Mn",
+    "cardSubtype": "heavy weapon",
+    "cardName": "Missile Pod Rocket Droid",
+    "cardType": "upgrade",
+    "cost": 24,
+    "imageName": "Missile Pod Rocket Droid.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "B2 Super Rocket Battle Droids"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Anti-Infantry Missile Pods",
+        "keywords": [
+          "Scatter",
+          {
+            "name": "Anti-Personnel",
+            "value": 2
+          }
+        ],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 4
+        }
+      },
+      {
+        "name": "Anti-Armor Missile Pods",
+        "keywords": [
+          {
+            "name": "Anti-Material",
+            "value": 3
+          },
+          {
+            "name": "Impact",
+            "value": 3
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 3
+        }
       }
     ]
   }
