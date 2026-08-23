@@ -335,7 +335,7 @@ const battleForcesDict = {
     name: "Rapid Interdiction Force",
     faction: "separatists",
     linkId: "rf",
-    commander: ["Ef", "Do"], // trench
+    commander: ["Ef", "Do", "Mj"],
     operative: ["Dp"],
     corps: ["la", "Is"],
     special: ["Eg"],
@@ -344,7 +344,7 @@ const battleForcesDict = {
     rules: {
       buildsAsCorps: ["la"],
     },
-    allowedUpgrades: ["cw", "Lz"],
+    allowedUpgrades: ["cw", "Lz", "Ic"],
 
     "standard mode": {
       commOp: 3,
@@ -840,6 +840,7 @@ const battleForcesDict = {
       corps: [2, 4],
       special: [0, 3],
       support: [0, 2],
+      heavy: [0, 0],
     },
   },
   "Custom Clan": {
@@ -854,7 +855,19 @@ const battleForcesDict = {
     support: ["Hs"],
     heavy: [],
     allowedUpgrades: ["cw", "Ks", "Kt", "Ku", "Lc", "Ld", "Le", "Lf", "Lg"],
-    disallowedUpgrades: ["Jy", "Jz", "Ka", "Kb", "Kc"],
+    disallowedUpgrades: [
+      "Jy",
+      "Jz",
+      "Ka",
+      "Kb",
+      "Kc",
+      "sn",
+      "Fl",
+      "Fj",
+      "Fk",
+      "Fm",
+      "go",
+    ],
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,

@@ -1,7 +1,13 @@
-import React from "react";
-import { Typography } from "@material-ui/core";
+import { Typography, List, ListItem, Divider } from "@material-ui/core";
 
 function Info() {
+  const supporters = [
+    "Katherine Marsee",
+    "Geoffrey Michaelis",
+    "Chris Nahum",
+    "ThatOtherRandomHuman",
+  ];
+
   return (
     <div
       style={{
@@ -20,6 +26,15 @@ function Info() {
           textAlign: "center",
         }}
       >
+        <Typography variant="h5">
+          Thank you to the following Patreon supporters:
+        </Typography>
+        <List sx={{ listStyleType: "disc" }}>
+          {supporters.map((supporter) => (
+            <ListItem sx={{ display: "list-item" }}>{supporter}</ListItem>
+          ))}
+        </List>
+        <Divider style={{ width: "100%", margin: "10px 0" }} />
         <Typography>
           Currently being supported by darjim and grabnar6 on Discord.
         </Typography>
@@ -46,23 +61,6 @@ function Info() {
             Legion Helper
           </a>
           .
-        </Typography>
-        <Typography>
-          If you enjoy LegionHQ, kindly also support and watch{" "}
-          <a
-            href="https://www.youtube.com/@crit2block"
-            style={{ textDecoration: "none", color: "lightblue" }}
-          >
-            Crit2Block
-          </a>
-          &nbsp;and&nbsp;
-          <a
-            href="https://www.youtube.com/@kokozula"
-            style={{ textDecoration: "none", color: "lightblue" }}
-          >
-            Kokozula
-          </a>
-          &nbsp;on YouTube.
         </Typography>
       </div>
     </div>

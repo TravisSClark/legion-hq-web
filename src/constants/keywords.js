@@ -467,7 +467,7 @@ free action.",
     "When a unit that has the Indomitable keyword Rallies, it rolls \
 red defense dice instead of white defense dice.",
   Infiltrate:
-    "When a unit with the Infiltrate keyword starts its Activaiton, \
+    "When a unit with the Infiltrate keyword starts its Activation, \
 if it is undeployed, it may Deploy by placing the unit leader of \
 that unit completely within allied Territory. Then the remaining \
 miniatures in that unit are placed in Cohesion with their unit \

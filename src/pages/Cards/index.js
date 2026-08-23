@@ -1,17 +1,10 @@
 import React from "react";
-import {
-  Chip,
-  ExpansionPanel,
-  ExpansionPanelSummary,
-  ExpansionPanelDetails,
-  Typography,
-  makeStyles,
-} from "@material-ui/core";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { makeStyles } from "@material-ui/core";
 import CardModal from "common/CardModal";
 import cards from "constants/cards";
 import keywords from "constants/keywords";
 import BasicCardChips from "./BasicCardChips";
+import BasicKeywordChips from "./BasicKeywordChips";
 
 const useStyles = makeStyles((theme) => ({
   columnContainer: {
@@ -90,28 +83,9 @@ function Cards() {
         }
       }
     });
-  const sortedKeywords = Object.keys(keywords).sort(([a], [b]) =>
-    a.localeCompare(b, undefined, { sensitivity: "base" }),
-  );
   return (
     <div className={classes.columnContainer}>
-      <ExpansionPanel>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography>Keywords</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails style={{ padding: 16 }}>
-          <div style={{ display: "flex", flexFlow: "row wrap" }}>
-            {sortedKeywords.map((key) => (
-              <Chip
-                clickable
-                size={"medium"}
-                label={key}
-                style={{ marginBottom: 4, marginLeft: 4 }}
-              />
-            ))}
-          </div>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+      <BasicKeywordChips keywords={keywords} />
       <CardModal
         id={modalContent}
         isOpen={isModalOpen}

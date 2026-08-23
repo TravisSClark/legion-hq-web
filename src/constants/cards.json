@@ -7,6 +7,12 @@
     "faction": "",
     "imageName": "Standing Orders.webp",
     "keywords": [],
+    "history": [
+      {
+        "date": "22 March 2018",
+        "description": "Released in Core Set."
+      }
+    ],
     "id": "aa"
   },
   "ab": {
@@ -69,6 +75,10 @@
       }
     ],
     "history": [
+      {
+        "date": "24 May 2018",
+        "description": "Released in Leia Organa Commander Expansion."
+      },
       {
         "date": "27 October 2021",
         "description": "Cost reduced from 90 to 80 points."
@@ -144,6 +154,10 @@
       }
     ],
     "history": [
+      {
+        "date": "23 August 2018",
+        "description": "Released in Han Solo Commander Expansion."
+      },
       {
         "date": "19 November 2020",
         "description": "Cost reduced from 120 to 100 points."
@@ -22674,7 +22688,6 @@
     "rank": "commander",
     "faction": "republic",
     "isUnique": true,
-    "isUnreleased": "Aug 2026",
     "cost": 165,
     "keywords": [
       {
@@ -23161,11 +23174,9 @@
     "faction": "republic",
     "imageName": "This Party's Over.webp",
     "keywords": ["Vaapad Mastery"],
-    "id": "Gr",
-    "isUnreleased": "Aug 2026"
+    "id": "Gr"
   },
   "Gs": {
-    "isUnreleased": "Aug 2026",
     "id": "Gs",
     "cardName": "Shaak Ti",
     "title": "Jedi Council",
@@ -23219,7 +23230,6 @@
     ]
   },
   "Gt": {
-    "isUnreleased": "Aug 2026",
     "cardName": "Unity Wins Wars",
     "cardSubtype": "3",
     "cardType": "command",
@@ -23230,7 +23240,6 @@
     "id": "Gt"
   },
   "Gu": {
-    "isUnreleased": "Aug 2026",
     "id": "Gu",
     "cardName": "Ki-Adi-Mundi",
     "title": "Jedi Council",
@@ -23287,7 +23296,6 @@
     ]
   },
   "Gv": {
-    "isUnreleased": "Aug 2026",
     "cardName": "Force of Will",
     "cardSubtype": "3",
     "cardType": "command",
@@ -23298,7 +23306,6 @@
     "id": "Gv"
   },
   "Gw": {
-    "isUnreleased": "Aug 2026",
     "id": "Gw",
     "cardName": "Plo Koon",
     "title": "Jedi Council",
@@ -23359,7 +23366,6 @@
     ]
   },
   "Gx": {
-    "isUnreleased": "Aug 2026",
     "cardName": "I Don't Believe in Chance",
     "cardSubtype": "2",
     "cardType": "command",
@@ -23370,7 +23376,6 @@
     "id": "Gx"
   },
   "Gy": {
-    "isUnreleased": "Aug 2026",
     "id": "Gy",
     "cardName": "You're Not All the Same to Me",
     "imageName": "You're Not All the Same to Me.webp",
@@ -23382,7 +23387,6 @@
     "requirements": [{ "cardName": "Plo Koon" }]
   },
   "Gz": {
-    "isUnreleased": "Aug 2026",
     "cardName": "A Disturbance in the Force",
     "cardSubtype": "2",
     "cardType": "command",
@@ -23394,7 +23398,6 @@
     "keywords": [{ "name": "Danger Sense", "value": 1 }, "Indomitable"]
   },
   "Ha": {
-    "isUnreleased": "Aug 2026",
     "id": "Ha",
     "cardName": "Shaak Ti",
     "cardType": "upgrade",
@@ -23428,7 +23431,6 @@
     ]
   },
   "Hb": {
-    "isUnreleased": "Sept 2026",
     "id": "Hb",
     "cardName": "Savage Opress",
     "title": "Maul's Enforcer",
@@ -23496,7 +23498,6 @@
     ]
   },
   "Hc": {
-    "isUnreleased": "Sept 2026",
     "id": "Hc",
     "cardName": "Savage Opress",
     "title": "Dooku's Apprentice",
@@ -23564,7 +23565,6 @@
     ]
   },
   "Hd": {
-    "isUnreleased": "Sept 2026",
     "cardName": "We Shall Start with Revenge",
     "cardSubtype": "1",
     "cardType": "command",
@@ -23575,7 +23575,6 @@
     "id": "Hd"
   },
   "Hi": {
-    "isUnreleased": "Sept 2026",
     "cardName": "For the Cause",
     "cardSubtype": "1",
     "cardType": "command",
@@ -24442,7 +24441,6 @@
     ]
   },
   "Ib": {
-    "isUnreleased": "Sept 2026",
     "cardName": "I Smell Fear... and it Smells Good",
     "cardSubtype": "2",
     "cardType": "command",
@@ -26307,6 +26305,7 @@
     "id": "Kv",
     "cardSubtype": "armament",
     "cardName": "GALAAR-90 Sniper Rifle",
+    "ttsName": "GALAAR-90 Sniper Rifle (Armament)",
     "cardType": "upgrade",
     "cost": 5,
     "imageName": "GALAAR-90 Sniper Rifle Leader.webp",
@@ -27072,7 +27071,6 @@
   },
   "Mf": {
     "id": "Mf",
-    "isUnreleased": "Aug 2026",
     "cardName": "Wisdom of the Council",
     "cardSubtype": "1",
     "cardType": "command",
@@ -27083,7 +27081,6 @@
     "requirements": [{ "title": "Jedi Council" }]
   },
   "Mg": {
-    "isUnreleased": "Aug 2026",
     "id": "Mg",
     "cardName": "Mace Windu",
     "cardType": "upgrade",
@@ -27116,7 +27113,6 @@
     ]
   },
   "Mh": {
-    "isUnreleased": "Aug 2026",
     "id": "Mh",
     "cardName": "Plo Koon",
     "ttsName": "Plo Koon (Squad Leader)",
@@ -27149,7 +27145,6 @@
     ]
   },
   "Mi": {
-    "isUnreleased": "Aug 2026",
     "id": "Mi",
     "cardName": "Ki-Adi-Mundi",
     "cardType": "upgrade",
@@ -27191,6 +27186,7 @@
     "faction": "separatists",
     "isUnique": true,
     "cost": 85,
+    "equip": ["Ic"],
     "keywords": [
       {
         "name": "Direct",

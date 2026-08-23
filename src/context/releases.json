@@ -1,11 +1,22 @@
 {
-  "Rebels": [],
+  "Rebels": [
+    {
+      "name": "Scoundrel Han & Chewie",
+      "date": "October 16",
+      "price": "$35"
+    }
+  ],
   "Empire": [],
   "Republic": [
     {
       "name": "Jedi Council",
       "date": "August 21",
       "price": "$60"
+    },
+    {
+      "name": "Jedi General on BARC Speeder",
+      "date": "October 16",
+      "price": "$70"
     }
   ],
   "Separatists": [
@@ -20,11 +31,5 @@
       "price": "$58"
     }
   ],
-  "Other": [
-    {
-      "name": "Upgrade Card Pack 2",
-      "date": "August 14",
-      "price": "$20"
-    }
-  ]
+  "Other": []
 }
