@@ -32,12 +32,9 @@ function KeywordDialog({ keywords, keyword, isOpen, handleClose }) {
   );
 }
 
-function BasicKeywordChips({ keywords }) {
+function BasicKeywordChips({ sortedKeywords, keywords }) {
   const [isKeywordDialogOpen, setIsKeywordDialogOpen] = React.useState(false);
   const [keywordValue, setKeywordValue] = React.useState("");
-  const sortedKeywords = Object.keys(keywords).sort(([a], [b]) =>
-    a.localeCompare(b, undefined, { sensitivity: "base" }),
-  );
   const handleCloseDialog = () => {
     setIsKeywordDialogOpen(false);
   };

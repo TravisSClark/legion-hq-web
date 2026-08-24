@@ -11410,7 +11410,7 @@
     "cardType": "upgrade",
     "cost": 10,
     "imageName": "AG-2G Quad Laser.webp",
-    "keywords": ["Impact"],
+    "keywords": [{ "name": "Impact", "value": "1" }],
     "requirements": [
       {
         "cardName": "A-A5 Speeder Truck"
