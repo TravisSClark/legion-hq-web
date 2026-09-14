@@ -1,4 +1,3 @@
-import React from "react";
 import clsx from "clsx";
 import Img from "react-image";
 import { makeStyles } from "@material-ui/core/styles";

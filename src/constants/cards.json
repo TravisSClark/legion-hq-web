@@ -24475,7 +24475,7 @@
     "rank": "operative",
     "faction": "mercenary",
     "isUnique": true,
-    "cost": 0,
+    "cost": 120,
     "keywords": [
       {
         "name": "Mercenary",
@@ -24491,7 +24491,7 @@
         "value": 2
       }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["armament", "armament", "training", "training"],
     "stats": {
       "minicount": 1,
       "hp": 0,
@@ -27343,6 +27343,7 @@
     "cardType": "upgrade",
     "cost": 24,
     "imageName": "Missile Pod Rocket Droid.webp",
+    "isDoubleSided": true,
     "keywords": [],
     "requirements": [
       {
@@ -27386,5 +27387,132 @@
         }
       }
     ]
+  },
+  "Mo": {
+    "id": "Mo",
+    "cardSubtype": "personnel",
+    "cardName": "Han Solo",
+    "title": "Reckless Smuggler",
+    "cardType": "upgrade",
+    "cost": 0,
+    "imageName": "Han Solo Reckless Smuggler.webp",
+    "keywords": [
+      "Tough",
+      "Gunslinger",
+      { "name": "Independent", "value": "Aim 1" }
+    ],
+    "requirements": [
+      {
+        "cardName": "Han & Chewie"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Han's DL-44 Blaster",
+        "keywords": [
+          {
+            "name": "Lethal",
+            "value": "1"
+          }
+        ],
+        "range": [0, 2],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Mp": {
+    "id": "Mp",
+    "cardSubtype": "personnel",
+    "cardName": "Chewbacca",
+    "title": "Courageous Co-Pilot",
+    "cardType": "upgrade",
+    "cost": 0,
+    "imageName": "Chewbacca Courageous Co-Pilot.webp",
+    "keywords": ["Tough", { "name": "Defend", "value": "1" }],
+    "requirements": [
+      {
+        "cardName": "Han & Chewie"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Overwhelm",
+        "keywords": [
+          {
+            "name": "Lethal",
+            "value": "1"
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 3,
+          "b": 0,
+          "w": 0
+        }
+      },
+      {
+        "name": "Chewbacca's Bowcaster",
+        "keywords": [
+          {
+            "name": "Impact",
+            "value": "1"
+          },
+          {
+            "name": "Pierce",
+            "value": "1"
+          }
+        ],
+        "range": [1, 3],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Mq": {
+    "id": "Mq",
+    "cardName": "Never Tell Me the Odds",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "Han & Chewie",
+    "imageName": "Never Tell Me the Odds.webp",
+    "faction": "",
+    "keywords": ["Marksman"]
+  },
+  "Mr": {
+    "id": "Mr",
+    "cardName": "Wookiee Life Debt",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "Han & Chewie",
+    "imageName": "Wookiee Life Debt.webp",
+    "faction": "",
+    "keywords": [
+      "Permanent",
+      {
+        "name": "Armor",
+        "value": "1"
+      },
+      {
+        "name": "Guardian",
+        "value": "2"
+      }
+    ]
+  },
+  "Ms": {
+    "id": "Ms",
+    "cardName": "Boring Conversation Anyway",
+    "cardSubtype": "3",
+    "cardType": "command",
+    "commander": "Han & Chewie",
+    "imageName": "Boring Conversation Anyway.webp",
+    "faction": "",
+    "keywords": []
   }
 }

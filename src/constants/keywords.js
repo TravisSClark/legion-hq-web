@@ -858,6 +858,9 @@ each Round.",
 choose up to X other allied Children of the Watch units within 2 of that unit. \
 Each chosen unit performs the Action listed by the unit that was issued the order's \
 This is the Way keyword as a free action",
+  Tough:
+    "A miniature with Tough can be assigned Wounds even \
+if it is the unit leader or does not have the most Wound tokens in the unit.",
   Transport:
     "During Setup, a unit with the Transport keyword may choose \
 an allied CORPS Trooper or SPECIAL FORCES Trooper unit to transport. During \
