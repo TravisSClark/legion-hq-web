@@ -12,7 +12,7 @@ const battleForcesDict = {
     name: "212th Attack Battalion",
     faction: "republic",
     linkId: "2t",
-    commander: ["gw", "ue"],
+    commander: ["Mt", "gw", "ue"],
     operative: ["Da"],
     corps: ["fz", "Bi"],
     special: ["Ay"],

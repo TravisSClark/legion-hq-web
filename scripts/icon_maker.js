@@ -21,8 +21,8 @@ fs.readdir(inputFolder, (err, files) => {
         // let yOffsetRatio = (45 / 300);
 
         // unit cards
-        // let x = - (image.bitmap.width / 3);
-        // let y = image.bitmap.height / 8;
+        // let x = -(image.bitmap.width / 3);
+        // let y = image.bitmap.height / 6;
         // let w = image.bitmap.width / 3;
         // let h = image.bitmap.height / 3;
 

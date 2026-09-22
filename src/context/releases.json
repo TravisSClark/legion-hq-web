@@ -4,32 +4,37 @@
       "name": "Scoundrel Han & Chewie",
       "date": "October 16",
       "price": "$35"
+    },
+    {
+      "name": "Guerilla Troopers",
+      "date": "Q4 2026",
+      "price": "?"
     }
   ],
-  "Empire": [],
-  "Republic": [
+  "Empire": [
     {
-      "name": "Jedi Council",
-      "date": "August 21",
-      "price": "$60"
+      "name": "Imperial Mudtroopers",
+      "date": "Q4 2026",
+      "price": "?"
     },
+    {
+      "name": "Wet-Weather Gear Stormtroopers",
+      "date": "Q4 2026",
+      "price": "?"
+    },
+    {
+      "name": "224th Armored Division Army Box",
+      "date": "Q4 2026",
+      "price": "?"
+    }
+  ],
+  "Republic": [
     {
       "name": "Jedi General on BARC Speeder",
       "date": "October 16",
       "price": "$70"
     }
   ],
-  "Separatists": [
-    {
-      "name": "Leaders of the Separatist Alliance ",
-      "date": "September 11",
-      "price": "$63"
-    },
-    {
-      "name": "B2 Super Rocket Battle Droids",
-      "date": "September 11",
-      "price": "$58"
-    }
-  ],
+  "Separatists": [],
   "Other": []
 }

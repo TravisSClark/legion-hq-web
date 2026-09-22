@@ -8560,6 +8560,10 @@
     "cost": 23,
     "keywords": [
       {
+        "name": "Defend",
+        "value": 1
+      },
+      {
         "name": "Detachment",
         "value": "ARC Troopers"
       },
@@ -14115,7 +14119,7 @@
     "cardSubtype": "heavy weapon",
     "cardName": "Super Commando Marksman",
     "cardType": "upgrade",
-    "cost": 28,
+    "cost": 30,
     "imageName": "Super Commando Marksman.webp",
     "keywords": [],
     "requirements": [
@@ -14130,7 +14134,7 @@
       },
       {
         "date": "17 June 2025",
-        "description": "Cost increased from 28 to 30 points. Lost Precise, but gained Lethal 1 keyword."
+        "description": "Cost increased from 28 to 30 points. Lost Precise and 1 white die, but gained Lethal 1 keyword."
       }
     ],
     "weapons": [
@@ -22521,7 +22525,7 @@
     "cost": 95,
     "keywords": [
       {
-        "name": "Pull The Strings",
+        "name": "Pulling The Strings",
         "value": "Empire Trooper"
       },
       {
@@ -23594,7 +23598,7 @@
     "rank": "operative",
     "faction": "republic",
     "isUnique": true,
-    "cost": 0,
+    "cost": 110,
     "keywords": [
       {
         "name": "Cover",
@@ -23611,7 +23615,7 @@
         "value": 1
       }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["force", "force", "training", "training", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 6,
@@ -23662,7 +23666,7 @@
     "cardSubtype": "repulsor vehicle",
     "rank": "commander",
     "faction": "republic",
-    "cost": 0,
+    "cost": 110,
     "keywords": [
       {
         "name": "Aid",
@@ -23686,12 +23690,12 @@
         "value": 1
       }
     ],
-    "upgradeBar": [],
+    "upgradeBar": ["force", "force", "command", "training", "comms"],
     "stats": {
       "minicount": 1,
       "hp": 5,
       "defense": "r",
-      "courage": 2,
+      "courage": 0,
       "speed": 3,
       "hitsurge": "",
       "defsurge": ""
@@ -24476,7 +24480,12 @@
     "faction": "mercenary",
     "isUnique": true,
     "cost": 120,
+    "equip": ["Mo", "Mp"],
     "keywords": [
+      {
+        "name": "Equip",
+        "value": "Han Solo, Chewbacca"
+      },
       {
         "name": "Mercenary",
         "value": "Rebels"
@@ -24491,7 +24500,7 @@
         "value": 2
       }
     ],
-    "upgradeBar": ["armament", "armament", "training", "training"],
+    "upgradeBar": ["personnel", "personnel", "training", "training"],
     "stats": {
       "minicount": 1,
       "hp": 0,
@@ -27514,5 +27523,116 @@
     "imageName": "Boring Conversation Anyway.webp",
     "faction": "",
     "keywords": []
+  },
+  "Mt": {
+    "isUnreleased": "Q4 2026",
+    "isUnique": true,
+    "id": "Mt",
+    "cardName": "Obi-Wan Kenobi",
+    "title": "Mounted Jedi General",
+    "imageName": "Obi-Wan Kenobi Mounted Jedi General.webp",
+    "cardType": "unit",
+    "cardSubtype": "repulsor vehicle",
+    "rank": "commander",
+    "faction": "republic",
+    "cost": 140,
+    "keywords": [
+      {
+        "name": "Aid",
+        "value": "Clone Trooper"
+      },
+      {
+        "name": "Command Vehicle",
+        "value": 3
+      },
+      {
+        "name": "Cover",
+        "value": 1
+      },
+      {
+        "name": "Entourage",
+        "value": "BARC Speeder"
+      },
+      {
+        "name": "Immune",
+        "value": "Pierce"
+      },
+      {
+        "name": "Master of the Force",
+        "value": 1
+      },
+      {
+        "name": "Speeder",
+        "value": 1
+      }
+    ],
+    "upgradeBar": ["force", "force", "command", "training", "comms"],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 0,
+      "speed": 3,
+      "hitsurge": "",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Obi-Wan's Lightsaber",
+        "range": [0, 0],
+        "dice": {
+          "r": 2,
+          "b": 2,
+          "w": 3
+        },
+        "keywords": [
+          { "name": "Critical", "value": 2 },
+          { "name": "Impact", "value": 2 },
+          { "name": "Overrun", "value": 1 },
+          { "name": "Pierce", "value": 1 },
+          "Scatter"
+        ]
+      },
+      {
+        "name": "Twin Blaster Cannon",
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 4,
+          "w": 2
+        },
+        "keywords": [{ "name": "Fixed", "value": "Front" }]
+      }
+    ]
+  },
+  "Mu": {
+    "cardName": "I'm Sorry Master, I Didn't Catch That",
+    "cardSubtype": "2",
+    "cardType": "command",
+    "commander": "Anakin Skywalker",
+    "faction": "republic",
+    "imageName": "Im Sorry Master I Didnt Catch That.webp",
+    "keywords": ["Gunslinger"],
+    "id": "Mu",
+    "requirements": [
+      {
+        "title": "Mounted Jedi General"
+      }
+    ]
+  },
+  "Mv": {
+    "cardName": "Into the Breach",
+    "cardSubtype": "1",
+    "cardType": "command",
+    "commander": "Obi-Wan Kenobi",
+    "faction": "republic",
+    "imageName": "Into the Breach.webp",
+    "keywords": [],
+    "id": "Mv",
+    "requirements": [
+      {
+        "title": "Mounted Jedi General"
+      }
+    ]
   }
 }

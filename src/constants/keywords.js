@@ -1279,7 +1279,7 @@ ability does not cause that Upgrade Card to be exhausted.",
     "When a unit uses the Repair X: Capacity Y Card or Free Card \
 action, choose an allied Droid Trooper or Vehicle unit within \
 1 and LOS and place 1 Wound token on the card that has \
-the Repair X: Capacity Y keyword. Remove a total of up to 1 \
+the Repair X: Capacity Y keyword. Remove a total of up to X \
 Wound, Ion, and/or Vehicle Damage tokens from the chosen \
 unit or Restore up to X miniatures to that unit. This ability \
 cannot be used if the card that has the Repair X: Capacity \

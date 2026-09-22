@@ -80,7 +80,7 @@ function ListExtras() {
         <TemplateButton />
         <PrintExportButton currentList={currentList} />
         <StatsGridButton currentList={currentList} />
-        <MenuButton label="Share/Print..." icon={<ShareOutlined />}>
+        <MenuButton label="Share" icon={<ShareOutlined />}>
           <TTSTextExportButton currentList={currentList} />
           <ImageExportButton currentList={currentList} />
           <TextExportButton currentList={currentList} />
