@@ -40,13 +40,17 @@ function Cards() {
     hardpoint: [],
     gear: [],
     grenades: [],
+    programming: [],
+    doctrine: [],
     comms: [],
-    pilots: [],
+    pilot: [],
     training: [],
     generator: [],
     armament: [],
     crew: [],
     ordnance: [],
+    "squad leader": [],
+    clan: [],
   };
   const commandCards = { 1: [], 2: [], 3: [], 4: [] };
   const battleCards = { primary: [], secondary: [], advantage: [] };
