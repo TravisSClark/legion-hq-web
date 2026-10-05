@@ -7,25 +7,35 @@
     },
     {
       "name": "Guerilla Troopers",
-      "date": "Q4 2026",
-      "price": "?"
+      "date": "November 27",
+      "price": "$50"
     }
   ],
   "Empire": [
     {
       "name": "Imperial Mudtroopers",
-      "date": "Q4 2026",
-      "price": "?"
+      "date": "December 4",
+      "price": "$55"
     },
     {
       "name": "Wet-Weather Gear Stormtroopers",
-      "date": "Q4 2026",
-      "price": "?"
+      "date": "December 4",
+      "price": "$47"
     },
     {
       "name": "224th Armored Division Army Box",
-      "date": "Q4 2026",
-      "price": "?"
+      "date": "November 27",
+      "price": "$140"
+    },
+    {
+      "name": "TX-225 GAVw Occupier Tank (Reprint)",
+      "date": "December 4",
+      "price": "$70"
+    },
+    {
+      "name": "LAAT-le Patrol Transport (Reprint)",
+      "date": "December 4",
+      "price": "$80"
     }
   ],
   "Republic": [
@@ -33,8 +43,34 @@
       "name": "Jedi General on BARC Speeder",
       "date": "October 16",
       "price": "$70"
+    },
+    {
+      "name": "Raddaugh Gnasp Fluttercraft (Reprint)",
+      "date": "November 6",
+      "price": "$46"
+    },
+    {
+      "name": "LAAT-le Patrol Transport (Reprint)",
+      "date": "December 4",
+      "price": "$80"
     }
   ],
   "Separatists": [],
-  "Other": []
+  "Other": [
+    {
+      "name": "Pyke Syndicate Foot Soliders (Reprint)",
+      "date": "October 16",
+      "price": "$46"
+    },
+    {
+      "name": "Swoop Bike Riders (Reprint)",
+      "date": "November 6",
+      "price": "$42"
+    },
+    {
+      "name": "Black Sun Enforcers (Reprint)",
+      "date": "December 4",
+      "price": "$46"
+    }
+  ]
 }
