@@ -1,28 +1,21 @@
-import React from 'react';
-import { Popover, Chip, Typography } from '@material-ui/core';
-import { ThemeProvider } from '@material-ui/styles';
-import { createTheme, makeStyles } from '@material-ui/core/styles';
-import factions from 'constants/factions';
-
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    padding: theme.spacing(1),
-    background: '#1F2125'
-  }
-}));
+import React from "react";
+import { Popover, Chip, Typography } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/styles";
+import { createTheme } from "@material-ui/core/styles";
+import factions from "constants/factions";
 
 function ListChipDropdown({ chips, faction }) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClose = () => setAnchorEl(null);
-  const handleClick = event => setAnchorEl(event.currentTarget);
+  const handleClick = (event) => setAnchorEl(event.currentTarget);
 
   const factionTheme = createTheme({
     palette: {
       primary: { main: factions[faction].primaryColor },
-      secondary: { main: factions[faction].secondaryColor }
-    }
+      secondary: { main: factions[faction].secondaryColor },
+    },
   });
 
   return (
@@ -30,11 +23,9 @@ function ListChipDropdown({ chips, faction }) {
       <Chip
         clickable
         color="primary"
-        style={{ margin: '0 5 5 0' }}
+        style={{ margin: "0 5 5 0" }}
         label={
-          <Typography variant="subtitle1">
-            {`${chips.length} lists`}
-          </Typography>
+          <Typography variant="subtitle1">{`${chips.length} lists`}</Typography>
         }
         onClick={handleClick}
       />
@@ -53,6 +44,6 @@ function ListChipDropdown({ chips, faction }) {
       </Popover>
     </ThemeProvider>
   );
-};
+}
 
 export default ListChipDropdown;

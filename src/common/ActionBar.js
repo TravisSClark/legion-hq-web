@@ -1,60 +1,10 @@
 import React, { useContext } from "react";
 import { AppBar, Toolbar, IconButton } from "@material-ui/core";
-import { alpha, makeStyles } from "@material-ui/core/styles";
 import { Menu as MenuIcon, Settings as SettingsIcon } from "@material-ui/icons";
 import { NavLink } from "react-router-dom";
 import DataContext from "context/DataContext";
 import lhqLogoLight from "assets/lhqLogoLight.svg";
 import lhqLogoDark from "assets/lhqLogoDark.svg";
-
-const useStyles = makeStyles((theme) => ({
-  grow: { flexGrow: 1 },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
-  search: {
-    position: "relative",
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    "&:hover": {
-      backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: "100%",
-    flexGrow: 1,
-    [theme.breakpoints.up("sm")]: {
-      marginLeft: theme.spacing(3),
-      width: "auto",
-    },
-  },
-  searchIcon: {
-    padding: theme.spacing(0, 2),
-    height: "100%",
-    position: "absolute",
-    pointerEvents: "none",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  inputRoot: {
-    color: "inherit",
-    width: "100%",
-  },
-  inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-  },
-  desktopOnly: {
-    display: "none",
-    [theme.breakpoints.up("sm")]: {
-      display: "flex",
-    },
-  },
-}));
 
 function DefaultBar() {
   const classes = useStyles();
@@ -64,7 +14,7 @@ function DefaultBar() {
       <IconButton
         color="inherit"
         edge="start"
-        className={classes.menuButton}
+        sx={{ marginRight: 16 }}
         onClick={() => setIsDrawerOpen(true)}
       >
         <MenuIcon />
@@ -76,7 +26,7 @@ function DefaultBar() {
           style={{ height: 35 }}
         />
       </NavLink>
-      <div className={classes.grow} />
+      <div sx={{ flexGrow: 1 }} />
       <NavLink to="/settings">
         <IconButton>
           <SettingsIcon />
@@ -101,9 +51,8 @@ function DefaultBar() {
 }
 
 function ActionBar(props) {
-  const classes = useStyles();
   return (
-    <div className={classes.grow}>
+    <div sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" color="secondary">
         <DefaultBar />
       </AppBar>

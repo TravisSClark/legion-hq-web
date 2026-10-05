@@ -1,22 +1,20 @@
-import React, { useState } from 'react';
-import clsx from 'clsx';
-import { makeStyles, Typography } from '@material-ui/core';
-import ControlPanel from './ControlPanel';
-import AttackDie from './AttackDie';
+import React, { useState } from "react";
+import { Typography } from "@material-ui/core";
+import ControlPanel from "./ControlPanel";
+import AttackDie from "./AttackDie";
 
-const useStyles = makeStyles(theme => ({
-  row: {
-    display: 'flex',
-    flexFlow: 'row wrap',
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-  column: {
-    display: 'flex',
-    flexFlow: 'column nowrap',
-    alignItems: 'center',
-    flexGrow: 1
-  }
+const Row = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexFlow: "row wrap",
+  alignItems: "center",
+  justifyContent: "center",
+}));
+
+const Column = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexFlow: "column nowrap",
+  alignItems: "center",
+  flexGrow: 1,
 }));
 
 function getRandomInt(max) {
@@ -24,7 +22,6 @@ function getRandomInt(max) {
 }
 
 function Stats() {
-  const classes = useStyles();
   const [isRolling, setIsRolling] = useState(false);
   const [numRedAttackDice, setNumRedAttackDice] = useState(0);
   const [redAttackResults, setRedAttackResults] = useState([]);
@@ -33,51 +30,51 @@ function Stats() {
   const [numWhiteAttackDice, setNumWhiteAttackDice] = useState(0);
   const [whiteAttackResults, setWhiteAttackResults] = useState([]);
   const handleSetDice = (type, color, num) => {
-    if (type === 'attack') {
-      if (color === 'red') {
+    if (type === "attack") {
+      if (color === "red") {
         setNumRedAttackDice(num);
         setRedAttackResults(redAttackResults.slice(0, num));
       }
-      if (color === 'black') {
+      if (color === "black") {
         setNumBlackAttackDice(num);
         setBlackAttackResults(blackAttackResults.slice(0, num));
       }
-      if (color === 'white') {
+      if (color === "white") {
         setNumWhiteAttackDice(num);
         setWhiteAttackResults(whiteAttackResults.slice(0, num));
       }
-    } else if (type === 'defense') {
-      if (color === 'red') {}
-      if (color === 'white') {}
+    } else if (type === "defense") {
+      if (color === "red") {
+      }
+      if (color === "white") {
+      }
     }
-  }
+  };
   const handleRollDice = () => {
     setIsRolling(true);
     for (let i = 0; i < numRedAttackDice; i++) {
       if (i < redAttackResults.length) {
-        redAttackResults[i] = getRandomInt(16)
+        redAttackResults[i] = getRandomInt(16);
       } else redAttackResults.push(getRandomInt(16));
     }
     for (let i = 0; i < numBlackAttackDice; i++) {
       if (i < blackAttackResults.length) {
-        blackAttackResults[i] = getRandomInt(16)
+        blackAttackResults[i] = getRandomInt(16);
       } else blackAttackResults.push(getRandomInt(16));
     }
     for (let i = 0; i < numWhiteAttackDice; i++) {
       if (i < whiteAttackResults.length) {
-        whiteAttackResults[i] = getRandomInt(16)
+        whiteAttackResults[i] = getRandomInt(16);
       } else whiteAttackResults.push(getRandomInt(16));
     }
     setTimeout(() => setIsRolling(false), 500);
-  }
+  };
   return (
-    <div className={classes.column}>
-      <div className={classes.row}>
-        <Typography variant="h5">
-          Dice Roller
-        </Typography>
-      </div>
-      <div className={clsx(classes.row, classes.column)}>
+    <Column>
+      <Row>
+        <Typography variant="h5">Dice Roller</Typography>
+      </Row>
+      <Row>
         <ControlPanel
           numRedAttackDice={numRedAttackDice}
           numBlackAttackDice={numBlackAttackDice}
@@ -85,8 +82,8 @@ function Stats() {
           handleSetDice={handleSetDice}
           handleRollDice={handleRollDice}
         />
-      </div>
-      <div className={classes.row}>
+      </Row>
+      <Row>
         {redAttackResults.map((result, i) => (
           <AttackDie
             key={`red_${result}_${i}`}
@@ -95,8 +92,8 @@ function Stats() {
             isRolling={isRolling}
           />
         ))}
-      </div>
-      <div className={classes.row}>
+      </Row>
+      <Row>
         {blackAttackResults.map((result, i) => (
           <AttackDie
             key={`black_${result}_${i}`}
@@ -105,8 +102,8 @@ function Stats() {
             isRolling={isRolling}
           />
         ))}
-      </div>
-      <div className={classes.row}>
+      </Row>
+      <Row>
         {whiteAttackResults.map((result, i) => (
           <AttackDie
             key={`white_${result}_${i}`}
@@ -115,9 +112,9 @@ function Stats() {
             isRolling={isRolling}
           />
         ))}
-      </div>
-    </div>
+      </Row>
+    </Column>
   );
-};
+}
 
 export default Stats;
