@@ -146,14 +146,14 @@ function sortUpgradeIds(ids, userSettings) {
         if (!cardA.uniqueCount && cardB.uniqueCount) return 1;
         if (cardA.requirements && cardB.requirements) {
           if (
-            cardA.requirements.find((req) => "cardName" in req) &&
-            !cardB.requirements.find((req) => "cardName" in req)
+            cardA.requirements.find((req) => Object.hasOwn(req, "cardName")) &&
+            !cardB.requirements.find((req) => Object.hasOwn(req, "cardName"))
           )
             return -1;
 
           if (
-            !cardA.requirements.find((req) => "cardName" in req) &&
-            cardB.requirements.find((req) => "cardName" in req)
+            !cardA.requirements.find((req) => Object.hasOwn(req, "cardName")) &&
+            cardB.requirements.find((req) => Object.hasOwn(req, "cardName"))
           )
             return 1;
         }
