@@ -38,6 +38,9 @@ function CardModal({ id, isOpen, handleClose }) {
         {["unit", "battle"].includes(card.cardType) && (
           <ImagePanel card={card} extraCardImage={true} />
         )}
+        {["upgrade"].includes(card.cardType) && (
+          <ImagePanel card={card} originalCardImage={true} />
+        )}
         {card.history && <HistoryPanel history={card.history.reverse()} />}
       </DialogContent>
       {isFullscreen && (

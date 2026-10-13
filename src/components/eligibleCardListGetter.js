@@ -1,7 +1,6 @@
 import _ from "lodash";
-import cards, { cardIdsByType, upgradeIdsBySubtype } from "constants/cards";
-
 import battleForcesDict from "constants/battleForcesDict";
+import cards, { cardIdsByType, upgradeIdsBySubtype } from "constants/cards";
 import { sortCommandIds } from "./listOperations";
 import { makeModifiedCard } from "./utility";
 
@@ -98,41 +97,80 @@ function sortIds(ids) {
   return sortedIds;
 }
 
-function sortUnitIds(ids) {
-  const sortedIds = ids.sort((a, b) => {
-    const cardA = cards[a];
-    const cardB = cards[b];
+function sortUnitIds(ids, userSettings) {
+  if (
+    !userSettings ||
+    !userSettings.sortType ||
+    userSettings.sortType === "default" ||
+    userSettings.sortType === "name"
+  ) {
+    const sortedIds = ids.sort((a, b) => {
+      const cardA = cards[a];
+      const cardB = cards[b];
 
-    // TODO breaks if we get a cross-faction battleforce or etc
-    if (cardA.faction !== cardB.faction) {
-      return cardA.faction === "mercenary" ? 1 : -1;
-    }
+      // TODO breaks if we get a cross-faction battleforce or etc
+      if (
+        cardA.faction !== cardB.faction &&
+        userSettings?.sortType !== "name"
+      ) {
+        return cardA.faction === "mercenary" ? 1 : -1;
+      }
 
-    return cardA.cardName > cardB.cardName ? 1 : -1;
-  });
-  return sortedIds;
+      return cardA.cardName > cardB.cardName ? 1 : -1;
+    });
+    return sortedIds;
+  } else if (userSettings.sortType === "points") {
+    const sortedIds = ids.sort((a, b) => {
+      const cardA = cards[a];
+      const cardB = cards[b];
+      return cardA.cost < cardB.cost ? -1 : 1;
+    });
+    return sortedIds;
+  }
 }
 
-function sortUpgradeIds(ids) {
-  const sortedIds = ids.sort((a, b) => {
-    const cardA = cards[a];
-    const cardB = cards[b];
+function sortUpgradeIds(ids, userSettings) {
+  if (
+    !userSettings ||
+    !userSettings.sortType ||
+    userSettings.sortType === "default" ||
+    userSettings.sortType === "name"
+  ) {
+    const sortedIds = ids.sort((a, b) => {
+      const cardA = cards[a];
+      const cardB = cards[b];
+      if (userSettings?.sortType === "default") {
+        if (cardA.isUnique && !cardB.isUnique) return -1;
+        if (!cardA.isUnique && cardB.isUnique) return 1;
+        if (cardA.uniqueCount && !cardB.uniqueCount) return -1;
+        if (!cardA.uniqueCount && cardB.uniqueCount) return 1;
+        if (cardA.requirements && cardB.requirements) {
+          if (
+            cardA.requirements.find((req) => "cardName" in req) &&
+            !cardB.requirements.find((req) => "cardName" in req)
+          )
+            return -1;
 
-    // TODO: might need another look, but I think it's ok overall (and convenient!)
-    // By putting stuff with a longer req count at the top, you tend to get your units' unique upgrades at the top
-    // e.g. Mando Super Commandos are often going to pick their Shield Equip
-    // only non-human-intuitive thing I've seen at a quick look is that 'Jedi Guardian' becomes
-    // the top of Republic spec forces 'leader' slot since he has more reqs
-    if (cardA.requirements && cardB.requirements) {
-      if (cardA.requirements.length !== cardB.requirements.length) {
-        return cardA.requirements.length > cardB.requirements.length ? -1 : 1;
+          if (
+            !cardA.requirements.find((req) => "cardName" in req) &&
+            cardB.requirements.find((req) => "cardName" in req)
+          )
+            return 1;
+        }
       }
-    }
-    const nameA = cardA.displayName ? cardA.displayName : cardA.cardName;
-    const nameB = cardB.displayName ? cardB.displayName : cardB.cardName;
-    return nameA > nameB ? 1 : -1;
-  });
-  return sortedIds;
+      const nameA = cardA.displayName ? cardA.displayName : cardA.cardName;
+      const nameB = cardB.displayName ? cardB.displayName : cardB.cardName;
+      return nameA > nameB ? 1 : -1;
+    });
+    return sortedIds;
+  } else if (userSettings.sortType === "points") {
+    const sortedIds = ids.sort((a, b) => {
+      const cardA = cards[a];
+      const cardB = cards[b];
+      return cardA.cost < cardB.cost ? -1 : 1;
+    });
+    return sortedIds;
+  }
 }
 
 function getEligibleUnitsToAdd(list, rank, userSettings) {
@@ -204,7 +242,7 @@ function getEligibleUnitsToAdd(list, rank, userSettings) {
       validUnitIds.push(id);
     }
   }
-  return sortUnitIds(validUnitIds);
+  return sortUnitIds(validUnitIds, userSettings);
 }
 
 function getEligibleCcs(list) {
@@ -391,7 +429,7 @@ function getEligibleUpgrades(
   }
 
   return {
-    validIds: sortUpgradeIds(validUpgradeIds),
+    validIds: sortUpgradeIds(validUpgradeIds, userSettings),
     invalidIds: sortIds(invalidUpgradeIds),
   };
 }

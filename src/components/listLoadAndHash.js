@@ -49,6 +49,7 @@ function processUnitSegment(segment, list) {
   const unitId = unitSegment.charAt(1) + unitSegment.charAt(2);
   const unitCard = cards[unitId];
   const newUnit = {
+    unitName: unitCard.cardName,
     unitId,
     count: unitCount,
     totalUnitCost: unitCard.cost * unitCount,

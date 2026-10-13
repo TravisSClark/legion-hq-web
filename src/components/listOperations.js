@@ -1,5 +1,3 @@
-import cards from "constants/cards";
-
 import interactions, { getSpecialSlots } from "components/cardInteractions";
 import {
   findUnitIndexInList,
@@ -7,6 +5,7 @@ import {
   getUpgradeBar,
 } from "./eligibleCardListGetter";
 import battleForcesDict from "constants/battleForcesDict";
+import cards from "constants/cards";
 
 const battleTypes = ["primary", "secondary", "advantage"];
 
