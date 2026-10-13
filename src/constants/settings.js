@@ -23,7 +23,7 @@ const settings = {
     {
       key: "cardStyle",
       name: "Card Style",
-      description: "Change how cards are displayed in the list",
+      description: "How cards are displayed in the list",
       values: [
         { key: "images", name: "Images" },
         { key: "text", name: "Text" },
@@ -42,7 +42,7 @@ const settings = {
     {
       key: "cascadeUpgradeSelection",
       name: "Cascade Upgrade Selection",
-      description: "Automatically moves to the next empty upgrade slot",
+      description: "Moves to the next empty upgrade slot",
       values: [
         { key: "yes", name: "Yes" },
         { key: "no", name: "No" },
@@ -51,8 +51,7 @@ const settings = {
     {
       key: "showUnreleasedCards",
       name: "Show Unreleased Cards",
-      description:
-        "Display cards that have been announced but not yet released",
+      description: "Show future cards not released yet",
       values: [
         { key: true, name: "Yes" },
         { key: false, name: "No" },
@@ -61,8 +60,7 @@ const settings = {
     {
       key: "useOriginalImages",
       name: "Use Original Images",
-      description:
-        "(Work in Progress) Use original upgrade card images instead of art",
+      description: "(WiP) Use original upgrade card",
       values: [
         { key: true, name: "Yes" },
         { key: false, name: "No" },
@@ -73,7 +71,7 @@ const settings = {
       name: "Card Sort",
       description: "How cards are sorted in the list",
       values: [
-        { key: "default", name: "Faction First" },
+        { key: "default", name: "Default" },
         { key: "name", name: "Alphabetical" },
         { key: "points", name: "Points" },
       ],

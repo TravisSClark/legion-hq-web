@@ -5,6 +5,7 @@ import {
   Typography,
   FormControl,
   InputLabel,
+  FormHelperText,
   Select,
   MenuItem,
   Fade,
@@ -12,7 +13,14 @@ import {
 import DataContext from "context/DataContext";
 import settings from "constants/settings";
 
-function SettingDropdown({ id, name, value, options, handleClick }) {
+function SettingDropdown({
+  id,
+  name,
+  description,
+  value,
+  options,
+  handleClick,
+}) {
   return (
     <FormControl>
       <InputLabel htmlFor={`${id}-selector`}>{name}</InputLabel>
@@ -28,6 +36,7 @@ function SettingDropdown({ id, name, value, options, handleClick }) {
           </MenuItem>
         ))}
       </Select>
+      <FormHelperText>{description}</FormHelperText>
     </FormControl>
   );
 }
@@ -46,6 +55,7 @@ function Settings() {
               <SettingDropdown
                 id={setting.key}
                 name={setting.name}
+                description={setting.description}
                 value={userSettings[setting.key]}
                 options={setting.values}
                 handleClick={(event) => {
