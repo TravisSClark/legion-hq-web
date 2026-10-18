@@ -81,7 +81,7 @@ function processUnitSegment(segment, list) {
   }
   if (additionalUpgradeCards) {
     additionalUpgradeCards.map((upgradeCard) =>
-      addAdditionalUpgradeSlots(newUnit, upgradeCard),
+      addAdditionalUpgradeSlots(list, newUnit, upgradeCard),
     );
   }
 
@@ -91,7 +91,7 @@ function processUnitSegment(segment, list) {
     ].rules.addAdditionalUpgradeSlots.find((pair) => pair[0] === unitId);
 
     if (upgrades) {
-      addAdditionalUpgradeSlots(newUnit, upgrades[1]);
+      addAdditionalUpgradeSlots(list, newUnit, upgrades[1]);
     }
   }
   return newUnit;
@@ -206,7 +206,7 @@ function convertJsonToList(jsonText) {
         const upgradeCard = cards[upId];
         newUnit.upgradesEquipped.push(upId);
         if (upgradeCard.additionalUpgradeSlots) {
-          addAdditionalUpgradeSlots(newUnit, upgradeCard);
+          addAdditionalUpgradeSlots(importList, newUnit, upgradeCard);
         }
       }
     });

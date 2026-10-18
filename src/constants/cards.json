@@ -1201,7 +1201,7 @@
     "stats": {
       "minicount": 1,
       "hp": 6,
-      "defense": "r",
+      "defense": "w",
       "courage": 2,
       "speed": 2,
       "hitsurge": "h",

@@ -109,7 +109,7 @@ function equipUnitUpgrade(
   newUnit.upgradesEquipped[upgradeIndex] = upgradeId;
 
   if ("additionalUpgradeSlots" in upgradeCard) {
-    addAdditionalUpgradeSlots(newUnit, upgradeCard);
+    addAdditionalUpgradeSlots(list, newUnit, upgradeCard);
   }
 
   newUnit.upgradesEquipped = sortUpgrades(newUnit);
@@ -200,7 +200,7 @@ function updateSpecialUpgradeSlots(list, unit) {
 
 // TODO lots of bad shortcuts here that don't extend well
 // Check for special slots; remove or append them to end of unit bar accordingly
-function addAdditionalUpgradeSlots(unit, upgradeCard) {
+function addAdditionalUpgradeSlots(list, unit, upgradeCard) {
   if (Array.isArray(upgradeCard)) {
     upgradeCard = {
       additionalUpgradeSlots: upgradeCard,
@@ -210,7 +210,9 @@ function addAdditionalUpgradeSlots(unit, upgradeCard) {
   if (
     !upgradeCard.additionalUpgradeSlots ||
     upgradeCard.additionalUpgradeSlots.length === 0 ||
-    (upgradeCard.id === "Ih" && cards[unit.unitId].rank !== "corps")
+    (upgradeCard.id === "Ih" &&
+      list.battleForce !== "Imperial Remnant" &&
+      cards[unit.unitId].rank !== "corps")
   )
     return;
 
@@ -276,7 +278,7 @@ function addUnit(list, unitId, stackSize = 1, userSettings) {
     ].rules.addAdditionalUpgradeSlots.find((pair) => pair[0] === unitId);
 
     if (upgrades) {
-      addAdditionalUpgradeSlots(newUnitObject, upgrades[1]);
+      addAdditionalUpgradeSlots(list, newUnitObject, upgrades[1]);
     }
   }
 
