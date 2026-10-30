@@ -21,10 +21,10 @@ fs.readdir(inputFolder, (err, files) => {
         // let yOffsetRatio = (45 / 300);
 
         // unit cards
-        // let x = -(image.bitmap.width / 3);
-        // let y = image.bitmap.height / 6;
-        // let w = image.bitmap.width / 3;
-        // let h = image.bitmap.height / 3;
+        let x = -(image.bitmap.width / 3);
+        let y = image.bitmap.height / 6;
+        let w = image.bitmap.width / 3;
+        let h = image.bitmap.height / 3;
 
         // counterpart cards (large side for more definition)
         // let x = - (3 * image.bitmap.width / 4);
@@ -33,10 +33,10 @@ fs.readdir(inputFolder, (err, files) => {
         // let h = 2 * image.bitmap.height / 3;
 
         // command cards (do a second pass with / 5 or 4 instead of 3 for h for the more dense cards)
-        let x = 0;
-        let y = image.bitmap.height / 7;
-        let w = image.bitmap.width;
-        let h = image.bitmap.height / 3;
+        // let x = 0;
+        // let y = image.bitmap.height / 7;
+        // let w = image.bitmap.width;
+        // let h = image.bitmap.height / 3;
 
         // If your original images are already ~420w*300h, this is 'fuck-off overcomplicated', lol...
         // Otherwise, it *should* scale my window relative to yours if your images are 840x600 or w/e

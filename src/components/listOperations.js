@@ -207,12 +207,14 @@ function addAdditionalUpgradeSlots(list, unit, upgradeCard) {
     };
   }
 
+  // Really this should ignore additional heavy weapons if Flexible Response but IDK if I GAF
   if (
     !upgradeCard.additionalUpgradeSlots ||
     upgradeCard.additionalUpgradeSlots.length === 0 ||
     (upgradeCard.id === "Ih" &&
       list.battleForce !== "Imperial Remnant" &&
-      cards[unit.unitId].rank !== "corps")
+      cards[unit.unitId].rank !== "corps") ||
+    (upgradeCard.id === "Il" && unit.unitId === "Hm")
   )
     return;
 
