@@ -1,14 +1,14 @@
 {
   "Rebels": [
     {
-      "name": "Scoundrel Han & Chewie",
-      "date": "October 16",
-      "price": "$35"
-    },
-    {
       "name": "Guerilla Troopers",
       "date": "November 27",
       "price": "$50"
+    },
+    {
+      "name": "X Wing",
+      "date": "February",
+      "price": "?"
     }
   ],
   "Empire": [
@@ -36,14 +36,14 @@
       "name": "LAAT-le Patrol Transport (Reprint)",
       "date": "December 4",
       "price": "$80"
+    },
+    {
+      "name": "Tie Fighter",
+      "date": "February",
+      "price": "?"
     }
   ],
   "Republic": [
-    {
-      "name": "Jedi General on BARC Speeder",
-      "date": "October 16",
-      "price": "$70"
-    },
     {
       "name": "Raddaugh Gnasp Fluttercraft (Reprint)",
       "date": "November 6",
@@ -53,15 +53,21 @@
       "name": "LAAT-le Patrol Transport (Reprint)",
       "date": "December 4",
       "price": "$80"
+    },
+    {
+      "name": "V Wing",
+      "date": "February",
+      "price": "?"
     }
   ],
-  "Separatists": [],
-  "Other": [
+  "Separatists": [
     {
-      "name": "Pyke Syndicate Foot Soliders (Reprint)",
-      "date": "October 16",
-      "price": "$46"
-    },
+      "name": "Vulture Droid",
+      "date": "February",
+      "price": "?"
+    }
+  ],
+  "Other": [
     {
       "name": "Swoop Bike Riders (Reprint)",
       "date": "November 6",
@@ -71,6 +77,11 @@
       "name": "Black Sun Enforcers (Reprint)",
       "date": "December 4",
       "price": "$46"
+    },
+    {
+      "name": "Fang Fighter",
+      "date": "February",
+      "price": "?"
     }
   ]
 }

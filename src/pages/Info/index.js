@@ -6,6 +6,9 @@ function Info() {
     "Geoffrey Michaelis",
     "Chris Nahum",
     "ThatOtherRandomHuman",
+    "Phantom Warrior",
+    "Buff_TaunTauns",
+    "Manuel Rambonga",
   ];
 
   return (

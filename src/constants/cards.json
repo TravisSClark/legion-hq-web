@@ -2990,6 +2990,7 @@
   "eb": {
     "cardSubtype": "armament",
     "cardName": "The Darksaber",
+    "ttsName": "The Darksaber (Sabine)",
     "isUnique": true,
     "cardType": "upgrade",
     "cost": 5,
@@ -13862,8 +13863,8 @@
   "rq": {
     "id": "rq",
     "cardSubtype": "armament",
-    "displayName": "The Darksaber",
-    "cardName": "The Darksaber (Maul)",
+    "cardName": "The Darksaber",
+    "ttsName": "The Darksaber (Maul)",
     "isUnique": true,
     "cardType": "upgrade",
     "cost": 0,
@@ -15549,8 +15550,8 @@
   },
   "uj": {
     "cardSubtype": "armament",
-    "cardName": "The Darksaber (Gideon)",
-    "displayName": "The Darksaber",
+    "ttsName": "The Darksaber (Gideon)",
+    "cardName": "The Darksaber",
     "isUnique": true,
     "cardType": "upgrade",
     "cost": 15,
@@ -23588,7 +23589,6 @@
     "keywords": []
   },
   "Hj": {
-    "isUnreleased": "Q4 2026",
     "id": "Hj",
     "cardName": "Anakin Skywalker",
     "title": "Mounted Jedi General",
@@ -23657,7 +23657,6 @@
     ]
   },
   "Hk": {
-    "isUnreleased": "Q4 2026",
     "id": "Hk",
     "cardName": "Jedi Knight",
     "title": "Mounted Jedi General",
@@ -23732,7 +23731,6 @@
     ]
   },
   "Hl": {
-    "isUnreleased": "Q4 2026",
     "cardName": "Evasive Action",
     "cardSubtype": "2",
     "cardType": "command",
@@ -23747,7 +23745,6 @@
     "keywords": ["Speeder X", "Outmaneuver", "Nimble"]
   },
   "Hm": {
-    "isUnreleased": "Q4 2026",
     "id": "Hm",
     "cardName": "Guerilla Troopers",
     "imageName": "Guerilla Troopers.webp",
@@ -23755,7 +23752,7 @@
     "cardSubtype": "trooper",
     "rank": "special",
     "faction": "rebels",
-    "cost": 0,
+    "cost": 60,
     "keywords": [
       {
         "name": "Flexible Response",
@@ -23767,7 +23764,14 @@
       },
       "Infiltrate"
     ],
-    "upgradeBar": [],
+    "upgradeBar": [
+      "heavy weapon",
+      "heavy weapon",
+      "training",
+      "training",
+      "gear",
+      "grenades"
+    ],
     "stats": {
       "minicount": 4,
       "hp": 1,
@@ -24469,7 +24473,6 @@
     "id": "Ic"
   },
   "Id": {
-    "isUnreleased": "Q4 2026",
     "id": "Id",
     "cardName": "Han & Chewie",
     "title": "Notorious Scoundrels",
@@ -27525,7 +27528,6 @@
     "keywords": []
   },
   "Mt": {
-    "isUnreleased": "Q4 2026",
     "isUnique": true,
     "id": "Mt",
     "cardName": "Obi-Wan Kenobi",
@@ -27632,6 +27634,84 @@
     "requirements": [
       {
         "title": "Mounted Jedi General"
+      }
+    ]
+  },
+  "Mw": {
+    "id": "Mw",
+    "cardSubtype": "heavy weapon",
+    "cardName": "Stolen RT-97C",
+    "cardType": "upgrade",
+    "cost": 24,
+    "imageName": "Stolen RT-97C.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Guerilla Troopers"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Stolen RT-97C",
+        "keywords": [],
+        "range": [1, 4],
+        "dice": {
+          "r": 1,
+          "b": 0,
+          "w": 3
+        }
+      }
+    ]
+  },
+  "Mx": {
+    "id": "Mx",
+    "cardSubtype": "heavy weapon",
+    "cardName": "Stolen DLT-19",
+    "cardType": "upgrade",
+    "cost": 20,
+    "imageName": "Stolen DLT-19.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Guerilla Troopers"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Stolen DLT-19",
+        "keywords": [{ "name": "Impact", "value": 1 }],
+        "range": [1, 4],
+        "dice": {
+          "r": 2,
+          "b": 0,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "My": {
+    "id": "My",
+    "cardSubtype": "heavy weapon",
+    "cardName": "Stolen HH-12",
+    "cardType": "upgrade",
+    "cost": 20,
+    "imageName": "Stolen HH-12.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Guerilla Troopers"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Stolen HH-12",
+        "keywords": ["Cumbersome", { "name": "Impact", "value": 3 }],
+        "range": [2, 4],
+        "dice": {
+          "r": 0,
+          "b": 3,
+          "w": 0
+        }
       }
     ]
   }
