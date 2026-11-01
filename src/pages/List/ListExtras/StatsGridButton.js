@@ -1,7 +1,7 @@
 import React from "react";
 import { useReactToPrint } from "react-to-print";
-import { Chip, Menu, MenuItem } from "@material-ui/core";
-import { GridOn as GridIcon } from "@material-ui/icons";
+import { Chip, Menu, MenuItem } from "@mui/material";
+import { GridOn as GridIcon } from "@mui/icons-material";
 import cards from "constants/cards";
 import keywords from "constants/keywords";
 import urls from "constants/urls";

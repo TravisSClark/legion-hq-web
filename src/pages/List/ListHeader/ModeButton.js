@@ -6,9 +6,9 @@ import {
   MenuItem,
   MenuList,
   Typography,
-} from "@material-ui/core";
+} from "@mui/material";
 import legionModes from "constants/legionModes";
-import { ExpandMore } from "@material-ui/icons";
+import { ExpandMore } from "@mui/icons-material";
 
 function ModeButton({
   currentMode,

@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { Button, ButtonGroup, TextField } from "@material-ui/core";
-import { Add as AddIcon, Remove as RemoveIcon } from "@material-ui/icons";
+import { Button, ButtonGroup, TextField } from "@mui/material";
+import { Add as AddIcon, Remove as RemoveIcon } from "@mui/icons-material";
 import ListContext from "context/ListContext";
 
 function CounterButton({ label }) {

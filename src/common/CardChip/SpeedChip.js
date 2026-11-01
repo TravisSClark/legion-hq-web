@@ -1,6 +1,6 @@
 import React from 'react';
-import { Chip, Typography } from '@material-ui/core';
-import { DirectionsRun as SpeedIcon } from '@material-ui/icons';
+import { Chip, Typography } from '@mui/material';
+import { DirectionsRun as SpeedIcon } from '@mui/icons-material';
 
 function SpeedChip({ size, speed }) {
   const label = (speed < 4 && speed > -1) ? speed : 'Error';

@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { Chip, Typography } from "@material-ui/core";
-import { ThemeProvider } from "@material-ui/styles";
-import { createTheme } from "@material-ui/core/styles";
-import { Add as AddIcon } from "@material-ui/icons";
+import { Chip, Typography } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
+import { Add as AddIcon } from "@mui/icons-material";
 import DataContext from "context/DataContext";
 import factions from "constants/factions";
 

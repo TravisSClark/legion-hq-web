@@ -1,16 +1,16 @@
 import React from "react";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import {
   Chip,
   Dialog,
   DialogTitle,
   DialogContent,
   DialogContentText,
-  ExpansionPanel,
-  ExpansionPanelSummary,
-  ExpansionPanelDetails,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
   Typography,
-} from "@material-ui/core";
+} from "@mui/material";
 
 function KeywordDialog({ keywords, keyword, isOpen, handleClose }) {
   return (
@@ -51,11 +51,11 @@ function BasicKeywordChips({ sortedKeywords, keywords }) {
         isOpen={isKeywordDialogOpen}
         handleClose={handleCloseDialog}
       />
-      <ExpansionPanel>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography>Keywords</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails style={{ padding: 16 }}>
+        </AccordionSummary>
+        <AccordionDetails style={{ padding: 16 }}>
           <div style={{ display: "flex", flexFlow: "row wrap" }}>
             {sortedKeywords.map((key) => (
               <Chip
@@ -67,8 +67,8 @@ function BasicKeywordChips({ sortedKeywords, keywords }) {
               />
             ))}
           </div>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+        </AccordionDetails>
+      </Accordion>
     </>
   );
 }

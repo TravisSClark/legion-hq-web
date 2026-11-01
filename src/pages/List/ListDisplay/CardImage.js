@@ -1,7 +1,7 @@
 import React from "react";
 import Img from "react-image";
-import { Skeleton } from "@material-ui/lab";
-import { makeStyles } from "@material-ui/styles";
+import { Skeleton } from "@mui/lab";
+import { makeStyles } from "@mui/material/styles";
 import cards from "constants/cards";
 import urls from "constants/urls";
 

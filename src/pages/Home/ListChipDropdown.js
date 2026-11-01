@@ -1,8 +1,15 @@
 import React from "react";
 import { Popover, Chip, Typography } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
-import { createTheme } from "@material-ui/core/styles";
+import { createTheme, makeStyles } from "@material-ui/core/styles";
 import factions from "constants/factions";
+
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    padding: theme.spacing(1),
+    background: "#1F2125",
+  },
+}));
 
 function ListChipDropdown({ chips, faction }) {
   const classes = useStyles();

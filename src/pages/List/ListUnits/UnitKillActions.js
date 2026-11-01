@@ -1,20 +1,16 @@
-import React from 'react';
-import { IconButton } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { Icon as IconifyIcon } from '@iconify/react';
-import {
-  PlusOne as PlusOneIcon,
-  ExposureNeg1 as MinusOneIcon,
-  AcUnit as AcUnitIcon
-} from '@material-ui/icons';
+import React from "react";
+import { IconButton } from "@mui/material";
+import { makeStyles } from "@mui/material/styles";
+import { Icon as IconifyIcon } from "@iconify/react";
+import { Add as PlusIcon, Remove as NegativeIcon } from "@mui/icons-material";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   buttons: {
-    display: 'flex',
-    flexFlow: 'row nowrap',
-    justifyContent: 'center',
-    minWidth: '72px'
-  }
+    display: "flex",
+    flexFlow: "row nowrap",
+    justifyContent: "center",
+    minWidth: "72px",
+  },
 }));
 
 function UnitKillActions({ killUnit, restoreUnit }) {
@@ -24,31 +20,25 @@ function UnitKillActions({ killUnit, restoreUnit }) {
     <div className={classes.buttons}>
       <React.Fragment>
         <IconButton
-            size="small"
-            onClick={restoreUnit}
-            style={{ marginLeft: 2, marginRight: 1 }}
+          size="small"
+          onClick={restoreUnit}
+          style={{ marginLeft: 2, marginRight: 1 }}
         >
-          <MinusOneIcon style={{ fontSize }} />
+          <NegativeIcon style={{ fontSize }} />
+        </IconButton>
+        <IconButton size="small" style={{ margin: 1 }}>
+          <IconifyIcon icon="mdi:skull-crossbones" style={{ margin: 3 }} />
         </IconButton>
         <IconButton
           size="small"
-          style={{ margin: 1 }}
+          onClick={killUnit}
+          style={{ marginLeft: 1, marginRight: 2 }}
         >
-          <IconifyIcon
-            icon="mdi:skull-crossbones"
-            style={{ margin: 3 }}
-          />
-        </IconButton>
-        <IconButton
-            size="small"
-            onClick={killUnit}
-            style={{ marginLeft: 1, marginRight: 2 }}
-        >
-          <PlusOneIcon style={{ fontSize }} />
+          <PlusIcon style={{ fontSize }} />
         </IconButton>
       </React.Fragment>
     </div>
   );
-};
+}
 
 export default UnitKillActions;

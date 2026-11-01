@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Chip, Menu} from '@material-ui/core';
+import {Chip, Menu} from '@mui/material';
 
 export default function MenuButton({label="Menu", icon, children}) {
   const [anchorEl, setAnchorEl] = React.useState(null);

@@ -8,9 +8,9 @@ import {
   Box,
   Typography,
   TextField
-} from '@material-ui/core';
-import { useTheme } from '@material-ui/core/styles';
-import { Description as TextIcon } from '@material-ui/icons';
+} from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import { Description as TextIcon } from '@mui/icons-material';
 import {
   generateStandardText,
   generateMinimalText,

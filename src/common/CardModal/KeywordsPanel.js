@@ -2,11 +2,11 @@ import React from "react";
 import {
   Divider,
   Typography,
-  ExpansionPanel,
-  ExpansionPanelSummary,
-  ExpansionPanelDetails,
-} from "@material-ui/core";
-import { ExpandMore as ExpandMoreIcon } from "@material-ui/icons";
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@mui/material";
+import { ExpandMore as ExpandMoreIcon } from "@mui/icons-material";
 import keywords from "constants/keywords";
 
 function drawKeyword(kw) {
@@ -46,16 +46,16 @@ function KeywordsPanel({ card, variant = "inherit" }) {
   };
   return (
     <React.Fragment>
-      <ExpansionPanel>
-        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+      <Accordion>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography variant={variant}>Keywords</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails style={columnContainerStyles}>
+        </AccordionSummary>
+        <AccordionDetails style={columnContainerStyles}>
           {cardKeywords?.map((kw) => drawKeyword(kw))}
 
           {card.weapons?.map((w) => w.keywords?.map((kw) => drawKeyword(kw)))}
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+        </AccordionDetails>
+      </Accordion>
     </React.Fragment>
   );
 }

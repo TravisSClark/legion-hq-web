@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import LoadingWidget from "common/LoadingWidget";
 import listTemplate from "constants/listTemplate";
 const Home = lazy(() => import("pages/Home"));
@@ -31,7 +31,7 @@ export const initialLists = {
 function Pages() {
   return (
     <Suspense fallback={<LoadingWidget />}>
-      <Switch>
+      <Routes>
         <Route exact path="/" component={Home} />
         <Route exact path="/news" component={News} />
         <Route path="/cards" component={Cards} />
@@ -48,8 +48,8 @@ function Pages() {
         <Route path="/resources" component={Resources} />
         <Route path="/info" component={Info} />
         <Route path="/privacy" component={Privacy} />
-        <Redirect to="/" />
-      </Switch>
+        <Navigate to="/" />
+      </Routes>
     </Suspense>
   );
 }

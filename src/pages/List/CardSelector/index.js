@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Fade from "@material-ui/core/Fade";
-import Typography from "@material-ui/core/Typography";
+import Fade from "@mui/material/Fade";
+import Typography from "@mui/material/Typography";
 import ListContext from "context/ListContext";
 import SelectorHeader from "./SelectorHeader";
 import SelectorContent from "./SelectorContent";
@@ -8,7 +8,7 @@ import StackController from "./StackController";
 import ToggleButton from "./ToggleButton";
 import ChipCard from "common/LegionCard/ChipCard";
 import cards from "constants/cards";
-import { Button } from "@material-ui/core";
+import { Button } from "@mui/material";
 import {
   getEligibleBattlesToAdd,
   getEligibleCommandsToAdd,

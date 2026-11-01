@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
-import { AppBar, Toolbar, IconButton } from "@material-ui/core";
-import { Menu as MenuIcon, Settings as SettingsIcon } from "@material-ui/icons";
+import { AppBar, Toolbar, IconButton } from "@mui/material";
+import {
+  Menu as MenuIcon,
+  Settings as SettingsIcon,
+} from "@mui/icons-material";
 import { NavLink } from "react-router-dom";
 import DataContext from "context/DataContext";
 import lhqLogoLight from "assets/lhqLogoLight.svg";

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Container, Grid, Typography, Divider } from '@material-ui/core';
-import { Alert, AlertTitle } from '@material-ui/lab';
+import { Container, Grid, Typography, Divider } from '@mui/material';
+import { Alert, AlertTitle } from '@mui/lab';
 
 function ErrorFallback({ error, componentStack, message }) {
   return (

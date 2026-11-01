@@ -1,8 +1,8 @@
 import React from "react";
 import Img from "react-image";
-import { Chip, Typography, Badge, Menu, MenuItem } from "@material-ui/core";
-import { ThemeProvider } from "@material-ui/styles";
-import { createTheme } from "@material-ui/core/styles";
+import { Chip, Typography, Badge, Menu, MenuItem } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import DataContext from "context/DataContext";
 import urls from "constants/urls";
 import factions from "constants/factions";

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Chip, Typography } from '@material-ui/core';
+import { Chip, Typography } from '@mui/material';
 
 function PointsChip({ size="small", value, compact }) {
 

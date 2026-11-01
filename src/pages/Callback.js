@@ -1,7 +1,7 @@
-import React from 'react';
-import { Redirect } from 'react-router-dom';
-import auth0Client from 'utility/Auth';
-import LoadingWidget from 'common/LoadingWidget';
+import React from "react";
+import { Navigate } from "react-router-dom";
+import auth0Client from "utility/Auth";
+import LoadingWidget from "common/LoadingWidget";
 
 class Callback extends React.Component {
   state = { doneAuthenticating: false };
@@ -14,9 +14,7 @@ class Callback extends React.Component {
   render() {
     const { doneAuthenticating } = this.state;
     return (
-      <div>
-        {doneAuthenticating ? <Redirect to="/" /> : <LoadingWidget />}
-      </div>
+      <div>{doneAuthenticating ? <Navigate to="/" /> : <LoadingWidget />}</div>
     );
   }
 }

@@ -5,7 +5,7 @@ import {
   Card,
   CardActionArea,
   CardContent,
-} from "@material-ui/core";
+} from "@mui/material";
 
 const resourse = {
   Youtube: [

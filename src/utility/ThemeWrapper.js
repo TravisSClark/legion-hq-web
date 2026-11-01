@@ -1,7 +1,7 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline'
-import { ThemeProvider as MuiThemeProvider } from '@material-ui/styles'
-import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import CssBaseline from '@mui/material/CssBaseline'
+import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles'
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import themes from 'constants/themes';
 
 function ThemeWrapper({ children, themeColor }) {

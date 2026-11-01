@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles, Typography, Divider } from "@material-ui/core";
+import { makeStyles, Typography, Divider } from "@mui/material";
 import LegionCard from "common/LegionCard";
 
 const useStyles = makeStyles((theme) => ({

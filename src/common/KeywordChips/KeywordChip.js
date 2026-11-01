@@ -1,6 +1,6 @@
 import React from 'react';
-import { Chip, Tooltip, Typography } from '@material-ui/core';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
+import { Chip, Tooltip, Typography } from '@mui/material';
+import ClickAwayListener from '@mui/material/ClickAwayListener';
 import keywords from 'constants/keywords';
 
 function KeywordChip({ keyword, size }) {

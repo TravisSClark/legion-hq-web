@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@mui/material/styles";
 import {
   Typography,
   IconButton,
@@ -11,11 +11,11 @@ import {
   Divider,
   Avatar,
   Chip,
-} from "@material-ui/core";
+} from "@mui/material";
 import {
   Add as AddIcon,
   ExpandMore as ExpandMoreIcon,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 import {
   DefenseChip,
   PointsChip,

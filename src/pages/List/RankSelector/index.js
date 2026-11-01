@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@mui/material/styles';
 import ListContext from 'context/ListContext';
 import ranks from 'constants/ranks';
-import { Badge, IconButton, Avatar } from '@material-ui/core';
+import { Badge, IconButton, Avatar } from '@mui/material';
 import LargerTooltip from 'common/LargerTooltip';
 
 const useStyles = makeStyles({

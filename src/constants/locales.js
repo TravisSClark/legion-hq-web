@@ -6,7 +6,7 @@ import {
   ptBR,
   ptPT,
   esES
-} from '@material-ui/core/locale';
+} from '@mui/material/locale';
 
 const locales = {
   'English': enUS,

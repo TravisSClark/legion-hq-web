@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Img from 'react-image';
-import { Chip } from '@material-ui/core';
+import { Chip } from '@mui/material';
 import DataContext from 'context/DataContext';
 import symbols from 'constants/symbols';
 

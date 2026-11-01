@@ -8,9 +8,9 @@ import {
   DialogContentText,
   Link,
   Typography,
-} from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-import { Info as InfoIcon, Warning as WarningIcon } from "@material-ui/icons";
+} from "@mui/material";
+import { makeStyles } from "@mui/material/styles";
+import { Info as InfoIcon, Warning as WarningIcon } from "@mui/icons-material";
 
 import DataContext from "context/DataContext";
 import ListContext from "context/ListContext";

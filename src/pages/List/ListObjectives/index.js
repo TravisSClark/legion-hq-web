@@ -1,8 +1,8 @@
 import React from 'react';
-import { Chip } from '@material-ui/core';
-import { ThemeProvider } from '@material-ui/styles';
-import { createTheme } from '@material-ui/core/styles';
-import { Add as AddIcon } from '@material-ui/icons';
+import { Chip } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
+import { Add as AddIcon } from '@mui/icons-material';
 import ListContext from 'context/ListContext';
 import cards from 'constants/cards';
 

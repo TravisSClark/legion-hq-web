@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
-import { Chip, Menu, MenuItem } from '@material-ui/core';
-import { PlaylistAdd as AddTemplateIcon } from '@material-ui/icons';
+import { Chip, Menu, MenuItem } from '@mui/material';
+import { PlaylistAdd as AddTemplateIcon } from '@mui/icons-material';
 import DataContext from 'context/DataContext';
 import ListContext from 'context/ListContext';
 

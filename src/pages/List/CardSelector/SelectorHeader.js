@@ -1,6 +1,6 @@
 import React from 'react';
-import { Paper, IconButton } from '@material-ui/core';
-import { Clear as ClearIcon } from '@material-ui/icons';
+import { Paper, IconButton } from '@mui/material';
+import { Clear as ClearIcon } from '@mui/icons-material';
 
 function SelectorHeader({ headerContent, setCardPaneFilter, moreHeaderContent }) {
   const sticky = {

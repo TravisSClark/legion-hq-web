@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import { Chip, TextField } from '@material-ui/core';
-import { Link as LinkIcon } from '@material-ui/icons';
+import { Chip, TextField } from '@mui/material';
+import { Link as LinkIcon } from '@mui/icons-material';
 import ClipboardButton from './ClipboardButton';
 import DialogModal from './DialogModal';
 import generateLink from './generateLink';

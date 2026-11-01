@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Button from '@material-ui/core/Button';
+import Button from '@mui/material/Button';
 
 function ClipboardButton({ content, variant = 'text', autoCopy=false }) {
   const [copySuccess, setCopySuccess] = useState(false);

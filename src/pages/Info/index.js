@@ -1,4 +1,4 @@
-import { Typography, List, ListItem, Divider } from "@material-ui/core";
+import { Typography, List, ListItem, Divider } from "@mui/material";
 
 function Info() {
   const supporters = [

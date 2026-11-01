@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Button, Slider } from '@material-ui/core';
+import { Typography, Button, Slider } from '@mui/material';
 import symbols from 'constants/symbols';
 
 function valuetext(value) {

@@ -7,8 +7,8 @@ import {
   Functions as CalculateIcon,
   ShareOutlined,
   HourglassFullTwoTone as Hourglass,
-} from "@material-ui/icons";
-import { Divider, TextField } from "@material-ui/core";
+} from "@mui/icons-material";
+import { Divider, TextField } from "@mui/material";
 import DataContext from "context/DataContext";
 import ListContext from "context/ListContext";
 import TemplateButton from "./TemplateButton";

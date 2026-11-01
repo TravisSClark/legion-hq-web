@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Divider,
   Typography,
-} from '@material-ui/core';
+} from '@mui/material';
 import keywords from 'constants/keywords';
 
 function KeywordsList({ keywords:cardKeywords }) {

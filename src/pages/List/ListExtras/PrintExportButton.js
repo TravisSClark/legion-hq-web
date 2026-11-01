@@ -1,9 +1,9 @@
 import React from "react";
 //import {QRCodeCanvas as QRCode} from 'qrcode.react';
-import QRCode from "qrcode.react";
+import { QRCodeSVG } from "qrcode.react";
 import { useReactToPrint } from "react-to-print";
-import { Chip, Menu, MenuItem } from "@material-ui/core";
-import { Print as PrintIcon } from "@material-ui/icons";
+import { Chip, Menu, MenuItem } from "@mui/material";
+import { Print as PrintIcon } from "@mui/icons-material";
 import { generateTournamentText } from "components/printList";
 import generateLink from "./generateLink";
 import cards from "constants/cards";
@@ -42,7 +42,7 @@ const PrintList = React.forwardRef((props, ref) => {
       unitLines.push(
         <div key={`${line}_${i}`} style={{ fontSize: 24 }}>
           {line}
-        </div>
+        </div>,
       );
     else if (line.includes("- "))
       unitLines.push(<div key={`${line}_${i}`}>{line}</div>);
@@ -50,7 +50,7 @@ const PrintList = React.forwardRef((props, ref) => {
       unitLines.push(
         <div key={`${line}_${i}`} style={{ marginTop: 6 }}>
           {line}
-        </div>
+        </div>,
       );
   });
 
@@ -95,7 +95,7 @@ const PrintList = React.forwardRef((props, ref) => {
             })}
           </div>
         )}
-        <QRCode size={147} value={listLink} />
+        <QRCodeSVG size={147} value={listLink} />
       </div>
     </div>
   );
@@ -118,7 +118,7 @@ const PrintListImages = React.forwardRef((props, ref) => {
         alt={card.cardName}
         src={unitImage}
         style={{ height: "200px", width: "auto" }}
-      />
+      />,
     );
     unit.upgradesEquipped.forEach((upgradeId, i) => {
       if (!upgradeId) return;
@@ -130,7 +130,7 @@ const PrintListImages = React.forwardRef((props, ref) => {
           alt={upgradeCard.cardName}
           src={upgradeImage}
           style={{ height: "200px", width: "auto" }}
-        />
+        />,
       );
     });
     units.push(<div></div>);
@@ -146,7 +146,7 @@ const PrintListImages = React.forwardRef((props, ref) => {
             src={counterpartImage}
             style={{ height: "200px", width: "auto" }}
           />
-        </div>
+        </div>,
       );
     }
   });
@@ -158,7 +158,7 @@ const PrintListImages = React.forwardRef((props, ref) => {
         alt={commandCard.cardName}
         src={commandImage}
         style={{ height: "280px", width: "auto" }}
-      />
+      />,
     );
   });
   currentList.primaryCards.forEach((primaryId, i) => {
@@ -169,7 +169,7 @@ const PrintListImages = React.forwardRef((props, ref) => {
         alt={primaryCard.cardName}
         src={primaryImage}
         style={{ height: "280px", width: "auto" }}
-      />
+      />,
     );
   });
   currentList.secondaryCards.forEach((secondaryId, i) => {
@@ -180,7 +180,7 @@ const PrintListImages = React.forwardRef((props, ref) => {
         alt={secondaryCard.cardName}
         src={secondaryImage}
         style={{ height: "280px", width: "auto" }}
-      />
+      />,
     );
   });
   currentList.advantageCards.forEach((advantageId, i) => {
@@ -191,7 +191,7 @@ const PrintListImages = React.forwardRef((props, ref) => {
         alt={advantageCard.cardName}
         src={advantageImage}
         style={{ height: "280px", width: "auto" }}
-      />
+      />,
     );
   });
   // Need to do something similar as above for commands and battle cards

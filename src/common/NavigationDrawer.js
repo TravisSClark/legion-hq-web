@@ -12,9 +12,9 @@ import {
   ListItemText,
   ListItemIcon,
   Typography,
-} from "@material-ui/core";
+} from "@mui/material";
 
-import { ExpandMore, Add as AddIcon } from "@material-ui/icons";
+import { ExpandMore, Add as AddIcon } from "@mui/icons-material";
 import cards from "constants/cards";
 import factions from "constants/factions";
 import urls from "constants/urls";

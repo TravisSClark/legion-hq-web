@@ -8,7 +8,7 @@ import {
   Select,
   MenuItem,
   Fade,
-} from "@material-ui/core";
+} from "@mui/material";
 import DataContext from "context/DataContext";
 import settings from "constants/settings";
 

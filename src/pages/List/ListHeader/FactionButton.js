@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { ButtonBase } from "@material-ui/core";
-import { ExpandMore } from "@material-ui/icons";
+import { ButtonBase } from "@mui/material";
+import { ExpandMore } from "@mui/icons-material";
 import FactionIcon from "common/FactionIcon";
 
 function FactionButton({ currentList, handleFactionMenuOpen }) {

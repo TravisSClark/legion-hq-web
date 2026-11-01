@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 // import {QRCodeCanvas as QRCode} from 'qrcode.react';
-import QRCode from 'qrcode.react';
-import { Chip } from '@material-ui/core';
-import { CropFree as QRCodeIcon } from '@material-ui/icons';
-import generateLink from './generateLink';
-import DialogModal from './DialogModal';
+import { QRCodeSVG } from "qrcode.react";
+import { Chip } from "@mui/material";
+import { CropFree as QRCodeIcon } from "@mui/icons-material";
+import generateLink from "./generateLink";
+import DialogModal from "./DialogModal";
 
 function QRButton({ currentList }) {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -21,11 +21,11 @@ function QRButton({ currentList }) {
       <DialogModal
         isOpen={isOpen}
         title="QR Code"
-        content={<QRCode size={196} value={listLink} />}
+        content={<QRCodeSVG size={196} value={listLink} />}
         handleClose={() => setIsOpen(false)}
       />
     </div>
   );
-};
+}
 
 export default QRButton;

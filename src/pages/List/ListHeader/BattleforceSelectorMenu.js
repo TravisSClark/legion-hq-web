@@ -1,4 +1,4 @@
-import { Menu, MenuItem } from "@material-ui/core";
+import { Menu, MenuItem } from "@mui/material";
 import battleForcesDict from "constants/battleForcesDict";
 
 export default function BattleforceSelectorMenu({

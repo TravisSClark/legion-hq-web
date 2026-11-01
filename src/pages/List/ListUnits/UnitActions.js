@@ -1,59 +1,58 @@
-import React, { useContext, useState } from 'react';
-import { Button, IconButton, Typography } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useContext, useState } from "react";
+import { Button, IconButton, Typography } from "@mui/material";
+import { makeStyles } from "@mui/material/styles";
 import {
-  PlusOne as PlusOneIcon,
   Add as PlusIcon,
   Remove as NegativeIcon,
-  ExposureNeg1 as MinusOneIcon,
-  Delete as DeleteIcon
-} from '@material-ui/icons';
-import { Icon as IconifyIcon } from '@iconify/react';
-import ListContext from 'context/ListContext';
-import { unitHasUniques } from 'components/eligibleCardListGetter';
+  Delete as DeleteIcon,
+} from "@mui/icons-material";
+import { Icon as IconifyIcon } from "@iconify/react";
+import ListContext from "context/ListContext";
+import { unitHasUniques } from "components/eligibleCardListGetter";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   buttons: {
-    display: 'flex',
-    flexFlow: 'row nowrap',
-    justifyContent: 'center',
-    minWidth: '72px'
+    display: "flex",
+    flexFlow: "row nowrap",
+    justifyContent: "center",
+    minWidth: "72px",
   },
   buttonsMobile: {
-    display: 'flex',
-    flexFlow: 'column',
-    justifyContent: 'center',
-    alignContent:'center',
-    minWidth: '72px'
-  }
+    display: "flex",
+    flexFlow: "column",
+    justifyContent: "center",
+    alignContent: "center",
+    minWidth: "72px",
+  },
 }));
 
-function UnitActions({
-  unit,
-  unitIndex,
-  isCounterpart = false
-}) {
-
-  // TODO - at some point, might want to move this into listcontext; 
+function UnitActions({ unit, unitIndex, isCounterpart = false }) {
+  // TODO - at some point, might want to move this into listcontext;
   // in current state (hah!), it doesn't handle a list edit while changing kill points
   const [numKilled, setNumKilled] = useState(0);
   const classes = useStyles();
   const fontSize = 26;
 
-  const {width, isKillPointMode, handleDecrementUnit, handleIncrementUnit, handleRemoveCounterpart, handleAddKillPoints} = useContext(ListContext);
+  const {
+    width,
+    isKillPointMode,
+    handleDecrementUnit,
+    handleIncrementUnit,
+    handleRemoveCounterpart,
+    handleAddKillPoints,
+  } = useContext(ListContext);
   // TODO; should cascade this via context
-  const isMobile = width === 'xs';
+  const isMobile = width === "xs";
 
   if (isKillPointMode) {
-    if(isCounterpart)
-      return null;    
+    if (isCounterpart) return null;
 
     const killPointsPlus = (
       <Button
         variant="contained"
         size="small"
         onClick={() => {
-          if(numKilled < unit.count){
+          if (numKilled < unit.count) {
             setNumKilled(numKilled + 1);
             handleAddKillPoints(unit.totalUnitCost / unit.count);
           }
@@ -62,11 +61,11 @@ function UnitActions({
         style={{ marginLeft: 1, marginRight: 2 }}
       >
         <PlusIcon style={{ fontSize: 13 }} />
-        <IconifyIcon style={{ fontSize: 21 }} icon="fa-solid:skull-crossbones" />
-        <Typography
-          variant="caption"
-          style={{ marginLeft: 2 }}
-        >
+        <IconifyIcon
+          style={{ fontSize: 21 }}
+          icon="fa-solid:skull-crossbones"
+        />
+        <Typography variant="caption" style={{ marginLeft: 2 }}>
           {numKilled}/{unit.count}
         </Typography>
       </Button>
@@ -76,20 +75,23 @@ function UnitActions({
       <Button
         size="small"
         onClick={() => {
-          if(numKilled > 0){
+          if (numKilled > 0) {
             setNumKilled(numKilled - 1);
-            handleAddKillPoints( -1* unit.totalUnitCost / unit.count);
+            handleAddKillPoints((-1 * unit.totalUnitCost) / unit.count);
           }
         }}
         disabled={numKilled <= 0}
         style={{ marginLeft: 2, marginRight: 1 }}
       >
         <NegativeIcon style={{ fontSize: 13 }} />
-        <IconifyIcon style={{ fontSize: 21 }} icon="fa-solid:skull-crossbones" />
+        <IconifyIcon
+          style={{ fontSize: 21 }}
+          icon="fa-solid:skull-crossbones"
+        />
       </Button>
     );
 
-    if(!isMobile){
+    if (!isMobile) {
       return (
         <div className={classes.buttons}>
           {killPointsMinus}
@@ -105,36 +107,33 @@ function UnitActions({
       );
     }
   } else {
-
     let hasUniques = unitHasUniques(unit);
 
-    return(
+    return (
       <div className={classes.buttons}>
         {!hasUniques && !isCounterpart ? (
           <React.Fragment>
             <IconButton
               size="small"
-              onClick={()=>handleDecrementUnit(unitIndex)}
+              onClick={() => handleDecrementUnit(unitIndex)}
               style={{ marginLeft: 2, marginRight: 1 }}
             >
-              <MinusOneIcon style={{ fontSize }} />
+              <NegativeIcon style={{ fontSize }} />
             </IconButton>
             <IconButton
               size="small"
-              onClick={()=>handleIncrementUnit(unitIndex)}
+              onClick={() => handleIncrementUnit(unitIndex)}
               style={{ marginLeft: 1, marginRight: 2 }}
             >
-              <PlusOneIcon style={{ fontSize }} />
+              <PlusIcon style={{ fontSize }} />
             </IconButton>
           </React.Fragment>
         ) : (
           <IconButton
             size="small"
-            onClick={()=>{
-              if(isCounterpart)
-                handleRemoveCounterpart(unitIndex);
-              else 
-                handleDecrementUnit(unitIndex);
+            onClick={() => {
+              if (isCounterpart) handleRemoveCounterpart(unitIndex);
+              else handleDecrementUnit(unitIndex);
             }}
           >
             <DeleteIcon style={{ fontSize }} />
@@ -143,6 +142,6 @@ function UnitActions({
       </div>
     );
   }
-};
+}
 
 export default UnitActions;
