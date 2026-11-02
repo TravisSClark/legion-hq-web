@@ -27770,6 +27770,7 @@
     "id": "Nb",
     "cardSubtype": "heavy weapon",
     "cardName": "DLT-19 Stormtrooper",
+    "ttsName": "DLT-19 Stormtrooper (Wet)",
     "cardType": "upgrade",
     "cost": 18,
     "imageName": "DLT-19 Stormtrooper Wet.webp",
@@ -27796,6 +27797,7 @@
     "id": "Nc",
     "cardSubtype": "heavy weapon",
     "cardName": "RT-97C Stormtrooper",
+    "ttsName": "RT-97C Stormtrooper (Wet)",
     "cardType": "upgrade",
     "cost": 20,
     "imageName": "RT-97C Stormtrooper Wet.webp",
@@ -27843,14 +27845,123 @@
         }
       }
     ],
-    "requirements": [],
-    "history": [
+    "requirements": [
       "OR",
       {
         "cardName": "Wet Weather Gear Stormtrooper"
       },
       {
         "cardName": "Trench Busters"
+      }
+    ],
+    "history": []
+  },
+  "Ne": {
+    "id": "Ne",
+    "cardName": "Imperial Mudtroopers",
+    "imageName": "Imperial Mudtroopers.webp",
+    "cardType": "unit",
+    "cardSubtype": "trooper",
+    "rank": "corps",
+    "faction": "empire",
+    "cost": 46,
+    "keywords": ["Unhindered"],
+    "upgradeBar": ["heavy weapon", "personnel", "gear", "grenades"],
+    "stats": {
+      "minicount": 5,
+      "hp": 1,
+      "defense": "w",
+      "courage": 1,
+      "speed": 2,
+      "hitsurge": "h",
+      "defsurge": "b"
+    },
+    "weapons": [
+      {
+        "name": "Bludgeon",
+        "range": [0],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 1
+        }
+      },
+      {
+        "name": "E-10 Blaster Rifle",
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 1
+        },
+        "keywords": []
+      }
+    ],
+    "history": []
+  },
+  "Nf": {
+    "id": "Nf",
+    "cardSubtype": "heavy weapon",
+    "cardName": "SX-21 Mudtrooper",
+    "cardType": "upgrade",
+    "cost": 13,
+    "imageName": "SX-21 Mudtrooper.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Imperial Mudtroopers"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "SX-21 Scatter Gun",
+        "keywords": [{ "name": "Assault", "value": 2 }],
+        "range": [1, 2],
+        "dice": {
+          "r": 0,
+          "b": 2,
+          "w": 2
+        }
+      }
+    ]
+  },
+  "Ng": {
+    "id": "Ng",
+    "cardSubtype": "heavy weapon",
+    "cardName": "Z-6 Mudtrooper",
+    "cardType": "upgrade",
+    "cost": 20,
+    "imageName": "Z-6 Mudtrooper.webp",
+    "keywords": [],
+    "requirements": [
+      {
+        "cardName": "Imperial Mudtroopers"
+      }
+    ],
+    "weapons": [
+      {
+        "name": "Z-6 Rotary Blaster",
+        "keywords": [{ "name": "Anti-Personnel", "value": 3 }],
+        "range": [1, 3],
+        "dice": {
+          "r": 0,
+          "b": 0,
+          "w": 3
+        }
+      }
+    ]
+  },
+  "Nh": {
+    "id": "Nh",
+    "cardSubtype": "personnel",
+    "cardName": "Mudtrooper Squad",
+    "cardType": "upgrade",
+    "cost": 32,
+    "imageName": "Mudtrooper Squad.webp",
+    "keywords": ["Indomitable", "Transport"],
+    "requirements": [
+      {
+        "cardName": "Imperial Mudtroopers"
       }
     ]
   }
