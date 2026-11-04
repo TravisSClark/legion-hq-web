@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import {
   Grow,
   IconButton,
@@ -17,6 +17,7 @@ import { ExpandMore as ExpandMoreIcon } from "@material-ui/icons";
 import { PointsChip } from "common/CardChip";
 import KeywordChips from "common/KeywordChips";
 import urls from "constants/urls";
+import DataContext from "context/DataContext";
 import UpgradeBar from "../UpgradeBar";
 
 const useStyles = makeStyles((theme) => ({
@@ -53,6 +54,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
     upgradeBar,
   } = card;
   const classes = useStyles();
+  const { userSettings } = useContext(DataContext);
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [isIn, setIn] = useState(true);
@@ -64,6 +66,19 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
     setIn(false);
     setTimeout(() => setIn(true), 200);
   };
+
+  let imageNameUrl = `${imageName}`;
+  let altSrc = "";
+
+  if (cardType === "upgrade") {
+    if (userSettings.useOriginalImages) {
+      imageNameUrl = `original-${imageName}`;
+      altSrc = `${urls.cdn}/${cardType}Cards/${imageName}`;
+    } else {
+      imageNameUrl = `${imageName}`;
+      altSrc = `${urls.cdn}/${cardType}Cards/original-${imageName}`;
+    }
+  }
 
   return (
     <Grow in={isIn}>
@@ -89,7 +104,13 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
         >
           <CardMedia
             title={displayName ? displayName : cardName}
-            image={`${urls.cdn}/${cardType}Cards/${imageName}`}
+            component="img"
+            src={`${urls.cdn}/${cardType}Cards/${imageNameUrl}`}
+            onError={(event) => {
+              if (!altSrc) return;
+              event.currentTarget.onerror = null;
+              event.currentTarget.src = altSrc;
+            }}
             className={clsx(
               {
                 [classes.unitImage]:

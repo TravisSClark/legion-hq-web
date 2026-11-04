@@ -60,7 +60,7 @@ const settings = {
     {
       key: "useOriginalImages",
       name: "Use Original Images",
-      description: "(WiP) Use original upgrade card",
+      description: "Use original upgrade card",
       values: [
         { key: true, name: "Yes" },
         { key: false, name: "No" },
