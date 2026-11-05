@@ -43,6 +43,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [1, 3],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commander: [1, 2],
@@ -51,6 +52,7 @@ const battleForcesDict = {
       special: [0, 2],
       support: [0, 3],
       heavy: [1, 2],
+      flyer: [0, 0],
     },
   },
   "501st Legion": {
@@ -73,6 +75,7 @@ const battleForcesDict = {
       special: [1, 4],
       support: [1, 2],
       heavy: [0, 1],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commander: [1, 1],
@@ -81,6 +84,7 @@ const battleForcesDict = {
       special: [1, 4],
       support: [0, 2],
       heavy: [0, 1],
+      flyer: [0, 0],
     },
   },
   "Blizzard Force": {
@@ -107,6 +111,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [1, 4],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commander: [1, 2],
@@ -115,6 +120,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 1],
+      flyer: [0, 0],
     },
   },
   "Bright Tree Village": {
@@ -151,6 +157,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 0],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 4,
@@ -160,6 +167,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 0],
       heavy: [0, 1],
+      flyer: [0, 0],
     },
   },
   "Echo Base Defenders": {
@@ -184,6 +192,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [1, 4],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -193,6 +202,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [1, 3],
       heavy: [0, 1],
+      flyer: [0, 0],
     },
   },
   "Experimental Droids": {
@@ -239,6 +249,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commander: [1, 1],
@@ -247,6 +258,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 1],
       heavy: [0, 1],
+      flyer: [0, 0],
     },
   },
   "Imperial Remnant": {
@@ -284,6 +296,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [0, 2],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 2,
@@ -293,6 +306,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [0, 1],
       heavy: [0, 1],
+      flyer: [0, 0],
     },
   },
   "The Ohnaka Gang": {
@@ -321,6 +335,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [0, 3],
       heavy: [2, 4],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commander: [0, 0],
@@ -329,6 +344,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [0, 2],
       heavy: [1, 3],
+      flyer: [0, 0],
     },
   },
   "Rapid Interdiction Force": {
@@ -354,6 +370,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 3],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 2,
@@ -363,6 +380,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
   },
   "Separatist Invasion": {
@@ -388,6 +406,7 @@ const battleForcesDict = {
       special: [0, 2],
       support: [0, 3],
       heavy: [1, 2],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 2,
@@ -397,6 +416,7 @@ const battleForcesDict = {
       special: [0, 1],
       support: [0, 2],
       heavy: [1, 1],
+      flyer: [0, 0],
     },
   },
   "Shadow Collective": {
@@ -440,6 +460,7 @@ const battleForcesDict = {
       special: [0, 4],
       support: [0, 3],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 2,
@@ -449,6 +470,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 1],
+      flyer: [0, 0],
     },
   },
   "Stormtrooper Battalion": {
@@ -475,6 +497,7 @@ const battleForcesDict = {
       special: [0, 2],
       support: [0, 3],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commander: [1, 3],
@@ -483,6 +506,7 @@ const battleForcesDict = {
       special: [0, 2],
       support: [0, 2],
       heavy: [0, 1],
+      flyer: [0, 0],
     },
   },
   "Tempest Force": {
@@ -517,6 +541,7 @@ const battleForcesDict = {
       special: [2, 6],
       support: [0, 3],
       heavy: [0, 3],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 2,
@@ -526,6 +551,7 @@ const battleForcesDict = {
       special: [1, 4],
       support: [0, 2],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
   },
   "Wookiee Defenders": {
@@ -565,6 +591,7 @@ const battleForcesDict = {
       special: [0, 4],
       support: [0, 3],
       heavy: [0, 1],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 2,
@@ -574,6 +601,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 1],
+      flyer: [0, 0],
     },
   },
   "Mandalorian Clans": {
@@ -628,6 +656,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -637,6 +666,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
+      flyer: [0, 0],
     },
   },
   "Children of the Watch": {
@@ -689,6 +719,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -698,6 +729,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
+      flyer: [0, 0],
     },
   },
   "Clan Kryze": {
@@ -729,6 +761,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -738,6 +771,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
+      flyer: [0, 0],
     },
   },
   "Clan Wren": {
@@ -781,6 +815,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -790,6 +825,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
+      flyer: [0, 0],
     },
   },
   "Clan Saxon": {
@@ -832,6 +868,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -841,6 +878,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
+      flyer: [0, 0],
     },
   },
   "Custom Clan": {
@@ -915,6 +953,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 1],
+      flyer: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -924,6 +963,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 1],
+      flyer: [0, 0],
     },
   },
 };

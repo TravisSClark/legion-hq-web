@@ -8,7 +8,7 @@
     {
       "name": "X Wing",
       "date": "February 5",
-      "price": "90"
+      "price": "$90"
     }
   ],
   "Empire": [
@@ -40,7 +40,7 @@
     {
       "name": "Tie Fighter",
       "date": "February 5",
-      "price": "90"
+      "price": "$90"
     }
   ],
   "Republic": [
@@ -52,19 +52,19 @@
     {
       "name": "V Wing",
       "date": "February 5",
-      "price": "75"
+      "price": "$75"
     }
   ],
   "Separatists": [
     {
       "name": "Darth Maul & Sith Probe (Reprint)",
       "date": "December 11",
-      "price": "29"
+      "price": "$29"
     },
     {
       "name": "Vulture Droid",
       "date": "February 19",
-      "price": "75"
+      "price": "$75"
     }
   ],
   "Other": [
@@ -81,7 +81,7 @@
     {
       "name": "Fang Fighter",
       "date": "February 12",
-      "price": "80"
+      "price": "$80"
     }
   ]
 }
