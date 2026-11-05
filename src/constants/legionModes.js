@@ -9,6 +9,7 @@ const legionModes = {
       special: [0, 2],
       support: [0, 2],
       heavy: [0, 1],
+      flyer: [0, 1],
     },
   },
   "escalation mode": {
@@ -21,6 +22,7 @@ const legionModes = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
+      flyer: [0, 2],
     },
   },
   "standard mode": {
@@ -33,6 +35,7 @@ const legionModes = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
+      flyer: [0, 2],
     },
   },
   "grand army mode": {
@@ -45,6 +48,7 @@ const legionModes = {
       special: [0, 5],
       support: [0, 5],
       heavy: [0, 4],
+      flyer: [0, 4],
     },
   },
 };

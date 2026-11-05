@@ -36,7 +36,14 @@ function drawKeyword(kw) {
 
 function KeywordsPanel({ card, variant = "inherit" }) {
   const cardKeywords = card.keywords;
-
+  let cardSubtype;
+  if (card.cardType === "unit") {
+    cardSubtype = card.cardSubtype
+      .toLowerCase()
+      .split(" ")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
+  }
   if (!(cardKeywords instanceof Array)) return null;
   else if (cardKeywords.length === 0 && card.weapons === undefined) return null;
   const columnContainerStyles = {
@@ -51,8 +58,8 @@ function KeywordsPanel({ card, variant = "inherit" }) {
           <Typography variant={variant}>Keywords</Typography>
         </ExpansionPanelSummary>
         <ExpansionPanelDetails style={columnContainerStyles}>
+          {cardSubtype && drawKeyword(cardSubtype)}
           {cardKeywords?.map((kw) => drawKeyword(kw))}
-
           {card.weapons?.map((w) => w.keywords?.map((kw) => drawKeyword(kw)))}
         </ExpansionPanelDetails>
       </ExpansionPanel>

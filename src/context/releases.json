@@ -7,11 +7,16 @@
     },
     {
       "name": "X Wing",
-      "date": "February",
-      "price": "?"
+      "date": "February 5",
+      "price": "90"
     }
   ],
   "Empire": [
+    {
+      "name": "224th Armored Division Army Box",
+      "date": "November 27",
+      "price": "$140"
+    },
     {
       "name": "Imperial Mudtroopers",
       "date": "December 4",
@@ -21,11 +26,6 @@
       "name": "Wet-Weather Gear Stormtroopers",
       "date": "December 4",
       "price": "$47"
-    },
-    {
-      "name": "224th Armored Division Army Box",
-      "date": "November 27",
-      "price": "$140"
     },
     {
       "name": "TX-225 GAVw Occupier Tank (Reprint)",
@@ -39,16 +39,11 @@
     },
     {
       "name": "Tie Fighter",
-      "date": "February",
-      "price": "?"
+      "date": "February 5",
+      "price": "90"
     }
   ],
   "Republic": [
-    {
-      "name": "Raddaugh Gnasp Fluttercraft (Reprint)",
-      "date": "November 6",
-      "price": "$46"
-    },
     {
       "name": "LAAT-le Patrol Transport (Reprint)",
       "date": "December 4",
@@ -56,15 +51,20 @@
     },
     {
       "name": "V Wing",
-      "date": "February",
-      "price": "?"
+      "date": "February 5",
+      "price": "75"
     }
   ],
   "Separatists": [
     {
+      "name": "Darth Maul & Sith Probe (Reprint)",
+      "date": "December 11",
+      "price": "29"
+    },
+    {
       "name": "Vulture Droid",
-      "date": "February",
-      "price": "?"
+      "date": "February 19",
+      "price": "75"
     }
   ],
   "Other": [
@@ -80,8 +80,8 @@
     },
     {
       "name": "Fang Fighter",
-      "date": "February",
-      "price": "?"
+      "date": "February 12",
+      "price": "80"
     }
   ]
 }

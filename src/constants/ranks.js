@@ -1,45 +1,51 @@
-import commander from 'assets/rankTypes/commander.png';
-import operative from 'assets/rankTypes/operative.png';
-import corps from 'assets/rankTypes/corps.png';
-import special from 'assets/rankTypes/special.png';
-import support from 'assets/rankTypes/support.png';
-import heavy from 'assets/rankTypes/heavy.png';
+import commander from "assets/rankTypes/commander.png";
+import operative from "assets/rankTypes/operative.png";
+import corps from "assets/rankTypes/corps.png";
+import special from "assets/rankTypes/special.png";
+import support from "assets/rankTypes/support.png";
+import heavy from "assets/rankTypes/heavy.png";
+import flyer from "assets/rankTypes/flyer.png";
 
 const ranks = {
   commander: {
-    name: 'Commander',
-    icon: commander
+    name: "Commander",
+    icon: commander,
   },
   operative: {
-    name: 'Operative',
-    icon: operative
+    name: "Operative",
+    icon: operative,
   },
   corps: {
-    name: 'Corps',
-    icon: corps
+    name: "Corps",
+    icon: corps,
   },
   special: {
-    name: 'Special Forces',
-    icon: special
+    name: "Special Forces",
+    icon: special,
   },
   support: {
-    name: 'Support',
-    icon: support
+    name: "Support",
+    icon: support,
   },
   heavy: {
-    name: 'Heavy',
-    icon: heavy
-  }
+    name: "Heavy",
+    icon: heavy,
+  },
+  flyer: {
+    name: "Flyer",
+    icon: flyer,
+  },
 };
 
 const rankJsonNames = [
-    "commander",
-    "operative",
-    "corps",
-    "special",
-    "support",
-    "heavy",
-  ];
+  "commander",
+  "operative",
+  "corps",
+  "special",
+  "support",
+  "heavy",
+  "flyer",
+];
 
 export default ranks;
-export {rankJsonNames};
+export { rankJsonNames };

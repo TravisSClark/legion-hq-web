@@ -416,6 +416,7 @@ function sortUnitsByRank(list) {
     "special",
     "support",
     "heavy",
+    "flyer",
   ];
   list.units.sort(
     (a, b) =>

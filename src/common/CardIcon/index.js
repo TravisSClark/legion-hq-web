@@ -3,6 +3,7 @@ import Img from "react-image";
 import { makeStyles } from "@material-ui/core/styles";
 import { Skeleton } from "@material-ui/lab";
 import urls from "constants/urls";
+import upgradeTypes from "constants/upgradeTypes";
 
 const useStyles = makeStyles((theme) => ({
   card: { width: 315, marginRight: 4, marginBottom: 4 },
@@ -22,11 +23,16 @@ function CardIcon({ size = "large", handleClick, card }) {
       style={{ borderRadius: 25 }}
     />
   );
+  let altSrc = "";
+  if (card.cardType === "upgrade") altSrc = upgradeTypes[card.cardSubtype].icon;
   return (
     <Img
       decode={false}
       alt={card.cardName}
-      src={`${urls.cdn}/${card.cardType}Icons/${card.imageName}`}
+      src={[
+        `${urls.cdn}/${card.cardType}Icons/${card.imageName}`,
+        altSrc,
+      ].filter(Boolean)}
       style={{ scale: 5 }}
       loader={placeholder}
       className={clsx(classes.image, classes[size], {

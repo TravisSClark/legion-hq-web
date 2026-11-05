@@ -9145,6 +9145,7 @@
     "cardSubtype": "armament",
     "cardName": "Electro Gauntlets",
     "cardType": "upgrade",
+    "isUnique": true,
     "cost": 3,
     "imageName": "Electro Gauntlets.webp",
     "keywords": ["Immobilize", "Suppressive"],

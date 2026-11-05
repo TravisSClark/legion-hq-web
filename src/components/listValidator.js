@@ -424,6 +424,7 @@ function mercValidation(currentList, currentRanks, mercs, rankIssues) {
       special: 1,
       heavy: 1,
       support: 1,
+      flyer: 1,
     };
 
     // Check for Allies of Convenience or Underworlds Connection card
@@ -692,6 +693,7 @@ function validateList(currentList, rankLimits) {
     special: 0,
     heavy: 0,
     support: 0,
+    flyer: 0,
   };
   let rankIssues = {
     commander: [],
@@ -700,6 +702,7 @@ function validateList(currentList, rankLimits) {
     special: [],
     heavy: [],
     support: [],
+    flyer: [],
   };
 
   let gameTimeRanks = { ...currentRanks };

@@ -105,6 +105,10 @@ action against that unit using only Melee weapons.",
     "A unit with the Climbing Vehicle keyword can make Climb \
 moves and treated as a Trooper unit for the purposes \
 of Climbing.",
+  "Clone Trooper":
+    "While attacking or defending, a Clone Trooper unit may spend 1 Aim, \
+    Dodge, or Surge token belonging to another allied Clone Trooper unit \
+    within 2 and in LOS as if the attacking or defending unit had that token.",
   "Complete the Mission":
     "During Setup, for each allied unit with the Complete the \
 Mission keyword, place an allied Priority Mission (Advantage) token on the \
@@ -140,7 +144,8 @@ of the keyword; it does not issue 2 Orders.",
   Cover:
     "When a unit with the Cover X keyword defends against a Ranged attack, during the Apply Dodge and Cover step, it increases its Cover by X",
   "Creature Trooper":
-    "Creature troopers: have notched bases, can reverse, can pivot even while engaged, can attack and withdraw during the same activation, and do not receive cover from barricades.",
+    "Creature troopers: have notched bases, can reverse, can pivot even while engaged, cannot climb unless a keyword says otherwise, \
+    can attack and withdraw during the same activation, and do not receive cover from barricades.",
   Cunning:
     "When determining priority during the Command Phase, if a \
 player reveals a COMMANDER or OPERATIVE specific Command Card that belongs \
@@ -228,7 +233,6 @@ that were not eligible to be added to the first Attack Pool. \n\
 When a unit uses the Distract keyword, if it has the \
 Inconspicuous keyword, it loses Inconspicuous until the end of \
 the Round.",
-
   "Divine Influence":
     "Other allied EWOK Trooper units gain Guardian 2: C-3PO while they \
 are within 1 and in LOS of an allied C-3PO. While allied \
@@ -241,7 +245,7 @@ against a Melee attack, during the Compare Results step, the \
 attacking unit suffers 1 Wound if the attack roll contains 1 or \
 more Blank results.",
   "Droid Trooper":
-    "Droid troopers cannot be suppressed, but they can still become panicked. Cannot gain or receive poison tokens.",
+    "Droid troopers do not make 1 less action due to being Suppressed at the start of the Make Actions step. Cannot gain or resolve poison tokens.",
   Duelist:
     "When a unit with the Duelist keyword makes a Melee attack, if \
 it spends 1 or more Aim tokens during the Reroll Attack Dice \
@@ -252,7 +256,7 @@ Cover step, it gains the Immune: Pierce keyword. \
 A unit with the Duelist keyword gets these effects in addition to \
 the normal effects of spending Aim or Dodge tokens.",
   "Emplacement Trooper":
-    "You can:  pivot, reverse. You cannot:  climb, use CLAIM/SABOTAGE/REPAIR, be displaced, be moved through by ground vehicles. This unit does not obscure LOS.",
+    "Emplacement troopers:  have notched bases, can reverse, can pivot even while engaged, and cannot climb unless a keyword says otherwise.",
   Enrage:
     "When a unit with the Enrage X keyword has Wound tokens \
 greater than or equal to X, that unit gains the Charge keyword \
@@ -321,7 +325,15 @@ Pivot up to 360°.",
   Generator:
     "During the End Phase, a unit with the Generator X keyword \
 may flip up to X inactive Shield tokens to their active side",
-
+  "Ground Vehicle":
+    "Ground vehicles: have notched bases, can reverse, can pivot even while engaged, \
+    cannot climb unless a keyword says otherwise, can end a Move with some part of their \
+    base partially overlapping terrain, may not end a Move or be placed in a position \
+    where the miniature would be physically unstable or fall over or cause the angle of the \
+    miniature’s base to be greater than 45 degrees, \
+    can be in Melee but cannot be Engaged, have resiliency instead of courage, \
+    block LOS and provide heavy cover as if they were a piece of area terrain consisting of the volume of their Silhouette, \
+    and cannot be obscured nor have Cover as a result of being obscured during the Apply Dodge and Cover step.",
   Guardian:
     "While an allied Trooper unit within 1 and in LOS of a unit \
 that has the Guardian X keyword defends against a Ranged \
@@ -360,6 +372,16 @@ Additional Defender step, it may declare an additional defender \
 and create an Attack Pool consisting solely of a Ranged weapon \
 that has already been contributed to another Attack Pool. The \
 Gunslinger keyword can only be used once per attack sequence.",
+  "Heavy Droid Trooper":
+    "Heavy droid troopers: do not make 1 less action due to being \
+    Suppressed at the start of the Make Actions step, cannot gain or resolve \
+    Poison tokens, have notched bases, can reverse, can pivot even while engaged, \
+    cannot climb unless a keyword says otherwise, \
+    can attack and withdraw during the same activation, and do not receive cover from barricades.",
+  "Heavy Trooper":
+    "Heavy troopers: have notched bases, can reverse, can pivot even while engaged, \
+    cannot climb unless a keyword says otherwise, \
+    can attack and withdraw during the same activation, and do not receive cover from barricades.",
   "Heavy Weapon Team":
     "A unit with the Heavy Weapon Team keyword must equip a \
 Upgrade Card. The miniature added to the unit with this \
@@ -601,9 +623,11 @@ battlefield. The chosen unit may make a Speed-1 Move.",
     "A unit with the Outmaneuver keyword can spend Dodge tokens \
 to cancel CRIT results during the Apply Dodge and Cover step.",
   "My Mood Is Based On Profit":
-    "(UNOFFICIAL - rules text not released) X values \
- on this unit's card are equal to the number of pips on the Command Card you played this turn.\
- (You may want to discuss/houserule with your opponent what a 0-pip card would do)",
+    "Keywords and stats that have an X value on the Unit Card of a unit with \
+    the My Mood is Based on Profit keyword have an X value equal to the number \
+    of pips on the Command Card that unit’s controlling player most recently played \
+    and revealed that Game, to a minimum of 1. If a player has not yet played and \
+    revealed a Command Card this Game, treat X as 1 instead.",
   Override:
     "When an allied unit begins its Activation while within 3 of \
 a unit that has the Override keyword, the unit that has the \
@@ -641,14 +665,13 @@ it gains X Aim tokens.",
     "When a unit with the Recharge X keyword makes a Recover \
 action, it may flip up to X inactive Shield tokens from their \
 inactive side to their active side.",
-  Reinforcements:
-    "At the start of the End Phase of the first Round, a Unit with the \
-Reinforcements keyword may make a Speed-1 Move.",
-
   Regenerate:
     "When a unit with the Regenerate X keyword ends its Activation, \
 it rolls 1 white defense die for each Wound token it has, up to X. \
 For each BLOCK or SURGE result, it removes 1 Wound token.",
+  Reinforcements:
+    "At the start of the End Phase of the first Round, a Unit with the \
+Reinforcements keyword may make a Speed-1 Move.",
   Reliable:
     "A unit with the Reliable X keyword gains X surge tokens at the \
 start of each Activation Phase.",
@@ -659,6 +682,15 @@ action during its Activation, it may make a free Attack action.",
     "When a unit with the Reposition keyword makes a Standard \
 Move, it may make a Pivot either before or after making that \
 Standard Move.",
+  "Repulsor Vehicle":
+    "Repulsor vehicles: have notched bases, can pivot even while engaged, \
+    cannot reverse or climb unless a keyword says otherwise, can end a Move with some part of their \
+    base partially overlapping terrain, may not end a Move or be placed in a position \
+    where the miniature would be physically unstable or fall over or cause the angle of the \
+    miniature’s base to be greater than 45 degrees, may Move onto or through or overlap impassable \
+    terrain, can be in Melee but cannot be Engaged, have resiliency instead of courage, \
+    cannot make the Stanby action or gain or spend Standby tokens, do not block LOS or obscure miniatures or provide cover, \
+    and cannot be obscured nor have Cover as a result of being obscured during the Apply Dodge and Cover step.",
   Retinue:
     "At the start of each Activation Phase, if a unit with the Retinue \
 keyword is within 2 of another allied unit or unit type \
