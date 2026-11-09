@@ -118,7 +118,7 @@ function generateStandardText(list) {
   let special = "";
   let support = "";
   let heavy = "";
-  let flyer = "";
+  let flier = "";
   const unitLine = (unit) => {
     const id = unit.unitId ? unit.unitId : unit.counterpartId;
     const unitCard = cards[id];
@@ -147,7 +147,7 @@ function generateStandardText(list) {
     if (unitCard.rank === "special") special += unitLine(unit);
     if (unitCard.rank === "support") support += unitLine(unit);
     if (unitCard.rank === "heavy") heavy += unitLine(unit);
-    if (unitCard.rank === "flyer") flyer += unitLine(unit);
+    if (unitCard.rank === "flier") flier += unitLine(unit);
   });
   let units = "";
   if (commander) units += `Commanders:\n${commander}`;
@@ -160,7 +160,7 @@ function generateStandardText(list) {
   if (special) units += `Special Forces:\n${special}`;
   if (support) units += `Support:\n${support}`;
   if (heavy) units += `Heavy:\n${heavy}`;
-  if (flyer) units += `Flyer:\n${flyer}`;
+  if (flier) units += `Flier:\n${flier}`;
   let commands = "\nCommands: ";
   list.commandCards.forEach((id) => {
     const commandCard = cards[id];

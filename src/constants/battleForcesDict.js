@@ -18,6 +18,7 @@ const battleForcesDict = {
     special: ["Ay"],
     support: ["mb"],
     heavy: ["gb", "oo", "qs"],
+    flier: [],
     allowedUpgrades: [
       "uf",
       "Io",
@@ -43,7 +44,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [1, 3],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commander: [1, 2],
@@ -52,7 +53,7 @@ const battleForcesDict = {
       special: [0, 2],
       support: [0, 3],
       heavy: [1, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "501st Legion": {
@@ -65,6 +66,7 @@ const battleForcesDict = {
     special: ["kz", "Ay"],
     support: ["ky", "mb", "ic", "xj", "xp"],
     heavy: ["oo"],
+    flier: [],
     allowedUpgrades: ["Bd", "Ep", "lh", "lg", "cw"],
     rules: {},
     "standard mode": {
@@ -75,7 +77,7 @@ const battleForcesDict = {
       special: [1, 4],
       support: [1, 2],
       heavy: [0, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commander: [1, 1],
@@ -84,7 +86,7 @@ const battleForcesDict = {
       special: [1, 4],
       support: [0, 2],
       heavy: [0, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Blizzard Force": {
@@ -97,6 +99,7 @@ const battleForcesDict = {
     special: ["Fa"],
     support: ["bf", "be"],
     heavy: ["bg"],
+    flier: [],
     allowedUpgrades: ["Ce", "Cg", "fl", "cw", "Cf"],
 
     rules: {
@@ -111,7 +114,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [1, 4],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commander: [1, 2],
@@ -120,7 +123,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Bright Tree Village": {
@@ -133,6 +136,7 @@ const battleForcesDict = {
     special: ["vu", "ak"],
     support: [],
     heavy: ["vj"],
+    flier: [],
     allowedUpgrades: ["wb", "cw", "wc", "wa"],
     rules: {
       countMercs: true,
@@ -157,7 +161,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 0],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 4,
@@ -167,7 +171,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 0],
       heavy: [0, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Echo Base Defenders": {
@@ -180,6 +184,7 @@ const battleForcesDict = {
     special: [],
     support: ["an", "he"],
     heavy: ["ap"],
+    flier: [],
     allowedUpgrades: ["Cp", "cw", "Im", "Cr", "Cs", "Lz", "Bn", "Cq", "fk"],
     rules: {
       noFieldComm: true,
@@ -192,7 +197,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [1, 4],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -202,7 +207,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [1, 3],
       heavy: [0, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Experimental Droids": {
@@ -215,6 +220,7 @@ const battleForcesDict = {
     special: ["la"],
     support: ["ie"],
     heavy: ["xe"],
+    flier: [],
     allowedUpgrades: ["cw", "Bl", "En"],
     rules: {
       buildsAsCorps: ["xd"],
@@ -249,7 +255,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commander: [1, 1],
@@ -258,7 +264,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 1],
       heavy: [0, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Imperial Remnant": {
@@ -271,6 +277,7 @@ const battleForcesDict = {
     special: [],
     support: ["bf", "be"],
     heavy: ["tm"],
+    flier: [],
     allowedUpgrades: ["Ce", "Cj", "Cg", "cw", "Ch", "Bl", "Cf", "uj", "Bn"],
     rules: {
       unitLimits: [
@@ -296,7 +303,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [0, 2],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 2,
@@ -306,7 +313,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [0, 1],
       heavy: [0, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "The Ohnaka Gang": {
@@ -320,6 +327,7 @@ const battleForcesDict = {
     special: [],
     support: ["sq"],
     heavy: ["Fe"],
+    flier: [],
     allowedUpgrades: ["Fn", "cw", "Lz", "so"],
     rules: {
       countMercs: true,
@@ -335,7 +343,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [0, 3],
       heavy: [2, 4],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commander: [0, 0],
@@ -344,7 +352,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [0, 2],
       heavy: [1, 3],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Rapid Interdiction Force": {
@@ -357,6 +365,7 @@ const battleForcesDict = {
     special: ["Eg"],
     support: ["ie", "qk", "ya", "mc"],
     heavy: ["gc"],
+    flier: [],
     rules: {
       buildsAsCorps: ["la"],
     },
@@ -370,7 +379,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 3],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 2,
@@ -380,7 +389,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Separatist Invasion": {
@@ -393,6 +402,7 @@ const battleForcesDict = {
     special: ["px"],
     support: ["ie", "mc"],
     heavy: ["gc"],
+    flier: [],
     rules: {
       noFieldComm: true,
     },
@@ -406,7 +416,7 @@ const battleForcesDict = {
       special: [0, 2],
       support: [0, 3],
       heavy: [1, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 2,
@@ -416,7 +426,7 @@ const battleForcesDict = {
       special: [0, 1],
       support: [0, 2],
       heavy: [1, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Shadow Collective": {
@@ -430,6 +440,7 @@ const battleForcesDict = {
     special: ["re"],
     support: ["sq"],
     heavy: ["sm", "Fe"],
+    flier: [],
     allowedUpgrades: [
       "rq",
       "so",
@@ -460,7 +471,7 @@ const battleForcesDict = {
       special: [0, 4],
       support: [0, 3],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 2,
@@ -470,7 +481,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Stormtrooper Battalion": {
@@ -483,6 +494,7 @@ const battleForcesDict = {
     special: ["Fa", "ba"],
     support: ["bf", "be", "bb"],
     heavy: ["bg", "bh", "on"],
+    flier: [],
     allowedUpgrades: ["Ce", "Eo", "Cf", "Cg", "Ch", "Cj", "Bn", "cw"],
     rules: {},
     plainTextRules: [
@@ -497,7 +509,7 @@ const battleForcesDict = {
       special: [0, 2],
       support: [0, 3],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commander: [1, 3],
@@ -506,7 +518,7 @@ const battleForcesDict = {
       special: [0, 2],
       support: [0, 2],
       heavy: [0, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Tempest Force": {
@@ -519,6 +531,7 @@ const battleForcesDict = {
     special: ["Fa", "ba"],
     support: ["bf"],
     heavy: ["we", "bg"],
+    flier: [],
     allowedUpgrades: ["Ce", "Cf", "Lz", "Ch", "Cj", "cw"],
     rules: {},
     plainTextRules: [
@@ -541,7 +554,7 @@ const battleForcesDict = {
       special: [2, 6],
       support: [0, 3],
       heavy: [0, 3],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 2,
@@ -551,7 +564,7 @@ const battleForcesDict = {
       special: [1, 4],
       support: [0, 2],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Wookiee Defenders": {
@@ -564,6 +577,7 @@ const battleForcesDict = {
     special: ["kz", "pg"],
     support: ["qh", "xf", "ic"],
     heavy: ["gb", "qs"],
+    flier: [],
     allowedUpgrades: ["Ir", "Bl", "Dc", "Dd", "De", "cw"],
     rules: {
       buildsAsCorps: ["pm"],
@@ -591,7 +605,7 @@ const battleForcesDict = {
       special: [0, 4],
       support: [0, 3],
       heavy: [0, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 2,
@@ -601,7 +615,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Mandalorian Clans": {
@@ -615,6 +629,7 @@ const battleForcesDict = {
     special: ["Ht", "Ia", "Jv"],
     support: ["Hs"],
     heavy: [],
+    flier: [],
     allowedUpgrades: [
       "cw",
       "Jg",
@@ -656,7 +671,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -666,7 +681,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Children of the Watch": {
@@ -680,6 +695,7 @@ const battleForcesDict = {
     special: [],
     support: ["Hs"],
     heavy: [],
+    flier: [],
     allowedUpgrades: [
       "tn",
       "ts",
@@ -719,7 +735,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -729,7 +745,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Clan Kryze": {
@@ -743,6 +759,7 @@ const battleForcesDict = {
     special: ["Ht"],
     support: ["Hs"],
     heavy: [],
+    flier: [],
     allowedUpgrades: ["Jg", "Jh", "Ko", "cw", "Ks", "Kt", "Ku", "Lc", "Ld"],
     disallowedUpgrades: ["Jz", "Ka", "Kb", "Kc"],
     rules: {
@@ -761,7 +778,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -771,7 +788,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Clan Wren": {
@@ -785,6 +802,7 @@ const battleForcesDict = {
     special: ["Ia"],
     support: ["Hs"],
     heavy: [],
+    flier: [],
     allowedUpgrades: [
       "cw",
       "eb",
@@ -815,7 +833,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -825,7 +843,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Clan Saxon": {
@@ -839,6 +857,7 @@ const battleForcesDict = {
     special: ["Jv"],
     support: ["Hs"],
     heavy: [],
+    flier: [],
     allowedUpgrades: [
       "cw",
       "Kq",
@@ -868,7 +887,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -878,7 +897,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
   "Custom Clan": {
@@ -892,6 +911,7 @@ const battleForcesDict = {
     special: [],
     support: ["Hs"],
     heavy: [],
+    flier: [],
     allowedUpgrades: ["cw", "Ks", "Kt", "Ku", "Lc", "Ld", "Le", "Lf", "Lg"],
     disallowedUpgrades: [
       "Jy",
@@ -953,7 +973,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
     "500-point mode": {
       commOp: 3,
@@ -963,7 +983,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 1],
-      flyer: [0, 0],
+      flier: [0, 0],
     },
   },
 };

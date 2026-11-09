@@ -21122,6 +21122,9 @@
       },
       {
         "cardName": "Jedi Knight General"
+      },
+      {
+        "title": "Jedi Knight"
       }
     ],
     "history": []
@@ -21152,6 +21155,9 @@
       },
       {
         "cardName": "Jedi Knight General"
+      },
+      {
+        "title": "Jedi Knight"
       }
     ],
     "history": []
@@ -21180,6 +21186,9 @@
       },
       {
         "cardName": "Jedi Knight General"
+      },
+      {
+        "title": "Jedi Knight"
       }
     ],
     "history": []
@@ -21207,6 +21216,9 @@
       },
       {
         "cardName": "Jedi Knight General"
+      },
+      {
+        "title": "Jedi Knight"
       }
     ],
     "history": []
@@ -21216,20 +21228,42 @@
     "cardName": "Flow of the Force",
     "cardSubtype": "1",
     "cardType": "command",
-    "commander": ["Jedi Knight", "Jedi Knight General"],
     "imageName": "Flow of the Force.webp",
-    "faction": "republic",
-    "keywords": []
+    "faction": "",
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Jedi Knight"
+      },
+      {
+        "cardName": "Jedi Knight General"
+      },
+      {
+        "title": "Jedi Knight"
+      }
+    ]
   },
   "Dn": {
     "id": "Dn",
     "cardName": "Affirmative, General!",
     "cardSubtype": "3",
     "cardType": "command",
-    "commander": ["Jedi Knight", "Jedi Knight General"],
     "imageName": "Affirmative, General.webp",
-    "faction": "republic",
-    "keywords": []
+    "faction": "",
+    "keywords": [],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Jedi Knight"
+      },
+      {
+        "cardName": "Jedi Knight General"
+      },
+      {
+        "title": "Jedi Knight"
+      }
+    ]
   },
   "Do": {
     "id": "Do",

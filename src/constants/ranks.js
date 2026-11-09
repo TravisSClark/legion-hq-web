@@ -31,8 +31,8 @@ const ranks = {
     name: "Heavy",
     icon: heavy,
   },
-  flyer: {
-    name: "Flyer",
+  flier: {
+    name: "Flier",
     icon: flyer,
   },
 };
@@ -44,7 +44,7 @@ const rankJsonNames = [
   "special",
   "support",
   "heavy",
-  "flyer",
+  "flier",
 ];
 
 export default ranks;

@@ -18,7 +18,7 @@ const listTemplate = {
     special: 0,
     support: 0,
     heavy: 0,
-    flyer: 0,
+    flier: 0,
   },
   wins: 0,
   losses: 0,
