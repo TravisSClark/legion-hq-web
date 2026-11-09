@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useLocation } from "react-router-dom";
-import Img from "react-image";
+import { Img } from "react-image";
 import {
   Accordion,
   AccordionDetails,

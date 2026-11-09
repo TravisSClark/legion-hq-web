@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import { makeStyles } from "@mui/material/styles";
 import {
   Typography,
   IconButton,
@@ -28,18 +27,6 @@ import CardIcon from "common/CardIcon";
 import IconBadge from "common/IconBadge";
 import UpgradeBar from "common/UpgradeBar";
 import ListContext from "context/ListContext";
-
-const useStyles = makeStyles((theme) => ({
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: { transform: "rotate(180deg)" },
-  card: { width: "100%", marginRight: 4, marginBottom: 4 },
-}));
 
 function ReverseWrapper({ children }) {
   const containerStyle = {
@@ -287,7 +274,6 @@ function UnitCardContent({ card, chipSize }) {
 
 function TextCard({ card, handleClick, isExpanded: expandAtStart }) {
   const chipSize = "small";
-  const classes = useStyles();
   const hideExpand = (c) =>
     c.cardType !== "unit" && c.cardType !== "upgrade" && !c.keywords?.length;
 
@@ -322,7 +308,7 @@ function TextCard({ card, handleClick, isExpanded: expandAtStart }) {
 
   return (
     <Grow unmountOnExit in={true}>
-      <Card className={classes.card}>
+      <Card style={{ width: "100%", marginRight: 4, marginBottom: 4 }}>
         <TextCardHeader
           hideExpand={hideExpand}
           isCardExpanded={isExpanded}

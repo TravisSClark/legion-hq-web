@@ -21,7 +21,7 @@
     "prop-types": "^15.8.1",
     "qrcode.react": "^4.2.0",
     "react": "^19.3.0",
-    "react-beautiful-dnd": "^13.1.8",
+    "react-beautiful-dnd": "^13.1.1",
     "react-dom": "^19.3.0",
     "react-error-boundary": "^6.1.2",
     "react-image": "4.1.0",

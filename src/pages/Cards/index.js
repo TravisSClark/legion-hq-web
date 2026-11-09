@@ -1,21 +1,12 @@
 import React from "react";
-import { makeStyles, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import CardModal from "common/CardModal";
 import cards from "constants/cards";
 import keywords from "constants/keywords";
 import BasicCardChips from "./BasicCardChips";
 import BasicKeywordChips from "./BasicKeywordChips";
 
-const useStyles = makeStyles((theme) => ({
-  columnContainer: {
-    padding: 8,
-    display: "flex",
-    flexFlow: "column nowrap",
-  },
-}));
-
 function Cards() {
-  const classes = useStyles();
   const [isModalOpen, setIsModalOpen] = React.useState(false);
   const [modalContent, setModalContent] = React.useState();
   const [search, setSearch] = React.useState("");
@@ -118,7 +109,7 @@ function Cards() {
       }
     });
   return (
-    <div className={classes.columnContainer}>
+    <div sx={{ padding: 8, display: "flex", flexFlow: "column nowrap" }}>
       <TextField
         label="Filter By Unit or Keyword"
         value={search}

@@ -1,5 +1,4 @@
 import React from "react";
-import clsx from "clsx";
 import {
   Accordion,
   AccordionSummary,
@@ -8,23 +7,10 @@ import {
   Divider,
   Collapse,
   IconButton,
-  makeStyles,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import cards from "constants/cards";
 import ChipCard from "common/LegionCard/ChipCard";
-
-const useStyles = makeStyles((theme) => ({
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: { transform: "rotate(180deg)" },
-  divider: { flexGrow: 1, margin: "0 8px" },
-}));
 
 function capitalizeFirstLetters(words) {
   const strings = words.split(" ").map((string) => {
@@ -34,19 +20,23 @@ function capitalizeFirstLetters(words) {
 }
 
 function CollapsedContent({ label, cardIds, handleCardZoom }) {
-  const classes = useStyles();
   const [isExpanded, setIsExpanded] = React.useState(false);
   const handleExpandClick = () => setIsExpanded(!isExpanded);
+
   return (
     <div style={{ display: "flex", flexFlow: "column nowrap" }}>
       <div
         style={{ display: "flex", flexFlow: "row wrap", alignItems: "center" }}
       >
         <Typography>{capitalizeFirstLetters(label)}</Typography>
-        <Divider className={classes.divider} />
+        <Divider sx={{ flexGrow: 1, mx: 1 }} />
         <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: isExpanded,
+          sx={(theme) => ({
+            transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)",
+            marginLeft: "auto",
+            transition: theme.transitions.create("transform", {
+              duration: theme.transitions.duration.shortest,
+            }),
           })}
           onClick={handleExpandClick}
         >

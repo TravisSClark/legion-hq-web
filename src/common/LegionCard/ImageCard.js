@@ -12,20 +12,16 @@ import {
   Tooltip,
 } from "@mui/material";
 import clsx from "clsx";
-import { makeStyles } from "@mui/material/styles";
 import { ExpandMore as ExpandMoreIcon } from "@mui/icons-material";
 import { PointsChip } from "common/CardChip";
 import KeywordChips from "common/KeywordChips";
 import urls from "constants/urls";
 import UpgradeBar from "../UpgradeBar";
 
-const useStyles = makeStyles((theme) => ({
+const styles = {
   expand: {
     transform: "rotate(0deg)",
     marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
   },
   expandOpen: { transform: "rotate(180deg)" },
   selected: { border: "1px solid lightblue" },
@@ -38,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   commandImage: { width: 225, height: 315 },
   battleImage: { width: 225, height: 450 },
   doubleUpgrade: { width: 300 },
-}));
+};
 
 function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
   const chipSize = "small";
@@ -52,8 +48,6 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
     imageName,
     upgradeBar,
   } = card;
-  const classes = useStyles();
-
   const [isExpanded, setIsExpanded] = useState(false);
   const [isIn, setIn] = useState(true);
 
@@ -68,17 +62,18 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
   return (
     <Grow in={isIn}>
       <Card
-        className={clsx(
-          classes.card,
-          { [classes.selected]: isSelected },
-          { [classes.unitCard]: cardType === "unit" },
-          { [classes.upgradeCard]: cardType === "upgrade" && !isDoubleSided },
-          { [classes.doubleUpgrade]: isDoubleSided },
-          {
-            [classes.commandCard]:
-              cardType === "command" || cardType === "battle",
-          },
-        )}
+        sx={{
+          ...styles.card,
+          ...(isSelected ? styles.selected : {}),
+          ...(cardType === "unit" ? styles.unitCard : {}),
+          ...(cardType === "upgrade" && !isDoubleSided
+            ? styles.upgradeCard
+            : {}),
+          ...(isDoubleSided ? styles.doubleUpgrade : {}),
+          ...(cardType === "command" || cardType === "battle"
+            ? styles.commandCard
+            : {}),
+        }}
       >
         <CardActionArea
           disableRipple={true}
@@ -90,23 +85,20 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
           <CardMedia
             title={displayName ? displayName : cardName}
             image={`${urls.cdn}/${cardType}Cards/${imageName}`}
-            className={clsx(
-              {
-                [classes.unitImage]:
-                  cardType === "unit" || cardType === "counterpart",
-              },
-              {
-                [classes.battleImage]:
-                  cardType === "battle" && cardSubtype === "primary",
-              },
-              { [classes.upgradeImage]: cardType === "upgrade" },
-              {
-                [classes.commandImage]:
-                  cardType === "command" ||
-                  (cardType === "battle" && cardSubtype !== "primary"),
-              },
-              { [classes.doubleUpgrade]: isDoubleSided },
-            )}
+            sx={{
+              ...(cardType === "unit" || cardType === "counterpart"
+                ? styles.unitImage
+                : {}),
+              ...(cardType === "battle" && cardSubtype === "primary"
+                ? styles.battleImage
+                : {}),
+              ...(cardType === "upgrade" ? styles.upgradeImage : {}),
+              ...(cardType === "command" ||
+              (cardType === "battle" && cardSubtype !== "primary")
+                ? styles.commandImage
+                : {}),
+              ...(isDoubleSided ? styles.doubleUpgrade : {}),
+            }}
           />
         </CardActionArea>
         <CardActions disableSpacing>
@@ -141,8 +133,12 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
           <IconButton
             size="small"
             aria-expanded={isExpanded}
-            className={clsx(classes.expand, {
-              [classes.expandOpen]: isExpanded,
+            sx={(theme) => ({
+              ...styles.expand,
+              transition: theme.transitions.create("transform", {
+                duration: theme.transitions.duration.shortest,
+              }),
+              ...(isExpanded ? styles.expandOpen : {}),
             })}
             onClick={handleExpandClick}
           >
@@ -151,7 +147,7 @@ function ImageCard({ isSelected, card, handleClick, handleCardZoom }) {
         </CardActions>
         <Collapse unmountOnExit timeout="auto" in={isExpanded}>
           {keywords.length > 0 && (
-            <CardActions className={classes.card}>
+            <CardActions sx={styles.card}>
               <KeywordChips size={chipSize} keywords={keywords} />
             </CardActions>
           )}

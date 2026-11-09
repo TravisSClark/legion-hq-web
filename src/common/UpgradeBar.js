@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from 'react-image';
+import { Img } from 'react-image';
 import LargerTooltip from 'common/LargerTooltip';
 import upgradeTypes from 'constants/upgradeTypes';
 

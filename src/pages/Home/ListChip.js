@@ -1,5 +1,5 @@
 import React from "react";
-import Img from "react-image";
+import { Img } from "react-image";
 import { Chip, Typography, Badge, Menu, MenuItem } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import { createTheme } from "@mui/material/styles";

@@ -1,5 +1,5 @@
-import Img from "react-image";
-import { Skeleton } from "@material-ui/lab";
+import { Img } from "react-image";
+import { Skeleton } from "@mui/material";
 import urls from "constants/urls";
 
 const sizeStyles = {

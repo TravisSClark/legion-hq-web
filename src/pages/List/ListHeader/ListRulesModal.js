@@ -9,7 +9,6 @@ import {
   Link,
   Button,
 } from "@mui/material";
-import { makeStyles } from "@mui/material/styles";
 
 import battleForcesDict from "constants/battleForcesDict";
 
@@ -19,44 +18,8 @@ import { getOriginalRankLimits } from "components/listValidator";
 import ListContext from "context/ListContext";
 import BattleforceSelectorMenu from "./BattleforceSelectorMenu";
 
-const useStyles = makeStyles({
-  container: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  battleForceContainer: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 4,
-  },
-  columnContainer: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  item: { marginRight: 6 },
-  valError: {
-    display: "flex",
-    alignItems: "start",
-    justifyContent: "start",
-  },
-  row: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  bfRules: {
-    fontSize: 14,
-    marginTop: 4,
-  },
-});
-
 function BFRules({ list }) {
   const bfPdf = "https://www.atomicmassgames.com/swlegiondocs/";
-  const classes = useStyles();
 
   if (!list.battleForce) {
     return null;
@@ -83,7 +46,7 @@ function BFRules({ list }) {
       </Typography>
       <DialogContent>
         {bfRules.noFieldComm && (
-          <Typography className={classes.bfRules}>
+          <Typography sx={{ fontSize: 14, marginTop: "4px" }}>
             The Field Commander keyword cannot be used in {article}{" "}
             {list.battleForce} army.
           </Typography>
@@ -91,28 +54,28 @@ function BFRules({ list }) {
         {bfRules.countMercs && (
           <div>
             {list.battleForce !== "Shadow Collective" && (
-              <Typography className={classes.bfRules}>
+              <Typography sx={{ fontSize: 14, marginTop: "4px" }}>
                 This Battle Force may take any number of Mercenary units.
               </Typography>
             )}
             {list.battleForce === "Shadow Collective" && (
-              <Typography className={classes.bfRules}>
+              <Typography sx={{ fontSize: 14, marginTop: "4px" }}>
                 This Battle Force must be composed entirely of Mercenary units.
               </Typography>
             )}
-            <Typography className={classes.bfRules}>
+            <Typography sx={{ fontSize: 14, marginTop: "4px" }}>
               These units do count towards the miniumum number of Ranks required
               and the army may include any number of Mercenaries at each Rank.
             </Typography>
           </div>
         )}
         {bfRules.take2NonEwokRebs && (
-          <Typography className={classes.bfRules}>
+          <Typography sx={{ fontSize: 14, marginTop: "4px" }}>
             This Battle Force must take at least 2 non-EWOK, REBEL units.
           </Typography>
         )}
         {bfRules.buildsAsCorps && (
-          <Typography className={classes.bfRules}>
+          <Typography sx={{ fontSize: 14, marginTop: "4px" }}>
             The following unit{bfRules.buildsAsCorps.length > 1 ? "s" : ""}{" "}
             counts as a CORPS unit for the purposes of army building
             {bfRules.ccAsCorps ? " and Battle Cards" : ""}:{" "}
@@ -127,14 +90,14 @@ function BFRules({ list }) {
           </Typography>
         )}
         {bfRules.minOneOfEachCorps && (
-          <Typography className={classes.bfRules}>
+          <Typography sx={{ fontSize: 14, marginTop: "4px" }}>
             When building an army, {article} {list.battleForce} Battle Force
             cannot take more than 1 of each with a CORPS rank until at least one
             of each has been taken. This army may not include detachments.
           </Typography>
         )}
         {bfRules.remnantEquipRules && (
-          <Typography className={classes.bfRules}>
+          <Typography sx={{ fontSize: 14, marginTop: "4px" }}>
             Any non-droid trooper unit in this army with a HEAVY WEAPON upgrade
             icon may equip a HEAVY WEAPON upgrade with one of the following unit
             requirements, ignoring that requirement: Stormtroopers only,
@@ -143,13 +106,13 @@ function BFRules({ list }) {
           </Typography>
         )}
         {bfRules.ignoreDetach && (
-          <Typography className={classes.bfRules}>
+          <Typography sx={{ fontSize: 14, marginTop: "4px" }}>
             {cards[bfRules.ignoreDetach].cardName} units in this army do not
             have the DETACHMENT keyword.
           </Typography>
         )}
         {battleForcesDict[list.battleForce].plainTextRules?.map((r) => (
-          <Typography className={classes.bfRules}>{r}</Typography>
+          <Typography sx={{ fontSize: 14, marginTop: "4px" }}>{r}</Typography>
         ))}
       </DialogContent>
       {/* <Typography style={{marginBottom:0}} gutterBottom>See your rule doc for full battleforce rules while playing:</Typography> */}
@@ -169,7 +132,6 @@ function BFRules({ list }) {
 }
 
 function RankLimits({ list }) {
-  const classes = useStyles();
   const { handleCardZoom } = React.useContext(ListContext);
 
   // maybe do parens to show what the modified limits are now, e.g. detachment and associate
@@ -180,7 +142,14 @@ function RankLimits({ list }) {
       {Object.getOwnPropertyNames(rankReqs).map((r) => {
         if (r === "commOp") {
           return (
-            <div className={classes.row} style={{ marginBottom: 5 }}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                marginBottom: 5,
+              }}
+            >
               <Avatar
                 alt={"CMDR"}
                 src={ranks["commander"].icon}
@@ -285,7 +254,14 @@ function RankLimits({ list }) {
           }
 
           return (
-            <div className={classes.row} style={{ marginBottom: 5 }}>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                marginBottom: 5,
+              }}
+            >
               <Avatar
                 alt={r.toUpperCase()}
                 src={ranks[r].icon}

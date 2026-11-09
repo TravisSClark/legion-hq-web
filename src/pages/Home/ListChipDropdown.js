@@ -1,18 +1,9 @@
 import React from "react";
-import { Popover, Chip, Typography } from "@material-ui/core";
-import { ThemeProvider } from "@material-ui/styles";
-import { createTheme, makeStyles } from "@material-ui/core/styles";
+import { Popover, Chip, Typography } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
 import factions from "constants/factions";
 
-const useStyles = makeStyles((theme) => ({
-  paper: {
-    padding: theme.spacing(1),
-    background: "#1F2125",
-  },
-}));
-
 function ListChipDropdown({ chips, faction }) {
-  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClose = () => setAnchorEl(null);
@@ -38,10 +29,10 @@ function ListChipDropdown({ chips, faction }) {
       />
       <Popover
         id={`${faction} list menu`}
-        classes={classes}
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
         onClose={handleClose}
+        PaperProps={{ style: { padding: 8, background: "#1F2125" } }}
       >
         {chips.map((chip, i) => (
           <div key={`${faction}_list_${i}`} style={{ margin: 6 }}>

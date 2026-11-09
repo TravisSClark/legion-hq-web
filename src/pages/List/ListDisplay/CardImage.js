@@ -1,11 +1,11 @@
 import React from "react";
-import Img from "react-image";
-import { Skeleton } from "@mui/lab";
-import { makeStyles } from "@mui/material/styles";
+import { Img } from "react-image";
+import { Skeleton } from "@mui/material";
+import { Box } from "@mui/material";
 import cards from "constants/cards";
 import urls from "constants/urls";
 
-const useStyles = makeStyles((theme) => ({
+const styles = {
   container: {
     marginRight: 4,
     zIndex: 1,
@@ -19,21 +19,22 @@ const useStyles = makeStyles((theme) => ({
   upgrade: { width: "auto", minWidth: 96, height: 150 },
   command: { width: 150, height: 210 },
   counterpart: { width: 210, height: 150 },
-}));
+};
 
 function CardImage({ id, handleClick }) {
   const card = cards[id];
-  const classes = useStyles();
+  const cardStyle = styles[card.cardType] || styles.unit;
+
   return (
-    <div className={classes.container}>
+    <Box sx={styles.container}>
       <Img
         alt={card.cardName}
         src={`${urls.cdn}/${card.cardType}Cards/${card.imageName}`}
-        loader={<Skeleton variant="rect" className={classes[card.cardType]} />}
-        className={classes[card.cardType]}
+        loader={<Skeleton variant="rect" sx={cardStyle} />}
+        style={cardStyle}
         onClick={handleClick}
       />
-    </div>
+    </Box>
   );
 }
 

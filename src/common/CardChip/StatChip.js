@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from 'react-image';
+import { Img } from 'react-image';
 import { Chip, Typography } from '@mui/material';
 import symbols from 'constants/symbols';
 

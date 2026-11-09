@@ -10,7 +10,6 @@ import lhqLogoLight from "assets/lhqLogoLight.svg";
 import lhqLogoDark from "assets/lhqLogoDark.svg";
 
 function DefaultBar() {
-  const classes = useStyles();
   const { userSettings, setIsDrawerOpen } = useContext(DataContext);
   return (
     <Toolbar variant="dense">

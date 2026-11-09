@@ -42,7 +42,12 @@ function DragDropContainer({ items, reorderUnits }) {
   }
   return (
     <DragDropContext onDragEnd={onDragEnd}>
-      <Droppable droppableId="list">
+      <Droppable
+        droppableId="list"
+        isDropDisabled={false}
+        isCombineEnabled={false}
+        ignoreContainerClipping={false}
+      >
         {provided => (
           <div ref={provided.innerRef} {...provided.droppableProps}>
             <ItemList draggableItems={draggableItems} />

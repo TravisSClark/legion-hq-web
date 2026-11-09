@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate, useParams } from "react-router-dom";
 import LoadingWidget from "common/LoadingWidget";
 import listTemplate from "constants/listTemplate";
 const Home = lazy(() => import("pages/Home"));
@@ -11,6 +11,12 @@ const MainListPage = lazy(() => import("pages/List"));
 const Settings = lazy(() => import("pages/Settings"));
 const Resources = lazy(() => import("pages/Resources"));
 const Info = lazy(() => import("pages/Info"));
+
+function ListRoute() {
+  const { slug, listHash } = useParams();
+  return <MainListPage slug={slug} listHash={listHash} />;
+}
+
 export const initialLists = {
   rebels: { ...listTemplate, faction: "rebels" },
   empire: { ...listTemplate, faction: "empire" },
@@ -32,23 +38,16 @@ function Pages() {
   return (
     <Suspense fallback={<LoadingWidget />}>
       <Routes>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/news" component={News} />
-        <Route path="/cards" component={Cards} />
-        <Route
-          path="/list/:slug/:listHash?"
-          render={({ match }) => {
-            const { params } = match;
-            const { slug, listHash } = params;
-            return <MainListPage slug={slug} listHash={listHash} />;
-          }}
-        />
-        <Route path="/roller" component={Roller} />
-        <Route path="/settings" component={Settings} />
-        <Route path="/resources" component={Resources} />
-        <Route path="/info" component={Info} />
-        <Route path="/privacy" component={Privacy} />
-        <Navigate to="/" />
+        <Route path="/" element={<Home />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/cards" element={<Cards />} />
+        <Route path="/list/:slug/:listHash?" element={<ListRoute />} />
+        <Route path="/roller" element={<Roller />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/resources" element={<Resources />} />
+        <Route path="/info" element={<Info />} />
+        <Route path="/privacy" element={<Privacy />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Suspense>
   );

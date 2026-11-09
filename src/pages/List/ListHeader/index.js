@@ -9,7 +9,6 @@ import {
   Link,
   Typography,
 } from "@mui/material";
-import { makeStyles } from "@mui/material/styles";
 import { Info as InfoIcon, Warning as WarningIcon } from "@mui/icons-material";
 
 import DataContext from "context/DataContext";
@@ -25,46 +24,6 @@ import BattleforceSelectorMenu from "./BattleforceSelectorMenu";
 import { ListRulesModal } from "./ListRulesModal";
 import BattleforceChoicesMultiToggle from "./BattleforceChoicesMultiToggle";
 
-const useStyles = makeStyles({
-  container: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  choiceContainer: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingTop: 12,
-  },
-  battleForceContainer: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 4,
-  },
-  columnContainer: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  item: { marginRight: 6 },
-  valError: {
-    display: "flex",
-    alignItems: "start",
-    justifyContent: "start",
-  },
-  row: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  bfRules: {
-    fontSize: 14,
-  },
-});
-
 function ListHeader() {
   const {
     currentList,
@@ -77,7 +36,6 @@ function ListHeader() {
     validationIssues,
   } = useContext(ListContext);
 
-  const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [isBattleForceDialogOpen, setIsBattleForceDialogOpen] =
     React.useState(false);
@@ -97,8 +55,23 @@ function ListHeader() {
   const showHeaderLabel = userSettings.showHeaderLabel !== "off";
 
   return (
-    <div id="list-header" className={classes.columnContainer}>
-      <div className={classes.container} style={{ width: "50%" }}>
+    <div
+      id="list-header"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <div
+        style={{
+          width: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <TitleField
           activations={numActivations}
           title={currentList.title}
@@ -108,7 +81,14 @@ function ListHeader() {
           }}
         />
         {validationIssues.length > 0 && (
-          <div className={classes.battleForceContainer}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              padding: 4,
+            }}
+          >
             <IconButton onClick={() => setValidationDialogOpen(true)}>
               <WarningIcon
                 style={{ color: minValidationError < 2 ? "yellow" : "red" }}
@@ -121,10 +101,19 @@ function ListHeader() {
               <DialogTitle>List Errors/Warnings</DialogTitle>
               <DialogContent>
                 {validationIssues.map((el, i) => (
-                  <div key={i} className={classes.valError}>
+                  <div
+                    key={i}
+                    style={{
+                      display: "flex",
+                      alignItems: "start",
+                      justifyContent: "start",
+                    }}
+                  >
                     <WarningIcon
-                      className={classes.item}
-                      style={{ color: el.level === 1 ? "yellow" : "red" }}
+                      style={{
+                        color: el.level === 1 ? "yellow" : "red",
+                        marginRight: 6,
+                      }}
                     />
                     <DialogContentText>{el.text}</DialogContentText>
                   </div>
@@ -148,12 +137,18 @@ function ListHeader() {
           </div>
         )}
         {isKillPointMode && (
-          <div className={classes.item}>
+          <div style={{ marginRight: 6 }}>
             <KillPointsField killPoints={currentKillPoints} />
           </div>
         )}
       </div>
-      <div className={classes.container}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <BattleforceSelectorMenu
           currentList={currentList}
           anchorEl={anchorEl}
@@ -175,7 +170,7 @@ function ListHeader() {
               Battleforce:
             </Typography>
           )}
-          <div className={classes.item}>
+          <div style={{ marginRight: 6 }}>
             <FactionButton
               currentList={currentList}
               handleFactionMenuOpen={(event) =>
@@ -200,7 +195,7 @@ function ListHeader() {
               Mode:
             </Typography>
           )}
-          <div className={classes.item}>
+          <div style={{ marginRight: 6 }}>
             <ModeButton
               currentMode={currentList.mode}
               points={currentList.pointTotal}
@@ -209,7 +204,14 @@ function ListHeader() {
             />
           </div>
         </Box>
-        <div className={classes.battleForceContainer}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: 4,
+          }}
+        >
           <IconButton onClick={() => setIsBattleForceDialogOpen(true)}>
             <InfoIcon />
           </IconButton>
@@ -221,7 +223,14 @@ function ListHeader() {
       </div>
       {currentList.battleForce &&
         battleForcesDict[currentList.battleForce].choices && (
-          <div className={classes.choiceContainer}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              paddingTop: 12,
+            }}
+          >
             <BattleforceChoicesMultiToggle
               currentChoices={currentList.choices}
               battleforceChoices={

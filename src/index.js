@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router } from "react-router-dom";
 import { DataProvider } from "context/DataContext";
 import App from "./App";
@@ -9,7 +9,7 @@ import auth from "constants/auth";
 const { domain, clientID } = auth.v1;
 const { returnTo } = auth.prod;
 
-ReactDOM.render(
+createRoot(document.getElementById("root")).render(
   <Router>
     <Auth0Provider domain={domain} clientId={clientID} redirectUri={returnTo}>
       <DataProvider>
@@ -17,7 +17,6 @@ ReactDOM.render(
       </DataProvider>
     </Auth0Provider>
   </Router>,
-  document.getElementById("root"),
 );
 
 // If you want your app to work offline and load faster, you can change

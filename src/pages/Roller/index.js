@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Typography } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import ControlPanel from "./ControlPanel";
 import AttackDie from "./AttackDie";
 

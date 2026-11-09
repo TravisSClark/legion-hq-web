@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import clsx from "clsx";
 import { ErrorBoundary } from "react-error-boundary";
 import {
   Grid,
@@ -9,7 +8,6 @@ import {
   Button,
   Collapse,
 } from "@mui/material";
-import { makeStyles } from "@mui/material/styles";
 import {
   Announcement as NewsIcon,
   ExpandMore as ExpandMoreIcon,
@@ -29,17 +27,6 @@ import naTournaments from "assets/NA Tournaments.png";
 import euTournaments from "assets/Eurasia Tournaments.png";
 import roadmap from "assets/roadmap.webp";
 import patreon from "assets/PATREON_SYMBOL_1_BLACK_RGB.png";
-
-const useStyles = makeStyles((theme) => ({
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: { transform: "rotate(180deg)" },
-}));
 
 function Post({ title, date, body }) {
   return (
@@ -85,7 +72,6 @@ function Home() {
     userSettings,
     deleteUserList,
   } = useContext(DataContext);
-  const classes = useStyles();
   const listChips = {};
   const [isNewsOpen, setIsNewsOpen] = useState(true);
   const [isReleasesOpen, setIsReleasesOpen] = useState(true);
@@ -133,8 +119,12 @@ function Home() {
                 Latest News
                 <ExpandMoreIcon
                   fontSize="small"
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: isNewsOpen,
+                  sx={(theme) => ({
+                    marginLeft: "auto",
+                    transform: isNewsOpen ? "rotate(180deg)" : "rotate(0deg)",
+                    transition: theme.transitions.create("transform", {
+                      duration: theme.transitions.duration.shortest,
+                    }),
                   })}
                 />
               </Button>
@@ -211,8 +201,14 @@ function Home() {
                 Upcoming New Releases
                 <ExpandMoreIcon
                   fontSize="small"
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: isReleasesOpen,
+                  sx={(theme) => ({
+                    marginLeft: "auto",
+                    transform: isReleasesOpen
+                      ? "rotate(180deg)"
+                      : "rotate(0deg)",
+                    transition: theme.transitions.create("transform", {
+                      duration: theme.transitions.duration.shortest,
+                    }),
                   })}
                 />
               </Button>
@@ -251,8 +247,14 @@ function Home() {
                 Grand Tournaments
                 <ExpandMoreIcon
                   fontSize="small"
-                  className={clsx(classes.expand, {
-                    [classes.expandOpen]: isTournamentsOpen,
+                  sx={(theme) => ({
+                    marginLeft: "auto",
+                    transform: isTournamentsOpen
+                      ? "rotate(180deg)"
+                      : "rotate(0deg)",
+                    transition: theme.transitions.create("transform", {
+                      duration: theme.transitions.duration.shortest,
+                    }),
                   })}
                 />
               </Button>

@@ -1,39 +1,6 @@
 import React from "react";
-import { makeStyles, Typography, Divider } from "@mui/material";
+import { Typography, Divider } from "@mui/material";
 import LegionCard from "common/LegionCard";
-
-const useStyles = makeStyles((theme) => ({
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: { transform: "rotate(180deg)" },
-  rowContainerWrap: {
-    display: "flex",
-    flexWrap: "wrap",
-    alignItems: "flex-start",
-  },
-  rowContainerNoWrap: {
-    display: "flex",
-    flexWrap: "nowrap",
-    alignItems: "center",
-    padding: 4,
-  },
-  columnContainer: {
-    display: "flex",
-    flexDirection: "column",
-  },
-  item: {
-    marginRight: 4,
-    marginBottom: 4,
-  },
-  divider: {
-    flexGrow: 1,
-  },
-}));
 
 // function CollapsedContent({ children, isExpanded }) {
 //   return (
@@ -50,18 +17,23 @@ function SelectorContent({
   handleClick,
   handleCardZoom,
 }) {
-  const classes = useStyles();
   // const [isExpanded, setIsExpanded] = React.useState(false);
   // const handleExpandClick = () => setIsExpanded(!isExpanded);
   if (validIds.length === 0) {
     return (
-      <div className={classes.columnContainer}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         <Typography>No eligible cards found</Typography>
       </div>
     );
   } else if (!action.includes("UPGRADE")) {
     return (
-      <div className={classes.rowContainerWrap}>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "flex-start",
+        }}
+      >
         {validIds.map((id) => (
           <LegionCard
             key={id}
@@ -74,15 +46,24 @@ function SelectorContent({
     );
   }
   return (
-    <div className={classes.columnContainer}>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <div
-        className={classes.rowContainerWrap}
-        style={{ alignItems: "center" }}
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "center",
+        }}
       >
         <Typography style={{ marginRight: 8 }}>Equippable upgrades</Typography>
-        <Divider className={classes.divider} />
+        <Divider style={{ flexGrow: 1 }} />
       </div>
-      <div className={classes.rowContainerWrap}>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "flex-start",
+        }}
+      >
         {validIds.map((id) => (
           <LegionCard
             key={id}

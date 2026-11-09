@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { Button, IconButton, Typography } from "@mui/material";
-import { makeStyles } from "@mui/material/styles";
 import {
   Add as PlusIcon,
   Remove as NegativeIcon,
@@ -10,27 +9,10 @@ import { Icon as IconifyIcon } from "@iconify/react";
 import ListContext from "context/ListContext";
 import { unitHasUniques } from "components/eligibleCardListGetter";
 
-const useStyles = makeStyles((theme) => ({
-  buttons: {
-    display: "flex",
-    flexFlow: "row nowrap",
-    justifyContent: "center",
-    minWidth: "72px",
-  },
-  buttonsMobile: {
-    display: "flex",
-    flexFlow: "column",
-    justifyContent: "center",
-    alignContent: "center",
-    minWidth: "72px",
-  },
-}));
-
 function UnitActions({ unit, unitIndex, isCounterpart = false }) {
   // TODO - at some point, might want to move this into listcontext;
   // in current state (hah!), it doesn't handle a list edit while changing kill points
   const [numKilled, setNumKilled] = useState(0);
-  const classes = useStyles();
   const fontSize = 26;
 
   const {
@@ -93,14 +75,29 @@ function UnitActions({ unit, unitIndex, isCounterpart = false }) {
 
     if (!isMobile) {
       return (
-        <div className={classes.buttons}>
+        <div
+          sx={{
+            display: "flex",
+            flexFlow: "row nowrap",
+            justifyContent: "center",
+            minWidth: "72px",
+          }}
+        >
           {killPointsMinus}
           {killPointsPlus}
         </div>
       );
     } else {
       return (
-        <div className={classes.buttonsMobile}>
+        <div
+          sx={{
+            display: "flex",
+            flexFlow: "column",
+            justifyContent: "center",
+            alignContent: "center",
+            minWidth: "72px",
+          }}
+        >
           {killPointsPlus}
           {killPointsMinus}
         </div>
@@ -110,7 +107,14 @@ function UnitActions({ unit, unitIndex, isCounterpart = false }) {
     let hasUniques = unitHasUniques(unit);
 
     return (
-      <div className={classes.buttons}>
+      <div
+        sx={{
+          display: "flex",
+          flexFlow: "row nowrap",
+          justifyContent: "center",
+          minWidth: "72px",
+        }}
+      >
         {!hasUniques && !isCounterpart ? (
           <React.Fragment>
             <IconButton

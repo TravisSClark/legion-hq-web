@@ -220,7 +220,7 @@ const CardSelector = () => {
 
   return (
     <Fade unmountOnExit exit={false} in={cardPaneFilter.action !== "DISPLAY"}>
-      <React.Fragment>
+      <div>
         <SelectorHeader
           headerContent={header}
           setCardPaneFilter={setCardPaneFilter}
@@ -233,7 +233,7 @@ const CardSelector = () => {
           handleClick={clickHandler}
           handleCardZoom={handleCardZoom}
         />
-      </React.Fragment>
+      </div>
     </Fade>
   );
 };

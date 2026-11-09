@@ -1,10 +1,12 @@
-import { Tooltip } from '@mui/material';
-import { withStyles } from '@mui/material/styles';
+import { Tooltip } from "@mui/material";
 
-// Tooltip main argument is title
-
-const LargerTooltip = withStyles(theme => ({
-  tooltip: { fontSize: 16 }
-}))(Tooltip);
+function LargerTooltip(props) {
+  return (
+    <Tooltip
+      {...props}
+      slotProps={{ tooltip: { sx: { fontSize: 16 } } }}
+    />
+  );
+}
 
 export default LargerTooltip;

@@ -1,23 +1,19 @@
 import React from "react";
 import { IconButton } from "@mui/material";
-import { makeStyles } from "@mui/material/styles";
 import { Icon as IconifyIcon } from "@iconify/react";
 import { Add as PlusIcon, Remove as NegativeIcon } from "@mui/icons-material";
 
-const useStyles = makeStyles((theme) => ({
-  buttons: {
-    display: "flex",
-    flexFlow: "row nowrap",
-    justifyContent: "center",
-    minWidth: "72px",
-  },
-}));
-
 function UnitKillActions({ killUnit, restoreUnit }) {
-  const classes = useStyles();
   const fontSize = 26;
   return (
-    <div className={classes.buttons}>
+    <div
+      sx={{
+        display: "flex",
+        flexFlow: "row nowrap",
+        justifyContent: "center",
+        minWidth: "72px",
+      }}
+    >
       <React.Fragment>
         <IconButton
           size="small"
