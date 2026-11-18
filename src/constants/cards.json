@@ -21230,7 +21230,7 @@
     "ttsName": "Jedi Guardian (Doctrine)",
     "cardType": "upgrade",
     "cardSubtype": "doctrine",
-    "cost": 10,
+    "cost": 8,
     "imageName": "Jedi Guardian (Doctrine).webp",
     "isUnique": true,
     "TODO": "ADD SURGE: HIT",
@@ -21250,7 +21250,12 @@
         "cardName": "Jedi Knight General"
       }
     ],
-    "history": []
+    "history": [
+      {
+        "date": "17 November 2026",
+        "description": "Points dropped from 10 to 8."
+      }
+    ]
   },
   "Df": {
     "id": "Df",
@@ -21445,7 +21450,6 @@
     "imageName": "Peacekeeping Mission.webp",
     "keywords": [
       { "name": "Prepared Position", "isPermanent": true },
-      "Outmaneuver",
       {
         "name": "Reliable",
         "value": 2
@@ -28440,7 +28444,7 @@
     "imageName": "Wookiee Warriors Treetop Defenders.webp",
     "cardType": "unit",
     "cardSubtype": "wookiee trooper",
-    "rank": "core",
+    "rank": "corps",
     "faction": "republic",
     "cost": 69,
     "keywords": [
@@ -28541,6 +28545,7 @@
     "id": "Np",
     "cardName": "Stormtrooper Riot Squad",
     "title": "Trench Busters",
+    "displayName": "Trench Busters",
     "cardType": "unit",
     "cardSubtype": "trooper",
     "rank": "special",
