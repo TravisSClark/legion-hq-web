@@ -213,8 +213,7 @@ function addAdditionalUpgradeSlots(list, unit, upgradeCard) {
     upgradeCard.additionalUpgradeSlots.length === 0 ||
     (upgradeCard.id === "Ih" &&
       list.battleForce !== "Imperial Remnant" &&
-      cards[unit.unitId].rank !== "corps") ||
-    (upgradeCard.id === "Il" && unit.unitId === "Hm")
+      cards[unit.unitId].rank !== "corps")
   )
     return;
 

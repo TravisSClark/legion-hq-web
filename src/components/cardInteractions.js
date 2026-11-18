@@ -28,6 +28,11 @@ function getSpecialSlots(unitCard) {
 // TODO see about either moving these or getting the pointDeltas to show in builder
 const interactions = {
   upgradePoints: {
+    df: {
+      isConditionMet: (list, unit) =>
+        list.battleForce === "Wookiee War Grove" && unit.cardName === "Nn",
+      pointDelta: -6,
+    },
     lu: {
       // Jyn's Blaster + Jyn Erso
       isConditionMet: (list, unit) =>

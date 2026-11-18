@@ -1,5 +1,10 @@
 [
   {
+    "title": "November Update",
+    "date": "17 Nov 2026",
+    "body": "I'm working through the update I promise. Custom Clone bf and keywords still need work."
+  },
+  {
     "title": "Original Images",
     "date": "3 Nov 2026",
     "body": "You now can toggle the use of original images for upgrade cards."
@@ -182,7 +187,7 @@
   {
     "title": "New Battle Forces & List Validation Returns",
     "date": "18 September 2023",
-    "body": "Added the new Wookiee Defenders & Experimental Droids Battleforces from the Ministravaganza. Limited list validation has returned; it is a work in progress so it is NOT fully functional yet. Credit to John Lueck (Grabnar on the Legion Discord) for this new feature. Thanks John!"
+    "body": "Added the new Wookiee War Grove & Experimental Droids Battleforces from the Ministravaganza. Limited list validation has returned; it is a work in progress so it is NOT fully functional yet. Credit to John Lueck (Grabnar on the Legion Discord) for this new feature. Thanks John!"
   },
   {
     "title": "Geonosians and Inquisitors Added",

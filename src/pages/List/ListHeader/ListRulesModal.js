@@ -51,6 +51,7 @@ const useStyles = makeStyles({
   bfRules: {
     fontSize: 14,
     marginTop: 4,
+    whiteSpace: "pre-wrap",
   },
 });
 
@@ -148,8 +149,10 @@ function BFRules({ list }) {
             have the DETACHMENT keyword.
           </Typography>
         )}
-        {battleForcesDict[list.battleForce].plainTextRules?.map((r) => (
-          <Typography className={classes.bfRules}>{r}</Typography>
+        {battleForcesDict[list.battleForce].plainTextRules?.map((r, index) => (
+          <Typography className={classes.bfRules} key={index}>
+            {r}
+          </Typography>
         ))}
       </DialogContent>
       {/* <Typography style={{marginBottom:0}} gutterBottom>See your rule doc for full battleforce rules while playing:</Typography> */}

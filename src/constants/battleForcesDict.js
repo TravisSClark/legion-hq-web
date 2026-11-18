@@ -44,7 +44,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [1, 3],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commander: [1, 2],
@@ -53,7 +53,50 @@ const battleForcesDict = {
       special: [0, 2],
       support: [0, 3],
       heavy: [1, 2],
-      flier: [0, 0],
+      flier: [0, 1],
+    },
+  },
+  "224th Armored Division": {
+    name: "224th Armored Division",
+    faction: "empire",
+    linkId: "2ad",
+    commander: ["Cb"],
+    operative: ["Ca"],
+    corps: ["Ne", "ay"],
+    special: ["Np"],
+    support: ["be", "Na"],
+    heavy: ["bg", "bh"],
+    flier: [],
+    allowedUpgrades: ["Ce", "Nl", "Cf", "Ch", "Cg", "Cj", "Me", "Bl", "Bn"],
+    plainTextRules: [
+      "During Army Building, your army may include 1 additional copy each of Academy Trained, Defend in Depth, Platoon Commander, and Tip of the Spear.\n\n\
+During the Resolve Setup Effects step, place 2 Trench tokens (Asset) within allied Territory. Trooper units completely within 1/2 Range of a Trench token benefit from heavy Cover.\n\n\
+During the Resolve Setup Effects step, after placing allied Trench tokens, you may choose up to 2 allied Trooper units. If a chosen unit has Prepared Positions, when they Deploy it gains 1 Aim token. Otherwise, it gains Prepared Positions. When the chosen units Deploy, they must Deploy completely within 1/2 Range of a Trench token in allied Territory, if able.",
+    ],
+    rules: {
+      unitLimits: [
+        { ids: ["ay"], count: [0, 2] },
+        { ids: ["Na"], count: [0, 4] },
+      ],
+    },
+    "standard mode": {
+      commOp: 5,
+      commander: [1, 5],
+      operative: [0, 5],
+      corps: [4, 7],
+      special: [0, 3],
+      support: [0, 5],
+      heavy: [0, 2],
+      flier: [0, 2],
+    },
+    "500-point mode": {
+      commander: [1, 2],
+      operative: [0, 1],
+      corps: [3, 5],
+      special: [0, 2],
+      support: [0, 4],
+      heavy: [0, 2],
+      flier: [0, 1],
     },
   },
   "501st Legion": {
@@ -61,7 +104,7 @@ const battleForcesDict = {
     faction: "republic",
     linkId: "5t",
     commander: ["Bc", "na", "fy", "ns"],
-    operative: [],
+    operative: ["Hj"],
     corps: ["fz", "Bi"],
     special: ["kz", "Ay"],
     support: ["ky", "mb", "ic", "xj", "xp"],
@@ -77,7 +120,7 @@ const battleForcesDict = {
       special: [1, 4],
       support: [1, 2],
       heavy: [0, 1],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commander: [1, 1],
@@ -86,7 +129,7 @@ const battleForcesDict = {
       special: [1, 4],
       support: [0, 2],
       heavy: [0, 1],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Blizzard Force": {
@@ -114,7 +157,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [1, 4],
       heavy: [0, 2],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commander: [1, 2],
@@ -123,7 +166,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 1],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Bright Tree Village": {
@@ -197,7 +240,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [1, 4],
       heavy: [0, 2],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commOp: 3,
@@ -207,7 +250,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [1, 3],
       heavy: [0, 1],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Experimental Droids": {
@@ -237,16 +280,14 @@ const battleForcesDict = {
       ],
     },
     plainTextRules: [
-      "At the start of each Activation Phase, choose up to 1 of your COMMANDER units. \
-        If you do, put 3 Surge tokens on that unit’s Unit Card. Once during its \
-        Activation, an allied SPECIAL FORCES, CORPS, or SUPPORT unit that has the AI keyword may \
-        make a free action to spend 1 Surge token on the chosen COMMANDER unit, if it \
-        is within 3. If it does, choose 1 of the following:\n\
-        • Increase their Speed by 1 during their next Move action this Turn.\n\
-        • Gain 1 Aim token or 1 Dodge token.\n\
-        • Add 1 black die and 1 white die to 1 of their Attack Pools during \
-        their next Attack action this turn.\n\
-        • Remove up to 2 Suppression tokens.",
+      "At the start of each Activation Phase, choose up to 1 of your COMMANDER units.\n\
+If you do, put 3 Surge tokens on that unit’s Unit Card.\n\n\
+Once during its Activation, an allied SPECIAL FORCES, CORPS, or SUPPORT unit that has the AI keyword may make a free action to spend 1 Surge token on the chosen COMMANDER unit, if it is within 3.\n\
+If it does, choose 1 of the following:\n\
+• Increase their Speed by 1 during their next Move action this Turn.\n\
+• Gain 1 Aim token or 1 Dodge token.\n\
+• Add 1 black die and 1 white die to 1 of their Attack Pools during their next Attack action this Turn.\n\
+• Remove up to 2 Suppression tokens.",
     ],
     "standard mode": {
       commander: [1, 2],
@@ -255,7 +296,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commander: [1, 1],
@@ -264,7 +305,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 1],
       heavy: [0, 1],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Imperial Remnant": {
@@ -303,7 +344,7 @@ const battleForcesDict = {
       special: [0, 0],
       support: [0, 2],
       heavy: [0, 2],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commOp: 2,
@@ -313,7 +354,57 @@ const battleForcesDict = {
       special: [0, 0],
       support: [0, 1],
       heavy: [0, 1],
-      flier: [0, 0],
+      flier: [0, 1],
+    },
+  },
+  Irregulars: {
+    name: "Irregulars",
+    faction: "rebels",
+    linkId: "I",
+    commander: [],
+    operative: ["kf", "ae", "lv", "By"],
+    corps: ["ah"],
+    special: ["xy", "Hm"],
+    support: ["ao"],
+    heavy: ["om", "on", "bh", "Fe", "aq"],
+    flier: [],
+    allowedUpgrades: ["Eq", "Il", "cw", "Cq", "Cs", "Bl"],
+    plainTextRules: [
+      "This army may include any number of the Unseen Saboteur Upgrade cards.\n\
+Allied Operative units gain Field Commander.\n\
+Allied units cannot use another unit’s Courage value when determining Panic.\n\
+Allied units that are not within 1 of an allied Operative unit cannot be issued Orders, unless they are issuing an Order to themselves.\n\
+You may include 0-1 TX-225 GAVw Occupier Tank, 0-1 WLO-5 Speeder Tank, and 0-1 LAAT/le Patrol Transport units in this army. These units change their Faction to Rebels.\n\n\
+At the start of each Activation Phase, choose up to 2 allied units that have different Ranks and that do not have faceup Order tokens. For each chosen unit, resolve the corresponding effect:\n\
+• SPECIAL FORCES or SUPPORT: The chosen unit may make a Speed-1 Move or, if it is undeployed, may instead gain 1 Dodge token.\n\
+• CORPS: The chosen unit may gain 1 Dodge token and may make a Free Recover action.\n\
+• HEAVY or FLIER: The chosen unit may gain 1 Surge token and 1 Dodge token.\n\
+• OPERATIVE: Choose 1 POI that is within 1/2 Range of the chosen unit. Then roll 5 black attack dice. For each Hit result in the roll, each unit within 1/2 Range of the chosen POI gains 1 Suppression token. For each Crit result in the roll, each unit within 1/2 of the chosen POI gains 1 Suppression token and suffers 1 Wound.",
+    ],
+    rules: {
+      unitLimits: [
+        { ids: ["on"], count: [0, 1] },
+        { ids: ["bh"], count: [0, 1] },
+        { ids: ["Fe"], count: [0, 1] },
+      ],
+    },
+    "standard mode": {
+      commander: [0, 0],
+      operative: [1, 4],
+      corps: [1, 6],
+      special: [1, 3],
+      support: [0, 3],
+      heavy: [1, 3],
+      flier: [0, 2],
+    },
+    "500-point mode": {
+      commander: [0, 0],
+      operative: [1, 2],
+      corps: [1, 4],
+      special: [1, 2],
+      support: [0, 2],
+      heavy: [1, 2],
+      flier: [0, 1],
     },
   },
   "The Ohnaka Gang": {
@@ -379,7 +470,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 3],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commOp: 2,
@@ -389,7 +480,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 2],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Separatist Invasion": {
@@ -416,7 +507,7 @@ const battleForcesDict = {
       special: [0, 2],
       support: [0, 3],
       heavy: [1, 2],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commOp: 2,
@@ -426,7 +517,7 @@ const battleForcesDict = {
       special: [0, 1],
       support: [0, 2],
       heavy: [1, 1],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Shadow Collective": {
@@ -471,7 +562,7 @@ const battleForcesDict = {
       special: [0, 4],
       support: [0, 3],
       heavy: [0, 2],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commOp: 2,
@@ -481,7 +572,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 1],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Stormtrooper Battalion": {
@@ -509,7 +600,7 @@ const battleForcesDict = {
       special: [0, 2],
       support: [0, 3],
       heavy: [0, 2],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commander: [1, 3],
@@ -518,7 +609,7 @@ const battleForcesDict = {
       special: [0, 2],
       support: [0, 2],
       heavy: [0, 1],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Tempest Force": {
@@ -554,7 +645,7 @@ const battleForcesDict = {
       special: [2, 6],
       support: [0, 3],
       heavy: [0, 3],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commOp: 2,
@@ -564,24 +655,22 @@ const battleForcesDict = {
       special: [1, 4],
       support: [0, 2],
       heavy: [0, 2],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
-  "Wookiee Defenders": {
-    name: "Wookiee Defenders",
+  "Wookiee War Grove": {
+    name: "Wookiee War Grove",
     faction: "republic",
     linkId: "wd",
     commander: ["ol", "po", "ph"],
     operative: ["Da"],
-    corps: ["fz", "pm"],
-    special: ["kz", "pg"],
+    corps: ["fz", "Nn"],
+    special: ["No"],
     support: ["qh", "xf", "ic"],
     heavy: ["gb", "qs"],
     flier: [],
-    allowedUpgrades: ["Ir", "Bl", "Dc", "Dd", "De", "cw"],
+    allowedUpgrades: ["Ir", "Bl", "Dc", "Dd", "De", "Oc", "cw"],
     rules: {
-      buildsAsCorps: ["pm"],
-      ccAsCorps: true, // adds in the "and Battle Cards" rule unique to Wookiee building rules
       unitLimits: [
         { ids: ["kz"], count: [0, 1] },
         { ids: ["fz"], count: [0, 2] },
@@ -589,33 +678,28 @@ const battleForcesDict = {
         { ids: ["qs"], count: [0, 1] },
         { ids: ["gb"], count: [0, 1] },
       ],
-      minimum3Wookiees: true, // TODO between this and BTV, we ought to have rules for faction/affil/type counts...
+      minimum2Wookiees: true, // TODO between this and BTV, we ought to have rules for faction/affil/type counts...
     },
     plainTextRules: [
-      "Your army must include at least 3 Wookiee Trooper units.", // TODO this is currently validated, but displayed via plaintext; this way is easier, should probably move rules to plaintext with common keys/formatters
-      "The first time 1 or more miniatures in each Wookiee Trooper unit are \
-          defeated each Round, that unit may make a Speed-1 Move. A unit can \
-          make this Move regardless of its speed.",
+      "Reduce the cost of the Tenacity Upgrade Card to 0 points for Wookiee Warriors (Treetop Defenders). Allied Raddaugh Gnasp Fluttercraft gain Transport.",
     ],
     "standard mode": {
-      commOp: 2,
       commander: [1, 2],
       operative: [0, 2],
       corps: [3, 6],
-      special: [0, 4],
+      special: [0, 3],
       support: [0, 3],
-      heavy: [0, 1],
-      flier: [0, 0],
+      heavy: [0, 2],
+      flier: [0, 2],
     },
     "500-point mode": {
-      commOp: 2,
       commander: [1, 2],
-      operative: [0, 2],
-      corps: [2, 5],
-      special: [0, 3],
+      operative: [0, 1],
+      corps: [2, 4],
+      special: [0, 2],
       support: [0, 2],
       heavy: [0, 1],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Mandalorian Clans": {
@@ -671,7 +755,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commOp: 3,
@@ -681,7 +765,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Children of the Watch": {
@@ -735,7 +819,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commOp: 3,
@@ -745,7 +829,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Clan Kryze": {
@@ -778,7 +862,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commOp: 3,
@@ -788,7 +872,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Clan Wren": {
@@ -833,7 +917,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commOp: 3,
@@ -843,7 +927,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Clan Saxon": {
@@ -887,7 +971,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 2],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commOp: 3,
@@ -897,7 +981,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 0],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
   "Custom Clan": {
@@ -948,23 +1032,18 @@ const battleForcesDict = {
       {
         name: "Feats of Valor",
       },
+      {
+        name: "Rule the Skies",
+      },
     ],
     plainTextRules: [
-      "CHOOSE 2 OF THE FOLLOWING:\n Veterans: \n Each time a Mandalorian Warrior unit equips the GALAAR-15 Carbines upgrade, \
-      reduce the cost of that upgrade by 5 points. Additionally, during Setup you may choose 2 alliedunits. Each chosen gains DAUNTLESS. \n\
-      Tools of the Trade: \n You may include 1 additional copy each of the Flame Projector, Jetpack Rockets, and Whipcord Launcher \
-      Upgrade Cards in your army. These additional copies do not cost points, and may be equipped by any allied Mandalorian Trooper unit, \
-      ignoring restrictions. Each unit may still only ever be equipped with 1 copy of an upgrade card. \n Rapid Deployment: \n \
-      During Setup, you may set aside up to 2 allied units that are not holding an Asset Objective token, marking the set aside units \
-      with Advantage tokens. The first time each set-aside unit would be chosen to activate this Game, you may Deploy it by putting \
-      that unit’s unit leader onto the battlefield not within 2 of all enemy units, if able, then put the rest of the unit in cohesion. \
-      If you do, that unit is treated as activated and its Order token is placed facedown. Then the unit loses its Advantage token. \n\
-      Guns for Hire: \n You may include a AA-5 Speeder Truck, a TX-225 GAVw Occupier Tank, or a WLO-5 Speeder Tank in your army. \
-      These units change their Affiliation to MANDALORIANS, and gain COORDINATE: MANDALORIAN WARRIOERS, and INDEPENDENT: SURGE 1. \n\
-      Feats of Valor: \n When an allied unit in this army defeats an enemy unit, after the effect is resolved, the allied unit gains 1 Valor \
-      token. While a unit has 1 or more Valor tokens, it has Dauntless. While a unit has 2 or more Valor tokens, at the start of each of its \
-      Activations it gains 1 Aim token, Dodge token, or Surge token. While a unit has 3 or more Valor tokens, it has EXEMPLAR. \
-      These bonuses are cumulative",
+      "CHOOSE 2 OF THE FOLLOWING:\n\
+• Veterans: Each time a Mandalorian Warrior unit equips the GALAAR-15 Carbines upgrade, reduce the cost of that upgrade by 5 points. Additionally, during Setup you may choose 2 allied units. Each chosen unit gains DAUNTLESS.\n\
+• Tools of the Trade: You may include 1 additional copy each of the Flame Projector, Jetpack Rockets, and Whipcord Launcher Upgrade Cards in your army. These additional copies do not cost points and may be equipped by any allied Mandalorian Trooper unit, ignoring restrictions. Each unit may still only ever be equipped with 1 copy of an upgrade card.\n\
+• Rapid Deployment: During Setup, you may set aside up to 2 allied units that are not holding an Asset Objective token, marking the set-aside units with Advantage tokens. The first time each set-aside unit would be chosen to activate this game, you may Deploy it by putting that unit’s unit leader onto the battlefield not within 2 of all enemy units, if able, then put the rest of the unit in cohesion. If you do, that unit is treated as activated and its Order token is placed facedown. Then the unit loses its Advantage token.\n\
+• Guns for Hire: You may include a AA-5 Speeder Truck, a TX-225 GAVw Occupier Tank, or a WLO-5 Speeder Tank in your army. These units change their Affiliation to MANDALORIANS and gain COORDINATE: MANDALORIAN WARRIORS and INDEPENDENT: SURGE 1.\n\
+• Feats of Valor: When an allied unit in this army defeats an enemy unit, after the effect is resolved, the allied unit gains 1 Valor token. While a unit has 1 or more Valor tokens, it has Dauntless. While a unit has 2 or more Valor tokens, at the start of each of its Activations it gains 1 Aim token, Dodge token, or Surge token. While a unit has 3 or more Valor tokens, it has EXEMPLAR. These bonuses are cumulative.\n\
+• Rule the Skies: Reduce the points cost of Flying Vehicle units in this army by 10 points. Your army may include 1 additional Flier unit. Commander units in this army gain Direct: Flier unit.",
     ],
     "standard mode": {
       commander: [1, 2],
@@ -973,7 +1052,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 3],
       heavy: [0, 1],
-      flier: [0, 0],
+      flier: [0, 2],
     },
     "500-point mode": {
       commOp: 3,
@@ -983,7 +1062,7 @@ const battleForcesDict = {
       special: [0, 3],
       support: [0, 2],
       heavy: [0, 1],
-      flier: [0, 0],
+      flier: [0, 1],
     },
   },
 };

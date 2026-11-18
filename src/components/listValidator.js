@@ -358,19 +358,19 @@ function battleForceValidation(currentList, unitCounts) {
       }
     }
 
-    if (rules.minimum3Wookiees) {
+    if (rules.minimum2Wookiees) {
       let wookCount = currentList.units.reduce((wookCount, unit) => {
         const card = cards[unit.unitId];
-        if (card.cardSubtype === "wookiee trooper")
+        if (card.title && card.title === "Treetop Defenders")
           return wookCount + unit.count;
         else return wookCount;
       }, 0);
 
-      if (wookCount < 3) {
+      if (wookCount < 2) {
         validationIssues.push({
           level: 2,
           text:
-            "Your army must include at least 3 Wookiee Trooper units. (" +
+            "Your army must include at least 2 Wookiee Warriors (Treetop Defenders). (" +
             wookCount +
             " found)",
         });
@@ -735,7 +735,17 @@ function validateList(currentList, rankLimits) {
 
   Object.getOwnPropertyNames(listUniqueUpgrades).forEach((id) => {
     const upgradeCard = cards[id];
-    const limit = upgradeCard.uniqueCount ? upgradeCard.uniqueCount : 1;
+    let limit = upgradeCard.uniqueCount ? upgradeCard.uniqueCount : 1;
+    if (currentList.battleForce) {
+      if (
+        currentList.battleForce === "224th Armored Division" &&
+        ["Ce", "Cg", "Ch", "Cf"].includes(id)
+      ) {
+        limit = 2;
+      } else if (currentList.battleForce === "Irregulars" && id === "Cq") {
+        limit = 4;
+      }
+    }
 
     if (listUniqueUpgrades[id] > limit) {
       const name = upgradeCard.cardName.toUpperCase();
@@ -746,7 +756,7 @@ function validateList(currentList, rankLimits) {
           name +
           '" upgrades! (' +
           listUniqueUpgrades[id] +
-          " equipped, limt " +
+          " equipped, limit " +
           limit +
           ")",
       });

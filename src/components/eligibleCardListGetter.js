@@ -353,8 +353,16 @@ function getEligibleUpgrades(
       if (card.cardSubtype !== upgradeType) continue;
 
       if (card.isUnique) {
-        if (uniqueCardNames.includes(card.cardName)) continue;
+        if (
+          list.battleForce &&
+          ((list.battleForce === "224th Armored Division" &&
+            ["Ce", "Cg", "Ch", "Cf"].includes(id)) ||
+            (list.battleForce === "Irregulars" && id === "Cq"))
+        ) {
+        } else if (uniqueCardNames.includes(card.cardName)) continue;
       }
+
+      if (card.specialIssue && card.specialIssue !== list.battleForce) continue;
 
       let alreadyEquippedOrLeader = false;
       upgradesEquipped.forEach((u) => {
@@ -418,6 +426,20 @@ function getEligibleUpgrades(
 
       if (card.affiliations && !card.affiliations.includes(list.faction))
         continue;
+
+      if (
+        card.battleForce &&
+        card.battleForce !== "" &&
+        list.battleForce !== card.battleForce
+      )
+        continue;
+
+      if (
+        list.battleForce === "Irregulars" &&
+        ["on", "bh", "Fe"].includes(unitCardCopy.id)
+      ) {
+        unitCardCopy.faction = "rebels";
+      }
 
       // The 'normal' way to check for an upgrade - see if the unit meets the upgrade's requirements
       if (areRequirementsMet(card.requirements, unitCardCopy)) {
