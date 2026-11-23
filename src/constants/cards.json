@@ -28157,7 +28157,7 @@
   },
   "Na": {
     "id": "Na",
-    "cardName": "Wet-Weather Gear Stormtrooper",
+    "cardName": "Wet-Weather Gear Stormtroopers",
     "imageName": "Wet Weather Gear Stormtrooper.webp",
     "cardType": "unit",
     "cardSubtype": "trooper",
@@ -28217,7 +28217,7 @@
     "keywords": [],
     "requirements": [
       {
-        "cardName": "Wet-Weather Gear Stormtrooper"
+        "cardName": "Wet-Weather Gear Stormtroopers"
       }
     ],
     "weapons": [
@@ -28244,7 +28244,7 @@
     "keywords": [],
     "requirements": [
       {
-        "cardName": "Wet-Weather Gear Stormtrooper"
+        "cardName": "Wet-Weather Gear Stormtroopers"
       }
     ],
     "weapons": [

@@ -26,7 +26,9 @@ function KeywordDialog({ keywords, keyword, isOpen, handleClose }) {
         {keyword}
       </DialogTitle>
       <DialogContent>
-        <DialogContentText>{keywords[keyword]}</DialogContentText>
+        <DialogContentText style={{ whiteSpace: "pre-line" }}>
+          {keywords[keyword].replace(/\. /g, ".\n")}
+        </DialogContentText>
       </DialogContent>
     </Dialog>
   );

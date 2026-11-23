@@ -24,10 +24,11 @@ function drawKeyword(kw) {
             : (Number.isInteger(keyword.value) ? " " : ": ") + keyword.value)}
       </Typography>
       <div style={{ flexGrow: 1 }} />
-      <Typography variant="body2">
-        {keyword.name in keywords
+      <Typography variant="body2" style={{ whiteSpace: "pre-line" }}>
+        {(keyword.name in keywords
           ? keywords[keyword.name]
-          : "No definition found."}
+          : "No definition found."
+        ).replace(/\. /g, ".\n")}
       </Typography>
       <Divider />
     </div>

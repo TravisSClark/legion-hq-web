@@ -283,6 +283,23 @@ function addUnit(list, unitId, stackSize = 1, userSettings) {
     }
   }
 
+  // if (battleForcesDict[list.battleForce]?.choices && list.choices?.length) {
+  //   list.choices.forEach((choice) => {
+  //     const choiceObj = battleForcesDict[list.battleForce].choices.find(
+  //       (bfChoice) => bfChoice.name === choice,
+  //     );
+  //     if (choiceObj?.addAdditionalUpgradeSlots) {
+  //       let upgrades = choiceObj.addAdditionalUpgradeSlots.find(
+  //         (pair) => pair[0] === unitId,
+  //       );
+
+  //       if (upgrades) {
+  //         addAdditionalUpgradeSlots(list, newUnitObject, upgrades[1]);
+  //       }
+  //     }
+  //   });
+  // }
+
   // TODO will need something *like* this to do buildsAsCorps 'right' if we get interactions that don't slot nicely with existing rules
   // ie, thought this was needed for Imp March + Imp Remnant, it isn't *yet* since Scouts+Deaths already have the Training slot and can therefore
   // get Imp March eligibility via getEligibleUpgrades changes alone
