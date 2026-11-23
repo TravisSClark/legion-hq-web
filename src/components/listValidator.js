@@ -309,6 +309,15 @@ function battleForceValidation(currentList, unitCounts) {
               level: 2,
               text: "Limit " + limit.count[1] + " " + name.toUpperCase(),
             });
+          else if (limit.count[0] === limit.count[1])
+            validationIssues.push({
+              level: 2,
+              text:
+                "You must have exactly " +
+                limit.count[1] +
+                " " +
+                name.toUpperCase(),
+            });
           else
             validationIssues.push({
               level: 2,

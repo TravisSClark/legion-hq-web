@@ -29,7 +29,12 @@ const resourse = {
   ],
   Community: [
     { id: 1, text: "Legion Roller", url: "https://www.legionroller.com" },
-    { id: 2, text: "Legion Helper", url: "https://legion.takras.net/" },
+    {
+      id: 2,
+      text: "Jerry's Scoreboard",
+      url: "https://www.legionscoreboard.com",
+    },
+    { id: 3, text: "Legion Helper", url: "https://legion.takras.net/" },
   ],
   "Tournament Resources": [
     { id: 1, text: "Longshanks", url: "https://legion.longshanks.org/" },

@@ -8,9 +8,15 @@ import {
   DialogContentText,
   Link,
   Typography,
+  Button,
+  Collapse,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { Info as InfoIcon, Warning as WarningIcon } from "@material-ui/icons";
+import {
+  Info as InfoIcon,
+  Warning as WarningIcon,
+  ExpandMore as ExpandMoreIcon,
+} from "@material-ui/icons";
 
 import DataContext from "context/DataContext";
 import ListContext from "context/ListContext";
@@ -24,6 +30,7 @@ import FactionButton from "./FactionButton";
 import BattleforceSelectorMenu from "./BattleforceSelectorMenu";
 import { ListRulesModal } from "./ListRulesModal";
 import BattleforceChoicesMultiToggle from "./BattleforceChoicesMultiToggle";
+import BattleforceChoicesGroupedToggle from "./BattleforceChoicesGroupedToggle";
 
 const useStyles = makeStyles({
   container: {
@@ -79,6 +86,10 @@ function ListHeader() {
 
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [isBattleforceChoicesOpen, setIsBattleforceChoicesOpen] =
+    React.useState(true);
+  const [isCustomClanChoicesOpen, setIsCustomClanChoicesOpen] =
+    React.useState(true);
   const [isBattleForceDialogOpen, setIsBattleForceDialogOpen] =
     React.useState(false);
   const [isValidationDialogOpen, setValidationDialogOpen] =
@@ -220,17 +231,75 @@ function ListHeader() {
         </div>
       </div>
       {currentList.battleForce &&
+        currentList.battleForce === "Custom Clone Battalion" &&
         battleForcesDict[currentList.battleForce].choices && (
-          <div className={classes.choiceContainer}>
-            <BattleforceChoicesMultiToggle
-              currentChoices={currentList.choices}
-              battleforceChoices={
-                battleForcesDict[currentList.battleForce].choices
+          <>
+            <Button
+              size="small"
+              aria-expanded={isBattleforceChoicesOpen}
+              onClick={() =>
+                setIsBattleforceChoicesOpen(!isBattleforceChoicesOpen)
               }
-              handleSetBattleforceChoices={handleSetBattleforceChoices}
-              maxChoices={2}
-            />
-          </div>
+            >
+              Battleforce choices
+              <ExpandMoreIcon
+                fontSize="small"
+                style={{
+                  transform: isBattleforceChoicesOpen
+                    ? "rotate(180deg)"
+                    : "rotate(0deg)",
+                  transition: "transform 150ms",
+                }}
+              />
+            </Button>
+            <Collapse in={isBattleforceChoicesOpen}>
+              <div className={classes.choiceContainer}>
+                <BattleforceChoicesGroupedToggle
+                  currentChoices={currentList.choices}
+                  battleforceChoices={
+                    battleForcesDict[currentList.battleForce].choices
+                  }
+                  handleSetBattleforceChoices={handleSetBattleforceChoices}
+                />
+              </div>
+            </Collapse>
+          </>
+        )}
+      {currentList.battleForce &&
+        currentList.battleForce === "Custom Clan" &&
+        battleForcesDict[currentList.battleForce].choices && (
+          <>
+            <Button
+              size="small"
+              aria-expanded={isCustomClanChoicesOpen}
+              onClick={() =>
+                setIsCustomClanChoicesOpen(!isCustomClanChoicesOpen)
+              }
+            >
+              Battleforce choices
+              <ExpandMoreIcon
+                fontSize="small"
+                style={{
+                  transform: isCustomClanChoicesOpen
+                    ? "rotate(180deg)"
+                    : "rotate(0deg)",
+                  transition: "transform 150ms",
+                }}
+              />
+            </Button>
+            <Collapse in={isCustomClanChoicesOpen}>
+              <div className={classes.choiceContainer}>
+                <BattleforceChoicesMultiToggle
+                  currentChoices={currentList.choices}
+                  battleforceChoices={
+                    battleForcesDict[currentList.battleForce].choices
+                  }
+                  handleSetBattleforceChoices={handleSetBattleforceChoices}
+                  maxChoices={2}
+                />
+              </div>
+            </Collapse>
+          </>
         )}
     </div>
   );

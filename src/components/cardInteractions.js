@@ -30,7 +30,7 @@ const interactions = {
   upgradePoints: {
     df: {
       isConditionMet: (list, unit) =>
-        list.battleForce === "Wookiee War Grove" && unit.cardName === "Nn",
+        list.battleForce === "Wookiee War Grove" && unit.unitId === "Nn",
       pointDelta: -6,
     },
     lu: {

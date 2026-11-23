@@ -18,7 +18,7 @@ const battleForcesDict = {
     special: ["Ay"],
     support: ["mb"],
     heavy: ["gb", "oo", "qs"],
-    flier: [],
+    flier: ["Og"],
     allowedUpgrades: [
       "uf",
       "Io",
@@ -32,9 +32,7 @@ const battleForcesDict = {
       "ug",
     ],
     plainTextRules: [
-      "When an allied non-COMMANDER non-OPERATIVE Vehicle unit is attacking or defending, \
-        it may spend up to 1 Aim token, Dodge token, or Surge token belonging to a non-COMMANDER non-OPERATIVE allied Vehicle unit within 2 and in LOS, \
-        or up to 1 Aim or Dodge token belonging to an allied Clone Trooper unit within 2 and in LOS, as if the attacking or defending vehicle unit had that token.",
+      "When an allied non-COMMANDER non-OPERATIVE Vehicle unit is attacking or defending, it may spend up to 1 Aim token, Dodge token, or Surge token belonging to a non-COMMANDER non-OPERATIVE allied Vehicle unit within 2 and in LOS, or up to 1 Aim or Dodge token belonging to an allied Clone Trooper unit within 2 and in LOS, as if the attacking or defending vehicle unit had that token.",
     ],
     rules: {},
     "standard mode": {
@@ -66,12 +64,12 @@ const battleForcesDict = {
     special: ["Np"],
     support: ["be", "Na"],
     heavy: ["bg", "bh"],
-    flier: [],
+    flier: ["Oi"],
     allowedUpgrades: ["Ce", "Nl", "Cf", "Ch", "Cg", "Cj", "Me", "Bl", "Bn"],
     plainTextRules: [
-      "During Army Building, your army may include 1 additional copy each of Academy Trained, Defend in Depth, Platoon Commander, and Tip of the Spear.\n\n\
-During the Resolve Setup Effects step, place 2 Trench tokens (Asset) within allied Territory. Trooper units completely within 1/2 Range of a Trench token benefit from heavy Cover.\n\n\
-During the Resolve Setup Effects step, after placing allied Trench tokens, you may choose up to 2 allied Trooper units. If a chosen unit has Prepared Positions, when they Deploy it gains 1 Aim token. Otherwise, it gains Prepared Positions. When the chosen units Deploy, they must Deploy completely within 1/2 Range of a Trench token in allied Territory, if able.",
+      "During Army Building, your army may include 1 additional copy each of Academy Trained, Defend in Depth, Platoon Commander, and Tip of the Spear.",
+      "During the Resolve Setup Effects step, place 2 Trench tokens (Asset) within allied Territory. Trooper units completely within 1/2 Range of a Trench token benefit from heavy Cover.",
+      "During the Resolve Setup Effects step, after placing allied Trench tokens, you may choose up to 2 allied Trooper units. If a chosen unit has Prepared Positions, when they Deploy it gains 1 Aim token. Otherwise, it gains Prepared Positions. When the chosen units Deploy, they must Deploy completely within 1/2 Range of a Trench token in allied Territory, if able.",
     ],
     rules: {
       unitLimits: [
@@ -92,7 +90,7 @@ During the Resolve Setup Effects step, after placing allied Trench tokens, you m
     "500-point mode": {
       commander: [1, 2],
       operative: [0, 1],
-      corps: [3, 5],
+      corps: [2, 5],
       special: [0, 2],
       support: [0, 4],
       heavy: [0, 2],
@@ -109,7 +107,7 @@ During the Resolve Setup Effects step, after placing allied Trench tokens, you m
     special: ["kz", "Ay"],
     support: ["ky", "mb", "ic", "xj", "xp"],
     heavy: ["oo"],
-    flier: [],
+    flier: ["Og"],
     allowedUpgrades: ["Bd", "Ep", "lh", "lg", "cw"],
     rules: {},
     "standard mode": {
@@ -142,7 +140,7 @@ During the Resolve Setup Effects step, after placing allied Trench tokens, you m
     special: ["Fa"],
     support: ["bf", "be"],
     heavy: ["bg"],
-    flier: [],
+    flier: ["Oh"],
     allowedUpgrades: ["Ce", "Cg", "fl", "cw", "Cf"],
 
     rules: {
@@ -227,11 +225,117 @@ During the Resolve Setup Effects step, after placing allied Trench tokens, you m
     special: [],
     support: ["mb"],
     heavy: ["qs"],
-    flier: [],
-    allowedUpgrades: ["cw", "Me", "Bl"],
-    rules: {},
-    plainTextRules: ["So Very Much"],
-
+    flier: ["Og"],
+    allowedUpgrades: ["cw", "Me", "Bl", "Db", "Dc", "De", "Dd"],
+    rules: {
+      unitLimits: [{ ids: ["Cz"], count: [1, 1] }],
+    },
+    choices: [
+      {
+        name: "Assault",
+        group: "Battalion",
+        description:
+          "At the end of each allied Trooper unit’s Activation, if it is in Melee, it gains 1 Surge token. At the start of the Activation Phase, if your army is At the Ready, allied CORP units gain CHARGE until the end of the Round. Add ARC Troopers units and ARC Troopers, Strike Team units to this army’s allowed units.",
+        add: ["kz", "ky"],
+      },
+      {
+        name: "Garrison",
+        group: "Battalion",
+        description:
+          "At the start of each Activation Phase, choose 1 allied non-CORP Trooper unit. If your army is At the Ready, instead choose 1 allied unit. The chosen unit gains 1 Standby token. While an allied unit defends against a Ranged Attack, if that unit is within allied Territory or Contesting a POI and if it does not suffer Wounds from that attack, it does not gain Suppression tokens during the Assign Suppression Token to Defender step. Add ARF Troopers units to this army’s allowed units.",
+        add: ["Ay"],
+      },
+      {
+        name: "Scout",
+        group: "Battalion",
+        description:
+          "When an allied unit makes an attack against an enemy unit that has 1 or more Observation tokens, during the Declare Defender step, the attacking unit may spend 1 of those Observation tokens. If it does, it gains 1 Aim token. At the end of each allied COMMANDER and allied OPERATIVE unit’s Activation, it may make a free action OBSERVE 1. If your army is At the Ready, at the end of each allied Vehicle unit’s Activation, it may make a FREE ACTION OBSERVE 1. Add LAAT/le Patrol Transport and BARC Speeder units to this army’s allowed units.",
+        add: ["oo", "ic"],
+      },
+      {
+        name: "Decisive",
+        group: "Jedi Knight",
+        description:
+          "Allied Jedi Knight General and allied Jedi Knight units’ melee weapons gain LETHAL 1. If a weapon already has LETHAL 1, it loses LETHAL 1 and gains PIERCE 1 instead. Allied Jedi Knight General units gain MAKASHI MASTERY.",
+      },
+      {
+        name: "Patient",
+        group: "Jedi Knight",
+        description:
+          "At the end of each enemy unit’s Activation, allied Jedi Knight General units that do not have a facedown Order token gain 1 Patience token. A unit cannot have more than 3 Patience tokens. At the start of an allied Jedi Knight General’s Activation, it may spend 3 of its Patience tokens. If it does, this unit can make an additional action this Activation and each allied Jedi Knight within 2 gains 1 Aim token or 1 Dodge token. During the Remove Tokens step, remove all Patience tokens.",
+      },
+      {
+        name: "Wise",
+        group: "Jedi Knight",
+        description:
+          "Allied Jedi Knight General and allied Jedi Knight units gain AID: CLONE TROOPER. At the start of each allied Jedi Knight General unit’s Activation, for each other allied unit within 1, choose Aim, Dodge, or Surge. For each type of token chosen, this unit gains 1 of that token. Only 1 token of each type may be gained in this way",
+      },
+      {
+        name: "Armored Support",
+        group: "Veteran",
+        description:
+          "Allied CORP Trooper units that have 1 or more PERSONNEL upgrades equipped gain MECHANIZED INFANTRY. Add Saber-class Tank units to this army’s allowed units.",
+        add: ["gb"],
+      },
+      {
+        name: "Elite Repulsor Crews",
+        group: "Veteran",
+        description:
+          "Allied Repulsor Vehicle units’ Ranged Weapons gain ASSAULT 2. Add LAAT/le Patrol Transport and BARC Speeder units to this army’s allowed units.",
+        add: ["oo", "ic"],
+      },
+      {
+        name: "Forward Observers",
+        group: "Veteran",
+        description:
+          "Allied ARF Troopers units gain SCOUT 1 and ACTION OBSERVE 1. Add ARF Troopers units to this army’s allowed units.",
+        add: ["Ay"],
+      },
+      {
+        name: "Hand Picked",
+        group: "Veteran",
+        description:
+          "Allied Clone Commandos units gain RETINUE COMMANDER. Add Clone Commandos units to this army’s allowed units",
+        add: ["xj"],
+      },
+      {
+        name: "Reinforced",
+        group: "Veteran",
+        description:
+          "Allied CORPS Trooper units gain 1 PERSONNEL upgrade icon. This army may take up to 1 additional COMMANDER unit and up to 1 additional OPERATIVE unit",
+        addAdditionalUpgradeSlots: [
+          ["fz", ["personnel"]],
+          ["Bi", ["personnel"]],
+        ],
+        addRank: ["commander", "operative"],
+      },
+      {
+        name: "Superior ARC Training",
+        group: "Veteran",
+        description:
+          "Allied ARC Troopers units and Allied ARC Trooper, Strike Team units gain Precise 1. Add ARC Troopers units and ARC Troopers, Strike Team units to this army’s allowed units.",
+        add: ["kz", "ky"],
+      },
+    ],
+    plainTextRules: [
+      "During the Command Phase, if your revealed Command Card is Ambush, Push, or Assault, your army is At the Ready until the end of the Round",
+      "When creating a Custom Clone Battalion, choose one of each of the listed Jedi Knight, Battalion, and Veteran Traits. Your Battalion gains all of the special rules for each of the selected Traits.",
+      "BATTALION:",
+      "• Assault: At the end of each allied Trooper unit’s Activation, if it is in Melee, it gains 1 Surge token. At the start of the Activation Phase, if your army is At the Ready, allied CORP units gain CHARGE until the end of the Round. Add ARC Troopers units and ARC Troopers, Strike Team units to this army’s allowed units.",
+      "• Garrison: At the start of each Activation Phase, choose 1 allied non-CORP Trooper unit. If your army is At the Ready, instead choose 1 allied unit. The chosen unit gains 1 Standby token. While an allied unit defends against a Ranged Attack, if that unit is within allied Territory or Contesting a POI and if it does not suffer Wounds from that attack, it does not gain Suppression tokens during the Assign Suppression Token to Defender step. Add ARF Troopers units to this army’s allowed units.",
+      "• Scout: When an allied unit makes an attack against an enemy unit that has 1 or more Observation tokens, during the Declare Defender step, the attacking unit may spend 1 of those Observation tokens. If it does, it gains 1 Aim token. At the end of each allied COMMANDER and allied OPERATIVE unit’s Activation, it may make a free action OBSERVE 1. If your army is At the Ready, at the end of each allied Vehicle unit’s Activation, it may make a FREE ACTION OBSERVE 1. Add LAAT/le Patrol Transport and BARC Speeder units to this army’s allowed units.",
+      "JEDI KNIGHT:",
+      "• Decisive: Allied Jedi Knight General and allied Jedi Knight units’ melee weapons gain LETHAL 1. If a weapon already has LETHAL 1, it loses LETHAL 1 and gains PIERCE 1 instead. Allied Jedi Knight General units gain MAKASHI MASTERY.",
+      "• Patient: At the end of each enemy unit’s Activation, allied Jedi Knight General units that do not have a facedown Order token gain 1 Patience token. A unit cannot have more than 3 Patience tokens. At the start of an allied Jedi Knight General’s Activation, it may spend 3 of its Patience tokens. If it does, this unit can make an additional action this Activation and each allied Jedi Knight within 2 gains 1 Aim token or 1 Dodge token. During the Remove Tokens step, remove all Patience tokens.",
+      "• Wise: Allied Jedi Knight General and allied Jedi Knight units gain AID: CLONE TROOPER. At the start of each allied Jedi Knight General unit’s Activation, for each other allied unit within 1, choose Aim, Dodge, or Surge. For each type of token chosen, this unit gains 1 of that token. Only 1 token of each type may be gained in this way",
+      "VETERAN:",
+      "• Armored Support: Allied CORP Trooper units that have 1 or more PERSONNEL upgrades equipped gain MECHANIZED INFANTRY. Add Saber-class Tank units to this army’s allowed units.",
+      "• Elite Repulsor Crews: Allied Repulsor Vehicle units’ Ranged Weapons gain ASSAULT 2. Add LAAT/le Patrol Transport and BARC Speeder units to this army’s allowed units.",
+      "• Forward Observers: Allied ARF Troopers units gain SCOUT 1 and ACTION OBSERVE 1. Add ARF Troopers units to this army’s allowed units.",
+      "• Hand Picked: Allied Clone Commandos units gain RETINUE COMMANDER. Add Clone Commandos units to this army’s allowed units",
+      "• Reinforced: Allied CORPS Trooper units gain 1 PERSONNEL upgrade icon. This army may take up to 1 additional COMMANDER unit and up to 1 additional OPERATIVE unit",
+      "• Superior ARC Training: Allied ARC Troopers units and Allied ARC Trooper, Strike Team units gain Precise 1. Add ARC Troopers units and ARC Troopers, Strike Team units to this army’s allowed units.",
+    ],
     "standard mode": {
       commander: [1, 2],
       operative: [0, 2],
@@ -261,7 +365,7 @@ During the Resolve Setup Effects step, after placing allied Trench tokens, you m
     special: [],
     support: ["an", "he"],
     heavy: ["ap"],
-    flier: [],
+    flier: ["Of"],
     allowedUpgrades: ["Cp", "cw", "Im", "Cr", "Cs", "Lz", "Bn", "Cq", "fk"],
     rules: {
       noFieldComm: true,
@@ -297,7 +401,7 @@ During the Resolve Setup Effects step, after placing allied Trench tokens, you m
     special: ["la"],
     support: ["ie"],
     heavy: ["xe"],
-    flier: [],
+    flier: ["Oj"],
     allowedUpgrades: ["cw", "Bl", "En"],
     rules: {
       buildsAsCorps: ["xd"],
@@ -314,14 +418,14 @@ During the Resolve Setup Effects step, after placing allied Trench tokens, you m
       ],
     },
     plainTextRules: [
-      "At the start of each Activation Phase, choose up to 1 of your COMMANDER units.\n\
-If you do, put 3 Surge tokens on that unit’s Unit Card.\n\n\
-Once during its Activation, an allied SPECIAL FORCES, CORPS, or SUPPORT unit that has the AI keyword may make a free action to spend 1 Surge token on the chosen COMMANDER unit, if it is within 3.\n\
-If it does, choose 1 of the following:\n\
-• Increase their Speed by 1 during their next Move action this Turn.\n\
-• Gain 1 Aim token or 1 Dodge token.\n\
-• Add 1 black die and 1 white die to 1 of their Attack Pools during their next Attack action this Turn.\n\
-• Remove up to 2 Suppression tokens.",
+      "At the start of each Activation Phase, choose up to 1 of your COMMANDER units.",
+      "If you do, put 3 Surge tokens on that unit’s Unit Card.",
+      "Once during its Activation, an allied SPECIAL FORCES, CORPS, or SUPPORT unit that has the AI keyword may make a free action to spend 1 Surge token on the chosen COMMANDER unit, if it is within 3.",
+      "If it does, choose 1 of the following:",
+      "• Increase their Speed by 1 during their next Move action this Turn.",
+      "• Gain 1 Aim token or 1 Dodge token.",
+      "• Add 1 black die and 1 white die to 1 of their Attack Pools during their next Attack action this Turn.",
+      "• Remove up to 2 Suppression tokens.",
     ],
     "standard mode": {
       commander: [1, 2],
@@ -352,7 +456,7 @@ If it does, choose 1 of the following:\n\
     special: [],
     support: ["bf", "be"],
     heavy: ["tm"],
-    flier: [],
+    flier: ["Oi"],
     allowedUpgrades: ["Ce", "Cj", "Cg", "cw", "Ch", "Bl", "Cf", "uj", "Bn"],
     rules: {
       unitLimits: [
@@ -364,11 +468,9 @@ If it does, choose 1 of the following:\n\
       remnantEquipRules: true,
     },
     plainTextRules: [
-      "When issuing Orders, the nominated Commander can only issue Orders \
-        to allied units within 2 of them. Undeployed units or units not within \
-        2 of any allied COMMANDER units gain Independent: Aim 1 or Dodge 1. \
-        When an allied unit checks to see if it is Panicked, it can never use the \
-        Courage of an allied unit that is not within 2",
+      "When issuing Orders, the nominated Commander can only issue Orders to allied units within 2 of them.",
+      "Undeployed units or units not within 2 of any allied COMMANDER units gain Independent: Aim 1 or Dodge 1.",
+      "When an allied unit checks to see if it is Panicked, it can never use the Courage of an allied unit that is not within 2.",
     ],
     "standard mode": {
       commOp: 2,
@@ -401,19 +503,19 @@ If it does, choose 1 of the following:\n\
     special: ["xy", "Hm"],
     support: ["ao"],
     heavy: ["om", "on", "bh", "Fe", "aq"],
-    flier: [],
-    allowedUpgrades: ["Eq", "Il", "cw", "Cq", "Cs", "Bl"],
+    flier: ["Of", "Ok"],
+    allowedUpgrades: ["Eq", "Il", "cw", "Cq", "Cs", "Bl", "lu"],
     plainTextRules: [
-      "This army may include any number of the Unseen Saboteur Upgrade cards.\n\
-Allied Operative units gain Field Commander.\n\
-Allied units cannot use another unit’s Courage value when determining Panic.\n\
-Allied units that are not within 1 of an allied Operative unit cannot be issued Orders, unless they are issuing an Order to themselves.\n\
-You may include 0-1 TX-225 GAVw Occupier Tank, 0-1 WLO-5 Speeder Tank, and 0-1 LAAT/le Patrol Transport units in this army. These units change their Faction to Rebels.\n\n\
-At the start of each Activation Phase, choose up to 2 allied units that have different Ranks and that do not have faceup Order tokens. For each chosen unit, resolve the corresponding effect:\n\
-• SPECIAL FORCES or SUPPORT: The chosen unit may make a Speed-1 Move or, if it is undeployed, may instead gain 1 Dodge token.\n\
-• CORPS: The chosen unit may gain 1 Dodge token and may make a Free Recover action.\n\
-• HEAVY or FLIER: The chosen unit may gain 1 Surge token and 1 Dodge token.\n\
-• OPERATIVE: Choose 1 POI that is within 1/2 Range of the chosen unit. Then roll 5 black attack dice. For each Hit result in the roll, each unit within 1/2 Range of the chosen POI gains 1 Suppression token. For each Crit result in the roll, each unit within 1/2 of the chosen POI gains 1 Suppression token and suffers 1 Wound.",
+      "This army may include any number of the Unseen Saboteur Upgrade cards.",
+      "Allied Operative units gain Field Commander.",
+      "Allied units cannot use another unit’s Courage value when determining Panic.",
+      "Allied units that are not within 1 of an allied Operative unit cannot be issued Orders, unless they are issuing an Order to themselves.",
+      "You may include 0-1 TX-225 GAVw Occupier Tank, 0-1 WLO-5 Speeder Tank, and 0-1 LAAT/le Patrol Transport units in this army. These units change their Faction to Rebels.",
+      "At the start of each Activation Phase, choose up to 2 allied units that have different Ranks and that do not have faceup Order tokens. For each chosen unit, resolve the corresponding effect:",
+      "• SPECIAL FORCES or SUPPORT: The chosen unit may make a Speed-1 Move or, if it is undeployed, may instead gain 1 Dodge token.",
+      "• CORPS: The chosen unit may gain 1 Dodge token and may make a Free Recover action.",
+      "• HEAVY or FLIER: The chosen unit may gain 1 Surge token and 1 Dodge token.",
+      "• OPERATIVE: Choose 1 POI that is within 1/2 Range of the chosen unit. Then roll 5 black attack dice. For each Hit result in the roll, each unit within 1/2 Range of the chosen POI gains 1 Suppression token. For each Crit result in the roll, each unit within 1/2 of the chosen POI gains 1 Suppression token and suffers 1 Wound.",
     ],
     rules: {
       unitLimits: [
@@ -490,7 +592,7 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
     special: ["Eg"],
     support: ["ie", "qk", "ya", "mc"],
     heavy: ["gc"],
-    flier: [],
+    flier: ["Oj"],
     rules: {
       buildsAsCorps: ["la"],
     },
@@ -527,7 +629,7 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
     special: ["px"],
     support: ["ie", "mc"],
     heavy: ["gc"],
-    flier: [],
+    flier: ["Oj"],
     rules: {
       noFieldComm: true,
     },
@@ -565,7 +667,7 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
     special: ["re"],
     support: ["sq"],
     heavy: ["sm", "Fe"],
-    flier: [],
+    flier: ["Ol"],
     allowedUpgrades: [
       "rq",
       "so",
@@ -619,13 +721,24 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
     special: ["Fa", "ba"],
     support: ["bf", "be", "bb"],
     heavy: ["bg", "bh", "on"],
-    flier: [],
-    allowedUpgrades: ["Ce", "Eo", "Cf", "Cg", "Ch", "Cj", "Bn", "cw"],
+    flier: ["Oi"],
+    allowedUpgrades: [
+      "Ce",
+      "Eo",
+      "Cf",
+      "Cg",
+      "Ch",
+      "Cj",
+      "Bn",
+      "cw",
+      "Ny",
+      "Ob",
+    ],
     rules: {},
     plainTextRules: [
-      "Non-unique COMMANDER and non-unique OPERATIVE units in this army gain Target 2. \
-      When a non-unique COMMANDER or non-unique OPERATIVE unit in this army is issued an Order, it gains 1 Surge token \
-      COMMANDER units in this army have Compel while they are the nominated Commander.",
+      "Non-unique COMMANDER and non-unique OPERATIVE units in this army gain Target 2.",
+      "When a non-unique COMMANDER or non-unique OPERATIVE unit in this army is issued an Order, it gains 1 Surge token.",
+      "COMMANDER units in this army have Compel while they are the nominated Commander.",
     ],
     "standard mode": {
       commander: [1, 3],
@@ -656,20 +769,15 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
     special: ["Fa", "ba"],
     support: ["bf"],
     heavy: ["we", "bg"],
-    flier: [],
+    flier: ["Oi"],
     allowedUpgrades: ["Ce", "Cf", "Lz", "Ch", "Cj", "cw"],
     rules: {},
     plainTextRules: [
       "Vehicles in this army gain Scout 2.",
-      "Units that are not within 3 of an allied COMMANDER unit and do not have a COMMS \
-        upgrade equipped remove 1 less Suppression token during the Remove Tokens step.",
-      "During Setup, you may set aside 1 allied SPECIAL FORCES or SUPPORT unit that is not \
-        holding an Asset Objective token, marking the unit with an Advantage \
-        token. The first time the set-aside unit would Activate this game, you \
-        must place that unit in cohesion onto the battlefield not within 2 \
-        of any enemy units, if able. If you do, that unit is treated as activated \
-        and its Order token is placed facedown. Then, the unit loses its \
-        Advantage token.",
+      "Units that are not within 3 of an allied COMMANDER unit and do not have a COMMS upgrade equipped remove 1 less Suppression token during the Remove Tokens step.",
+      "During Setup, you may set aside 1 allied SPECIAL FORCES or SUPPORT unit that is not holding an Asset Objective token, marking the unit with an Advantage token.",
+      "The first time the set-aside unit would Activate this game, you must place that unit in cohesion onto the battlefield not within 2 of any enemy units, if able.",
+      "If you do, that unit is treated as activated and its Order token is placed facedown. Then, the unit loses its Advantage token.",
     ],
     "standard mode": {
       commOp: 2,
@@ -700,9 +808,9 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
     operative: ["Da"],
     corps: ["fz", "Nn"],
     special: ["No"],
-    support: ["qh", "xf", "ic"],
+    support: ["xf", "ic"],
     heavy: ["gb", "qs"],
-    flier: [],
+    flier: ["Og"],
     allowedUpgrades: ["Ir", "Bl", "Dc", "Dd", "De", "Oc", "cw"],
     rules: {
       unitLimits: [
@@ -747,7 +855,7 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
     special: ["Ht", "Ia", "Jv"],
     support: ["Hs"],
     heavy: [],
-    flier: [],
+    flier: ["Ol"],
     allowedUpgrades: [
       "cw",
       "Jg",
@@ -779,8 +887,8 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
       countMercs: true,
     },
     plainTextRules: [
-      "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank. \
-      All units included in this army must have the same Affiliation as at least 1 Commander or Operative unit in this army",
+      "Mercenary units do count toward the minimum number of Ranks required and the army may include any number of Mercenaries at each Rank.",
+      "All units included in this army must have the same Affiliation as at least 1 Commander or Operative unit in this army.",
     ],
     "standard mode": {
       commander: [1, 2],
@@ -813,7 +921,7 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
     special: [],
     support: ["Hs"],
     heavy: [],
-    flier: [],
+    flier: ["Ol"],
     allowedUpgrades: [
       "tn",
       "ts",
@@ -841,10 +949,8 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
       },
     },
     plainTextRules: [
-      "You army may include any number of Mandalorian Initiate units, \
-      but must still follow this battle forces Rank Requirements. \
-      When a Mandalorian Initiate unit equips a unique Personnel upgrade, \
-      reduce the cost of that upgrade by 5 points.",
+      "Your army may include any number of Mandalorian Initiate units, but must still follow this Battle Force's Rank Requirements.",
+      "When a Mandalorian Initiate unit equips a unique Personnel upgrade, reduce the cost of that upgrade by 5 points.",
     ],
     "standard mode": {
       commander: [1, 2],
@@ -877,7 +983,7 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
     special: ["Ht"],
     support: ["Hs"],
     heavy: [],
-    flier: [],
+    flier: ["Ol"],
     allowedUpgrades: ["Jg", "Jh", "Ko", "cw", "Ks", "Kt", "Ku", "Lc", "Ld"],
     disallowedUpgrades: ["Jz", "Ka", "Kb", "Kc"],
     rules: {
@@ -886,8 +992,7 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
       needsClan: { affiliation: "Clan Kryze", upgrade: "Jy" },
     },
     plainTextRules: [
-      "During the Remove Tokens step of the End Phase, \
-      choose up to 3 green tokens on allied units. The chosen tokens are not removed.",
+      "During the Remove Tokens step of the End Phase, choose up to 3 green tokens on allied units. The chosen tokens are not removed.",
     ],
     "standard mode": {
       commander: [1, 2],
@@ -920,7 +1025,7 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
     special: ["Ia"],
     support: ["Hs"],
     heavy: [],
-    flier: [],
+    flier: ["Ol"],
     allowedUpgrades: [
       "cw",
       "eb",
@@ -940,9 +1045,8 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
       needsClan: { affiliation: "Clan Wren", upgrade: "Jz" },
     },
     plainTextRules: [
-      "Allied Mandalorian Trooper units gain Guardian 1: Clan Wren Units with Guardian X in this army \
-      can use the Guardian X keyword on other allied units that have the Guardian X keyword. \
-      Commander and Operative units in this army that have the Guardian X keyword can benefit from Backup",
+      "Allied Mandalorian Trooper units gain Guardian 1: Clan Wren Units with Guardian X in this army can use the Guardian X keyword on other allied units that have the Guardian X keyword.",
+      "Commander and Operative units in this army that have the Guardian X keyword can benefit from Backup.",
     ],
     "standard mode": {
       commander: [1, 2],
@@ -975,7 +1079,7 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
     special: ["Jv"],
     support: ["Hs"],
     heavy: [],
-    flier: [],
+    flier: ["Ol"],
     allowedUpgrades: [
       "cw",
       "Kq",
@@ -995,8 +1099,7 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
       needsClan: { affiliation: "Clan Saxon", upgrade: "Kb" },
     },
     plainTextRules: [
-      "When an allied unit defeats an enemy unit, after the effect is resolved, \
-      the allied unit may make a Recover action or may make a Speed-1 Move",
+      "When an allied unit defeats an enemy unit, after the effect is resolved, the allied unit may make a Recover action or may make a Speed-1 Move.",
     ],
     "standard mode": {
       commander: [1, 2],
@@ -1029,7 +1132,7 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
     special: [],
     support: ["Hs"],
     heavy: [],
-    flier: [],
+    flier: ["Ol"],
     allowedUpgrades: ["cw", "Ks", "Kt", "Ku", "Lc", "Ld", "Le", "Lf", "Lg"],
     disallowedUpgrades: [
       "Jy",
@@ -1052,32 +1155,44 @@ At the start of each Activation Phase, choose up to 2 allied units that have dif
     choices: [
       {
         name: "Veterans",
+        description:
+          "Each time a Mandalorian Warrior unit equips the GALAAR-15 Carbines upgrade, reduce the cost of that upgrade by 5 points. Additionally, during Setup you may choose 2 allied units. Each chosen unit gains DAUNTLESS.",
       },
       {
         name: "Tools of the Trade",
+        description:
+          "You may include 1 additional copy each of the Flame Projector, Jetpack Rockets, and Whipcord Launcher Upgrade Cards in your army. These additional copies do not cost points and may be equipped by any allied Mandalorian Trooper unit, ignoring restrictions. Each unit may still only ever be equipped with 1 copy of an upgrade card.",
       },
       {
         name: "Rapid Deployment",
+        description:
+          "During Setup, you may set aside up to 2 allied units that are not holding an Asset Objective token, marking the set-aside units with Advantage tokens. The first time each set-aside unit would be chosen to activate this game, you may Deploy it by putting that unit’s unit leader onto the battlefield not within 2 of all enemy units, if able, then put the rest of the unit in cohesion. If you do, that unit is treated as activated and its Order token is placed facedown. Then the unit loses its Advantage token.",
       },
       {
         name: "Guns for Hire",
+        description:
+          "You may include a AA-5 Speeder Truck, a TX-225 GAVw Occupier Tank, or a WLO-5 Speeder Tank in your army. These units change their Affiliation to MANDALORIANS and gain COORDINATE: MANDALORIAN WARRIORS and INDEPENDENT: SURGE 1.",
         add: ["sm", "Fe", "bh"],
       },
       {
         name: "Feats of Valor",
+        description:
+          "When an allied unit in this army defeats an enemy unit, after the effect is resolved, the allied unit gains 1 Valor token. While a unit has 1 or more Valor tokens, it has Dauntless. While a unit has 2 or more Valor tokens, at the start of each of its Activations it gains 1 Aim token, Dodge token, or Surge token. While a unit has 3 or more Valor tokens, it has EXEMPLAR. These bonuses are cumulative.",
       },
       {
         name: "Rule the Skies",
+        description:
+          "Reduce the points cost of Flying Vehicle units in this army by 10 points. Your army may include 1 additional Flier unit. Commander units in this army gain Direct: Flier unit.",
       },
     ],
     plainTextRules: [
-      "CHOOSE 2 OF THE FOLLOWING:\n\
-• Veterans: Each time a Mandalorian Warrior unit equips the GALAAR-15 Carbines upgrade, reduce the cost of that upgrade by 5 points. Additionally, during Setup you may choose 2 allied units. Each chosen unit gains DAUNTLESS.\n\
-• Tools of the Trade: You may include 1 additional copy each of the Flame Projector, Jetpack Rockets, and Whipcord Launcher Upgrade Cards in your army. These additional copies do not cost points and may be equipped by any allied Mandalorian Trooper unit, ignoring restrictions. Each unit may still only ever be equipped with 1 copy of an upgrade card.\n\
-• Rapid Deployment: During Setup, you may set aside up to 2 allied units that are not holding an Asset Objective token, marking the set-aside units with Advantage tokens. The first time each set-aside unit would be chosen to activate this game, you may Deploy it by putting that unit’s unit leader onto the battlefield not within 2 of all enemy units, if able, then put the rest of the unit in cohesion. If you do, that unit is treated as activated and its Order token is placed facedown. Then the unit loses its Advantage token.\n\
-• Guns for Hire: You may include a AA-5 Speeder Truck, a TX-225 GAVw Occupier Tank, or a WLO-5 Speeder Tank in your army. These units change their Affiliation to MANDALORIANS and gain COORDINATE: MANDALORIAN WARRIORS and INDEPENDENT: SURGE 1.\n\
-• Feats of Valor: When an allied unit in this army defeats an enemy unit, after the effect is resolved, the allied unit gains 1 Valor token. While a unit has 1 or more Valor tokens, it has Dauntless. While a unit has 2 or more Valor tokens, at the start of each of its Activations it gains 1 Aim token, Dodge token, or Surge token. While a unit has 3 or more Valor tokens, it has EXEMPLAR. These bonuses are cumulative.\n\
-• Rule the Skies: Reduce the points cost of Flying Vehicle units in this army by 10 points. Your army may include 1 additional Flier unit. Commander units in this army gain Direct: Flier unit.",
+      "CHOOSE 2 OF THE FOLLOWING:",
+      "• Veterans: Each time a Mandalorian Warrior unit equips the GALAAR-15 Carbines upgrade, reduce the cost of that upgrade by 5 points. Additionally, during Setup you may choose 2 allied units. Each chosen unit gains DAUNTLESS.",
+      "• Tools of the Trade: You may include 1 additional copy each of the Flame Projector, Jetpack Rockets, and Whipcord Launcher Upgrade Cards in your army. These additional copies do not cost points and may be equipped by any allied Mandalorian Trooper unit, ignoring restrictions. Each unit may still only ever be equipped with 1 copy of an upgrade card.",
+      "• Rapid Deployment: During Setup, you may set aside up to 2 allied units that are not holding an Asset Objective token, marking the set-aside units with Advantage tokens. The first time each set-aside unit would be chosen to activate this game, you may Deploy it by putting that unit’s unit leader onto the battlefield not within 2 of all enemy units, if able, then put the rest of the unit in cohesion. If you do, that unit is treated as activated and its Order token is placed facedown. Then the unit loses its Advantage token.",
+      "• Guns for Hire: You may include a AA-5 Speeder Truck, a TX-225 GAVw Occupier Tank, or a WLO-5 Speeder Tank in your army. These units change their Affiliation to MANDALORIANS and gain COORDINATE: MANDALORIAN WARRIORS and INDEPENDENT: SURGE 1.",
+      "• Feats of Valor: When an allied unit in this army defeats an enemy unit, after the effect is resolved, the allied unit gains 1 Valor token. While a unit has 1 or more Valor tokens, it has Dauntless. While a unit has 2 or more Valor tokens, at the start of each of its Activations it gains 1 Aim token, Dodge token, or Surge token. While a unit has 3 or more Valor tokens, it has EXEMPLAR. These bonuses are cumulative.",
+      "• Rule the Skies: Reduce the points cost of Flying Vehicle units in this army by 10 points. Your army may include 1 additional Flier unit. Commander units in this army gain Direct: Flier unit.",
     ],
     "standard mode": {
       commander: [1, 2],

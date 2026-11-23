@@ -1381,7 +1381,7 @@
     "faction": "mercenary",
     "affiliation": "rogue",
     "isUnique": true,
-    "cost": 105,
+    "cost": 96,
     "keywords": [
       {
         "name": "Mercenary",
@@ -14945,7 +14945,7 @@
       }
     ],
     "equip": ["Oa"],
-    "upgradeBar": ["training", "comms", "gear"],
+    "upgradeBar": ["training", "training", "comms", "gear"],
     "stats": {
       "minicount": 1,
       "hp": 5,
@@ -14992,7 +14992,7 @@
     "histry": [
       {
         "date": "17 November 2026",
-        "description": "Cost reduced from 110 to 100 points. Gained Relentless and Focus on the Kill upgrade. Lost range 4 gun. Range 3 gun changed from 1b 2w to 3b 3w."
+        "description": "Cost reduced from 110 to 100 points. Gained Relentless, a Training slot, and Focus on the Kill upgrade. Lost range 4 gun. Range 3 gun changed from 1b 2w to 3b 3w."
       }
     ]
   },
@@ -15008,6 +15008,7 @@
     "affiliation": "rogue",
     "isUnique": true,
     "cost": 93,
+    "counterpart": "tn",
     "keywords": [
       {
         "name": "Mercenary",
@@ -15031,7 +15032,7 @@
       "Steady"
     ],
     "equip": ["Nz"],
-    "upgradeBar": ["training", "comms", "gear", "programming"],
+    "upgradeBar": ["training", "training", "comms", "gear"],
     "stats": {
       "minicount": 1,
       "hp": 5,
@@ -15073,7 +15074,7 @@
     "history": [
       {
         "date": "17 November 2026",
-        "description": "Cost reduced from 105 to 93 points. Lost Programmed, but gained Bounty and Steady. Now has Mechanical Carnage upgrade. Melee changed from 4r to 3b, lost range 3 gun, range 4 gun gained Impact and is now 3b."
+        "description": "Cost reduced from 105 to 93 points. Lost Programmed, but gained Bounty and Steady. Now has Mechanical Carnage upgrade, lost Programming and gained a training. Melee changed from 4r to 3b, lost range 3 gun, range 4 gun gained Impact and is now 3b."
       }
     ]
   },
@@ -17786,7 +17787,8 @@
       {
         "name": "Special Issue",
         "value": "Wookiee War Grove"
-      }
+      },
+      "Transport"
     ],
     "upgradeBar": ["crew", "comms"],
     "stats": {
@@ -18769,7 +18771,7 @@
     "cardSubtype": "personnel",
     "cardName": "Stormtrooper Squad",
     "cardType": "upgrade",
-    "cost": 40,
+    "cost": 36,
     "imageName": "Stormtrooper Squad.webp",
     "keywords": ["Indomitable", "Transport"],
     "requirements": [
@@ -18781,6 +18783,10 @@
       {
         "date": "16 June 2025",
         "description": "Cost reduced from 46 to 40 points."
+      },
+      {
+        "date": "17 November 2026",
+        "description": "Cost reduced from 40 to 36 points."
       }
     ]
   },
@@ -25250,7 +25256,14 @@
     "cardType": "upgrade",
     "cost": 26,
     "imageName": "Asajj Ventress Upgrade.webp",
-    "keywords": ["Leader", "AI", "Charge", "Demoralize", "Sidearm"],
+    "keywords": [
+      "Leader",
+      "AI",
+      "Charge",
+      { "name": "Demoralize", "value": 1 },
+      { "name": "Vicious", "value": 2 },
+      "Sidearm"
+    ],
     "additionalUpgradeSlots": ["heavy weapon"],
     "requirements": [
       "OR",
@@ -25276,6 +25289,12 @@
           "b": 4,
           "w": 0
         }
+      }
+    ],
+    "history": [
+      {
+        "date": "17 November 2026",
+        "description": "Gained Vicious 2."
       }
     ]
   },
@@ -28441,6 +28460,7 @@
     "id": "Nn",
     "cardName": "Wookiee Warriors",
     "title": "Treetop Defenders",
+    "displayName": "Wookiee Warriors Treetop Defenders",
     "imageName": "Wookiee Warriors Treetop Defenders.webp",
     "cardType": "unit",
     "cardSubtype": "wookiee trooper",
@@ -28719,7 +28739,7 @@
     "cardName": "Wookiee Chieftain",
     "cardType": "upgrade",
     "cost": 26,
-    "imageName": "Wookiee Chieftain Uppgrade.webp",
+    "imageName": "Wookiee Chieftain Upgrade.webp",
     "keywords": ["Leader"],
     "specialIssue": "Wookiee War Grove",
     "requirements": [
@@ -28977,5 +28997,162 @@
         "cardName": "Imperial Special Forces"
       }
     ]
+  },
+  "Of": {
+    "id": "Of",
+    "isUnreleased": true,
+    "cardName": "T-65 X-wing Fighter",
+    "imageName": "T-65 X-wing Fighter.webp",
+    "cardType": "unit",
+    "cardSubtype": "flying vehicle",
+    "rank": "flier",
+    "faction": "rebels",
+    "cost": 115,
+    "keywords": [
+      {
+        "name": "Armor",
+        "value": 1
+      },
+      {
+        "name": "Cover",
+        "value": 1
+      },
+      {
+        "name": "Recharge",
+        "value": 1
+      },
+      {
+        "name": "Shielded",
+        "value": 3
+      }
+    ],
+    "upgradeBar": [],
+    "stats": {
+      "minicount": 1,
+      "hp": 6,
+      "defense": "r",
+      "courage": 4,
+      "speed": 5,
+      "hitsurge": "",
+      "defsurge": ""
+    },
+    "weapons": [
+      {
+        "name": "Laser Cannons",
+        "keywords": [
+          {
+            "name": "Fixed",
+            "value": "Front"
+          },
+          {
+            "name": "Impact",
+            "value": 3
+          },
+          "Overwhelm",
+          {
+            "name": "Strafe",
+            "value": 3
+          }
+        ],
+        "range": [0],
+        "dice": {
+          "r": 3,
+          "b": 3,
+          "w": 0
+        }
+      }
+    ]
+  },
+  "Og": {
+    "id": "Og",
+    "isUnreleased": true,
+    "cardName": "V-Wing",
+    "imageName": "V-Wing.webp",
+    "cardType": "unit",
+    "cardSubtype": "flying vehicle",
+    "rank": "flier",
+    "faction": "republic",
+    "cost": 0,
+    "keywords": [],
+    "upgradeBar": [],
+    "stats": {},
+    "weapons": []
+  },
+  "Oh": {
+    "id": "Oh",
+    "isUnreleased": true,
+    "cardName": "TIE/ln Fighter",
+    "imageName": "TIE/ln Fighter.webp",
+    "cardType": "unit",
+    "cardSubtype": "flying vehicle",
+    "rank": "flier",
+    "faction": "empire",
+    "cost": 0,
+    "keywords": [],
+    "upgradeBar": [],
+    "stats": {},
+    "weapons": []
+  },
+  "Oi": {
+    "id": "Oi",
+    "isUnreleased": true,
+    "cardName": "TIE/ln Fighter",
+    "imageName": "TIE/ln Fighter.webp",
+    "cardType": "unit",
+    "cardSubtype": "flying vehicle",
+    "rank": "flier",
+    "faction": "empire",
+    "cost": 0,
+    "keywords": [],
+    "upgradeBar": [],
+    "stats": {},
+    "weapons": []
+  },
+  "Oj": {
+    "id": "Oj",
+    "isUnreleased": true,
+    "cardName": "Vulture Droid",
+    "imageName": "Vulture Droid.webp",
+    "cardType": "unit",
+    "cardSubtype": "flying vehicle",
+    "rank": "flier",
+    "faction": "separatists",
+    "cost": 0,
+    "keywords": [],
+    "upgradeBar": [],
+    "stats": {},
+    "weapons": []
+  },
+  "Ok": {
+    "id": "Ok",
+    "isUnreleased": true,
+    "cardName": "Stolen TIE/ln Fighter",
+    "imageName": "Stolen TIE/ln Fighter.webp",
+    "cardType": "unit",
+    "cardSubtype": "flying vehicle",
+    "rank": "flier",
+    "faction": "rebels",
+    "cost": 0,
+    "keywords": [],
+    "upgradeBar": [],
+    "stats": {},
+    "weapons": []
+  },
+  "Ol": {
+    "id": "Ol",
+    "isUnreleased": true,
+    "cardName": "Fang Fighter",
+    "imageName": "Fang Fighter.webp",
+    "cardType": "unit",
+    "cardSubtype": "flying vehicle",
+    "rank": "flier",
+    "faction": "mercenary",
+    "cost": 0,
+    "keywords": [],
+    "upgradeBar": [],
+    "stats": {},
+    "weapons": [],
+    "affiliation": "Mandalorians",
+    "affiliations": ["empire", "separatists", "rebels", "republic"]
   }
 }

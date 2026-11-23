@@ -189,7 +189,7 @@ function getTtsName(card) {
 }
 
 function generateTTSJSONText(list) {
-  const ttsJSON = { author: "Legion HQ" };
+  let ttsJSON = { author: "Legion HQ" };
 
   const writeCardsToJsonArray = (cardList, jsonArray) => {
     if (!cardList) return;
@@ -213,6 +213,9 @@ function generateTTSJSONText(list) {
 
   if (list.battleForce) {
     ttsJSON.battleForce = list.battleForce;
+    if (list.choices?.length) {
+      ttsJSON.choices = list.choices;
+    }
   }
 
   ttsJSON.commandCards = [];
