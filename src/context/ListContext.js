@@ -23,6 +23,7 @@ import {
   countPoints,
   consolidate,
   updateSpecialUpgradeSlots,
+  updateBattleforceChoiceUpgradeSlots,
 } from "components/listOperations";
 import listTemplate from "constants/listTemplate";
 import {
@@ -155,6 +156,7 @@ export function ListProvider({ width, children, slug, listHash }) {
   // but it's still bad from a performance perspective
   const updateThenValidateList = (list) => {
     let revisedList = checkValidCards(list);
+    revisedList = updateBattleforceChoiceUpgradeSlots(revisedList);
     const rankLimits = getRankLimits(revisedList);
 
     // little gross, but fixes issue with 'legacy' lists before specialSlots were added

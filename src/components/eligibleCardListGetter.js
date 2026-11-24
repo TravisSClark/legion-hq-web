@@ -355,9 +355,8 @@ function getEligibleUpgrades(
       if (card.isUnique) {
         if (
           list.battleForce &&
-          ((list.battleForce === "224th Armored Division" &&
-            ["Ce", "Cg", "Ch", "Cf"].includes(id)) ||
-            (list.battleForce === "Irregulars" && id === "Cq"))
+          list.battleForce === "224th Armored Division" &&
+          ["Ce", "Cg", "Ch", "Cf"].includes(id)
         ) {
         } else if (uniqueCardNames.includes(card.cardName)) continue;
       }
@@ -439,6 +438,7 @@ function getEligibleUpgrades(
         ["on", "bh", "Fe"].includes(unitCardCopy.id)
       ) {
         unitCardCopy.faction = "rebels";
+        unitCardCopy.affiliation = "";
       }
 
       // The 'normal' way to check for an upgrade - see if the unit meets the upgrade's requirements

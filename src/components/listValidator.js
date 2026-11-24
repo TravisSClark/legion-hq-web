@@ -398,7 +398,11 @@ function battleForceValidation(currentList, unitCounts) {
           currentList.battleForce,
         );
 
-        if (unitCardCopy.affiliation && unitCardCopy.affiliation !== affil) {
+        if (
+          unitCardCopy.affiliation &&
+          unitCardCopy.affiliation !== affil &&
+          !battleForcesDict[currentList.battleForce]?.rules?.treatAsFaction
+        ) {
           hasIssue = true;
           u.validationIssues.push({
             level: 2,
@@ -593,9 +597,12 @@ function countUnits(
     gameTimeRanks[card.rank] += unit.count; // DON'T update this using the buildsAsCorps rules below so we see what our gametime counts are
 
     // Maul + Darksaber interaction - TODO, make it data/rules-driven
-    if (unit.unitId === "rc" && unit.upgradesEquipped.includes("rq")) {
-      currentRanks["commander"]++;
-      currentRanks["operative"]--;
+    if (unit.upgradesEquipped.includes("rq")) {
+      currentRanks[cards["rq"].changeRank]++;
+      currentRanks[card.rank]--;
+    } else if (unit.upgradesEquipped.includes("Om")) {
+      currentRanks[cards["Om"].changeRank]++;
+      currentRanks[card.rank]--;
     }
 
     if (
@@ -631,7 +638,7 @@ function validateUnits(currentList, rankLimits, listUniqueUpgrades) {
         (!battleForce["rules"]["buildsAsCorps"] ||
           !battleForce["rules"]["buildsAsCorps"]?.includes(unit.unitId)) &&
         (!battleForce.choices ||
-          currentList.choices?.some(
+          !currentList.choices?.some(
             (choice) =>
               !battleForce.choices
                 .find((bfchoice) => bfchoice.name === choice)
@@ -641,6 +648,25 @@ function validateUnits(currentList, rankLimits, listUniqueUpgrades) {
         unit.validationIssues.push({
           level: 2,
           text: '"' + card.cardName + '" is not allowed in this battleforce.',
+        });
+      }
+      if (
+        battleForce.choices &&
+        unit.unitId === "ic" &&
+        (!unit.upgradesEquipped.includes("Om") ||
+          !currentList.choices?.some(
+            (choice) =>
+              !battleForce.choices
+                .find((bfchoice) => bfchoice.name === choice)
+                ?.add?.includes(unit.unitId),
+          ))
+      ) {
+        unit.validationIssues.push({
+          level: 2,
+          text:
+            '"' +
+            card.cardName +
+            '" is not allowed in this battleforce unless it is a commander or allowed in the choices.',
         });
       }
     }
@@ -751,8 +777,6 @@ function validateList(currentList, rankLimits) {
         ["Ce", "Cg", "Ch", "Cf"].includes(id)
       ) {
         limit = 2;
-      } else if (currentList.battleForce === "Irregulars" && id === "Cq") {
-        limit = 4;
       }
     }
 
@@ -982,10 +1006,29 @@ function applyFieldCommander(list, rankReqs) {
 // Quantify keywords that expand our rank maximums
 function applyRankAdjustments(currentList, rankReqs) {
   // map of unitIds:count allowed due to keywords below
-  let extraRankCounts = {};
+  let extraUnitRankCounts = {};
   let detachExtraCounts = {};
+  let extraRankCounts = {};
   const battleForce = battleForcesDict[currentList.battleForce];
   // Count all the things adding ranks
+
+  if (battleForce?.choices && currentList.choices?.length) {
+    const addedRankChoices = battleForce.choices.filter((bfchoice) =>
+      currentList.choices.includes(bfchoice.name),
+    );
+    addedRankChoices?.forEach((choice) => {
+      choice.addRank?.forEach((rank) => {
+        Number.isFinite(extraRankCounts[rank])
+          ? (extraRankCounts[rank] += 1)
+          : (extraRankCounts[rank] = 1);
+      });
+    });
+  }
+
+  for (const rank in extraRankCounts) {
+    rankReqs[rank][1] += extraRankCounts[rank];
+  }
+
   currentList.units.forEach((unit) => {
     const card = cards[unit.unitId];
 
@@ -993,10 +1036,10 @@ function applyRankAdjustments(currentList, rankReqs) {
       (keyword) => keyword.name === "Entourage",
     );
     if (entourageUnit) {
-      if (!extraRankCounts[entourageUnit.value]) {
-        extraRankCounts[entourageUnit.value] = 0;
+      if (!extraUnitRankCounts[entourageUnit.value]) {
+        extraUnitRankCounts[entourageUnit.value] = 0;
       }
-      extraRankCounts[entourageUnit.value] += unit.count;
+      extraUnitRankCounts[entourageUnit.value] += unit.count;
     }
 
     // Apply detachment (if we're not a battleforce ignoring this unit's detachment)
@@ -1021,7 +1064,7 @@ function applyRankAdjustments(currentList, rankReqs) {
         currentList.units.find((u) => u.unitName === associateUnit.value) !==
         undefined
       ) {
-        extraRankCounts[card.cardName] = 1;
+        extraUnitRankCounts[card.cardName] = 1;
       }
     }
   });
@@ -1030,8 +1073,8 @@ function applyRankAdjustments(currentList, rankReqs) {
   currentList.units.forEach((unit) => {
     const card = cards[unit.unitId];
 
-    if (extraRankCounts[card.cardName]) {
-      let allowance = Math.min(unit.count, extraRankCounts[card.cardName]);
+    if (extraUnitRankCounts[card.cardName]) {
+      let allowance = Math.min(unit.count, extraUnitRankCounts[card.cardName]);
       rankReqs[card.rank][1] += allowance;
       if (
         rankReqs.commOp &&
@@ -1039,7 +1082,7 @@ function applyRankAdjustments(currentList, rankReqs) {
       ) {
         rankReqs.commOp += allowance;
       }
-      extraRankCounts[card.cardName] -= allowance;
+      extraUnitRankCounts[card.cardName] -= allowance;
     } else if (
       detachExtraCounts[card.cardName] &&
       card.keywords.some((keyword) => keyword.name === "Detachment")

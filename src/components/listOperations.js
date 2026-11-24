@@ -222,8 +222,7 @@ function addAdditionalUpgradeSlots(list, unit, upgradeCard) {
   unit.additionalUpgradeSlots = unit.additionalUpgradeSlots.concat(slots);
 
   // insert before special upgrades; they're always last (granted, that's mostly arbitrary, still looks nicer imo to have them at end of bar)
-  let offset =
-    unit.upgradesEquipped.length - unit.specialUpgradeSlots.length - 1;
+  let offset = unit.upgradesEquipped.length - unit.specialUpgradeSlots.length;
 
   let newSlot = null;
 
@@ -240,18 +239,58 @@ function addAdditionalUpgradeSlots(list, unit, upgradeCard) {
       unit.additionalUpgradeSlots.length +
       unit.specialUpgradeSlots.length
   )
-    unit.upgradesEquipped.splice(offset, 0, newSlot);
+    unit.upgradesEquipped.splice(
+      offset,
+      0,
+      ...slots.map((_, index) => (index === 0 ? newSlot : null)),
+    );
 }
 
-function removeAdditionalUpgradeSlot(unit) {
-  let offset =
-    unit.upgradesEquipped.length -
-    unit.specialUpgradeSlots.length -
-    unit.additionalUpgradeSlots.length;
+function removeAdditionalUpgradeSlot(unit, slot) {
+  const slotIndex = unit.additionalUpgradeSlots.indexOf(slot);
+  if (slotIndex === -1) return;
 
-  unit.upgradesEquipped.splice(offset, unit.additionalUpgradeSlots.length);
+  const upgradeIndex = cards[unit.unitId].upgradeBar.length + slotIndex;
+  unit.upgradesEquipped.splice(upgradeIndex, 1);
+  unit.additionalUpgradeSlots.splice(slotIndex, 1);
+}
 
-  unit.additionalUpgradeSlots = [];
+function getSlotsNotIn(currentSlots, desiredSlots) {
+  const remainingDesiredSlots = [...desiredSlots];
+  return currentSlots.filter((slot) => {
+    const desiredIndex = remainingDesiredSlots.indexOf(slot);
+    if (desiredIndex === -1) return true;
+    remainingDesiredSlots.splice(desiredIndex, 1);
+    return false;
+  });
+}
+
+function getBattleforceChoiceUpgradeSlots(list, unitId) {
+  const choices = battleForcesDict[list.battleForce]?.choices;
+
+  return (list.choices || []).reduce((slots, choiceName) => {
+    const choice = choices?.find((item) => item.name === choiceName);
+    const unitSlots = choice?.addAdditionalUpgradeSlots?.find(
+      ([id]) => id === unitId,
+    );
+    return unitSlots ? slots.concat(unitSlots[1]) : slots;
+  }, []);
+}
+
+function syncBattleforceChoiceUpgradeSlots(list, unit) {
+  const currentSlots = unit.battleforceChoiceUpgradeSlots || [];
+  const desiredSlots = getBattleforceChoiceUpgradeSlots(list, unit.unitId);
+  const slotsToRemove = getSlotsNotIn(currentSlots, desiredSlots);
+  const slotsToAdd = getSlotsNotIn(desiredSlots, currentSlots);
+
+  slotsToRemove.forEach((slot) => removeAdditionalUpgradeSlot(unit, slot));
+  slotsToAdd.forEach((slot) => addAdditionalUpgradeSlots(list, unit, [slot]));
+  unit.battleforceChoiceUpgradeSlots = desiredSlots;
+}
+
+function updateBattleforceChoiceUpgradeSlots(list) {
+  list.units.forEach((unit) => syncBattleforceChoiceUpgradeSlots(list, unit));
+  return list;
 }
 
 function addUnit(list, unitId, stackSize = 1, userSettings) {
@@ -283,22 +322,7 @@ function addUnit(list, unitId, stackSize = 1, userSettings) {
     }
   }
 
-  // if (battleForcesDict[list.battleForce]?.choices && list.choices?.length) {
-  //   list.choices.forEach((choice) => {
-  //     const choiceObj = battleForcesDict[list.battleForce].choices.find(
-  //       (bfChoice) => bfChoice.name === choice,
-  //     );
-  //     if (choiceObj?.addAdditionalUpgradeSlots) {
-  //       let upgrades = choiceObj.addAdditionalUpgradeSlots.find(
-  //         (pair) => pair[0] === unitId,
-  //       );
-
-  //       if (upgrades) {
-  //         addAdditionalUpgradeSlots(list, newUnitObject, upgrades[1]);
-  //       }
-  //     }
-  //   });
-  // }
+  syncBattleforceChoiceUpgradeSlots(list, newUnitObject);
 
   // TODO will need something *like* this to do buildsAsCorps 'right' if we get interactions that don't slot nicely with existing rules
   // ie, thought this was needed for Imp March + Imp Remnant, it isn't *yet* since Scouts+Deaths already have the Training slot and can therefore
@@ -587,10 +611,9 @@ function unequipUpgradeFromUnit(unit, upgradeIndex) {
 
   unit.upgradesEquipped[upgradeIndex] = null;
 
-  // TODO does not work if additionalUpgradeSlots has a config where >1 upgrade card provides aUS
-  if ("additionalUpgradeSlots" in upgradeCard) {
-    removeAdditionalUpgradeSlot(unit);
-  }
+  (upgradeCard.additionalUpgradeSlots || []).forEach((slot) =>
+    removeAdditionalUpgradeSlot(unit, slot),
+  );
 }
 
 function unequipUnitUpgrade(list, unitIndex, upgradeIndex) {
@@ -633,4 +656,5 @@ export {
   sortUpgrades,
   updateSpecialUpgradeSlots,
   addAdditionalUpgradeSlots,
+  updateBattleforceChoiceUpgradeSlots,
 };

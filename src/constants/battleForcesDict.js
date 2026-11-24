@@ -223,7 +223,7 @@ const battleForcesDict = {
     operative: ["Da"],
     corps: ["fz", "Bi"],
     special: [],
-    support: ["mb"],
+    support: ["mb", "ic"],
     heavy: ["qs"],
     flier: ["Og"],
     allowedUpgrades: ["cw", "Me", "Bl", "Db", "Dc", "De", "Dd"],
@@ -250,7 +250,7 @@ const battleForcesDict = {
         group: "Battalion",
         description:
           "When an allied unit makes an attack against an enemy unit that has 1 or more Observation tokens, during the Declare Defender step, the attacking unit may spend 1 of those Observation tokens. If it does, it gains 1 Aim token. At the end of each allied COMMANDER and allied OPERATIVE unit’s Activation, it may make a free action OBSERVE 1. If your army is At the Ready, at the end of each allied Vehicle unit’s Activation, it may make a FREE ACTION OBSERVE 1. Add LAAT/le Patrol Transport and BARC Speeder units to this army’s allowed units.",
-        add: ["oo", "ic"],
+        add: ["oo"],
       },
       {
         name: "Decisive",
@@ -282,7 +282,7 @@ const battleForcesDict = {
         group: "Veteran",
         description:
           "Allied Repulsor Vehicle units’ Ranged Weapons gain ASSAULT 2. Add LAAT/le Patrol Transport and BARC Speeder units to this army’s allowed units.",
-        add: ["oo", "ic"],
+        add: ["oo"],
       },
       {
         name: "Forward Observers",
@@ -504,7 +504,7 @@ const battleForcesDict = {
     support: ["ao"],
     heavy: ["om", "on", "bh", "Fe", "aq"],
     flier: ["Of", "Ok"],
-    allowedUpgrades: ["Eq", "Il", "cw", "Cq", "Cs", "Bl", "lu"],
+    allowedUpgrades: ["Eq", "Il", "cw", "Cs", "Bl", "lu"],
     plainTextRules: [
       "This army may include any number of the Unseen Saboteur Upgrade cards.",
       "Allied Operative units gain Field Commander.",
@@ -1150,6 +1150,7 @@ const battleForcesDict = {
     rules: {
       unitLimits: [{ ids: ["Hq"], count: [0, 2] }],
       countMercs: true,
+      treatAsFaction: true,
       needsClan: { affiliation: "Mandalorians" },
     },
     choices: [

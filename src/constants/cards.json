@@ -5441,13 +5441,13 @@
     "cardSubtype": "pilot",
     "cardName": "Imperial Hammers Elite Armor Pilot",
     "cardType": "upgrade",
+    "faction": "empire",
     "cost": 10,
     "imageName": "Imperial Hammers Elite Armor Pilot.webp",
     "keywords": [],
     "requirements": [
       {
-        "cardSubtype": "ground vehicle",
-        "faction": "empire"
+        "cardSubtype": "ground vehicle"
       }
     ],
     "id": "go"
@@ -5456,13 +5456,13 @@
     "cardSubtype": "pilot",
     "cardName": "Outer Rim Speeder Jockey",
     "cardType": "upgrade",
+    "faction": "rebels",
     "cost": 10,
     "imageName": "Outer Rim Speeder Jockey.webp",
     "keywords": ["Cover"],
     "requirements": [
       {
-        "cardSubtype": "repulsor vehicle",
-        "faction": "rebels"
+        "cardSubtype": "repulsor vehicle"
       }
     ],
     "id": "gp"
@@ -11558,12 +11558,12 @@
     "cardSubtype": "pilot",
     "cardName": "Hotshot Pilot",
     "cardType": "upgrade",
+    "faction": "rebels",
     "cost": 8,
     "imageName": "Hotshot Pilot.webp",
     "keywords": ["Sharpshooter"],
     "requirements": [
       {
-        "faction": "rebels",
         "cardSubtype": "repulsor vehicle"
       }
     ]
@@ -14065,7 +14065,8 @@
     "cardType": "upgrade",
     "cost": 0,
     "imageName": "Maul The Darksaber.webp",
-    "keywords": ["Cunning", "Sidearm", "Ranged", "Impact", "Pierce"],
+    "keywords": ["Cunning", { "name": "Sidearm", "value": "Melee, Ranged" }],
+    "changeRank": "commander",
     "requirements": [
       {
         "cardName": "Maul",
@@ -23013,7 +23014,8 @@
     "affiliations": ["empire", "separatists"],
     "requirements": [
       {
-        "cardName": "WLO-5 Speeder Tank"
+        "cardName": "WLO-5 Speeder Tank",
+        "affiliation": "raider"
       }
     ],
     "changeCard": {
@@ -23031,7 +23033,8 @@
     "keywords": [],
     "requirements": [
       {
-        "cardName": "WLO-5 Speeder Tank"
+        "cardName": "WLO-5 Speeder Tank",
+        "affiliation": "raider"
       }
     ],
     "affiliations": ["empire", "rebels", "separatists", "republic"],
@@ -29154,5 +29157,52 @@
     "weapons": [],
     "affiliation": "Mandalorians",
     "affiliations": ["empire", "separatists", "rebels", "republic"]
+  },
+  "Om": {
+    "id": "Om",
+    "cardType": "upgrade",
+    "cardSubtype": "crew",
+    "cardName": "BARC Clone Commander",
+    "uniqueCount": 2,
+    "cost": 26,
+    "imageName": "BARC Clone Commander.webp",
+    "faction": "republic",
+    "keywords": [
+      "Cunning",
+      { "name": "Bolster", "value": 2 },
+      { "name": "Command Vehicle", "value": 2 },
+      { "name": "Direct", "value": "BARC Speeder" }
+    ],
+    "changeRank": "commander",
+    "requirements": [
+      {
+        "cardName": "BARC Speeder"
+      }
+    ]
+  },
+  "On": {
+    "id": "On",
+    "specialIssue": "Irregulars",
+    "cardName": "Unseen Saboteur",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 5,
+    "imageName": "Unseen Saboteur.webp",
+    "keywords": [
+      {
+        "name": "Prepared Position",
+        "isPermanent": true
+      },
+      "Low Profile"
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Rebel Agent"
+      },
+      {
+        "cardName": "Rebel Officer"
+      }
+    ]
   }
 }
