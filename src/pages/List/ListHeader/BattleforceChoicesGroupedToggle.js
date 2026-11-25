@@ -53,7 +53,7 @@ export default function BattleforceChoicesGroupedToggle({
   };
 
   return (
-    <Box display="flex" flexWrap="wrap" justifyContent="center" gridGap={16}>
+    <Box display="flex" flexWrap="wrap" justifyContent="center" gridGap={4}>
       {groups.map(([group, groupChoices], index) => {
         return (
           <Box key={group} display="flex" flexDirection="column" minWidth={200}>
@@ -88,9 +88,7 @@ export default function BattleforceChoicesGroupedToggle({
           <ExpandMoreIcon
             fontSize="small"
             style={{
-              transform: isDescriptionsOpen
-                ? "rotate(180deg)"
-                : "rotate(0deg)",
+              transform: isDescriptionsOpen ? "rotate(180deg)" : "rotate(0deg)",
               transition: "transform 150ms",
             }}
           />

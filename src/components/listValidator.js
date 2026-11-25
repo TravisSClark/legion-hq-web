@@ -598,11 +598,11 @@ function countUnits(
 
     // Maul + Darksaber interaction - TODO, make it data/rules-driven
     if (unit.upgradesEquipped.includes("rq")) {
-      currentRanks[cards["rq"].changeRank]++;
-      currentRanks[card.rank]--;
+      currentRanks[cards["rq"].changeRank] += unit.count;
+      currentRanks[card.rank] -= unit.count;
     } else if (unit.upgradesEquipped.includes("Om")) {
-      currentRanks[cards["Om"].changeRank]++;
-      currentRanks[card.rank]--;
+      currentRanks[cards["Om"].changeRank] += unit.count;
+      currentRanks[card.rank] -= unit.count;
     }
 
     if (
@@ -638,11 +638,10 @@ function validateUnits(currentList, rankLimits, listUniqueUpgrades) {
         (!battleForce["rules"]["buildsAsCorps"] ||
           !battleForce["rules"]["buildsAsCorps"]?.includes(unit.unitId)) &&
         (!battleForce.choices ||
-          !currentList.choices?.some(
-            (choice) =>
-              !battleForce.choices
-                .find((bfchoice) => bfchoice.name === choice)
-                ?.add?.includes(unit.unitId),
+          !currentList.choices?.some((choice) =>
+            battleForce.choices
+              .find((bfchoice) => bfchoice.name === choice)
+              ?.add?.includes(unit.unitId),
           ))
       ) {
         unit.validationIssues.push({
@@ -653,13 +652,12 @@ function validateUnits(currentList, rankLimits, listUniqueUpgrades) {
       if (
         battleForce.choices &&
         unit.unitId === "ic" &&
-        (!unit.upgradesEquipped.includes("Om") ||
-          !currentList.choices?.some(
-            (choice) =>
-              !battleForce.choices
-                .find((bfchoice) => bfchoice.name === choice)
-                ?.add?.includes(unit.unitId),
-          ))
+        !unit.upgradesEquipped.includes("Om") &&
+        !currentList.choices?.some((choice) =>
+          battleForce.choices
+            .find((bfchoice) => bfchoice.name === choice)
+            ?.add?.includes(unit.unitId),
+        )
       ) {
         unit.validationIssues.push({
           level: 2,

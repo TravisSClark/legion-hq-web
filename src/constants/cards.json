@@ -9158,7 +9158,7 @@
       },
       {
         "date": "17 November 2026",
-        "description": "Cost reduced from 40 to 36 points. Lost 1 health. Increased courage by 1. Requirements changed to Clone Trooper Infantry and Marksmen only instead of all Clone Troopers."
+        "description": "Cost reduced from 40 to 36 points. Lost 1 health. Requirements changed to Clone Trooper Infantry and Marksmen only instead of all Clone Troopers."
       }
     ],
     "weapons": [
@@ -15007,9 +15007,10 @@
     "rank": "operative",
     "faction": "mercenary",
     "affiliation": "rogue",
+    "affiliations": ["empire", "rebels"],
+    "counterpartId": "tn",
     "isUnique": true,
     "cost": 93,
-    "counterpart": "tn",
     "keywords": [
       {
         "name": "Mercenary",
@@ -15070,8 +15071,6 @@
         }
       }
     ],
-    "affiliations": ["empire", "rebels"],
-    "counterpartId": "tn",
     "history": [
       {
         "date": "17 November 2026",
@@ -28291,7 +28290,7 @@
     "requirements": [
       "OR",
       {
-        "cardName": "Wet-Weather Gear Stormtrooper"
+        "cardName": "Wet-Weather Gear Stormtroopers"
       },
       {
         "title": "Trench Busters"
@@ -29202,6 +29201,123 @@
       },
       {
         "cardName": "Rebel Officer"
+      }
+    ]
+  },
+  "Oo": {
+    "id": "Oo",
+    "specialIssue": "224th Armored Division",
+    "cardName": "Academy Trained",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 10,
+    "imageName": "Academy Trained.webp",
+    "uniqueCount": 2,
+    "keywords": [
+      "Exemplar",
+      {
+        "name": "Inspire",
+        "value": 1
+      },
+      {
+        "name": "Strategize",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "cardName": "Imperial Officer"
+      }
+    ]
+  },
+  "Op": {
+    "id": "Op",
+    "specialIssue": "224th Armored Division",
+    "cardName": "Tip of the Spear",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 8,
+    "imageName": "Tip of the Spear.webp",
+    "uniqueCount": 2,
+    "keywords": [
+      {
+        "name": "Aid",
+        "value": "Empire Trooper Unit"
+      },
+      {
+        "name": "Direct",
+        "value": "Core Trooper Unit"
+      },
+      {
+        "name": "Tactical",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Imperial Agent"
+      },
+      {
+        "cardName": "Imperial Officer"
+      }
+    ]
+  },
+  "Oq": {
+    "id": "Oq",
+    "specialIssue": "224th Armored Division",
+    "cardName": "Defend in Depth",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 5,
+    "imageName": "Defend in Depth.webp",
+    "uniqueCount": 2,
+    "keywords": [
+      {
+        "name": "Aid",
+        "value": "Emplacement Trooper"
+      },
+      {
+        "name": "Prepared Position",
+        "isPermanent": true
+      },
+      {
+        "name": "Spotter",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      "OR",
+      {
+        "cardName": "Imperial Agent"
+      },
+      {
+        "cardName": "Imperial Officer"
+      }
+    ]
+  },
+  "Or": {
+    "id": "Or",
+    "specialIssue": "224th Armored Division",
+    "cardName": "Platoon Commander",
+    "cardType": "upgrade",
+    "cardSubtype": "doctrine",
+    "cost": 8,
+    "imageName": "Platoon Commander.webp",
+    "uniqueCount": 2,
+    "keywords": [
+      {
+        "name": "Retinue",
+        "value": "Imperial Agent"
+      },
+      {
+        "name": "Sharpshooter",
+        "value": 1
+      }
+    ],
+    "requirements": [
+      {
+        "cardName": "Imperial Agent"
       }
     ]
   }

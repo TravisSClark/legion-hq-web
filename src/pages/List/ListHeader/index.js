@@ -42,7 +42,7 @@ const useStyles = makeStyles({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    paddingTop: 12,
+    paddingTop: 4,
   },
   battleForceContainer: {
     display: "flex",
@@ -82,14 +82,14 @@ function ListHeader() {
     handleChangeMode,
     handleSetBattleforceChoices,
     validationIssues,
+    isBattleforceChoicesOpen,
+    setIsBattleforceChoicesOpen,
+    isCustomClanChoicesOpen,
+    setIsCustomClanChoicesOpen,
   } = useContext(ListContext);
 
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [isBattleforceChoicesOpen, setIsBattleforceChoicesOpen] =
-    React.useState(true);
-  const [isCustomClanChoicesOpen, setIsCustomClanChoicesOpen] =
-    React.useState(true);
   const [isBattleForceDialogOpen, setIsBattleForceDialogOpen] =
     React.useState(false);
   const [isValidationDialogOpen, setValidationDialogOpen] =
@@ -241,7 +241,7 @@ function ListHeader() {
                 setIsBattleforceChoicesOpen(!isBattleforceChoicesOpen)
               }
             >
-              Battleforce choices
+              Traits
               <ExpandMoreIcon
                 fontSize="small"
                 style={{
@@ -263,6 +263,11 @@ function ListHeader() {
                 />
               </div>
             </Collapse>
+            {!isBattleforceChoicesOpen && (
+              <Typography variant="caption">
+                {currentList.choices.join(" / ")}
+              </Typography>
+            )}
           </>
         )}
       {currentList.battleForce &&
@@ -271,12 +276,17 @@ function ListHeader() {
           <>
             <Button
               size="small"
+              sx={{
+                textTransform: "none",
+                whiteSpace: "nowrap",
+                flexShrink: 0,
+              }}
               aria-expanded={isCustomClanChoicesOpen}
               onClick={() =>
                 setIsCustomClanChoicesOpen(!isCustomClanChoicesOpen)
               }
             >
-              Battleforce choices
+              Traits
               <ExpandMoreIcon
                 fontSize="small"
                 style={{
@@ -299,6 +309,11 @@ function ListHeader() {
                 />
               </div>
             </Collapse>
+            {!isCustomClanChoicesOpen && (
+              <Typography variant="caption">
+                {currentList.choices.join(" / ")}
+              </Typography>
+            )}
           </>
         )}
     </div>

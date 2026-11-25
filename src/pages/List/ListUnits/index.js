@@ -34,17 +34,12 @@ function ListUnits() {
         (!cards[counterpartId].affiliations ||
           cards[counterpartId].affiliations.includes(currentList.faction))
       ) {
-        // Special case for IG-11 (tj) + 'Nanny Programming' (tp)
-        if (unit.unitId === "tj" && !unit.upgradesEquipped.includes("tp")) {
-          addCounterpartHandler = null;
-        } else {
-          addCounterpartHandler = () =>
-            setCardPaneFilter({
-              action: "COUNTERPART",
-              unitIndex,
-              counterpartId,
-            });
-        }
+        addCounterpartHandler = () =>
+          setCardPaneFilter({
+            action: "COUNTERPART",
+            unitIndex,
+            counterpartId,
+          });
       }
       // else, if unit has counterpart equipped, render it
       else if (unit.counterpart) {

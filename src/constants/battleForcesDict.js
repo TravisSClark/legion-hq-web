@@ -65,7 +65,7 @@ const battleForcesDict = {
     support: ["be", "Na"],
     heavy: ["bg", "bh"],
     flier: ["Oi"],
-    allowedUpgrades: ["Ce", "Nl", "Cf", "Ch", "Cg", "Cj", "Me", "Bl", "Bn"],
+    allowedUpgrades: ["Nl", "Cj", "Me", "Bl", "Bn"],
     plainTextRules: [
       "During Army Building, your army may include 1 additional copy each of Academy Trained, Defend in Depth, Platoon Commander, and Tip of the Spear.",
       "During the Resolve Setup Effects step, place 2 Trench tokens (Asset) within allied Territory. Trooper units completely within 1/2 Range of a Trench token benefit from heavy Cover.",
@@ -250,7 +250,7 @@ const battleForcesDict = {
         group: "Battalion",
         description:
           "When an allied unit makes an attack against an enemy unit that has 1 or more Observation tokens, during the Declare Defender step, the attacking unit may spend 1 of those Observation tokens. If it does, it gains 1 Aim token. At the end of each allied COMMANDER and allied OPERATIVE unit’s Activation, it may make a free action OBSERVE 1. If your army is At the Ready, at the end of each allied Vehicle unit’s Activation, it may make a FREE ACTION OBSERVE 1. Add LAAT/le Patrol Transport and BARC Speeder units to this army’s allowed units.",
-        add: ["oo"],
+        add: ["oo", "ic"],
       },
       {
         name: "Decisive",
@@ -282,7 +282,7 @@ const battleForcesDict = {
         group: "Veteran",
         description:
           "Allied Repulsor Vehicle units’ Ranged Weapons gain ASSAULT 2. Add LAAT/le Patrol Transport and BARC Speeder units to this army’s allowed units.",
-        add: ["oo"],
+        add: ["oo", "ic"],
       },
       {
         name: "Forward Observers",

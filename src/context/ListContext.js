@@ -71,6 +71,10 @@ export function ListProvider({ width, children, slug, listHash }) {
   const [cardPaneFilter, setCardPaneFilter] = useState({ action: "DISPLAY" });
   const [isKillPointMode, setIsKillPointMode] = useState(false);
   const [currentKillPoints, setCurrentKillPoints] = useState(0);
+  const [isBattleforceChoicesOpen, setIsBattleforceChoicesOpen] =
+    useState(true);
+  const [isCustomClanChoicesOpen, setIsCustomClanChoicesOpen] =
+    useState(true);
   const [validationIssues, setValidationIssues] = useState([]);
   const [rankLimits, setRankLimits] = useState();
 
@@ -534,6 +538,10 @@ export function ListProvider({ width, children, slug, listHash }) {
     handleToggleIsKillPointMode,
     handleAddKillPoints,
     setCardSelectorToNextUpgradeSlot,
+    isBattleforceChoicesOpen,
+    setIsBattleforceChoicesOpen,
+    isCustomClanChoicesOpen,
+    setIsCustomClanChoicesOpen,
   };
   const modalProps = {
     handleOpenModal,
