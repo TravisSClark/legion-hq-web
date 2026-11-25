@@ -72,7 +72,7 @@ export default function BattleforceChoicesMultiToggle({
         aria-controls="choice-descriptions"
         onClick={() => setIsDescriptionsOpen(!isDescriptionsOpen)}
       >
-        Choice descriptions
+        Descriptions
         <ExpandMoreIcon
           fontSize="small"
           style={{

@@ -84,7 +84,7 @@ export default function BattleforceChoicesGroupedToggle({
           aria-controls="battleforce-choice-descriptions"
           onClick={() => setIsDescriptionsOpen(!isDescriptionsOpen)}
         >
-          Choice descriptions
+          Descriptions
           <ExpandMoreIcon
             fontSize="small"
             style={{

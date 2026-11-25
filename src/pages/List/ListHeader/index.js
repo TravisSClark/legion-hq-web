@@ -241,7 +241,7 @@ function ListHeader() {
                 setIsBattleforceChoicesOpen(!isBattleforceChoicesOpen)
               }
             >
-              Traits
+              Choices
               <ExpandMoreIcon
                 fontSize="small"
                 style={{
@@ -264,7 +264,19 @@ function ListHeader() {
               </div>
             </Collapse>
             {!isBattleforceChoicesOpen && (
-              <Typography variant="caption">
+              <Typography
+                variant="caption"
+                component="div"
+                style={{
+                  width: "100%",
+                  maxWidth: "100%",
+                  minWidth: 0,
+                  boxSizing: "border-box",
+                  whiteSpace: "normal",
+                  overflowWrap: "anywhere",
+                  textAlign: "center",
+                }}
+              >
                 {currentList.choices.join(" / ")}
               </Typography>
             )}
@@ -286,7 +298,7 @@ function ListHeader() {
                 setIsCustomClanChoicesOpen(!isCustomClanChoicesOpen)
               }
             >
-              Traits
+              Choices
               <ExpandMoreIcon
                 fontSize="small"
                 style={{
@@ -310,7 +322,19 @@ function ListHeader() {
               </div>
             </Collapse>
             {!isCustomClanChoicesOpen && (
-              <Typography variant="caption">
+              <Typography
+                variant="caption"
+                component="div"
+                style={{
+                  width: "100%",
+                  maxWidth: "100%",
+                  minWidth: 0,
+                  boxSizing: "border-box",
+                  whiteSpace: "normal",
+                  overflowWrap: "anywhere",
+                  textAlign: "center",
+                }}
+              >
                 {currentList.choices.join(" / ")}
               </Typography>
             )}

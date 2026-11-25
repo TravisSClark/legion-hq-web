@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import domtoimage from 'dom-to-image-more';
 import { Chip } from '@material-ui/core';
 import { Image as ImageIcon } from '@material-ui/icons';
 import favicon from 'assets/favicon.svg';
+import ListContext from 'context/ListContext';
 import DialogModal from './DialogModal';
 
 function ImageExport({ currentList }) {
@@ -25,6 +26,17 @@ function ImageExport({ currentList }) {
 
 function ImageExportButton({ isMobile = false, currentList }) {
   const [isOpen, setIsOpen] = useState(false);
+  const {
+    setIsBattleforceChoicesOpen,
+    setIsCustomClanChoicesOpen,
+  } = useContext(ListContext);
+
+  const handleOpen = () => {
+    setIsBattleforceChoicesOpen(false);
+    setIsCustomClanChoicesOpen(false);
+    setIsOpen(true);
+  };
+
   return (
     <div>
       <Chip
@@ -34,7 +46,7 @@ function ImageExportButton({ isMobile = false, currentList }) {
         label="Image"
         icon={<ImageIcon />}
         style={{ marginRight: 4, marginBottom: 4 }}
-        onClick={() => setIsOpen(true)}
+        onClick={handleOpen}
       />
       <DialogModal
         isOpen={isOpen}
