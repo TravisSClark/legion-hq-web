@@ -2678,7 +2678,7 @@
   },
   "dg": {
     "cardSubtype": "training",
-    "cardName": "On The Hunt",
+    "cardName": "On the Hunt",
     "cardType": "upgrade",
     "cost": 6,
     "imageName": "On The Hunt.webp",
@@ -13027,8 +13027,8 @@
   },
   "qt": {
     "id": "qt",
-    "cardName": "Persuader-Class Tank Droid",
-    "imageName": "Persuader-Class Tank Droid.webp",
+    "cardName": "Persuader-class Tank Droid",
+    "imageName": "Persuader-class Tank Droid.webp",
     "cardType": "unit",
     "cardSubtype": "ground vehicle",
     "rank": "heavy",
@@ -16494,7 +16494,7 @@
   "vq": {
     "id": "vq",
     "cardSubtype": "training",
-    "cardName": "Call To Arms",
+    "cardName": "Call to Arms",
     "uniqueCount": 2,
     "cardType": "upgrade",
     "cost": 5,
@@ -17665,10 +17665,10 @@
   },
   "xe": {
     "id": "xe",
-    "cardName": "Persuader-Class Tank Droid",
+    "cardName": "Persuader-class Tank Droid",
     "title": "Prototype Tank Droid",
-    "displayName": "Persuader-Class Tank Droid (Prototype)",
-    "imageName": "Persuader-Class Tank Droid Prototype Tank Droid.webp",
+    "displayName": "Persuader-class Tank Droid (Prototype)",
+    "imageName": "Persuader-class Tank Droid Prototype Tank Droid.webp",
     "cardType": "unit",
     "cardSubtype": "ground vehicle",
     "rank": "heavy",
@@ -27467,7 +27467,7 @@
   },
   "Ma": {
     "id": "Ma",
-    "cardName": "High Speed Tracking",
+    "cardName": "High-Speed Tracking",
     "cardType": "upgrade",
     "cardSubtype": "gear",
     "cost": 3,

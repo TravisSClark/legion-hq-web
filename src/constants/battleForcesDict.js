@@ -681,6 +681,8 @@ const battleForcesDict = {
       "cw",
       "Fj",
       "Fk",
+      "Ny",
+      "Ob",
     ],
     rules: {
       countMercs: true,
